@@ -1,4 +1,4 @@
 # osmartsource
-The source code of OSmart is here！
+**The source code and comparison evaluation results of OSmart is here！**
 
-Coming soon!
+
