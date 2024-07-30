@@ -9,18 +9,30 @@ We conducted the experiment on a 96-core machine running Ubuntu 20.04.1 LTS with
 Taking Libtiff/fax2ps as an example, we present the whole process.
 
 The file structure is below:
+
 libtiff/fax2ps
-├── fax2ps: source code of fax2ps
-├── fax2ps-ast: program AST dir
-├── fax2ps-pdg: program PDG dir
-├── fax2ps-cfg: program CFG dir
-├── global.txt: custom functions and global variables 
-├── div_flow.json: results of DIV extraction
-├── iiv.json: results of impact analysis, containing IIVs and their option groups
-├── nodeinfo.json: results of each node, such as source, dest, condition
-├── og.json: results of summarized option groups
-├── pass.json: results of DIV analysis
-└── program_pdg.json: the whole program PDG
+
+  | -- fax2ps: source code of fax2ps
+  
+  | -- fax2ps-ast: program AST dir
+  
+  | -- fax2ps-pdg: program PDG dir
+
+  | -- fax2ps-cfg: program CFG dir
+
+  | -- global.txt: custom functions and global variables 
+
+  | -- div_flow.json: results of DIV extraction
+
+  | -- iiv.json: results of impact analysis, containing IIVs and their option groups
+
+  | -- nodeinfo.json: results of each node, such as source, dest, condition
+
+  | -- og.json: results of summarized option groups
+
+  | -- pass.json: results of DIV analysis
+
+  | -- program_pdg.json: the whole program PDG
 
 #### STEP 1 Extract options from source code based on AST
 ```
