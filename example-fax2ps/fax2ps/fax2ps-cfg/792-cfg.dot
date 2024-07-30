@@ -1,0 +1,38 @@
+digraph "TIFFSwabArrayOfShort" {  
+"34454" [label = <(assert,assert(sizeof(uint16_t) == 2))<SUB>85</SUB>> ]
+"34455" [label = <(&lt;operator&gt;.equals,sizeof(uint16_t) == 2)<SUB>85</SUB>> ]
+"34460" [label = <(&lt;operator&gt;.greaterThan,n-- &gt; 0)<SUB>87</SUB>> ]
+"34456" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>85</SUB>> ]
+"34461" [label = <(&lt;operator&gt;.postDecrement,n--)<SUB>87</SUB>> ]
+"34465" [label = <(&lt;operator&gt;.assignment,cp = (unsigned char *)wp)<SUB>89</SUB>> ]
+"34470" [label = <(&lt;operator&gt;.assignment,t = cp[1])<SUB>90</SUB>> ]
+"34475" [label = <(&lt;operator&gt;.assignment,cp[1] = cp[0])<SUB>91</SUB>> ]
+"34482" [label = <(&lt;operator&gt;.assignment,cp[0] = t)<SUB>92</SUB>> ]
+"34487" [label = <(&lt;operator&gt;.postIncrement,wp++)<SUB>93</SUB>> ]
+"34467" [label = <(&lt;operator&gt;.cast,(unsigned char *)wp)<SUB>89</SUB>> ]
+"34472" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[1])<SUB>90</SUB>> ]
+"34476" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[1])<SUB>91</SUB>> ]
+"34479" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>91</SUB>> ]
+"34483" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>92</SUB>> ]
+"34468" [label = <(UNKNOWN,unsigned char *,unsigned char *)<SUB>89</SUB>> ]
+"34448" [label = <(METHOD,TIFFSwabArrayOfShort)<SUB>81</SUB>> ]
+"34489" [label = <(METHOD_RETURN,void)<SUB>81</SUB>> ]
+  "34454" -> "34461" 
+  "34455" -> "34454" 
+  "34460" -> "34489" 
+  "34460" -> "34468" 
+  "34456" -> "34455" 
+  "34461" -> "34460" 
+  "34465" -> "34472" 
+  "34470" -> "34476" 
+  "34475" -> "34483" 
+  "34482" -> "34487" 
+  "34487" -> "34461" 
+  "34467" -> "34465" 
+  "34472" -> "34470" 
+  "34476" -> "34479" 
+  "34479" -> "34475" 
+  "34483" -> "34482" 
+  "34468" -> "34467" 
+  "34448" -> "34456" 
+}

@@ -1,0 +1,31 @@
+digraph "TIFFReadDirEntryCheckRangeShortLong8" {  
+"87641" [label = <(METHOD,TIFFReadDirEntryCheckRangeShortLong8)<SUB>3678</SUB>> ]
+"87642" [label = <(PARAM,uint64_t value)<SUB>3679</SUB>> ]
+"87643" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3680</SUB>> ]
+"87644" [label = <(CONTROL_STRUCTURE,if (value &gt; 0xFFFF),if (value &gt; 0xFFFF))<SUB>3681</SUB>> ]
+"87645" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0xFFFF)<SUB>3681</SUB>> ]
+"87646" [label = <(IDENTIFIER,value,value &gt; 0xFFFF)<SUB>3681</SUB>> ]
+"87647" [label = <(LITERAL,0xFFFF,value &gt; 0xFFFF)<SUB>3681</SUB>> ]
+"87648" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3682</SUB>> ]
+"87649" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3682</SUB>> ]
+"87650" [label = <(IDENTIFIER,TIFFReadDirEntryErrRange,return (TIFFReadDirEntryErrRange);)<SUB>3682</SUB>> ]
+"87651" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3684</SUB>> ]
+"87652" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3684</SUB>> ]
+"87653" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3684</SUB>> ]
+"87654" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>3684</SUB>> ]
+"87655" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3678</SUB>> ]
+  "87641" -> "87642" 
+  "87641" -> "87643" 
+  "87641" -> "87655" 
+  "87643" -> "87644" 
+  "87644" -> "87645" 
+  "87644" -> "87648" 
+  "87644" -> "87651" 
+  "87645" -> "87646" 
+  "87645" -> "87647" 
+  "87648" -> "87649" 
+  "87649" -> "87650" 
+  "87651" -> "87652" 
+  "87652" -> "87653" 
+  "87653" -> "87654" 
+}

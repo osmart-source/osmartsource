@@ -1,0 +1,143 @@
+digraph "_TIFFFindFieldByName" {  
+"27514" [label = <(&lt;operator&gt;.assignment,key = {0, 0, 0, TIFF_NOTYPE, 0, 0, 0, 0, 0, 0, NULL, NULL})<SUB>1013</SUB>> ]
+"27538" [label = <(&lt;operator&gt;.assignment,*pkey = &amp;key)<SUB>1014</SUB>> ]
+"27584" [label = <(&lt;operator&gt;.assignment,key.field_name = (char *)field_name)<SUB>1027</SUB>> ]
+"27591" [label = <(&lt;operator&gt;.assignment,key.field_type = dt)<SUB>1028</SUB>> ]
+"27596" [label = <(&lt;operator&gt;.assignment,ret =\012        (const TIFFField **)td_lfind(&amp;pkey, tif-&gt;tif_fields, &amp;tif-&gt;tif_nfields,\012                                     sizeof(TIFFField *), tagNameCompare))<SUB>1030</SUB>> ]
+"27613" [label = <(RETURN,return tif-&gt;tif_foundfield = (ret ? *ret : NULL);,return tif-&gt;tif_foundfield = (ret ? *ret : NULL);)<SUB>1034</SUB>> ]
+"27516" [label = <(&lt;operator&gt;.arrayInitializer,{0, 0, 0, TIFF_NOTYPE, 0, 0, 0, 0, 0, 0, NULL, NULL})<SUB>1013</SUB>> ]
+"27540" [label = <(&lt;operator&gt;.addressOf,&amp;key)<SUB>1014</SUB>> ]
+"27544" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_foundfield &amp;&amp;\012        streq(tif-&gt;tif_foundfield-&gt;field_name, field_name) &amp;&amp;\012        (dt == TIFF_ANY || dt == tif-&gt;tif_foundfield-&gt;field_type))<SUB>1016</SUB>> ]
+"27573" [label = <(&lt;operator&gt;.logicalNot,!tif-&gt;tif_fields)<SUB>1022</SUB>> ]
+"27585" [label = <(&lt;operator&gt;.fieldAccess,key.field_name)<SUB>1027</SUB>> ]
+"27588" [label = <(&lt;operator&gt;.cast,(char *)field_name)<SUB>1027</SUB>> ]
+"27592" [label = <(&lt;operator&gt;.fieldAccess,key.field_type)<SUB>1028</SUB>> ]
+"27598" [label = <(&lt;operator&gt;.cast,(const TIFFField **)td_lfind(&amp;pkey, tif-&gt;tif_fields, &amp;tif-&gt;tif_nfields,\012                                     sizeof(TIFFField *), tagNameCompare))<SUB>1031</SUB>> ]
+"27614" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_foundfield = (ret ? *ret : NULL))<SUB>1034</SUB>> ]
+"27527" [label = <(NULL,NULL)<SUB>1013</SUB>> ]
+"27532" [label = <(NULL,NULL)<SUB>1013</SUB>> ]
+"27545" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_foundfield &amp;&amp;\012        streq(tif-&gt;tif_foundfield-&gt;field_name, field_name))<SUB>1016</SUB>> ]
+"27556" [label = <(&lt;operator&gt;.logicalOr,dt == TIFF_ANY || dt == tif-&gt;tif_foundfield-&gt;field_type)<SUB>1018</SUB>> ]
+"27568" [label = <(RETURN,return (tif-&gt;tif_foundfield);,return (tif-&gt;tif_foundfield);)<SUB>1019</SUB>> ]
+"27574" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>1022</SUB>> ]
+"27578" [label = <(RETURN,return NULL;,return NULL;)<SUB>1023</SUB>> ]
+"27587" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>1027</SUB>> ]
+"27589" [label = <(UNKNOWN,char *,char *)<SUB>1027</SUB>> ]
+"27594" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>1028</SUB>> ]
+"27599" [label = <(UNKNOWN,const TIFFField **,const TIFFField **)<SUB>1031</SUB>> ]
+"27600" [label = <(td_lfind,td_lfind(&amp;pkey, tif-&gt;tif_fields, &amp;tif-&gt;tif_nfields,\012                                     sizeof(TIFFField *), tagNameCompare))<SUB>1031</SUB>> ]
+"27615" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield)<SUB>1034</SUB>> ]
+"27618" [label = <(&lt;operator&gt;.conditional,ret ? *ret : NULL)<SUB>1034</SUB>> ]
+"27546" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield)<SUB>1016</SUB>> ]
+"27549" [label = <(streq,streq(tif-&gt;tif_foundfield-&gt;field_name, field_name))<SUB>1017</SUB>> ]
+"27557" [label = <(&lt;operator&gt;.equals,dt == TIFF_ANY)<SUB>1018</SUB>> ]
+"27560" [label = <(&lt;operator&gt;.equals,dt == tif-&gt;tif_foundfield-&gt;field_type)<SUB>1018</SUB>> ]
+"27569" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield)<SUB>1019</SUB>> ]
+"27576" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>1022</SUB>> ]
+"27579" [label = <(NULL,NULL)<SUB>1023</SUB>> ]
+"27601" [label = <(&lt;operator&gt;.addressOf,&amp;pkey)<SUB>1031</SUB>> ]
+"27603" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>1031</SUB>> ]
+"27606" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_nfields)<SUB>1031</SUB>> ]
+"27610" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFField *))<SUB>1032</SUB>> ]
+"27617" [label = <(FIELD_IDENTIFIER,tif_foundfield,tif_foundfield)<SUB>1034</SUB>> ]
+"27620" [label = <(&lt;operator&gt;.indirection,*ret)<SUB>1034</SUB>> ]
+"27622" [label = <(NULL,NULL)<SUB>1034</SUB>> ]
+"27529" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1013</SUB>> ]
+"27534" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1013</SUB>> ]
+"27548" [label = <(FIELD_IDENTIFIER,tif_foundfield,tif_foundfield)<SUB>1016</SUB>> ]
+"27550" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield-&gt;field_name)<SUB>1017</SUB>> ]
+"27562" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield-&gt;field_type)<SUB>1018</SUB>> ]
+"27571" [label = <(FIELD_IDENTIFIER,tif_foundfield,tif_foundfield)<SUB>1019</SUB>> ]
+"27605" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>1031</SUB>> ]
+"27607" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfields)<SUB>1031</SUB>> ]
+"27530" [label = <(UNKNOWN,void *,void *)<SUB>1013</SUB>> ]
+"27535" [label = <(UNKNOWN,void *,void *)<SUB>1013</SUB>> ]
+"27551" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield)<SUB>1017</SUB>> ]
+"27554" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>1017</SUB>> ]
+"27563" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_foundfield)<SUB>1018</SUB>> ]
+"27566" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>1018</SUB>> ]
+"27581" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1023</SUB>> ]
+"27609" [label = <(FIELD_IDENTIFIER,tif_nfields,tif_nfields)<SUB>1031</SUB>> ]
+"27624" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1034</SUB>> ]
+"27553" [label = <(FIELD_IDENTIFIER,tif_foundfield,tif_foundfield)<SUB>1017</SUB>> ]
+"27565" [label = <(FIELD_IDENTIFIER,tif_foundfield,tif_foundfield)<SUB>1018</SUB>> ]
+"27582" [label = <(UNKNOWN,void *,void *)<SUB>1023</SUB>> ]
+"27625" [label = <(UNKNOWN,void *,void *)<SUB>1034</SUB>> ]
+"27508" [label = <(METHOD,_TIFFFindFieldByName)<SUB>1010</SUB>> ]
+"27627" [label = <(METHOD_RETURN,TIFFField)<SUB>1010</SUB>> ]
+  "27514" -> "27540" 
+  "27538" -> "27548" 
+  "27584" -> "27594" 
+  "27591" -> "27599" 
+  "27596" -> "27617" 
+  "27613" -> "27627" 
+  "27516" -> "27514" 
+  "27540" -> "27538" 
+  "27544" -> "27571" 
+  "27544" -> "27576" 
+  "27573" -> "27579" 
+  "27573" -> "27587" 
+  "27585" -> "27589" 
+  "27588" -> "27584" 
+  "27592" -> "27591" 
+  "27598" -> "27596" 
+  "27614" -> "27613" 
+  "27527" -> "27530" 
+  "27527" -> "27532" 
+  "27532" -> "27535" 
+  "27532" -> "27516" 
+  "27545" -> "27544" 
+  "27545" -> "27557" 
+  "27556" -> "27544" 
+  "27568" -> "27627" 
+  "27574" -> "27573" 
+  "27578" -> "27627" 
+  "27587" -> "27585" 
+  "27589" -> "27588" 
+  "27594" -> "27592" 
+  "27599" -> "27601" 
+  "27600" -> "27598" 
+  "27615" -> "27622" 
+  "27615" -> "27620" 
+  "27618" -> "27614" 
+  "27546" -> "27545" 
+  "27546" -> "27553" 
+  "27549" -> "27545" 
+  "27557" -> "27556" 
+  "27557" -> "27565" 
+  "27560" -> "27556" 
+  "27569" -> "27568" 
+  "27576" -> "27574" 
+  "27579" -> "27582" 
+  "27579" -> "27578" 
+  "27601" -> "27605" 
+  "27603" -> "27609" 
+  "27606" -> "27610" 
+  "27610" -> "27600" 
+  "27617" -> "27615" 
+  "27620" -> "27618" 
+  "27622" -> "27625" 
+  "27622" -> "27618" 
+  "27529" -> "27532" 
+  "27534" -> "27516" 
+  "27548" -> "27546" 
+  "27550" -> "27549" 
+  "27562" -> "27560" 
+  "27571" -> "27569" 
+  "27605" -> "27603" 
+  "27607" -> "27606" 
+  "27530" -> "27529" 
+  "27535" -> "27534" 
+  "27551" -> "27554" 
+  "27554" -> "27550" 
+  "27563" -> "27566" 
+  "27566" -> "27562" 
+  "27581" -> "27578" 
+  "27609" -> "27607" 
+  "27624" -> "27618" 
+  "27553" -> "27551" 
+  "27565" -> "27563" 
+  "27582" -> "27581" 
+  "27625" -> "27624" 
+  "27508" -> "27527" 
+}

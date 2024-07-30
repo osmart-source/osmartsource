@@ -1,0 +1,62 @@
+digraph "TIFFNumberOfDirectories" {  
+"44612" [label = <(&lt;operator&gt;.assignment,nextdirnum = 0)<SUB>2008</SUB>> ]
+"44615" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2009</SUB>> ]
+"44633" [label = <(RETURN,return (n);,return (n);)<SUB>2015</SUB>> ]
+"44585" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2004</SUB>> ]
+"44619" [label = <(&lt;operator&gt;.logicalAnd,nextdiroff != 0 &amp;&amp;\012           TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2010</SUB>> ]
+"44586" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2004</SUB>> ]
+"44592" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2005</SUB>> ]
+"44620" [label = <(&lt;operator&gt;.notEquals,nextdiroff != 0)<SUB>2010</SUB>> ]
+"44623" [label = <(TIFFAdvanceDirectory,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2011</SUB>> ]
+"44631" [label = <(&lt;operator&gt;.preIncrement,++n)<SUB>2013</SUB>> ]
+"44587" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2004</SUB>> ]
+"44594" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>2005</SUB>> ]
+"44603" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2007</SUB>> ]
+"44625" [label = <(&lt;operator&gt;.addressOf,&amp;nextdiroff)<SUB>2011</SUB>> ]
+"44628" [label = <(&lt;operator&gt;.addressOf,&amp;nextdirnum)<SUB>2011</SUB>> ]
+"44589" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2004</SUB>> ]
+"44595" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>2005</SUB>> ]
+"44600" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2005</SUB>> ]
+"44605" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>2007</SUB>> ]
+"44596" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2005</SUB>> ]
+"44599" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>2005</SUB>> ]
+"44606" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>2007</SUB>> ]
+"44611" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2007</SUB>> ]
+"44598" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2005</SUB>> ]
+"44607" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2007</SUB>> ]
+"44610" [label = <(FIELD_IDENTIFIER,big,big)<SUB>2007</SUB>> ]
+"44609" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2007</SUB>> ]
+"44578" [label = <(METHOD,TIFFNumberOfDirectories)<SUB>1999</SUB>> ]
+"44635" [label = <(METHOD_RETURN,tdir_t)<SUB>1999</SUB>> ]
+  "44612" -> "44615" 
+  "44615" -> "44620" 
+  "44633" -> "44635" 
+  "44585" -> "44598" 
+  "44585" -> "44609" 
+  "44619" -> "44631" 
+  "44619" -> "44633" 
+  "44586" -> "44585" 
+  "44592" -> "44612" 
+  "44620" -> "44619" 
+  "44620" -> "44625" 
+  "44623" -> "44619" 
+  "44631" -> "44620" 
+  "44587" -> "44586" 
+  "44594" -> "44592" 
+  "44603" -> "44612" 
+  "44625" -> "44628" 
+  "44628" -> "44623" 
+  "44589" -> "44587" 
+  "44595" -> "44600" 
+  "44600" -> "44594" 
+  "44605" -> "44603" 
+  "44596" -> "44599" 
+  "44599" -> "44595" 
+  "44606" -> "44611" 
+  "44611" -> "44605" 
+  "44598" -> "44596" 
+  "44607" -> "44610" 
+  "44610" -> "44606" 
+  "44609" -> "44607" 
+  "44578" -> "44589" 
+}

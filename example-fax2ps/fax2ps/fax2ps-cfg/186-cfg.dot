@@ -1,0 +1,73 @@
+digraph "TIFFFlush" {  
+"5946" [label = <(RETURN,return (1);,return (1);)<SUB>54</SUB>> ]
+"5890" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDONLY)<SUB>32</SUB>> ]
+"5899" [label = <(&lt;operator&gt;.logicalNot,!TIFFFlushData(tif))<SUB>35</SUB>> ]
+"5906" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT) &amp;&amp; tif-&gt;tif_mode == O_RDWR)<SUB>43</SUB>> ]
+"5932" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)) &amp;&amp;\012        !TIFFRewriteDirectory(tif))<SUB>50</SUB>> ]
+"5891" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>32</SUB>> ]
+"5896" [label = <(RETURN,return 1;,return 1;)<SUB>33</SUB>> ]
+"5900" [label = <(TIFFFlushData,TIFFFlushData(tif))<SUB>35</SUB>> ]
+"5903" [label = <(RETURN,return (0);,return (0);)<SUB>36</SUB>> ]
+"5907" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT))<SUB>43</SUB>> ]
+"5919" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDWR)<SUB>44</SUB>> ]
+"5933" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP))<SUB>50</SUB>> ]
+"5940" [label = <(&lt;operator&gt;.logicalNot,!TIFFRewriteDirectory(tif))<SUB>51</SUB>> ]
+"5944" [label = <(RETURN,return (0);,return (0);)<SUB>52</SUB>> ]
+"5893" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>32</SUB>> ]
+"5908" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP)<SUB>43</SUB>> ]
+"5913" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT))<SUB>44</SUB>> ]
+"5920" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>44</SUB>> ]
+"5926" [label = <(TIFFForceStrileArrayWriting,TIFFForceStrileArrayWriting(tif))<SUB>46</SUB>> ]
+"5934" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>50</SUB>> ]
+"5937" [label = <(&lt;operator&gt;.or,TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)<SUB>50</SUB>> ]
+"5941" [label = <(TIFFRewriteDirectory,TIFFRewriteDirectory(tif))<SUB>51</SUB>> ]
+"5909" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>43</SUB>> ]
+"5914" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT)<SUB>44</SUB>> ]
+"5922" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>44</SUB>> ]
+"5929" [label = <(RETURN,return 1;,return 1;)<SUB>47</SUB>> ]
+"5936" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>50</SUB>> ]
+"5911" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>43</SUB>> ]
+"5915" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>44</SUB>> ]
+"5917" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>44</SUB>> ]
+"5886" [label = <(METHOD,TIFFFlush)<SUB>30</SUB>> ]
+"5948" [label = <(METHOD_RETURN,int)<SUB>30</SUB>> ]
+  "5946" -> "5948" 
+  "5890" -> "5896" 
+  "5890" -> "5900" 
+  "5899" -> "5903" 
+  "5899" -> "5911" 
+  "5906" -> "5926" 
+  "5906" -> "5936" 
+  "5932" -> "5944" 
+  "5932" -> "5946" 
+  "5891" -> "5890" 
+  "5896" -> "5948" 
+  "5900" -> "5899" 
+  "5903" -> "5948" 
+  "5907" -> "5906" 
+  "5907" -> "5922" 
+  "5919" -> "5906" 
+  "5933" -> "5932" 
+  "5933" -> "5941" 
+  "5940" -> "5932" 
+  "5944" -> "5948" 
+  "5893" -> "5891" 
+  "5908" -> "5907" 
+  "5908" -> "5917" 
+  "5913" -> "5907" 
+  "5920" -> "5919" 
+  "5926" -> "5929" 
+  "5926" -> "5936" 
+  "5934" -> "5937" 
+  "5937" -> "5933" 
+  "5941" -> "5940" 
+  "5909" -> "5908" 
+  "5914" -> "5913" 
+  "5922" -> "5920" 
+  "5929" -> "5948" 
+  "5936" -> "5934" 
+  "5911" -> "5909" 
+  "5915" -> "5914" 
+  "5917" -> "5915" 
+  "5886" -> "5893" 
+}

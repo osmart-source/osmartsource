@@ -1,0 +1,37 @@
+digraph "TIFFReadDirectoryCheckOrder" {  
+"90603" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadDirectoryCheckOrder&quot;)<SUB>4946</SUB>> ]
+"90609" [label = <(&lt;operator&gt;.assignment,m = 0)<SUB>4950</SUB>> ]
+"90621" [label = <(&lt;operator&gt;.lessThan,n &lt; dircount)<SUB>4951</SUB>> ]
+"90625" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>4951</SUB>> ]
+"90627" [label = <(&lt;operator&gt;.postIncrement,o++)<SUB>4951</SUB>> ]
+"90642" [label = <(&lt;operator&gt;.assignment,m = o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90615" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>4951</SUB>> ]
+"90618" [label = <(&lt;operator&gt;.assignment,o = dir)<SUB>4951</SUB>> ]
+"90631" [label = <(&lt;operator&gt;.lessThan,o-&gt;tdir_tag &lt; m)<SUB>4953</SUB>> ]
+"90644" [label = <(&lt;operator&gt;.addition,o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90632" [label = <(&lt;operator&gt;.indirectFieldAccess,o-&gt;tdir_tag)<SUB>4953</SUB>> ]
+"90637" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                            &quot;Invalid TIFF directory; tags are not sorted in &quot;\012                            &quot;ascending order&quot;))<SUB>4955</SUB>> ]
+"90645" [label = <(&lt;operator&gt;.indirectFieldAccess,o-&gt;tdir_tag)<SUB>4960</SUB>> ]
+"90634" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4953</SUB>> ]
+"90647" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4960</SUB>> ]
+"90597" [label = <(METHOD,TIFFReadDirectoryCheckOrder)<SUB>4943</SUB>> ]
+"90649" [label = <(METHOD_RETURN,void)<SUB>4943</SUB>> ]
+  "90603" -> "90609" 
+  "90609" -> "90615" 
+  "90621" -> "90649" 
+  "90621" -> "90634" 
+  "90625" -> "90627" 
+  "90627" -> "90621" 
+  "90642" -> "90625" 
+  "90615" -> "90618" 
+  "90618" -> "90621" 
+  "90631" -> "90637" 
+  "90631" -> "90647" 
+  "90644" -> "90642" 
+  "90632" -> "90631" 
+  "90637" -> "90649" 
+  "90645" -> "90644" 
+  "90634" -> "90632" 
+  "90647" -> "90645" 
+  "90597" -> "90603" 
+}

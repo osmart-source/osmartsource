@@ -1,0 +1,85 @@
+digraph "TIFFWriteDirectoryTagCheckedSlongArray" {  
+"70156" [label = <(METHOD,TIFFWriteDirectoryTagCheckedSlongArray)<SUB>2288</SUB>> ]
+"70157" [label = <(PARAM,TIFF *tif)<SUB>2288</SUB>> ]
+"70158" [label = <(PARAM,uint32_t *ndir)<SUB>2288</SUB>> ]
+"70159" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2289</SUB>> ]
+"70160" [label = <(PARAM,uint16_t tag)<SUB>2290</SUB>> ]
+"70161" [label = <(PARAM,uint32_t count)<SUB>2290</SUB>> ]
+"70162" [label = <(PARAM,int32_t *value)<SUB>2291</SUB>> ]
+"70163" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2292</SUB>> ]
+"70164" [label = <(assert,assert(count &lt; 0x40000000))<SUB>2293</SUB>> ]
+"70165" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x40000000)<SUB>2293</SUB>> ]
+"70166" [label = <(IDENTIFIER,count,count &lt; 0x40000000)<SUB>2293</SUB>> ]
+"70167" [label = <(LITERAL,0x40000000,count &lt; 0x40000000)<SUB>2293</SUB>> ]
+"70168" [label = <(assert,assert(sizeof(int32_t) == 4))<SUB>2294</SUB>> ]
+"70169" [label = <(&lt;operator&gt;.equals,sizeof(int32_t) == 4)<SUB>2294</SUB>> ]
+"70170" [label = <(&lt;operator&gt;.sizeOf,sizeof(int32_t))<SUB>2294</SUB>> ]
+"70171" [label = <(IDENTIFIER,int32_t,sizeof(int32_t))<SUB>2294</SUB>> ]
+"70172" [label = <(LITERAL,4,sizeof(int32_t) == 4)<SUB>2294</SUB>> ]
+"70173" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2295</SUB>> ]
+"70174" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2295</SUB>> ]
+"70175" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2295</SUB>> ]
+"70176" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2295</SUB>> ]
+"70177" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2295</SUB>> ]
+"70178" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2295</SUB>> ]
+"70179" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2296</SUB>> ]
+"70180" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong((uint32_t *)value, count))<SUB>2296</SUB>> ]
+"70181" [label = <(&lt;operator&gt;.cast,(uint32_t *)value)<SUB>2296</SUB>> ]
+"70182" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>2296</SUB>> ]
+"70183" [label = <(IDENTIFIER,value,(uint32_t *)value)<SUB>2296</SUB>> ]
+"70184" [label = <(IDENTIFIER,count,TIFFSwabArrayOfLong((uint32_t *)value, count))<SUB>2296</SUB>> ]
+"70185" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value));)<SUB>2297</SUB>> ]
+"70186" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70187" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70188" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70189" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70190" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70191" [label = <(IDENTIFIER,TIFF_SLONG,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70192" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70193" [label = <(&lt;operator&gt;.multiplication,count * 4)<SUB>2298</SUB>> ]
+"70194" [label = <(IDENTIFIER,count,count * 4)<SUB>2298</SUB>> ]
+"70195" [label = <(LITERAL,4,count * 4)<SUB>2298</SUB>> ]
+"70196" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2298</SUB>> ]
+"70197" [label = <(METHOD_RETURN,int)<SUB>2288</SUB>> ]
+  "70156" -> "70157" 
+  "70156" -> "70158" 
+  "70156" -> "70159" 
+  "70156" -> "70160" 
+  "70156" -> "70161" 
+  "70156" -> "70162" 
+  "70156" -> "70163" 
+  "70156" -> "70197" 
+  "70163" -> "70164" 
+  "70163" -> "70168" 
+  "70163" -> "70173" 
+  "70163" -> "70185" 
+  "70164" -> "70165" 
+  "70165" -> "70166" 
+  "70165" -> "70167" 
+  "70168" -> "70169" 
+  "70169" -> "70170" 
+  "70169" -> "70172" 
+  "70170" -> "70171" 
+  "70173" -> "70174" 
+  "70173" -> "70179" 
+  "70174" -> "70175" 
+  "70174" -> "70178" 
+  "70175" -> "70176" 
+  "70175" -> "70177" 
+  "70179" -> "70180" 
+  "70180" -> "70181" 
+  "70180" -> "70184" 
+  "70181" -> "70182" 
+  "70181" -> "70183" 
+  "70185" -> "70186" 
+  "70186" -> "70187" 
+  "70186" -> "70188" 
+  "70186" -> "70189" 
+  "70186" -> "70190" 
+  "70186" -> "70191" 
+  "70186" -> "70192" 
+  "70186" -> "70193" 
+  "70186" -> "70196" 
+  "70193" -> "70194" 
+  "70193" -> "70195" 
+}

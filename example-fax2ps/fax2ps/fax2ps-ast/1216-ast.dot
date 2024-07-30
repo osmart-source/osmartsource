@@ -1,0 +1,449 @@
+digraph "TIFFReadDirEntryLong" {  
+"79342" [label = <(METHOD,TIFFReadDirEntryLong)<SUB>648</SUB>> ]
+"79343" [label = <(PARAM,TIFF *tif)<SUB>649</SUB>> ]
+"79344" [label = <(PARAM,TIFFDirEntry *direntry)<SUB>649</SUB>> ]
+"79345" [label = <(PARAM,uint32_t *value)<SUB>649</SUB>> ]
+"79346" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>650</SUB>> ]
+"79347" [label = <(LOCAL,enum TIFFReadDirEntryErr err: TIFFReadDirEntryErr)<SUB>651</SUB>> ]
+"79348" [label = <(CONTROL_STRUCTURE,if (direntry-&gt;tdir_count != 1),if (direntry-&gt;tdir_count != 1))<SUB>652</SUB>> ]
+"79349" [label = <(&lt;operator&gt;.notEquals,direntry-&gt;tdir_count != 1)<SUB>652</SUB>> ]
+"79350" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>652</SUB>> ]
+"79351" [label = <(IDENTIFIER,direntry,direntry-&gt;tdir_count != 1)<SUB>652</SUB>> ]
+"79352" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>652</SUB>> ]
+"79353" [label = <(LITERAL,1,direntry-&gt;tdir_count != 1)<SUB>652</SUB>> ]
+"79354" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>653</SUB>> ]
+"79355" [label = <(RETURN,return (TIFFReadDirEntryErrCount);,return (TIFFReadDirEntryErrCount);)<SUB>653</SUB>> ]
+"79356" [label = <(IDENTIFIER,TIFFReadDirEntryErrCount,return (TIFFReadDirEntryErrCount);)<SUB>653</SUB>> ]
+"79357" [label = <(CONTROL_STRUCTURE,switch(direntry-&gt;tdir_type),switch(direntry-&gt;tdir_type))<SUB>654</SUB>> ]
+"79358" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>654</SUB>> ]
+"79359" [label = <(IDENTIFIER,direntry,switch(direntry-&gt;tdir_type))<SUB>654</SUB>> ]
+"79360" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>654</SUB>> ]
+"79361" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>655</SUB>> ]
+"79362" [label = <(JUMP_TARGET,case)<SUB>656</SUB>> ]
+"79363" [label = <(IDENTIFIER,TIFF_BYTE,&lt;empty&gt;)<SUB>656</SUB>> ]
+"79364" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>657</SUB>> ]
+"79365" [label = <(LOCAL,uint8_t m: uint8_t)<SUB>658</SUB>> ]
+"79366" [label = <(TIFFReadDirEntryCheckedByte,TIFFReadDirEntryCheckedByte(tif, direntry, &amp;m))<SUB>659</SUB>> ]
+"79367" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedByte(tif, direntry, &amp;m))<SUB>659</SUB>> ]
+"79368" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedByte(tif, direntry, &amp;m))<SUB>659</SUB>> ]
+"79369" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>659</SUB>> ]
+"79370" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedByte(tif, direntry, &amp;m))<SUB>659</SUB>> ]
+"79371" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>660</SUB>> ]
+"79372" [label = <(&lt;operator&gt;.indirection,*value)<SUB>660</SUB>> ]
+"79373" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>660</SUB>> ]
+"79374" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>660</SUB>> ]
+"79375" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>660</SUB>> ]
+"79376" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>660</SUB>> ]
+"79377" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>661</SUB>> ]
+"79378" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>661</SUB>> ]
+"79379" [label = <(JUMP_TARGET,case)<SUB>663</SUB>> ]
+"79380" [label = <(IDENTIFIER,TIFF_SBYTE,&lt;empty&gt;)<SUB>663</SUB>> ]
+"79381" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>664</SUB>> ]
+"79382" [label = <(LOCAL,int8_t m: int8_t)<SUB>665</SUB>> ]
+"79383" [label = <(TIFFReadDirEntryCheckedSbyte,TIFFReadDirEntryCheckedSbyte(tif, direntry, &amp;m))<SUB>666</SUB>> ]
+"79384" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedSbyte(tif, direntry, &amp;m))<SUB>666</SUB>> ]
+"79385" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedSbyte(tif, direntry, &amp;m))<SUB>666</SUB>> ]
+"79386" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>666</SUB>> ]
+"79387" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedSbyte(tif, direntry, &amp;m))<SUB>666</SUB>> ]
+"79388" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeLongSbyte(m))<SUB>667</SUB>> ]
+"79389" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeLongSbyte(m))<SUB>667</SUB>> ]
+"79390" [label = <(TIFFReadDirEntryCheckRangeLongSbyte,TIFFReadDirEntryCheckRangeLongSbyte(m))<SUB>667</SUB>> ]
+"79391" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckRangeLongSbyte(m))<SUB>667</SUB>> ]
+"79392" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>668</SUB>> ]
+"79393" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>668</SUB>> ]
+"79394" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>668</SUB>> ]
+"79395" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>668</SUB>> ]
+"79396" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>669</SUB>> ]
+"79397" [label = <(RETURN,return (err);,return (err);)<SUB>669</SUB>> ]
+"79398" [label = <(IDENTIFIER,err,return (err);)<SUB>669</SUB>> ]
+"79399" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>670</SUB>> ]
+"79400" [label = <(&lt;operator&gt;.indirection,*value)<SUB>670</SUB>> ]
+"79401" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>670</SUB>> ]
+"79402" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>670</SUB>> ]
+"79403" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>670</SUB>> ]
+"79404" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>670</SUB>> ]
+"79405" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>671</SUB>> ]
+"79406" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>671</SUB>> ]
+"79407" [label = <(JUMP_TARGET,case)<SUB>673</SUB>> ]
+"79408" [label = <(IDENTIFIER,TIFF_SHORT,&lt;empty&gt;)<SUB>673</SUB>> ]
+"79409" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>674</SUB>> ]
+"79410" [label = <(LOCAL,uint16_t m: uint16_t)<SUB>675</SUB>> ]
+"79411" [label = <(TIFFReadDirEntryCheckedShort,TIFFReadDirEntryCheckedShort(tif, direntry, &amp;m))<SUB>676</SUB>> ]
+"79412" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedShort(tif, direntry, &amp;m))<SUB>676</SUB>> ]
+"79413" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedShort(tif, direntry, &amp;m))<SUB>676</SUB>> ]
+"79414" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>676</SUB>> ]
+"79415" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedShort(tif, direntry, &amp;m))<SUB>676</SUB>> ]
+"79416" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>677</SUB>> ]
+"79417" [label = <(&lt;operator&gt;.indirection,*value)<SUB>677</SUB>> ]
+"79418" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>677</SUB>> ]
+"79419" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>677</SUB>> ]
+"79420" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>677</SUB>> ]
+"79421" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>677</SUB>> ]
+"79422" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>678</SUB>> ]
+"79423" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>678</SUB>> ]
+"79424" [label = <(JUMP_TARGET,case)<SUB>680</SUB>> ]
+"79425" [label = <(IDENTIFIER,TIFF_SSHORT,&lt;empty&gt;)<SUB>680</SUB>> ]
+"79426" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>681</SUB>> ]
+"79427" [label = <(LOCAL,int16_t m: int16_t)<SUB>682</SUB>> ]
+"79428" [label = <(TIFFReadDirEntryCheckedSshort,TIFFReadDirEntryCheckedSshort(tif, direntry, &amp;m))<SUB>683</SUB>> ]
+"79429" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedSshort(tif, direntry, &amp;m))<SUB>683</SUB>> ]
+"79430" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedSshort(tif, direntry, &amp;m))<SUB>683</SUB>> ]
+"79431" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>683</SUB>> ]
+"79432" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedSshort(tif, direntry, &amp;m))<SUB>683</SUB>> ]
+"79433" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeLongSshort(m))<SUB>684</SUB>> ]
+"79434" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeLongSshort(m))<SUB>684</SUB>> ]
+"79435" [label = <(TIFFReadDirEntryCheckRangeLongSshort,TIFFReadDirEntryCheckRangeLongSshort(m))<SUB>684</SUB>> ]
+"79436" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckRangeLongSshort(m))<SUB>684</SUB>> ]
+"79437" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>685</SUB>> ]
+"79438" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>685</SUB>> ]
+"79439" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>685</SUB>> ]
+"79440" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>685</SUB>> ]
+"79441" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>686</SUB>> ]
+"79442" [label = <(RETURN,return (err);,return (err);)<SUB>686</SUB>> ]
+"79443" [label = <(IDENTIFIER,err,return (err);)<SUB>686</SUB>> ]
+"79444" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>687</SUB>> ]
+"79445" [label = <(&lt;operator&gt;.indirection,*value)<SUB>687</SUB>> ]
+"79446" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>687</SUB>> ]
+"79447" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>687</SUB>> ]
+"79448" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>687</SUB>> ]
+"79449" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>687</SUB>> ]
+"79450" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>688</SUB>> ]
+"79451" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>688</SUB>> ]
+"79452" [label = <(JUMP_TARGET,case)<SUB>690</SUB>> ]
+"79453" [label = <(IDENTIFIER,TIFF_LONG,&lt;empty&gt;)<SUB>690</SUB>> ]
+"79454" [label = <(TIFFReadDirEntryCheckedLong,TIFFReadDirEntryCheckedLong(tif, direntry, value))<SUB>691</SUB>> ]
+"79455" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedLong(tif, direntry, value))<SUB>691</SUB>> ]
+"79456" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedLong(tif, direntry, value))<SUB>691</SUB>> ]
+"79457" [label = <(IDENTIFIER,value,TIFFReadDirEntryCheckedLong(tif, direntry, value))<SUB>691</SUB>> ]
+"79458" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>692</SUB>> ]
+"79459" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>692</SUB>> ]
+"79460" [label = <(JUMP_TARGET,case)<SUB>693</SUB>> ]
+"79461" [label = <(IDENTIFIER,TIFF_SLONG,&lt;empty&gt;)<SUB>693</SUB>> ]
+"79462" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>694</SUB>> ]
+"79463" [label = <(LOCAL,int32_t m: int32_t)<SUB>695</SUB>> ]
+"79464" [label = <(TIFFReadDirEntryCheckedSlong,TIFFReadDirEntryCheckedSlong(tif, direntry, &amp;m))<SUB>696</SUB>> ]
+"79465" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedSlong(tif, direntry, &amp;m))<SUB>696</SUB>> ]
+"79466" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedSlong(tif, direntry, &amp;m))<SUB>696</SUB>> ]
+"79467" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>696</SUB>> ]
+"79468" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedSlong(tif, direntry, &amp;m))<SUB>696</SUB>> ]
+"79469" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeLongSlong(m))<SUB>697</SUB>> ]
+"79470" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeLongSlong(m))<SUB>697</SUB>> ]
+"79471" [label = <(TIFFReadDirEntryCheckRangeLongSlong,TIFFReadDirEntryCheckRangeLongSlong(m))<SUB>697</SUB>> ]
+"79472" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckRangeLongSlong(m))<SUB>697</SUB>> ]
+"79473" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>698</SUB>> ]
+"79474" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>698</SUB>> ]
+"79475" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>698</SUB>> ]
+"79476" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>698</SUB>> ]
+"79477" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>699</SUB>> ]
+"79478" [label = <(RETURN,return (err);,return (err);)<SUB>699</SUB>> ]
+"79479" [label = <(IDENTIFIER,err,return (err);)<SUB>699</SUB>> ]
+"79480" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>700</SUB>> ]
+"79481" [label = <(&lt;operator&gt;.indirection,*value)<SUB>700</SUB>> ]
+"79482" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>700</SUB>> ]
+"79483" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>700</SUB>> ]
+"79484" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>700</SUB>> ]
+"79485" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>700</SUB>> ]
+"79486" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>701</SUB>> ]
+"79487" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>701</SUB>> ]
+"79488" [label = <(JUMP_TARGET,case)<SUB>703</SUB>> ]
+"79489" [label = <(IDENTIFIER,TIFF_LONG8,&lt;empty&gt;)<SUB>703</SUB>> ]
+"79490" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>704</SUB>> ]
+"79491" [label = <(LOCAL,uint64_t m: uint64_t)<SUB>705</SUB>> ]
+"79492" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckedLong8(tif, direntry, &amp;m))<SUB>706</SUB>> ]
+"79493" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckedLong8(tif, direntry, &amp;m))<SUB>706</SUB>> ]
+"79494" [label = <(TIFFReadDirEntryCheckedLong8,TIFFReadDirEntryCheckedLong8(tif, direntry, &amp;m))<SUB>706</SUB>> ]
+"79495" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedLong8(tif, direntry, &amp;m))<SUB>706</SUB>> ]
+"79496" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedLong8(tif, direntry, &amp;m))<SUB>706</SUB>> ]
+"79497" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>706</SUB>> ]
+"79498" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedLong8(tif, direntry, &amp;m))<SUB>706</SUB>> ]
+"79499" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>707</SUB>> ]
+"79500" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>707</SUB>> ]
+"79501" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>707</SUB>> ]
+"79502" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>707</SUB>> ]
+"79503" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>708</SUB>> ]
+"79504" [label = <(RETURN,return (err);,return (err);)<SUB>708</SUB>> ]
+"79505" [label = <(IDENTIFIER,err,return (err);)<SUB>708</SUB>> ]
+"79506" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeLongLong8(m))<SUB>709</SUB>> ]
+"79507" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeLongLong8(m))<SUB>709</SUB>> ]
+"79508" [label = <(TIFFReadDirEntryCheckRangeLongLong8,TIFFReadDirEntryCheckRangeLongLong8(m))<SUB>709</SUB>> ]
+"79509" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckRangeLongLong8(m))<SUB>709</SUB>> ]
+"79510" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>710</SUB>> ]
+"79511" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>710</SUB>> ]
+"79512" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>710</SUB>> ]
+"79513" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>710</SUB>> ]
+"79514" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>711</SUB>> ]
+"79515" [label = <(RETURN,return (err);,return (err);)<SUB>711</SUB>> ]
+"79516" [label = <(IDENTIFIER,err,return (err);)<SUB>711</SUB>> ]
+"79517" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>712</SUB>> ]
+"79518" [label = <(&lt;operator&gt;.indirection,*value)<SUB>712</SUB>> ]
+"79519" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>712</SUB>> ]
+"79520" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>712</SUB>> ]
+"79521" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>712</SUB>> ]
+"79522" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>712</SUB>> ]
+"79523" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>713</SUB>> ]
+"79524" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>713</SUB>> ]
+"79525" [label = <(JUMP_TARGET,case)<SUB>715</SUB>> ]
+"79526" [label = <(IDENTIFIER,TIFF_SLONG8,&lt;empty&gt;)<SUB>715</SUB>> ]
+"79527" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>716</SUB>> ]
+"79528" [label = <(LOCAL,int64_t m: int64_t)<SUB>717</SUB>> ]
+"79529" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckedSlong8(tif, direntry, &amp;m))<SUB>718</SUB>> ]
+"79530" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckedSlong8(tif, direntry, &amp;m))<SUB>718</SUB>> ]
+"79531" [label = <(TIFFReadDirEntryCheckedSlong8,TIFFReadDirEntryCheckedSlong8(tif, direntry, &amp;m))<SUB>718</SUB>> ]
+"79532" [label = <(IDENTIFIER,tif,TIFFReadDirEntryCheckedSlong8(tif, direntry, &amp;m))<SUB>718</SUB>> ]
+"79533" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryCheckedSlong8(tif, direntry, &amp;m))<SUB>718</SUB>> ]
+"79534" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>718</SUB>> ]
+"79535" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckedSlong8(tif, direntry, &amp;m))<SUB>718</SUB>> ]
+"79536" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>719</SUB>> ]
+"79537" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>719</SUB>> ]
+"79538" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>719</SUB>> ]
+"79539" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>719</SUB>> ]
+"79540" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>720</SUB>> ]
+"79541" [label = <(RETURN,return (err);,return (err);)<SUB>720</SUB>> ]
+"79542" [label = <(IDENTIFIER,err,return (err);)<SUB>720</SUB>> ]
+"79543" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeLongSlong8(m))<SUB>721</SUB>> ]
+"79544" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeLongSlong8(m))<SUB>721</SUB>> ]
+"79545" [label = <(TIFFReadDirEntryCheckRangeLongSlong8,TIFFReadDirEntryCheckRangeLongSlong8(m))<SUB>721</SUB>> ]
+"79546" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckRangeLongSlong8(m))<SUB>721</SUB>> ]
+"79547" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>722</SUB>> ]
+"79548" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>722</SUB>> ]
+"79549" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>722</SUB>> ]
+"79550" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>722</SUB>> ]
+"79551" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>723</SUB>> ]
+"79552" [label = <(RETURN,return (err);,return (err);)<SUB>723</SUB>> ]
+"79553" [label = <(IDENTIFIER,err,return (err);)<SUB>723</SUB>> ]
+"79554" [label = <(&lt;operator&gt;.assignment,*value = (uint32_t)m)<SUB>724</SUB>> ]
+"79555" [label = <(&lt;operator&gt;.indirection,*value)<SUB>724</SUB>> ]
+"79556" [label = <(IDENTIFIER,value,*value = (uint32_t)m)<SUB>724</SUB>> ]
+"79557" [label = <(&lt;operator&gt;.cast,(uint32_t)m)<SUB>724</SUB>> ]
+"79558" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>724</SUB>> ]
+"79559" [label = <(IDENTIFIER,m,(uint32_t)m)<SUB>724</SUB>> ]
+"79560" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>725</SUB>> ]
+"79561" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>725</SUB>> ]
+"79562" [label = <(JUMP_TARGET,default)<SUB>727</SUB>> ]
+"79563" [label = <(RETURN,return (TIFFReadDirEntryErrType);,return (TIFFReadDirEntryErrType);)<SUB>728</SUB>> ]
+"79564" [label = <(IDENTIFIER,TIFFReadDirEntryErrType,return (TIFFReadDirEntryErrType);)<SUB>728</SUB>> ]
+"79565" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>648</SUB>> ]
+  "79342" -> "79343" 
+  "79342" -> "79344" 
+  "79342" -> "79345" 
+  "79342" -> "79346" 
+  "79342" -> "79565" 
+  "79346" -> "79347" 
+  "79346" -> "79348" 
+  "79346" -> "79357" 
+  "79348" -> "79349" 
+  "79348" -> "79354" 
+  "79349" -> "79350" 
+  "79349" -> "79353" 
+  "79350" -> "79351" 
+  "79350" -> "79352" 
+  "79354" -> "79355" 
+  "79355" -> "79356" 
+  "79357" -> "79358" 
+  "79357" -> "79361" 
+  "79358" -> "79359" 
+  "79358" -> "79360" 
+  "79361" -> "79362" 
+  "79361" -> "79363" 
+  "79361" -> "79364" 
+  "79361" -> "79379" 
+  "79361" -> "79380" 
+  "79361" -> "79381" 
+  "79361" -> "79407" 
+  "79361" -> "79408" 
+  "79361" -> "79409" 
+  "79361" -> "79424" 
+  "79361" -> "79425" 
+  "79361" -> "79426" 
+  "79361" -> "79452" 
+  "79361" -> "79453" 
+  "79361" -> "79454" 
+  "79361" -> "79458" 
+  "79361" -> "79460" 
+  "79361" -> "79461" 
+  "79361" -> "79462" 
+  "79361" -> "79488" 
+  "79361" -> "79489" 
+  "79361" -> "79490" 
+  "79361" -> "79525" 
+  "79361" -> "79526" 
+  "79361" -> "79527" 
+  "79361" -> "79562" 
+  "79361" -> "79563" 
+  "79364" -> "79365" 
+  "79364" -> "79366" 
+  "79364" -> "79371" 
+  "79364" -> "79377" 
+  "79366" -> "79367" 
+  "79366" -> "79368" 
+  "79366" -> "79369" 
+  "79369" -> "79370" 
+  "79371" -> "79372" 
+  "79371" -> "79374" 
+  "79372" -> "79373" 
+  "79374" -> "79375" 
+  "79374" -> "79376" 
+  "79377" -> "79378" 
+  "79381" -> "79382" 
+  "79381" -> "79383" 
+  "79381" -> "79388" 
+  "79381" -> "79392" 
+  "79381" -> "79399" 
+  "79381" -> "79405" 
+  "79383" -> "79384" 
+  "79383" -> "79385" 
+  "79383" -> "79386" 
+  "79386" -> "79387" 
+  "79388" -> "79389" 
+  "79388" -> "79390" 
+  "79390" -> "79391" 
+  "79392" -> "79393" 
+  "79392" -> "79396" 
+  "79393" -> "79394" 
+  "79393" -> "79395" 
+  "79396" -> "79397" 
+  "79397" -> "79398" 
+  "79399" -> "79400" 
+  "79399" -> "79402" 
+  "79400" -> "79401" 
+  "79402" -> "79403" 
+  "79402" -> "79404" 
+  "79405" -> "79406" 
+  "79409" -> "79410" 
+  "79409" -> "79411" 
+  "79409" -> "79416" 
+  "79409" -> "79422" 
+  "79411" -> "79412" 
+  "79411" -> "79413" 
+  "79411" -> "79414" 
+  "79414" -> "79415" 
+  "79416" -> "79417" 
+  "79416" -> "79419" 
+  "79417" -> "79418" 
+  "79419" -> "79420" 
+  "79419" -> "79421" 
+  "79422" -> "79423" 
+  "79426" -> "79427" 
+  "79426" -> "79428" 
+  "79426" -> "79433" 
+  "79426" -> "79437" 
+  "79426" -> "79444" 
+  "79426" -> "79450" 
+  "79428" -> "79429" 
+  "79428" -> "79430" 
+  "79428" -> "79431" 
+  "79431" -> "79432" 
+  "79433" -> "79434" 
+  "79433" -> "79435" 
+  "79435" -> "79436" 
+  "79437" -> "79438" 
+  "79437" -> "79441" 
+  "79438" -> "79439" 
+  "79438" -> "79440" 
+  "79441" -> "79442" 
+  "79442" -> "79443" 
+  "79444" -> "79445" 
+  "79444" -> "79447" 
+  "79445" -> "79446" 
+  "79447" -> "79448" 
+  "79447" -> "79449" 
+  "79450" -> "79451" 
+  "79454" -> "79455" 
+  "79454" -> "79456" 
+  "79454" -> "79457" 
+  "79458" -> "79459" 
+  "79462" -> "79463" 
+  "79462" -> "79464" 
+  "79462" -> "79469" 
+  "79462" -> "79473" 
+  "79462" -> "79480" 
+  "79462" -> "79486" 
+  "79464" -> "79465" 
+  "79464" -> "79466" 
+  "79464" -> "79467" 
+  "79467" -> "79468" 
+  "79469" -> "79470" 
+  "79469" -> "79471" 
+  "79471" -> "79472" 
+  "79473" -> "79474" 
+  "79473" -> "79477" 
+  "79474" -> "79475" 
+  "79474" -> "79476" 
+  "79477" -> "79478" 
+  "79478" -> "79479" 
+  "79480" -> "79481" 
+  "79480" -> "79483" 
+  "79481" -> "79482" 
+  "79483" -> "79484" 
+  "79483" -> "79485" 
+  "79486" -> "79487" 
+  "79490" -> "79491" 
+  "79490" -> "79492" 
+  "79490" -> "79499" 
+  "79490" -> "79506" 
+  "79490" -> "79510" 
+  "79490" -> "79517" 
+  "79490" -> "79523" 
+  "79492" -> "79493" 
+  "79492" -> "79494" 
+  "79494" -> "79495" 
+  "79494" -> "79496" 
+  "79494" -> "79497" 
+  "79497" -> "79498" 
+  "79499" -> "79500" 
+  "79499" -> "79503" 
+  "79500" -> "79501" 
+  "79500" -> "79502" 
+  "79503" -> "79504" 
+  "79504" -> "79505" 
+  "79506" -> "79507" 
+  "79506" -> "79508" 
+  "79508" -> "79509" 
+  "79510" -> "79511" 
+  "79510" -> "79514" 
+  "79511" -> "79512" 
+  "79511" -> "79513" 
+  "79514" -> "79515" 
+  "79515" -> "79516" 
+  "79517" -> "79518" 
+  "79517" -> "79520" 
+  "79518" -> "79519" 
+  "79520" -> "79521" 
+  "79520" -> "79522" 
+  "79523" -> "79524" 
+  "79527" -> "79528" 
+  "79527" -> "79529" 
+  "79527" -> "79536" 
+  "79527" -> "79543" 
+  "79527" -> "79547" 
+  "79527" -> "79554" 
+  "79527" -> "79560" 
+  "79529" -> "79530" 
+  "79529" -> "79531" 
+  "79531" -> "79532" 
+  "79531" -> "79533" 
+  "79531" -> "79534" 
+  "79534" -> "79535" 
+  "79536" -> "79537" 
+  "79536" -> "79540" 
+  "79537" -> "79538" 
+  "79537" -> "79539" 
+  "79540" -> "79541" 
+  "79541" -> "79542" 
+  "79543" -> "79544" 
+  "79543" -> "79545" 
+  "79545" -> "79546" 
+  "79547" -> "79548" 
+  "79547" -> "79551" 
+  "79548" -> "79549" 
+  "79548" -> "79550" 
+  "79551" -> "79552" 
+  "79552" -> "79553" 
+  "79554" -> "79555" 
+  "79554" -> "79557" 
+  "79555" -> "79556" 
+  "79557" -> "79558" 
+  "79557" -> "79559" 
+  "79560" -> "79561" 
+  "79563" -> "79564" 
+}

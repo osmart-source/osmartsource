@@ -1,0 +1,26 @@
+digraph "TIFFReadDirEntryCheckedShort" {  
+"86661" [label = <(&lt;operator&gt;.assignment,*value = direntry-&gt;tdir_offset.toff_short)<SUB>3336</SUB>> ]
+"86662" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3336</SUB>> ]
+"86664" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_short)<SUB>3336</SUB>> ]
+"86670" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3338</SUB>> ]
+"86665" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3336</SUB>> ]
+"86668" [label = <(FIELD_IDENTIFIER,toff_short,toff_short)<SUB>3336</SUB>> ]
+"86671" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3338</SUB>> ]
+"86676" [label = <(TIFFSwabShort,TIFFSwabShort(value))<SUB>3339</SUB>> ]
+"86667" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3336</SUB>> ]
+"86673" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3338</SUB>> ]
+"86656" [label = <(METHOD,TIFFReadDirEntryCheckedShort)<SUB>3333</SUB>> ]
+"86678" [label = <(METHOD_RETURN,void)<SUB>3333</SUB>> ]
+  "86661" -> "86673" 
+  "86662" -> "86667" 
+  "86664" -> "86661" 
+  "86670" -> "86678" 
+  "86670" -> "86676" 
+  "86665" -> "86668" 
+  "86668" -> "86664" 
+  "86671" -> "86670" 
+  "86676" -> "86678" 
+  "86667" -> "86665" 
+  "86673" -> "86671" 
+  "86656" -> "86662" 
+}

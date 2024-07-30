@@ -1,0 +1,25 @@
+digraph "TIFFReadDirEntryCheckRangeSlongSlong8" {  
+"87893" [label = <(&lt;operator&gt;.logicalOr,(value &lt; 0 - ((int64_t)0x7FFFFFFF + 1)) || (value &gt; 0x7FFFFFFF))<SUB>3809</SUB>> ]
+"87894" [label = <(&lt;operator&gt;.lessThan,value &lt; 0 - ((int64_t)0x7FFFFFFF + 1))<SUB>3809</SUB>> ]
+"87903" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0x7FFFFFFF)<SUB>3809</SUB>> ]
+"87907" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3810</SUB>> ]
+"87896" [label = <(&lt;operator&gt;.subtraction,0 - ((int64_t)0x7FFFFFFF + 1))<SUB>3809</SUB>> ]
+"87911" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3812</SUB>> ]
+"87898" [label = <(&lt;operator&gt;.addition,(int64_t)0x7FFFFFFF + 1)<SUB>3809</SUB>> ]
+"87899" [label = <(&lt;operator&gt;.cast,(int64_t)0x7FFFFFFF)<SUB>3809</SUB>> ]
+"87900" [label = <(UNKNOWN,int64_t,int64_t)<SUB>3809</SUB>> ]
+"87889" [label = <(METHOD,TIFFReadDirEntryCheckRangeSlongSlong8)<SUB>3806</SUB>> ]
+"87913" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3806</SUB>> ]
+  "87893" -> "87907" 
+  "87893" -> "87911" 
+  "87894" -> "87893" 
+  "87894" -> "87903" 
+  "87903" -> "87893" 
+  "87907" -> "87913" 
+  "87896" -> "87894" 
+  "87911" -> "87913" 
+  "87898" -> "87896" 
+  "87899" -> "87898" 
+  "87900" -> "87899" 
+  "87889" -> "87900" 
+}

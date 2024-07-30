@@ -1,0 +1,91 @@
+digraph "TIFFReadDirEntryPersampleShort" {  
+"86550" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryShortArray(tif, direntry, &amp;m))<SUB>3299</SUB>> ]
+"86572" [label = <(&lt;operator&gt;.assignment,na = m)<SUB>3302</SUB>> ]
+"86575" [label = <(&lt;operator&gt;.assignment,nb = tif-&gt;tif_dir.td_samplesperpixel)<SUB>3303</SUB>> ]
+"86582" [label = <(&lt;operator&gt;.assignment,*value = *na++)<SUB>3304</SUB>> ]
+"86588" [label = <(&lt;operator&gt;.postDecrement,nb--)<SUB>3305</SUB>> ]
+"86609" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, m))<SUB>3315</SUB>> ]
+"86612" [label = <(RETURN,return (err);,return (err);)<SUB>3316</SUB>> ]
+"86536" [label = <(&lt;operator&gt;.lessThan,direntry-&gt;tdir_count &lt; (uint64_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>3297</SUB>> ]
+"86552" [label = <(TIFFReadDirEntryShortArray,TIFFReadDirEntryShortArray(tif, direntry, &amp;m))<SUB>3299</SUB>> ]
+"86558" [label = <(&lt;operator&gt;.logicalOr,err != TIFFReadDirEntryErrOk || m == NULL)<SUB>3300</SUB>> ]
+"86577" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>3303</SUB>> ]
+"86583" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3304</SUB>> ]
+"86585" [label = <(&lt;operator&gt;.indirection,*na++)<SUB>3304</SUB>> ]
+"86591" [label = <(&lt;operator&gt;.greaterThan,nb &gt; 0)<SUB>3306</SUB>> ]
+"86537" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>3297</SUB>> ]
+"86540" [label = <(&lt;operator&gt;.cast,(uint64_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>3297</SUB>> ]
+"86548" [label = <(RETURN,return (TIFFReadDirEntryErrCount);,return (TIFFReadDirEntryErrCount);)<SUB>3298</SUB>> ]
+"86555" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>3299</SUB>> ]
+"86559" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>3300</SUB>> ]
+"86562" [label = <(&lt;operator&gt;.equals,m == NULL)<SUB>3300</SUB>> ]
+"86570" [label = <(RETURN,return (err);,return (err);)<SUB>3301</SUB>> ]
+"86578" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>3303</SUB>> ]
+"86581" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>3303</SUB>> ]
+"86586" [label = <(&lt;operator&gt;.postIncrement,na++)<SUB>3304</SUB>> ]
+"86607" [label = <(&lt;operator&gt;.postDecrement,nb--)<SUB>3313</SUB>> ]
+"86539" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>3297</SUB>> ]
+"86541" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>3297</SUB>> ]
+"86542" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>3297</SUB>> ]
+"86564" [label = <(NULL,NULL)<SUB>3300</SUB>> ]
+"86580" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>3303</SUB>> ]
+"86596" [label = <(&lt;operator&gt;.notEquals,*na++ != *value)<SUB>3308</SUB>> ]
+"86543" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>3297</SUB>> ]
+"86546" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>3297</SUB>> ]
+"86597" [label = <(&lt;operator&gt;.indirection,*na++)<SUB>3308</SUB>> ]
+"86600" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3308</SUB>> ]
+"86603" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryErrPsdif)<SUB>3310</SUB>> ]
+"86545" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>3297</SUB>> ]
+"86566" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>3300</SUB>> ]
+"86598" [label = <(&lt;operator&gt;.postIncrement,na++)<SUB>3308</SUB>> ]
+"86567" [label = <(UNKNOWN,void *,void *)<SUB>3300</SUB>> ]
+"86526" [label = <(METHOD,TIFFReadDirEntryPersampleShort)<SUB>3289</SUB>> ]
+"86614" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3289</SUB>> ]
+  "86550" -> "86559" 
+  "86572" -> "86580" 
+  "86575" -> "86583" 
+  "86582" -> "86588" 
+  "86588" -> "86591" 
+  "86609" -> "86612" 
+  "86612" -> "86614" 
+  "86536" -> "86548" 
+  "86536" -> "86555" 
+  "86552" -> "86550" 
+  "86558" -> "86570" 
+  "86558" -> "86572" 
+  "86577" -> "86575" 
+  "86583" -> "86586" 
+  "86585" -> "86582" 
+  "86591" -> "86598" 
+  "86591" -> "86609" 
+  "86537" -> "86541" 
+  "86540" -> "86536" 
+  "86548" -> "86614" 
+  "86555" -> "86552" 
+  "86559" -> "86558" 
+  "86559" -> "86564" 
+  "86562" -> "86558" 
+  "86570" -> "86614" 
+  "86578" -> "86581" 
+  "86581" -> "86577" 
+  "86586" -> "86585" 
+  "86607" -> "86591" 
+  "86539" -> "86537" 
+  "86541" -> "86545" 
+  "86542" -> "86540" 
+  "86564" -> "86567" 
+  "86564" -> "86562" 
+  "86580" -> "86578" 
+  "86596" -> "86603" 
+  "86596" -> "86607" 
+  "86543" -> "86546" 
+  "86546" -> "86542" 
+  "86597" -> "86600" 
+  "86600" -> "86596" 
+  "86603" -> "86609" 
+  "86545" -> "86543" 
+  "86566" -> "86562" 
+  "86598" -> "86597" 
+  "86567" -> "86566" 
+  "86526" -> "86539" 
+}

@@ -1,0 +1,79 @@
+digraph "TIFFGetTagListEntry" {  
+"11774" [label = <(METHOD,TIFFGetTagListEntry)<SUB>42</SUB>> ]
+"11775" [label = <(PARAM,TIFF *tif)<SUB>42</SUB>> ]
+"11776" [label = <(PARAM,int tag_index)<SUB>42</SUB>> ]
+"11777" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>44</SUB>> ]
+"11778" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>45</SUB>> ]
+"11779" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11780" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11781" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11782" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11783" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11784" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>45</SUB>> ]
+"11785" [label = <(CONTROL_STRUCTURE,if (tag_index &lt; 0 || tag_index &gt;= td-&gt;td_customValueCount),if (tag_index &lt; 0 || tag_index &gt;= td-&gt;td_customValueCount))<SUB>47</SUB>> ]
+"11786" [label = <(&lt;operator&gt;.logicalOr,tag_index &lt; 0 || tag_index &gt;= td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11787" [label = <(&lt;operator&gt;.lessThan,tag_index &lt; 0)<SUB>47</SUB>> ]
+"11788" [label = <(IDENTIFIER,tag_index,tag_index &lt; 0)<SUB>47</SUB>> ]
+"11789" [label = <(LITERAL,0,tag_index &lt; 0)<SUB>47</SUB>> ]
+"11790" [label = <(&lt;operator&gt;.greaterEqualsThan,tag_index &gt;= td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11791" [label = <(IDENTIFIER,tag_index,tag_index &gt;= td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11792" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11793" [label = <(IDENTIFIER,td,tag_index &gt;= td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11794" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>47</SUB>> ]
+"11795" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>48</SUB>> ]
+"11796" [label = <(RETURN,return (uint32_t)(-1);,return (uint32_t)(-1);)<SUB>48</SUB>> ]
+"11797" [label = <(uint32_t,(uint32_t)(-1))<SUB>48</SUB>> ]
+"11798" [label = <(&lt;operator&gt;.minus,-1)<SUB>48</SUB>> ]
+"11799" [label = <(LITERAL,1,-1)<SUB>48</SUB>> ]
+"11800" [label = <(CONTROL_STRUCTURE,else,else)<SUB>50</SUB>> ]
+"11801" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>50</SUB>> ]
+"11802" [label = <(RETURN,return td-&gt;td_customValues[tag_index].info-&gt;field_tag;,return td-&gt;td_customValues[tag_index].info-&gt;field_tag;)<SUB>50</SUB>> ]
+"11803" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues[tag_index].info-&gt;field_tag)<SUB>50</SUB>> ]
+"11804" [label = <(&lt;operator&gt;.fieldAccess,td-&gt;td_customValues[tag_index].info)<SUB>50</SUB>> ]
+"11805" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_customValues[tag_index])<SUB>50</SUB>> ]
+"11806" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>50</SUB>> ]
+"11807" [label = <(IDENTIFIER,td,return td-&gt;td_customValues[tag_index].info-&gt;field_tag;)<SUB>50</SUB>> ]
+"11808" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>50</SUB>> ]
+"11809" [label = <(IDENTIFIER,tag_index,return td-&gt;td_customValues[tag_index].info-&gt;field_tag;)<SUB>50</SUB>> ]
+"11810" [label = <(FIELD_IDENTIFIER,info,info)<SUB>50</SUB>> ]
+"11811" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>50</SUB>> ]
+"11812" [label = <(METHOD_RETURN,uint32_t)<SUB>42</SUB>> ]
+  "11774" -> "11775" 
+  "11774" -> "11776" 
+  "11774" -> "11777" 
+  "11774" -> "11812" 
+  "11777" -> "11778" 
+  "11777" -> "11779" 
+  "11777" -> "11785" 
+  "11779" -> "11780" 
+  "11779" -> "11781" 
+  "11781" -> "11782" 
+  "11782" -> "11783" 
+  "11782" -> "11784" 
+  "11785" -> "11786" 
+  "11785" -> "11795" 
+  "11785" -> "11800" 
+  "11786" -> "11787" 
+  "11786" -> "11790" 
+  "11787" -> "11788" 
+  "11787" -> "11789" 
+  "11790" -> "11791" 
+  "11790" -> "11792" 
+  "11792" -> "11793" 
+  "11792" -> "11794" 
+  "11795" -> "11796" 
+  "11796" -> "11797" 
+  "11797" -> "11798" 
+  "11798" -> "11799" 
+  "11800" -> "11801" 
+  "11801" -> "11802" 
+  "11802" -> "11803" 
+  "11803" -> "11804" 
+  "11803" -> "11811" 
+  "11804" -> "11805" 
+  "11804" -> "11810" 
+  "11805" -> "11806" 
+  "11805" -> "11809" 
+  "11806" -> "11807" 
+  "11806" -> "11808" 
+}

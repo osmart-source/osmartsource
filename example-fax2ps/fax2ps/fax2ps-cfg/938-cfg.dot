@@ -1,0 +1,59 @@
+digraph "TIFFReadRGBAImageOriented" {  
+"46862" [label = <(&lt;operator&gt;.assignment,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>613</SUB>> ]
+"46918" [label = <(RETURN,return (ok);,return (ok);)<SUB>630</SUB>> ]
+"46868" [label = <(&lt;operator&gt;.logicalAnd,TIFFRGBAImageOK(tif, emsg) &amp;&amp; TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46869" [label = <(TIFFRGBAImageOK,TIFFRGBAImageOK(tif, emsg))<SUB>617</SUB>> ]
+"46872" [label = <(TIFFRGBAImageBegin,TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46879" [label = <(&lt;operator&gt;.assignment,img.req_orientation = (uint16_t)orientation)<SUB>619</SUB>> ]
+"46886" [label = <(&lt;operator&gt;.assignment,ok = TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>621</SUB>> ]
+"46904" [label = <(TIFFRGBAImageEnd,TIFFRGBAImageEnd(&amp;img))<SUB>623</SUB>> ]
+"46873" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>617</SUB>> ]
+"46880" [label = <(&lt;operator&gt;.fieldAccess,img.req_orientation)<SUB>619</SUB>> ]
+"46883" [label = <(&lt;operator&gt;.cast,(uint16_t)orientation)<SUB>619</SUB>> ]
+"46888" [label = <(TIFFRGBAImageGet,TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>621</SUB>> ]
+"46905" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>623</SUB>> ]
+"46909" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>627</SUB>> ]
+"46915" [label = <(&lt;operator&gt;.assignment,ok = 0)<SUB>628</SUB>> ]
+"46882" [label = <(FIELD_IDENTIFIER,req_orientation,req_orientation)<SUB>619</SUB>> ]
+"46884" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>619</SUB>> ]
+"46889" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>621</SUB>> ]
+"46891" [label = <(&lt;operator&gt;.addition,raster + (rheight - img.height) * rwidth)<SUB>621</SUB>> ]
+"46901" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>622</SUB>> ]
+"46911" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>627</SUB>> ]
+"46893" [label = <(&lt;operator&gt;.multiplication,(rheight - img.height) * rwidth)<SUB>621</SUB>> ]
+"46903" [label = <(FIELD_IDENTIFIER,height,height)<SUB>622</SUB>> ]
+"46894" [label = <(&lt;operator&gt;.subtraction,rheight - img.height)<SUB>621</SUB>> ]
+"46896" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>621</SUB>> ]
+"46898" [label = <(FIELD_IDENTIFIER,height,height)<SUB>621</SUB>> ]
+"46853" [label = <(METHOD,TIFFReadRGBAImageOriented)<SUB>610</SUB>> ]
+"46920" [label = <(METHOD_RETURN,int)<SUB>610</SUB>> ]
+  "46862" -> "46869" 
+  "46918" -> "46920" 
+  "46868" -> "46882" 
+  "46868" -> "46911" 
+  "46869" -> "46868" 
+  "46869" -> "46873" 
+  "46872" -> "46868" 
+  "46879" -> "46889" 
+  "46886" -> "46905" 
+  "46904" -> "46918" 
+  "46873" -> "46872" 
+  "46880" -> "46884" 
+  "46883" -> "46879" 
+  "46888" -> "46886" 
+  "46905" -> "46904" 
+  "46909" -> "46915" 
+  "46915" -> "46918" 
+  "46882" -> "46880" 
+  "46884" -> "46883" 
+  "46889" -> "46898" 
+  "46891" -> "46903" 
+  "46901" -> "46888" 
+  "46911" -> "46909" 
+  "46893" -> "46891" 
+  "46903" -> "46901" 
+  "46894" -> "46893" 
+  "46896" -> "46894" 
+  "46898" -> "46896" 
+  "46853" -> "46862" 
+}

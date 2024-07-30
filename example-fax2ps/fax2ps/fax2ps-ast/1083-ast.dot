@@ -1,0 +1,51 @@
+digraph "TIFFWriteDirectoryTagLong" {  
+"68175" [label = <(METHOD,TIFFWriteDirectoryTagLong)<SUB>1508</SUB>> ]
+"68176" [label = <(PARAM,TIFF *tif)<SUB>1508</SUB>> ]
+"68177" [label = <(PARAM,uint32_t *ndir)<SUB>1508</SUB>> ]
+"68178" [label = <(PARAM,TIFFDirEntry *dir)<SUB>1509</SUB>> ]
+"68179" [label = <(PARAM,uint16_t tag)<SUB>1509</SUB>> ]
+"68180" [label = <(PARAM,uint32_t value)<SUB>1510</SUB>> ]
+"68181" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1511</SUB>> ]
+"68182" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>1512</SUB>> ]
+"68183" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1512</SUB>> ]
+"68184" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>1512</SUB>> ]
+"68185" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>1512</SUB>> ]
+"68186" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1513</SUB>> ]
+"68187" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1514</SUB>> ]
+"68188" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1514</SUB>> ]
+"68189" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>1514</SUB>> ]
+"68190" [label = <(RETURN,return (1);,return (1);)<SUB>1515</SUB>> ]
+"68191" [label = <(LITERAL,1,return (1);)<SUB>1515</SUB>> ]
+"68192" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value));,return (TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value));)<SUB>1517</SUB>> ]
+"68193" [label = <(TIFFWriteDirectoryTagCheckedLong,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1517</SUB>> ]
+"68194" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1517</SUB>> ]
+"68195" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1517</SUB>> ]
+"68196" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1517</SUB>> ]
+"68197" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1517</SUB>> ]
+"68198" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1517</SUB>> ]
+"68199" [label = <(METHOD_RETURN,int)<SUB>1508</SUB>> ]
+  "68175" -> "68176" 
+  "68175" -> "68177" 
+  "68175" -> "68178" 
+  "68175" -> "68179" 
+  "68175" -> "68180" 
+  "68175" -> "68181" 
+  "68175" -> "68199" 
+  "68181" -> "68182" 
+  "68181" -> "68192" 
+  "68182" -> "68183" 
+  "68182" -> "68186" 
+  "68183" -> "68184" 
+  "68183" -> "68185" 
+  "68186" -> "68187" 
+  "68186" -> "68190" 
+  "68187" -> "68188" 
+  "68188" -> "68189" 
+  "68190" -> "68191" 
+  "68192" -> "68193" 
+  "68193" -> "68194" 
+  "68193" -> "68195" 
+  "68193" -> "68196" 
+  "68193" -> "68197" 
+  "68193" -> "68198" 
+}

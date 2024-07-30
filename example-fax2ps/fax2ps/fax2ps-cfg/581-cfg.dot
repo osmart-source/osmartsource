@@ -1,0 +1,25 @@
+digraph "_TIFFClampDoubleToFloat" {  
+"21623" [label = <(RETURN,return (float)val;,return (float)val;)<SUB>441</SUB>> ]
+"21608" [label = <(&lt;operator&gt;.greaterThan,val &gt; FLT_MAX)<SUB>437</SUB>> ]
+"21615" [label = <(&lt;operator&gt;.lessThan,val &lt; -FLT_MAX)<SUB>439</SUB>> ]
+"21624" [label = <(&lt;operator&gt;.cast,(float)val)<SUB>441</SUB>> ]
+"21612" [label = <(RETURN,return FLT_MAX;,return FLT_MAX;)<SUB>438</SUB>> ]
+"21617" [label = <(&lt;operator&gt;.minus,-FLT_MAX)<SUB>439</SUB>> ]
+"21620" [label = <(RETURN,return -FLT_MAX;,return -FLT_MAX;)<SUB>440</SUB>> ]
+"21625" [label = <(UNKNOWN,float,float)<SUB>441</SUB>> ]
+"21621" [label = <(&lt;operator&gt;.minus,-FLT_MAX)<SUB>440</SUB>> ]
+"21604" [label = <(METHOD,_TIFFClampDoubleToFloat)<SUB>435</SUB>> ]
+"21627" [label = <(METHOD_RETURN,float)<SUB>435</SUB>> ]
+  "21623" -> "21627" 
+  "21608" -> "21612" 
+  "21608" -> "21617" 
+  "21615" -> "21625" 
+  "21615" -> "21621" 
+  "21624" -> "21623" 
+  "21612" -> "21627" 
+  "21617" -> "21615" 
+  "21620" -> "21627" 
+  "21625" -> "21624" 
+  "21621" -> "21620" 
+  "21604" -> "21608" 
+}

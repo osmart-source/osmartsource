@@ -1,0 +1,13 @@
+digraph "memcpy" {  
+"98740" [label = <(METHOD,memcpy)<SUB>43</SUB>> ]
+"98744" [label = <(METHOD_RETURN,void*)<SUB>43</SUB>> ]
+"98741" [label = <(PARAM,void *__restrict __dest)<SUB>43</SUB>> ]
+"98742" [label = <(PARAM,const void *__restrict __src)<SUB>43</SUB>> ]
+"98743" [label = <(PARAM,size_t __n)<SUB>44</SUB>> ]
+  "98741" -> "98744"  [ label = "DDG: __dest"] 
+  "98742" -> "98744"  [ label = "DDG: __src"] 
+  "98743" -> "98744"  [ label = "DDG: __n"] 
+  "98740" -> "98741"  [ label = "DDG: "] 
+  "98740" -> "98742"  [ label = "DDG: "] 
+  "98740" -> "98743"  [ label = "DDG: "] 
+}

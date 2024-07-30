@@ -1,0 +1,55 @@
+digraph "TIFFWriteDirectoryTagLongArray" {  
+"68201" [label = <(METHOD,TIFFWriteDirectoryTagLongArray)<SUB>1520</SUB>> ]
+"68202" [label = <(PARAM,TIFF *tif)<SUB>1520</SUB>> ]
+"68203" [label = <(PARAM,uint32_t *ndir)<SUB>1520</SUB>> ]
+"68204" [label = <(PARAM,TIFFDirEntry *dir)<SUB>1521</SUB>> ]
+"68205" [label = <(PARAM,uint16_t tag)<SUB>1521</SUB>> ]
+"68206" [label = <(PARAM,uint32_t count)<SUB>1522</SUB>> ]
+"68207" [label = <(PARAM,uint32_t *value)<SUB>1522</SUB>> ]
+"68208" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1523</SUB>> ]
+"68209" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>1524</SUB>> ]
+"68210" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1524</SUB>> ]
+"68211" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>1524</SUB>> ]
+"68212" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>1524</SUB>> ]
+"68213" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1525</SUB>> ]
+"68214" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1526</SUB>> ]
+"68215" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1526</SUB>> ]
+"68216" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>1526</SUB>> ]
+"68217" [label = <(RETURN,return (1);,return (1);)<SUB>1527</SUB>> ]
+"68218" [label = <(LITERAL,1,return (1);)<SUB>1527</SUB>> ]
+"68219" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value));,return (TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value));)<SUB>1529</SUB>> ]
+"68220" [label = <(TIFFWriteDirectoryTagCheckedLongArray,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1529</SUB>> ]
+"68221" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1529</SUB>> ]
+"68222" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1529</SUB>> ]
+"68223" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1529</SUB>> ]
+"68224" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1529</SUB>> ]
+"68225" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1529</SUB>> ]
+"68226" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1530</SUB>> ]
+"68227" [label = <(METHOD_RETURN,int)<SUB>1520</SUB>> ]
+  "68201" -> "68202" 
+  "68201" -> "68203" 
+  "68201" -> "68204" 
+  "68201" -> "68205" 
+  "68201" -> "68206" 
+  "68201" -> "68207" 
+  "68201" -> "68208" 
+  "68201" -> "68227" 
+  "68208" -> "68209" 
+  "68208" -> "68219" 
+  "68209" -> "68210" 
+  "68209" -> "68213" 
+  "68210" -> "68211" 
+  "68210" -> "68212" 
+  "68213" -> "68214" 
+  "68213" -> "68217" 
+  "68214" -> "68215" 
+  "68215" -> "68216" 
+  "68217" -> "68218" 
+  "68219" -> "68220" 
+  "68220" -> "68221" 
+  "68220" -> "68222" 
+  "68220" -> "68223" 
+  "68220" -> "68224" 
+  "68220" -> "68225" 
+  "68220" -> "68226" 
+}

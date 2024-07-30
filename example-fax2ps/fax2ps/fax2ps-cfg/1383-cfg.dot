@@ -1,0 +1,231 @@
+digraph "TIFFCleanup" {  
+"99039" [label = <(*tif-&gt;tif_cleanup,(*tif-&gt;tif_cleanup)(tif))<SUB>51</SUB>> ]
+"99045" [label = <(TIFFFreeDirectory,TIFFFreeDirectory(tif))<SUB>52</SUB>> ]
+"99047" [label = <(TIFFHashSetDestroy,TIFFHashSetDestroy(tif-&gt;tif_map_dir_offset_to_number))<SUB>54</SUB>> ]
+"99051" [label = <(TIFFHashSetDestroy,TIFFHashSetDestroy(tif-&gt;tif_map_dir_number_to_offset))<SUB>55</SUB>> ]
+"99222" [label = <(_TIFFfreeExt,_TIFFfreeExt(NULL, tif))<SUB>114</SUB>> ]
+"99031" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_mode != O_RDONLY)<SUB>49</SUB>> ]
+"99040" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_cleanup)<SUB>51</SUB>> ]
+"99048" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>54</SUB>> ]
+"99052" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>55</SUB>> ]
+"99056" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>60</SUB>> ]
+"99082" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_rawdata &amp;&amp; (tif-&gt;tif_flags &amp; TIFF_MYBUFFER))<SUB>69</SUB>> ]
+"99098" [label = <(isMapped,isMapped(tif))<SUB>71</SUB>> ]
+"99112" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_fields &amp;&amp; tif-&gt;tif_nfields &gt; 0)<SUB>77</SUB>> ]
+"99179" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_nfieldscompat &gt; 0)<SUB>102</SUB>> ]
+"99223" [label = <(NULL,NULL)<SUB>114</SUB>> ]
+"99032" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>49</SUB>> ]
+"99037" [label = <(TIFFFlush,TIFFFlush(tif))<SUB>50</SUB>> ]
+"99041" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_cleanup)<SUB>51</SUB>> ]
+"99050" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>54</SUB>> ]
+"99054" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>55</SUB>> ]
+"99058" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>60</SUB>> ]
+"99061" [label = <(&lt;operator&gt;.assignment,*psLink = tif-&gt;tif_clientinfo)<SUB>62</SUB>> ]
+"99066" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_clientinfo = psLink-&gt;next)<SUB>64</SUB>> ]
+"99073" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, psLink-&gt;name))<SUB>65</SUB>> ]
+"99078" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, psLink))<SUB>66</SUB>> ]
+"99083" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>69</SUB>> ]
+"99086" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_MYBUFFER)<SUB>69</SUB>> ]
+"99092" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tif-&gt;tif_rawdata))<SUB>70</SUB>> ]
+"99101" [label = <(TIFFUnmapFileContents,TIFFUnmapFileContents(tif, tif-&gt;tif_base, (toff_t)tif-&gt;tif_size))<SUB>72</SUB>> ]
+"99113" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>77</SUB>> ]
+"99116" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_nfields &gt; 0)<SUB>77</SUB>> ]
+"99173" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tif-&gt;tif_fields))<SUB>99</SUB>> ]
+"99180" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfieldscompat)<SUB>102</SUB>> ]
+"99217" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tif-&gt;tif_fieldscompat))<SUB>111</SUB>> ]
+"99034" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>49</SUB>> ]
+"99043" [label = <(FIELD_IDENTIFIER,tif_cleanup,tif_cleanup)<SUB>51</SUB>> ]
+"99063" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>62</SUB>> ]
+"99067" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>64</SUB>> ]
+"99070" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;next)<SUB>64</SUB>> ]
+"99075" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>65</SUB>> ]
+"99085" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>69</SUB>> ]
+"99087" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>69</SUB>> ]
+"99094" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>70</SUB>> ]
+"99103" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>72</SUB>> ]
+"99106" [label = <(&lt;operator&gt;.cast,(toff_t)tif-&gt;tif_size)<SUB>72</SUB>> ]
+"99115" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>77</SUB>> ]
+"99117" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfields)<SUB>77</SUB>> ]
+"99128" [label = <(&lt;operator&gt;.lessThan,i &lt; tif-&gt;tif_nfields)<SUB>81</SUB>> ]
+"99133" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>81</SUB>> ]
+"99175" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>99</SUB>> ]
+"99182" [label = <(FIELD_IDENTIFIER,tif_nfieldscompat,tif_nfieldscompat)<SUB>102</SUB>> ]
+"99191" [label = <(&lt;operator&gt;.lessThan,i &lt; tif-&gt;tif_nfieldscompat)<SUB>106</SUB>> ]
+"99196" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>106</SUB>> ]
+"99219" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fieldscompat)<SUB>111</SUB>> ]
+"99225" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>114</SUB>> ]
+"99065" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>62</SUB>> ]
+"99069" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>64</SUB>> ]
+"99072" [label = <(FIELD_IDENTIFIER,next,next)<SUB>64</SUB>> ]
+"99077" [label = <(FIELD_IDENTIFIER,name,name)<SUB>65</SUB>> ]
+"99089" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>69</SUB>> ]
+"99096" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>70</SUB>> ]
+"99105" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>72</SUB>> ]
+"99107" [label = <(UNKNOWN,toff_t,toff_t)<SUB>72</SUB>> ]
+"99108" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>72</SUB>> ]
+"99119" [label = <(FIELD_IDENTIFIER,tif_nfields,tif_nfields)<SUB>77</SUB>> ]
+"99125" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>81</SUB>> ]
+"99130" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfields)<SUB>81</SUB>> ]
+"99137" [label = <(&lt;operator&gt;.assignment,*fld = tif-&gt;tif_fields[i])<SUB>83</SUB>> ]
+"99177" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>99</SUB>> ]
+"99188" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>106</SUB>> ]
+"99193" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfieldscompat)<SUB>106</SUB>> ]
+"99221" [label = <(FIELD_IDENTIFIER,tif_fieldscompat,tif_fieldscompat)<SUB>111</SUB>> ]
+"99226" [label = <(UNKNOWN,void *,void *)<SUB>114</SUB>> ]
+"99110" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>72</SUB>> ]
+"99132" [label = <(FIELD_IDENTIFIER,tif_nfields,tif_nfields)<SUB>81</SUB>> ]
+"99139" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_fields[i])<SUB>83</SUB>> ]
+"99145" [label = <(&lt;operator&gt;.notEquals,fld-&gt;field_name != NULL)<SUB>84</SUB>> ]
+"99195" [label = <(FIELD_IDENTIFIER,tif_nfieldscompat,tif_nfieldscompat)<SUB>106</SUB>> ]
+"99200" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_fieldscompat[i].allocated_size)<SUB>108</SUB>> ]
+"99140" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>83</SUB>> ]
+"99146" [label = <(&lt;operator&gt;.indirectFieldAccess,fld-&gt;field_name)<SUB>84</SUB>> ]
+"99149" [label = <(NULL,NULL)<SUB>84</SUB>> ]
+"99201" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_fieldscompat[i])<SUB>108</SUB>> ]
+"99206" [label = <(FIELD_IDENTIFIER,allocated_size,allocated_size)<SUB>108</SUB>> ]
+"99208" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tif-&gt;tif_fieldscompat[i].fields))<SUB>109</SUB>> ]
+"99142" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>83</SUB>> ]
+"99148" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>84</SUB>> ]
+"99156" [label = <(&lt;operator&gt;.logicalAnd,fld-&gt;field_bit == FIELD_CUSTOM &amp;&amp;\012                    /* caution: tif_fields[i] must not be the beginning of a\012                     * fields-array. Otherwise the following tags are also freed\012                     * with the first free().\012                     */\012                    TIFFFieldIsAnonymous(fld))<SUB>86</SUB>> ]
+"99202" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fieldscompat)<SUB>108</SUB>> ]
+"99210" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_fieldscompat[i].fields)<SUB>109</SUB>> ]
+"99151" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>84</SUB>> ]
+"99157" [label = <(&lt;operator&gt;.equals,fld-&gt;field_bit == FIELD_CUSTOM)<SUB>86</SUB>> ]
+"99162" [label = <(TIFFFieldIsAnonymous,TIFFFieldIsAnonymous(fld))<SUB>91</SUB>> ]
+"99165" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, fld-&gt;field_name))<SUB>93</SUB>> ]
+"99170" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, fld))<SUB>94</SUB>> ]
+"99204" [label = <(FIELD_IDENTIFIER,tif_fieldscompat,tif_fieldscompat)<SUB>108</SUB>> ]
+"99211" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_fieldscompat[i])<SUB>109</SUB>> ]
+"99216" [label = <(FIELD_IDENTIFIER,fields,fields)<SUB>109</SUB>> ]
+"99152" [label = <(UNKNOWN,void *,void *)<SUB>84</SUB>> ]
+"99158" [label = <(&lt;operator&gt;.indirectFieldAccess,fld-&gt;field_bit)<SUB>86</SUB>> ]
+"99167" [label = <(&lt;operator&gt;.indirectFieldAccess,fld-&gt;field_name)<SUB>93</SUB>> ]
+"99212" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fieldscompat)<SUB>109</SUB>> ]
+"99160" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>86</SUB>> ]
+"99169" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>93</SUB>> ]
+"99214" [label = <(FIELD_IDENTIFIER,tif_fieldscompat,tif_fieldscompat)<SUB>109</SUB>> ]
+"99027" [label = <(METHOD,TIFFCleanup)<SUB>44</SUB>> ]
+"99229" [label = <(METHOD_RETURN,void)<SUB>44</SUB>> ]
+  "99039" -> "99045" 
+  "99045" -> "99050" 
+  "99047" -> "99054" 
+  "99051" -> "99058" 
+  "99222" -> "99229" 
+  "99031" -> "99037" 
+  "99031" -> "99043" 
+  "99040" -> "99039" 
+  "99048" -> "99047" 
+  "99052" -> "99051" 
+  "99056" -> "99065" 
+  "99056" -> "99085" 
+  "99082" -> "99096" 
+  "99082" -> "99098" 
+  "99098" -> "99105" 
+  "99098" -> "99115" 
+  "99112" -> "99125" 
+  "99112" -> "99182" 
+  "99179" -> "99223" 
+  "99179" -> "99188" 
+  "99223" -> "99226" 
+  "99223" -> "99222" 
+  "99032" -> "99031" 
+  "99037" -> "99043" 
+  "99041" -> "99040" 
+  "99050" -> "99048" 
+  "99054" -> "99052" 
+  "99058" -> "99056" 
+  "99061" -> "99069" 
+  "99066" -> "99077" 
+  "99073" -> "99078" 
+  "99078" -> "99058" 
+  "99083" -> "99082" 
+  "99083" -> "99089" 
+  "99086" -> "99082" 
+  "99092" -> "99098" 
+  "99101" -> "99115" 
+  "99113" -> "99112" 
+  "99113" -> "99119" 
+  "99116" -> "99112" 
+  "99173" -> "99182" 
+  "99180" -> "99179" 
+  "99217" -> "99223" 
+  "99034" -> "99032" 
+  "99043" -> "99041" 
+  "99063" -> "99061" 
+  "99067" -> "99072" 
+  "99070" -> "99066" 
+  "99075" -> "99073" 
+  "99085" -> "99083" 
+  "99087" -> "99086" 
+  "99094" -> "99092" 
+  "99103" -> "99107" 
+  "99106" -> "99101" 
+  "99115" -> "99113" 
+  "99117" -> "99116" 
+  "99128" -> "99142" 
+  "99128" -> "99177" 
+  "99133" -> "99132" 
+  "99175" -> "99173" 
+  "99182" -> "99180" 
+  "99191" -> "99204" 
+  "99191" -> "99221" 
+  "99196" -> "99195" 
+  "99219" -> "99217" 
+  "99225" -> "99222" 
+  "99065" -> "99063" 
+  "99069" -> "99067" 
+  "99072" -> "99070" 
+  "99077" -> "99075" 
+  "99089" -> "99087" 
+  "99096" -> "99094" 
+  "99105" -> "99103" 
+  "99107" -> "99110" 
+  "99108" -> "99106" 
+  "99119" -> "99117" 
+  "99125" -> "99132" 
+  "99130" -> "99128" 
+  "99137" -> "99148" 
+  "99177" -> "99175" 
+  "99188" -> "99195" 
+  "99193" -> "99191" 
+  "99221" -> "99219" 
+  "99226" -> "99225" 
+  "99110" -> "99108" 
+  "99132" -> "99130" 
+  "99139" -> "99137" 
+  "99145" -> "99160" 
+  "99145" -> "99133" 
+  "99195" -> "99193" 
+  "99200" -> "99214" 
+  "99200" -> "99196" 
+  "99140" -> "99139" 
+  "99146" -> "99149" 
+  "99149" -> "99152" 
+  "99149" -> "99145" 
+  "99201" -> "99206" 
+  "99206" -> "99200" 
+  "99208" -> "99196" 
+  "99142" -> "99140" 
+  "99148" -> "99146" 
+  "99156" -> "99169" 
+  "99156" -> "99133" 
+  "99202" -> "99201" 
+  "99210" -> "99208" 
+  "99151" -> "99145" 
+  "99157" -> "99156" 
+  "99157" -> "99162" 
+  "99162" -> "99156" 
+  "99165" -> "99170" 
+  "99170" -> "99133" 
+  "99204" -> "99202" 
+  "99211" -> "99216" 
+  "99216" -> "99210" 
+  "99152" -> "99151" 
+  "99158" -> "99157" 
+  "99167" -> "99165" 
+  "99212" -> "99211" 
+  "99160" -> "99158" 
+  "99169" -> "99167" 
+  "99214" -> "99212" 
+  "99027" -> "99034" 
+}

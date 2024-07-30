@@ -1,0 +1,576 @@
+digraph "TIFFAdvanceDirectory" {  
+"43989" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFAdvanceDirectory&quot;)<SUB>1818</SUB>> ]
+"44574" [label = <(RETURN,return (1);,return (1);)<SUB>1993</SUB>> ]
+"43993" [label = <(&lt;operator&gt;.logicalNot,!_TIFFCheckDirNumberAndOffset(tif, *nextdirnum, *nextdiroff))<SUB>1821</SUB>> ]
+"44013" [label = <(isMapped,isMapped(tif))<SUB>1832</SUB>> ]
+"44549" [label = <(&lt;operator&gt;.notEquals,*nextdiroff != 0)<SUB>1976</SUB>> ]
+"43994" [label = <(_TIFFCheckDirNumberAndOffset,_TIFFCheckDirNumberAndOffset(tif, *nextdirnum, *nextdiroff))<SUB>1821</SUB>> ]
+"44001" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;Starting directory %u at offset 0x%&quot; PRIx64 &quot; (%&quot; PRIu64\012                      &quot;) might cause an IFD loop&quot;,\012                      *nextdirnum, *nextdiroff, *nextdiroff);,TIFFErrorExtR(tif, module,\012                      &quot;Starting directory %u at offset 0x%&quot; PRIx64 &quot; (%&quot; PRIu64\012                      &quot;) might cause an IFD loop&quot;,\012                      *nextdirnum, *nextdiroff, *nextdiroff);)<SUB>1823</SUB>> ]
+"44002" [label = <(&lt;operator&gt;.assignment,*nextdiroff = 0)<SUB>1827</SUB>> ]
+"44006" [label = <(&lt;operator&gt;.assignment,*nextdirnum = 0)<SUB>1828</SUB>> ]
+"44010" [label = <(RETURN,return (0);,return (0);)<SUB>1829</SUB>> ]
+"44017" [label = <(&lt;operator&gt;.assignment,poff = *nextdiroff)<SUB>1834</SUB>> ]
+"44550" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1976</SUB>> ]
+"44554" [label = <(&lt;operator&gt;.postIncrement,(*nextdirnum)++)<SUB>1978</SUB>> ]
+"43996" [label = <(&lt;operator&gt;.indirection,*nextdirnum)<SUB>1821</SUB>> ]
+"43998" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1821</SUB>> ]
+"44003" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1827</SUB>> ]
+"44007" [label = <(&lt;operator&gt;.indirection,*nextdirnum)<SUB>1828</SUB>> ]
+"44019" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1834</SUB>> ]
+"44022" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>1835</SUB>> ]
+"44555" [label = <(&lt;operator&gt;.indirection,*nextdirnum)<SUB>1978</SUB>> ]
+"44558" [label = <(&lt;operator&gt;.logicalNot,!_TIFFCheckDirNumberAndOffset(tif, *nextdirnum, *nextdiroff))<SUB>1981</SUB>> ]
+"44023" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1835</SUB>> ]
+"44035" [label = <(&lt;operator&gt;.assignment,poffa = (tmsize_t)poff)<SUB>1840</SUB>> ]
+"44040" [label = <(&lt;operator&gt;.assignment,poffb = poffa + sizeof(uint16_t))<SUB>1841</SUB>> ]
+"44080" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;dircount, tif-&gt;tif_base + poffa, sizeof(uint16_t)))<SUB>1849</SUB>> ]
+"44100" [label = <(&lt;operator&gt;.assignment,poffc = poffb + dircount * 12)<SUB>1852</SUB>> ]
+"44107" [label = <(&lt;operator&gt;.assignment,poffd = poffc + sizeof(uint32_t))<SUB>1853</SUB>> ]
+"44158" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;nextdir32, tif-&gt;tif_base + poffc, sizeof(uint32_t)))<SUB>1862</SUB>> ]
+"44178" [label = <(&lt;operator&gt;.assignment,*nextdiroff = nextdir32)<SUB>1865</SUB>> ]
+"44345" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>1916</SUB>> ]
+"44559" [label = <(_TIFFCheckDirNumberAndOffset,_TIFFCheckDirNumberAndOffset(tif, *nextdirnum, *nextdiroff))<SUB>1981</SUB>> ]
+"44566" [label = <(UNKNOWN,TIFFWarningExtR(\012                tif, module,\012                &quot;the next directory %u at offset 0x%&quot; PRIx64 &quot; (%&quot; PRIu64\012                &quot;) might be an IFD loop. Treating directory %d as &quot;\012                &quot;last directory&quot;,\012                *nextdirnum, *nextdiroff, *nextdiroff, (int)(*nextdirnum) - 1);,TIFFWarningExtR(\012                tif, module,\012                &quot;the next directory %u at offset 0x%&quot; PRIx64 &quot; (%&quot; PRIu64\012                &quot;) might be an IFD loop. Treating directory %d as &quot;\012                &quot;last directory&quot;,\012                *nextdirnum, *nextdiroff, *nextdiroff, (int)(*nextdirnum) - 1);)<SUB>1983</SUB>> ]
+"44567" [label = <(&lt;operator&gt;.assignment,*nextdiroff = 0)<SUB>1989</SUB>> ]
+"44571" [label = <(&lt;operator&gt;.postDecrement,(*nextdirnum)--)<SUB>1990</SUB>> ]
+"44024" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1835</SUB>> ]
+"44037" [label = <(&lt;operator&gt;.cast,(tmsize_t)poff)<SUB>1840</SUB>> ]
+"44042" [label = <(&lt;operator&gt;.addition,poffa + sizeof(uint16_t))<SUB>1841</SUB>> ]
+"44047" [label = <(&lt;operator&gt;.logicalOr,((uint64_t)poffa != poff) || (poffb &lt; poffa) ||\012                (poffb &lt; (tmsize_t)sizeof(uint16_t)) || (poffb &gt; tif-&gt;tif_size))<SUB>1842</SUB>> ]
+"44081" [label = <(&lt;operator&gt;.addressOf,&amp;dircount)<SUB>1849</SUB>> ]
+"44083" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + poffa)<SUB>1849</SUB>> ]
+"44088" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>1849</SUB>> ]
+"44091" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1850</SUB>> ]
+"44102" [label = <(&lt;operator&gt;.addition,poffb + dircount * 12)<SUB>1852</SUB>> ]
+"44109" [label = <(&lt;operator&gt;.addition,poffc + sizeof(uint32_t))<SUB>1853</SUB>> ]
+"44114" [label = <(&lt;operator&gt;.logicalOr,(poffc &lt; poffb) || (poffc &lt; dircount * 12) || (poffd &lt; poffc) ||\012                (poffd &lt; (tmsize_t)sizeof(uint32_t)) || (poffd &gt; tif-&gt;tif_size))<SUB>1854</SUB>> ]
+"44148" [label = <(&lt;operator&gt;.notEquals,off != NULL)<SUB>1860</SUB>> ]
+"44159" [label = <(&lt;operator&gt;.addressOf,&amp;nextdir32)<SUB>1862</SUB>> ]
+"44161" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + poffc)<SUB>1862</SUB>> ]
+"44166" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1862</SUB>> ]
+"44169" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1863</SUB>> ]
+"44179" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1865</SUB>> ]
+"44206" [label = <(&lt;operator&gt;.assignment,poffa = (tmsize_t)poff)<SUB>1877</SUB>> ]
+"44211" [label = <(&lt;operator&gt;.assignment,poffb = poffa + sizeof(uint64_t))<SUB>1878</SUB>> ]
+"44230" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;dircount64, tif-&gt;tif_base + poffa, sizeof(uint64_t)))<SUB>1884</SUB>> ]
+"44261" [label = <(&lt;operator&gt;.assignment,dircount16 = (uint16_t)dircount64)<SUB>1893</SUB>> ]
+"44287" [label = <(&lt;operator&gt;.assignment,poffc = poffb + dircount16 * 20)<SUB>1900</SUB>> ]
+"44294" [label = <(&lt;operator&gt;.assignment,poffd = poffc + sizeof(uint64_t))<SUB>1901</SUB>> ]
+"44324" [label = <(_TIFFmemcpy,_TIFFmemcpy(nextdiroff, tif-&gt;tif_base + poffc, sizeof(uint64_t)))<SUB>1909</SUB>> ]
+"44346" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1916</SUB>> ]
+"44440" [label = <(&lt;operator&gt;.assignment,*nextdiroff = nextdir32)<SUB>1941</SUB>> ]
+"44561" [label = <(&lt;operator&gt;.indirection,*nextdirnum)<SUB>1981</SUB>> ]
+"44563" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1981</SUB>> ]
+"44568" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1989</SUB>> ]
+"44572" [label = <(&lt;operator&gt;.indirection,*nextdirnum)<SUB>1990</SUB>> ]
+"44026" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1835</SUB>> ]
+"44038" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1840</SUB>> ]
+"44044" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>1841</SUB>> ]
+"44048" [label = <(&lt;operator&gt;.logicalOr,((uint64_t)poffa != poff) || (poffb &lt; poffa) ||\012                (poffb &lt; (tmsize_t)sizeof(uint16_t)))<SUB>1842</SUB>> ]
+"44064" [label = <(&lt;operator&gt;.greaterThan,poffb &gt; tif-&gt;tif_size)<SUB>1843</SUB>> ]
+"44070" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory count&quot;))<SUB>1845</SUB>> ]
+"44074" [label = <(&lt;operator&gt;.assignment,*nextdiroff = 0)<SUB>1846</SUB>> ]
+"44078" [label = <(RETURN,return (0);,return (0);)<SUB>1847</SUB>> ]
+"44084" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>1849</SUB>> ]
+"44092" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1850</SUB>> ]
+"44097" [label = <(TIFFSwabShort,TIFFSwabShort(&amp;dircount))<SUB>1851</SUB>> ]
+"44104" [label = <(&lt;operator&gt;.multiplication,dircount * 12)<SUB>1852</SUB>> ]
+"44111" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1853</SUB>> ]
+"44115" [label = <(&lt;operator&gt;.logicalOr,(poffc &lt; poffb) || (poffc &lt; dircount * 12) || (poffd &lt; poffc) ||\012                (poffd &lt; (tmsize_t)sizeof(uint32_t)))<SUB>1854</SUB>> ]
+"44135" [label = <(&lt;operator&gt;.greaterThan,poffd &gt; tif-&gt;tif_size)<SUB>1855</SUB>> ]
+"44141" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory link&quot;))<SUB>1857</SUB>> ]
+"44145" [label = <(RETURN,return (0);,return (0);)<SUB>1858</SUB>> ]
+"44152" [label = <(&lt;operator&gt;.assignment,*off = (uint64_t)poffc)<SUB>1861</SUB>> ]
+"44162" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>1862</SUB>> ]
+"44170" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1863</SUB>> ]
+"44175" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;nextdir32))<SUB>1864</SUB>> ]
+"44191" [label = <(&lt;operator&gt;.greaterThan,poff &gt; (uint64_t)TIFF_TMSIZE_T_MAX - sizeof(uint64_t))<SUB>1872</SUB>> ]
+"44208" [label = <(&lt;operator&gt;.cast,(tmsize_t)poff)<SUB>1877</SUB>> ]
+"44213" [label = <(&lt;operator&gt;.addition,poffa + sizeof(uint64_t))<SUB>1878</SUB>> ]
+"44218" [label = <(&lt;operator&gt;.greaterThan,poffb &gt; tif-&gt;tif_size)<SUB>1879</SUB>> ]
+"44231" [label = <(&lt;operator&gt;.addressOf,&amp;dircount64)<SUB>1884</SUB>> ]
+"44233" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + poffa)<SUB>1884</SUB>> ]
+"44238" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1884</SUB>> ]
+"44241" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1885</SUB>> ]
+"44251" [label = <(&lt;operator&gt;.greaterThan,dircount64 &gt; 0xFFFF)<SUB>1887</SUB>> ]
+"44263" [label = <(&lt;operator&gt;.cast,(uint16_t)dircount64)<SUB>1893</SUB>> ]
+"44267" [label = <(&lt;operator&gt;.greaterThan,poffb &gt; TIFF_TMSIZE_T_MAX - (tmsize_t)(dircount16 * 20) -\012                            (tmsize_t)sizeof(uint64_t))<SUB>1894</SUB>> ]
+"44289" [label = <(&lt;operator&gt;.addition,poffb + dircount16 * 20)<SUB>1900</SUB>> ]
+"44296" [label = <(&lt;operator&gt;.addition,poffc + sizeof(uint64_t))<SUB>1901</SUB>> ]
+"44301" [label = <(&lt;operator&gt;.greaterThan,poffd &gt; tif-&gt;tif_size)<SUB>1902</SUB>> ]
+"44314" [label = <(&lt;operator&gt;.notEquals,off != NULL)<SUB>1907</SUB>> ]
+"44326" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + poffc)<SUB>1909</SUB>> ]
+"44331" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1909</SUB>> ]
+"44334" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1910</SUB>> ]
+"44347" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1916</SUB>> ]
+"44355" [label = <(&lt;operator&gt;.logicalOr,!SeekOK(tif, *nextdiroff) ||\012                !ReadOK(tif, &amp;dircount, sizeof(uint16_t)))<SUB>1920</SUB>> ]
+"44379" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1927</SUB>> ]
+"44389" [label = <(&lt;operator&gt;.notEquals,off != NULL)<SUB>1929</SUB>> ]
+"44413" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;nextdir32, sizeof(uint32_t)))<SUB>1933</SUB>> ]
+"44431" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1939</SUB>> ]
+"44441" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1941</SUB>> ]
+"44493" [label = <(&lt;operator&gt;.assignment,dircount16 = (uint16_t)dircount64)<SUB>1961</SUB>> ]
+"44049" [label = <(&lt;operator&gt;.logicalOr,((uint64_t)poffa != poff) || (poffb &lt; poffa))<SUB>1842</SUB>> ]
+"44058" [label = <(&lt;operator&gt;.lessThan,poffb &lt; (tmsize_t)sizeof(uint16_t))<SUB>1843</SUB>> ]
+"44066" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1843</SUB>> ]
+"44075" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1846</SUB>> ]
+"44086" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>1849</SUB>> ]
+"44094" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1850</SUB>> ]
+"44098" [label = <(&lt;operator&gt;.addressOf,&amp;dircount)<SUB>1851</SUB>> ]
+"44116" [label = <(&lt;operator&gt;.logicalOr,(poffc &lt; poffb) || (poffc &lt; dircount * 12) || (poffd &lt; poffc))<SUB>1854</SUB>> ]
+"44129" [label = <(&lt;operator&gt;.lessThan,poffd &lt; (tmsize_t)sizeof(uint32_t))<SUB>1855</SUB>> ]
+"44137" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1855</SUB>> ]
+"44153" [label = <(&lt;operator&gt;.indirection,*off)<SUB>1861</SUB>> ]
+"44155" [label = <(&lt;operator&gt;.cast,(uint64_t)poffc)<SUB>1861</SUB>> ]
+"44164" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>1862</SUB>> ]
+"44172" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1863</SUB>> ]
+"44176" [label = <(&lt;operator&gt;.addressOf,&amp;nextdir32)<SUB>1864</SUB>> ]
+"44193" [label = <(&lt;operator&gt;.subtraction,(uint64_t)TIFF_TMSIZE_T_MAX - sizeof(uint64_t))<SUB>1872</SUB>> ]
+"44200" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory count&quot;))<SUB>1874</SUB>> ]
+"44204" [label = <(RETURN,return (0);,return (0);)<SUB>1875</SUB>> ]
+"44209" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1877</SUB>> ]
+"44215" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1878</SUB>> ]
+"44220" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1879</SUB>> ]
+"44224" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory count&quot;))<SUB>1881</SUB>> ]
+"44228" [label = <(RETURN,return (0);,return (0);)<SUB>1882</SUB>> ]
+"44234" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>1884</SUB>> ]
+"44242" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1885</SUB>> ]
+"44247" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;dircount64))<SUB>1886</SUB>> ]
+"44255" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                              &quot;Sanity check on directory count failed&quot;))<SUB>1889</SUB>> ]
+"44259" [label = <(RETURN,return (0);,return (0);)<SUB>1891</SUB>> ]
+"44264" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>1893</SUB>> ]
+"44269" [label = <(&lt;operator&gt;.subtraction,TIFF_TMSIZE_T_MAX - (tmsize_t)(dircount16 * 20) -\012                            (tmsize_t)sizeof(uint64_t))<SUB>1894</SUB>> ]
+"44281" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory link&quot;))<SUB>1897</SUB>> ]
+"44285" [label = <(RETURN,return (0);,return (0);)<SUB>1898</SUB>> ]
+"44291" [label = <(&lt;operator&gt;.multiplication,dircount16 * 20)<SUB>1900</SUB>> ]
+"44298" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1901</SUB>> ]
+"44303" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1902</SUB>> ]
+"44307" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory link&quot;))<SUB>1904</SUB>> ]
+"44311" [label = <(RETURN,return (0);,return (0);)<SUB>1905</SUB>> ]
+"44318" [label = <(&lt;operator&gt;.assignment,*off = (uint64_t)poffc)<SUB>1908</SUB>> ]
+"44327" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>1909</SUB>> ]
+"44335" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1910</SUB>> ]
+"44340" [label = <(TIFFSwabLong8,TIFFSwabLong8(nextdiroff))<SUB>1911</SUB>> ]
+"44349" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1916</SUB>> ]
+"44356" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, *nextdiroff))<SUB>1920</SUB>> ]
+"44361" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;dircount, sizeof(uint16_t)))<SUB>1921</SUB>> ]
+"44369" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;%s: Error fetching directory count&quot;,\012                              tif-&gt;tif_name))<SUB>1923</SUB>> ]
+"44376" [label = <(RETURN,return (0);,return (0);)<SUB>1925</SUB>> ]
+"44380" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1927</SUB>> ]
+"44385" [label = <(TIFFSwabShort,TIFFSwabShort(&amp;dircount))<SUB>1928</SUB>> ]
+"44393" [label = <(&lt;operator&gt;.assignment,*off = TIFFSeekFile(tif, dircount * 12, SEEK_CUR))<SUB>1930</SUB>> ]
+"44414" [label = <(ReadOK,ReadOK(tif, &amp;nextdir32, sizeof(uint32_t)))<SUB>1933</SUB>> ]
+"44421" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;%s: Error fetching directory link&quot;,\012                              tif-&gt;tif_name))<SUB>1935</SUB>> ]
+"44428" [label = <(RETURN,return (0);,return (0);)<SUB>1937</SUB>> ]
+"44432" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1939</SUB>> ]
+"44437" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;nextdir32))<SUB>1940</SUB>> ]
+"44449" [label = <(&lt;operator&gt;.logicalOr,!SeekOK(tif, *nextdiroff) ||\012                !ReadOK(tif, &amp;dircount64, sizeof(uint64_t)))<SUB>1947</SUB>> ]
+"44473" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1954</SUB>> ]
+"44483" [label = <(&lt;operator&gt;.greaterThan,dircount64 &gt; 0xFFFF)<SUB>1956</SUB>> ]
+"44495" [label = <(&lt;operator&gt;.cast,(uint16_t)dircount64)<SUB>1961</SUB>> ]
+"44499" [label = <(&lt;operator&gt;.notEquals,off != NULL)<SUB>1962</SUB>> ]
+"44523" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, nextdiroff, sizeof(uint64_t)))<SUB>1966</SUB>> ]
+"44540" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1972</SUB>> ]
+"44050" [label = <(&lt;operator&gt;.notEquals,(uint64_t)poffa != poff)<SUB>1842</SUB>> ]
+"44055" [label = <(&lt;operator&gt;.lessThan,poffb &lt; poffa)<SUB>1842</SUB>> ]
+"44060" [label = <(&lt;operator&gt;.cast,(tmsize_t)sizeof(uint16_t))<SUB>1843</SUB>> ]
+"44068" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1843</SUB>> ]
+"44117" [label = <(&lt;operator&gt;.logicalOr,(poffc &lt; poffb) || (poffc &lt; dircount * 12))<SUB>1854</SUB>> ]
+"44126" [label = <(&lt;operator&gt;.lessThan,poffd &lt; poffc)<SUB>1854</SUB>> ]
+"44131" [label = <(&lt;operator&gt;.cast,(tmsize_t)sizeof(uint32_t))<SUB>1855</SUB>> ]
+"44139" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1855</SUB>> ]
+"44156" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1861</SUB>> ]
+"44194" [label = <(&lt;operator&gt;.cast,(uint64_t)TIFF_TMSIZE_T_MAX)<SUB>1872</SUB>> ]
+"44197" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1872</SUB>> ]
+"44222" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1879</SUB>> ]
+"44236" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>1884</SUB>> ]
+"44244" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1885</SUB>> ]
+"44248" [label = <(&lt;operator&gt;.addressOf,&amp;dircount64)<SUB>1886</SUB>> ]
+"44270" [label = <(&lt;operator&gt;.subtraction,TIFF_TMSIZE_T_MAX - (tmsize_t)(dircount16 * 20))<SUB>1894</SUB>> ]
+"44276" [label = <(&lt;operator&gt;.cast,(tmsize_t)sizeof(uint64_t))<SUB>1895</SUB>> ]
+"44305" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1902</SUB>> ]
+"44319" [label = <(&lt;operator&gt;.indirection,*off)<SUB>1908</SUB>> ]
+"44321" [label = <(&lt;operator&gt;.cast,(uint64_t)poffc)<SUB>1908</SUB>> ]
+"44329" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>1909</SUB>> ]
+"44337" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1910</SUB>> ]
+"44357" [label = <(SeekOK,SeekOK(tif, *nextdiroff))<SUB>1920</SUB>> ]
+"44362" [label = <(ReadOK,ReadOK(tif, &amp;dircount, sizeof(uint16_t)))<SUB>1921</SUB>> ]
+"44373" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>1924</SUB>> ]
+"44382" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1927</SUB>> ]
+"44386" [label = <(&lt;operator&gt;.addressOf,&amp;dircount)<SUB>1928</SUB>> ]
+"44394" [label = <(&lt;operator&gt;.indirection,*off)<SUB>1930</SUB>> ]
+"44396" [label = <(TIFFSeekFile,TIFFSeekFile(tif, dircount * 12, SEEK_CUR))<SUB>1930</SUB>> ]
+"44404" [label = <(&lt;operator&gt;.cast,(void)TIFFSeekFile(tif, dircount * 12, SEEK_CUR))<SUB>1932</SUB>> ]
+"44416" [label = <(&lt;operator&gt;.addressOf,&amp;nextdir32)<SUB>1933</SUB>> ]
+"44418" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1933</SUB>> ]
+"44425" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>1936</SUB>> ]
+"44434" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1939</SUB>> ]
+"44438" [label = <(&lt;operator&gt;.addressOf,&amp;nextdir32)<SUB>1940</SUB>> ]
+"44450" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, *nextdiroff))<SUB>1947</SUB>> ]
+"44455" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;dircount64, sizeof(uint64_t)))<SUB>1948</SUB>> ]
+"44463" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;%s: Error fetching directory count&quot;,\012                              tif-&gt;tif_name))<SUB>1950</SUB>> ]
+"44470" [label = <(RETURN,return (0);,return (0);)<SUB>1952</SUB>> ]
+"44474" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1954</SUB>> ]
+"44479" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;dircount64))<SUB>1955</SUB>> ]
+"44487" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory count&quot;))<SUB>1958</SUB>> ]
+"44491" [label = <(RETURN,return (0);,return (0);)<SUB>1959</SUB>> ]
+"44496" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>1961</SUB>> ]
+"44503" [label = <(&lt;operator&gt;.assignment,*off = TIFFSeekFile(tif, dircount16 * 20, SEEK_CUR))<SUB>1963</SUB>> ]
+"44524" [label = <(ReadOK,ReadOK(tif, nextdiroff, sizeof(uint64_t)))<SUB>1966</SUB>> ]
+"44530" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;%s: Error fetching directory link&quot;,\012                              tif-&gt;tif_name))<SUB>1968</SUB>> ]
+"44537" [label = <(RETURN,return (0);,return (0);)<SUB>1970</SUB>> ]
+"44541" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1972</SUB>> ]
+"44546" [label = <(TIFFSwabLong8,TIFFSwabLong8(nextdiroff))<SUB>1973</SUB>> ]
+"44051" [label = <(&lt;operator&gt;.cast,(uint64_t)poffa)<SUB>1842</SUB>> ]
+"44061" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1843</SUB>> ]
+"44062" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>1843</SUB>> ]
+"44118" [label = <(&lt;operator&gt;.lessThan,poffc &lt; poffb)<SUB>1854</SUB>> ]
+"44121" [label = <(&lt;operator&gt;.lessThan,poffc &lt; dircount * 12)<SUB>1854</SUB>> ]
+"44132" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1855</SUB>> ]
+"44133" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1855</SUB>> ]
+"44195" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1872</SUB>> ]
+"44272" [label = <(tmsize_t,(tmsize_t)(dircount16 * 20))<SUB>1894</SUB>> ]
+"44277" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1895</SUB>> ]
+"44278" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1895</SUB>> ]
+"44322" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1908</SUB>> ]
+"44359" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1920</SUB>> ]
+"44364" [label = <(&lt;operator&gt;.addressOf,&amp;dircount)<SUB>1921</SUB>> ]
+"44366" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>1921</SUB>> ]
+"44375" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>1924</SUB>> ]
+"44398" [label = <(&lt;operator&gt;.multiplication,dircount * 12)<SUB>1930</SUB>> ]
+"44405" [label = <(UNKNOWN,void,void)<SUB>1932</SUB>> ]
+"44406" [label = <(TIFFSeekFile,TIFFSeekFile(tif, dircount * 12, SEEK_CUR))<SUB>1932</SUB>> ]
+"44427" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>1936</SUB>> ]
+"44451" [label = <(SeekOK,SeekOK(tif, *nextdiroff))<SUB>1947</SUB>> ]
+"44456" [label = <(ReadOK,ReadOK(tif, &amp;dircount64, sizeof(uint64_t)))<SUB>1948</SUB>> ]
+"44467" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>1951</SUB>> ]
+"44476" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1954</SUB>> ]
+"44480" [label = <(&lt;operator&gt;.addressOf,&amp;dircount64)<SUB>1955</SUB>> ]
+"44504" [label = <(&lt;operator&gt;.indirection,*off)<SUB>1963</SUB>> ]
+"44506" [label = <(TIFFSeekFile,TIFFSeekFile(tif, dircount16 * 20, SEEK_CUR))<SUB>1963</SUB>> ]
+"44514" [label = <(&lt;operator&gt;.cast,(void)TIFFSeekFile(tif, dircount16 * 20, SEEK_CUR))<SUB>1965</SUB>> ]
+"44527" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1966</SUB>> ]
+"44534" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>1969</SUB>> ]
+"44543" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1972</SUB>> ]
+"44052" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1842</SUB>> ]
+"44123" [label = <(&lt;operator&gt;.multiplication,dircount * 12)<SUB>1854</SUB>> ]
+"44273" [label = <(&lt;operator&gt;.multiplication,dircount16 * 20)<SUB>1894</SUB>> ]
+"44408" [label = <(&lt;operator&gt;.multiplication,dircount * 12)<SUB>1932</SUB>> ]
+"44453" [label = <(&lt;operator&gt;.indirection,*nextdiroff)<SUB>1947</SUB>> ]
+"44458" [label = <(&lt;operator&gt;.addressOf,&amp;dircount64)<SUB>1948</SUB>> ]
+"44460" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>1948</SUB>> ]
+"44469" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>1951</SUB>> ]
+"44508" [label = <(&lt;operator&gt;.multiplication,dircount16 * 20)<SUB>1963</SUB>> ]
+"44515" [label = <(UNKNOWN,void,void)<SUB>1965</SUB>> ]
+"44516" [label = <(TIFFSeekFile,TIFFSeekFile(tif, dircount16 * 20, SEEK_CUR))<SUB>1965</SUB>> ]
+"44536" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>1969</SUB>> ]
+"44518" [label = <(&lt;operator&gt;.multiplication,dircount16 * 20)<SUB>1965</SUB>> ]
+"43982" [label = <(METHOD,TIFFAdvanceDirectory)<SUB>1815</SUB>> ]
+"44576" [label = <(METHOD_RETURN,int)<SUB>1815</SUB>> ]
+  "43989" -> "43996" 
+  "44574" -> "44576" 
+  "43993" -> "44001" 
+  "43993" -> "44013" 
+  "44013" -> "44019" 
+  "44013" -> "44349" 
+  "44549" -> "44555" 
+  "44549" -> "44574" 
+  "43994" -> "43993" 
+  "44001" -> "44003" 
+  "44002" -> "44007" 
+  "44006" -> "44010" 
+  "44010" -> "44576" 
+  "44017" -> "44026" 
+  "44550" -> "44549" 
+  "44554" -> "44561" 
+  "43996" -> "43998" 
+  "43998" -> "43994" 
+  "44003" -> "44002" 
+  "44007" -> "44006" 
+  "44019" -> "44017" 
+  "44022" -> "44038" 
+  "44022" -> "44195" 
+  "44555" -> "44554" 
+  "44558" -> "44566" 
+  "44558" -> "44574" 
+  "44023" -> "44022" 
+  "44035" -> "44044" 
+  "44040" -> "44052" 
+  "44080" -> "44094" 
+  "44100" -> "44111" 
+  "44107" -> "44118" 
+  "44158" -> "44172" 
+  "44178" -> "44550" 
+  "44345" -> "44359" 
+  "44345" -> "44453" 
+  "44559" -> "44558" 
+  "44566" -> "44568" 
+  "44567" -> "44572" 
+  "44571" -> "44574" 
+  "44024" -> "44023" 
+  "44037" -> "44035" 
+  "44042" -> "44040" 
+  "44047" -> "44070" 
+  "44047" -> "44081" 
+  "44081" -> "44086" 
+  "44083" -> "44088" 
+  "44088" -> "44080" 
+  "44091" -> "44098" 
+  "44091" -> "44104" 
+  "44102" -> "44100" 
+  "44109" -> "44107" 
+  "44114" -> "44141" 
+  "44114" -> "44148" 
+  "44148" -> "44153" 
+  "44148" -> "44159" 
+  "44159" -> "44164" 
+  "44161" -> "44166" 
+  "44166" -> "44158" 
+  "44169" -> "44176" 
+  "44169" -> "44179" 
+  "44179" -> "44178" 
+  "44206" -> "44215" 
+  "44211" -> "44222" 
+  "44230" -> "44244" 
+  "44261" -> "44273" 
+  "44287" -> "44298" 
+  "44294" -> "44305" 
+  "44324" -> "44337" 
+  "44346" -> "44345" 
+  "44440" -> "44550" 
+  "44561" -> "44563" 
+  "44563" -> "44559" 
+  "44568" -> "44567" 
+  "44572" -> "44571" 
+  "44026" -> "44024" 
+  "44038" -> "44037" 
+  "44044" -> "44042" 
+  "44048" -> "44047" 
+  "44048" -> "44068" 
+  "44064" -> "44047" 
+  "44070" -> "44075" 
+  "44074" -> "44078" 
+  "44078" -> "44576" 
+  "44084" -> "44083" 
+  "44092" -> "44091" 
+  "44097" -> "44104" 
+  "44104" -> "44102" 
+  "44111" -> "44109" 
+  "44115" -> "44114" 
+  "44115" -> "44139" 
+  "44135" -> "44114" 
+  "44141" -> "44145" 
+  "44145" -> "44576" 
+  "44152" -> "44159" 
+  "44162" -> "44161" 
+  "44170" -> "44169" 
+  "44175" -> "44179" 
+  "44191" -> "44200" 
+  "44191" -> "44209" 
+  "44208" -> "44206" 
+  "44213" -> "44211" 
+  "44218" -> "44224" 
+  "44218" -> "44231" 
+  "44231" -> "44236" 
+  "44233" -> "44238" 
+  "44238" -> "44230" 
+  "44241" -> "44248" 
+  "44241" -> "44251" 
+  "44251" -> "44255" 
+  "44251" -> "44264" 
+  "44263" -> "44261" 
+  "44267" -> "44281" 
+  "44267" -> "44291" 
+  "44289" -> "44287" 
+  "44296" -> "44294" 
+  "44301" -> "44307" 
+  "44301" -> "44314" 
+  "44314" -> "44319" 
+  "44314" -> "44329" 
+  "44326" -> "44331" 
+  "44331" -> "44324" 
+  "44334" -> "44340" 
+  "44334" -> "44550" 
+  "44347" -> "44346" 
+  "44355" -> "44375" 
+  "44355" -> "44382" 
+  "44379" -> "44386" 
+  "44379" -> "44389" 
+  "44389" -> "44405" 
+  "44389" -> "44394" 
+  "44413" -> "44427" 
+  "44413" -> "44434" 
+  "44431" -> "44438" 
+  "44431" -> "44441" 
+  "44441" -> "44440" 
+  "44493" -> "44499" 
+  "44049" -> "44048" 
+  "44049" -> "44061" 
+  "44058" -> "44048" 
+  "44066" -> "44064" 
+  "44075" -> "44074" 
+  "44086" -> "44084" 
+  "44094" -> "44092" 
+  "44098" -> "44097" 
+  "44116" -> "44115" 
+  "44116" -> "44132" 
+  "44129" -> "44115" 
+  "44137" -> "44135" 
+  "44153" -> "44156" 
+  "44155" -> "44152" 
+  "44164" -> "44162" 
+  "44172" -> "44170" 
+  "44176" -> "44175" 
+  "44193" -> "44191" 
+  "44200" -> "44204" 
+  "44204" -> "44576" 
+  "44209" -> "44208" 
+  "44215" -> "44213" 
+  "44220" -> "44218" 
+  "44224" -> "44228" 
+  "44228" -> "44576" 
+  "44234" -> "44233" 
+  "44242" -> "44241" 
+  "44247" -> "44251" 
+  "44255" -> "44259" 
+  "44259" -> "44576" 
+  "44264" -> "44263" 
+  "44269" -> "44267" 
+  "44281" -> "44285" 
+  "44285" -> "44576" 
+  "44291" -> "44289" 
+  "44298" -> "44296" 
+  "44303" -> "44301" 
+  "44307" -> "44311" 
+  "44311" -> "44576" 
+  "44318" -> "44329" 
+  "44327" -> "44326" 
+  "44335" -> "44334" 
+  "44340" -> "44550" 
+  "44349" -> "44347" 
+  "44356" -> "44355" 
+  "44356" -> "44364" 
+  "44361" -> "44355" 
+  "44369" -> "44376" 
+  "44376" -> "44576" 
+  "44380" -> "44379" 
+  "44385" -> "44389" 
+  "44393" -> "44416" 
+  "44414" -> "44413" 
+  "44421" -> "44428" 
+  "44428" -> "44576" 
+  "44432" -> "44431" 
+  "44437" -> "44441" 
+  "44449" -> "44469" 
+  "44449" -> "44476" 
+  "44473" -> "44480" 
+  "44473" -> "44483" 
+  "44483" -> "44487" 
+  "44483" -> "44496" 
+  "44495" -> "44493" 
+  "44499" -> "44515" 
+  "44499" -> "44504" 
+  "44523" -> "44536" 
+  "44523" -> "44543" 
+  "44540" -> "44546" 
+  "44540" -> "44550" 
+  "44050" -> "44049" 
+  "44050" -> "44055" 
+  "44055" -> "44049" 
+  "44060" -> "44058" 
+  "44068" -> "44066" 
+  "44117" -> "44116" 
+  "44117" -> "44126" 
+  "44126" -> "44116" 
+  "44131" -> "44129" 
+  "44139" -> "44137" 
+  "44156" -> "44155" 
+  "44194" -> "44197" 
+  "44197" -> "44193" 
+  "44222" -> "44220" 
+  "44236" -> "44234" 
+  "44244" -> "44242" 
+  "44248" -> "44247" 
+  "44270" -> "44277" 
+  "44276" -> "44269" 
+  "44305" -> "44303" 
+  "44319" -> "44322" 
+  "44321" -> "44318" 
+  "44329" -> "44327" 
+  "44337" -> "44335" 
+  "44357" -> "44356" 
+  "44362" -> "44361" 
+  "44373" -> "44369" 
+  "44382" -> "44380" 
+  "44386" -> "44385" 
+  "44394" -> "44398" 
+  "44396" -> "44393" 
+  "44404" -> "44416" 
+  "44416" -> "44418" 
+  "44418" -> "44414" 
+  "44425" -> "44421" 
+  "44434" -> "44432" 
+  "44438" -> "44437" 
+  "44450" -> "44449" 
+  "44450" -> "44458" 
+  "44455" -> "44449" 
+  "44463" -> "44470" 
+  "44470" -> "44576" 
+  "44474" -> "44473" 
+  "44479" -> "44483" 
+  "44487" -> "44491" 
+  "44491" -> "44576" 
+  "44496" -> "44495" 
+  "44503" -> "44527" 
+  "44524" -> "44523" 
+  "44530" -> "44537" 
+  "44537" -> "44576" 
+  "44541" -> "44540" 
+  "44546" -> "44550" 
+  "44051" -> "44050" 
+  "44061" -> "44062" 
+  "44062" -> "44060" 
+  "44118" -> "44117" 
+  "44118" -> "44123" 
+  "44121" -> "44117" 
+  "44132" -> "44133" 
+  "44133" -> "44131" 
+  "44195" -> "44194" 
+  "44272" -> "44270" 
+  "44277" -> "44278" 
+  "44278" -> "44276" 
+  "44322" -> "44321" 
+  "44359" -> "44357" 
+  "44364" -> "44366" 
+  "44366" -> "44362" 
+  "44375" -> "44373" 
+  "44398" -> "44396" 
+  "44405" -> "44408" 
+  "44406" -> "44404" 
+  "44427" -> "44425" 
+  "44451" -> "44450" 
+  "44456" -> "44455" 
+  "44467" -> "44463" 
+  "44476" -> "44474" 
+  "44480" -> "44479" 
+  "44504" -> "44508" 
+  "44506" -> "44503" 
+  "44514" -> "44527" 
+  "44527" -> "44524" 
+  "44534" -> "44530" 
+  "44543" -> "44541" 
+  "44052" -> "44051" 
+  "44123" -> "44121" 
+  "44273" -> "44272" 
+  "44408" -> "44406" 
+  "44453" -> "44451" 
+  "44458" -> "44460" 
+  "44460" -> "44456" 
+  "44469" -> "44467" 
+  "44508" -> "44506" 
+  "44515" -> "44518" 
+  "44516" -> "44514" 
+  "44536" -> "44534" 
+  "44518" -> "44516" 
+  "43982" -> "43989" 
+}

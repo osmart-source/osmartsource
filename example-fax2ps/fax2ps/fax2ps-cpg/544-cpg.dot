@@ -1,0 +1,14 @@
+digraph "atan2" {  
+"20530" [label = <(METHOD,atan2)<SUB>59</SUB>> ]
+"20531" [label = <(PARAM,__MATHCALL (atan2,, (_Mdouble_ __y, _Mdouble_ __x)))<SUB>59</SUB>> ]
+"20532" [label = <(PARAM,__MATHCALL (atan2,, (_Mdouble_ __y, _Mdouble_ __x)))<SUB>59</SUB>> ]
+"20533" [label = <(METHOD_RETURN,double)<SUB>59</SUB>> ]
+  "20530" -> "20531"  [ label = "AST: "] 
+  "20530" -> "20532"  [ label = "AST: "] 
+  "20530" -> "20533"  [ label = "AST: "] 
+  "20530" -> "20533"  [ label = "CFG: "] 
+  "20531" -> "20533"  [ label = "DDG: __y"] 
+  "20532" -> "20533"  [ label = "DDG: __x"] 
+  "20530" -> "20531"  [ label = "DDG: "] 
+  "20530" -> "20532"  [ label = "DDG: "] 
+}

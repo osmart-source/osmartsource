@@ -1,0 +1,18 @@
+digraph "snprintf" {  
+"30178" [label = <(METHOD,snprintf)<SUB>354</SUB>> ]
+"30179" [label = <(PARAM,char *__restrict __s)<SUB>354</SUB>> ]
+"30180" [label = <(PARAM,size_t __maxlen)<SUB>354</SUB>> ]
+"30181" [label = <(PARAM,const char *__restrict __format...)<SUB>355</SUB>> ]
+"30182" [label = <(METHOD_RETURN,int)<SUB>354</SUB>> ]
+  "30178" -> "30179"  [ label = "AST: "] 
+  "30178" -> "30180"  [ label = "AST: "] 
+  "30178" -> "30181"  [ label = "AST: "] 
+  "30178" -> "30182"  [ label = "AST: "] 
+  "30178" -> "30182"  [ label = "CFG: "] 
+  "30179" -> "30182"  [ label = "DDG: __s"] 
+  "30180" -> "30182"  [ label = "DDG: __maxlen"] 
+  "30181" -> "30182"  [ label = "DDG: __format"] 
+  "30178" -> "30179"  [ label = "DDG: "] 
+  "30178" -> "30180"  [ label = "DDG: "] 
+  "30178" -> "30181"  [ label = "DDG: "] 
+}

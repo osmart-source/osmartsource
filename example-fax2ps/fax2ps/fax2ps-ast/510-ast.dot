@@ -1,0 +1,147 @@
+digraph "_TIFFErrorEarly" {  
+"10754" [label = <(METHOD,_TIFFErrorEarly)<SUB>80</SUB>> ]
+"10755" [label = <(PARAM,TIFFOpenOptions *opts)<SUB>80</SUB>> ]
+"10756" [label = <(PARAM,thandle_t clientdata)<SUB>80</SUB>> ]
+"10757" [label = <(PARAM,const char *module)<SUB>81</SUB>> ]
+"10758" [label = <(PARAM,const char *fmt...)<SUB>81</SUB>> ]
+"10759" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>82</SUB>> ]
+"10760" [label = <(LOCAL,va_list ap: va_list)<SUB>83</SUB>> ]
+"10761" [label = <(CONTROL_STRUCTURE,if (opts &amp;&amp; opts-&gt;errorhandler),if (opts &amp;&amp; opts-&gt;errorhandler))<SUB>84</SUB>> ]
+"10762" [label = <(&lt;operator&gt;.logicalAnd,opts &amp;&amp; opts-&gt;errorhandler)<SUB>84</SUB>> ]
+"10763" [label = <(IDENTIFIER,opts,opts &amp;&amp; opts-&gt;errorhandler)<SUB>84</SUB>> ]
+"10764" [label = <(&lt;operator&gt;.indirectFieldAccess,opts-&gt;errorhandler)<SUB>84</SUB>> ]
+"10765" [label = <(IDENTIFIER,opts,opts &amp;&amp; opts-&gt;errorhandler)<SUB>84</SUB>> ]
+"10766" [label = <(FIELD_IDENTIFIER,errorhandler,errorhandler)<SUB>84</SUB>> ]
+"10767" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>85</SUB>> ]
+"10768" [label = <(va_start,va_start(ap, fmt))<SUB>86</SUB>> ]
+"10769" [label = <(IDENTIFIER,ap,va_start(ap, fmt))<SUB>86</SUB>> ]
+"10770" [label = <(IDENTIFIER,fmt,va_start(ap, fmt))<SUB>86</SUB>> ]
+"10771" [label = <(LOCAL,int stop: int)<SUB>87</SUB>> ]
+"10772" [label = <(&lt;operator&gt;.assignment,stop = opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10773" [label = <(IDENTIFIER,stop,stop = opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10774" [label = <(opts-&gt;errorhandler,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10775" [label = <(&lt;operator&gt;.indirectFieldAccess,opts-&gt;errorhandler)<SUB>87</SUB>> ]
+"10776" [label = <(IDENTIFIER,opts,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10777" [label = <(FIELD_IDENTIFIER,errorhandler,errorhandler)<SUB>87</SUB>> ]
+"10778" [label = <(IDENTIFIER,NULL,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10779" [label = <(&lt;operator&gt;.indirectFieldAccess,opts-&gt;errorhandler_user_data)<SUB>87</SUB>> ]
+"10780" [label = <(IDENTIFIER,opts,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10781" [label = <(FIELD_IDENTIFIER,errorhandler_user_data,errorhandler_user_data)<SUB>87</SUB>> ]
+"10782" [label = <(IDENTIFIER,module,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>88</SUB>> ]
+"10783" [label = <(IDENTIFIER,fmt,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>88</SUB>> ]
+"10784" [label = <(IDENTIFIER,ap,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>88</SUB>> ]
+"10785" [label = <(va_end,va_end(ap))<SUB>89</SUB>> ]
+"10786" [label = <(IDENTIFIER,ap,va_end(ap))<SUB>89</SUB>> ]
+"10787" [label = <(CONTROL_STRUCTURE,if (stop &amp;&amp; 1),if (stop &amp;&amp; 1))<SUB>90</SUB>> ]
+"10788" [label = <(&lt;operator&gt;.logicalAnd,stop &amp;&amp; 1)<SUB>90</SUB>> ]
+"10789" [label = <(IDENTIFIER,stop,stop &amp;&amp; 1)<SUB>90</SUB>> ]
+"10790" [label = <(LITERAL,1,stop &amp;&amp; 1)<SUB>90</SUB>> ]
+"10791" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>91</SUB>> ]
+"10792" [label = <(RETURN,return;,return;)<SUB>91</SUB>> ]
+"10793" [label = <(CONTROL_STRUCTURE,if (_TIFFerrorHandler &amp;&amp; 1),if (_TIFFerrorHandler &amp;&amp; 1))<SUB>93</SUB>> ]
+"10794" [label = <(&lt;operator&gt;.logicalAnd,_TIFFerrorHandler &amp;&amp; 1)<SUB>93</SUB>> ]
+"10795" [label = <(IDENTIFIER,_TIFFerrorHandler,_TIFFerrorHandler &amp;&amp; 1)<SUB>93</SUB>> ]
+"10796" [label = <(LITERAL,1,_TIFFerrorHandler &amp;&amp; 1)<SUB>93</SUB>> ]
+"10797" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>94</SUB>> ]
+"10798" [label = <(va_start,va_start(ap, fmt))<SUB>95</SUB>> ]
+"10799" [label = <(IDENTIFIER,ap,va_start(ap, fmt))<SUB>95</SUB>> ]
+"10800" [label = <(IDENTIFIER,fmt,va_start(ap, fmt))<SUB>95</SUB>> ]
+"10801" [label = <(*_TIFFerrorHandler,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>96</SUB>> ]
+"10802" [label = <(&lt;operator&gt;.indirection,*_TIFFerrorHandler)<SUB>96</SUB>> ]
+"10803" [label = <(IDENTIFIER,_TIFFerrorHandler,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>96</SUB>> ]
+"10804" [label = <(IDENTIFIER,module,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>96</SUB>> ]
+"10805" [label = <(IDENTIFIER,fmt,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>96</SUB>> ]
+"10806" [label = <(IDENTIFIER,ap,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>96</SUB>> ]
+"10807" [label = <(va_end,va_end(ap))<SUB>97</SUB>> ]
+"10808" [label = <(IDENTIFIER,ap,va_end(ap))<SUB>97</SUB>> ]
+"10809" [label = <(CONTROL_STRUCTURE,if (_TIFFerrorHandlerExt &amp;&amp; 1),if (_TIFFerrorHandlerExt &amp;&amp; 1))<SUB>99</SUB>> ]
+"10810" [label = <(&lt;operator&gt;.logicalAnd,_TIFFerrorHandlerExt &amp;&amp; 1)<SUB>99</SUB>> ]
+"10811" [label = <(IDENTIFIER,_TIFFerrorHandlerExt,_TIFFerrorHandlerExt &amp;&amp; 1)<SUB>99</SUB>> ]
+"10812" [label = <(LITERAL,1,_TIFFerrorHandlerExt &amp;&amp; 1)<SUB>99</SUB>> ]
+"10813" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>100</SUB>> ]
+"10814" [label = <(va_start,va_start(ap, fmt))<SUB>101</SUB>> ]
+"10815" [label = <(IDENTIFIER,ap,va_start(ap, fmt))<SUB>101</SUB>> ]
+"10816" [label = <(IDENTIFIER,fmt,va_start(ap, fmt))<SUB>101</SUB>> ]
+"10817" [label = <(*_TIFFerrorHandlerExt,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10818" [label = <(&lt;operator&gt;.indirection,*_TIFFerrorHandlerExt)<SUB>102</SUB>> ]
+"10819" [label = <(IDENTIFIER,_TIFFerrorHandlerExt,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10820" [label = <(IDENTIFIER,clientdata,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10821" [label = <(IDENTIFIER,module,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10822" [label = <(IDENTIFIER,fmt,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10823" [label = <(IDENTIFIER,ap,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10824" [label = <(va_end,va_end(ap))<SUB>103</SUB>> ]
+"10825" [label = <(IDENTIFIER,ap,va_end(ap))<SUB>103</SUB>> ]
+"10826" [label = <(METHOD_RETURN,void)<SUB>80</SUB>> ]
+  "10754" -> "10755" 
+  "10754" -> "10756" 
+  "10754" -> "10757" 
+  "10754" -> "10758" 
+  "10754" -> "10759" 
+  "10754" -> "10826" 
+  "10759" -> "10760" 
+  "10759" -> "10761" 
+  "10759" -> "10793" 
+  "10759" -> "10809" 
+  "10761" -> "10762" 
+  "10761" -> "10767" 
+  "10762" -> "10763" 
+  "10762" -> "10764" 
+  "10764" -> "10765" 
+  "10764" -> "10766" 
+  "10767" -> "10768" 
+  "10767" -> "10771" 
+  "10767" -> "10772" 
+  "10767" -> "10785" 
+  "10767" -> "10787" 
+  "10768" -> "10769" 
+  "10768" -> "10770" 
+  "10772" -> "10773" 
+  "10772" -> "10774" 
+  "10774" -> "10775" 
+  "10774" -> "10778" 
+  "10774" -> "10779" 
+  "10774" -> "10782" 
+  "10774" -> "10783" 
+  "10774" -> "10784" 
+  "10775" -> "10776" 
+  "10775" -> "10777" 
+  "10779" -> "10780" 
+  "10779" -> "10781" 
+  "10785" -> "10786" 
+  "10787" -> "10788" 
+  "10787" -> "10791" 
+  "10788" -> "10789" 
+  "10788" -> "10790" 
+  "10791" -> "10792" 
+  "10793" -> "10794" 
+  "10793" -> "10797" 
+  "10794" -> "10795" 
+  "10794" -> "10796" 
+  "10797" -> "10798" 
+  "10797" -> "10801" 
+  "10797" -> "10807" 
+  "10798" -> "10799" 
+  "10798" -> "10800" 
+  "10801" -> "10802" 
+  "10801" -> "10804" 
+  "10801" -> "10805" 
+  "10801" -> "10806" 
+  "10802" -> "10803" 
+  "10807" -> "10808" 
+  "10809" -> "10810" 
+  "10809" -> "10813" 
+  "10810" -> "10811" 
+  "10810" -> "10812" 
+  "10813" -> "10814" 
+  "10813" -> "10817" 
+  "10813" -> "10824" 
+  "10814" -> "10815" 
+  "10814" -> "10816" 
+  "10817" -> "10818" 
+  "10817" -> "10820" 
+  "10817" -> "10821" 
+  "10817" -> "10822" 
+  "10817" -> "10823" 
+  "10818" -> "10819" 
+  "10824" -> "10825" 
+}

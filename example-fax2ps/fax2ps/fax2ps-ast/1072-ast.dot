@@ -1,0 +1,53 @@
+digraph "TIFFClampDoubleToUInt16" {  
+"67492" [label = <(METHOD,TIFFClampDoubleToUInt16)<SUB>1286</SUB>> ]
+"67493" [label = <(PARAM,double val)<SUB>1286</SUB>> ]
+"67494" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1287</SUB>> ]
+"67495" [label = <(CONTROL_STRUCTURE,if (val &lt; 0),if (val &lt; 0))<SUB>1288</SUB>> ]
+"67496" [label = <(&lt;operator&gt;.lessThan,val &lt; 0)<SUB>1288</SUB>> ]
+"67497" [label = <(IDENTIFIER,val,val &lt; 0)<SUB>1288</SUB>> ]
+"67498" [label = <(LITERAL,0,val &lt; 0)<SUB>1288</SUB>> ]
+"67499" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1289</SUB>> ]
+"67500" [label = <(RETURN,return 0;,return 0;)<SUB>1289</SUB>> ]
+"67501" [label = <(LITERAL,0,return 0;)<SUB>1289</SUB>> ]
+"67502" [label = <(CONTROL_STRUCTURE,if (val &gt; 65535 || val != val),if (val &gt; 65535 || val != val))<SUB>1290</SUB>> ]
+"67503" [label = <(&lt;operator&gt;.logicalOr,val &gt; 65535 || val != val)<SUB>1290</SUB>> ]
+"67504" [label = <(&lt;operator&gt;.greaterThan,val &gt; 65535)<SUB>1290</SUB>> ]
+"67505" [label = <(IDENTIFIER,val,val &gt; 65535)<SUB>1290</SUB>> ]
+"67506" [label = <(LITERAL,65535,val &gt; 65535)<SUB>1290</SUB>> ]
+"67507" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1290</SUB>> ]
+"67508" [label = <(IDENTIFIER,val,val != val)<SUB>1290</SUB>> ]
+"67509" [label = <(IDENTIFIER,val,val != val)<SUB>1290</SUB>> ]
+"67510" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1291</SUB>> ]
+"67511" [label = <(RETURN,return 65535;,return 65535;)<SUB>1291</SUB>> ]
+"67512" [label = <(LITERAL,65535,return 65535;)<SUB>1291</SUB>> ]
+"67513" [label = <(RETURN,return (uint16_t)val;,return (uint16_t)val;)<SUB>1292</SUB>> ]
+"67514" [label = <(&lt;operator&gt;.cast,(uint16_t)val)<SUB>1292</SUB>> ]
+"67515" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>1292</SUB>> ]
+"67516" [label = <(IDENTIFIER,val,(uint16_t)val)<SUB>1292</SUB>> ]
+"67517" [label = <(METHOD_RETURN,uint16_t)<SUB>1286</SUB>> ]
+  "67492" -> "67493" 
+  "67492" -> "67494" 
+  "67492" -> "67517" 
+  "67494" -> "67495" 
+  "67494" -> "67502" 
+  "67494" -> "67513" 
+  "67495" -> "67496" 
+  "67495" -> "67499" 
+  "67496" -> "67497" 
+  "67496" -> "67498" 
+  "67499" -> "67500" 
+  "67500" -> "67501" 
+  "67502" -> "67503" 
+  "67502" -> "67510" 
+  "67503" -> "67504" 
+  "67503" -> "67507" 
+  "67504" -> "67505" 
+  "67504" -> "67506" 
+  "67507" -> "67508" 
+  "67507" -> "67509" 
+  "67510" -> "67511" 
+  "67511" -> "67512" 
+  "67513" -> "67514" 
+  "67514" -> "67515" 
+  "67514" -> "67516" 
+}

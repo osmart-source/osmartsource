@@ -1,0 +1,95 @@
+digraph "TIFFReadRawTile" {  
+"76575" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadRawTile&quot;)<SUB>1148</SUB>> ]
+"76579" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76624" [label = <(&lt;operator&gt;.assignment,bytecount64 = TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76662" [label = <(RETURN,return (TIFFReadRawTile1(tif, tile, buf, bytecountm, module));,return (TIFFReadRawTile1(tif, tile, buf, bytecountm, module));)<SUB>1178</SUB>> ]
+"76581" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76588" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 1))<SUB>1153</SUB>> ]
+"76598" [label = <(&lt;operator&gt;.greaterEqualsThan,tile &gt;= td-&gt;td_nstrips)<SUB>1155</SUB>> ]
+"76610" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1162</SUB>> ]
+"76626" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76630" [label = <(&lt;operator&gt;.logicalAnd,size != (tmsize_t)(-1) &amp;&amp; (uint64_t)size &lt;= bytecount64)<SUB>1170</SUB>> ]
+"76654" [label = <(&lt;operator&gt;.equals,bytecountm == 0)<SUB>1174</SUB>> ]
+"76663" [label = <(TIFFReadRawTile1,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76582" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76589" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 1))<SUB>1153</SUB>> ]
+"76593" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1154</SUB>> ]
+"76600" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>1155</SUB>> ]
+"76604" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Tile out of range, max %&quot; PRIu32, tile,\012                      td-&gt;td_nstrips);,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Tile out of range, max %&quot; PRIu32, tile,\012                      td-&gt;td_nstrips);)<SUB>1157</SUB>> ]
+"76605" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1160</SUB>> ]
+"76611" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1162</SUB>> ]
+"76616" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;))<SUB>1164</SUB>> ]
+"76620" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1167</SUB>> ]
+"76631" [label = <(&lt;operator&gt;.notEquals,size != (tmsize_t)(-1))<SUB>1170</SUB>> ]
+"76636" [label = <(&lt;operator&gt;.lessEqualsThan,(uint64_t)size &lt;= bytecount64)<SUB>1170</SUB>> ]
+"76642" [label = <(&lt;operator&gt;.assignment,bytecountm = size)<SUB>1171</SUB>> ]
+"76658" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1176</SUB>> ]
+"76584" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1149</SUB>> ]
+"76594" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1154</SUB>> ]
+"76602" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>1155</SUB>> ]
+"76606" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1160</SUB>> ]
+"76613" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1162</SUB>> ]
+"76621" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1167</SUB>> ]
+"76633" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1170</SUB>> ]
+"76637" [label = <(&lt;operator&gt;.cast,(uint64_t)size)<SUB>1170</SUB>> ]
+"76647" [label = <(&lt;operator&gt;.assignment,bytecountm = _TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76659" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1176</SUB>> ]
+"76595" [label = <(&lt;operator&gt;.minus,-1)<SUB>1154</SUB>> ]
+"76607" [label = <(&lt;operator&gt;.minus,-1)<SUB>1160</SUB>> ]
+"76622" [label = <(&lt;operator&gt;.minus,-1)<SUB>1167</SUB>> ]
+"76634" [label = <(&lt;operator&gt;.minus,-1)<SUB>1170</SUB>> ]
+"76638" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1170</SUB>> ]
+"76649" [label = <(_TIFFCastUInt64ToSSize,_TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76660" [label = <(&lt;operator&gt;.minus,-1)<SUB>1176</SUB>> ]
+"76568" [label = <(METHOD,TIFFReadRawTile)<SUB>1146</SUB>> ]
+"76669" [label = <(METHOD_RETURN,tmsize_t)<SUB>1146</SUB>> ]
+  "76575" -> "76584" 
+  "76579" -> "76589" 
+  "76624" -> "76634" 
+  "76662" -> "76669" 
+  "76581" -> "76579" 
+  "76588" -> "76595" 
+  "76588" -> "76602" 
+  "76598" -> "76604" 
+  "76598" -> "76613" 
+  "76610" -> "76616" 
+  "76610" -> "76626" 
+  "76626" -> "76624" 
+  "76630" -> "76642" 
+  "76630" -> "76649" 
+  "76654" -> "76660" 
+  "76654" -> "76663" 
+  "76663" -> "76662" 
+  "76582" -> "76581" 
+  "76589" -> "76588" 
+  "76593" -> "76669" 
+  "76600" -> "76598" 
+  "76604" -> "76607" 
+  "76605" -> "76669" 
+  "76611" -> "76610" 
+  "76616" -> "76622" 
+  "76620" -> "76669" 
+  "76631" -> "76638" 
+  "76631" -> "76630" 
+  "76636" -> "76630" 
+  "76642" -> "76654" 
+  "76658" -> "76669" 
+  "76584" -> "76582" 
+  "76594" -> "76593" 
+  "76602" -> "76600" 
+  "76606" -> "76605" 
+  "76613" -> "76611" 
+  "76621" -> "76620" 
+  "76633" -> "76631" 
+  "76637" -> "76636" 
+  "76647" -> "76654" 
+  "76659" -> "76658" 
+  "76595" -> "76594" 
+  "76607" -> "76606" 
+  "76622" -> "76621" 
+  "76634" -> "76633" 
+  "76638" -> "76637" 
+  "76649" -> "76647" 
+  "76660" -> "76659" 
+  "76568" -> "76575" 
+}

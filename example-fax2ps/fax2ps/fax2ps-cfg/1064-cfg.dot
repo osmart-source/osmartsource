@@ -1,0 +1,36 @@
+digraph "TIFFCheckpointDirectory" {  
+"64462" [label = <(&lt;operator&gt;.assignment,rc = TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64469" [label = <(&lt;operator&gt;.cast,(void)TIFFSetWriteOffset(tif, TIFFSeekFile(tif, 0, SEEK_END)))<SUB>296</SUB>> ]
+"64477" [label = <(RETURN,return rc;,return rc;)<SUB>297</SUB>> ]
+"64450" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_p == NULL)<SUB>293</SUB>> ]
+"64464" [label = <(TIFFWriteDirectorySec,TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64470" [label = <(UNKNOWN,void,void)<SUB>296</SUB>> ]
+"64471" [label = <(TIFFSetWriteOffset,TIFFSetWriteOffset(tif, TIFFSeekFile(tif, 0, SEEK_END)))<SUB>296</SUB>> ]
+"64451" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_p)<SUB>293</SUB>> ]
+"64458" [label = <(&lt;operator&gt;.cast,(void)TIFFSetupStrips(tif))<SUB>294</SUB>> ]
+"64473" [label = <(TIFFSeekFile,TIFFSeekFile(tif, 0, SEEK_END))<SUB>296</SUB>> ]
+"64452" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>293</SUB>> ]
+"64455" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>293</SUB>> ]
+"64459" [label = <(UNKNOWN,void,void)<SUB>294</SUB>> ]
+"64460" [label = <(TIFFSetupStrips,TIFFSetupStrips(tif))<SUB>294</SUB>> ]
+"64454" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>293</SUB>> ]
+"64445" [label = <(METHOD,TIFFCheckpointDirectory)<SUB>289</SUB>> ]
+"64479" [label = <(METHOD_RETURN,int)<SUB>289</SUB>> ]
+  "64462" -> "64470" 
+  "64469" -> "64477" 
+  "64477" -> "64479" 
+  "64450" -> "64459" 
+  "64450" -> "64464" 
+  "64464" -> "64462" 
+  "64470" -> "64473" 
+  "64471" -> "64469" 
+  "64451" -> "64450" 
+  "64458" -> "64464" 
+  "64473" -> "64471" 
+  "64452" -> "64455" 
+  "64455" -> "64451" 
+  "64459" -> "64460" 
+  "64460" -> "64458" 
+  "64454" -> "64452" 
+  "64445" -> "64454" 
+}

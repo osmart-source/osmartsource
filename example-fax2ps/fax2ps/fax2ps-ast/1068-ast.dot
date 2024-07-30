@@ -1,0 +1,57 @@
+digraph "TIFFClampDoubleToInt8" {  
+"67374" [label = <(METHOD,TIFFClampDoubleToInt8)<SUB>1250</SUB>> ]
+"67375" [label = <(PARAM,double val)<SUB>1250</SUB>> ]
+"67376" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1251</SUB>> ]
+"67377" [label = <(CONTROL_STRUCTURE,if (val &gt; 127),if (val &gt; 127))<SUB>1252</SUB>> ]
+"67378" [label = <(&lt;operator&gt;.greaterThan,val &gt; 127)<SUB>1252</SUB>> ]
+"67379" [label = <(IDENTIFIER,val,val &gt; 127)<SUB>1252</SUB>> ]
+"67380" [label = <(LITERAL,127,val &gt; 127)<SUB>1252</SUB>> ]
+"67381" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1253</SUB>> ]
+"67382" [label = <(RETURN,return 127;,return 127;)<SUB>1253</SUB>> ]
+"67383" [label = <(LITERAL,127,return 127;)<SUB>1253</SUB>> ]
+"67384" [label = <(CONTROL_STRUCTURE,if (val &lt; -128 || val != val),if (val &lt; -128 || val != val))<SUB>1254</SUB>> ]
+"67385" [label = <(&lt;operator&gt;.logicalOr,val &lt; -128 || val != val)<SUB>1254</SUB>> ]
+"67386" [label = <(&lt;operator&gt;.lessThan,val &lt; -128)<SUB>1254</SUB>> ]
+"67387" [label = <(IDENTIFIER,val,val &lt; -128)<SUB>1254</SUB>> ]
+"67388" [label = <(&lt;operator&gt;.minus,-128)<SUB>1254</SUB>> ]
+"67389" [label = <(LITERAL,128,-128)<SUB>1254</SUB>> ]
+"67390" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1254</SUB>> ]
+"67391" [label = <(IDENTIFIER,val,val != val)<SUB>1254</SUB>> ]
+"67392" [label = <(IDENTIFIER,val,val != val)<SUB>1254</SUB>> ]
+"67393" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1255</SUB>> ]
+"67394" [label = <(RETURN,return -128;,return -128;)<SUB>1255</SUB>> ]
+"67395" [label = <(&lt;operator&gt;.minus,-128)<SUB>1255</SUB>> ]
+"67396" [label = <(LITERAL,128,-128)<SUB>1255</SUB>> ]
+"67397" [label = <(RETURN,return (int8_t)val;,return (int8_t)val;)<SUB>1256</SUB>> ]
+"67398" [label = <(&lt;operator&gt;.cast,(int8_t)val)<SUB>1256</SUB>> ]
+"67399" [label = <(UNKNOWN,int8_t,int8_t)<SUB>1256</SUB>> ]
+"67400" [label = <(IDENTIFIER,val,(int8_t)val)<SUB>1256</SUB>> ]
+"67401" [label = <(METHOD_RETURN,int8_t)<SUB>1250</SUB>> ]
+  "67374" -> "67375" 
+  "67374" -> "67376" 
+  "67374" -> "67401" 
+  "67376" -> "67377" 
+  "67376" -> "67384" 
+  "67376" -> "67397" 
+  "67377" -> "67378" 
+  "67377" -> "67381" 
+  "67378" -> "67379" 
+  "67378" -> "67380" 
+  "67381" -> "67382" 
+  "67382" -> "67383" 
+  "67384" -> "67385" 
+  "67384" -> "67393" 
+  "67385" -> "67386" 
+  "67385" -> "67390" 
+  "67386" -> "67387" 
+  "67386" -> "67388" 
+  "67388" -> "67389" 
+  "67390" -> "67391" 
+  "67390" -> "67392" 
+  "67393" -> "67394" 
+  "67394" -> "67395" 
+  "67395" -> "67396" 
+  "67397" -> "67398" 
+  "67398" -> "67399" 
+  "67398" -> "67400" 
+}

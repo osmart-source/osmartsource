@@ -1,0 +1,19 @@
+digraph "TIFFReadDirEntryCheckRangeSshortSlong8" {  
+"87750" [label = <(&lt;operator&gt;.logicalOr,(value &lt; -0x8000) || (value &gt; 0x7FFF))<SUB>3735</SUB>> ]
+"87751" [label = <(&lt;operator&gt;.lessThan,value &lt; -0x8000)<SUB>3735</SUB>> ]
+"87755" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0x7FFF)<SUB>3735</SUB>> ]
+"87759" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3736</SUB>> ]
+"87753" [label = <(&lt;operator&gt;.minus,-0x8000)<SUB>3735</SUB>> ]
+"87763" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3738</SUB>> ]
+"87746" [label = <(METHOD,TIFFReadDirEntryCheckRangeSshortSlong8)<SUB>3732</SUB>> ]
+"87765" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3732</SUB>> ]
+  "87750" -> "87759" 
+  "87750" -> "87763" 
+  "87751" -> "87750" 
+  "87751" -> "87755" 
+  "87755" -> "87750" 
+  "87759" -> "87765" 
+  "87753" -> "87751" 
+  "87763" -> "87765" 
+  "87746" -> "87753" 
+}

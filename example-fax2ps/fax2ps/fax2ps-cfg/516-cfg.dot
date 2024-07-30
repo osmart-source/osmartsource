@@ -1,0 +1,166 @@
+digraph "TIFFVStripSize64" {  
+"11038" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFVStripSize64&quot;)<SUB>79</SUB>> ]
+"11042" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>80</SUB>> ]
+"11044" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>80</SUB>> ]
+"11049" [label = <(&lt;operator&gt;.equals,nrows == (uint32_t)(-1))<SUB>81</SUB>> ]
+"11061" [label = <(&lt;operator&gt;.logicalAnd,(td-&gt;td_planarconfig == PLANARCONFIG_CONTIG) &amp;&amp;\012        (td-&gt;td_photometric == PHOTOMETRIC_YCBCR) &amp;&amp; (!isUpSampled(tif)))<SUB>83</SUB>> ]
+"11045" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>80</SUB>> ]
+"11051" [label = <(uint32_t,(uint32_t)(-1))<SUB>81</SUB>> ]
+"11055" [label = <(&lt;operator&gt;.assignment,nrows = td-&gt;td_imagelength)<SUB>82</SUB>> ]
+"11062" [label = <(&lt;operator&gt;.logicalAnd,(td-&gt;td_planarconfig == PLANARCONFIG_CONTIG) &amp;&amp;\012        (td-&gt;td_photometric == PHOTOMETRIC_YCBCR))<SUB>83</SUB>> ]
+"11073" [label = <(&lt;operator&gt;.logicalNot,!isUpSampled(tif))<SUB>84</SUB>> ]
+"11096" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,\012                              ycbcrsubsampling + 0, ycbcrsubsampling + 1))<SUB>105</SUB>> ]
+"11154" [label = <(&lt;operator&gt;.assignment,samplingblock_samples = ycbcrsubsampling[0] * ycbcrsubsampling[1] + 2)<SUB>116</SUB>> ]
+"11165" [label = <(&lt;operator&gt;.assignment,samplingblocks_hor =\012            TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>117</SUB>> ]
+"11174" [label = <(&lt;operator&gt;.assignment,samplingblocks_ver = TIFFhowmany_32(nrows, ycbcrsubsampling[1]))<SUB>119</SUB>> ]
+"11181" [label = <(&lt;operator&gt;.assignment,samplingrow_samples = _TIFFMultiply64(tif, samplingblocks_hor,\012                                              samplingblock_samples, module))<SUB>120</SUB>> ]
+"11188" [label = <(&lt;operator&gt;.assignment,samplingrow_size = TIFFhowmany8_64(_TIFFMultiply64(\012            tif, samplingrow_samples, td-&gt;td_bitspersample, module)))<SUB>122</SUB>> ]
+"11198" [label = <(RETURN,return (\012            _TIFFMultiply64(tif, samplingrow_size, samplingblocks_ver, module));,return (\012            _TIFFMultiply64(tif, samplingrow_size, samplingblocks_ver, module));)<SUB>124</SUB>> ]
+"11047" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>80</SUB>> ]
+"11052" [label = <(&lt;operator&gt;.minus,-1)<SUB>81</SUB>> ]
+"11057" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>82</SUB>> ]
+"11063" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>83</SUB>> ]
+"11068" [label = <(&lt;operator&gt;.equals,td-&gt;td_photometric == PHOTOMETRIC_YCBCR)<SUB>84</SUB>> ]
+"11074" [label = <(isUpSampled,isUpSampled(tif))<SUB>84</SUB>> ]
+"11084" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_samplesperpixel != 3)<SUB>100</SUB>> ]
+"11099" [label = <(&lt;operator&gt;.addition,ycbcrsubsampling + 0)<SUB>106</SUB>> ]
+"11102" [label = <(&lt;operator&gt;.addition,ycbcrsubsampling + 1)<SUB>106</SUB>> ]
+"11106" [label = <(&lt;operator&gt;.logicalOr,(ycbcrsubsampling[0] != 1 &amp;&amp; ycbcrsubsampling[0] != 2 &amp;&amp;\012             ycbcrsubsampling[0] != 4) ||\012            (ycbcrsubsampling[1] != 1 &amp;&amp; ycbcrsubsampling[1] != 2 &amp;&amp;\012             ycbcrsubsampling[1] != 4))<SUB>107</SUB>> ]
+"11156" [label = <(&lt;operator&gt;.addition,ycbcrsubsampling[0] * ycbcrsubsampling[1] + 2)<SUB>116</SUB>> ]
+"11167" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>118</SUB>> ]
+"11176" [label = <(TIFFhowmany_32,TIFFhowmany_32(nrows, ycbcrsubsampling[1]))<SUB>119</SUB>> ]
+"11183" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, samplingblocks_hor,\012                                              samplingblock_samples, module))<SUB>120</SUB>> ]
+"11190" [label = <(TIFFhowmany8_64,TIFFhowmany8_64(_TIFFMultiply64(\012            tif, samplingrow_samples, td-&gt;td_bitspersample, module)))<SUB>122</SUB>> ]
+"11199" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, samplingrow_size, samplingblocks_ver, module))<SUB>125</SUB>> ]
+"11206" [label = <(RETURN,return (_TIFFMultiply64(tif, nrows, TIFFScanlineSize64(tif), module));,return (_TIFFMultiply64(tif, nrows, TIFFScanlineSize64(tif), module));)<SUB>128</SUB>> ]
+"11059" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>82</SUB>> ]
+"11064" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>83</SUB>> ]
+"11069" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_photometric)<SUB>84</SUB>> ]
+"11085" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>100</SUB>> ]
+"11090" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Invalid td_samplesperpixel value&quot;))<SUB>102</SUB>> ]
+"11094" [label = <(RETURN,return 0;,return 0;)<SUB>103</SUB>> ]
+"11107" [label = <(&lt;operator&gt;.logicalAnd,ycbcrsubsampling[0] != 1 &amp;&amp; ycbcrsubsampling[0] != 2 &amp;&amp;\012             ycbcrsubsampling[0] != 4)<SUB>107</SUB>> ]
+"11124" [label = <(&lt;operator&gt;.logicalAnd,ycbcrsubsampling[1] != 1 &amp;&amp; ycbcrsubsampling[1] != 2 &amp;&amp;\012             ycbcrsubsampling[1] != 4)<SUB>109</SUB>> ]
+"11142" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Invalid YCbCr subsampling (%dx%d)&quot;,\012                          ycbcrsubsampling[0], ycbcrsubsampling[1]))<SUB>112</SUB>> ]
+"11152" [label = <(RETURN,return 0;,return 0;)<SUB>114</SUB>> ]
+"11157" [label = <(&lt;operator&gt;.multiplication,ycbcrsubsampling[0] * ycbcrsubsampling[1])<SUB>116</SUB>> ]
+"11168" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>118</SUB>> ]
+"11171" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>118</SUB>> ]
+"11178" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>119</SUB>> ]
+"11191" [label = <(_TIFFMultiply64,_TIFFMultiply64(\012            tif, samplingrow_samples, td-&gt;td_bitspersample, module))<SUB>122</SUB>> ]
+"11207" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, nrows, TIFFScanlineSize64(tif), module))<SUB>128</SUB>> ]
+"11066" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>83</SUB>> ]
+"11071" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>84</SUB>> ]
+"11087" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>100</SUB>> ]
+"11108" [label = <(&lt;operator&gt;.logicalAnd,ycbcrsubsampling[0] != 1 &amp;&amp; ycbcrsubsampling[0] != 2)<SUB>107</SUB>> ]
+"11119" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[0] != 4)<SUB>108</SUB>> ]
+"11125" [label = <(&lt;operator&gt;.logicalAnd,ycbcrsubsampling[1] != 1 &amp;&amp; ycbcrsubsampling[1] != 2)<SUB>109</SUB>> ]
+"11136" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[1] != 4)<SUB>110</SUB>> ]
+"11146" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>113</SUB>> ]
+"11149" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>113</SUB>> ]
+"11158" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>116</SUB>> ]
+"11161" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>116</SUB>> ]
+"11170" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>118</SUB>> ]
+"11194" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>123</SUB>> ]
+"11210" [label = <(TIFFScanlineSize64,TIFFScanlineSize64(tif))<SUB>128</SUB>> ]
+"11109" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[0] != 1)<SUB>107</SUB>> ]
+"11114" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[0] != 2)<SUB>107</SUB>> ]
+"11120" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>108</SUB>> ]
+"11126" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[1] != 1)<SUB>109</SUB>> ]
+"11131" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[1] != 2)<SUB>109</SUB>> ]
+"11137" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>110</SUB>> ]
+"11196" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>123</SUB>> ]
+"11110" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>107</SUB>> ]
+"11115" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>107</SUB>> ]
+"11127" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>109</SUB>> ]
+"11132" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>109</SUB>> ]
+"11033" [label = <(METHOD,TIFFVStripSize64)<SUB>77</SUB>> ]
+"11213" [label = <(METHOD_RETURN,uint64_t)<SUB>77</SUB>> ]
+  "11038" -> "11047" 
+  "11042" -> "11052" 
+  "11044" -> "11042" 
+  "11049" -> "11059" 
+  "11049" -> "11066" 
+  "11061" -> "11087" 
+  "11061" -> "11210" 
+  "11045" -> "11044" 
+  "11051" -> "11049" 
+  "11055" -> "11066" 
+  "11062" -> "11061" 
+  "11062" -> "11074" 
+  "11073" -> "11061" 
+  "11096" -> "11110" 
+  "11154" -> "11170" 
+  "11165" -> "11178" 
+  "11174" -> "11183" 
+  "11181" -> "11196" 
+  "11188" -> "11199" 
+  "11198" -> "11213" 
+  "11047" -> "11045" 
+  "11052" -> "11051" 
+  "11057" -> "11055" 
+  "11063" -> "11062" 
+  "11063" -> "11071" 
+  "11068" -> "11062" 
+  "11074" -> "11073" 
+  "11084" -> "11090" 
+  "11084" -> "11099" 
+  "11099" -> "11102" 
+  "11102" -> "11096" 
+  "11106" -> "11146" 
+  "11106" -> "11158" 
+  "11156" -> "11154" 
+  "11167" -> "11165" 
+  "11176" -> "11174" 
+  "11183" -> "11181" 
+  "11190" -> "11188" 
+  "11199" -> "11198" 
+  "11206" -> "11213" 
+  "11059" -> "11057" 
+  "11064" -> "11063" 
+  "11069" -> "11068" 
+  "11085" -> "11084" 
+  "11090" -> "11094" 
+  "11094" -> "11213" 
+  "11107" -> "11106" 
+  "11107" -> "11127" 
+  "11124" -> "11106" 
+  "11142" -> "11152" 
+  "11152" -> "11213" 
+  "11157" -> "11156" 
+  "11168" -> "11171" 
+  "11171" -> "11167" 
+  "11178" -> "11176" 
+  "11191" -> "11190" 
+  "11207" -> "11206" 
+  "11066" -> "11064" 
+  "11071" -> "11069" 
+  "11087" -> "11085" 
+  "11108" -> "11107" 
+  "11108" -> "11120" 
+  "11119" -> "11107" 
+  "11125" -> "11124" 
+  "11125" -> "11137" 
+  "11136" -> "11124" 
+  "11146" -> "11149" 
+  "11149" -> "11142" 
+  "11158" -> "11161" 
+  "11161" -> "11157" 
+  "11170" -> "11168" 
+  "11194" -> "11191" 
+  "11210" -> "11207" 
+  "11109" -> "11108" 
+  "11109" -> "11115" 
+  "11114" -> "11108" 
+  "11120" -> "11119" 
+  "11126" -> "11125" 
+  "11126" -> "11132" 
+  "11131" -> "11125" 
+  "11137" -> "11136" 
+  "11196" -> "11194" 
+  "11110" -> "11109" 
+  "11115" -> "11114" 
+  "11127" -> "11126" 
+  "11132" -> "11131" 
+  "11033" -> "11038" 
+}

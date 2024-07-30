@@ -1,0 +1,377 @@
+digraph "initYCbCrConversion" {  
+"59996" [label = <(METHOD,initYCbCrConversion)<SUB>2559</SUB>> ]
+"59997" [label = <(PARAM,TIFFRGBAImage *img)<SUB>2559</SUB>> ]
+"59998" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2560</SUB>> ]
+"59999" [label = <(LOCAL,constchar[] module: char[])<SUB>2561</SUB>> ]
+"60000" [label = <(&lt;operator&gt;.assignment,module[] = &quot;initYCbCrConversion&quot;)<SUB>2561</SUB>> ]
+"60001" [label = <(IDENTIFIER,module,module[] = &quot;initYCbCrConversion&quot;)<SUB>2561</SUB>> ]
+"60002" [label = <(LITERAL,&quot;initYCbCrConversion&quot;,module[] = &quot;initYCbCrConversion&quot;)<SUB>2561</SUB>> ]
+"60003" [label = <(LOCAL,float* luma: float)<SUB>2563</SUB>> ]
+"60004" [label = <(LOCAL,float* refBlackWhite: float)<SUB>2563</SUB>> ]
+"60005" [label = <(CONTROL_STRUCTURE,if (img-&gt;ycbcr == NULL),if (img-&gt;ycbcr == NULL))<SUB>2565</SUB>> ]
+"60006" [label = <(&lt;operator&gt;.equals,img-&gt;ycbcr == NULL)<SUB>2565</SUB>> ]
+"60007" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2565</SUB>> ]
+"60008" [label = <(IDENTIFIER,img,img-&gt;ycbcr == NULL)<SUB>2565</SUB>> ]
+"60009" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2565</SUB>> ]
+"60010" [label = <(NULL,NULL)<SUB>2565</SUB>> ]
+"60011" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"60012" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2565</SUB>> ]
+"60013" [label = <(UNKNOWN,void *,void *)<SUB>2565</SUB>> ]
+"60014" [label = <(LITERAL,0,(void *)0)<SUB>2565</SUB>> ]
+"60015" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2566</SUB>> ]
+"60016" [label = <(&lt;operator&gt;.assignment,img-&gt;ycbcr = (TIFFYCbCrToRGB *)_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60017" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2567</SUB>> ]
+"60018" [label = <(IDENTIFIER,img,img-&gt;ycbcr = (TIFFYCbCrToRGB *)_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60019" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2567</SUB>> ]
+"60020" [label = <(&lt;operator&gt;.cast,(TIFFYCbCrToRGB *)_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60021" [label = <(UNKNOWN,TIFFYCbCrToRGB *,TIFFYCbCrToRGB *)<SUB>2567</SUB>> ]
+"60022" [label = <(_TIFFmallocExt,_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60023" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2568</SUB>> ]
+"60024" [label = <(IDENTIFIER,img,_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2568</SUB>> ]
+"60025" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2568</SUB>> ]
+"60026" [label = <(&lt;operator&gt;.addition,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t))<SUB>2568</SUB>> ]
+"60027" [label = <(&lt;operator&gt;.addition,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int))<SUB>2568</SUB>> ]
+"60028" [label = <(&lt;operator&gt;.addition,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue))<SUB>2568</SUB>> ]
+"60029" [label = <(TIFFroundup_32,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)))<SUB>2568</SUB>> ]
+"60030" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFYCbCrToRGB))<SUB>2568</SUB>> ]
+"60031" [label = <(IDENTIFIER,TIFFYCbCrToRGB,sizeof(TIFFYCbCrToRGB))<SUB>2568</SUB>> ]
+"60032" [label = <(&lt;operator&gt;.sizeOf,sizeof(long))<SUB>2568</SUB>> ]
+"60033" [label = <(IDENTIFIER,long,sizeof(long))<SUB>2568</SUB>> ]
+"60034" [label = <(&lt;operator&gt;.multiplication,4 * 256 * sizeof(TIFFRGBValue))<SUB>2569</SUB>> ]
+"60035" [label = <(&lt;operator&gt;.multiplication,4 * 256)<SUB>2569</SUB>> ]
+"60036" [label = <(LITERAL,4,4 * 256)<SUB>2569</SUB>> ]
+"60037" [label = <(LITERAL,256,4 * 256)<SUB>2569</SUB>> ]
+"60038" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFRGBValue))<SUB>2569</SUB>> ]
+"60039" [label = <(IDENTIFIER,TIFFRGBValue,sizeof(TIFFRGBValue))<SUB>2569</SUB>> ]
+"60040" [label = <(&lt;operator&gt;.multiplication,2 * 256 * sizeof(int))<SUB>2570</SUB>> ]
+"60041" [label = <(&lt;operator&gt;.multiplication,2 * 256)<SUB>2570</SUB>> ]
+"60042" [label = <(LITERAL,2,2 * 256)<SUB>2570</SUB>> ]
+"60043" [label = <(LITERAL,256,2 * 256)<SUB>2570</SUB>> ]
+"60044" [label = <(&lt;operator&gt;.sizeOf,sizeof(int))<SUB>2570</SUB>> ]
+"60045" [label = <(IDENTIFIER,int,sizeof(int))<SUB>2570</SUB>> ]
+"60046" [label = <(&lt;operator&gt;.multiplication,3 * 256 * sizeof(int32_t))<SUB>2570</SUB>> ]
+"60047" [label = <(&lt;operator&gt;.multiplication,3 * 256)<SUB>2570</SUB>> ]
+"60048" [label = <(LITERAL,3,3 * 256)<SUB>2570</SUB>> ]
+"60049" [label = <(LITERAL,256,3 * 256)<SUB>2570</SUB>> ]
+"60050" [label = <(&lt;operator&gt;.sizeOf,sizeof(int32_t))<SUB>2570</SUB>> ]
+"60051" [label = <(IDENTIFIER,int32_t,sizeof(int32_t))<SUB>2570</SUB>> ]
+"60052" [label = <(CONTROL_STRUCTURE,if (img-&gt;ycbcr == NULL),if (img-&gt;ycbcr == NULL))<SUB>2571</SUB>> ]
+"60053" [label = <(&lt;operator&gt;.equals,img-&gt;ycbcr == NULL)<SUB>2571</SUB>> ]
+"60054" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2571</SUB>> ]
+"60055" [label = <(IDENTIFIER,img,img-&gt;ycbcr == NULL)<SUB>2571</SUB>> ]
+"60056" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2571</SUB>> ]
+"60057" [label = <(NULL,NULL)<SUB>2571</SUB>> ]
+"60058" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"60059" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2571</SUB>> ]
+"60060" [label = <(UNKNOWN,void *,void *)<SUB>2571</SUB>> ]
+"60061" [label = <(LITERAL,0,(void *)0)<SUB>2571</SUB>> ]
+"60062" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2572</SUB>> ]
+"60063" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                          &quot;No space for YCbCr-&gt;RGB conversion state&quot;))<SUB>2573</SUB>> ]
+"60064" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2573</SUB>> ]
+"60065" [label = <(IDENTIFIER,img,TIFFErrorExtR(img-&gt;tif, module,\012                          &quot;No space for YCbCr-&gt;RGB conversion state&quot;))<SUB>2573</SUB>> ]
+"60066" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2573</SUB>> ]
+"60067" [label = <(IDENTIFIER,module,TIFFErrorExtR(img-&gt;tif, module,\012                          &quot;No space for YCbCr-&gt;RGB conversion state&quot;))<SUB>2573</SUB>> ]
+"60068" [label = <(LITERAL,&quot;No space for YCbCr-&gt;RGB conversion state&quot;,TIFFErrorExtR(img-&gt;tif, module,\012                          &quot;No space for YCbCr-&gt;RGB conversion state&quot;))<SUB>2574</SUB>> ]
+"60069" [label = <(RETURN,return (0);,return (0);)<SUB>2575</SUB>> ]
+"60070" [label = <(LITERAL,0,return (0);)<SUB>2575</SUB>> ]
+"60071" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_YCBCRCOEFFICIENTS, &amp;luma))<SUB>2579</SUB>> ]
+"60072" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2579</SUB>> ]
+"60073" [label = <(IDENTIFIER,img,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_YCBCRCOEFFICIENTS, &amp;luma))<SUB>2579</SUB>> ]
+"60074" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2579</SUB>> ]
+"60075" [label = <(IDENTIFIER,TIFFTAG_YCBCRCOEFFICIENTS,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_YCBCRCOEFFICIENTS, &amp;luma))<SUB>2579</SUB>> ]
+"60076" [label = <(&lt;operator&gt;.addressOf,&amp;luma)<SUB>2579</SUB>> ]
+"60077" [label = <(IDENTIFIER,luma,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_YCBCRCOEFFICIENTS, &amp;luma))<SUB>2579</SUB>> ]
+"60078" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_REFERENCEBLACKWHITE,\012                          &amp;refBlackWhite))<SUB>2580</SUB>> ]
+"60079" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2580</SUB>> ]
+"60080" [label = <(IDENTIFIER,img,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_REFERENCEBLACKWHITE,\012                          &amp;refBlackWhite))<SUB>2580</SUB>> ]
+"60081" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2580</SUB>> ]
+"60082" [label = <(IDENTIFIER,TIFFTAG_REFERENCEBLACKWHITE,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_REFERENCEBLACKWHITE,\012                          &amp;refBlackWhite))<SUB>2580</SUB>> ]
+"60083" [label = <(&lt;operator&gt;.addressOf,&amp;refBlackWhite)<SUB>2581</SUB>> ]
+"60084" [label = <(IDENTIFIER,refBlackWhite,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_REFERENCEBLACKWHITE,\012                          &amp;refBlackWhite))<SUB>2581</SUB>> ]
+"60085" [label = <(CONTROL_STRUCTURE,if (luma[0] != luma[0] || luma[1] != luma[1] || luma[1] == 0.0 ||\012        luma[2] != luma[2]),if (luma[0] != luma[0] || luma[1] != luma[1] || luma[1] == 0.0 ||\012        luma[2] != luma[2]))<SUB>2585</SUB>> ]
+"60086" [label = <(&lt;operator&gt;.logicalOr,luma[0] != luma[0] || luma[1] != luma[1] || luma[1] == 0.0 ||\012        luma[2] != luma[2])<SUB>2585</SUB>> ]
+"60087" [label = <(&lt;operator&gt;.logicalOr,luma[0] != luma[0] || luma[1] != luma[1] || luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60088" [label = <(&lt;operator&gt;.logicalOr,luma[0] != luma[0] || luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60089" [label = <(&lt;operator&gt;.notEquals,luma[0] != luma[0])<SUB>2585</SUB>> ]
+"60090" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[0])<SUB>2585</SUB>> ]
+"60091" [label = <(IDENTIFIER,luma,luma[0] != luma[0])<SUB>2585</SUB>> ]
+"60092" [label = <(LITERAL,0,luma[0] != luma[0])<SUB>2585</SUB>> ]
+"60093" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[0])<SUB>2585</SUB>> ]
+"60094" [label = <(IDENTIFIER,luma,luma[0] != luma[0])<SUB>2585</SUB>> ]
+"60095" [label = <(LITERAL,0,luma[0] != luma[0])<SUB>2585</SUB>> ]
+"60096" [label = <(&lt;operator&gt;.notEquals,luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60097" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[1])<SUB>2585</SUB>> ]
+"60098" [label = <(IDENTIFIER,luma,luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60099" [label = <(LITERAL,1,luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60100" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[1])<SUB>2585</SUB>> ]
+"60101" [label = <(IDENTIFIER,luma,luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60102" [label = <(LITERAL,1,luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60103" [label = <(&lt;operator&gt;.equals,luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60104" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[1])<SUB>2585</SUB>> ]
+"60105" [label = <(IDENTIFIER,luma,luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60106" [label = <(LITERAL,1,luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60107" [label = <(LITERAL,0.0,luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60108" [label = <(&lt;operator&gt;.notEquals,luma[2] != luma[2])<SUB>2586</SUB>> ]
+"60109" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[2])<SUB>2586</SUB>> ]
+"60110" [label = <(IDENTIFIER,luma,luma[2] != luma[2])<SUB>2586</SUB>> ]
+"60111" [label = <(LITERAL,2,luma[2] != luma[2])<SUB>2586</SUB>> ]
+"60112" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[2])<SUB>2586</SUB>> ]
+"60113" [label = <(IDENTIFIER,luma,luma[2] != luma[2])<SUB>2586</SUB>> ]
+"60114" [label = <(LITERAL,2,luma[2] != luma[2])<SUB>2586</SUB>> ]
+"60115" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2587</SUB>> ]
+"60116" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for YCbCrCoefficients tag&quot;))<SUB>2588</SUB>> ]
+"60117" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2588</SUB>> ]
+"60118" [label = <(IDENTIFIER,img,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for YCbCrCoefficients tag&quot;))<SUB>2588</SUB>> ]
+"60119" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2588</SUB>> ]
+"60120" [label = <(IDENTIFIER,module,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for YCbCrCoefficients tag&quot;))<SUB>2588</SUB>> ]
+"60121" [label = <(LITERAL,&quot;Invalid values for YCbCrCoefficients tag&quot;,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for YCbCrCoefficients tag&quot;))<SUB>2589</SUB>> ]
+"60122" [label = <(RETURN,return (0);,return (0);)<SUB>2590</SUB>> ]
+"60123" [label = <(LITERAL,0,return (0);)<SUB>2590</SUB>> ]
+"60124" [label = <(CONTROL_STRUCTURE,if (!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[4]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[5])),if (!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[4]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[5])))<SUB>2593</SUB>> ]
+"60125" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[4]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2593</SUB>> ]
+"60126" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2593</SUB>> ]
+"60127" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2593</SUB>> ]
+"60128" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2593</SUB>> ]
+"60129" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2593</SUB>> ]
+"60130" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[0]))<SUB>2593</SUB>> ]
+"60131" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[0]))<SUB>2593</SUB>> ]
+"60132" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[0])<SUB>2593</SUB>> ]
+"60133" [label = <(IDENTIFIER,refBlackWhite,isInRefBlackWhiteRange(refBlackWhite[0]))<SUB>2593</SUB>> ]
+"60134" [label = <(LITERAL,0,isInRefBlackWhiteRange(refBlackWhite[0]))<SUB>2593</SUB>> ]
+"60135" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2594</SUB>> ]
+"60136" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2594</SUB>> ]
+"60137" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[1])<SUB>2594</SUB>> ]
+"60138" [label = <(IDENTIFIER,refBlackWhite,isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2594</SUB>> ]
+"60139" [label = <(LITERAL,1,isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2594</SUB>> ]
+"60140" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2595</SUB>> ]
+"60141" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2595</SUB>> ]
+"60142" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[2])<SUB>2595</SUB>> ]
+"60143" [label = <(IDENTIFIER,refBlackWhite,isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2595</SUB>> ]
+"60144" [label = <(LITERAL,2,isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2595</SUB>> ]
+"60145" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2596</SUB>> ]
+"60146" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2596</SUB>> ]
+"60147" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[3])<SUB>2596</SUB>> ]
+"60148" [label = <(IDENTIFIER,refBlackWhite,isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2596</SUB>> ]
+"60149" [label = <(LITERAL,3,isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2596</SUB>> ]
+"60150" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2597</SUB>> ]
+"60151" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2597</SUB>> ]
+"60152" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[4])<SUB>2597</SUB>> ]
+"60153" [label = <(IDENTIFIER,refBlackWhite,isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2597</SUB>> ]
+"60154" [label = <(LITERAL,4,isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2597</SUB>> ]
+"60155" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2598</SUB>> ]
+"60156" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2598</SUB>> ]
+"60157" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[5])<SUB>2598</SUB>> ]
+"60158" [label = <(IDENTIFIER,refBlackWhite,isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2598</SUB>> ]
+"60159" [label = <(LITERAL,5,isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2598</SUB>> ]
+"60160" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2599</SUB>> ]
+"60161" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for ReferenceBlackWhite tag&quot;))<SUB>2600</SUB>> ]
+"60162" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2600</SUB>> ]
+"60163" [label = <(IDENTIFIER,img,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for ReferenceBlackWhite tag&quot;))<SUB>2600</SUB>> ]
+"60164" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2600</SUB>> ]
+"60165" [label = <(IDENTIFIER,module,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for ReferenceBlackWhite tag&quot;))<SUB>2600</SUB>> ]
+"60166" [label = <(LITERAL,&quot;Invalid values for ReferenceBlackWhite tag&quot;,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for ReferenceBlackWhite tag&quot;))<SUB>2601</SUB>> ]
+"60167" [label = <(RETURN,return (0);,return (0);)<SUB>2602</SUB>> ]
+"60168" [label = <(LITERAL,0,return (0);)<SUB>2602</SUB>> ]
+"60169" [label = <(CONTROL_STRUCTURE,if (TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite) &lt; 0),if (TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite) &lt; 0))<SUB>2605</SUB>> ]
+"60170" [label = <(&lt;operator&gt;.lessThan,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite) &lt; 0)<SUB>2605</SUB>> ]
+"60171" [label = <(TIFFYCbCrToRGBInit,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite))<SUB>2605</SUB>> ]
+"60172" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2605</SUB>> ]
+"60173" [label = <(IDENTIFIER,img,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite))<SUB>2605</SUB>> ]
+"60174" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2605</SUB>> ]
+"60175" [label = <(IDENTIFIER,luma,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite))<SUB>2605</SUB>> ]
+"60176" [label = <(IDENTIFIER,refBlackWhite,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite))<SUB>2605</SUB>> ]
+"60177" [label = <(LITERAL,0,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite) &lt; 0)<SUB>2605</SUB>> ]
+"60178" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2606</SUB>> ]
+"60179" [label = <(RETURN,return (0);,return (0);)<SUB>2606</SUB>> ]
+"60180" [label = <(LITERAL,0,return (0);)<SUB>2606</SUB>> ]
+"60181" [label = <(RETURN,return (1);,return (1);)<SUB>2607</SUB>> ]
+"60182" [label = <(LITERAL,1,return (1);)<SUB>2607</SUB>> ]
+"60183" [label = <(METHOD_RETURN,int)<SUB>2559</SUB>> ]
+  "59996" -> "59997" 
+  "59996" -> "59998" 
+  "59996" -> "60183" 
+  "59998" -> "59999" 
+  "59998" -> "60000" 
+  "59998" -> "60003" 
+  "59998" -> "60004" 
+  "59998" -> "60005" 
+  "59998" -> "60071" 
+  "59998" -> "60078" 
+  "59998" -> "60085" 
+  "59998" -> "60124" 
+  "59998" -> "60169" 
+  "59998" -> "60181" 
+  "60000" -> "60001" 
+  "60000" -> "60002" 
+  "60005" -> "60006" 
+  "60005" -> "60015" 
+  "60006" -> "60007" 
+  "60006" -> "60010" 
+  "60007" -> "60008" 
+  "60007" -> "60009" 
+  "60010" -> "60011" 
+  "60011" -> "60012" 
+  "60012" -> "60013" 
+  "60012" -> "60014" 
+  "60015" -> "60016" 
+  "60015" -> "60052" 
+  "60016" -> "60017" 
+  "60016" -> "60020" 
+  "60017" -> "60018" 
+  "60017" -> "60019" 
+  "60020" -> "60021" 
+  "60020" -> "60022" 
+  "60022" -> "60023" 
+  "60022" -> "60026" 
+  "60023" -> "60024" 
+  "60023" -> "60025" 
+  "60026" -> "60027" 
+  "60026" -> "60046" 
+  "60027" -> "60028" 
+  "60027" -> "60040" 
+  "60028" -> "60029" 
+  "60028" -> "60034" 
+  "60029" -> "60030" 
+  "60029" -> "60032" 
+  "60030" -> "60031" 
+  "60032" -> "60033" 
+  "60034" -> "60035" 
+  "60034" -> "60038" 
+  "60035" -> "60036" 
+  "60035" -> "60037" 
+  "60038" -> "60039" 
+  "60040" -> "60041" 
+  "60040" -> "60044" 
+  "60041" -> "60042" 
+  "60041" -> "60043" 
+  "60044" -> "60045" 
+  "60046" -> "60047" 
+  "60046" -> "60050" 
+  "60047" -> "60048" 
+  "60047" -> "60049" 
+  "60050" -> "60051" 
+  "60052" -> "60053" 
+  "60052" -> "60062" 
+  "60053" -> "60054" 
+  "60053" -> "60057" 
+  "60054" -> "60055" 
+  "60054" -> "60056" 
+  "60057" -> "60058" 
+  "60058" -> "60059" 
+  "60059" -> "60060" 
+  "60059" -> "60061" 
+  "60062" -> "60063" 
+  "60062" -> "60069" 
+  "60063" -> "60064" 
+  "60063" -> "60067" 
+  "60063" -> "60068" 
+  "60064" -> "60065" 
+  "60064" -> "60066" 
+  "60069" -> "60070" 
+  "60071" -> "60072" 
+  "60071" -> "60075" 
+  "60071" -> "60076" 
+  "60072" -> "60073" 
+  "60072" -> "60074" 
+  "60076" -> "60077" 
+  "60078" -> "60079" 
+  "60078" -> "60082" 
+  "60078" -> "60083" 
+  "60079" -> "60080" 
+  "60079" -> "60081" 
+  "60083" -> "60084" 
+  "60085" -> "60086" 
+  "60085" -> "60115" 
+  "60086" -> "60087" 
+  "60086" -> "60108" 
+  "60087" -> "60088" 
+  "60087" -> "60103" 
+  "60088" -> "60089" 
+  "60088" -> "60096" 
+  "60089" -> "60090" 
+  "60089" -> "60093" 
+  "60090" -> "60091" 
+  "60090" -> "60092" 
+  "60093" -> "60094" 
+  "60093" -> "60095" 
+  "60096" -> "60097" 
+  "60096" -> "60100" 
+  "60097" -> "60098" 
+  "60097" -> "60099" 
+  "60100" -> "60101" 
+  "60100" -> "60102" 
+  "60103" -> "60104" 
+  "60103" -> "60107" 
+  "60104" -> "60105" 
+  "60104" -> "60106" 
+  "60108" -> "60109" 
+  "60108" -> "60112" 
+  "60109" -> "60110" 
+  "60109" -> "60111" 
+  "60112" -> "60113" 
+  "60112" -> "60114" 
+  "60115" -> "60116" 
+  "60115" -> "60122" 
+  "60116" -> "60117" 
+  "60116" -> "60120" 
+  "60116" -> "60121" 
+  "60117" -> "60118" 
+  "60117" -> "60119" 
+  "60122" -> "60123" 
+  "60124" -> "60125" 
+  "60124" -> "60160" 
+  "60125" -> "60126" 
+  "60125" -> "60155" 
+  "60126" -> "60127" 
+  "60126" -> "60150" 
+  "60127" -> "60128" 
+  "60127" -> "60145" 
+  "60128" -> "60129" 
+  "60128" -> "60140" 
+  "60129" -> "60130" 
+  "60129" -> "60135" 
+  "60130" -> "60131" 
+  "60131" -> "60132" 
+  "60132" -> "60133" 
+  "60132" -> "60134" 
+  "60135" -> "60136" 
+  "60136" -> "60137" 
+  "60137" -> "60138" 
+  "60137" -> "60139" 
+  "60140" -> "60141" 
+  "60141" -> "60142" 
+  "60142" -> "60143" 
+  "60142" -> "60144" 
+  "60145" -> "60146" 
+  "60146" -> "60147" 
+  "60147" -> "60148" 
+  "60147" -> "60149" 
+  "60150" -> "60151" 
+  "60151" -> "60152" 
+  "60152" -> "60153" 
+  "60152" -> "60154" 
+  "60155" -> "60156" 
+  "60156" -> "60157" 
+  "60157" -> "60158" 
+  "60157" -> "60159" 
+  "60160" -> "60161" 
+  "60160" -> "60167" 
+  "60161" -> "60162" 
+  "60161" -> "60165" 
+  "60161" -> "60166" 
+  "60162" -> "60163" 
+  "60162" -> "60164" 
+  "60167" -> "60168" 
+  "60169" -> "60170" 
+  "60169" -> "60178" 
+  "60170" -> "60171" 
+  "60170" -> "60177" 
+  "60171" -> "60172" 
+  "60171" -> "60175" 
+  "60171" -> "60176" 
+  "60172" -> "60173" 
+  "60172" -> "60174" 
+  "60178" -> "60179" 
+  "60179" -> "60180" 
+  "60181" -> "60182" 
+}

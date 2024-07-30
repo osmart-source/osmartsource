@@ -1,0 +1,14 @@
+digraph "clock_gettime" {  
+"7974" [label = <(METHOD,clock_gettime)<SUB>213</SUB>> ]
+"7975" [label = <(PARAM,clockid_t __clock_id)<SUB>213</SUB>> ]
+"7976" [label = <(PARAM,struct timespec *__tp)<SUB>213</SUB>> ]
+"7977" [label = <(METHOD_RETURN,int)<SUB>213</SUB>> ]
+  "7974" -> "7975"  [ label = "AST: "] 
+  "7974" -> "7976"  [ label = "AST: "] 
+  "7974" -> "7977"  [ label = "AST: "] 
+  "7974" -> "7977"  [ label = "CFG: "] 
+  "7975" -> "7977"  [ label = "DDG: __clock_id"] 
+  "7976" -> "7977"  [ label = "DDG: __tp"] 
+  "7974" -> "7975"  [ label = "DDG: "] 
+  "7974" -> "7976"  [ label = "DDG: "] 
+}

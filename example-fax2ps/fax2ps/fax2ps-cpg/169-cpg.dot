@@ -1,0 +1,18 @@
+digraph "getsubopt" {  
+"4879" [label = <(METHOD,getsubopt)<SUB>957</SUB>> ]
+"4880" [label = <(PARAM,char **__restrict __optionp)<SUB>957</SUB>> ]
+"4881" [label = <(PARAM,char *const *__restrict __tokens)<SUB>958</SUB>> ]
+"4882" [label = <(PARAM,char **__restrict __valuep)<SUB>959</SUB>> ]
+"4883" [label = <(METHOD_RETURN,int)<SUB>957</SUB>> ]
+  "4879" -> "4880"  [ label = "AST: "] 
+  "4879" -> "4881"  [ label = "AST: "] 
+  "4879" -> "4882"  [ label = "AST: "] 
+  "4879" -> "4883"  [ label = "AST: "] 
+  "4879" -> "4883"  [ label = "CFG: "] 
+  "4880" -> "4883"  [ label = "DDG: __optionp"] 
+  "4881" -> "4883"  [ label = "DDG: __tokens"] 
+  "4882" -> "4883"  [ label = "DDG: __valuep"] 
+  "4879" -> "4880"  [ label = "DDG: "] 
+  "4879" -> "4881"  [ label = "DDG: "] 
+  "4879" -> "4882"  [ label = "DDG: "] 
+}

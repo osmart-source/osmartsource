@@ -1,0 +1,87 @@
+digraph "TIFFHashSetGetNewListElt" {  
+"5077" [label = <(METHOD,TIFFHashSetGetNewListElt)<SUB>190</SUB>> ]
+"5078" [label = <(PARAM,TIFFHashSet *set)<SUB>190</SUB>> ]
+"5079" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>191</SUB>> ]
+"5080" [label = <(CONTROL_STRUCTURE,if (set-&gt;psRecyclingList),if (set-&gt;psRecyclingList))<SUB>192</SUB>> ]
+"5081" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>192</SUB>> ]
+"5082" [label = <(IDENTIFIER,set,if (set-&gt;psRecyclingList))<SUB>192</SUB>> ]
+"5083" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>192</SUB>> ]
+"5084" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>193</SUB>> ]
+"5085" [label = <(LOCAL,TIFFList* psRet: TIFFList)<SUB>194</SUB>> ]
+"5086" [label = <(&lt;operator&gt;.assignment,*psRet = set-&gt;psRecyclingList)<SUB>194</SUB>> ]
+"5087" [label = <(IDENTIFIER,psRet,*psRet = set-&gt;psRecyclingList)<SUB>194</SUB>> ]
+"5088" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>194</SUB>> ]
+"5089" [label = <(IDENTIFIER,set,*psRet = set-&gt;psRecyclingList)<SUB>194</SUB>> ]
+"5090" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>194</SUB>> ]
+"5091" [label = <(&lt;operator&gt;.assignment,psRet-&gt;pData = NULL)<SUB>195</SUB>> ]
+"5092" [label = <(&lt;operator&gt;.indirectFieldAccess,psRet-&gt;pData)<SUB>195</SUB>> ]
+"5093" [label = <(IDENTIFIER,psRet,psRet-&gt;pData = NULL)<SUB>195</SUB>> ]
+"5094" [label = <(FIELD_IDENTIFIER,pData,pData)<SUB>195</SUB>> ]
+"5095" [label = <(NULL,NULL)<SUB>195</SUB>> ]
+"5096" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"5097" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>195</SUB>> ]
+"5098" [label = <(UNKNOWN,void *,void *)<SUB>195</SUB>> ]
+"5099" [label = <(LITERAL,0,(void *)0)<SUB>195</SUB>> ]
+"5100" [label = <(&lt;operator&gt;.postDecrement,set-&gt;nRecyclingListSize--)<SUB>196</SUB>> ]
+"5101" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nRecyclingListSize)<SUB>196</SUB>> ]
+"5102" [label = <(IDENTIFIER,set,set-&gt;nRecyclingListSize--)<SUB>196</SUB>> ]
+"5103" [label = <(FIELD_IDENTIFIER,nRecyclingListSize,nRecyclingListSize)<SUB>196</SUB>> ]
+"5104" [label = <(&lt;operator&gt;.assignment,set-&gt;psRecyclingList = psRet-&gt;psNext)<SUB>197</SUB>> ]
+"5105" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>197</SUB>> ]
+"5106" [label = <(IDENTIFIER,set,set-&gt;psRecyclingList = psRet-&gt;psNext)<SUB>197</SUB>> ]
+"5107" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>197</SUB>> ]
+"5108" [label = <(&lt;operator&gt;.indirectFieldAccess,psRet-&gt;psNext)<SUB>197</SUB>> ]
+"5109" [label = <(IDENTIFIER,psRet,set-&gt;psRecyclingList = psRet-&gt;psNext)<SUB>197</SUB>> ]
+"5110" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>197</SUB>> ]
+"5111" [label = <(RETURN,return psRet;,return psRet;)<SUB>198</SUB>> ]
+"5112" [label = <(IDENTIFIER,psRet,return psRet;)<SUB>198</SUB>> ]
+"5113" [label = <(RETURN,return (TIFFList *)malloc(sizeof(TIFFList));,return (TIFFList *)malloc(sizeof(TIFFList));)<SUB>201</SUB>> ]
+"5114" [label = <(&lt;operator&gt;.cast,(TIFFList *)malloc(sizeof(TIFFList)))<SUB>201</SUB>> ]
+"5115" [label = <(UNKNOWN,TIFFList *,TIFFList *)<SUB>201</SUB>> ]
+"5116" [label = <(malloc,malloc(sizeof(TIFFList)))<SUB>201</SUB>> ]
+"5117" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFList))<SUB>201</SUB>> ]
+"5118" [label = <(IDENTIFIER,TIFFList,sizeof(TIFFList))<SUB>201</SUB>> ]
+"5119" [label = <(METHOD_RETURN,TIFFList)<SUB>190</SUB>> ]
+  "5077" -> "5078" 
+  "5077" -> "5079" 
+  "5077" -> "5119" 
+  "5079" -> "5080" 
+  "5079" -> "5113" 
+  "5080" -> "5081" 
+  "5080" -> "5084" 
+  "5081" -> "5082" 
+  "5081" -> "5083" 
+  "5084" -> "5085" 
+  "5084" -> "5086" 
+  "5084" -> "5091" 
+  "5084" -> "5100" 
+  "5084" -> "5104" 
+  "5084" -> "5111" 
+  "5086" -> "5087" 
+  "5086" -> "5088" 
+  "5088" -> "5089" 
+  "5088" -> "5090" 
+  "5091" -> "5092" 
+  "5091" -> "5095" 
+  "5092" -> "5093" 
+  "5092" -> "5094" 
+  "5095" -> "5096" 
+  "5096" -> "5097" 
+  "5097" -> "5098" 
+  "5097" -> "5099" 
+  "5100" -> "5101" 
+  "5101" -> "5102" 
+  "5101" -> "5103" 
+  "5104" -> "5105" 
+  "5104" -> "5108" 
+  "5105" -> "5106" 
+  "5105" -> "5107" 
+  "5108" -> "5109" 
+  "5108" -> "5110" 
+  "5111" -> "5112" 
+  "5113" -> "5114" 
+  "5114" -> "5115" 
+  "5114" -> "5116" 
+  "5116" -> "5117" 
+  "5117" -> "5118" 
+}

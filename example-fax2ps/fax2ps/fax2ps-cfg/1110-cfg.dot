@@ -1,0 +1,30 @@
+digraph "TIFFWriteDirectoryTagCheckedShortArray" {  
+"70000" [label = <(assert,assert(count &lt; 0x80000000))<SUB>2241</SUB>> ]
+"70004" [label = <(assert,assert(sizeof(uint16_t) == 2))<SUB>2242</SUB>> ]
+"70019" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value));)<SUB>2245</SUB>> ]
+"70001" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x80000000)<SUB>2241</SUB>> ]
+"70005" [label = <(&lt;operator&gt;.equals,sizeof(uint16_t) == 2)<SUB>2242</SUB>> ]
+"70010" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2243</SUB>> ]
+"70020" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70006" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2242</SUB>> ]
+"70011" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2243</SUB>> ]
+"70016" [label = <(TIFFSwabArrayOfShort,TIFFSwabArrayOfShort(value, count))<SUB>2244</SUB>> ]
+"70027" [label = <(&lt;operator&gt;.multiplication,count * 2)<SUB>2246</SUB>> ]
+"70013" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2243</SUB>> ]
+"69992" [label = <(METHOD,TIFFWriteDirectoryTagCheckedShortArray)<SUB>2236</SUB>> ]
+"70031" [label = <(METHOD_RETURN,int)<SUB>2236</SUB>> ]
+  "70000" -> "70006" 
+  "70004" -> "70013" 
+  "70019" -> "70031" 
+  "70001" -> "70000" 
+  "70005" -> "70004" 
+  "70010" -> "70016" 
+  "70010" -> "70027" 
+  "70020" -> "70019" 
+  "70006" -> "70005" 
+  "70011" -> "70010" 
+  "70016" -> "70027" 
+  "70027" -> "70020" 
+  "70013" -> "70011" 
+  "69992" -> "70001" 
+}

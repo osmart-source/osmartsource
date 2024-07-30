@@ -1,0 +1,14 @@
+digraph "timer_gettime" {  
+"8013" [label = <(METHOD,timer_gettime)<SUB>247</SUB>> ]
+"8014" [label = <(PARAM,timer_t __timerid)<SUB>247</SUB>> ]
+"8015" [label = <(PARAM,struct itimerspec *__value)<SUB>247</SUB>> ]
+"8016" [label = <(METHOD_RETURN,int)<SUB>247</SUB>> ]
+  "8013" -> "8014"  [ label = "AST: "] 
+  "8013" -> "8015"  [ label = "AST: "] 
+  "8013" -> "8016"  [ label = "AST: "] 
+  "8013" -> "8016"  [ label = "CFG: "] 
+  "8014" -> "8016"  [ label = "DDG: __timerid"] 
+  "8015" -> "8016"  [ label = "DDG: __value"] 
+  "8013" -> "8014"  [ label = "DDG: "] 
+  "8013" -> "8015"  [ label = "DDG: "] 
+}

@@ -1,0 +1,63 @@
+digraph "__bswap_32" {  
+"21689" [label = <(METHOD,__bswap_32)<SUB>48</SUB>> ]
+"21690" [label = <(PARAM,__uint32_t __bsx)<SUB>49</SUB>> ]
+"21691" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>50</SUB>> ]
+"21692" [label = <(RETURN,return __bswap_constant_32 (__bsx);,return __bswap_constant_32 (__bsx);)<SUB>54</SUB>> ]
+"21693" [label = <(__bswap_constant_32,__bswap_constant_32 (__bsx))<SUB>54</SUB>> ]
+"21694" [label = <(IDENTIFIER,__bsx,__bswap_constant_32 (__bsx))<SUB>54</SUB>> ]
+"21695" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"21696" [label = <(&lt;operator&gt;.or,(((__bsx) &amp; 0xff000000u) &gt;&gt; 24) | (((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8) | (((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8) | (((__bsx) &amp; 0x000000ffu) &lt;&lt; 24))<SUB>54</SUB>> ]
+"21697" [label = <(&lt;operator&gt;.or,(((__bsx) &amp; 0xff000000u) &gt;&gt; 24) | (((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8) | (((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8))<SUB>54</SUB>> ]
+"21698" [label = <(&lt;operator&gt;.or,(((__bsx) &amp; 0xff000000u) &gt;&gt; 24) | (((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8))<SUB>54</SUB>> ]
+"21699" [label = <(&lt;operator&gt;.arithmeticShiftRight,((__bsx) &amp; 0xff000000u) &gt;&gt; 24)<SUB>54</SUB>> ]
+"21700" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0xff000000u)<SUB>54</SUB>> ]
+"21701" [label = <(IDENTIFIER,__bsx,(__bsx) &amp; 0xff000000u)<SUB>54</SUB>> ]
+"21702" [label = <(LITERAL,0xff000000u,(__bsx) &amp; 0xff000000u)<SUB>54</SUB>> ]
+"21703" [label = <(LITERAL,24,((__bsx) &amp; 0xff000000u) &gt;&gt; 24)<SUB>54</SUB>> ]
+"21704" [label = <(&lt;operator&gt;.arithmeticShiftRight,((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8)<SUB>54</SUB>> ]
+"21705" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0x00ff0000u)<SUB>54</SUB>> ]
+"21706" [label = <(IDENTIFIER,__bsx,(__bsx) &amp; 0x00ff0000u)<SUB>54</SUB>> ]
+"21707" [label = <(LITERAL,0x00ff0000u,(__bsx) &amp; 0x00ff0000u)<SUB>54</SUB>> ]
+"21708" [label = <(LITERAL,8,((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8)<SUB>54</SUB>> ]
+"21709" [label = <(&lt;operator&gt;.shiftLeft,((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8)<SUB>54</SUB>> ]
+"21710" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0x0000ff00u)<SUB>54</SUB>> ]
+"21711" [label = <(IDENTIFIER,__bsx,(__bsx) &amp; 0x0000ff00u)<SUB>54</SUB>> ]
+"21712" [label = <(LITERAL,0x0000ff00u,(__bsx) &amp; 0x0000ff00u)<SUB>54</SUB>> ]
+"21713" [label = <(LITERAL,8,((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8)<SUB>54</SUB>> ]
+"21714" [label = <(&lt;operator&gt;.shiftLeft,((__bsx) &amp; 0x000000ffu) &lt;&lt; 24)<SUB>54</SUB>> ]
+"21715" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0x000000ffu)<SUB>54</SUB>> ]
+"21716" [label = <(IDENTIFIER,__bsx,(__bsx) &amp; 0x000000ffu)<SUB>54</SUB>> ]
+"21717" [label = <(LITERAL,0x000000ffu,(__bsx) &amp; 0x000000ffu)<SUB>54</SUB>> ]
+"21718" [label = <(LITERAL,24,((__bsx) &amp; 0x000000ffu) &lt;&lt; 24)<SUB>54</SUB>> ]
+"21719" [label = <(METHOD_RETURN,__uint32_t)<SUB>48</SUB>> ]
+  "21689" -> "21690" 
+  "21689" -> "21691" 
+  "21689" -> "21719" 
+  "21691" -> "21692" 
+  "21692" -> "21693" 
+  "21693" -> "21694" 
+  "21693" -> "21695" 
+  "21695" -> "21696" 
+  "21696" -> "21697" 
+  "21696" -> "21714" 
+  "21697" -> "21698" 
+  "21697" -> "21709" 
+  "21698" -> "21699" 
+  "21698" -> "21704" 
+  "21699" -> "21700" 
+  "21699" -> "21703" 
+  "21700" -> "21701" 
+  "21700" -> "21702" 
+  "21704" -> "21705" 
+  "21704" -> "21708" 
+  "21705" -> "21706" 
+  "21705" -> "21707" 
+  "21709" -> "21710" 
+  "21709" -> "21713" 
+  "21710" -> "21711" 
+  "21710" -> "21712" 
+  "21714" -> "21715" 
+  "21714" -> "21718" 
+  "21715" -> "21716" 
+  "21715" -> "21717" 
+}

@@ -1,0 +1,42 @@
+digraph "TIFFReadDirEntryIfd8" {  
+"80661" [label = <(&lt;operator&gt;.notEquals,direntry-&gt;tdir_count != 1)<SUB>1175</SUB>> ]
+"80670" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>1177</SUB>> ]
+"80662" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>1175</SUB>> ]
+"80667" [label = <(RETURN,return (TIFFReadDirEntryErrCount);,return (TIFFReadDirEntryErrCount);)<SUB>1176</SUB>> ]
+"80672" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>1177</SUB>> ]
+"80697" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckedLong8(tif, direntry, value))<SUB>1189</SUB>> ]
+"80703" [label = <(RETURN,return (err);,return (err);)<SUB>1190</SUB>> ]
+"80706" [label = <(RETURN,return (TIFFReadDirEntryErrType);,return (TIFFReadDirEntryErrType);)<SUB>1192</SUB>> ]
+"80664" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>1175</SUB>> ]
+"80680" [label = <(TIFFReadDirEntryCheckedLong,TIFFReadDirEntryCheckedLong(tif, direntry, &amp;m))<SUB>1183</SUB>> ]
+"80685" [label = <(&lt;operator&gt;.assignment,*value = (uint64_t)m)<SUB>1184</SUB>> ]
+"80691" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>1185</SUB>> ]
+"80699" [label = <(TIFFReadDirEntryCheckedLong8,TIFFReadDirEntryCheckedLong8(tif, direntry, value))<SUB>1189</SUB>> ]
+"80683" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>1183</SUB>> ]
+"80686" [label = <(&lt;operator&gt;.indirection,*value)<SUB>1184</SUB>> ]
+"80688" [label = <(&lt;operator&gt;.cast,(uint64_t)m)<SUB>1184</SUB>> ]
+"80689" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1184</SUB>> ]
+"80654" [label = <(METHOD,TIFFReadDirEntryIfd8)<SUB>1171</SUB>> ]
+"80708" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>1171</SUB>> ]
+  "80661" -> "80667" 
+  "80661" -> "80672" 
+  "80670" -> "80683" 
+  "80670" -> "80699" 
+  "80670" -> "80706" 
+  "80662" -> "80661" 
+  "80667" -> "80708" 
+  "80672" -> "80670" 
+  "80697" -> "80703" 
+  "80703" -> "80708" 
+  "80706" -> "80708" 
+  "80664" -> "80662" 
+  "80680" -> "80686" 
+  "80685" -> "80691" 
+  "80691" -> "80708" 
+  "80699" -> "80697" 
+  "80683" -> "80680" 
+  "80686" -> "80689" 
+  "80688" -> "80685" 
+  "80689" -> "80688" 
+  "80654" -> "80664" 
+}

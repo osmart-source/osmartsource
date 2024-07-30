@@ -1,0 +1,187 @@
+digraph "TIFFSetDirectory" {  
+"44637" [label = <(METHOD,TIFFSetDirectory)<SUB>2022</SUB>> ]
+"44638" [label = <(PARAM,TIFF *tif)<SUB>2022</SUB>> ]
+"44639" [label = <(PARAM,tdir_t dirn)<SUB>2022</SUB>> ]
+"44640" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2023</SUB>> ]
+"44641" [label = <(LOCAL,uint64_t nextdiroff: uint64_t)<SUB>2024</SUB>> ]
+"44642" [label = <(LOCAL,tdir_t nextdirnum: tdir_t)<SUB>2025</SUB>> ]
+"44643" [label = <(LOCAL,tdir_t n: tdir_t)<SUB>2026</SUB>> ]
+"44644" [label = <(CONTROL_STRUCTURE,if (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF)),if (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF)))<SUB>2028</SUB>> ]
+"44645" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2028</SUB>> ]
+"44646" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2028</SUB>> ]
+"44647" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2028</SUB>> ]
+"44648" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2028</SUB>> ]
+"44649" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2028</SUB>> ]
+"44650" [label = <(IDENTIFIER,TIFF_BIGTIFF,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2028</SUB>> ]
+"44651" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2029</SUB>> ]
+"44652" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2029</SUB>> ]
+"44653" [label = <(IDENTIFIER,nextdiroff,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2029</SUB>> ]
+"44654" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>2029</SUB>> ]
+"44655" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>2029</SUB>> ]
+"44656" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2029</SUB>> ]
+"44657" [label = <(IDENTIFIER,tif,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2029</SUB>> ]
+"44658" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2029</SUB>> ]
+"44659" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>2029</SUB>> ]
+"44660" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2029</SUB>> ]
+"44661" [label = <(CONTROL_STRUCTURE,else,else)<SUB>2031</SUB>> ]
+"44662" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2031</SUB>> ]
+"44663" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2031</SUB>> ]
+"44664" [label = <(IDENTIFIER,nextdiroff,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2031</SUB>> ]
+"44665" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>2031</SUB>> ]
+"44666" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>2031</SUB>> ]
+"44667" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2031</SUB>> ]
+"44668" [label = <(IDENTIFIER,tif,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2031</SUB>> ]
+"44669" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2031</SUB>> ]
+"44670" [label = <(FIELD_IDENTIFIER,big,big)<SUB>2031</SUB>> ]
+"44671" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2031</SUB>> ]
+"44672" [label = <(&lt;operator&gt;.assignment,nextdirnum = 0)<SUB>2032</SUB>> ]
+"44673" [label = <(IDENTIFIER,nextdirnum,nextdirnum = 0)<SUB>2032</SUB>> ]
+"44674" [label = <(LITERAL,0,nextdirnum = 0)<SUB>2032</SUB>> ]
+"44675" [label = <(CONTROL_STRUCTURE,for (n = dirn;n &gt; 0 &amp;&amp; nextdiroff != 0;n--),for (n = dirn;n &gt; 0 &amp;&amp; nextdiroff != 0;n--))<SUB>2033</SUB>> ]
+"44676" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2033</SUB>> ]
+"44677" [label = <(&lt;operator&gt;.assignment,n = dirn)<SUB>2033</SUB>> ]
+"44678" [label = <(IDENTIFIER,n,n = dirn)<SUB>2033</SUB>> ]
+"44679" [label = <(IDENTIFIER,dirn,n = dirn)<SUB>2033</SUB>> ]
+"44680" [label = <(&lt;operator&gt;.logicalAnd,n &gt; 0 &amp;&amp; nextdiroff != 0)<SUB>2033</SUB>> ]
+"44681" [label = <(&lt;operator&gt;.greaterThan,n &gt; 0)<SUB>2033</SUB>> ]
+"44682" [label = <(IDENTIFIER,n,n &gt; 0)<SUB>2033</SUB>> ]
+"44683" [label = <(LITERAL,0,n &gt; 0)<SUB>2033</SUB>> ]
+"44684" [label = <(&lt;operator&gt;.notEquals,nextdiroff != 0)<SUB>2033</SUB>> ]
+"44685" [label = <(IDENTIFIER,nextdiroff,nextdiroff != 0)<SUB>2033</SUB>> ]
+"44686" [label = <(LITERAL,0,nextdiroff != 0)<SUB>2033</SUB>> ]
+"44687" [label = <(&lt;operator&gt;.postDecrement,n--)<SUB>2033</SUB>> ]
+"44688" [label = <(IDENTIFIER,n,n--)<SUB>2033</SUB>> ]
+"44689" [label = <(CONTROL_STRUCTURE,if (!TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum)),if (!TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum)))<SUB>2034</SUB>> ]
+"44690" [label = <(&lt;operator&gt;.logicalNot,!TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44691" [label = <(TIFFAdvanceDirectory,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44692" [label = <(IDENTIFIER,tif,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44693" [label = <(&lt;operator&gt;.addressOf,&amp;nextdiroff)<SUB>2034</SUB>> ]
+"44694" [label = <(IDENTIFIER,nextdiroff,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44695" [label = <(IDENTIFIER,NULL,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44696" [label = <(&lt;operator&gt;.addressOf,&amp;nextdirnum)<SUB>2034</SUB>> ]
+"44697" [label = <(IDENTIFIER,nextdirnum,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44698" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2035</SUB>> ]
+"44699" [label = <(RETURN,return (0);,return (0);)<SUB>2035</SUB>> ]
+"44700" [label = <(LITERAL,0,return (0);)<SUB>2035</SUB>> ]
+"44701" [label = <(CONTROL_STRUCTURE,if (nextdiroff == 0 || n &gt; 0),if (nextdiroff == 0 || n &gt; 0))<SUB>2038</SUB>> ]
+"44702" [label = <(&lt;operator&gt;.logicalOr,nextdiroff == 0 || n &gt; 0)<SUB>2038</SUB>> ]
+"44703" [label = <(&lt;operator&gt;.equals,nextdiroff == 0)<SUB>2038</SUB>> ]
+"44704" [label = <(IDENTIFIER,nextdiroff,nextdiroff == 0)<SUB>2038</SUB>> ]
+"44705" [label = <(LITERAL,0,nextdiroff == 0)<SUB>2038</SUB>> ]
+"44706" [label = <(&lt;operator&gt;.greaterThan,n &gt; 0)<SUB>2038</SUB>> ]
+"44707" [label = <(IDENTIFIER,n,n &gt; 0)<SUB>2038</SUB>> ]
+"44708" [label = <(LITERAL,0,n &gt; 0)<SUB>2038</SUB>> ]
+"44709" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2039</SUB>> ]
+"44710" [label = <(RETURN,return (0);,return (0);)<SUB>2039</SUB>> ]
+"44711" [label = <(LITERAL,0,return (0);)<SUB>2039</SUB>> ]
+"44712" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_nextdiroff = nextdiroff)<SUB>2041</SUB>> ]
+"44713" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>2041</SUB>> ]
+"44714" [label = <(IDENTIFIER,tif,tif-&gt;tif_nextdiroff = nextdiroff)<SUB>2041</SUB>> ]
+"44715" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>2041</SUB>> ]
+"44716" [label = <(IDENTIFIER,nextdiroff,tif-&gt;tif_nextdiroff = nextdiroff)<SUB>2041</SUB>> ]
+"44717" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir = (dirn - n) - 1)<SUB>2047</SUB>> ]
+"44718" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2047</SUB>> ]
+"44719" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir = (dirn - n) - 1)<SUB>2047</SUB>> ]
+"44720" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2047</SUB>> ]
+"44721" [label = <(&lt;operator&gt;.subtraction,(dirn - n) - 1)<SUB>2047</SUB>> ]
+"44722" [label = <(&lt;operator&gt;.subtraction,dirn - n)<SUB>2047</SUB>> ]
+"44723" [label = <(IDENTIFIER,dirn,dirn - n)<SUB>2047</SUB>> ]
+"44724" [label = <(IDENTIFIER,n,dirn - n)<SUB>2047</SUB>> ]
+"44725" [label = <(LITERAL,1,(dirn - n) - 1)<SUB>2047</SUB>> ]
+"44726" [label = <(RETURN,return (TIFFReadDirectory(tif));,return (TIFFReadDirectory(tif));)<SUB>2048</SUB>> ]
+"44727" [label = <(TIFFReadDirectory,TIFFReadDirectory(tif))<SUB>2048</SUB>> ]
+"44728" [label = <(IDENTIFIER,tif,TIFFReadDirectory(tif))<SUB>2048</SUB>> ]
+"44729" [label = <(METHOD_RETURN,int)<SUB>2022</SUB>> ]
+  "44637" -> "44638" 
+  "44637" -> "44639" 
+  "44637" -> "44640" 
+  "44637" -> "44729" 
+  "44640" -> "44641" 
+  "44640" -> "44642" 
+  "44640" -> "44643" 
+  "44640" -> "44644" 
+  "44640" -> "44672" 
+  "44640" -> "44675" 
+  "44640" -> "44701" 
+  "44640" -> "44712" 
+  "44640" -> "44717" 
+  "44640" -> "44726" 
+  "44644" -> "44645" 
+  "44644" -> "44651" 
+  "44644" -> "44661" 
+  "44645" -> "44646" 
+  "44646" -> "44647" 
+  "44646" -> "44650" 
+  "44647" -> "44648" 
+  "44647" -> "44649" 
+  "44651" -> "44652" 
+  "44652" -> "44653" 
+  "44652" -> "44654" 
+  "44654" -> "44655" 
+  "44654" -> "44660" 
+  "44655" -> "44656" 
+  "44655" -> "44659" 
+  "44656" -> "44657" 
+  "44656" -> "44658" 
+  "44661" -> "44662" 
+  "44662" -> "44663" 
+  "44663" -> "44664" 
+  "44663" -> "44665" 
+  "44665" -> "44666" 
+  "44665" -> "44671" 
+  "44666" -> "44667" 
+  "44666" -> "44670" 
+  "44667" -> "44668" 
+  "44667" -> "44669" 
+  "44672" -> "44673" 
+  "44672" -> "44674" 
+  "44675" -> "44676" 
+  "44675" -> "44680" 
+  "44675" -> "44687" 
+  "44675" -> "44689" 
+  "44676" -> "44677" 
+  "44677" -> "44678" 
+  "44677" -> "44679" 
+  "44680" -> "44681" 
+  "44680" -> "44684" 
+  "44681" -> "44682" 
+  "44681" -> "44683" 
+  "44684" -> "44685" 
+  "44684" -> "44686" 
+  "44687" -> "44688" 
+  "44689" -> "44690" 
+  "44689" -> "44698" 
+  "44690" -> "44691" 
+  "44691" -> "44692" 
+  "44691" -> "44693" 
+  "44691" -> "44695" 
+  "44691" -> "44696" 
+  "44693" -> "44694" 
+  "44696" -> "44697" 
+  "44698" -> "44699" 
+  "44699" -> "44700" 
+  "44701" -> "44702" 
+  "44701" -> "44709" 
+  "44702" -> "44703" 
+  "44702" -> "44706" 
+  "44703" -> "44704" 
+  "44703" -> "44705" 
+  "44706" -> "44707" 
+  "44706" -> "44708" 
+  "44709" -> "44710" 
+  "44710" -> "44711" 
+  "44712" -> "44713" 
+  "44712" -> "44716" 
+  "44713" -> "44714" 
+  "44713" -> "44715" 
+  "44717" -> "44718" 
+  "44717" -> "44721" 
+  "44718" -> "44719" 
+  "44718" -> "44720" 
+  "44721" -> "44722" 
+  "44721" -> "44725" 
+  "44722" -> "44723" 
+  "44722" -> "44724" 
+  "44726" -> "44727" 
+  "44727" -> "44728" 
+}

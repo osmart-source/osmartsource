@@ -1,0 +1,81 @@
+digraph "TIFFReadTile" {  
+"75927" [label = <(METHOD,TIFFReadTile)<SUB>916</SUB>> ]
+"75928" [label = <(PARAM,TIFF *tif)<SUB>916</SUB>> ]
+"75929" [label = <(PARAM,void *buf)<SUB>916</SUB>> ]
+"75930" [label = <(PARAM,uint32_t x)<SUB>916</SUB>> ]
+"75931" [label = <(PARAM,uint32_t y)<SUB>916</SUB>> ]
+"75932" [label = <(PARAM,uint32_t z)<SUB>916</SUB>> ]
+"75933" [label = <(PARAM,uint16_t s)<SUB>917</SUB>> ]
+"75934" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>918</SUB>> ]
+"75935" [label = <(CONTROL_STRUCTURE,if (!TIFFCheckRead(tif, 1) || !TIFFCheckTile(tif, x, y, z, s)),if (!TIFFCheckRead(tif, 1) || !TIFFCheckTile(tif, x, y, z, s)))<SUB>919</SUB>> ]
+"75936" [label = <(&lt;operator&gt;.logicalOr,!TIFFCheckRead(tif, 1) || !TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75937" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 1))<SUB>919</SUB>> ]
+"75938" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 1))<SUB>919</SUB>> ]
+"75939" [label = <(IDENTIFIER,tif,TIFFCheckRead(tif, 1))<SUB>919</SUB>> ]
+"75940" [label = <(LITERAL,1,TIFFCheckRead(tif, 1))<SUB>919</SUB>> ]
+"75941" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75942" [label = <(TIFFCheckTile,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75943" [label = <(IDENTIFIER,tif,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75944" [label = <(IDENTIFIER,x,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75945" [label = <(IDENTIFIER,y,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75946" [label = <(IDENTIFIER,z,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75947" [label = <(IDENTIFIER,s,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75948" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>920</SUB>> ]
+"75949" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>920</SUB>> ]
+"75950" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>920</SUB>> ]
+"75951" [label = <(&lt;operator&gt;.minus,-1)<SUB>920</SUB>> ]
+"75952" [label = <(LITERAL,1,-1)<SUB>920</SUB>> ]
+"75953" [label = <(RETURN,return (TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)));,return (TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)));)<SUB>921</SUB>> ]
+"75954" [label = <(TIFFReadEncodedTile,TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)))<SUB>921</SUB>> ]
+"75955" [label = <(IDENTIFIER,tif,TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)))<SUB>921</SUB>> ]
+"75956" [label = <(TIFFComputeTile,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75957" [label = <(IDENTIFIER,tif,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75958" [label = <(IDENTIFIER,x,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75959" [label = <(IDENTIFIER,y,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75960" [label = <(IDENTIFIER,z,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75961" [label = <(IDENTIFIER,s,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75962" [label = <(IDENTIFIER,buf,TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)))<SUB>921</SUB>> ]
+"75963" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>922</SUB>> ]
+"75964" [label = <(&lt;operator&gt;.minus,-1)<SUB>922</SUB>> ]
+"75965" [label = <(LITERAL,1,-1)<SUB>922</SUB>> ]
+"75966" [label = <(METHOD_RETURN,tmsize_t)<SUB>916</SUB>> ]
+  "75927" -> "75928" 
+  "75927" -> "75929" 
+  "75927" -> "75930" 
+  "75927" -> "75931" 
+  "75927" -> "75932" 
+  "75927" -> "75933" 
+  "75927" -> "75934" 
+  "75927" -> "75966" 
+  "75934" -> "75935" 
+  "75934" -> "75953" 
+  "75935" -> "75936" 
+  "75935" -> "75948" 
+  "75936" -> "75937" 
+  "75936" -> "75941" 
+  "75937" -> "75938" 
+  "75938" -> "75939" 
+  "75938" -> "75940" 
+  "75941" -> "75942" 
+  "75942" -> "75943" 
+  "75942" -> "75944" 
+  "75942" -> "75945" 
+  "75942" -> "75946" 
+  "75942" -> "75947" 
+  "75948" -> "75949" 
+  "75949" -> "75950" 
+  "75950" -> "75951" 
+  "75951" -> "75952" 
+  "75953" -> "75954" 
+  "75954" -> "75955" 
+  "75954" -> "75956" 
+  "75954" -> "75962" 
+  "75954" -> "75963" 
+  "75956" -> "75957" 
+  "75956" -> "75958" 
+  "75956" -> "75959" 
+  "75956" -> "75960" 
+  "75956" -> "75961" 
+  "75963" -> "75964" 
+  "75964" -> "75965" 
+}

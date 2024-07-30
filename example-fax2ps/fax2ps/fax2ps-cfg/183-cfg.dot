@@ -1,0 +1,189 @@
+digraph "TIFFHashSetRemoveInternal" {  
+"5701" [label = <(assert,assert(set != NULL))<SUB>519</SUB>> ]
+"5766" [label = <(&lt;operator&gt;.assignment,nHashVal = (int)(set-&gt;fnHashFunc(elt) % set-&gt;nAllocatedSize))<SUB>535</SUB>> ]
+"5780" [label = <(&lt;operator&gt;.assignment,*cur = set-&gt;tabList[nHashVal])<SUB>536</SUB>> ]
+"5788" [label = <(&lt;operator&gt;.assignment,*prev = NULL)<SUB>537</SUB>> ]
+"5862" [label = <(RETURN,return false;,return false;)<SUB>561</SUB>> ]
+"5718" [label = <(&lt;operator&gt;.logicalAnd,set-&gt;nIndiceAllocatedSize &gt; 0 &amp;&amp; set-&gt;nSize &lt;= set-&gt;nAllocatedSize / 2)<SUB>520</SUB>> ]
+"5768" [label = <(&lt;operator&gt;.cast,(int)(set-&gt;fnHashFunc(elt) % set-&gt;nAllocatedSize))<SUB>535</SUB>> ]
+"5782" [label = <(&lt;operator&gt;.indirectIndexAccess,set-&gt;tabList[nHashVal])<SUB>536</SUB>> ]
+"5790" [label = <(NULL,NULL)<SUB>537</SUB>> ]
+"5863" [label = <(false,false)<SUB>561</SUB>> ]
+"5703" [label = <(&lt;operator&gt;.conditional,(set != ((void *)0)) ? (void)(0) : __assert_fail(&quot;set != NULL&quot;, &quot;/home/cmd/OSmart/identitemp/libtiff/fax2ps/fax2ps/tif_hash_set.c&quot;, 519, __func__))<SUB>519</SUB>> ]
+"5719" [label = <(&lt;operator&gt;.greaterThan,set-&gt;nIndiceAllocatedSize &gt; 0)<SUB>520</SUB>> ]
+"5724" [label = <(&lt;operator&gt;.lessEqualsThan,set-&gt;nSize &lt;= set-&gt;nAllocatedSize / 2)<SUB>520</SUB>> ]
+"5734" [label = <(&lt;operator&gt;.postDecrement,set-&gt;nIndiceAllocatedSize--)<SUB>522</SUB>> ]
+"5769" [label = <(UNKNOWN,int,int)<SUB>535</SUB>> ]
+"5770" [label = <(&lt;operator&gt;.modulo,set-&gt;fnHashFunc(elt) % set-&gt;nAllocatedSize)<SUB>535</SUB>> ]
+"5783" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>536</SUB>> ]
+"5854" [label = <(&lt;operator&gt;.assignment,prev = cur)<SUB>558</SUB>> ]
+"5857" [label = <(&lt;operator&gt;.assignment,cur = cur-&gt;psNext)<SUB>559</SUB>> ]
+"5704" [label = <(&lt;operator&gt;.notEquals,set != ((void *)0))<SUB>519</SUB>> ]
+"5709" [label = <(&lt;operator&gt;.cast,(void)(0))<SUB>519</SUB>> ]
+"5712" [label = <(__assert_fail,__assert_fail(&quot;set != NULL&quot;, &quot;/home/cmd/OSmart/identitemp/libtiff/fax2ps/fax2ps/tif_hash_set.c&quot;, 519, __func__))<SUB>519</SUB>> ]
+"5720" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>520</SUB>> ]
+"5725" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nSize)<SUB>520</SUB>> ]
+"5728" [label = <(&lt;operator&gt;.division,set-&gt;nAllocatedSize / 2)<SUB>520</SUB>> ]
+"5735" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>522</SUB>> ]
+"5739" [label = <(&lt;operator&gt;.logicalAnd,bDeferRehash &amp;&amp; 1)<SUB>523</SUB>> ]
+"5771" [label = <(set-&gt;fnHashFunc,set-&gt;fnHashFunc(elt))<SUB>535</SUB>> ]
+"5776" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>535</SUB>> ]
+"5785" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>536</SUB>> ]
+"5792" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>537</SUB>> ]
+"5799" [label = <(set-&gt;fnEqualFunc,set-&gt;fnEqualFunc(cur-&gt;pData, elt))<SUB>540</SUB>> ]
+"5859" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;psNext)<SUB>559</SUB>> ]
+"5706" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>519</SUB>> ]
+"5710" [label = <(UNKNOWN,void,void)<SUB>519</SUB>> ]
+"5722" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>520</SUB>> ]
+"5727" [label = <(FIELD_IDENTIFIER,nSize,nSize)<SUB>520</SUB>> ]
+"5729" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>520</SUB>> ]
+"5737" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>522</SUB>> ]
+"5743" [label = <(&lt;operator&gt;.assignment,set-&gt;bRehash = true)<SUB>524</SUB>> ]
+"5772" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnHashFunc)<SUB>535</SUB>> ]
+"5778" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>535</SUB>> ]
+"5793" [label = <(UNKNOWN,void *,void *)<SUB>537</SUB>> ]
+"5800" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnEqualFunc)<SUB>540</SUB>> ]
+"5803" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;pData)<SUB>540</SUB>> ]
+"5843" [label = <(TIFFHashSetReturnListElt,TIFFHashSetReturnListElt(set, cur))<SUB>550</SUB>> ]
+"5846" [label = <(&lt;operator&gt;.postDecrement,set-&gt;nSize--)<SUB>555</SUB>> ]
+"5850" [label = <(RETURN,return true;,return true;)<SUB>556</SUB>> ]
+"5861" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>559</SUB>> ]
+"5707" [label = <(UNKNOWN,void *,void *)<SUB>519</SUB>> ]
+"5731" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>520</SUB>> ]
+"5744" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;bRehash)<SUB>524</SUB>> ]
+"5747" [label = <(true,true)<SUB>524</SUB>> ]
+"5774" [label = <(FIELD_IDENTIFIER,fnHashFunc,fnHashFunc)<SUB>535</SUB>> ]
+"5802" [label = <(FIELD_IDENTIFIER,fnEqualFunc,fnEqualFunc)<SUB>540</SUB>> ]
+"5805" [label = <(FIELD_IDENTIFIER,pData,pData)<SUB>540</SUB>> ]
+"5809" [label = <(&lt;operator&gt;.logicalAnd,prev &amp;&amp; 1)<SUB>542</SUB>> ]
+"5832" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>547</SUB>> ]
+"5847" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nSize)<SUB>555</SUB>> ]
+"5851" [label = <(true,true)<SUB>556</SUB>> ]
+"5746" [label = <(FIELD_IDENTIFIER,bRehash,bRehash)<SUB>524</SUB>> ]
+"5753" [label = <(&lt;operator&gt;.logicalNot,!TIFFHashSetRehash(set))<SUB>527</SUB>> ]
+"5813" [label = <(&lt;operator&gt;.assignment,prev-&gt;psNext = cur-&gt;psNext)<SUB>543</SUB>> ]
+"5834" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>547</SUB>> ]
+"5836" [label = <(set-&gt;fnFreeEltFunc,set-&gt;fnFreeEltFunc(cur-&gt;pData))<SUB>548</SUB>> ]
+"5849" [label = <(FIELD_IDENTIFIER,nSize,nSize)<SUB>555</SUB>> ]
+"5754" [label = <(TIFFHashSetRehash,TIFFHashSetRehash(set))<SUB>527</SUB>> ]
+"5757" [label = <(&lt;operator&gt;.postIncrement,set-&gt;nIndiceAllocatedSize++)<SUB>529</SUB>> ]
+"5761" [label = <(RETURN,return false;,return false;)<SUB>530</SUB>> ]
+"5814" [label = <(&lt;operator&gt;.indirectFieldAccess,prev-&gt;psNext)<SUB>543</SUB>> ]
+"5817" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;psNext)<SUB>543</SUB>> ]
+"5822" [label = <(&lt;operator&gt;.assignment,set-&gt;tabList[nHashVal] = cur-&gt;psNext)<SUB>545</SUB>> ]
+"5837" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>548</SUB>> ]
+"5840" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;pData)<SUB>548</SUB>> ]
+"5758" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>529</SUB>> ]
+"5762" [label = <(false,false)<SUB>530</SUB>> ]
+"5816" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>543</SUB>> ]
+"5819" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>543</SUB>> ]
+"5823" [label = <(&lt;operator&gt;.indirectIndexAccess,set-&gt;tabList[nHashVal])<SUB>545</SUB>> ]
+"5828" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;psNext)<SUB>545</SUB>> ]
+"5839" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>548</SUB>> ]
+"5842" [label = <(FIELD_IDENTIFIER,pData,pData)<SUB>548</SUB>> ]
+"5760" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>529</SUB>> ]
+"5824" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>545</SUB>> ]
+"5830" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>545</SUB>> ]
+"5826" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>545</SUB>> ]
+"5696" [label = <(METHOD,TIFFHashSetRemoveInternal)<SUB>516</SUB>> ]
+"5866" [label = <(METHOD_RETURN,bool)<SUB>516</SUB>> ]
+  "5701" -> "5707" 
+  "5701" -> "5722" 
+  "5766" -> "5785" 
+  "5780" -> "5790" 
+  "5788" -> "5863" 
+  "5788" -> "5802" 
+  "5862" -> "5866" 
+  "5718" -> "5737" 
+  "5718" -> "5769" 
+  "5768" -> "5766" 
+  "5782" -> "5780" 
+  "5790" -> "5793" 
+  "5790" -> "5788" 
+  "5863" -> "5862" 
+  "5703" -> "5722" 
+  "5719" -> "5718" 
+  "5719" -> "5727" 
+  "5724" -> "5718" 
+  "5734" -> "5739" 
+  "5769" -> "5774" 
+  "5770" -> "5768" 
+  "5783" -> "5782" 
+  "5854" -> "5861" 
+  "5857" -> "5863" 
+  "5857" -> "5802" 
+  "5704" -> "5710" 
+  "5704" -> "5712" 
+  "5709" -> "5703" 
+  "5712" -> "5703" 
+  "5720" -> "5719" 
+  "5725" -> "5731" 
+  "5728" -> "5724" 
+  "5735" -> "5734" 
+  "5739" -> "5746" 
+  "5739" -> "5754" 
+  "5771" -> "5778" 
+  "5776" -> "5770" 
+  "5785" -> "5783" 
+  "5792" -> "5788" 
+  "5799" -> "5809" 
+  "5799" -> "5854" 
+  "5859" -> "5857" 
+  "5706" -> "5704" 
+  "5710" -> "5709" 
+  "5722" -> "5720" 
+  "5727" -> "5725" 
+  "5729" -> "5728" 
+  "5737" -> "5735" 
+  "5743" -> "5769" 
+  "5772" -> "5771" 
+  "5778" -> "5776" 
+  "5793" -> "5792" 
+  "5800" -> "5805" 
+  "5803" -> "5799" 
+  "5843" -> "5849" 
+  "5846" -> "5851" 
+  "5850" -> "5866" 
+  "5861" -> "5859" 
+  "5707" -> "5706" 
+  "5731" -> "5729" 
+  "5744" -> "5747" 
+  "5747" -> "5743" 
+  "5774" -> "5772" 
+  "5802" -> "5800" 
+  "5805" -> "5803" 
+  "5809" -> "5816" 
+  "5809" -> "5826" 
+  "5832" -> "5839" 
+  "5832" -> "5843" 
+  "5847" -> "5846" 
+  "5851" -> "5850" 
+  "5746" -> "5744" 
+  "5753" -> "5760" 
+  "5753" -> "5769" 
+  "5813" -> "5834" 
+  "5834" -> "5832" 
+  "5836" -> "5843" 
+  "5849" -> "5847" 
+  "5754" -> "5753" 
+  "5757" -> "5762" 
+  "5761" -> "5866" 
+  "5814" -> "5819" 
+  "5817" -> "5813" 
+  "5822" -> "5834" 
+  "5837" -> "5842" 
+  "5840" -> "5836" 
+  "5758" -> "5757" 
+  "5762" -> "5761" 
+  "5816" -> "5814" 
+  "5819" -> "5817" 
+  "5823" -> "5830" 
+  "5828" -> "5822" 
+  "5839" -> "5837" 
+  "5842" -> "5840" 
+  "5760" -> "5758" 
+  "5824" -> "5823" 
+  "5830" -> "5828" 
+  "5826" -> "5824" 
+  "5696" -> "5701" 
+}

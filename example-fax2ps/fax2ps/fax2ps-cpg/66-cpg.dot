@@ -1,0 +1,18 @@
+digraph "freopen" {  
+"2515" [label = <(METHOD,freopen)<SUB>252</SUB>> ]
+"2516" [label = <(PARAM,const char *__restrict __filename)<SUB>252</SUB>> ]
+"2517" [label = <(PARAM,const char *__restrict __modes)<SUB>253</SUB>> ]
+"2518" [label = <(PARAM,FILE *__restrict __stream)<SUB>254</SUB>> ]
+"2519" [label = <(METHOD_RETURN,FILE*)<SUB>252</SUB>> ]
+  "2515" -> "2516"  [ label = "AST: "] 
+  "2515" -> "2517"  [ label = "AST: "] 
+  "2515" -> "2518"  [ label = "AST: "] 
+  "2515" -> "2519"  [ label = "AST: "] 
+  "2515" -> "2519"  [ label = "CFG: "] 
+  "2516" -> "2519"  [ label = "DDG: __filename"] 
+  "2517" -> "2519"  [ label = "DDG: __modes"] 
+  "2518" -> "2519"  [ label = "DDG: __stream"] 
+  "2515" -> "2516"  [ label = "DDG: "] 
+  "2515" -> "2517"  [ label = "DDG: "] 
+  "2515" -> "2518"  [ label = "DDG: "] 
+}

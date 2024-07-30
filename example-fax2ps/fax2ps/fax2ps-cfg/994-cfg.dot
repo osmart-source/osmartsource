@@ -1,0 +1,94 @@
+digraph "TIFFReadRGBAStripExt" {  
+"63077" [label = <(&lt;operator&gt;.assignment,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>3203</SUB>> ]
+"63095" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_ROWSPERSTRIP, &amp;rowsperstrip))<SUB>3215</SUB>> ]
+"63181" [label = <(RETURN,return (ok);,return (ok);)<SUB>3246</SUB>> ]
+"63085" [label = <(TIFFIsTiled,TIFFIsTiled(tif))<SUB>3208</SUB>> ]
+"63098" [label = <(&lt;operator&gt;.addressOf,&amp;rowsperstrip)<SUB>3215</SUB>> ]
+"63101" [label = <(&lt;operator&gt;.notEquals,(row % rowsperstrip) != 0)<SUB>3216</SUB>> ]
+"63115" [label = <(&lt;operator&gt;.logicalAnd,TIFFRGBAImageOK(tif, emsg) &amp;&amp;\012        TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3224</SUB>> ]
+"63088" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Can't use TIFFReadRGBAStrip() with tiled file.&quot;))<SUB>3210</SUB>> ]
+"63093" [label = <(RETURN,return (0);,return (0);)<SUB>3212</SUB>> ]
+"63102" [label = <(&lt;operator&gt;.modulo,row % rowsperstrip)<SUB>3216</SUB>> ]
+"63107" [label = <(TIFFErrorExtR,TIFFErrorExtR(\012            tif, TIFFFileName(tif),\012            &quot;Row passed to TIFFReadRGBAStrip() must be first in a strip.&quot;))<SUB>3218</SUB>> ]
+"63112" [label = <(RETURN,return (0);,return (0);)<SUB>3221</SUB>> ]
+"63116" [label = <(TIFFRGBAImageOK,TIFFRGBAImageOK(tif, emsg))<SUB>3224</SUB>> ]
+"63119" [label = <(TIFFRGBAImageBegin,TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3225</SUB>> ]
+"63126" [label = <(&lt;operator&gt;.assignment,img.row_offset = row)<SUB>3228</SUB>> ]
+"63131" [label = <(&lt;operator&gt;.assignment,img.col_offset = 0)<SUB>3229</SUB>> ]
+"63157" [label = <(&lt;operator&gt;.assignment,ok = TIFFRGBAImageGet(&amp;img, raster, img.width, rows_to_read))<SUB>3236</SUB>> ]
+"63167" [label = <(TIFFRGBAImageEnd,TIFFRGBAImageEnd(&amp;img))<SUB>3238</SUB>> ]
+"63090" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>3210</SUB>> ]
+"63109" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>3219</SUB>> ]
+"63120" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>3225</SUB>> ]
+"63127" [label = <(&lt;operator&gt;.fieldAccess,img.row_offset)<SUB>3228</SUB>> ]
+"63132" [label = <(&lt;operator&gt;.fieldAccess,img.col_offset)<SUB>3229</SUB>> ]
+"63137" [label = <(&lt;operator&gt;.greaterThan,row + rowsperstrip &gt; img.height)<SUB>3231</SUB>> ]
+"63159" [label = <(TIFFRGBAImageGet,TIFFRGBAImageGet(&amp;img, raster, img.width, rows_to_read))<SUB>3236</SUB>> ]
+"63168" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>3238</SUB>> ]
+"63172" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>3242</SUB>> ]
+"63178" [label = <(&lt;operator&gt;.assignment,ok = 0)<SUB>3243</SUB>> ]
+"63129" [label = <(FIELD_IDENTIFIER,row_offset,row_offset)<SUB>3228</SUB>> ]
+"63134" [label = <(FIELD_IDENTIFIER,col_offset,col_offset)<SUB>3229</SUB>> ]
+"63138" [label = <(&lt;operator&gt;.addition,row + rowsperstrip)<SUB>3231</SUB>> ]
+"63141" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>3231</SUB>> ]
+"63145" [label = <(&lt;operator&gt;.assignment,rows_to_read = img.height - row)<SUB>3232</SUB>> ]
+"63160" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>3236</SUB>> ]
+"63163" [label = <(&lt;operator&gt;.fieldAccess,img.width)<SUB>3236</SUB>> ]
+"63174" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>3242</SUB>> ]
+"63143" [label = <(FIELD_IDENTIFIER,height,height)<SUB>3231</SUB>> ]
+"63147" [label = <(&lt;operator&gt;.subtraction,img.height - row)<SUB>3232</SUB>> ]
+"63154" [label = <(&lt;operator&gt;.assignment,rows_to_read = rowsperstrip)<SUB>3234</SUB>> ]
+"63165" [label = <(FIELD_IDENTIFIER,width,width)<SUB>3236</SUB>> ]
+"63148" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>3232</SUB>> ]
+"63150" [label = <(FIELD_IDENTIFIER,height,height)<SUB>3232</SUB>> ]
+"63070" [label = <(METHOD,TIFFReadRGBAStripExt)<SUB>3199</SUB>> ]
+"63183" [label = <(METHOD_RETURN,int)<SUB>3199</SUB>> ]
+  "63077" -> "63085" 
+  "63095" -> "63102" 
+  "63181" -> "63183" 
+  "63085" -> "63090" 
+  "63085" -> "63098" 
+  "63098" -> "63095" 
+  "63101" -> "63109" 
+  "63101" -> "63116" 
+  "63115" -> "63129" 
+  "63115" -> "63174" 
+  "63088" -> "63093" 
+  "63093" -> "63183" 
+  "63102" -> "63101" 
+  "63107" -> "63112" 
+  "63112" -> "63183" 
+  "63116" -> "63115" 
+  "63116" -> "63120" 
+  "63119" -> "63115" 
+  "63126" -> "63134" 
+  "63131" -> "63138" 
+  "63157" -> "63168" 
+  "63167" -> "63181" 
+  "63090" -> "63088" 
+  "63109" -> "63107" 
+  "63120" -> "63119" 
+  "63127" -> "63126" 
+  "63132" -> "63131" 
+  "63137" -> "63150" 
+  "63137" -> "63154" 
+  "63159" -> "63157" 
+  "63168" -> "63167" 
+  "63172" -> "63178" 
+  "63178" -> "63181" 
+  "63129" -> "63127" 
+  "63134" -> "63132" 
+  "63138" -> "63143" 
+  "63141" -> "63137" 
+  "63145" -> "63160" 
+  "63160" -> "63165" 
+  "63163" -> "63159" 
+  "63174" -> "63172" 
+  "63143" -> "63141" 
+  "63147" -> "63145" 
+  "63154" -> "63160" 
+  "63165" -> "63163" 
+  "63148" -> "63147" 
+  "63150" -> "63148" 
+  "63070" -> "63077" 
+}

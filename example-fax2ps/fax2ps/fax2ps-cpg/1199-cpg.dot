@@ -1,0 +1,18 @@
+digraph "EstimateStripByteCounts" {  
+"78230" [label = <(METHOD,EstimateStripByteCounts)<SUB>246</SUB>> ]
+"78231" [label = <(PARAM,TIFF *tif)<SUB>246</SUB>> ]
+"78232" [label = <(PARAM,TIFFDirEntry *dir)<SUB>246</SUB>> ]
+"78233" [label = <(PARAM,uint16_t dircount)<SUB>247</SUB>> ]
+"78234" [label = <(METHOD_RETURN,int)<SUB>246</SUB>> ]
+  "78230" -> "78231"  [ label = "AST: "] 
+  "78230" -> "78232"  [ label = "AST: "] 
+  "78230" -> "78233"  [ label = "AST: "] 
+  "78230" -> "78234"  [ label = "AST: "] 
+  "78230" -> "78234"  [ label = "CFG: "] 
+  "78231" -> "78234"  [ label = "DDG: tif"] 
+  "78232" -> "78234"  [ label = "DDG: dir"] 
+  "78233" -> "78234"  [ label = "DDG: dircount"] 
+  "78230" -> "78231"  [ label = "DDG: "] 
+  "78230" -> "78232"  [ label = "DDG: "] 
+  "78230" -> "78233"  [ label = "DDG: "] 
+}

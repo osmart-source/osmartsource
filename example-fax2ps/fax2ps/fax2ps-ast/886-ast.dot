@@ -1,0 +1,207 @@
+digraph "TIFFSetSubDirectory" {  
+"44731" [label = <(METHOD,TIFFSetSubDirectory)<SUB>2057</SUB>> ]
+"44732" [label = <(PARAM,TIFF *tif)<SUB>2057</SUB>> ]
+"44733" [label = <(PARAM,uint64_t diroff)<SUB>2057</SUB>> ]
+"44734" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2058</SUB>> ]
+"44735" [label = <(LOCAL,int retval: int)<SUB>2068</SUB>> ]
+"44736" [label = <(LOCAL,uint32_t curdir: uint32_t)<SUB>2069</SUB>> ]
+"44737" [label = <(&lt;operator&gt;.assignment,curdir = 0)<SUB>2069</SUB>> ]
+"44738" [label = <(IDENTIFIER,curdir,curdir = 0)<SUB>2069</SUB>> ]
+"44739" [label = <(LITERAL,0,curdir = 0)<SUB>2069</SUB>> ]
+"44740" [label = <(LOCAL,int8_t probablySubIFD: int8_t)<SUB>2070</SUB>> ]
+"44741" [label = <(&lt;operator&gt;.assignment,probablySubIFD = 0)<SUB>2070</SUB>> ]
+"44742" [label = <(IDENTIFIER,probablySubIFD,probablySubIFD = 0)<SUB>2070</SUB>> ]
+"44743" [label = <(LITERAL,0,probablySubIFD = 0)<SUB>2070</SUB>> ]
+"44744" [label = <(CONTROL_STRUCTURE,if (diroff == 0),if (diroff == 0))<SUB>2071</SUB>> ]
+"44745" [label = <(&lt;operator&gt;.equals,diroff == 0)<SUB>2071</SUB>> ]
+"44746" [label = <(IDENTIFIER,diroff,diroff == 0)<SUB>2071</SUB>> ]
+"44747" [label = <(LITERAL,0,diroff == 0)<SUB>2071</SUB>> ]
+"44748" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2072</SUB>> ]
+"44749" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir = TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>2074</SUB>> ]
+"44750" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2074</SUB>> ]
+"44751" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir = TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>2074</SUB>> ]
+"44752" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2074</SUB>> ]
+"44753" [label = <(IDENTIFIER,TIFF_NON_EXISTENT_DIR_NUMBER,tif-&gt;tif_curdir = TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>2074</SUB>> ]
+"44754" [label = <(CONTROL_STRUCTURE,else,else)<SUB>2077</SUB>> ]
+"44755" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2077</SUB>> ]
+"44756" [label = <(CONTROL_STRUCTURE,if (!_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir)),if (!_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir)))<SUB>2078</SUB>> ]
+"44757" [label = <(&lt;operator&gt;.logicalNot,!_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir))<SUB>2078</SUB>> ]
+"44758" [label = <(_TIFFGetDirNumberFromOffset,_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir))<SUB>2078</SUB>> ]
+"44759" [label = <(IDENTIFIER,tif,_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir))<SUB>2078</SUB>> ]
+"44760" [label = <(IDENTIFIER,diroff,_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir))<SUB>2078</SUB>> ]
+"44761" [label = <(&lt;operator&gt;.addressOf,&amp;curdir)<SUB>2078</SUB>> ]
+"44762" [label = <(IDENTIFIER,curdir,_TIFFGetDirNumberFromOffset(tif, diroff, &amp;curdir))<SUB>2078</SUB>> ]
+"44763" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2079</SUB>> ]
+"44764" [label = <(&lt;operator&gt;.assignment,probablySubIFD = 1)<SUB>2081</SUB>> ]
+"44765" [label = <(IDENTIFIER,probablySubIFD,probablySubIFD = 1)<SUB>2081</SUB>> ]
+"44766" [label = <(LITERAL,1,probablySubIFD = 1)<SUB>2081</SUB>> ]
+"44767" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir =\012            curdir == 0 ? TIFF_NON_EXISTENT_DIR_NUMBER : curdir - 1)<SUB>2084</SUB>> ]
+"44768" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2084</SUB>> ]
+"44769" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir =\012            curdir == 0 ? TIFF_NON_EXISTENT_DIR_NUMBER : curdir - 1)<SUB>2084</SUB>> ]
+"44770" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2084</SUB>> ]
+"44771" [label = <(&lt;operator&gt;.conditional,curdir == 0 ? TIFF_NON_EXISTENT_DIR_NUMBER : curdir - 1)<SUB>2085</SUB>> ]
+"44772" [label = <(&lt;operator&gt;.equals,curdir == 0)<SUB>2085</SUB>> ]
+"44773" [label = <(IDENTIFIER,curdir,curdir == 0)<SUB>2085</SUB>> ]
+"44774" [label = <(LITERAL,0,curdir == 0)<SUB>2085</SUB>> ]
+"44775" [label = <(IDENTIFIER,TIFF_NON_EXISTENT_DIR_NUMBER,curdir == 0 ? TIFF_NON_EXISTENT_DIR_NUMBER : curdir - 1)<SUB>2085</SUB>> ]
+"44776" [label = <(&lt;operator&gt;.subtraction,curdir - 1)<SUB>2085</SUB>> ]
+"44777" [label = <(IDENTIFIER,curdir,curdir - 1)<SUB>2085</SUB>> ]
+"44778" [label = <(LITERAL,1,curdir - 1)<SUB>2085</SUB>> ]
+"44779" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_nextdiroff = diroff)<SUB>2088</SUB>> ]
+"44780" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>2088</SUB>> ]
+"44781" [label = <(IDENTIFIER,tif,tif-&gt;tif_nextdiroff = diroff)<SUB>2088</SUB>> ]
+"44782" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>2088</SUB>> ]
+"44783" [label = <(IDENTIFIER,diroff,tif-&gt;tif_nextdiroff = diroff)<SUB>2088</SUB>> ]
+"44784" [label = <(&lt;operator&gt;.assignment,retval = TIFFReadDirectory(tif))<SUB>2089</SUB>> ]
+"44785" [label = <(IDENTIFIER,retval,retval = TIFFReadDirectory(tif))<SUB>2089</SUB>> ]
+"44786" [label = <(TIFFReadDirectory,TIFFReadDirectory(tif))<SUB>2089</SUB>> ]
+"44787" [label = <(IDENTIFIER,tif,TIFFReadDirectory(tif))<SUB>2089</SUB>> ]
+"44788" [label = <(CONTROL_STRUCTURE,if (!retval),if (!retval))<SUB>2092</SUB>> ]
+"44789" [label = <(&lt;operator&gt;.logicalNot,!retval)<SUB>2092</SUB>> ]
+"44790" [label = <(IDENTIFIER,retval,!retval)<SUB>2092</SUB>> ]
+"44791" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2093</SUB>> ]
+"44792" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_curdir == TIFF_NON_EXISTENT_DIR_NUMBER),if (tif-&gt;tif_curdir == TIFF_NON_EXISTENT_DIR_NUMBER))<SUB>2094</SUB>> ]
+"44793" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_curdir == TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>2094</SUB>> ]
+"44794" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2094</SUB>> ]
+"44795" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir == TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>2094</SUB>> ]
+"44796" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2094</SUB>> ]
+"44797" [label = <(IDENTIFIER,TIFF_NON_EXISTENT_DIR_NUMBER,tif-&gt;tif_curdir == TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>2094</SUB>> ]
+"44798" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2095</SUB>> ]
+"44799" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir = 0)<SUB>2095</SUB>> ]
+"44800" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2095</SUB>> ]
+"44801" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir = 0)<SUB>2095</SUB>> ]
+"44802" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2095</SUB>> ]
+"44803" [label = <(LITERAL,0,tif-&gt;tif_curdir = 0)<SUB>2095</SUB>> ]
+"44804" [label = <(CONTROL_STRUCTURE,else,else)<SUB>2097</SUB>> ]
+"44805" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2097</SUB>> ]
+"44806" [label = <(&lt;operator&gt;.postIncrement,tif-&gt;tif_curdir++)<SUB>2097</SUB>> ]
+"44807" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2097</SUB>> ]
+"44808" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir++)<SUB>2097</SUB>> ]
+"44809" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2097</SUB>> ]
+"44810" [label = <(CONTROL_STRUCTURE,if (retval &amp;&amp; probablySubIFD),if (retval &amp;&amp; probablySubIFD))<SUB>2099</SUB>> ]
+"44811" [label = <(&lt;operator&gt;.logicalAnd,retval &amp;&amp; probablySubIFD)<SUB>2099</SUB>> ]
+"44812" [label = <(IDENTIFIER,retval,retval &amp;&amp; probablySubIFD)<SUB>2099</SUB>> ]
+"44813" [label = <(IDENTIFIER,probablySubIFD,retval &amp;&amp; probablySubIFD)<SUB>2099</SUB>> ]
+"44814" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2100</SUB>> ]
+"44815" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dirnumber = 0)<SUB>2103</SUB>> ]
+"44816" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dirnumber)<SUB>2103</SUB>> ]
+"44817" [label = <(IDENTIFIER,tif,tif-&gt;tif_dirnumber = 0)<SUB>2103</SUB>> ]
+"44818" [label = <(FIELD_IDENTIFIER,tif_dirnumber,tif_dirnumber)<SUB>2103</SUB>> ]
+"44819" [label = <(LITERAL,0,tif-&gt;tif_dirnumber = 0)<SUB>2103</SUB>> ]
+"44820" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir = 0)<SUB>2104</SUB>> ]
+"44821" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2104</SUB>> ]
+"44822" [label = <(IDENTIFIER,tif,tif-&gt;tif_curdir = 0)<SUB>2104</SUB>> ]
+"44823" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2104</SUB>> ]
+"44824" [label = <(LITERAL,0,tif-&gt;tif_curdir = 0)<SUB>2104</SUB>> ]
+"44825" [label = <(_TIFFCheckDirNumberAndOffset,_TIFFCheckDirNumberAndOffset(tif, tif-&gt;tif_curdir, diroff))<SUB>2106</SUB>> ]
+"44826" [label = <(IDENTIFIER,tif,_TIFFCheckDirNumberAndOffset(tif, tif-&gt;tif_curdir, diroff))<SUB>2106</SUB>> ]
+"44827" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2106</SUB>> ]
+"44828" [label = <(IDENTIFIER,tif,_TIFFCheckDirNumberAndOffset(tif, tif-&gt;tif_curdir, diroff))<SUB>2106</SUB>> ]
+"44829" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2106</SUB>> ]
+"44830" [label = <(IDENTIFIER,diroff,_TIFFCheckDirNumberAndOffset(tif, tif-&gt;tif_curdir, diroff))<SUB>2106</SUB>> ]
+"44831" [label = <(RETURN,return (retval);,return (retval);)<SUB>2108</SUB>> ]
+"44832" [label = <(IDENTIFIER,retval,return (retval);)<SUB>2108</SUB>> ]
+"44833" [label = <(METHOD_RETURN,int)<SUB>2057</SUB>> ]
+  "44731" -> "44732" 
+  "44731" -> "44733" 
+  "44731" -> "44734" 
+  "44731" -> "44833" 
+  "44734" -> "44735" 
+  "44734" -> "44736" 
+  "44734" -> "44737" 
+  "44734" -> "44740" 
+  "44734" -> "44741" 
+  "44734" -> "44744" 
+  "44734" -> "44779" 
+  "44734" -> "44784" 
+  "44734" -> "44788" 
+  "44734" -> "44810" 
+  "44734" -> "44831" 
+  "44737" -> "44738" 
+  "44737" -> "44739" 
+  "44741" -> "44742" 
+  "44741" -> "44743" 
+  "44744" -> "44745" 
+  "44744" -> "44748" 
+  "44744" -> "44754" 
+  "44745" -> "44746" 
+  "44745" -> "44747" 
+  "44748" -> "44749" 
+  "44749" -> "44750" 
+  "44749" -> "44753" 
+  "44750" -> "44751" 
+  "44750" -> "44752" 
+  "44754" -> "44755" 
+  "44755" -> "44756" 
+  "44755" -> "44767" 
+  "44756" -> "44757" 
+  "44756" -> "44763" 
+  "44757" -> "44758" 
+  "44758" -> "44759" 
+  "44758" -> "44760" 
+  "44758" -> "44761" 
+  "44761" -> "44762" 
+  "44763" -> "44764" 
+  "44764" -> "44765" 
+  "44764" -> "44766" 
+  "44767" -> "44768" 
+  "44767" -> "44771" 
+  "44768" -> "44769" 
+  "44768" -> "44770" 
+  "44771" -> "44772" 
+  "44771" -> "44775" 
+  "44771" -> "44776" 
+  "44772" -> "44773" 
+  "44772" -> "44774" 
+  "44776" -> "44777" 
+  "44776" -> "44778" 
+  "44779" -> "44780" 
+  "44779" -> "44783" 
+  "44780" -> "44781" 
+  "44780" -> "44782" 
+  "44784" -> "44785" 
+  "44784" -> "44786" 
+  "44786" -> "44787" 
+  "44788" -> "44789" 
+  "44788" -> "44791" 
+  "44789" -> "44790" 
+  "44791" -> "44792" 
+  "44792" -> "44793" 
+  "44792" -> "44798" 
+  "44792" -> "44804" 
+  "44793" -> "44794" 
+  "44793" -> "44797" 
+  "44794" -> "44795" 
+  "44794" -> "44796" 
+  "44798" -> "44799" 
+  "44799" -> "44800" 
+  "44799" -> "44803" 
+  "44800" -> "44801" 
+  "44800" -> "44802" 
+  "44804" -> "44805" 
+  "44805" -> "44806" 
+  "44806" -> "44807" 
+  "44807" -> "44808" 
+  "44807" -> "44809" 
+  "44810" -> "44811" 
+  "44810" -> "44814" 
+  "44811" -> "44812" 
+  "44811" -> "44813" 
+  "44814" -> "44815" 
+  "44814" -> "44820" 
+  "44814" -> "44825" 
+  "44815" -> "44816" 
+  "44815" -> "44819" 
+  "44816" -> "44817" 
+  "44816" -> "44818" 
+  "44820" -> "44821" 
+  "44820" -> "44824" 
+  "44821" -> "44822" 
+  "44821" -> "44823" 
+  "44825" -> "44826" 
+  "44825" -> "44827" 
+  "44825" -> "44830" 
+  "44827" -> "44828" 
+  "44827" -> "44829" 
+  "44831" -> "44832" 
+}

@@ -1,0 +1,62 @@
+digraph "TIFFReadDirEntryCheckedFloat" {  
+"87183" [label = <(assert,assert(sizeof(float) == 4))<SUB>3480</SUB>> ]
+"87188" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>3481</SUB>> ]
+"87193" [label = <(assert,assert(sizeof(float_union) == 4))<SUB>3482</SUB>> ]
+"87198" [label = <(&lt;operator&gt;.assignment,float_union.i = *(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3483</SUB>> ]
+"87209" [label = <(&lt;operator&gt;.assignment,*value = float_union.f)<SUB>3484</SUB>> ]
+"87184" [label = <(&lt;operator&gt;.equals,sizeof(float) == 4)<SUB>3480</SUB>> ]
+"87189" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>3481</SUB>> ]
+"87194" [label = <(&lt;operator&gt;.equals,sizeof(float_union) == 4)<SUB>3482</SUB>> ]
+"87199" [label = <(&lt;operator&gt;.fieldAccess,float_union.i)<SUB>3483</SUB>> ]
+"87202" [label = <(&lt;operator&gt;.indirection,*(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3483</SUB>> ]
+"87210" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3484</SUB>> ]
+"87212" [label = <(&lt;operator&gt;.fieldAccess,float_union.f)<SUB>3484</SUB>> ]
+"87216" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3485</SUB>> ]
+"87185" [label = <(&lt;operator&gt;.sizeOf,sizeof(float))<SUB>3480</SUB>> ]
+"87190" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>3481</SUB>> ]
+"87195" [label = <(&lt;operator&gt;.sizeOf,sizeof(float_union))<SUB>3482</SUB>> ]
+"87201" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3483</SUB>> ]
+"87203" [label = <(&lt;operator&gt;.cast,(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3483</SUB>> ]
+"87214" [label = <(FIELD_IDENTIFIER,f,f)<SUB>3484</SUB>> ]
+"87217" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3485</SUB>> ]
+"87222" [label = <(TIFFSwabLong,TIFFSwabLong((uint32_t *)value))<SUB>3486</SUB>> ]
+"87204" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3483</SUB>> ]
+"87205" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3483</SUB>> ]
+"87219" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3485</SUB>> ]
+"87223" [label = <(&lt;operator&gt;.cast,(uint32_t *)value)<SUB>3486</SUB>> ]
+"87206" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3483</SUB>> ]
+"87224" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3486</SUB>> ]
+"87208" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3483</SUB>> ]
+"87177" [label = <(METHOD,TIFFReadDirEntryCheckedFloat)<SUB>3472</SUB>> ]
+"87226" [label = <(METHOD_RETURN,void)<SUB>3472</SUB>> ]
+  "87183" -> "87190" 
+  "87188" -> "87195" 
+  "87193" -> "87201" 
+  "87198" -> "87210" 
+  "87209" -> "87219" 
+  "87184" -> "87183" 
+  "87189" -> "87188" 
+  "87194" -> "87193" 
+  "87199" -> "87204" 
+  "87202" -> "87198" 
+  "87210" -> "87214" 
+  "87212" -> "87209" 
+  "87216" -> "87224" 
+  "87216" -> "87226" 
+  "87185" -> "87184" 
+  "87190" -> "87189" 
+  "87195" -> "87194" 
+  "87201" -> "87199" 
+  "87203" -> "87202" 
+  "87214" -> "87212" 
+  "87217" -> "87216" 
+  "87222" -> "87226" 
+  "87204" -> "87208" 
+  "87205" -> "87203" 
+  "87219" -> "87217" 
+  "87223" -> "87222" 
+  "87206" -> "87205" 
+  "87224" -> "87223" 
+  "87208" -> "87206" 
+  "87177" -> "87185" 
+}

@@ -1,0 +1,51 @@
+digraph "TIFFWriteDirectoryTagRational" {  
+"68510" [label = <(METHOD,TIFFWriteDirectoryTagRational)<SUB>1675</SUB>> ]
+"68511" [label = <(PARAM,TIFF *tif)<SUB>1675</SUB>> ]
+"68512" [label = <(PARAM,uint32_t *ndir)<SUB>1675</SUB>> ]
+"68513" [label = <(PARAM,TIFFDirEntry *dir)<SUB>1676</SUB>> ]
+"68514" [label = <(PARAM,uint16_t tag)<SUB>1676</SUB>> ]
+"68515" [label = <(PARAM,double value)<SUB>1677</SUB>> ]
+"68516" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1678</SUB>> ]
+"68517" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>1679</SUB>> ]
+"68518" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1679</SUB>> ]
+"68519" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>1679</SUB>> ]
+"68520" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>1679</SUB>> ]
+"68521" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1680</SUB>> ]
+"68522" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1681</SUB>> ]
+"68523" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1681</SUB>> ]
+"68524" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>1681</SUB>> ]
+"68525" [label = <(RETURN,return (1);,return (1);)<SUB>1682</SUB>> ]
+"68526" [label = <(LITERAL,1,return (1);)<SUB>1682</SUB>> ]
+"68527" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value));,return (TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value));)<SUB>1684</SUB>> ]
+"68528" [label = <(TIFFWriteDirectoryTagCheckedRational,TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value))<SUB>1684</SUB>> ]
+"68529" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value))<SUB>1684</SUB>> ]
+"68530" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value))<SUB>1684</SUB>> ]
+"68531" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value))<SUB>1684</SUB>> ]
+"68532" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value))<SUB>1684</SUB>> ]
+"68533" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagCheckedRational(tif, ndir, dir, tag, value))<SUB>1684</SUB>> ]
+"68534" [label = <(METHOD_RETURN,int)<SUB>1675</SUB>> ]
+  "68510" -> "68511" 
+  "68510" -> "68512" 
+  "68510" -> "68513" 
+  "68510" -> "68514" 
+  "68510" -> "68515" 
+  "68510" -> "68516" 
+  "68510" -> "68534" 
+  "68516" -> "68517" 
+  "68516" -> "68527" 
+  "68517" -> "68518" 
+  "68517" -> "68521" 
+  "68518" -> "68519" 
+  "68518" -> "68520" 
+  "68521" -> "68522" 
+  "68521" -> "68525" 
+  "68522" -> "68523" 
+  "68523" -> "68524" 
+  "68525" -> "68526" 
+  "68527" -> "68528" 
+  "68528" -> "68529" 
+  "68528" -> "68530" 
+  "68528" -> "68531" 
+  "68528" -> "68532" 
+  "68528" -> "68533" 
+}

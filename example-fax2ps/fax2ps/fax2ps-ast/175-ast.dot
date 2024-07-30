@@ -1,0 +1,65 @@
+digraph "TIFFHashSetReturnListElt" {  
+"5121" [label = <(METHOD,TIFFHashSetReturnListElt)<SUB>208</SUB>> ]
+"5122" [label = <(PARAM,TIFFHashSet *set)<SUB>208</SUB>> ]
+"5123" [label = <(PARAM,TIFFList *psList)<SUB>208</SUB>> ]
+"5124" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>209</SUB>> ]
+"5125" [label = <(CONTROL_STRUCTURE,if (set-&gt;nRecyclingListSize &lt; 128),if (set-&gt;nRecyclingListSize &lt; 128))<SUB>210</SUB>> ]
+"5126" [label = <(&lt;operator&gt;.lessThan,set-&gt;nRecyclingListSize &lt; 128)<SUB>210</SUB>> ]
+"5127" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nRecyclingListSize)<SUB>210</SUB>> ]
+"5128" [label = <(IDENTIFIER,set,set-&gt;nRecyclingListSize &lt; 128)<SUB>210</SUB>> ]
+"5129" [label = <(FIELD_IDENTIFIER,nRecyclingListSize,nRecyclingListSize)<SUB>210</SUB>> ]
+"5130" [label = <(LITERAL,128,set-&gt;nRecyclingListSize &lt; 128)<SUB>210</SUB>> ]
+"5131" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>211</SUB>> ]
+"5132" [label = <(&lt;operator&gt;.assignment,psList-&gt;psNext = set-&gt;psRecyclingList)<SUB>212</SUB>> ]
+"5133" [label = <(&lt;operator&gt;.indirectFieldAccess,psList-&gt;psNext)<SUB>212</SUB>> ]
+"5134" [label = <(IDENTIFIER,psList,psList-&gt;psNext = set-&gt;psRecyclingList)<SUB>212</SUB>> ]
+"5135" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>212</SUB>> ]
+"5136" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>212</SUB>> ]
+"5137" [label = <(IDENTIFIER,set,psList-&gt;psNext = set-&gt;psRecyclingList)<SUB>212</SUB>> ]
+"5138" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>212</SUB>> ]
+"5139" [label = <(&lt;operator&gt;.assignment,set-&gt;psRecyclingList = psList)<SUB>213</SUB>> ]
+"5140" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>213</SUB>> ]
+"5141" [label = <(IDENTIFIER,set,set-&gt;psRecyclingList = psList)<SUB>213</SUB>> ]
+"5142" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>213</SUB>> ]
+"5143" [label = <(IDENTIFIER,psList,set-&gt;psRecyclingList = psList)<SUB>213</SUB>> ]
+"5144" [label = <(&lt;operator&gt;.postIncrement,set-&gt;nRecyclingListSize++)<SUB>214</SUB>> ]
+"5145" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nRecyclingListSize)<SUB>214</SUB>> ]
+"5146" [label = <(IDENTIFIER,set,set-&gt;nRecyclingListSize++)<SUB>214</SUB>> ]
+"5147" [label = <(FIELD_IDENTIFIER,nRecyclingListSize,nRecyclingListSize)<SUB>214</SUB>> ]
+"5148" [label = <(CONTROL_STRUCTURE,else,else)<SUB>217</SUB>> ]
+"5149" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>217</SUB>> ]
+"5150" [label = <(free,free(psList))<SUB>218</SUB>> ]
+"5151" [label = <(IDENTIFIER,psList,free(psList))<SUB>218</SUB>> ]
+"5152" [label = <(METHOD_RETURN,void)<SUB>208</SUB>> ]
+  "5121" -> "5122" 
+  "5121" -> "5123" 
+  "5121" -> "5124" 
+  "5121" -> "5152" 
+  "5124" -> "5125" 
+  "5125" -> "5126" 
+  "5125" -> "5131" 
+  "5125" -> "5148" 
+  "5126" -> "5127" 
+  "5126" -> "5130" 
+  "5127" -> "5128" 
+  "5127" -> "5129" 
+  "5131" -> "5132" 
+  "5131" -> "5139" 
+  "5131" -> "5144" 
+  "5132" -> "5133" 
+  "5132" -> "5136" 
+  "5133" -> "5134" 
+  "5133" -> "5135" 
+  "5136" -> "5137" 
+  "5136" -> "5138" 
+  "5139" -> "5140" 
+  "5139" -> "5143" 
+  "5140" -> "5141" 
+  "5140" -> "5142" 
+  "5144" -> "5145" 
+  "5145" -> "5146" 
+  "5145" -> "5147" 
+  "5148" -> "5149" 
+  "5149" -> "5150" 
+  "5150" -> "5151" 
+}

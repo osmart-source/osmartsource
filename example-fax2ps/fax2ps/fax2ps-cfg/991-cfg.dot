@@ -1,0 +1,92 @@
+digraph "BuildMapUaToAa" {  
+"62895" [label = <(&lt;operator&gt;.assignment,module[] = &quot;BuildMapUaToAa&quot;)<SUB>3149</SUB>> ]
+"62901" [label = <(assert,assert(img-&gt;UaToAa == NULL))<SUB>3152</SUB>> ]
+"62911" [label = <(&lt;operator&gt;.assignment,img-&gt;UaToAa = _TIFFmallocExt(img-&gt;tif, 65536))<SUB>3153</SUB>> ]
+"62939" [label = <(&lt;operator&gt;.assignment,m = img-&gt;UaToAa)<SUB>3159</SUB>> ]
+"62977" [label = <(RETURN,return (1);,return (1);)<SUB>3165</SUB>> ]
+"62902" [label = <(&lt;operator&gt;.equals,img-&gt;UaToAa == NULL)<SUB>3152</SUB>> ]
+"62912" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;UaToAa)<SUB>3153</SUB>> ]
+"62915" [label = <(_TIFFmallocExt,_TIFFmallocExt(img-&gt;tif, 65536))<SUB>3153</SUB>> ]
+"62921" [label = <(&lt;operator&gt;.equals,img-&gt;UaToAa == NULL)<SUB>3154</SUB>> ]
+"62941" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;UaToAa)<SUB>3159</SUB>> ]
+"62949" [label = <(&lt;operator&gt;.lessThan,na &lt; 256)<SUB>3160</SUB>> ]
+"62952" [label = <(&lt;operator&gt;.postIncrement,na++)<SUB>3160</SUB>> ]
+"62903" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;UaToAa)<SUB>3152</SUB>> ]
+"62906" [label = <(NULL,NULL)<SUB>3152</SUB>> ]
+"62914" [label = <(FIELD_IDENTIFIER,UaToAa,UaToAa)<SUB>3153</SUB>> ]
+"62916" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>3153</SUB>> ]
+"62922" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;UaToAa)<SUB>3154</SUB>> ]
+"62925" [label = <(NULL,NULL)<SUB>3154</SUB>> ]
+"62931" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module, &quot;Out of memory&quot;))<SUB>3156</SUB>> ]
+"62937" [label = <(RETURN,return (0);,return (0);)<SUB>3157</SUB>> ]
+"62943" [label = <(FIELD_IDENTIFIER,UaToAa,UaToAa)<SUB>3159</SUB>> ]
+"62946" [label = <(&lt;operator&gt;.assignment,na = 0)<SUB>3160</SUB>> ]
+"62905" [label = <(FIELD_IDENTIFIER,UaToAa,UaToAa)<SUB>3152</SUB>> ]
+"62918" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>3153</SUB>> ]
+"62924" [label = <(FIELD_IDENTIFIER,UaToAa,UaToAa)<SUB>3154</SUB>> ]
+"62932" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>3156</SUB>> ]
+"62960" [label = <(&lt;operator&gt;.lessThan,nv &lt; 256)<SUB>3162</SUB>> ]
+"62963" [label = <(&lt;operator&gt;.postIncrement,nv++)<SUB>3162</SUB>> ]
+"62965" [label = <(&lt;operator&gt;.assignment,*m++ = (uint8_t)((nv * na + 127) / 255))<SUB>3163</SUB>> ]
+"62908" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>3152</SUB>> ]
+"62927" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>3154</SUB>> ]
+"62934" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>3156</SUB>> ]
+"62957" [label = <(&lt;operator&gt;.assignment,nv = 0)<SUB>3162</SUB>> ]
+"62966" [label = <(&lt;operator&gt;.indirection,*m++)<SUB>3163</SUB>> ]
+"62969" [label = <(uint8_t,(uint8_t)((nv * na + 127) / 255))<SUB>3163</SUB>> ]
+"62909" [label = <(UNKNOWN,void *,void *)<SUB>3152</SUB>> ]
+"62928" [label = <(UNKNOWN,void *,void *)<SUB>3154</SUB>> ]
+"62967" [label = <(&lt;operator&gt;.postIncrement,m++)<SUB>3163</SUB>> ]
+"62970" [label = <(&lt;operator&gt;.division,(nv * na + 127) / 255)<SUB>3163</SUB>> ]
+"62971" [label = <(&lt;operator&gt;.addition,nv * na + 127)<SUB>3163</SUB>> ]
+"62972" [label = <(&lt;operator&gt;.multiplication,nv * na)<SUB>3163</SUB>> ]
+"62891" [label = <(METHOD,BuildMapUaToAa)<SUB>3147</SUB>> ]
+"62979" [label = <(METHOD_RETURN,int)<SUB>3147</SUB>> ]
+  "62895" -> "62905" 
+  "62901" -> "62914" 
+  "62911" -> "62924" 
+  "62939" -> "62946" 
+  "62977" -> "62979" 
+  "62902" -> "62901" 
+  "62912" -> "62918" 
+  "62915" -> "62911" 
+  "62921" -> "62934" 
+  "62921" -> "62943" 
+  "62941" -> "62939" 
+  "62949" -> "62957" 
+  "62949" -> "62977" 
+  "62952" -> "62949" 
+  "62903" -> "62906" 
+  "62906" -> "62909" 
+  "62906" -> "62902" 
+  "62914" -> "62912" 
+  "62916" -> "62915" 
+  "62922" -> "62925" 
+  "62925" -> "62928" 
+  "62925" -> "62921" 
+  "62931" -> "62937" 
+  "62937" -> "62979" 
+  "62943" -> "62941" 
+  "62946" -> "62949" 
+  "62905" -> "62903" 
+  "62918" -> "62916" 
+  "62924" -> "62922" 
+  "62932" -> "62931" 
+  "62960" -> "62967" 
+  "62960" -> "62952" 
+  "62963" -> "62960" 
+  "62965" -> "62963" 
+  "62908" -> "62902" 
+  "62927" -> "62921" 
+  "62934" -> "62932" 
+  "62957" -> "62960" 
+  "62966" -> "62972" 
+  "62969" -> "62965" 
+  "62909" -> "62908" 
+  "62928" -> "62927" 
+  "62967" -> "62966" 
+  "62970" -> "62969" 
+  "62971" -> "62970" 
+  "62972" -> "62971" 
+  "62891" -> "62895" 
+}

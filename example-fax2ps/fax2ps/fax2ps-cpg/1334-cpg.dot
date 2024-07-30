@@ -1,0 +1,18 @@
+digraph "memset" {  
+"98760" [label = <(METHOD,memset)<SUB>61</SUB>> ]
+"98761" [label = <(PARAM,void *__s)<SUB>61</SUB>> ]
+"98762" [label = <(PARAM,int __c)<SUB>61</SUB>> ]
+"98763" [label = <(PARAM,size_t __n)<SUB>61</SUB>> ]
+"98764" [label = <(METHOD_RETURN,void*)<SUB>61</SUB>> ]
+  "98760" -> "98761"  [ label = "AST: "] 
+  "98760" -> "98762"  [ label = "AST: "] 
+  "98760" -> "98763"  [ label = "AST: "] 
+  "98760" -> "98764"  [ label = "AST: "] 
+  "98760" -> "98764"  [ label = "CFG: "] 
+  "98761" -> "98764"  [ label = "DDG: __s"] 
+  "98762" -> "98764"  [ label = "DDG: __c"] 
+  "98763" -> "98764"  [ label = "DDG: __n"] 
+  "98760" -> "98761"  [ label = "DDG: "] 
+  "98760" -> "98762"  [ label = "DDG: "] 
+  "98760" -> "98763"  [ label = "DDG: "] 
+}

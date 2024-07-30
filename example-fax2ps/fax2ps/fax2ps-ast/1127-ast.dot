@@ -1,0 +1,81 @@
+digraph "TIFFWriteDirectoryTagCheckedIfdArray" {  
+"71580" [label = <(METHOD,TIFFWriteDirectoryTagCheckedIfdArray)<SUB>2823</SUB>> ]
+"71581" [label = <(PARAM,TIFF *tif)<SUB>2823</SUB>> ]
+"71582" [label = <(PARAM,uint32_t *ndir)<SUB>2823</SUB>> ]
+"71583" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2824</SUB>> ]
+"71584" [label = <(PARAM,uint16_t tag)<SUB>2824</SUB>> ]
+"71585" [label = <(PARAM,uint32_t count)<SUB>2825</SUB>> ]
+"71586" [label = <(PARAM,uint32_t *value)<SUB>2825</SUB>> ]
+"71587" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2826</SUB>> ]
+"71588" [label = <(assert,assert(count &lt; 0x40000000))<SUB>2827</SUB>> ]
+"71589" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x40000000)<SUB>2827</SUB>> ]
+"71590" [label = <(IDENTIFIER,count,count &lt; 0x40000000)<SUB>2827</SUB>> ]
+"71591" [label = <(LITERAL,0x40000000,count &lt; 0x40000000)<SUB>2827</SUB>> ]
+"71592" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>2828</SUB>> ]
+"71593" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>2828</SUB>> ]
+"71594" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2828</SUB>> ]
+"71595" [label = <(IDENTIFIER,uint32_t,sizeof(uint32_t))<SUB>2828</SUB>> ]
+"71596" [label = <(LITERAL,4,sizeof(uint32_t) == 4)<SUB>2828</SUB>> ]
+"71597" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2829</SUB>> ]
+"71598" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2829</SUB>> ]
+"71599" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2829</SUB>> ]
+"71600" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2829</SUB>> ]
+"71601" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2829</SUB>> ]
+"71602" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2829</SUB>> ]
+"71603" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2830</SUB>> ]
+"71604" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(value, count))<SUB>2830</SUB>> ]
+"71605" [label = <(IDENTIFIER,value,TIFFSwabArrayOfLong(value, count))<SUB>2830</SUB>> ]
+"71606" [label = <(IDENTIFIER,count,TIFFSwabArrayOfLong(value, count))<SUB>2830</SUB>> ]
+"71607" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value));)<SUB>2831</SUB>> ]
+"71608" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71609" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71610" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71611" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71612" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71613" [label = <(IDENTIFIER,TIFF_IFD,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71614" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2831</SUB>> ]
+"71615" [label = <(&lt;operator&gt;.multiplication,count * 4)<SUB>2832</SUB>> ]
+"71616" [label = <(IDENTIFIER,count,count * 4)<SUB>2832</SUB>> ]
+"71617" [label = <(LITERAL,4,count * 4)<SUB>2832</SUB>> ]
+"71618" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD, count,\012                                      count * 4, value))<SUB>2832</SUB>> ]
+"71619" [label = <(METHOD_RETURN,int)<SUB>2823</SUB>> ]
+  "71580" -> "71581" 
+  "71580" -> "71582" 
+  "71580" -> "71583" 
+  "71580" -> "71584" 
+  "71580" -> "71585" 
+  "71580" -> "71586" 
+  "71580" -> "71587" 
+  "71580" -> "71619" 
+  "71587" -> "71588" 
+  "71587" -> "71592" 
+  "71587" -> "71597" 
+  "71587" -> "71607" 
+  "71588" -> "71589" 
+  "71589" -> "71590" 
+  "71589" -> "71591" 
+  "71592" -> "71593" 
+  "71593" -> "71594" 
+  "71593" -> "71596" 
+  "71594" -> "71595" 
+  "71597" -> "71598" 
+  "71597" -> "71603" 
+  "71598" -> "71599" 
+  "71598" -> "71602" 
+  "71599" -> "71600" 
+  "71599" -> "71601" 
+  "71603" -> "71604" 
+  "71604" -> "71605" 
+  "71604" -> "71606" 
+  "71607" -> "71608" 
+  "71608" -> "71609" 
+  "71608" -> "71610" 
+  "71608" -> "71611" 
+  "71608" -> "71612" 
+  "71608" -> "71613" 
+  "71608" -> "71614" 
+  "71608" -> "71615" 
+  "71608" -> "71618" 
+  "71615" -> "71616" 
+  "71615" -> "71617" 
+}

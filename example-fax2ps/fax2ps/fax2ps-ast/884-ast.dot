@@ -1,0 +1,117 @@
+digraph "TIFFNumberOfDirectories" {  
+"44578" [label = <(METHOD,TIFFNumberOfDirectories)<SUB>1999</SUB>> ]
+"44579" [label = <(PARAM,TIFF *tif)<SUB>1999</SUB>> ]
+"44580" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2000</SUB>> ]
+"44581" [label = <(LOCAL,uint64_t nextdiroff: uint64_t)<SUB>2001</SUB>> ]
+"44582" [label = <(LOCAL,tdir_t nextdirnum: tdir_t)<SUB>2002</SUB>> ]
+"44583" [label = <(LOCAL,tdir_t n: tdir_t)<SUB>2003</SUB>> ]
+"44584" [label = <(CONTROL_STRUCTURE,if (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF)),if (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF)))<SUB>2004</SUB>> ]
+"44585" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2004</SUB>> ]
+"44586" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2004</SUB>> ]
+"44587" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2004</SUB>> ]
+"44588" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2004</SUB>> ]
+"44589" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2004</SUB>> ]
+"44590" [label = <(IDENTIFIER,TIFF_BIGTIFF,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2004</SUB>> ]
+"44591" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2005</SUB>> ]
+"44592" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2005</SUB>> ]
+"44593" [label = <(IDENTIFIER,nextdiroff,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2005</SUB>> ]
+"44594" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>2005</SUB>> ]
+"44595" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>2005</SUB>> ]
+"44596" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2005</SUB>> ]
+"44597" [label = <(IDENTIFIER,tif,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2005</SUB>> ]
+"44598" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2005</SUB>> ]
+"44599" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>2005</SUB>> ]
+"44600" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2005</SUB>> ]
+"44601" [label = <(CONTROL_STRUCTURE,else,else)<SUB>2007</SUB>> ]
+"44602" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2007</SUB>> ]
+"44603" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2007</SUB>> ]
+"44604" [label = <(IDENTIFIER,nextdiroff,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2007</SUB>> ]
+"44605" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>2007</SUB>> ]
+"44606" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>2007</SUB>> ]
+"44607" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2007</SUB>> ]
+"44608" [label = <(IDENTIFIER,tif,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2007</SUB>> ]
+"44609" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2007</SUB>> ]
+"44610" [label = <(FIELD_IDENTIFIER,big,big)<SUB>2007</SUB>> ]
+"44611" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2007</SUB>> ]
+"44612" [label = <(&lt;operator&gt;.assignment,nextdirnum = 0)<SUB>2008</SUB>> ]
+"44613" [label = <(IDENTIFIER,nextdirnum,nextdirnum = 0)<SUB>2008</SUB>> ]
+"44614" [label = <(LITERAL,0,nextdirnum = 0)<SUB>2008</SUB>> ]
+"44615" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2009</SUB>> ]
+"44616" [label = <(IDENTIFIER,n,n = 0)<SUB>2009</SUB>> ]
+"44617" [label = <(LITERAL,0,n = 0)<SUB>2009</SUB>> ]
+"44618" [label = <(CONTROL_STRUCTURE,while (nextdiroff != 0 &amp;&amp;\012           TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum)),while (nextdiroff != 0 &amp;&amp;\012           TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum)))<SUB>2010</SUB>> ]
+"44619" [label = <(&lt;operator&gt;.logicalAnd,nextdiroff != 0 &amp;&amp;\012           TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2010</SUB>> ]
+"44620" [label = <(&lt;operator&gt;.notEquals,nextdiroff != 0)<SUB>2010</SUB>> ]
+"44621" [label = <(IDENTIFIER,nextdiroff,nextdiroff != 0)<SUB>2010</SUB>> ]
+"44622" [label = <(LITERAL,0,nextdiroff != 0)<SUB>2010</SUB>> ]
+"44623" [label = <(TIFFAdvanceDirectory,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2011</SUB>> ]
+"44624" [label = <(IDENTIFIER,tif,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2011</SUB>> ]
+"44625" [label = <(&lt;operator&gt;.addressOf,&amp;nextdiroff)<SUB>2011</SUB>> ]
+"44626" [label = <(IDENTIFIER,nextdiroff,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2011</SUB>> ]
+"44627" [label = <(IDENTIFIER,NULL,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2011</SUB>> ]
+"44628" [label = <(&lt;operator&gt;.addressOf,&amp;nextdirnum)<SUB>2011</SUB>> ]
+"44629" [label = <(IDENTIFIER,nextdirnum,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2011</SUB>> ]
+"44630" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2012</SUB>> ]
+"44631" [label = <(&lt;operator&gt;.preIncrement,++n)<SUB>2013</SUB>> ]
+"44632" [label = <(IDENTIFIER,n,++n)<SUB>2013</SUB>> ]
+"44633" [label = <(RETURN,return (n);,return (n);)<SUB>2015</SUB>> ]
+"44634" [label = <(IDENTIFIER,n,return (n);)<SUB>2015</SUB>> ]
+"44635" [label = <(METHOD_RETURN,tdir_t)<SUB>1999</SUB>> ]
+  "44578" -> "44579" 
+  "44578" -> "44580" 
+  "44578" -> "44635" 
+  "44580" -> "44581" 
+  "44580" -> "44582" 
+  "44580" -> "44583" 
+  "44580" -> "44584" 
+  "44580" -> "44612" 
+  "44580" -> "44615" 
+  "44580" -> "44618" 
+  "44580" -> "44633" 
+  "44584" -> "44585" 
+  "44584" -> "44591" 
+  "44584" -> "44601" 
+  "44585" -> "44586" 
+  "44586" -> "44587" 
+  "44586" -> "44590" 
+  "44587" -> "44588" 
+  "44587" -> "44589" 
+  "44591" -> "44592" 
+  "44592" -> "44593" 
+  "44592" -> "44594" 
+  "44594" -> "44595" 
+  "44594" -> "44600" 
+  "44595" -> "44596" 
+  "44595" -> "44599" 
+  "44596" -> "44597" 
+  "44596" -> "44598" 
+  "44601" -> "44602" 
+  "44602" -> "44603" 
+  "44603" -> "44604" 
+  "44603" -> "44605" 
+  "44605" -> "44606" 
+  "44605" -> "44611" 
+  "44606" -> "44607" 
+  "44606" -> "44610" 
+  "44607" -> "44608" 
+  "44607" -> "44609" 
+  "44612" -> "44613" 
+  "44612" -> "44614" 
+  "44615" -> "44616" 
+  "44615" -> "44617" 
+  "44618" -> "44619" 
+  "44618" -> "44630" 
+  "44619" -> "44620" 
+  "44619" -> "44623" 
+  "44620" -> "44621" 
+  "44620" -> "44622" 
+  "44623" -> "44624" 
+  "44623" -> "44625" 
+  "44623" -> "44627" 
+  "44623" -> "44628" 
+  "44625" -> "44626" 
+  "44628" -> "44629" 
+  "44630" -> "44631" 
+  "44631" -> "44632" 
+  "44633" -> "44634" 
+}

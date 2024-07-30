@@ -1,0 +1,83 @@
+digraph "BuildMapBitdepth16To8" {  
+"62985" [label = <(&lt;operator&gt;.assignment,module[] = &quot;BuildMapBitdepth16To8&quot;)<SUB>3170</SUB>> ]
+"62990" [label = <(assert,assert(img-&gt;Bitdepth16To8 == NULL))<SUB>3173</SUB>> ]
+"63000" [label = <(&lt;operator&gt;.assignment,img-&gt;Bitdepth16To8 = _TIFFmallocExt(img-&gt;tif, 65536))<SUB>3174</SUB>> ]
+"63028" [label = <(&lt;operator&gt;.assignment,m = img-&gt;Bitdepth16To8)<SUB>3180</SUB>> ]
+"63053" [label = <(RETURN,return (1);,return (1);)<SUB>3183</SUB>> ]
+"62991" [label = <(&lt;operator&gt;.equals,img-&gt;Bitdepth16To8 == NULL)<SUB>3173</SUB>> ]
+"63001" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;Bitdepth16To8)<SUB>3174</SUB>> ]
+"63004" [label = <(_TIFFmallocExt,_TIFFmallocExt(img-&gt;tif, 65536))<SUB>3174</SUB>> ]
+"63010" [label = <(&lt;operator&gt;.equals,img-&gt;Bitdepth16To8 == NULL)<SUB>3175</SUB>> ]
+"63030" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;Bitdepth16To8)<SUB>3180</SUB>> ]
+"63038" [label = <(&lt;operator&gt;.lessThan,n &lt; 65536)<SUB>3181</SUB>> ]
+"63041" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>3181</SUB>> ]
+"63043" [label = <(&lt;operator&gt;.assignment,*m++ = (uint8_t)((n + 128) / 257))<SUB>3182</SUB>> ]
+"62992" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;Bitdepth16To8)<SUB>3173</SUB>> ]
+"62995" [label = <(NULL,NULL)<SUB>3173</SUB>> ]
+"63003" [label = <(FIELD_IDENTIFIER,Bitdepth16To8,Bitdepth16To8)<SUB>3174</SUB>> ]
+"63005" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>3174</SUB>> ]
+"63011" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;Bitdepth16To8)<SUB>3175</SUB>> ]
+"63014" [label = <(NULL,NULL)<SUB>3175</SUB>> ]
+"63020" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module, &quot;Out of memory&quot;))<SUB>3177</SUB>> ]
+"63026" [label = <(RETURN,return (0);,return (0);)<SUB>3178</SUB>> ]
+"63032" [label = <(FIELD_IDENTIFIER,Bitdepth16To8,Bitdepth16To8)<SUB>3180</SUB>> ]
+"63035" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>3181</SUB>> ]
+"63044" [label = <(&lt;operator&gt;.indirection,*m++)<SUB>3182</SUB>> ]
+"63047" [label = <(uint8_t,(uint8_t)((n + 128) / 257))<SUB>3182</SUB>> ]
+"62994" [label = <(FIELD_IDENTIFIER,Bitdepth16To8,Bitdepth16To8)<SUB>3173</SUB>> ]
+"63007" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>3174</SUB>> ]
+"63013" [label = <(FIELD_IDENTIFIER,Bitdepth16To8,Bitdepth16To8)<SUB>3175</SUB>> ]
+"63021" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>3177</SUB>> ]
+"63045" [label = <(&lt;operator&gt;.postIncrement,m++)<SUB>3182</SUB>> ]
+"63048" [label = <(&lt;operator&gt;.division,(n + 128) / 257)<SUB>3182</SUB>> ]
+"62997" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>3173</SUB>> ]
+"63016" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>3175</SUB>> ]
+"63023" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>3177</SUB>> ]
+"63049" [label = <(&lt;operator&gt;.addition,n + 128)<SUB>3182</SUB>> ]
+"62998" [label = <(UNKNOWN,void *,void *)<SUB>3173</SUB>> ]
+"63017" [label = <(UNKNOWN,void *,void *)<SUB>3175</SUB>> ]
+"62981" [label = <(METHOD,BuildMapBitdepth16To8)<SUB>3168</SUB>> ]
+"63055" [label = <(METHOD_RETURN,int)<SUB>3168</SUB>> ]
+  "62985" -> "62994" 
+  "62990" -> "63003" 
+  "63000" -> "63013" 
+  "63028" -> "63035" 
+  "63053" -> "63055" 
+  "62991" -> "62990" 
+  "63001" -> "63007" 
+  "63004" -> "63000" 
+  "63010" -> "63023" 
+  "63010" -> "63032" 
+  "63030" -> "63028" 
+  "63038" -> "63045" 
+  "63038" -> "63053" 
+  "63041" -> "63038" 
+  "63043" -> "63041" 
+  "62992" -> "62995" 
+  "62995" -> "62998" 
+  "62995" -> "62991" 
+  "63003" -> "63001" 
+  "63005" -> "63004" 
+  "63011" -> "63014" 
+  "63014" -> "63017" 
+  "63014" -> "63010" 
+  "63020" -> "63026" 
+  "63026" -> "63055" 
+  "63032" -> "63030" 
+  "63035" -> "63038" 
+  "63044" -> "63049" 
+  "63047" -> "63043" 
+  "62994" -> "62992" 
+  "63007" -> "63005" 
+  "63013" -> "63011" 
+  "63021" -> "63020" 
+  "63045" -> "63044" 
+  "63048" -> "63047" 
+  "62997" -> "62991" 
+  "63016" -> "63010" 
+  "63023" -> "63021" 
+  "63049" -> "63048" 
+  "62998" -> "62997" 
+  "63017" -> "63016" 
+  "62981" -> "62985" 
+}

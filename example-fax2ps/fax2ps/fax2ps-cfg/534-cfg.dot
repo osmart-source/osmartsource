@@ -1,0 +1,110 @@
+digraph "TIFFSetClientInfo" {  
+"11872" [label = <(&lt;operator&gt;.assignment,*psLink = tif-&gt;tif_clientinfo)<SUB>81</SUB>> ]
+"11905" [label = <(&lt;operator&gt;.assignment,psLink =\012        (TIFFClientInfoLink *)_TIFFmallocExt(tif, sizeof(TIFFClientInfoLink)))<SUB>100</SUB>> ]
+"11913" [label = <(assert,assert(psLink != NULL))<SUB>102</SUB>> ]
+"11917" [label = <(&lt;operator&gt;.assignment,psLink-&gt;next = tif-&gt;tif_clientinfo)<SUB>103</SUB>> ]
+"11924" [label = <(&lt;operator&gt;.assignment,psLink-&gt;name = (char *)_TIFFmallocExt(tif, (tmsize_t)(strlen(name) + 1)))<SUB>104</SUB>> ]
+"11937" [label = <(assert,assert(psLink-&gt;name != NULL))<SUB>105</SUB>> ]
+"11943" [label = <(strcpy,strcpy(psLink-&gt;name, name))<SUB>106</SUB>> ]
+"11948" [label = <(&lt;operator&gt;.assignment,psLink-&gt;data = data)<SUB>107</SUB>> ]
+"11953" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_clientinfo = psLink)<SUB>109</SUB>> ]
+"11874" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>81</SUB>> ]
+"11878" [label = <(&lt;operator&gt;.logicalAnd,psLink != NULL &amp;&amp; strcmp(psLink-&gt;name, name) != 0)<SUB>87</SUB>> ]
+"11889" [label = <(&lt;operator&gt;.assignment,psLink = psLink-&gt;next)<SUB>88</SUB>> ]
+"11895" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>90</SUB>> ]
+"11907" [label = <(&lt;operator&gt;.cast,(TIFFClientInfoLink *)_TIFFmallocExt(tif, sizeof(TIFFClientInfoLink)))<SUB>101</SUB>> ]
+"11914" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>102</SUB>> ]
+"11918" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;next)<SUB>103</SUB>> ]
+"11921" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>103</SUB>> ]
+"11925" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>104</SUB>> ]
+"11928" [label = <(&lt;operator&gt;.cast,(char *)_TIFFmallocExt(tif, (tmsize_t)(strlen(name) + 1)))<SUB>104</SUB>> ]
+"11938" [label = <(&lt;operator&gt;.notEquals,psLink-&gt;name != NULL)<SUB>105</SUB>> ]
+"11944" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>106</SUB>> ]
+"11949" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;data)<SUB>107</SUB>> ]
+"11954" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>109</SUB>> ]
+"11876" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>81</SUB>> ]
+"11879" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>87</SUB>> ]
+"11882" [label = <(&lt;operator&gt;.notEquals,strcmp(psLink-&gt;name, name) != 0)<SUB>87</SUB>> ]
+"11891" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;next)<SUB>88</SUB>> ]
+"11899" [label = <(&lt;operator&gt;.assignment,psLink-&gt;data = data)<SUB>92</SUB>> ]
+"11904" [label = <(RETURN,return;,return;)<SUB>93</SUB>> ]
+"11908" [label = <(UNKNOWN,TIFFClientInfoLink *,TIFFClientInfoLink *)<SUB>101</SUB>> ]
+"11909" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, sizeof(TIFFClientInfoLink)))<SUB>101</SUB>> ]
+"11920" [label = <(FIELD_IDENTIFIER,next,next)<SUB>103</SUB>> ]
+"11923" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>103</SUB>> ]
+"11927" [label = <(FIELD_IDENTIFIER,name,name)<SUB>104</SUB>> ]
+"11929" [label = <(UNKNOWN,char *,char *)<SUB>104</SUB>> ]
+"11930" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, (tmsize_t)(strlen(name) + 1)))<SUB>104</SUB>> ]
+"11939" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>105</SUB>> ]
+"11946" [label = <(FIELD_IDENTIFIER,name,name)<SUB>106</SUB>> ]
+"11951" [label = <(FIELD_IDENTIFIER,data,data)<SUB>107</SUB>> ]
+"11956" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>109</SUB>> ]
+"11883" [label = <(strcmp,strcmp(psLink-&gt;name, name))<SUB>87</SUB>> ]
+"11893" [label = <(FIELD_IDENTIFIER,next,next)<SUB>88</SUB>> ]
+"11900" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;data)<SUB>92</SUB>> ]
+"11911" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFClientInfoLink))<SUB>101</SUB>> ]
+"11932" [label = <(tmsize_t,(tmsize_t)(strlen(name) + 1))<SUB>104</SUB>> ]
+"11941" [label = <(FIELD_IDENTIFIER,name,name)<SUB>105</SUB>> ]
+"11884" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>87</SUB>> ]
+"11902" [label = <(FIELD_IDENTIFIER,data,data)<SUB>92</SUB>> ]
+"11933" [label = <(&lt;operator&gt;.addition,strlen(name) + 1)<SUB>104</SUB>> ]
+"11886" [label = <(FIELD_IDENTIFIER,name,name)<SUB>87</SUB>> ]
+"11934" [label = <(strlen,strlen(name))<SUB>104</SUB>> ]
+"11866" [label = <(METHOD,TIFFSetClientInfo)<SUB>78</SUB>> ]
+"11958" [label = <(METHOD_RETURN,void)<SUB>78</SUB>> ]
+  "11872" -> "11879" 
+  "11905" -> "11914" 
+  "11913" -> "11920" 
+  "11917" -> "11927" 
+  "11924" -> "11941" 
+  "11937" -> "11946" 
+  "11943" -> "11951" 
+  "11948" -> "11956" 
+  "11953" -> "11958" 
+  "11874" -> "11872" 
+  "11878" -> "11893" 
+  "11878" -> "11895" 
+  "11889" -> "11879" 
+  "11895" -> "11902" 
+  "11895" -> "11908" 
+  "11907" -> "11905" 
+  "11914" -> "11913" 
+  "11918" -> "11923" 
+  "11921" -> "11917" 
+  "11925" -> "11929" 
+  "11928" -> "11924" 
+  "11938" -> "11937" 
+  "11944" -> "11943" 
+  "11949" -> "11948" 
+  "11954" -> "11953" 
+  "11876" -> "11874" 
+  "11879" -> "11878" 
+  "11879" -> "11886" 
+  "11882" -> "11878" 
+  "11891" -> "11889" 
+  "11899" -> "11904" 
+  "11904" -> "11958" 
+  "11908" -> "11911" 
+  "11909" -> "11907" 
+  "11920" -> "11918" 
+  "11923" -> "11921" 
+  "11927" -> "11925" 
+  "11929" -> "11934" 
+  "11930" -> "11928" 
+  "11939" -> "11938" 
+  "11946" -> "11944" 
+  "11951" -> "11949" 
+  "11956" -> "11954" 
+  "11883" -> "11882" 
+  "11893" -> "11891" 
+  "11900" -> "11899" 
+  "11911" -> "11909" 
+  "11932" -> "11930" 
+  "11941" -> "11939" 
+  "11884" -> "11883" 
+  "11902" -> "11900" 
+  "11933" -> "11932" 
+  "11886" -> "11884" 
+  "11934" -> "11933" 
+  "11866" -> "11876" 
+}

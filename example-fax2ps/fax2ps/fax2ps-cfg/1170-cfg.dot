@@ -1,0 +1,130 @@
+digraph "TIFFReadRawTile1" {  
+"76439" [label = <(assert,assert((tif-&gt;tif_flags &amp; TIFF_NOREADRAW) == 0))<SUB>1092</SUB>> ]
+"76564" [label = <(RETURN,return (size);,return (size);)<SUB>1140</SUB>> ]
+"76440" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_NOREADRAW) == 0)<SUB>1092</SUB>> ]
+"76448" [label = <(&lt;operator&gt;.logicalNot,!isMapped(tif))<SUB>1093</SUB>> ]
+"76441" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1092</SUB>> ]
+"76449" [label = <(isMapped,isMapped(tif))<SUB>1093</SUB>> ]
+"76466" [label = <(&lt;operator&gt;.assignment,cc = TIFFReadFile(tif, buf, size))<SUB>1105</SUB>> ]
+"76442" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1092</SUB>> ]
+"76454" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, TIFFGetStrileOffset(tif, tile)))<SUB>1097</SUB>> ]
+"76468" [label = <(TIFFReadFile,TIFFReadFile(tif, buf, size))<SUB>1105</SUB>> ]
+"76473" [label = <(&lt;operator&gt;.notEquals,cc != size)<SUB>1106</SUB>> ]
+"76487" [label = <(&lt;operator&gt;.assignment,ma = (tmsize_t)TIFFGetStrileOffset(tif, tile))<SUB>1120</SUB>> ]
+"76494" [label = <(&lt;operator&gt;.assignment,mb = ma + size)<SUB>1121</SUB>> ]
+"76556" [label = <(_TIFFmemcpy,_TIFFmemcpy(buf, tif-&gt;tif_base + ma, size))<SUB>1138</SUB>> ]
+"76444" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1092</SUB>> ]
+"76455" [label = <(SeekOK,SeekOK(tif, TIFFGetStrileOffset(tif, tile)))<SUB>1097</SUB>> ]
+"76461" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Seek error at row %&quot; PRIu32 &quot;, col %&quot; PRIu32\012                          &quot;, tile %&quot; PRIu32,\012                          tif-&gt;tif_row, tif-&gt;tif_col, tile);,TIFFErrorExtR(tif, module,\012                          &quot;Seek error at row %&quot; PRIu32 &quot;, col %&quot; PRIu32\012                          &quot;, tile %&quot; PRIu32,\012                          tif-&gt;tif_row, tif-&gt;tif_col, tile);)<SUB>1099</SUB>> ]
+"76462" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1103</SUB>> ]
+"76477" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Read error at row %&quot; PRIu32 &quot;, col %&quot; PRIu32\012                          &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, tif-&gt;tif_col, cc, size);,TIFFErrorExtR(tif, module,\012                          &quot;Read error at row %&quot; PRIu32 &quot;, col %&quot; PRIu32\012                          &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, tif-&gt;tif_col, cc, size);)<SUB>1108</SUB>> ]
+"76478" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1113</SUB>> ]
+"76489" [label = <(&lt;operator&gt;.cast,(tmsize_t)TIFFGetStrileOffset(tif, tile))<SUB>1120</SUB>> ]
+"76496" [label = <(&lt;operator&gt;.addition,ma + size)<SUB>1121</SUB>> ]
+"76500" [label = <(&lt;operator&gt;.logicalOr,(TIFFGetStrileOffset(tif, tile) &gt; (uint64_t)TIFF_TMSIZE_T_MAX) ||\012            (ma &gt; tif-&gt;tif_size))<SUB>1122</SUB>> ]
+"76547" [label = <(&lt;operator&gt;.notEquals,n != size)<SUB>1129</SUB>> ]
+"76558" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + ma)<SUB>1138</SUB>> ]
+"76457" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, tile))<SUB>1097</SUB>> ]
+"76463" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1103</SUB>> ]
+"76479" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1113</SUB>> ]
+"76490" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1120</SUB>> ]
+"76491" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, tile))<SUB>1120</SUB>> ]
+"76501" [label = <(&lt;operator&gt;.greaterThan,TIFFGetStrileOffset(tif, tile) &gt; (uint64_t)TIFF_TMSIZE_T_MAX)<SUB>1122</SUB>> ]
+"76508" [label = <(&lt;operator&gt;.greaterThan,ma &gt; tif-&gt;tif_size)<SUB>1123</SUB>> ]
+"76514" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>1124</SUB>> ]
+"76551" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Read error at row %&quot; PRIu32 &quot;, col %&quot; PRIu32\012                          &quot;, tile %&quot; PRIu32 &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, tif-&gt;tif_col, tile, n, size);,TIFFErrorExtR(tif, module,\012                          &quot;Read error at row %&quot; PRIu32 &quot;, col %&quot; PRIu32\012                          &quot;, tile %&quot; PRIu32 &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, tif-&gt;tif_col, tile, n, size);)<SUB>1131</SUB>> ]
+"76552" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1136</SUB>> ]
+"76559" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>1138</SUB>> ]
+"76464" [label = <(&lt;operator&gt;.minus,-1)<SUB>1103</SUB>> ]
+"76480" [label = <(&lt;operator&gt;.minus,-1)<SUB>1113</SUB>> ]
+"76502" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, tile))<SUB>1122</SUB>> ]
+"76505" [label = <(&lt;operator&gt;.cast,(uint64_t)TIFF_TMSIZE_T_MAX)<SUB>1122</SUB>> ]
+"76510" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1123</SUB>> ]
+"76553" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1136</SUB>> ]
+"76561" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>1138</SUB>> ]
+"76506" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1122</SUB>> ]
+"76512" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1123</SUB>> ]
+"76520" [label = <(&lt;operator&gt;.logicalOr,(mb &lt; ma) || (mb &lt; size) || (mb &gt; tif-&gt;tif_size))<SUB>1125</SUB>> ]
+"76554" [label = <(&lt;operator&gt;.minus,-1)<SUB>1136</SUB>> ]
+"76521" [label = <(&lt;operator&gt;.logicalOr,(mb &lt; ma) || (mb &lt; size))<SUB>1125</SUB>> ]
+"76528" [label = <(&lt;operator&gt;.greaterThan,mb &gt; tif-&gt;tif_size)<SUB>1125</SUB>> ]
+"76534" [label = <(&lt;operator&gt;.assignment,n = tif-&gt;tif_size - ma)<SUB>1126</SUB>> ]
+"76522" [label = <(&lt;operator&gt;.lessThan,mb &lt; ma)<SUB>1125</SUB>> ]
+"76525" [label = <(&lt;operator&gt;.lessThan,mb &lt; size)<SUB>1125</SUB>> ]
+"76530" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1125</SUB>> ]
+"76536" [label = <(&lt;operator&gt;.subtraction,tif-&gt;tif_size - ma)<SUB>1126</SUB>> ]
+"76543" [label = <(&lt;operator&gt;.assignment,n = size)<SUB>1128</SUB>> ]
+"76532" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1125</SUB>> ]
+"76537" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1126</SUB>> ]
+"76539" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1126</SUB>> ]
+"76432" [label = <(METHOD,TIFFReadRawTile1)<SUB>1089</SUB>> ]
+"76566" [label = <(METHOD_RETURN,tmsize_t)<SUB>1089</SUB>> ]
+  "76439" -> "76449" 
+  "76564" -> "76566" 
+  "76440" -> "76439" 
+  "76448" -> "76457" 
+  "76448" -> "76490" 
+  "76441" -> "76440" 
+  "76449" -> "76448" 
+  "76466" -> "76473" 
+  "76442" -> "76441" 
+  "76454" -> "76461" 
+  "76454" -> "76468" 
+  "76468" -> "76466" 
+  "76473" -> "76477" 
+  "76473" -> "76564" 
+  "76487" -> "76496" 
+  "76494" -> "76502" 
+  "76556" -> "76564" 
+  "76444" -> "76442" 
+  "76455" -> "76454" 
+  "76461" -> "76464" 
+  "76462" -> "76566" 
+  "76477" -> "76480" 
+  "76478" -> "76566" 
+  "76489" -> "76487" 
+  "76496" -> "76494" 
+  "76500" -> "76514" 
+  "76500" -> "76522" 
+  "76547" -> "76551" 
+  "76547" -> "76561" 
+  "76558" -> "76556" 
+  "76457" -> "76455" 
+  "76463" -> "76462" 
+  "76479" -> "76478" 
+  "76490" -> "76491" 
+  "76491" -> "76489" 
+  "76501" -> "76500" 
+  "76501" -> "76512" 
+  "76508" -> "76500" 
+  "76514" -> "76547" 
+  "76551" -> "76554" 
+  "76552" -> "76566" 
+  "76559" -> "76558" 
+  "76464" -> "76463" 
+  "76480" -> "76479" 
+  "76502" -> "76506" 
+  "76505" -> "76501" 
+  "76510" -> "76508" 
+  "76553" -> "76552" 
+  "76561" -> "76559" 
+  "76506" -> "76505" 
+  "76512" -> "76510" 
+  "76520" -> "76539" 
+  "76520" -> "76543" 
+  "76554" -> "76553" 
+  "76521" -> "76520" 
+  "76521" -> "76532" 
+  "76528" -> "76520" 
+  "76534" -> "76547" 
+  "76522" -> "76521" 
+  "76522" -> "76525" 
+  "76525" -> "76521" 
+  "76530" -> "76528" 
+  "76536" -> "76534" 
+  "76543" -> "76547" 
+  "76532" -> "76530" 
+  "76537" -> "76536" 
+  "76539" -> "76537" 
+  "76432" -> "76444" 
+}

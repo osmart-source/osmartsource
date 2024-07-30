@@ -1,0 +1,362 @@
+digraph "_TIFFCheckDirNumberAndOffset" {  
+"91834" [label = <(&lt;operator&gt;.assignment,entry.offset = diroff)<SUB>5369</SUB>> ]
+"91839" [label = <(&lt;operator&gt;.assignment,entry.dirNumber = dirn)<SUB>5370</SUB>> ]
+"91845" [label = <(&lt;operator&gt;.assignment,*foundEntry =\012        (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5372</SUB>> ]
+"91887" [label = <(&lt;operator&gt;.assignment,foundEntry = (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_number_to_offset, &amp;entry))<SUB>5394</SUB>> ]
+"92031" [label = <(&lt;operator&gt;.assignment,*entryPtr =\012        (TIFFOffsetAndDirNumber *)malloc(sizeof(TIFFOffsetAndDirNumber)))<SUB>5459</SUB>> ]
+"92053" [label = <(&lt;operator&gt;.assignment,*entryPtr = entry)<SUB>5469</SUB>> ]
+"92085" [label = <(&lt;operator&gt;.postIncrement,tif-&gt;tif_dirnumber++)<SUB>5484</SUB>> ]
+"92089" [label = <(RETURN,return 1;,return 1;)<SUB>5486</SUB>> ]
+"91751" [label = <(&lt;operator&gt;.equals,diroff == 0)<SUB>5334</SUB>> ]
+"91758" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_map_dir_offset_to_number == NULL)<SUB>5337</SUB>> ]
+"91794" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_map_dir_number_to_offset == NULL)<SUB>5349</SUB>> ]
+"91835" [label = <(&lt;operator&gt;.fieldAccess,entry.offset)<SUB>5369</SUB>> ]
+"91840" [label = <(&lt;operator&gt;.fieldAccess,entry.dirNumber)<SUB>5370</SUB>> ]
+"91847" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5373</SUB>> ]
+"91856" [label = <(&lt;operator&gt;.logicalAnd,foundEntry &amp;&amp; 1)<SUB>5375</SUB>> ]
+"91889" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_number_to_offset, &amp;entry))<SUB>5394</SUB>> ]
+"91898" [label = <(&lt;operator&gt;.logicalAnd,foundEntry &amp;&amp; 1)<SUB>5396</SUB>> ]
+"92017" [label = <(&lt;operator&gt;.greaterEqualsThan,tif-&gt;tif_dirnumber &gt;= TIFF_MAX_DIR_COUNT)<SUB>5451</SUB>> ]
+"92033" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)malloc(sizeof(TIFFOffsetAndDirNumber)))<SUB>5460</SUB>> ]
+"92039" [label = <(&lt;operator&gt;.equals,entryPtr == NULL)<SUB>5461</SUB>> ]
+"92054" [label = <(&lt;operator&gt;.indirection,*entryPtr)<SUB>5469</SUB>> ]
+"92058" [label = <(&lt;operator&gt;.logicalNot,!TIFFHashSetInsert(tif-&gt;tif_map_dir_offset_to_number, entryPtr))<SUB>5471</SUB>> ]
+"92072" [label = <(&lt;operator&gt;.logicalNot,!TIFFHashSetInsert(tif-&gt;tif_map_dir_number_to_offset, entryPtr))<SUB>5477</SUB>> ]
+"92086" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dirnumber)<SUB>5484</SUB>> ]
+"91755" [label = <(RETURN,return 0;,return 0;)<SUB>5335</SUB>> ]
+"91759" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5337</SUB>> ]
+"91762" [label = <(NULL,NULL)<SUB>5337</SUB>> ]
+"91768" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_map_dir_offset_to_number = TIFFHashSetNew(\012            hashFuncOffsetToNumber, equalFuncOffsetToNumber, free))<SUB>5339</SUB>> ]
+"91795" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5349</SUB>> ]
+"91798" [label = <(NULL,NULL)<SUB>5349</SUB>> ]
+"91804" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_map_dir_number_to_offset = TIFFHashSetNew(\012            hashFuncNumberToOffset, equalFuncNumberToOffset, NULL))<SUB>5353</SUB>> ]
+"91837" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5369</SUB>> ]
+"91842" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5370</SUB>> ]
+"91848" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5373</SUB>> ]
+"91849" [label = <(TIFFHashSetLookup,TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5373</SUB>> ]
+"91890" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5394</SUB>> ]
+"91891" [label = <(TIFFHashSetLookup,TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_number_to_offset, &amp;entry))<SUB>5394</SUB>> ]
+"92014" [label = <(RETURN,return 1;,return 1;)<SUB>5447</SUB>> ]
+"92018" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dirnumber)<SUB>5451</SUB>> ]
+"92023" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                      &quot;Cannot handle more than %u TIFF directories&quot;,\012                      TIFF_MAX_DIR_COUNT))<SUB>5453</SUB>> ]
+"92028" [label = <(RETURN,return 0;,return 0;)<SUB>5456</SUB>> ]
+"92034" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5460</SUB>> ]
+"92035" [label = <(malloc,malloc(sizeof(TIFFOffsetAndDirNumber)))<SUB>5460</SUB>> ]
+"92041" [label = <(NULL,NULL)<SUB>5461</SUB>> ]
+"92047" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                      &quot;malloc(sizeof(TIFFOffsetAndDirNumber)) failed&quot;))<SUB>5463</SUB>> ]
+"92051" [label = <(RETURN,return 0;,return 0;)<SUB>5465</SUB>> ]
+"92059" [label = <(TIFFHashSetInsert,TIFFHashSetInsert(tif-&gt;tif_map_dir_offset_to_number, entryPtr))<SUB>5471</SUB>> ]
+"92065" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                      &quot;Insertion in tif_map_dir_offset_to_number failed&quot;))<SUB>5473</SUB>> ]
+"92069" [label = <(RETURN,return 0;,return 0;)<SUB>5475</SUB>> ]
+"92073" [label = <(TIFFHashSetInsert,TIFFHashSetInsert(tif-&gt;tif_map_dir_number_to_offset, entryPtr))<SUB>5477</SUB>> ]
+"92079" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                      &quot;Insertion in tif_map_dir_number_to_offset failed&quot;))<SUB>5479</SUB>> ]
+"92083" [label = <(RETURN,return 0;,return 0;)<SUB>5481</SUB>> ]
+"92088" [label = <(FIELD_IDENTIFIER,tif_dirnumber,tif_dirnumber)<SUB>5484</SUB>> ]
+"91761" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5337</SUB>> ]
+"91769" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5339</SUB>> ]
+"91772" [label = <(TIFFHashSetNew,TIFFHashSetNew(\012            hashFuncOffsetToNumber, equalFuncOffsetToNumber, free))<SUB>5339</SUB>> ]
+"91777" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_map_dir_offset_to_number == NULL)<SUB>5341</SUB>> ]
+"91797" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5349</SUB>> ]
+"91805" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5353</SUB>> ]
+"91808" [label = <(TIFFHashSetNew,TIFFHashSetNew(\012            hashFuncNumberToOffset, equalFuncNumberToOffset, NULL))<SUB>5353</SUB>> ]
+"91817" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_map_dir_number_to_offset == NULL)<SUB>5355</SUB>> ]
+"91850" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5374</SUB>> ]
+"91853" [label = <(&lt;operator&gt;.addressOf,&amp;entry)<SUB>5374</SUB>> ]
+"91861" [label = <(&lt;operator&gt;.equals,foundEntry-&gt;dirNumber == dirn)<SUB>5377</SUB>> ]
+"91892" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5395</SUB>> ]
+"91895" [label = <(&lt;operator&gt;.addressOf,&amp;entry)<SUB>5395</SUB>> ]
+"91903" [label = <(&lt;operator&gt;.notEquals,foundEntry-&gt;offset != diroff)<SUB>5398</SUB>> ]
+"92020" [label = <(FIELD_IDENTIFIER,tif_dirnumber,tif_dirnumber)<SUB>5451</SUB>> ]
+"92036" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFOffsetAndDirNumber))<SUB>5460</SUB>> ]
+"92060" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5471</SUB>> ]
+"92074" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5477</SUB>> ]
+"91764" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5337</SUB>> ]
+"91771" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5339</SUB>> ]
+"91778" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5341</SUB>> ]
+"91781" [label = <(NULL,NULL)<SUB>5341</SUB>> ]
+"91787" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                          &quot;Not enough memory&quot;))<SUB>5343</SUB>> ]
+"91791" [label = <(RETURN,return 1;,return 1;)<SUB>5345</SUB>> ]
+"91800" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5349</SUB>> ]
+"91807" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5353</SUB>> ]
+"91811" [label = <(NULL,NULL)<SUB>5354</SUB>> ]
+"91818" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5355</SUB>> ]
+"91821" [label = <(NULL,NULL)<SUB>5355</SUB>> ]
+"91827" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                          &quot;Not enough memory&quot;))<SUB>5357</SUB>> ]
+"91831" [label = <(RETURN,return 1;,return 1;)<SUB>5359</SUB>> ]
+"91852" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5374</SUB>> ]
+"91862" [label = <(&lt;operator&gt;.indirectFieldAccess,foundEntry-&gt;dirNumber)<SUB>5377</SUB>> ]
+"91867" [label = <(RETURN,return 1;,return 1;)<SUB>5379</SUB>> ]
+"91894" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5395</SUB>> ]
+"91904" [label = <(&lt;operator&gt;.indirectFieldAccess,foundEntry-&gt;offset)<SUB>5398</SUB>> ]
+"91910" [label = <(&lt;operator&gt;.assignment,entryOld.offset = foundEntry-&gt;offset)<SUB>5401</SUB>> ]
+"91917" [label = <(&lt;operator&gt;.assignment,entryOld.dirNumber = dirn)<SUB>5402</SUB>> ]
+"91923" [label = <(&lt;operator&gt;.assignment,*foundEntryOld =\012                (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012                    tif-&gt;tif_map_dir_number_to_offset, &amp;entryOld))<SUB>5406</SUB>> ]
+"91943" [label = <(&lt;operator&gt;.assignment,foundEntryOld = (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012                tif-&gt;tif_map_dir_offset_to_number, &amp;entryOld))<SUB>5414</SUB>> ]
+"91964" [label = <(&lt;operator&gt;.assignment,*entryPtr = (TIFFOffsetAndDirNumber *)malloc(\012                sizeof(TIFFOffsetAndDirNumber)))<SUB>5422</SUB>> ]
+"91982" [label = <(&lt;operator&gt;.assignment,*entryPtr = entry)<SUB>5430</SUB>> ]
+"92043" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5461</SUB>> ]
+"92062" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5471</SUB>> ]
+"92076" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5477</SUB>> ]
+"91765" [label = <(UNKNOWN,void *,void *)<SUB>5337</SUB>> ]
+"91780" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5341</SUB>> ]
+"91801" [label = <(UNKNOWN,void *,void *)<SUB>5349</SUB>> ]
+"91820" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5355</SUB>> ]
+"91864" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5377</SUB>> ]
+"91871" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                            &quot;TIFF directory %d has IFD looping to directory %u &quot;\012                            &quot;at offset 0x%&quot; PRIx64 &quot; (%&quot; PRIu64 &quot;)&quot;,\012                            (int)dirn - 1, foundEntry-&gt;dirNumber, diroff,\012                            diroff))<SUB>5383</SUB>> ]
+"91885" [label = <(RETURN,return 0;,return 0;)<SUB>5388</SUB>> ]
+"91906" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5398</SUB>> ]
+"91911" [label = <(&lt;operator&gt;.fieldAccess,entryOld.offset)<SUB>5401</SUB>> ]
+"91914" [label = <(&lt;operator&gt;.indirectFieldAccess,foundEntry-&gt;offset)<SUB>5401</SUB>> ]
+"91918" [label = <(&lt;operator&gt;.fieldAccess,entryOld.dirNumber)<SUB>5402</SUB>> ]
+"91925" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012                    tif-&gt;tif_map_dir_number_to_offset, &amp;entryOld))<SUB>5407</SUB>> ]
+"91934" [label = <(&lt;operator&gt;.logicalAnd,foundEntryOld &amp;&amp; 1)<SUB>5409</SUB>> ]
+"91945" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012                tif-&gt;tif_map_dir_offset_to_number, &amp;entryOld))<SUB>5414</SUB>> ]
+"91954" [label = <(&lt;operator&gt;.logicalAnd,foundEntryOld &amp;&amp; 1)<SUB>5416</SUB>> ]
+"91966" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)malloc(\012                sizeof(TIFFOffsetAndDirNumber)))<SUB>5422</SUB>> ]
+"91972" [label = <(&lt;operator&gt;.equals,entryPtr == NULL)<SUB>5424</SUB>> ]
+"91983" [label = <(&lt;operator&gt;.indirection,*entryPtr)<SUB>5430</SUB>> ]
+"91987" [label = <(&lt;operator&gt;.logicalNot,!TIFFHashSetInsert(tif-&gt;tif_map_dir_offset_to_number, entryPtr))<SUB>5432</SUB>> ]
+"92001" [label = <(&lt;operator&gt;.logicalNot,!TIFFHashSetInsert(tif-&gt;tif_map_dir_number_to_offset, entryPtr))<SUB>5439</SUB>> ]
+"92044" [label = <(UNKNOWN,void *,void *)<SUB>5461</SUB>> ]
+"91783" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5341</SUB>> ]
+"91813" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5354</SUB>> ]
+"91823" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5355</SUB>> ]
+"91875" [label = <(&lt;operator&gt;.subtraction,(int)dirn - 1)<SUB>5386</SUB>> ]
+"91880" [label = <(&lt;operator&gt;.indirectFieldAccess,foundEntry-&gt;dirNumber)<SUB>5386</SUB>> ]
+"91913" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5401</SUB>> ]
+"91916" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5401</SUB>> ]
+"91920" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5402</SUB>> ]
+"91926" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5407</SUB>> ]
+"91927" [label = <(TIFFHashSetLookup,TIFFHashSetLookup(\012                    tif-&gt;tif_map_dir_number_to_offset, &amp;entryOld))<SUB>5407</SUB>> ]
+"91938" [label = <(TIFFHashSetRemove,TIFFHashSetRemove(tif-&gt;tif_map_dir_number_to_offset,\012                                  foundEntryOld))<SUB>5411</SUB>> ]
+"91946" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5414</SUB>> ]
+"91947" [label = <(TIFFHashSetLookup,TIFFHashSetLookup(\012                tif-&gt;tif_map_dir_offset_to_number, &amp;entryOld))<SUB>5414</SUB>> ]
+"91958" [label = <(TIFFHashSetRemove,TIFFHashSetRemove(tif-&gt;tif_map_dir_offset_to_number,\012                                  foundEntryOld))<SUB>5418</SUB>> ]
+"91967" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5422</SUB>> ]
+"91968" [label = <(malloc,malloc(\012                sizeof(TIFFOffsetAndDirNumber)))<SUB>5422</SUB>> ]
+"91974" [label = <(NULL,NULL)<SUB>5424</SUB>> ]
+"91980" [label = <(RETURN,return 0;,return 0;)<SUB>5426</SUB>> ]
+"91988" [label = <(TIFFHashSetInsert,TIFFHashSetInsert(tif-&gt;tif_map_dir_offset_to_number, entryPtr))<SUB>5432</SUB>> ]
+"91994" [label = <(TIFFErrorExtR,TIFFErrorExtR(\012                    tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                    &quot;Insertion in tif_map_dir_offset_to_number failed&quot;))<SUB>5434</SUB>> ]
+"91998" [label = <(RETURN,return 0;,return 0;)<SUB>5437</SUB>> ]
+"92002" [label = <(TIFFHashSetInsert,TIFFHashSetInsert(tif-&gt;tif_map_dir_number_to_offset, entryPtr))<SUB>5439</SUB>> ]
+"92008" [label = <(TIFFErrorExtR,TIFFErrorExtR(\012                    tif, &quot;_TIFFCheckDirNumberAndOffset&quot;,\012                    &quot;Insertion in tif_map_dir_number_to_offset failed&quot;))<SUB>5441</SUB>> ]
+"92012" [label = <(RETURN,return 0;,return 0;)<SUB>5444</SUB>> ]
+"91784" [label = <(UNKNOWN,void *,void *)<SUB>5341</SUB>> ]
+"91814" [label = <(UNKNOWN,void *,void *)<SUB>5354</SUB>> ]
+"91824" [label = <(UNKNOWN,void *,void *)<SUB>5355</SUB>> ]
+"91876" [label = <(&lt;operator&gt;.cast,(int)dirn)<SUB>5386</SUB>> ]
+"91882" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5386</SUB>> ]
+"91928" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5408</SUB>> ]
+"91931" [label = <(&lt;operator&gt;.addressOf,&amp;entryOld)<SUB>5408</SUB>> ]
+"91939" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5411</SUB>> ]
+"91948" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5415</SUB>> ]
+"91951" [label = <(&lt;operator&gt;.addressOf,&amp;entryOld)<SUB>5415</SUB>> ]
+"91959" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5418</SUB>> ]
+"91969" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFOffsetAndDirNumber))<SUB>5423</SUB>> ]
+"91989" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5432</SUB>> ]
+"92003" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_number_to_offset)<SUB>5439</SUB>> ]
+"91877" [label = <(UNKNOWN,int,int)<SUB>5386</SUB>> ]
+"91930" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5408</SUB>> ]
+"91941" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5411</SUB>> ]
+"91950" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5415</SUB>> ]
+"91961" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5418</SUB>> ]
+"91976" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5424</SUB>> ]
+"91991" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5432</SUB>> ]
+"92005" [label = <(FIELD_IDENTIFIER,tif_map_dir_number_to_offset,tif_map_dir_number_to_offset)<SUB>5439</SUB>> ]
+"91977" [label = <(UNKNOWN,void *,void *)<SUB>5424</SUB>> ]
+"91745" [label = <(METHOD,_TIFFCheckDirNumberAndOffset)<SUB>5332</SUB>> ]
+"92091" [label = <(METHOD_RETURN,int)<SUB>5332</SUB>> ]
+  "91834" -> "91842" 
+  "91839" -> "91848" 
+  "91845" -> "91856" 
+  "91887" -> "91898" 
+  "92031" -> "92041" 
+  "92053" -> "92062" 
+  "92085" -> "92089" 
+  "92089" -> "92091" 
+  "91751" -> "91755" 
+  "91751" -> "91761" 
+  "91758" -> "91771" 
+  "91758" -> "91797" 
+  "91794" -> "91807" 
+  "91794" -> "91837" 
+  "91835" -> "91834" 
+  "91840" -> "91839" 
+  "91847" -> "91845" 
+  "91856" -> "91864" 
+  "91856" -> "91890" 
+  "91889" -> "91887" 
+  "91898" -> "91906" 
+  "91898" -> "92020" 
+  "92017" -> "92023" 
+  "92017" -> "92034" 
+  "92033" -> "92031" 
+  "92039" -> "92047" 
+  "92039" -> "92054" 
+  "92054" -> "92053" 
+  "92058" -> "92065" 
+  "92058" -> "92076" 
+  "92072" -> "92079" 
+  "92072" -> "92088" 
+  "92086" -> "92085" 
+  "91755" -> "92091" 
+  "91759" -> "91762" 
+  "91762" -> "91765" 
+  "91762" -> "91758" 
+  "91768" -> "91780" 
+  "91795" -> "91798" 
+  "91798" -> "91801" 
+  "91798" -> "91794" 
+  "91804" -> "91820" 
+  "91837" -> "91835" 
+  "91842" -> "91840" 
+  "91848" -> "91852" 
+  "91849" -> "91847" 
+  "91890" -> "91894" 
+  "91891" -> "91889" 
+  "92014" -> "92091" 
+  "92018" -> "92017" 
+  "92023" -> "92028" 
+  "92028" -> "92091" 
+  "92034" -> "92036" 
+  "92035" -> "92033" 
+  "92041" -> "92044" 
+  "92041" -> "92039" 
+  "92047" -> "92051" 
+  "92051" -> "92091" 
+  "92059" -> "92058" 
+  "92065" -> "92069" 
+  "92069" -> "92091" 
+  "92073" -> "92072" 
+  "92079" -> "92083" 
+  "92083" -> "92091" 
+  "92088" -> "92086" 
+  "91761" -> "91759" 
+  "91769" -> "91772" 
+  "91772" -> "91768" 
+  "91777" -> "91787" 
+  "91777" -> "91797" 
+  "91797" -> "91795" 
+  "91805" -> "91811" 
+  "91808" -> "91804" 
+  "91817" -> "91827" 
+  "91817" -> "91837" 
+  "91850" -> "91853" 
+  "91853" -> "91849" 
+  "91861" -> "91867" 
+  "91861" -> "91877" 
+  "91892" -> "91895" 
+  "91895" -> "91891" 
+  "91903" -> "91913" 
+  "91903" -> "92014" 
+  "92020" -> "92018" 
+  "92036" -> "92035" 
+  "92060" -> "92059" 
+  "92074" -> "92073" 
+  "91764" -> "91758" 
+  "91771" -> "91769" 
+  "91778" -> "91781" 
+  "91781" -> "91784" 
+  "91781" -> "91777" 
+  "91787" -> "91791" 
+  "91791" -> "92091" 
+  "91800" -> "91794" 
+  "91807" -> "91805" 
+  "91811" -> "91814" 
+  "91811" -> "91808" 
+  "91818" -> "91821" 
+  "91821" -> "91824" 
+  "91821" -> "91817" 
+  "91827" -> "91831" 
+  "91831" -> "92091" 
+  "91852" -> "91850" 
+  "91862" -> "91861" 
+  "91867" -> "92091" 
+  "91894" -> "91892" 
+  "91904" -> "91903" 
+  "91910" -> "91920" 
+  "91917" -> "91926" 
+  "91923" -> "91934" 
+  "91943" -> "91954" 
+  "91964" -> "91974" 
+  "91982" -> "91991" 
+  "92043" -> "92039" 
+  "92062" -> "92060" 
+  "92076" -> "92074" 
+  "91765" -> "91764" 
+  "91780" -> "91778" 
+  "91801" -> "91800" 
+  "91820" -> "91818" 
+  "91864" -> "91862" 
+  "91871" -> "91885" 
+  "91885" -> "92091" 
+  "91906" -> "91904" 
+  "91911" -> "91916" 
+  "91914" -> "91910" 
+  "91918" -> "91917" 
+  "91925" -> "91923" 
+  "91934" -> "91941" 
+  "91934" -> "91946" 
+  "91945" -> "91943" 
+  "91954" -> "91961" 
+  "91954" -> "91967" 
+  "91966" -> "91964" 
+  "91972" -> "91980" 
+  "91972" -> "91983" 
+  "91983" -> "91982" 
+  "91987" -> "91994" 
+  "91987" -> "92005" 
+  "92001" -> "92008" 
+  "92001" -> "92014" 
+  "92044" -> "92043" 
+  "91783" -> "91777" 
+  "91813" -> "91808" 
+  "91823" -> "91817" 
+  "91875" -> "91882" 
+  "91880" -> "91871" 
+  "91913" -> "91911" 
+  "91916" -> "91914" 
+  "91920" -> "91918" 
+  "91926" -> "91930" 
+  "91927" -> "91925" 
+  "91938" -> "91946" 
+  "91946" -> "91950" 
+  "91947" -> "91945" 
+  "91958" -> "91967" 
+  "91967" -> "91969" 
+  "91968" -> "91966" 
+  "91974" -> "91977" 
+  "91974" -> "91972" 
+  "91980" -> "92091" 
+  "91988" -> "91987" 
+  "91994" -> "91998" 
+  "91998" -> "92091" 
+  "92002" -> "92001" 
+  "92008" -> "92012" 
+  "92012" -> "92091" 
+  "91784" -> "91783" 
+  "91814" -> "91813" 
+  "91824" -> "91823" 
+  "91876" -> "91875" 
+  "91882" -> "91880" 
+  "91928" -> "91931" 
+  "91931" -> "91927" 
+  "91939" -> "91938" 
+  "91948" -> "91951" 
+  "91951" -> "91947" 
+  "91959" -> "91958" 
+  "91969" -> "91968" 
+  "91989" -> "91988" 
+  "92003" -> "92002" 
+  "91877" -> "91876" 
+  "91930" -> "91928" 
+  "91941" -> "91939" 
+  "91950" -> "91948" 
+  "91961" -> "91959" 
+  "91976" -> "91972" 
+  "91991" -> "91989" 
+  "92005" -> "92003" 
+  "91977" -> "91976" 
+  "91745" -> "91751" 
+}

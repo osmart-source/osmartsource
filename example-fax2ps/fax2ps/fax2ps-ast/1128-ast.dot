@@ -1,0 +1,93 @@
+digraph "TIFFWriteDirectoryTagCheckedIfd8Array" {  
+"71621" [label = <(METHOD,TIFFWriteDirectoryTagCheckedIfd8Array)<SUB>2835</SUB>> ]
+"71622" [label = <(PARAM,TIFF *tif)<SUB>2835</SUB>> ]
+"71623" [label = <(PARAM,uint32_t *ndir)<SUB>2835</SUB>> ]
+"71624" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2836</SUB>> ]
+"71625" [label = <(PARAM,uint16_t tag)<SUB>2837</SUB>> ]
+"71626" [label = <(PARAM,uint32_t count)<SUB>2837</SUB>> ]
+"71627" [label = <(PARAM,uint64_t *value)<SUB>2838</SUB>> ]
+"71628" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2839</SUB>> ]
+"71629" [label = <(assert,assert(count &lt; 0x20000000))<SUB>2840</SUB>> ]
+"71630" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x20000000)<SUB>2840</SUB>> ]
+"71631" [label = <(IDENTIFIER,count,count &lt; 0x20000000)<SUB>2840</SUB>> ]
+"71632" [label = <(LITERAL,0x20000000,count &lt; 0x20000000)<SUB>2840</SUB>> ]
+"71633" [label = <(assert,assert(sizeof(uint64_t) == 8))<SUB>2841</SUB>> ]
+"71634" [label = <(&lt;operator&gt;.equals,sizeof(uint64_t) == 8)<SUB>2841</SUB>> ]
+"71635" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>2841</SUB>> ]
+"71636" [label = <(IDENTIFIER,uint64_t,sizeof(uint64_t))<SUB>2841</SUB>> ]
+"71637" [label = <(LITERAL,8,sizeof(uint64_t) == 8)<SUB>2841</SUB>> ]
+"71638" [label = <(assert,assert(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2842</SUB>> ]
+"71639" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2842</SUB>> ]
+"71640" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2842</SUB>> ]
+"71641" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2842</SUB>> ]
+"71642" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2842</SUB>> ]
+"71643" [label = <(IDENTIFIER,TIFF_BIGTIFF,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2842</SUB>> ]
+"71644" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2843</SUB>> ]
+"71645" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2843</SUB>> ]
+"71646" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2843</SUB>> ]
+"71647" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2843</SUB>> ]
+"71648" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2843</SUB>> ]
+"71649" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2843</SUB>> ]
+"71650" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2844</SUB>> ]
+"71651" [label = <(TIFFSwabArrayOfLong8,TIFFSwabArrayOfLong8(value, count))<SUB>2844</SUB>> ]
+"71652" [label = <(IDENTIFIER,value,TIFFSwabArrayOfLong8(value, count))<SUB>2844</SUB>> ]
+"71653" [label = <(IDENTIFIER,count,TIFFSwabArrayOfLong8(value, count))<SUB>2844</SUB>> ]
+"71654" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value));)<SUB>2845</SUB>> ]
+"71655" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71656" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71657" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71658" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71659" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71660" [label = <(IDENTIFIER,TIFF_IFD8,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71661" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71662" [label = <(&lt;operator&gt;.multiplication,count * 8)<SUB>2846</SUB>> ]
+"71663" [label = <(IDENTIFIER,count,count * 8)<SUB>2846</SUB>> ]
+"71664" [label = <(LITERAL,8,count * 8)<SUB>2846</SUB>> ]
+"71665" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2846</SUB>> ]
+"71666" [label = <(METHOD_RETURN,int)<SUB>2835</SUB>> ]
+  "71621" -> "71622" 
+  "71621" -> "71623" 
+  "71621" -> "71624" 
+  "71621" -> "71625" 
+  "71621" -> "71626" 
+  "71621" -> "71627" 
+  "71621" -> "71628" 
+  "71621" -> "71666" 
+  "71628" -> "71629" 
+  "71628" -> "71633" 
+  "71628" -> "71638" 
+  "71628" -> "71644" 
+  "71628" -> "71654" 
+  "71629" -> "71630" 
+  "71630" -> "71631" 
+  "71630" -> "71632" 
+  "71633" -> "71634" 
+  "71634" -> "71635" 
+  "71634" -> "71637" 
+  "71635" -> "71636" 
+  "71638" -> "71639" 
+  "71639" -> "71640" 
+  "71639" -> "71643" 
+  "71640" -> "71641" 
+  "71640" -> "71642" 
+  "71644" -> "71645" 
+  "71644" -> "71650" 
+  "71645" -> "71646" 
+  "71645" -> "71649" 
+  "71646" -> "71647" 
+  "71646" -> "71648" 
+  "71650" -> "71651" 
+  "71651" -> "71652" 
+  "71651" -> "71653" 
+  "71654" -> "71655" 
+  "71655" -> "71656" 
+  "71655" -> "71657" 
+  "71655" -> "71658" 
+  "71655" -> "71659" 
+  "71655" -> "71660" 
+  "71655" -> "71661" 
+  "71655" -> "71662" 
+  "71655" -> "71665" 
+  "71662" -> "71663" 
+  "71662" -> "71664" 
+}

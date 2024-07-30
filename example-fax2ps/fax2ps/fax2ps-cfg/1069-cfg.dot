@@ -1,0 +1,30 @@
+digraph "TIFFClampDoubleToInt16" {  
+"67426" [label = <(RETURN,return (int16_t)val;,return (int16_t)val;)<SUB>1265</SUB>> ]
+"67407" [label = <(&lt;operator&gt;.greaterThan,val &gt; 32767)<SUB>1261</SUB>> ]
+"67414" [label = <(&lt;operator&gt;.logicalOr,val &lt; -32768 || val != val)<SUB>1263</SUB>> ]
+"67427" [label = <(&lt;operator&gt;.cast,(int16_t)val)<SUB>1265</SUB>> ]
+"67411" [label = <(RETURN,return 32767;,return 32767;)<SUB>1262</SUB>> ]
+"67415" [label = <(&lt;operator&gt;.lessThan,val &lt; -32768)<SUB>1263</SUB>> ]
+"67419" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1263</SUB>> ]
+"67423" [label = <(RETURN,return -32768;,return -32768;)<SUB>1264</SUB>> ]
+"67428" [label = <(UNKNOWN,int16_t,int16_t)<SUB>1265</SUB>> ]
+"67417" [label = <(&lt;operator&gt;.minus,-32768)<SUB>1263</SUB>> ]
+"67424" [label = <(&lt;operator&gt;.minus,-32768)<SUB>1264</SUB>> ]
+"67403" [label = <(METHOD,TIFFClampDoubleToInt16)<SUB>1259</SUB>> ]
+"67430" [label = <(METHOD_RETURN,int16_t)<SUB>1259</SUB>> ]
+  "67426" -> "67430" 
+  "67407" -> "67411" 
+  "67407" -> "67417" 
+  "67414" -> "67428" 
+  "67414" -> "67424" 
+  "67427" -> "67426" 
+  "67411" -> "67430" 
+  "67415" -> "67414" 
+  "67415" -> "67419" 
+  "67419" -> "67414" 
+  "67423" -> "67430" 
+  "67428" -> "67427" 
+  "67417" -> "67415" 
+  "67424" -> "67423" 
+  "67403" -> "67407" 
+}

@@ -1,0 +1,219 @@
+digraph "ByteCountLooksBad" {  
+"88270" [label = <(METHOD,ByteCountLooksBad)<SUB>4009</SUB>> ]
+"88271" [label = <(PARAM,TIFF *tif)<SUB>4009</SUB>> ]
+"88272" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4010</SUB>> ]
+"88273" [label = <(LOCAL,uint64_t bytecount: uint64_t)<SUB>4024</SUB>> ]
+"88274" [label = <(&lt;operator&gt;.assignment,bytecount = TIFFGetStrileByteCount(tif, 0))<SUB>4024</SUB>> ]
+"88275" [label = <(IDENTIFIER,bytecount,bytecount = TIFFGetStrileByteCount(tif, 0))<SUB>4024</SUB>> ]
+"88276" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 0))<SUB>4024</SUB>> ]
+"88277" [label = <(IDENTIFIER,tif,TIFFGetStrileByteCount(tif, 0))<SUB>4024</SUB>> ]
+"88278" [label = <(LITERAL,0,TIFFGetStrileByteCount(tif, 0))<SUB>4024</SUB>> ]
+"88279" [label = <(LOCAL,uint64_t offset: uint64_t)<SUB>4025</SUB>> ]
+"88280" [label = <(&lt;operator&gt;.assignment,offset = TIFFGetStrileOffset(tif, 0))<SUB>4025</SUB>> ]
+"88281" [label = <(IDENTIFIER,offset,offset = TIFFGetStrileOffset(tif, 0))<SUB>4025</SUB>> ]
+"88282" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, 0))<SUB>4025</SUB>> ]
+"88283" [label = <(IDENTIFIER,tif,TIFFGetStrileOffset(tif, 0))<SUB>4025</SUB>> ]
+"88284" [label = <(LITERAL,0,TIFFGetStrileOffset(tif, 0))<SUB>4025</SUB>> ]
+"88285" [label = <(LOCAL,uint64_t filesize: uint64_t)<SUB>4026</SUB>> ]
+"88286" [label = <(CONTROL_STRUCTURE,if (offset == 0),if (offset == 0))<SUB>4028</SUB>> ]
+"88287" [label = <(&lt;operator&gt;.equals,offset == 0)<SUB>4028</SUB>> ]
+"88288" [label = <(IDENTIFIER,offset,offset == 0)<SUB>4028</SUB>> ]
+"88289" [label = <(LITERAL,0,offset == 0)<SUB>4028</SUB>> ]
+"88290" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4029</SUB>> ]
+"88291" [label = <(RETURN,return 0;,return 0;)<SUB>4029</SUB>> ]
+"88292" [label = <(LITERAL,0,return 0;)<SUB>4029</SUB>> ]
+"88293" [label = <(CONTROL_STRUCTURE,if (bytecount == 0),if (bytecount == 0))<SUB>4030</SUB>> ]
+"88294" [label = <(&lt;operator&gt;.equals,bytecount == 0)<SUB>4030</SUB>> ]
+"88295" [label = <(IDENTIFIER,bytecount,bytecount == 0)<SUB>4030</SUB>> ]
+"88296" [label = <(LITERAL,0,bytecount == 0)<SUB>4030</SUB>> ]
+"88297" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4031</SUB>> ]
+"88298" [label = <(RETURN,return 1;,return 1;)<SUB>4031</SUB>> ]
+"88299" [label = <(LITERAL,1,return 1;)<SUB>4031</SUB>> ]
+"88300" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_dir.td_compression != COMPRESSION_NONE),if (tif-&gt;tif_dir.td_compression != COMPRESSION_NONE))<SUB>4032</SUB>> ]
+"88301" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_compression != COMPRESSION_NONE)<SUB>4032</SUB>> ]
+"88302" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4032</SUB>> ]
+"88303" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4032</SUB>> ]
+"88304" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_compression != COMPRESSION_NONE)<SUB>4032</SUB>> ]
+"88305" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4032</SUB>> ]
+"88306" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4032</SUB>> ]
+"88307" [label = <(IDENTIFIER,COMPRESSION_NONE,tif-&gt;tif_dir.td_compression != COMPRESSION_NONE)<SUB>4032</SUB>> ]
+"88308" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4033</SUB>> ]
+"88309" [label = <(RETURN,return 0;,return 0;)<SUB>4033</SUB>> ]
+"88310" [label = <(LITERAL,0,return 0;)<SUB>4033</SUB>> ]
+"88311" [label = <(&lt;operator&gt;.assignment,filesize = TIFFGetFileSize(tif))<SUB>4034</SUB>> ]
+"88312" [label = <(IDENTIFIER,filesize,filesize = TIFFGetFileSize(tif))<SUB>4034</SUB>> ]
+"88313" [label = <(TIFFGetFileSize,TIFFGetFileSize(tif))<SUB>4034</SUB>> ]
+"88314" [label = <(IDENTIFIER,tif,TIFFGetFileSize(tif))<SUB>4034</SUB>> ]
+"88315" [label = <(CONTROL_STRUCTURE,if (offset &lt;= filesize &amp;&amp; bytecount &gt; filesize - offset),if (offset &lt;= filesize &amp;&amp; bytecount &gt; filesize - offset))<SUB>4035</SUB>> ]
+"88316" [label = <(&lt;operator&gt;.logicalAnd,offset &lt;= filesize &amp;&amp; bytecount &gt; filesize - offset)<SUB>4035</SUB>> ]
+"88317" [label = <(&lt;operator&gt;.lessEqualsThan,offset &lt;= filesize)<SUB>4035</SUB>> ]
+"88318" [label = <(IDENTIFIER,offset,offset &lt;= filesize)<SUB>4035</SUB>> ]
+"88319" [label = <(IDENTIFIER,filesize,offset &lt;= filesize)<SUB>4035</SUB>> ]
+"88320" [label = <(&lt;operator&gt;.greaterThan,bytecount &gt; filesize - offset)<SUB>4035</SUB>> ]
+"88321" [label = <(IDENTIFIER,bytecount,bytecount &gt; filesize - offset)<SUB>4035</SUB>> ]
+"88322" [label = <(&lt;operator&gt;.subtraction,filesize - offset)<SUB>4035</SUB>> ]
+"88323" [label = <(IDENTIFIER,filesize,filesize - offset)<SUB>4035</SUB>> ]
+"88324" [label = <(IDENTIFIER,offset,filesize - offset)<SUB>4035</SUB>> ]
+"88325" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4036</SUB>> ]
+"88326" [label = <(RETURN,return 1;,return 1;)<SUB>4036</SUB>> ]
+"88327" [label = <(LITERAL,1,return 1;)<SUB>4036</SUB>> ]
+"88328" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_mode == O_RDONLY),if (tif-&gt;tif_mode == O_RDONLY))<SUB>4037</SUB>> ]
+"88329" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDONLY)<SUB>4037</SUB>> ]
+"88330" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>4037</SUB>> ]
+"88331" [label = <(IDENTIFIER,tif,tif-&gt;tif_mode == O_RDONLY)<SUB>4037</SUB>> ]
+"88332" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>4037</SUB>> ]
+"88333" [label = <(IDENTIFIER,O_RDONLY,tif-&gt;tif_mode == O_RDONLY)<SUB>4037</SUB>> ]
+"88334" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4038</SUB>> ]
+"88335" [label = <(LOCAL,uint64_t scanlinesize: uint64_t)<SUB>4039</SUB>> ]
+"88336" [label = <(&lt;operator&gt;.assignment,scanlinesize = TIFFScanlineSize64(tif))<SUB>4039</SUB>> ]
+"88337" [label = <(IDENTIFIER,scanlinesize,scanlinesize = TIFFScanlineSize64(tif))<SUB>4039</SUB>> ]
+"88338" [label = <(TIFFScanlineSize64,TIFFScanlineSize64(tif))<SUB>4039</SUB>> ]
+"88339" [label = <(IDENTIFIER,tif,TIFFScanlineSize64(tif))<SUB>4039</SUB>> ]
+"88340" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_dir.td_imagelength &gt; 0 &amp;&amp;\012            scanlinesize &gt; UINT64_MAX / tif-&gt;tif_dir.td_imagelength),if (tif-&gt;tif_dir.td_imagelength &gt; 0 &amp;&amp;\012            scanlinesize &gt; UINT64_MAX / tif-&gt;tif_dir.td_imagelength))<SUB>4040</SUB>> ]
+"88341" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_imagelength &gt; 0 &amp;&amp;\012            scanlinesize &gt; UINT64_MAX / tif-&gt;tif_dir.td_imagelength)<SUB>4040</SUB>> ]
+"88342" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_dir.td_imagelength &gt; 0)<SUB>4040</SUB>> ]
+"88343" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_imagelength)<SUB>4040</SUB>> ]
+"88344" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4040</SUB>> ]
+"88345" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_imagelength &gt; 0)<SUB>4040</SUB>> ]
+"88346" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4040</SUB>> ]
+"88347" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>4040</SUB>> ]
+"88348" [label = <(LITERAL,0,tif-&gt;tif_dir.td_imagelength &gt; 0)<SUB>4040</SUB>> ]
+"88349" [label = <(&lt;operator&gt;.greaterThan,scanlinesize &gt; UINT64_MAX / tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88350" [label = <(IDENTIFIER,scanlinesize,scanlinesize &gt; UINT64_MAX / tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88351" [label = <(UINT64_MAX,UINT64_MAX / tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88352" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"88353" [label = <(&lt;operator&gt;.division,(18446744073709551615ULL) / tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88354" [label = <(LITERAL,18446744073709551615ULL,(18446744073709551615ULL) / tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88355" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88356" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4041</SUB>> ]
+"88357" [label = <(IDENTIFIER,tif,(18446744073709551615ULL) / tif-&gt;tif_dir.td_imagelength)<SUB>4041</SUB>> ]
+"88358" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4041</SUB>> ]
+"88359" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>4041</SUB>> ]
+"88360" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4042</SUB>> ]
+"88361" [label = <(RETURN,return 1;,return 1;)<SUB>4043</SUB>> ]
+"88362" [label = <(LITERAL,1,return 1;)<SUB>4043</SUB>> ]
+"88363" [label = <(CONTROL_STRUCTURE,if (bytecount &lt; scanlinesize * tif-&gt;tif_dir.td_imagelength),if (bytecount &lt; scanlinesize * tif-&gt;tif_dir.td_imagelength))<SUB>4045</SUB>> ]
+"88364" [label = <(&lt;operator&gt;.lessThan,bytecount &lt; scanlinesize * tif-&gt;tif_dir.td_imagelength)<SUB>4045</SUB>> ]
+"88365" [label = <(IDENTIFIER,bytecount,bytecount &lt; scanlinesize * tif-&gt;tif_dir.td_imagelength)<SUB>4045</SUB>> ]
+"88366" [label = <(&lt;operator&gt;.multiplication,scanlinesize * tif-&gt;tif_dir.td_imagelength)<SUB>4045</SUB>> ]
+"88367" [label = <(IDENTIFIER,scanlinesize,scanlinesize * tif-&gt;tif_dir.td_imagelength)<SUB>4045</SUB>> ]
+"88368" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_imagelength)<SUB>4045</SUB>> ]
+"88369" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4045</SUB>> ]
+"88370" [label = <(IDENTIFIER,tif,scanlinesize * tif-&gt;tif_dir.td_imagelength)<SUB>4045</SUB>> ]
+"88371" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4045</SUB>> ]
+"88372" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>4045</SUB>> ]
+"88373" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4046</SUB>> ]
+"88374" [label = <(RETURN,return 1;,return 1;)<SUB>4046</SUB>> ]
+"88375" [label = <(LITERAL,1,return 1;)<SUB>4046</SUB>> ]
+"88376" [label = <(RETURN,return 0;,return 0;)<SUB>4048</SUB>> ]
+"88377" [label = <(LITERAL,0,return 0;)<SUB>4048</SUB>> ]
+"88378" [label = <(METHOD_RETURN,int)<SUB>4009</SUB>> ]
+  "88270" -> "88271" 
+  "88270" -> "88272" 
+  "88270" -> "88378" 
+  "88272" -> "88273" 
+  "88272" -> "88274" 
+  "88272" -> "88279" 
+  "88272" -> "88280" 
+  "88272" -> "88285" 
+  "88272" -> "88286" 
+  "88272" -> "88293" 
+  "88272" -> "88300" 
+  "88272" -> "88311" 
+  "88272" -> "88315" 
+  "88272" -> "88328" 
+  "88272" -> "88376" 
+  "88274" -> "88275" 
+  "88274" -> "88276" 
+  "88276" -> "88277" 
+  "88276" -> "88278" 
+  "88280" -> "88281" 
+  "88280" -> "88282" 
+  "88282" -> "88283" 
+  "88282" -> "88284" 
+  "88286" -> "88287" 
+  "88286" -> "88290" 
+  "88287" -> "88288" 
+  "88287" -> "88289" 
+  "88290" -> "88291" 
+  "88291" -> "88292" 
+  "88293" -> "88294" 
+  "88293" -> "88297" 
+  "88294" -> "88295" 
+  "88294" -> "88296" 
+  "88297" -> "88298" 
+  "88298" -> "88299" 
+  "88300" -> "88301" 
+  "88300" -> "88308" 
+  "88301" -> "88302" 
+  "88301" -> "88307" 
+  "88302" -> "88303" 
+  "88302" -> "88306" 
+  "88303" -> "88304" 
+  "88303" -> "88305" 
+  "88308" -> "88309" 
+  "88309" -> "88310" 
+  "88311" -> "88312" 
+  "88311" -> "88313" 
+  "88313" -> "88314" 
+  "88315" -> "88316" 
+  "88315" -> "88325" 
+  "88316" -> "88317" 
+  "88316" -> "88320" 
+  "88317" -> "88318" 
+  "88317" -> "88319" 
+  "88320" -> "88321" 
+  "88320" -> "88322" 
+  "88322" -> "88323" 
+  "88322" -> "88324" 
+  "88325" -> "88326" 
+  "88326" -> "88327" 
+  "88328" -> "88329" 
+  "88328" -> "88334" 
+  "88329" -> "88330" 
+  "88329" -> "88333" 
+  "88330" -> "88331" 
+  "88330" -> "88332" 
+  "88334" -> "88335" 
+  "88334" -> "88336" 
+  "88334" -> "88340" 
+  "88334" -> "88363" 
+  "88336" -> "88337" 
+  "88336" -> "88338" 
+  "88338" -> "88339" 
+  "88340" -> "88341" 
+  "88340" -> "88360" 
+  "88341" -> "88342" 
+  "88341" -> "88349" 
+  "88342" -> "88343" 
+  "88342" -> "88348" 
+  "88343" -> "88344" 
+  "88343" -> "88347" 
+  "88344" -> "88345" 
+  "88344" -> "88346" 
+  "88349" -> "88350" 
+  "88349" -> "88351" 
+  "88351" -> "88352" 
+  "88352" -> "88353" 
+  "88353" -> "88354" 
+  "88353" -> "88355" 
+  "88355" -> "88356" 
+  "88355" -> "88359" 
+  "88356" -> "88357" 
+  "88356" -> "88358" 
+  "88360" -> "88361" 
+  "88361" -> "88362" 
+  "88363" -> "88364" 
+  "88363" -> "88373" 
+  "88364" -> "88365" 
+  "88364" -> "88366" 
+  "88366" -> "88367" 
+  "88366" -> "88368" 
+  "88368" -> "88369" 
+  "88368" -> "88372" 
+  "88369" -> "88370" 
+  "88369" -> "88371" 
+  "88373" -> "88374" 
+  "88374" -> "88375" 
+  "88376" -> "88377" 
+}

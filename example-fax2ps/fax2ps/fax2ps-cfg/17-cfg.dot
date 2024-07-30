@@ -1,0 +1,23 @@
+digraph "TIFFSetFileName" {  
+"1430" [label = <(&lt;operator&gt;.assignment,*old_name = tif-&gt;tif_name)<SUB>661</SUB>> ]
+"1435" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_name = (char *)name)<SUB>662</SUB>> ]
+"1442" [label = <(RETURN,return (old_name);,return (old_name);)<SUB>663</SUB>> ]
+"1432" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>661</SUB>> ]
+"1436" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>662</SUB>> ]
+"1439" [label = <(&lt;operator&gt;.cast,(char *)name)<SUB>662</SUB>> ]
+"1434" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>661</SUB>> ]
+"1438" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>662</SUB>> ]
+"1440" [label = <(UNKNOWN,char *,char *)<SUB>662</SUB>> ]
+"1425" [label = <(METHOD,TIFFSetFileName)<SUB>659</SUB>> ]
+"1444" [label = <(METHOD_RETURN,const char*)<SUB>659</SUB>> ]
+  "1430" -> "1438" 
+  "1435" -> "1442" 
+  "1442" -> "1444" 
+  "1432" -> "1430" 
+  "1436" -> "1440" 
+  "1439" -> "1435" 
+  "1434" -> "1432" 
+  "1438" -> "1436" 
+  "1440" -> "1439" 
+  "1425" -> "1434" 
+}

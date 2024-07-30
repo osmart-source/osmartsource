@@ -1,0 +1,171 @@
+digraph "CheckDirCount" {  
+"92196" [label = <(METHOD,CheckDirCount)<SUB>5544</SUB>> ]
+"92197" [label = <(PARAM,TIFF *tif)<SUB>5544</SUB>> ]
+"92198" [label = <(PARAM,TIFFDirEntry *dir)<SUB>5544</SUB>> ]
+"92199" [label = <(PARAM,uint32_t count)<SUB>5544</SUB>> ]
+"92200" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5545</SUB>> ]
+"92201" [label = <(CONTROL_STRUCTURE,if ((uint64_t)count &gt; dir-&gt;tdir_count),if ((uint64_t)count &gt; dir-&gt;tdir_count))<SUB>5546</SUB>> ]
+"92202" [label = <(&lt;operator&gt;.greaterThan,(uint64_t)count &gt; dir-&gt;tdir_count)<SUB>5546</SUB>> ]
+"92203" [label = <(&lt;operator&gt;.cast,(uint64_t)count)<SUB>5546</SUB>> ]
+"92204" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>5546</SUB>> ]
+"92205" [label = <(IDENTIFIER,count,(uint64_t)count)<SUB>5546</SUB>> ]
+"92206" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_count)<SUB>5546</SUB>> ]
+"92207" [label = <(IDENTIFIER,dir,(uint64_t)count &gt; dir-&gt;tdir_count)<SUB>5546</SUB>> ]
+"92208" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>5546</SUB>> ]
+"92209" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5547</SUB>> ]
+"92210" [label = <(LOCAL,const TIFFField* fip: TIFFField)<SUB>5548</SUB>> ]
+"92211" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5548</SUB>> ]
+"92212" [label = <(IDENTIFIER,fip,*fip = TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5548</SUB>> ]
+"92213" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5548</SUB>> ]
+"92214" [label = <(IDENTIFIER,tif,TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5548</SUB>> ]
+"92215" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_tag)<SUB>5548</SUB>> ]
+"92216" [label = <(IDENTIFIER,dir,TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5548</SUB>> ]
+"92217" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>5548</SUB>> ]
+"92218" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5549</SUB>> ]
+"92219" [label = <(IDENTIFIER,tif,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5549</SUB>> ]
+"92220" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>5549</SUB>> ]
+"92221" [label = <(IDENTIFIER,tif,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5549</SUB>> ]
+"92222" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>5549</SUB>> ]
+"92223" [label = <(LITERAL,&quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5550</SUB>> ]
+"92224" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5552</SUB>> ]
+"92225" [label = <(IDENTIFIER,fip,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5552</SUB>> ]
+"92226" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>5552</SUB>> ]
+"92227" [label = <(IDENTIFIER,fip,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5552</SUB>> ]
+"92228" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>5552</SUB>> ]
+"92229" [label = <(LITERAL,&quot;unknown tagname&quot;,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5552</SUB>> ]
+"92230" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_count)<SUB>5553</SUB>> ]
+"92231" [label = <(IDENTIFIER,dir,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5553</SUB>> ]
+"92232" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>5553</SUB>> ]
+"92233" [label = <(IDENTIFIER,count,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag ignored&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5553</SUB>> ]
+"92234" [label = <(RETURN,return (0);,return (0);)<SUB>5554</SUB>> ]
+"92235" [label = <(LITERAL,0,return (0);)<SUB>5554</SUB>> ]
+"92236" [label = <(CONTROL_STRUCTURE,else,else)<SUB>5556</SUB>> ]
+"92237" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5556</SUB>> ]
+"92238" [label = <(CONTROL_STRUCTURE,if ((uint64_t)count &lt; dir-&gt;tdir_count),if ((uint64_t)count &lt; dir-&gt;tdir_count))<SUB>5556</SUB>> ]
+"92239" [label = <(&lt;operator&gt;.lessThan,(uint64_t)count &lt; dir-&gt;tdir_count)<SUB>5556</SUB>> ]
+"92240" [label = <(&lt;operator&gt;.cast,(uint64_t)count)<SUB>5556</SUB>> ]
+"92241" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>5556</SUB>> ]
+"92242" [label = <(IDENTIFIER,count,(uint64_t)count)<SUB>5556</SUB>> ]
+"92243" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_count)<SUB>5556</SUB>> ]
+"92244" [label = <(IDENTIFIER,dir,(uint64_t)count &lt; dir-&gt;tdir_count)<SUB>5556</SUB>> ]
+"92245" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>5556</SUB>> ]
+"92246" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5557</SUB>> ]
+"92247" [label = <(LOCAL,const TIFFField* fip: TIFFField)<SUB>5558</SUB>> ]
+"92248" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5558</SUB>> ]
+"92249" [label = <(IDENTIFIER,fip,*fip = TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5558</SUB>> ]
+"92250" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5558</SUB>> ]
+"92251" [label = <(IDENTIFIER,tif,TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5558</SUB>> ]
+"92252" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_tag)<SUB>5558</SUB>> ]
+"92253" [label = <(IDENTIFIER,dir,TIFFFieldWithTag(tif, dir-&gt;tdir_tag))<SUB>5558</SUB>> ]
+"92254" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>5558</SUB>> ]
+"92255" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5559</SUB>> ]
+"92256" [label = <(IDENTIFIER,tif,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5559</SUB>> ]
+"92257" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>5559</SUB>> ]
+"92258" [label = <(IDENTIFIER,tif,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5559</SUB>> ]
+"92259" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>5559</SUB>> ]
+"92260" [label = <(LITERAL,&quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5560</SUB>> ]
+"92261" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5562</SUB>> ]
+"92262" [label = <(IDENTIFIER,fip,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5562</SUB>> ]
+"92263" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>5562</SUB>> ]
+"92264" [label = <(IDENTIFIER,fip,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5562</SUB>> ]
+"92265" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>5562</SUB>> ]
+"92266" [label = <(LITERAL,&quot;unknown tagname&quot;,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>5562</SUB>> ]
+"92267" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_count)<SUB>5563</SUB>> ]
+"92268" [label = <(IDENTIFIER,dir,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5563</SUB>> ]
+"92269" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>5563</SUB>> ]
+"92270" [label = <(IDENTIFIER,count,TIFFWarningExtR(tif, tif-&gt;tif_name,\012                        &quot;incorrect count for field \&quot;%s\&quot; (%&quot; PRIu64\012                        &quot;, expecting %&quot; PRIu32 &quot;); tag trimmed&quot;,\012                        fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                        dir-&gt;tdir_count, count))<SUB>5563</SUB>> ]
+"92271" [label = <(&lt;operator&gt;.assignment,dir-&gt;tdir_count = count)<SUB>5564</SUB>> ]
+"92272" [label = <(&lt;operator&gt;.indirectFieldAccess,dir-&gt;tdir_count)<SUB>5564</SUB>> ]
+"92273" [label = <(IDENTIFIER,dir,dir-&gt;tdir_count = count)<SUB>5564</SUB>> ]
+"92274" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>5564</SUB>> ]
+"92275" [label = <(IDENTIFIER,count,dir-&gt;tdir_count = count)<SUB>5564</SUB>> ]
+"92276" [label = <(RETURN,return (1);,return (1);)<SUB>5565</SUB>> ]
+"92277" [label = <(LITERAL,1,return (1);)<SUB>5565</SUB>> ]
+"92278" [label = <(RETURN,return (1);,return (1);)<SUB>5567</SUB>> ]
+"92279" [label = <(LITERAL,1,return (1);)<SUB>5567</SUB>> ]
+"92280" [label = <(METHOD_RETURN,int)<SUB>5544</SUB>> ]
+  "92196" -> "92197" 
+  "92196" -> "92198" 
+  "92196" -> "92199" 
+  "92196" -> "92200" 
+  "92196" -> "92280" 
+  "92200" -> "92201" 
+  "92200" -> "92278" 
+  "92201" -> "92202" 
+  "92201" -> "92209" 
+  "92201" -> "92236" 
+  "92202" -> "92203" 
+  "92202" -> "92206" 
+  "92203" -> "92204" 
+  "92203" -> "92205" 
+  "92206" -> "92207" 
+  "92206" -> "92208" 
+  "92209" -> "92210" 
+  "92209" -> "92211" 
+  "92209" -> "92218" 
+  "92209" -> "92234" 
+  "92211" -> "92212" 
+  "92211" -> "92213" 
+  "92213" -> "92214" 
+  "92213" -> "92215" 
+  "92215" -> "92216" 
+  "92215" -> "92217" 
+  "92218" -> "92219" 
+  "92218" -> "92220" 
+  "92218" -> "92223" 
+  "92218" -> "92224" 
+  "92218" -> "92230" 
+  "92218" -> "92233" 
+  "92220" -> "92221" 
+  "92220" -> "92222" 
+  "92224" -> "92225" 
+  "92224" -> "92226" 
+  "92224" -> "92229" 
+  "92226" -> "92227" 
+  "92226" -> "92228" 
+  "92230" -> "92231" 
+  "92230" -> "92232" 
+  "92234" -> "92235" 
+  "92236" -> "92237" 
+  "92237" -> "92238" 
+  "92238" -> "92239" 
+  "92238" -> "92246" 
+  "92239" -> "92240" 
+  "92239" -> "92243" 
+  "92240" -> "92241" 
+  "92240" -> "92242" 
+  "92243" -> "92244" 
+  "92243" -> "92245" 
+  "92246" -> "92247" 
+  "92246" -> "92248" 
+  "92246" -> "92255" 
+  "92246" -> "92271" 
+  "92246" -> "92276" 
+  "92248" -> "92249" 
+  "92248" -> "92250" 
+  "92250" -> "92251" 
+  "92250" -> "92252" 
+  "92252" -> "92253" 
+  "92252" -> "92254" 
+  "92255" -> "92256" 
+  "92255" -> "92257" 
+  "92255" -> "92260" 
+  "92255" -> "92261" 
+  "92255" -> "92267" 
+  "92255" -> "92270" 
+  "92257" -> "92258" 
+  "92257" -> "92259" 
+  "92261" -> "92262" 
+  "92261" -> "92263" 
+  "92261" -> "92266" 
+  "92263" -> "92264" 
+  "92263" -> "92265" 
+  "92267" -> "92268" 
+  "92267" -> "92269" 
+  "92271" -> "92272" 
+  "92271" -> "92275" 
+  "92272" -> "92273" 
+  "92272" -> "92274" 
+  "92276" -> "92277" 
+  "92278" -> "92279" 
+}

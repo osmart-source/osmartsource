@@ -1,0 +1,49 @@
+digraph "TIFFCIELabToXYZ" {  
+"6475" [label = <(METHOD,TIFFCIELabToXYZ)<SUB>43</SUB>> ]
+"6476" [label = <(PARAM,TIFFCIELabToRGB *cielab)<SUB>43</SUB>> ]
+"6477" [label = <(PARAM,uint32_t l)<SUB>43</SUB>> ]
+"6478" [label = <(PARAM,int32_t a)<SUB>43</SUB>> ]
+"6479" [label = <(PARAM,int32_t b)<SUB>43</SUB>> ]
+"6480" [label = <(PARAM,float *X)<SUB>44</SUB>> ]
+"6481" [label = <(PARAM,float *Y)<SUB>44</SUB>> ]
+"6482" [label = <(PARAM,float *Z)<SUB>44</SUB>> ]
+"6483" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>45</SUB>> ]
+"6484" [label = <(TIFFCIELab16ToXYZ,TIFFCIELab16ToXYZ(cielab, l * 257, a * 256, b * 256, X, Y, Z))<SUB>46</SUB>> ]
+"6485" [label = <(IDENTIFIER,cielab,TIFFCIELab16ToXYZ(cielab, l * 257, a * 256, b * 256, X, Y, Z))<SUB>46</SUB>> ]
+"6486" [label = <(&lt;operator&gt;.multiplication,l * 257)<SUB>46</SUB>> ]
+"6487" [label = <(IDENTIFIER,l,l * 257)<SUB>46</SUB>> ]
+"6488" [label = <(LITERAL,257,l * 257)<SUB>46</SUB>> ]
+"6489" [label = <(&lt;operator&gt;.multiplication,a * 256)<SUB>46</SUB>> ]
+"6490" [label = <(IDENTIFIER,a,a * 256)<SUB>46</SUB>> ]
+"6491" [label = <(LITERAL,256,a * 256)<SUB>46</SUB>> ]
+"6492" [label = <(&lt;operator&gt;.multiplication,b * 256)<SUB>46</SUB>> ]
+"6493" [label = <(IDENTIFIER,b,b * 256)<SUB>46</SUB>> ]
+"6494" [label = <(LITERAL,256,b * 256)<SUB>46</SUB>> ]
+"6495" [label = <(IDENTIFIER,X,TIFFCIELab16ToXYZ(cielab, l * 257, a * 256, b * 256, X, Y, Z))<SUB>46</SUB>> ]
+"6496" [label = <(IDENTIFIER,Y,TIFFCIELab16ToXYZ(cielab, l * 257, a * 256, b * 256, X, Y, Z))<SUB>46</SUB>> ]
+"6497" [label = <(IDENTIFIER,Z,TIFFCIELab16ToXYZ(cielab, l * 257, a * 256, b * 256, X, Y, Z))<SUB>46</SUB>> ]
+"6498" [label = <(METHOD_RETURN,void)<SUB>43</SUB>> ]
+  "6475" -> "6476" 
+  "6475" -> "6477" 
+  "6475" -> "6478" 
+  "6475" -> "6479" 
+  "6475" -> "6480" 
+  "6475" -> "6481" 
+  "6475" -> "6482" 
+  "6475" -> "6483" 
+  "6475" -> "6498" 
+  "6483" -> "6484" 
+  "6484" -> "6485" 
+  "6484" -> "6486" 
+  "6484" -> "6489" 
+  "6484" -> "6492" 
+  "6484" -> "6495" 
+  "6484" -> "6496" 
+  "6484" -> "6497" 
+  "6486" -> "6487" 
+  "6486" -> "6488" 
+  "6489" -> "6490" 
+  "6489" -> "6491" 
+  "6492" -> "6493" 
+  "6492" -> "6494" 
+}

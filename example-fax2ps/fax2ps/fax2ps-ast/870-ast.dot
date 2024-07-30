@@ -1,0 +1,41 @@
+digraph "TIFFSetField" {  
+"42428" [label = <(METHOD,TIFFSetField)<SUB>1146</SUB>> ]
+"42429" [label = <(PARAM,TIFF *tif)<SUB>1146</SUB>> ]
+"42430" [label = <(PARAM,uint32_t tag...)<SUB>1146</SUB>> ]
+"42431" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1147</SUB>> ]
+"42432" [label = <(LOCAL,va_list ap: va_list)<SUB>1148</SUB>> ]
+"42433" [label = <(LOCAL,int status: int)<SUB>1149</SUB>> ]
+"42434" [label = <(va_start,va_start(ap, tag))<SUB>1151</SUB>> ]
+"42435" [label = <(IDENTIFIER,ap,va_start(ap, tag))<SUB>1151</SUB>> ]
+"42436" [label = <(IDENTIFIER,tag,va_start(ap, tag))<SUB>1151</SUB>> ]
+"42437" [label = <(&lt;operator&gt;.assignment,status = TIFFVSetField(tif, tag, ap))<SUB>1152</SUB>> ]
+"42438" [label = <(IDENTIFIER,status,status = TIFFVSetField(tif, tag, ap))<SUB>1152</SUB>> ]
+"42439" [label = <(TIFFVSetField,TIFFVSetField(tif, tag, ap))<SUB>1152</SUB>> ]
+"42440" [label = <(IDENTIFIER,tif,TIFFVSetField(tif, tag, ap))<SUB>1152</SUB>> ]
+"42441" [label = <(IDENTIFIER,tag,TIFFVSetField(tif, tag, ap))<SUB>1152</SUB>> ]
+"42442" [label = <(IDENTIFIER,ap,TIFFVSetField(tif, tag, ap))<SUB>1152</SUB>> ]
+"42443" [label = <(va_end,va_end(ap))<SUB>1153</SUB>> ]
+"42444" [label = <(IDENTIFIER,ap,va_end(ap))<SUB>1153</SUB>> ]
+"42445" [label = <(RETURN,return (status);,return (status);)<SUB>1154</SUB>> ]
+"42446" [label = <(IDENTIFIER,status,return (status);)<SUB>1154</SUB>> ]
+"42447" [label = <(METHOD_RETURN,int)<SUB>1146</SUB>> ]
+  "42428" -> "42429" 
+  "42428" -> "42430" 
+  "42428" -> "42431" 
+  "42428" -> "42447" 
+  "42431" -> "42432" 
+  "42431" -> "42433" 
+  "42431" -> "42434" 
+  "42431" -> "42437" 
+  "42431" -> "42443" 
+  "42431" -> "42445" 
+  "42434" -> "42435" 
+  "42434" -> "42436" 
+  "42437" -> "42438" 
+  "42437" -> "42439" 
+  "42439" -> "42440" 
+  "42439" -> "42441" 
+  "42439" -> "42442" 
+  "42443" -> "42444" 
+  "42445" -> "42446" 
+}

@@ -1,0 +1,14 @@
+digraph "modf" {  
+"6283" [label = <(METHOD,modf)<SUB>110</SUB>> ]
+"6284" [label = <(PARAM,__MATHCALL (modf,, (_Mdouble_ __x, _Mdouble_ *__iptr)))<SUB>110</SUB>> ]
+"6285" [label = <(PARAM,__MATHCALL (modf,, (_Mdouble_ __x, _Mdouble_ *__iptr)))<SUB>110</SUB>> ]
+"6286" [label = <(METHOD_RETURN,double)<SUB>110</SUB>> ]
+  "6283" -> "6284"  [ label = "AST: "] 
+  "6283" -> "6285"  [ label = "AST: "] 
+  "6283" -> "6286"  [ label = "AST: "] 
+  "6283" -> "6286"  [ label = "CFG: "] 
+  "6284" -> "6286"  [ label = "DDG: __x"] 
+  "6285" -> "6286"  [ label = "DDG: __iptr"] 
+  "6283" -> "6284"  [ label = "DDG: "] 
+  "6283" -> "6285"  [ label = "DDG: "] 
+}

@@ -1,0 +1,20 @@
+digraph "TIFFFieldWithTag" {  
+"27634" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFindField(tif, tag, TIFF_ANY))<SUB>1039</SUB>> ]
+"27651" [label = <(RETURN,return (fip);,return (fip);)<SUB>1045</SUB>> ]
+"27636" [label = <(TIFFFindField,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1039</SUB>> ]
+"27641" [label = <(&lt;operator&gt;.logicalNot,!fip)<SUB>1040</SUB>> ]
+"27644" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;TIFFFieldWithTag&quot;,\012                      &quot;Internal error, unknown tag 0x%x&quot;, (unsigned int)tag))<SUB>1042</SUB>> ]
+"27648" [label = <(&lt;operator&gt;.cast,(unsigned int)tag)<SUB>1043</SUB>> ]
+"27649" [label = <(UNKNOWN,unsigned int,unsigned int)<SUB>1043</SUB>> ]
+"27629" [label = <(METHOD,TIFFFieldWithTag)<SUB>1037</SUB>> ]
+"27653" [label = <(METHOD_RETURN,TIFFField)<SUB>1037</SUB>> ]
+  "27634" -> "27641" 
+  "27651" -> "27653" 
+  "27636" -> "27634" 
+  "27641" -> "27649" 
+  "27641" -> "27651" 
+  "27644" -> "27651" 
+  "27648" -> "27644" 
+  "27649" -> "27648" 
+  "27629" -> "27636" 
+}

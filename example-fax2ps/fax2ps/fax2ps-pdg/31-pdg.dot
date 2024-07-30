@@ -1,0 +1,15 @@
+digraph "TIFFIsMSB2LSB" {  
+"1595" [label = <(METHOD,TIFFIsMSB2LSB)<SUB>750</SUB>> ]
+"1602" [label = <(METHOD_RETURN,int)<SUB>750</SUB>> ]
+"1596" [label = <(PARAM,TIFF *tif)<SUB>750</SUB>> ]
+"1598" [label = <(RETURN,return (isFillOrder(tif, FILLORDER_MSB2LSB));,return (isFillOrder(tif, FILLORDER_MSB2LSB));)<SUB>750</SUB>> ]
+"1599" [label = <(isFillOrder,isFillOrder(tif, FILLORDER_MSB2LSB))<SUB>750</SUB>> ]
+  "1598" -> "1602"  [ label = "DDG: &lt;RET&gt;"] 
+  "1599" -> "1602"  [ label = "DDG: tif"] 
+  "1599" -> "1602"  [ label = "DDG: isFillOrder(tif, FILLORDER_MSB2LSB)"] 
+  "1599" -> "1602"  [ label = "DDG: FILLORDER_MSB2LSB"] 
+  "1595" -> "1596"  [ label = "DDG: "] 
+  "1599" -> "1598"  [ label = "DDG: isFillOrder(tif, FILLORDER_MSB2LSB)"] 
+  "1596" -> "1599"  [ label = "DDG: tif"] 
+  "1595" -> "1599"  [ label = "DDG: "] 
+}

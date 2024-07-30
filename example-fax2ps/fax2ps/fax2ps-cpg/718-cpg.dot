@@ -1,0 +1,18 @@
+digraph "strtoull" {  
+"33194" [label = <(METHOD,strtoull)<SUB>205</SUB>> ]
+"33195" [label = <(PARAM,const char *__restrict __nptr)<SUB>205</SUB>> ]
+"33196" [label = <(PARAM,char **__restrict __endptr)<SUB>206</SUB>> ]
+"33197" [label = <(PARAM,int __base)<SUB>206</SUB>> ]
+"33198" [label = <(METHOD_RETURN,long long unsigned int)<SUB>205</SUB>> ]
+  "33194" -> "33195"  [ label = "AST: "] 
+  "33194" -> "33196"  [ label = "AST: "] 
+  "33194" -> "33197"  [ label = "AST: "] 
+  "33194" -> "33198"  [ label = "AST: "] 
+  "33194" -> "33198"  [ label = "CFG: "] 
+  "33195" -> "33198"  [ label = "DDG: __nptr"] 
+  "33196" -> "33198"  [ label = "DDG: __endptr"] 
+  "33197" -> "33198"  [ label = "DDG: __base"] 
+  "33194" -> "33195"  [ label = "DDG: "] 
+  "33194" -> "33196"  [ label = "DDG: "] 
+  "33194" -> "33197"  [ label = "DDG: "] 
+}

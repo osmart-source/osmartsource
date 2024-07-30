@@ -6,7 +6,7 @@ We conducted the experiment on a 96-core machine running Ubuntu 20.04.1 LTS with
 
 ## Usage
 
-Taking Libtiff/fax2ps as an example, we present the whole process.
+Taking Libtiff/fax2ps as an example, we present the whole process, which can be seen in example-fax2ps.
 
 The file structure is below:
 

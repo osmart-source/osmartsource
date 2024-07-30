@@ -1,0 +1,118 @@
+digraph "_TIFFGetStrileOffsetOrByteCountValue" {  
+"98340" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98445" [label = <(RETURN,return (*parray)[strile];,return (*parray)[strile];)<SUB>7629</SUB>> ]
+"98342" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98347" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7594</SUB>> ]
+"98356" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS))<SUB>7596</SUB>> ]
+"98419" [label = <(&lt;operator&gt;.logicalOr,*parray == NULL || strile &gt;= td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98446" [label = <(&lt;operator&gt;.indirectIndexAccess,(*parray)[strile])<SUB>7629</SUB>> ]
+"98343" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98351" [label = <(&lt;operator&gt;.assignment,*pbErr = 0)<SUB>7595</SUB>> ]
+"98357" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>7596</SUB>> ]
+"98362" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS))<SUB>7597</SUB>> ]
+"98420" [label = <(&lt;operator&gt;.equals,*parray == NULL)<SUB>7623</SUB>> ]
+"98428" [label = <(&lt;operator&gt;.greaterEqualsThan,strile &gt;= td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98443" [label = <(RETURN,return 0;,return 0;)<SUB>7627</SUB>> ]
+"98447" [label = <(&lt;operator&gt;.indirection,*parray)<SUB>7629</SUB>> ]
+"98345" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7593</SUB>> ]
+"98352" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7595</SUB>> ]
+"98358" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7596</SUB>> ]
+"98363" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)<SUB>7597</SUB>> ]
+"98370" [label = <(&lt;operator&gt;.logicalOr,!(tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD) ||\012            /* If the values may fit in the toff_long/toff_long8 member */\012            /* then use _TIFFFillStriles to simplify _TIFFFetchStrileValue */\012            dirent-&gt;tdir_count &lt;= 4)<SUB>7599</SUB>> ]
+"98421" [label = <(&lt;operator&gt;.indirection,*parray)<SUB>7623</SUB>> ]
+"98423" [label = <(NULL,NULL)<SUB>7623</SUB>> ]
+"98430" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98435" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7625</SUB>> ]
+"98360" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7596</SUB>> ]
+"98364" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7597</SUB>> ]
+"98371" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD))<SUB>7599</SUB>> ]
+"98377" [label = <(&lt;operator&gt;.lessEqualsThan,dirent-&gt;tdir_count &lt;= 4)<SUB>7602</SUB>> ]
+"98432" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7623</SUB>> ]
+"98439" [label = <(&lt;operator&gt;.assignment,*pbErr = 1)<SUB>7626</SUB>> ]
+"98366" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7597</SUB>> ]
+"98372" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD)<SUB>7599</SUB>> ]
+"98378" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_count)<SUB>7602</SUB>> ]
+"98384" [label = <(&lt;operator&gt;.logicalNot,!_TIFFFillStriles(tif))<SUB>7604</SUB>> ]
+"98425" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7623</SUB>> ]
+"98440" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7626</SUB>> ]
+"98373" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7599</SUB>> ]
+"98380" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>7602</SUB>> ]
+"98385" [label = <(_TIFFFillStriles,_TIFFFillStriles(tif))<SUB>7604</SUB>> ]
+"98400" [label = <(&lt;operator&gt;.logicalNot,!_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98426" [label = <(UNKNOWN,void *,void *)<SUB>7623</SUB>> ]
+"98375" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7599</SUB>> ]
+"98389" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7606</SUB>> ]
+"98401" [label = <(_TIFFFetchStrileValue,_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98416" [label = <(RETURN,return 0;,return 0;)<SUB>7619</SUB>> ]
+"98393" [label = <(&lt;operator&gt;.assignment,*pbErr = 1)<SUB>7607</SUB>> ]
+"98408" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7617</SUB>> ]
+"98394" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7607</SUB>> ]
+"98412" [label = <(&lt;operator&gt;.assignment,*pbErr = 1)<SUB>7618</SUB>> ]
+"98413" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7618</SUB>> ]
+"98332" [label = <(METHOD,_TIFFGetStrileOffsetOrByteCountValue)<SUB>7588</SUB>> ]
+"98450" [label = <(METHOD_RETURN,uint64_t)<SUB>7588</SUB>> ]
+  "98340" -> "98347" 
+  "98445" -> "98450" 
+  "98342" -> "98340" 
+  "98347" -> "98352" 
+  "98347" -> "98360" 
+  "98356" -> "98375" 
+  "98356" -> "98421" 
+  "98419" -> "98435" 
+  "98419" -> "98447" 
+  "98446" -> "98445" 
+  "98343" -> "98342" 
+  "98351" -> "98360" 
+  "98357" -> "98356" 
+  "98357" -> "98366" 
+  "98362" -> "98356" 
+  "98420" -> "98419" 
+  "98420" -> "98432" 
+  "98428" -> "98419" 
+  "98443" -> "98450" 
+  "98447" -> "98446" 
+  "98345" -> "98343" 
+  "98352" -> "98351" 
+  "98358" -> "98357" 
+  "98363" -> "98362" 
+  "98370" -> "98385" 
+  "98370" -> "98401" 
+  "98421" -> "98423" 
+  "98423" -> "98426" 
+  "98423" -> "98420" 
+  "98430" -> "98428" 
+  "98435" -> "98440" 
+  "98435" -> "98443" 
+  "98360" -> "98358" 
+  "98364" -> "98363" 
+  "98371" -> "98370" 
+  "98371" -> "98380" 
+  "98377" -> "98370" 
+  "98432" -> "98430" 
+  "98439" -> "98443" 
+  "98366" -> "98364" 
+  "98372" -> "98371" 
+  "98378" -> "98377" 
+  "98384" -> "98389" 
+  "98384" -> "98421" 
+  "98425" -> "98420" 
+  "98440" -> "98439" 
+  "98373" -> "98372" 
+  "98380" -> "98378" 
+  "98385" -> "98384" 
+  "98400" -> "98408" 
+  "98400" -> "98421" 
+  "98426" -> "98425" 
+  "98375" -> "98373" 
+  "98389" -> "98394" 
+  "98389" -> "98421" 
+  "98401" -> "98400" 
+  "98416" -> "98450" 
+  "98393" -> "98421" 
+  "98408" -> "98413" 
+  "98408" -> "98416" 
+  "98394" -> "98393" 
+  "98412" -> "98416" 
+  "98413" -> "98412" 
+  "98332" -> "98345" 
+}

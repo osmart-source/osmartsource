@@ -1,0 +1,13 @@
+digraph "posix_memalign" {  
+"21808" [label = <(METHOD,posix_memalign)<SUB>580</SUB>> ]
+"21812" [label = <(METHOD_RETURN,int)<SUB>580</SUB>> ]
+"21809" [label = <(PARAM,void **__memptr)<SUB>580</SUB>> ]
+"21810" [label = <(PARAM,size_t __alignment)<SUB>580</SUB>> ]
+"21811" [label = <(PARAM,size_t __size)<SUB>580</SUB>> ]
+  "21809" -> "21812"  [ label = "DDG: __memptr"] 
+  "21810" -> "21812"  [ label = "DDG: __alignment"] 
+  "21811" -> "21812"  [ label = "DDG: __size"] 
+  "21808" -> "21809"  [ label = "DDG: "] 
+  "21808" -> "21810"  [ label = "DDG: "] 
+  "21808" -> "21811"  [ label = "DDG: "] 
+}

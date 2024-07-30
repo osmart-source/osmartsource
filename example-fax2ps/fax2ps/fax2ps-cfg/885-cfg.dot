@@ -1,0 +1,97 @@
+digraph "TIFFSetDirectory" {  
+"44672" [label = <(&lt;operator&gt;.assignment,nextdirnum = 0)<SUB>2032</SUB>> ]
+"44712" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_nextdiroff = nextdiroff)<SUB>2041</SUB>> ]
+"44717" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir = (dirn - n) - 1)<SUB>2047</SUB>> ]
+"44726" [label = <(RETURN,return (TIFFReadDirectory(tif));,return (TIFFReadDirectory(tif));)<SUB>2048</SUB>> ]
+"44645" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2028</SUB>> ]
+"44680" [label = <(&lt;operator&gt;.logicalAnd,n &gt; 0 &amp;&amp; nextdiroff != 0)<SUB>2033</SUB>> ]
+"44687" [label = <(&lt;operator&gt;.postDecrement,n--)<SUB>2033</SUB>> ]
+"44702" [label = <(&lt;operator&gt;.logicalOr,nextdiroff == 0 || n &gt; 0)<SUB>2038</SUB>> ]
+"44713" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>2041</SUB>> ]
+"44718" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>2047</SUB>> ]
+"44721" [label = <(&lt;operator&gt;.subtraction,(dirn - n) - 1)<SUB>2047</SUB>> ]
+"44727" [label = <(TIFFReadDirectory,TIFFReadDirectory(tif))<SUB>2048</SUB>> ]
+"44646" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2028</SUB>> ]
+"44652" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.classic.tiff_diroff)<SUB>2029</SUB>> ]
+"44677" [label = <(&lt;operator&gt;.assignment,n = dirn)<SUB>2033</SUB>> ]
+"44681" [label = <(&lt;operator&gt;.greaterThan,n &gt; 0)<SUB>2033</SUB>> ]
+"44684" [label = <(&lt;operator&gt;.notEquals,nextdiroff != 0)<SUB>2033</SUB>> ]
+"44690" [label = <(&lt;operator&gt;.logicalNot,!TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44703" [label = <(&lt;operator&gt;.equals,nextdiroff == 0)<SUB>2038</SUB>> ]
+"44706" [label = <(&lt;operator&gt;.greaterThan,n &gt; 0)<SUB>2038</SUB>> ]
+"44710" [label = <(RETURN,return (0);,return (0);)<SUB>2039</SUB>> ]
+"44715" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>2041</SUB>> ]
+"44720" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>2047</SUB>> ]
+"44722" [label = <(&lt;operator&gt;.subtraction,dirn - n)<SUB>2047</SUB>> ]
+"44647" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2028</SUB>> ]
+"44654" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>2029</SUB>> ]
+"44663" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_header.big.tiff_diroff)<SUB>2031</SUB>> ]
+"44691" [label = <(TIFFAdvanceDirectory,TIFFAdvanceDirectory(tif, &amp;nextdiroff, NULL, &amp;nextdirnum))<SUB>2034</SUB>> ]
+"44699" [label = <(RETURN,return (0);,return (0);)<SUB>2035</SUB>> ]
+"44649" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2028</SUB>> ]
+"44655" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>2029</SUB>> ]
+"44660" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2029</SUB>> ]
+"44665" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>2031</SUB>> ]
+"44693" [label = <(&lt;operator&gt;.addressOf,&amp;nextdiroff)<SUB>2034</SUB>> ]
+"44696" [label = <(&lt;operator&gt;.addressOf,&amp;nextdirnum)<SUB>2034</SUB>> ]
+"44656" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2029</SUB>> ]
+"44659" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>2029</SUB>> ]
+"44666" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>2031</SUB>> ]
+"44671" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>2031</SUB>> ]
+"44658" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2029</SUB>> ]
+"44667" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>2031</SUB>> ]
+"44670" [label = <(FIELD_IDENTIFIER,big,big)<SUB>2031</SUB>> ]
+"44669" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>2031</SUB>> ]
+"44637" [label = <(METHOD,TIFFSetDirectory)<SUB>2022</SUB>> ]
+"44729" [label = <(METHOD_RETURN,int)<SUB>2022</SUB>> ]
+  "44672" -> "44677" 
+  "44712" -> "44720" 
+  "44717" -> "44727" 
+  "44726" -> "44729" 
+  "44645" -> "44658" 
+  "44645" -> "44669" 
+  "44680" -> "44693" 
+  "44680" -> "44703" 
+  "44687" -> "44681" 
+  "44702" -> "44710" 
+  "44702" -> "44715" 
+  "44713" -> "44712" 
+  "44718" -> "44722" 
+  "44721" -> "44717" 
+  "44727" -> "44726" 
+  "44646" -> "44645" 
+  "44652" -> "44672" 
+  "44677" -> "44681" 
+  "44681" -> "44680" 
+  "44681" -> "44684" 
+  "44684" -> "44680" 
+  "44690" -> "44699" 
+  "44690" -> "44687" 
+  "44703" -> "44702" 
+  "44703" -> "44706" 
+  "44706" -> "44702" 
+  "44710" -> "44729" 
+  "44715" -> "44713" 
+  "44720" -> "44718" 
+  "44722" -> "44721" 
+  "44647" -> "44646" 
+  "44654" -> "44652" 
+  "44663" -> "44672" 
+  "44691" -> "44690" 
+  "44699" -> "44729" 
+  "44649" -> "44647" 
+  "44655" -> "44660" 
+  "44660" -> "44654" 
+  "44665" -> "44663" 
+  "44693" -> "44696" 
+  "44696" -> "44691" 
+  "44656" -> "44659" 
+  "44659" -> "44655" 
+  "44666" -> "44671" 
+  "44671" -> "44665" 
+  "44658" -> "44656" 
+  "44667" -> "44670" 
+  "44670" -> "44666" 
+  "44669" -> "44667" 
+  "44637" -> "44649" 
+}

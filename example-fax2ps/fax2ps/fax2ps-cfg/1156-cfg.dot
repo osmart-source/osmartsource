@@ -1,0 +1,251 @@
+digraph "TIFFSeek" {  
+"74493" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>311</SUB>> ]
+"74502" [label = <(&lt;operator&gt;.assignment,read_ahead = 0)<SUB>314</SUB>> ]
+"74556" [label = <(&lt;operator&gt;.assignment,whole_strip = 1)<SUB>355</SUB>> ]
+"74737" [label = <(RETURN,return (1);,return (1);)<SUB>444</SUB>> ]
+"74495" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>311</SUB>> ]
+"74506" [label = <(&lt;operator&gt;.greaterEqualsThan,row &gt;= td-&gt;td_imagelength)<SUB>319</SUB>> ]
+"74516" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>326</SUB>> ]
+"74560" [label = <(&lt;operator&gt;.logicalNot,!whole_strip)<SUB>358</SUB>> ]
+"74599" [label = <(&lt;operator&gt;.notEquals,strip != tif-&gt;tif_curstrip)<SUB>378</SUB>> ]
+"74676" [label = <(&lt;operator&gt;.lessThan,row &lt; tif-&gt;tif_row)<SUB>408</SUB>> ]
+"74710" [label = <(&lt;operator&gt;.notEquals,row != tif-&gt;tif_row)<SUB>431</SUB>> ]
+"74496" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>311</SUB>> ]
+"74508" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>319</SUB>> ]
+"74512" [label = <(UNKNOWN,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                      &quot;%&quot; PRIu32 &quot;: Row out of range, max %&quot; PRIu32 &quot;&quot;, row,\012                      td-&gt;td_imagelength);,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                      &quot;%&quot; PRIu32 &quot;: Row out of range, max %&quot; PRIu32 &quot;&quot;, row,\012                      td-&gt;td_imagelength);)<SUB>321</SUB>> ]
+"74513" [label = <(RETURN,return (0);,return (0);)<SUB>324</SUB>> ]
+"74517" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>326</SUB>> ]
+"74532" [label = <(&lt;operator&gt;.assignment,strip = (uint32_t)sample * td-&gt;td_stripsperimage +\012                row / td-&gt;td_rowsperstrip)<SUB>335</SUB>> ]
+"74601" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>378</SUB>> ]
+"74678" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>408</SUB>> ]
+"74712" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>431</SUB>> ]
+"74732" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = row)<SUB>441</SUB>> ]
+"74498" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>311</SUB>> ]
+"74510" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>319</SUB>> ]
+"74519" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>326</SUB>> ]
+"74523" [label = <(&lt;operator&gt;.greaterEqualsThan,sample &gt;= td-&gt;td_samplesperpixel)<SUB>328</SUB>> ]
+"74534" [label = <(&lt;operator&gt;.addition,(uint32_t)sample * td-&gt;td_stripsperimage +\012                row / td-&gt;td_rowsperstrip)<SUB>335</SUB>> ]
+"74549" [label = <(&lt;operator&gt;.assignment,strip = row / td-&gt;td_rowsperstrip)<SUB>339</SUB>> ]
+"74564" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_scanlinesize &lt; TIFF_TMSIZE_T_MAX / 16 &amp;&amp;\012            tif-&gt;tif_scanlinesize * 16 &lt; TIFF_TMSIZE_T_MAX - 5000)<SUB>363</SUB>> ]
+"74603" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>378</SUB>> ]
+"74606" [label = <(&lt;operator&gt;.logicalAnd,whole_strip &amp;&amp; 1)<SUB>381</SUB>> ]
+"74680" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>408</SUB>> ]
+"74683" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_rawdataoff != 0)<SUB>419</SUB>> ]
+"74714" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>431</SUB>> ]
+"74717" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_seek)(tif, row - tif-&gt;tif_row))<SUB>439</SUB>> ]
+"74733" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>441</SUB>> ]
+"74525" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>328</SUB>> ]
+"74529" [label = <(UNKNOWN,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                          &quot;%&quot; PRIu16 &quot;: Sample out of range, max %&quot; PRIu16 &quot;&quot;,\012                          sample, td-&gt;td_samplesperpixel);,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                          &quot;%&quot; PRIu16 &quot;: Sample out of range, max %&quot; PRIu16 &quot;&quot;,\012                          sample, td-&gt;td_samplesperpixel);)<SUB>330</SUB>> ]
+"74530" [label = <(RETURN,return (0);,return (0);)<SUB>333</SUB>> ]
+"74535" [label = <(&lt;operator&gt;.multiplication,(uint32_t)sample * td-&gt;td_stripsperimage)<SUB>335</SUB>> ]
+"74542" [label = <(&lt;operator&gt;.division,row / td-&gt;td_rowsperstrip)<SUB>336</SUB>> ]
+"74551" [label = <(&lt;operator&gt;.division,row / td-&gt;td_rowsperstrip)<SUB>339</SUB>> ]
+"74565" [label = <(&lt;operator&gt;.lessThan,tif-&gt;tif_scanlinesize &lt; TIFF_TMSIZE_T_MAX / 16)<SUB>363</SUB>> ]
+"74572" [label = <(&lt;operator&gt;.lessThan,tif-&gt;tif_scanlinesize * 16 &lt; TIFF_TMSIZE_T_MAX - 5000)<SUB>364</SUB>> ]
+"74582" [label = <(&lt;operator&gt;.assignment,read_ahead = tif-&gt;tif_scanlinesize * 16 + 5000)<SUB>366</SUB>> ]
+"74633" [label = <(&lt;operator&gt;.logicalNot,!whole_strip)<SUB>396</SUB>> ]
+"74684" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataoff)<SUB>419</SUB>> ]
+"74718" [label = <(*tif-&gt;tif_seek,(*tif-&gt;tif_seek)(tif, row - tif-&gt;tif_row))<SUB>439</SUB>> ]
+"74730" [label = <(RETURN,return (0);,return (0);)<SUB>440</SUB>> ]
+"74735" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>441</SUB>> ]
+"74527" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>328</SUB>> ]
+"74536" [label = <(&lt;operator&gt;.cast,(uint32_t)sample)<SUB>335</SUB>> ]
+"74539" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>335</SUB>> ]
+"74544" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>336</SUB>> ]
+"74553" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>339</SUB>> ]
+"74566" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>363</SUB>> ]
+"74569" [label = <(&lt;operator&gt;.division,TIFF_TMSIZE_T_MAX / 16)<SUB>363</SUB>> ]
+"74573" [label = <(&lt;operator&gt;.multiplication,tif-&gt;tif_scanlinesize * 16)<SUB>364</SUB>> ]
+"74578" [label = <(&lt;operator&gt;.subtraction,TIFF_TMSIZE_T_MAX - 5000)<SUB>364</SUB>> ]
+"74584" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_scanlinesize * 16 + 5000)<SUB>366</SUB>> ]
+"74593" [label = <(&lt;operator&gt;.assignment,read_ahead = tif-&gt;tif_scanlinesize)<SUB>370</SUB>> ]
+"74611" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillStrip(tif, strip))<SUB>383</SUB>> ]
+"74686" [label = <(FIELD_IDENTIFIER,tif_rawdataoff,tif_rawdataoff)<SUB>419</SUB>> ]
+"74690" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillStripPartial(tif, strip, read_ahead, 1))<SUB>421</SUB>> ]
+"74719" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_seek)<SUB>439</SUB>> ]
+"74724" [label = <(&lt;operator&gt;.subtraction,row - tif-&gt;tif_row)<SUB>439</SUB>> ]
+"74537" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>335</SUB>> ]
+"74541" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>335</SUB>> ]
+"74546" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>336</SUB>> ]
+"74555" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>339</SUB>> ]
+"74568" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>363</SUB>> ]
+"74574" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>364</SUB>> ]
+"74585" [label = <(&lt;operator&gt;.multiplication,tif-&gt;tif_scanlinesize * 16)<SUB>366</SUB>> ]
+"74595" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>370</SUB>> ]
+"74612" [label = <(TIFFFillStrip,TIFFFillStrip(tif, strip))<SUB>383</SUB>> ]
+"74616" [label = <(RETURN,return (0);,return (0);)<SUB>384</SUB>> ]
+"74621" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillStripPartial(tif, strip, read_ahead, 1))<SUB>388</SUB>> ]
+"74637" [label = <(&lt;operator&gt;.logicalAnd,((tif-&gt;tif_rawdata + tif-&gt;tif_rawdataloaded) - tif-&gt;tif_rawcp) &lt;\012                read_ahead &amp;&amp;\012            (uint64_t)tif-&gt;tif_rawdataoff + tif-&gt;tif_rawdataloaded &lt;\012                TIFFGetStrileByteCount(tif, strip))<SUB>398</SUB>> ]
+"74691" [label = <(TIFFFillStripPartial,TIFFFillStripPartial(tif, strip, read_ahead, 1))<SUB>421</SUB>> ]
+"74697" [label = <(RETURN,return 0;,return 0;)<SUB>422</SUB>> ]
+"74702" [label = <(&lt;operator&gt;.logicalNot,!TIFFStartStrip(tif, strip))<SUB>426</SUB>> ]
+"74720" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_seek)<SUB>439</SUB>> ]
+"74726" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>439</SUB>> ]
+"74576" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>364</SUB>> ]
+"74586" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>366</SUB>> ]
+"74597" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>370</SUB>> ]
+"74622" [label = <(TIFFFillStripPartial,TIFFFillStripPartial(tif, strip, read_ahead, 1))<SUB>388</SUB>> ]
+"74628" [label = <(RETURN,return 0;,return 0;)<SUB>389</SUB>> ]
+"74638" [label = <(&lt;operator&gt;.lessThan,((tif-&gt;tif_rawdata + tif-&gt;tif_rawdataloaded) - tif-&gt;tif_rawcp) &lt;\012                read_ahead)<SUB>398</SUB>> ]
+"74651" [label = <(&lt;operator&gt;.lessThan,(uint64_t)tif-&gt;tif_rawdataoff + tif-&gt;tif_rawdataloaded &lt;\012                TIFFGetStrileByteCount(tif, strip))<SUB>400</SUB>> ]
+"74703" [label = <(TIFFStartStrip,TIFFStartStrip(tif, strip))<SUB>426</SUB>> ]
+"74707" [label = <(RETURN,return (0);,return (0);)<SUB>427</SUB>> ]
+"74722" [label = <(FIELD_IDENTIFIER,tif_seek,tif_seek)<SUB>439</SUB>> ]
+"74728" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>439</SUB>> ]
+"74588" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>366</SUB>> ]
+"74639" [label = <(&lt;operator&gt;.subtraction,(tif-&gt;tif_rawdata + tif-&gt;tif_rawdataloaded) - tif-&gt;tif_rawcp)<SUB>398</SUB>> ]
+"74652" [label = <(&lt;operator&gt;.addition,(uint64_t)tif-&gt;tif_rawdataoff + tif-&gt;tif_rawdataloaded)<SUB>400</SUB>> ]
+"74661" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, strip))<SUB>401</SUB>> ]
+"74666" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillStripPartial(tif, strip, read_ahead, 0))<SUB>403</SUB>> ]
+"74640" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_rawdata + tif-&gt;tif_rawdataloaded)<SUB>398</SUB>> ]
+"74647" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>398</SUB>> ]
+"74653" [label = <(&lt;operator&gt;.cast,(uint64_t)tif-&gt;tif_rawdataoff)<SUB>400</SUB>> ]
+"74658" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataloaded)<SUB>400</SUB>> ]
+"74667" [label = <(TIFFFillStripPartial,TIFFFillStripPartial(tif, strip, read_ahead, 0))<SUB>403</SUB>> ]
+"74673" [label = <(RETURN,return 0;,return 0;)<SUB>404</SUB>> ]
+"74641" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>398</SUB>> ]
+"74644" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataloaded)<SUB>398</SUB>> ]
+"74649" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>398</SUB>> ]
+"74654" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>400</SUB>> ]
+"74655" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataoff)<SUB>400</SUB>> ]
+"74660" [label = <(FIELD_IDENTIFIER,tif_rawdataloaded,tif_rawdataloaded)<SUB>400</SUB>> ]
+"74643" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>398</SUB>> ]
+"74646" [label = <(FIELD_IDENTIFIER,tif_rawdataloaded,tif_rawdataloaded)<SUB>398</SUB>> ]
+"74657" [label = <(FIELD_IDENTIFIER,tif_rawdataoff,tif_rawdataoff)<SUB>400</SUB>> ]
+"74487" [label = <(METHOD,TIFFSeek)<SUB>309</SUB>> ]
+"74739" [label = <(METHOD_RETURN,int)<SUB>309</SUB>> ]
+  "74493" -> "74502" 
+  "74502" -> "74510" 
+  "74556" -> "74560" 
+  "74737" -> "74739" 
+  "74495" -> "74493" 
+  "74506" -> "74512" 
+  "74506" -> "74519" 
+  "74516" -> "74527" 
+  "74516" -> "74555" 
+  "74560" -> "74568" 
+  "74560" -> "74603" 
+  "74599" -> "74606" 
+  "74599" -> "74633" 
+  "74676" -> "74686" 
+  "74676" -> "74714" 
+  "74710" -> "74722" 
+  "74710" -> "74737" 
+  "74496" -> "74495" 
+  "74508" -> "74506" 
+  "74512" -> "74513" 
+  "74513" -> "74739" 
+  "74517" -> "74516" 
+  "74532" -> "74556" 
+  "74601" -> "74599" 
+  "74678" -> "74676" 
+  "74712" -> "74710" 
+  "74732" -> "74737" 
+  "74498" -> "74496" 
+  "74510" -> "74508" 
+  "74519" -> "74517" 
+  "74523" -> "74529" 
+  "74523" -> "74537" 
+  "74534" -> "74532" 
+  "74549" -> "74556" 
+  "74564" -> "74588" 
+  "74564" -> "74597" 
+  "74603" -> "74601" 
+  "74606" -> "74612" 
+  "74606" -> "74622" 
+  "74680" -> "74678" 
+  "74683" -> "74691" 
+  "74683" -> "74703" 
+  "74714" -> "74712" 
+  "74717" -> "74730" 
+  "74717" -> "74735" 
+  "74733" -> "74732" 
+  "74525" -> "74523" 
+  "74529" -> "74530" 
+  "74530" -> "74739" 
+  "74535" -> "74546" 
+  "74542" -> "74534" 
+  "74551" -> "74549" 
+  "74565" -> "74564" 
+  "74565" -> "74576" 
+  "74572" -> "74564" 
+  "74582" -> "74603" 
+  "74633" -> "74643" 
+  "74633" -> "74680" 
+  "74684" -> "74683" 
+  "74718" -> "74717" 
+  "74730" -> "74739" 
+  "74735" -> "74733" 
+  "74527" -> "74525" 
+  "74536" -> "74541" 
+  "74539" -> "74535" 
+  "74544" -> "74542" 
+  "74553" -> "74551" 
+  "74566" -> "74569" 
+  "74569" -> "74565" 
+  "74573" -> "74578" 
+  "74578" -> "74572" 
+  "74584" -> "74582" 
+  "74593" -> "74603" 
+  "74611" -> "74616" 
+  "74611" -> "74680" 
+  "74686" -> "74684" 
+  "74690" -> "74697" 
+  "74690" -> "74714" 
+  "74719" -> "74728" 
+  "74724" -> "74718" 
+  "74537" -> "74536" 
+  "74541" -> "74539" 
+  "74546" -> "74544" 
+  "74555" -> "74553" 
+  "74568" -> "74566" 
+  "74574" -> "74573" 
+  "74585" -> "74584" 
+  "74595" -> "74593" 
+  "74612" -> "74611" 
+  "74616" -> "74739" 
+  "74621" -> "74628" 
+  "74621" -> "74680" 
+  "74637" -> "74667" 
+  "74637" -> "74680" 
+  "74691" -> "74690" 
+  "74697" -> "74739" 
+  "74702" -> "74707" 
+  "74702" -> "74714" 
+  "74720" -> "74719" 
+  "74726" -> "74724" 
+  "74576" -> "74574" 
+  "74586" -> "74585" 
+  "74597" -> "74595" 
+  "74622" -> "74621" 
+  "74628" -> "74739" 
+  "74638" -> "74654" 
+  "74638" -> "74637" 
+  "74651" -> "74637" 
+  "74703" -> "74702" 
+  "74707" -> "74739" 
+  "74722" -> "74720" 
+  "74728" -> "74726" 
+  "74588" -> "74586" 
+  "74639" -> "74638" 
+  "74652" -> "74661" 
+  "74661" -> "74651" 
+  "74666" -> "74673" 
+  "74666" -> "74680" 
+  "74640" -> "74649" 
+  "74647" -> "74639" 
+  "74653" -> "74660" 
+  "74658" -> "74652" 
+  "74667" -> "74666" 
+  "74673" -> "74739" 
+  "74641" -> "74646" 
+  "74644" -> "74640" 
+  "74649" -> "74647" 
+  "74654" -> "74657" 
+  "74655" -> "74653" 
+  "74660" -> "74658" 
+  "74643" -> "74641" 
+  "74646" -> "74644" 
+  "74657" -> "74655" 
+  "74487" -> "74498" 
+}

@@ -1,0 +1,18 @@
+digraph "WriteAsLong4" {  
+"68856" [label = <(METHOD,WriteAsLong4)<SUB>1829</SUB>> ]
+"68865" [label = <(METHOD_RETURN,int)<SUB>1829</SUB>> ]
+"68857" [label = <(PARAM,TIFF *tif)<SUB>1829</SUB>> ]
+"68858" [label = <(PARAM,uint64_t strile_size)<SUB>1829</SUB>> ]
+"68860" [label = <(RETURN,return _WriteAsType(tif, strile_size, 0xFFFFU);,return _WriteAsType(tif, strile_size, 0xFFFFU);)<SUB>1831</SUB>> ]
+"68861" [label = <(_WriteAsType,_WriteAsType(tif, strile_size, 0xFFFFU))<SUB>1831</SUB>> ]
+  "68860" -> "68865"  [ label = "DDG: &lt;RET&gt;"] 
+  "68861" -> "68865"  [ label = "DDG: tif"] 
+  "68861" -> "68865"  [ label = "DDG: strile_size"] 
+  "68861" -> "68865"  [ label = "DDG: _WriteAsType(tif, strile_size, 0xFFFFU)"] 
+  "68856" -> "68857"  [ label = "DDG: "] 
+  "68856" -> "68858"  [ label = "DDG: "] 
+  "68861" -> "68860"  [ label = "DDG: _WriteAsType(tif, strile_size, 0xFFFFU)"] 
+  "68857" -> "68861"  [ label = "DDG: tif"] 
+  "68856" -> "68861"  [ label = "DDG: "] 
+  "68858" -> "68861"  [ label = "DDG: strile_size"] 
+}

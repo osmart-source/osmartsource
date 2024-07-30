@@ -1,0 +1,13 @@
+digraph "strtoll" {  
+"4702" [label = <(METHOD,strtoll)<SUB>200</SUB>> ]
+"4706" [label = <(METHOD_RETURN,long long int)<SUB>200</SUB>> ]
+"4703" [label = <(PARAM,const char *__restrict __nptr)<SUB>200</SUB>> ]
+"4704" [label = <(PARAM,char **__restrict __endptr)<SUB>201</SUB>> ]
+"4705" [label = <(PARAM,int __base)<SUB>201</SUB>> ]
+  "4703" -> "4706"  [ label = "DDG: __nptr"] 
+  "4704" -> "4706"  [ label = "DDG: __endptr"] 
+  "4705" -> "4706"  [ label = "DDG: __base"] 
+  "4702" -> "4703"  [ label = "DDG: "] 
+  "4702" -> "4704"  [ label = "DDG: "] 
+  "4702" -> "4705"  [ label = "DDG: "] 
+}

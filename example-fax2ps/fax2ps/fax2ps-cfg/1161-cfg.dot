@@ -1,0 +1,129 @@
+digraph "TIFFReadRawStrip1" {  
+"75233" [label = <(assert,assert((tif-&gt;tif_flags &amp; TIFF_NOREADRAW) == 0))<SUB>599</SUB>> ]
+"75364" [label = <(RETURN,return (size);,return (size);)<SUB>654</SUB>> ]
+"75234" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_NOREADRAW) == 0)<SUB>599</SUB>> ]
+"75242" [label = <(&lt;operator&gt;.logicalNot,!isMapped(tif))<SUB>600</SUB>> ]
+"75235" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>599</SUB>> ]
+"75243" [label = <(isMapped,isMapped(tif))<SUB>600</SUB>> ]
+"75260" [label = <(&lt;operator&gt;.assignment,cc = TIFFReadFile(tif, buf, size))<SUB>611</SUB>> ]
+"75236" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>599</SUB>> ]
+"75248" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, TIFFGetStrileOffset(tif, strip)))<SUB>604</SUB>> ]
+"75262" [label = <(TIFFReadFile,TIFFReadFile(tif, buf, size))<SUB>611</SUB>> ]
+"75267" [label = <(&lt;operator&gt;.notEquals,cc != size)<SUB>612</SUB>> ]
+"75279" [label = <(&lt;operator&gt;.assignment,ma = 0)<SUB>624</SUB>> ]
+"75356" [label = <(_TIFFmemcpy,_TIFFmemcpy(buf, tif-&gt;tif_base + ma, size))<SUB>652</SUB>> ]
+"75238" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>599</SUB>> ]
+"75249" [label = <(SeekOK,SeekOK(tif, TIFFGetStrileOffset(tif, strip)))<SUB>604</SUB>> ]
+"75255" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Seek error at scanline %&quot; PRIu32 &quot;, strip %&quot; PRIu32,\012                          tif-&gt;tif_row, strip);,TIFFErrorExtR(tif, module,\012                          &quot;Seek error at scanline %&quot; PRIu32 &quot;, strip %&quot; PRIu32,\012                          tif-&gt;tif_row, strip);)<SUB>606</SUB>> ]
+"75256" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>609</SUB>> ]
+"75271" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Read error at scanline %&quot; PRIu32\012                          &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, cc, size);,TIFFErrorExtR(tif, module,\012                          &quot;Read error at scanline %&quot; PRIu32\012                          &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, cc, size);)<SUB>614</SUB>> ]
+"75272" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>619</SUB>> ]
+"75284" [label = <(&lt;operator&gt;.logicalOr,(TIFFGetStrileOffset(tif, strip) &gt; (uint64_t)TIFF_TMSIZE_T_MAX) ||\012            ((ma = (tmsize_t)TIFFGetStrileOffset(tif, strip)) &gt; tif-&gt;tif_size))<SUB>626</SUB>> ]
+"75347" [label = <(&lt;operator&gt;.notEquals,n != size)<SUB>643</SUB>> ]
+"75358" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + ma)<SUB>652</SUB>> ]
+"75251" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, strip))<SUB>604</SUB>> ]
+"75257" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>609</SUB>> ]
+"75273" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>619</SUB>> ]
+"75285" [label = <(&lt;operator&gt;.greaterThan,TIFFGetStrileOffset(tif, strip) &gt; (uint64_t)TIFF_TMSIZE_T_MAX)<SUB>626</SUB>> ]
+"75292" [label = <(&lt;operator&gt;.greaterThan,(ma = (tmsize_t)TIFFGetStrileOffset(tif, strip)) &gt; tif-&gt;tif_size)<SUB>627</SUB>> ]
+"75304" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>629</SUB>> ]
+"75351" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Read error at scanline %&quot; PRIu32 &quot;, strip %&quot; PRIu32\012                          &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, strip, n, size);,TIFFErrorExtR(tif, module,\012                          &quot;Read error at scanline %&quot; PRIu32 &quot;, strip %&quot; PRIu32\012                          &quot;; got %&quot; TIFF_SSIZE_FORMAT\012                          &quot; bytes, expected %&quot; TIFF_SSIZE_FORMAT,\012                          tif-&gt;tif_row, strip, n, size);)<SUB>645</SUB>> ]
+"75352" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>650</SUB>> ]
+"75359" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>652</SUB>> ]
+"75258" [label = <(&lt;operator&gt;.minus,-1)<SUB>609</SUB>> ]
+"75274" [label = <(&lt;operator&gt;.minus,-1)<SUB>619</SUB>> ]
+"75286" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, strip))<SUB>626</SUB>> ]
+"75289" [label = <(&lt;operator&gt;.cast,(uint64_t)TIFF_TMSIZE_T_MAX)<SUB>626</SUB>> ]
+"75293" [label = <(&lt;operator&gt;.assignment,ma = (tmsize_t)TIFFGetStrileOffset(tif, strip))<SUB>627</SUB>> ]
+"75300" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>627</SUB>> ]
+"75353" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>650</SUB>> ]
+"75361" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>652</SUB>> ]
+"75290" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>626</SUB>> ]
+"75295" [label = <(&lt;operator&gt;.cast,(tmsize_t)TIFFGetStrileOffset(tif, strip))<SUB>627</SUB>> ]
+"75302" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>627</SUB>> ]
+"75310" [label = <(&lt;operator&gt;.greaterThan,ma &gt; TIFF_TMSIZE_T_MAX - size)<SUB>631</SUB>> ]
+"75354" [label = <(&lt;operator&gt;.minus,-1)<SUB>650</SUB>> ]
+"75296" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>627</SUB>> ]
+"75297" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, strip))<SUB>627</SUB>> ]
+"75312" [label = <(&lt;operator&gt;.subtraction,TIFF_TMSIZE_T_MAX - size)<SUB>631</SUB>> ]
+"75316" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>633</SUB>> ]
+"75322" [label = <(&lt;operator&gt;.assignment,mb = ma + size)<SUB>637</SUB>> ]
+"75324" [label = <(&lt;operator&gt;.addition,ma + size)<SUB>637</SUB>> ]
+"75328" [label = <(&lt;operator&gt;.greaterThan,mb &gt; tif-&gt;tif_size)<SUB>638</SUB>> ]
+"75330" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>638</SUB>> ]
+"75334" [label = <(&lt;operator&gt;.assignment,n = tif-&gt;tif_size - ma)<SUB>639</SUB>> ]
+"75332" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>638</SUB>> ]
+"75336" [label = <(&lt;operator&gt;.subtraction,tif-&gt;tif_size - ma)<SUB>639</SUB>> ]
+"75343" [label = <(&lt;operator&gt;.assignment,n = size)<SUB>641</SUB>> ]
+"75337" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>639</SUB>> ]
+"75339" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>639</SUB>> ]
+"75226" [label = <(METHOD,TIFFReadRawStrip1)<SUB>596</SUB>> ]
+"75366" [label = <(METHOD_RETURN,tmsize_t)<SUB>596</SUB>> ]
+  "75233" -> "75243" 
+  "75364" -> "75366" 
+  "75234" -> "75233" 
+  "75242" -> "75251" 
+  "75242" -> "75279" 
+  "75235" -> "75234" 
+  "75243" -> "75242" 
+  "75260" -> "75267" 
+  "75236" -> "75235" 
+  "75248" -> "75255" 
+  "75248" -> "75262" 
+  "75262" -> "75260" 
+  "75267" -> "75271" 
+  "75267" -> "75364" 
+  "75279" -> "75286" 
+  "75356" -> "75364" 
+  "75238" -> "75236" 
+  "75249" -> "75248" 
+  "75255" -> "75258" 
+  "75256" -> "75366" 
+  "75271" -> "75274" 
+  "75272" -> "75366" 
+  "75284" -> "75304" 
+  "75284" -> "75312" 
+  "75347" -> "75351" 
+  "75347" -> "75361" 
+  "75358" -> "75356" 
+  "75251" -> "75249" 
+  "75257" -> "75256" 
+  "75273" -> "75272" 
+  "75285" -> "75284" 
+  "75285" -> "75296" 
+  "75292" -> "75284" 
+  "75304" -> "75347" 
+  "75351" -> "75354" 
+  "75352" -> "75366" 
+  "75359" -> "75358" 
+  "75258" -> "75257" 
+  "75274" -> "75273" 
+  "75286" -> "75290" 
+  "75289" -> "75285" 
+  "75293" -> "75302" 
+  "75300" -> "75292" 
+  "75353" -> "75352" 
+  "75361" -> "75359" 
+  "75290" -> "75289" 
+  "75295" -> "75293" 
+  "75302" -> "75300" 
+  "75310" -> "75316" 
+  "75310" -> "75324" 
+  "75354" -> "75353" 
+  "75296" -> "75297" 
+  "75297" -> "75295" 
+  "75312" -> "75310" 
+  "75316" -> "75347" 
+  "75322" -> "75332" 
+  "75324" -> "75322" 
+  "75328" -> "75339" 
+  "75328" -> "75343" 
+  "75330" -> "75328" 
+  "75334" -> "75347" 
+  "75332" -> "75330" 
+  "75336" -> "75334" 
+  "75343" -> "75347" 
+  "75337" -> "75336" 
+  "75339" -> "75337" 
+  "75226" -> "75238" 
+}

@@ -1,0 +1,174 @@
+digraph "TIFFStartStrip" {  
+"77217" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1396</SUB>> ]
+"77248" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curstrip = strip)<SUB>1404</SUB>> ]
+"77253" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = (strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>1405</SUB>> ]
+"77266" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_BUF4WRITE)<SUB>1406</SUB>> ]
+"77354" [label = <(RETURN,return 1;,return 1;)<SUB>1432</SUB>> ]
+"77219" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1396</SUB>> ]
+"77224" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_CODERSETUP) == 0)<SUB>1398</SUB>> ]
+"77249" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>1404</SUB>> ]
+"77254" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>1405</SUB>> ]
+"77257" [label = <(&lt;operator&gt;.multiplication,(strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>1405</SUB>> ]
+"77267" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1406</SUB>> ]
+"77270" [label = <(&lt;operator&gt;.not,~TIFF_BUF4WRITE)<SUB>1406</SUB>> ]
+"77273" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1408</SUB>> ]
+"77328" [label = <(&lt;operator&gt;.equals,(*tif-&gt;tif_predecode)(tif, (uint16_t)(strip / td-&gt;td_stripsperimage)) ==\012        0)<SUB>1421</SUB>> ]
+"77220" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1396</SUB>> ]
+"77225" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_CODERSETUP)<SUB>1398</SUB>> ]
+"77243" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_CODERSETUP)<SUB>1402</SUB>> ]
+"77251" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>1404</SUB>> ]
+"77256" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>1405</SUB>> ]
+"77258" [label = <(&lt;operator&gt;.modulo,strip % td-&gt;td_stripsperimage)<SUB>1405</SUB>> ]
+"77263" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>1405</SUB>> ]
+"77269" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1406</SUB>> ]
+"77274" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1408</SUB>> ]
+"77279" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcp = NULL)<SUB>1410</SUB>> ]
+"77288" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = 0)<SUB>1411</SUB>> ]
+"77329" [label = <(*tif-&gt;tif_predecode,(*tif-&gt;tif_predecode)(tif, (uint16_t)(strip / td-&gt;td_stripsperimage)))<SUB>1421</SUB>> ]
+"77343" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curstrip = NOSTRIP)<SUB>1429</SUB>> ]
+"77352" [label = <(RETURN,return 0;,return 0;)<SUB>1430</SUB>> ]
+"77222" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1396</SUB>> ]
+"77226" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1398</SUB>> ]
+"77233" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_setupdecode)(tif))<SUB>1400</SUB>> ]
+"77244" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1402</SUB>> ]
+"77260" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>1405</SUB>> ]
+"77265" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>1405</SUB>> ]
+"77276" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1408</SUB>> ]
+"77280" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>1410</SUB>> ]
+"77283" [label = <(NULL,NULL)<SUB>1410</SUB>> ]
+"77289" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>1411</SUB>> ]
+"77295" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>1415</SUB>> ]
+"77330" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_predecode)<SUB>1421</SUB>> ]
+"77335" [label = <(uint16_t,(uint16_t)(strip / td-&gt;td_stripsperimage))<SUB>1421</SUB>> ]
+"77344" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>1429</SUB>> ]
+"77347" [label = <(NOSTRIP,NOSTRIP)<SUB>1429</SUB>> ]
+"77228" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1398</SUB>> ]
+"77234" [label = <(*tif-&gt;tif_setupdecode,(*tif-&gt;tif_setupdecode)(tif))<SUB>1400</SUB>> ]
+"77241" [label = <(RETURN,return (0);,return (0);)<SUB>1401</SUB>> ]
+"77246" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1402</SUB>> ]
+"77262" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>1405</SUB>> ]
+"77282" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>1410</SUB>> ]
+"77291" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>1411</SUB>> ]
+"77296" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>1415</SUB>> ]
+"77299" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>1415</SUB>> ]
+"77303" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_rawdataloaded &gt; 0)<SUB>1416</SUB>> ]
+"77331" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_predecode)<SUB>1421</SUB>> ]
+"77336" [label = <(&lt;operator&gt;.division,strip / td-&gt;td_stripsperimage)<SUB>1421</SUB>> ]
+"77346" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>1429</SUB>> ]
+"77235" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_setupdecode)<SUB>1400</SUB>> ]
+"77285" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1410</SUB>> ]
+"77298" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>1415</SUB>> ]
+"77301" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>1415</SUB>> ]
+"77304" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataloaded)<SUB>1416</SUB>> ]
+"77309" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = tif-&gt;tif_rawdataloaded)<SUB>1417</SUB>> ]
+"77333" [label = <(FIELD_IDENTIFIER,tif_predecode,tif_predecode)<SUB>1421</SUB>> ]
+"77338" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>1421</SUB>> ]
+"77349" [label = <(uint32_t,(uint32_t)(-1))<SUB>1429</SUB>> ]
+"77236" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_setupdecode)<SUB>1400</SUB>> ]
+"77286" [label = <(UNKNOWN,void *,void *)<SUB>1410</SUB>> ]
+"77306" [label = <(FIELD_IDENTIFIER,tif_rawdataloaded,tif_rawdataloaded)<SUB>1416</SUB>> ]
+"77310" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>1417</SUB>> ]
+"77313" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataloaded)<SUB>1417</SUB>> ]
+"77318" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = (tmsize_t)TIFFGetStrileByteCount(tif, strip))<SUB>1419</SUB>> ]
+"77340" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>1421</SUB>> ]
+"77350" [label = <(&lt;operator&gt;.minus,-1)<SUB>1429</SUB>> ]
+"77238" [label = <(FIELD_IDENTIFIER,tif_setupdecode,tif_setupdecode)<SUB>1400</SUB>> ]
+"77312" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>1417</SUB>> ]
+"77315" [label = <(FIELD_IDENTIFIER,tif_rawdataloaded,tif_rawdataloaded)<SUB>1417</SUB>> ]
+"77319" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>1419</SUB>> ]
+"77322" [label = <(&lt;operator&gt;.cast,(tmsize_t)TIFFGetStrileByteCount(tif, strip))<SUB>1419</SUB>> ]
+"77321" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>1419</SUB>> ]
+"77323" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1419</SUB>> ]
+"77324" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, strip))<SUB>1419</SUB>> ]
+"77212" [label = <(METHOD,TIFFStartStrip)<SUB>1394</SUB>> ]
+"77356" [label = <(METHOD_RETURN,int)<SUB>1394</SUB>> ]
+  "77217" -> "77228" 
+  "77248" -> "77256" 
+  "77253" -> "77269" 
+  "77266" -> "77276" 
+  "77354" -> "77356" 
+  "77219" -> "77217" 
+  "77224" -> "77238" 
+  "77224" -> "77251" 
+  "77249" -> "77248" 
+  "77254" -> "77262" 
+  "77257" -> "77253" 
+  "77267" -> "77270" 
+  "77270" -> "77266" 
+  "77273" -> "77282" 
+  "77273" -> "77298" 
+  "77328" -> "77346" 
+  "77328" -> "77354" 
+  "77220" -> "77219" 
+  "77225" -> "77224" 
+  "77243" -> "77251" 
+  "77251" -> "77249" 
+  "77256" -> "77254" 
+  "77258" -> "77265" 
+  "77263" -> "77257" 
+  "77269" -> "77267" 
+  "77274" -> "77273" 
+  "77279" -> "77291" 
+  "77288" -> "77333" 
+  "77329" -> "77328" 
+  "77343" -> "77352" 
+  "77352" -> "77356" 
+  "77222" -> "77220" 
+  "77226" -> "77225" 
+  "77233" -> "77241" 
+  "77233" -> "77246" 
+  "77244" -> "77243" 
+  "77260" -> "77258" 
+  "77265" -> "77263" 
+  "77276" -> "77274" 
+  "77280" -> "77283" 
+  "77283" -> "77286" 
+  "77283" -> "77279" 
+  "77289" -> "77288" 
+  "77295" -> "77306" 
+  "77330" -> "77340" 
+  "77335" -> "77329" 
+  "77344" -> "77347" 
+  "77347" -> "77343" 
+  "77347" -> "77350" 
+  "77228" -> "77226" 
+  "77234" -> "77233" 
+  "77241" -> "77356" 
+  "77246" -> "77244" 
+  "77262" -> "77260" 
+  "77282" -> "77280" 
+  "77291" -> "77289" 
+  "77296" -> "77301" 
+  "77299" -> "77295" 
+  "77303" -> "77312" 
+  "77303" -> "77321" 
+  "77331" -> "77330" 
+  "77336" -> "77335" 
+  "77346" -> "77344" 
+  "77235" -> "77234" 
+  "77285" -> "77279" 
+  "77298" -> "77296" 
+  "77301" -> "77299" 
+  "77304" -> "77303" 
+  "77309" -> "77333" 
+  "77333" -> "77331" 
+  "77338" -> "77336" 
+  "77349" -> "77343" 
+  "77236" -> "77235" 
+  "77286" -> "77285" 
+  "77306" -> "77304" 
+  "77310" -> "77315" 
+  "77313" -> "77309" 
+  "77318" -> "77333" 
+  "77340" -> "77338" 
+  "77350" -> "77349" 
+  "77238" -> "77236" 
+  "77312" -> "77310" 
+  "77315" -> "77313" 
+  "77319" -> "77323" 
+  "77322" -> "77318" 
+  "77321" -> "77319" 
+  "77323" -> "77324" 
+  "77324" -> "77322" 
+  "77212" -> "77222" 
+}

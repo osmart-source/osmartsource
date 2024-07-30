@@ -1,0 +1,47 @@
+digraph "TIFFGetTagListEntry" {  
+"11779" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11781" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11786" [label = <(&lt;operator&gt;.logicalOr,tag_index &lt; 0 || tag_index &gt;= td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11782" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>45</SUB>> ]
+"11787" [label = <(&lt;operator&gt;.lessThan,tag_index &lt; 0)<SUB>47</SUB>> ]
+"11790" [label = <(&lt;operator&gt;.greaterEqualsThan,tag_index &gt;= td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11796" [label = <(RETURN,return (uint32_t)(-1);,return (uint32_t)(-1);)<SUB>48</SUB>> ]
+"11784" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>45</SUB>> ]
+"11792" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>47</SUB>> ]
+"11797" [label = <(uint32_t,(uint32_t)(-1))<SUB>48</SUB>> ]
+"11802" [label = <(RETURN,return td-&gt;td_customValues[tag_index].info-&gt;field_tag;,return td-&gt;td_customValues[tag_index].info-&gt;field_tag;)<SUB>50</SUB>> ]
+"11794" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>47</SUB>> ]
+"11798" [label = <(&lt;operator&gt;.minus,-1)<SUB>48</SUB>> ]
+"11803" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues[tag_index].info-&gt;field_tag)<SUB>50</SUB>> ]
+"11804" [label = <(&lt;operator&gt;.fieldAccess,td-&gt;td_customValues[tag_index].info)<SUB>50</SUB>> ]
+"11811" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>50</SUB>> ]
+"11805" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_customValues[tag_index])<SUB>50</SUB>> ]
+"11810" [label = <(FIELD_IDENTIFIER,info,info)<SUB>50</SUB>> ]
+"11806" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>50</SUB>> ]
+"11808" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>50</SUB>> ]
+"11774" [label = <(METHOD,TIFFGetTagListEntry)<SUB>42</SUB>> ]
+"11812" [label = <(METHOD_RETURN,uint32_t)<SUB>42</SUB>> ]
+  "11779" -> "11787" 
+  "11781" -> "11779" 
+  "11786" -> "11798" 
+  "11786" -> "11808" 
+  "11782" -> "11781" 
+  "11787" -> "11786" 
+  "11787" -> "11794" 
+  "11790" -> "11786" 
+  "11796" -> "11812" 
+  "11784" -> "11782" 
+  "11792" -> "11790" 
+  "11797" -> "11796" 
+  "11802" -> "11812" 
+  "11794" -> "11792" 
+  "11798" -> "11797" 
+  "11803" -> "11802" 
+  "11804" -> "11811" 
+  "11811" -> "11803" 
+  "11805" -> "11810" 
+  "11810" -> "11804" 
+  "11806" -> "11805" 
+  "11808" -> "11806" 
+  "11774" -> "11784" 
+}

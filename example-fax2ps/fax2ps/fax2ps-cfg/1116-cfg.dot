@@ -1,0 +1,47 @@
+digraph "TIFFWriteDirectoryTagCheckedSlong8Array" {  
+"70262" [label = <(assert,assert(count &lt; 0x20000000))<SUB>2325</SUB>> ]
+"70266" [label = <(assert,assert(sizeof(int64_t) == 8))<SUB>2326</SUB>> ]
+"70297" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG8, count,\012                                      count * 8, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG8, count,\012                                      count * 8, value));)<SUB>2335</SUB>> ]
+"70263" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x20000000)<SUB>2325</SUB>> ]
+"70267" [label = <(&lt;operator&gt;.equals,sizeof(int64_t) == 8)<SUB>2326</SUB>> ]
+"70272" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2327</SUB>> ]
+"70286" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2333</SUB>> ]
+"70298" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG8, count,\012                                      count * 8, value))<SUB>2335</SUB>> ]
+"70268" [label = <(&lt;operator&gt;.sizeOf,sizeof(int64_t))<SUB>2326</SUB>> ]
+"70273" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2327</SUB>> ]
+"70279" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;TIFFWriteDirectoryTagCheckedSlong8Array&quot;,\012                      &quot;SLONG8 not allowed for ClassicTIFF&quot;))<SUB>2329</SUB>> ]
+"70283" [label = <(RETURN,return (0);,return (0);)<SUB>2331</SUB>> ]
+"70287" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2333</SUB>> ]
+"70292" [label = <(TIFFSwabArrayOfLong8,TIFFSwabArrayOfLong8((uint64_t *)value, count))<SUB>2334</SUB>> ]
+"70305" [label = <(&lt;operator&gt;.multiplication,count * 8)<SUB>2336</SUB>> ]
+"70274" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2327</SUB>> ]
+"70289" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2333</SUB>> ]
+"70293" [label = <(&lt;operator&gt;.cast,(uint64_t *)value)<SUB>2334</SUB>> ]
+"70276" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2327</SUB>> ]
+"70294" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>2334</SUB>> ]
+"70254" [label = <(METHOD,TIFFWriteDirectoryTagCheckedSlong8Array)<SUB>2320</SUB>> ]
+"70309" [label = <(METHOD_RETURN,int)<SUB>2320</SUB>> ]
+  "70262" -> "70268" 
+  "70266" -> "70276" 
+  "70297" -> "70309" 
+  "70263" -> "70262" 
+  "70267" -> "70266" 
+  "70272" -> "70279" 
+  "70272" -> "70289" 
+  "70286" -> "70294" 
+  "70286" -> "70305" 
+  "70298" -> "70297" 
+  "70268" -> "70267" 
+  "70273" -> "70272" 
+  "70279" -> "70283" 
+  "70283" -> "70309" 
+  "70287" -> "70286" 
+  "70292" -> "70305" 
+  "70305" -> "70298" 
+  "70274" -> "70273" 
+  "70289" -> "70287" 
+  "70293" -> "70292" 
+  "70276" -> "70274" 
+  "70294" -> "70293" 
+  "70254" -> "70263" 
+}

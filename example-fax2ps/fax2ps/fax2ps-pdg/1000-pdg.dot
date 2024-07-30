@@ -1,0 +1,17 @@
+digraph "DumpFixupTags" {  
+"63686" [label = <(METHOD,DumpFixupTags)<SUB>32</SUB>> ]
+"63694" [label = <(METHOD_RETURN,int)<SUB>32</SUB>> ]
+"63687" [label = <(PARAM,TIFF *tif)<SUB>32</SUB>> ]
+"63689" [label = <(&lt;operator&gt;.cast,(void)tif)<SUB>34</SUB>> ]
+"63692" [label = <(RETURN,return (1);,return (1);)<SUB>35</SUB>> ]
+"63693" [label = <(LITERAL,1,return (1);)<SUB>35</SUB>> ]
+  "63692" -> "63694"  [ label = "DDG: &lt;RET&gt;"] 
+  "63689" -> "63694"  [ label = "DDG: tif"] 
+  "63689" -> "63694"  [ label = "DDG: (void)tif"] 
+  "63686" -> "63687"  [ label = "DDG: "] 
+  "63687" -> "63689"  [ label = "DDG: tif"] 
+  "63686" -> "63689"  [ label = "DDG: "] 
+  "63693" -> "63692"  [ label = "DDG: 1"] 
+  "63686" -> "63692"  [ label = "DDG: "] 
+  "63686" -> "63693"  [ label = "DDG: "] 
+}

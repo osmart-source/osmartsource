@@ -1,0 +1,30 @@
+digraph "TIFFReadDirEntryCheckedLong" {  
+"86713" [label = <(&lt;operator&gt;.assignment,*value = *(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86714" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3353</SUB>> ]
+"86716" [label = <(&lt;operator&gt;.indirection,*(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86724" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3354</SUB>> ]
+"86717" [label = <(&lt;operator&gt;.cast,(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86725" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3354</SUB>> ]
+"86730" [label = <(TIFFSwabLong,TIFFSwabLong(value))<SUB>3355</SUB>> ]
+"86718" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3353</SUB>> ]
+"86719" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3353</SUB>> ]
+"86727" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3354</SUB>> ]
+"86720" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3353</SUB>> ]
+"86722" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3353</SUB>> ]
+"86708" [label = <(METHOD,TIFFReadDirEntryCheckedLong)<SUB>3350</SUB>> ]
+"86732" [label = <(METHOD_RETURN,void)<SUB>3350</SUB>> ]
+  "86713" -> "86727" 
+  "86714" -> "86718" 
+  "86716" -> "86713" 
+  "86724" -> "86732" 
+  "86724" -> "86730" 
+  "86717" -> "86716" 
+  "86725" -> "86724" 
+  "86730" -> "86732" 
+  "86718" -> "86722" 
+  "86719" -> "86717" 
+  "86727" -> "86725" 
+  "86720" -> "86719" 
+  "86722" -> "86720" 
+  "86708" -> "86714" 
+}

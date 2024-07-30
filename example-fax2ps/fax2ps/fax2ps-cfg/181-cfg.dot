@@ -1,0 +1,208 @@
+digraph "TIFFHashSetInsert" {  
+"5477" [label = <(assert,assert(set != NULL))<SUB>442</SUB>> ]
+"5494" [label = <(&lt;operator&gt;.assignment,**pElt = TIFFHashSetFindPtr(set, elt))<SUB>443</SUB>> ]
+"5584" [label = <(&lt;operator&gt;.assignment,nHashVal = set-&gt;fnHashFunc(elt) % set-&gt;nAllocatedSize)<SUB>467</SUB>> ]
+"5596" [label = <(&lt;operator&gt;.assignment,*new_elt = TIFFHashSetGetNewListElt(set))<SUB>473</SUB>> ]
+"5623" [label = <(&lt;operator&gt;.assignment,new_elt-&gt;pData = elt)<SUB>480</SUB>> ]
+"5628" [label = <(&lt;operator&gt;.assignment,new_elt-&gt;psNext = set-&gt;tabList[nHashVal])<SUB>481</SUB>> ]
+"5637" [label = <(&lt;operator&gt;.assignment,set-&gt;tabList[nHashVal] = new_elt)<SUB>482</SUB>> ]
+"5644" [label = <(&lt;operator&gt;.postIncrement,set-&gt;nSize++)<SUB>483</SUB>> ]
+"5648" [label = <(RETURN,return true;,return true;)<SUB>485</SUB>> ]
+"5496" [label = <(TIFFHashSetFindPtr,TIFFHashSetFindPtr(set, elt))<SUB>443</SUB>> ]
+"5500" [label = <(&lt;operator&gt;.logicalAnd,pElt &amp;&amp; 1)<SUB>444</SUB>> ]
+"5524" [label = <(&lt;operator&gt;.logicalOr,set-&gt;nSize &gt;= 2 * set-&gt;nAllocatedSize / 3 ||\012        (set-&gt;bRehash &amp;&amp; set-&gt;nIndiceAllocatedSize &gt; 0 &amp;&amp;\012         set-&gt;nSize &lt;= set-&gt;nAllocatedSize / 2))<SUB>453</SUB>> ]
+"5586" [label = <(&lt;operator&gt;.modulo,set-&gt;fnHashFunc(elt) % set-&gt;nAllocatedSize)<SUB>467</SUB>> ]
+"5598" [label = <(TIFFHashSetGetNewListElt,TIFFHashSetGetNewListElt(set))<SUB>473</SUB>> ]
+"5601" [label = <(&lt;operator&gt;.equals,new_elt == NULL)<SUB>474</SUB>> ]
+"5624" [label = <(&lt;operator&gt;.indirectFieldAccess,new_elt-&gt;pData)<SUB>480</SUB>> ]
+"5629" [label = <(&lt;operator&gt;.indirectFieldAccess,new_elt-&gt;psNext)<SUB>481</SUB>> ]
+"5632" [label = <(&lt;operator&gt;.indirectIndexAccess,set-&gt;tabList[nHashVal])<SUB>481</SUB>> ]
+"5638" [label = <(&lt;operator&gt;.indirectIndexAccess,set-&gt;tabList[nHashVal])<SUB>482</SUB>> ]
+"5645" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nSize)<SUB>483</SUB>> ]
+"5649" [label = <(true,true)<SUB>485</SUB>> ]
+"5479" [label = <(&lt;operator&gt;.conditional,(set != ((void *)0)) ? (void)(0) : __assert_fail(&quot;set != NULL&quot;, &quot;/home/cmd/OSmart/identitemp/libtiff/fax2ps/fax2ps/tif_hash_set.c&quot;, 442, __func__))<SUB>442</SUB>> ]
+"5515" [label = <(&lt;operator&gt;.assignment,*pElt = elt)<SUB>449</SUB>> ]
+"5519" [label = <(RETURN,return true;,return true;)<SUB>450</SUB>> ]
+"5525" [label = <(&lt;operator&gt;.greaterEqualsThan,set-&gt;nSize &gt;= 2 * set-&gt;nAllocatedSize / 3)<SUB>453</SUB>> ]
+"5536" [label = <(&lt;operator&gt;.logicalAnd,set-&gt;bRehash &amp;&amp; set-&gt;nIndiceAllocatedSize &gt; 0 &amp;&amp;\012         set-&gt;nSize &lt;= set-&gt;nAllocatedSize / 2)<SUB>454</SUB>> ]
+"5556" [label = <(&lt;operator&gt;.postIncrement,set-&gt;nIndiceAllocatedSize++)<SUB>457</SUB>> ]
+"5587" [label = <(set-&gt;fnHashFunc,set-&gt;fnHashFunc(elt))<SUB>467</SUB>> ]
+"5592" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>467</SUB>> ]
+"5603" [label = <(NULL,NULL)<SUB>474</SUB>> ]
+"5619" [label = <(RETURN,return false;,return false;)<SUB>478</SUB>> ]
+"5626" [label = <(FIELD_IDENTIFIER,pData,pData)<SUB>480</SUB>> ]
+"5631" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>481</SUB>> ]
+"5633" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>481</SUB>> ]
+"5639" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>482</SUB>> ]
+"5647" [label = <(FIELD_IDENTIFIER,nSize,nSize)<SUB>483</SUB>> ]
+"5480" [label = <(&lt;operator&gt;.notEquals,set != ((void *)0))<SUB>442</SUB>> ]
+"5485" [label = <(&lt;operator&gt;.cast,(void)(0))<SUB>442</SUB>> ]
+"5488" [label = <(__assert_fail,__assert_fail(&quot;set != NULL&quot;, &quot;/home/cmd/OSmart/identitemp/libtiff/fax2ps/fax2ps/tif_hash_set.c&quot;, 442, __func__))<SUB>442</SUB>> ]
+"5505" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>446</SUB>> ]
+"5516" [label = <(&lt;operator&gt;.indirection,*pElt)<SUB>449</SUB>> ]
+"5520" [label = <(true,true)<SUB>450</SUB>> ]
+"5526" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nSize)<SUB>453</SUB>> ]
+"5529" [label = <(&lt;operator&gt;.division,2 * set-&gt;nAllocatedSize / 3)<SUB>453</SUB>> ]
+"5537" [label = <(&lt;operator&gt;.logicalAnd,set-&gt;bRehash &amp;&amp; set-&gt;nIndiceAllocatedSize &gt; 0)<SUB>454</SUB>> ]
+"5546" [label = <(&lt;operator&gt;.lessEqualsThan,set-&gt;nSize &lt;= set-&gt;nAllocatedSize / 2)<SUB>455</SUB>> ]
+"5557" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>457</SUB>> ]
+"5561" [label = <(&lt;operator&gt;.logicalNot,!TIFFHashSetRehash(set))<SUB>458</SUB>> ]
+"5588" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnHashFunc)<SUB>467</SUB>> ]
+"5594" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>467</SUB>> ]
+"5610" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>476</SUB>> ]
+"5620" [label = <(false,false)<SUB>478</SUB>> ]
+"5635" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>481</SUB>> ]
+"5641" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>482</SUB>> ]
+"5482" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>442</SUB>> ]
+"5486" [label = <(UNKNOWN,void,void)<SUB>442</SUB>> ]
+"5507" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>446</SUB>> ]
+"5509" [label = <(set-&gt;fnFreeEltFunc,set-&gt;fnFreeEltFunc(*pElt))<SUB>447</SUB>> ]
+"5528" [label = <(FIELD_IDENTIFIER,nSize,nSize)<SUB>453</SUB>> ]
+"5530" [label = <(&lt;operator&gt;.multiplication,2 * set-&gt;nAllocatedSize)<SUB>453</SUB>> ]
+"5538" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;bRehash)<SUB>454</SUB>> ]
+"5541" [label = <(&lt;operator&gt;.greaterThan,set-&gt;nIndiceAllocatedSize &gt; 0)<SUB>454</SUB>> ]
+"5547" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nSize)<SUB>455</SUB>> ]
+"5550" [label = <(&lt;operator&gt;.division,set-&gt;nAllocatedSize / 2)<SUB>455</SUB>> ]
+"5559" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>457</SUB>> ]
+"5562" [label = <(TIFFHashSetRehash,TIFFHashSetRehash(set))<SUB>458</SUB>> ]
+"5565" [label = <(&lt;operator&gt;.postDecrement,set-&gt;nIndiceAllocatedSize--)<SUB>460</SUB>> ]
+"5579" [label = <(RETURN,return false;,return false;)<SUB>463</SUB>> ]
+"5590" [label = <(FIELD_IDENTIFIER,fnHashFunc,fnHashFunc)<SUB>467</SUB>> ]
+"5605" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>474</SUB>> ]
+"5612" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>476</SUB>> ]
+"5614" [label = <(set-&gt;fnFreeEltFunc,set-&gt;fnFreeEltFunc(elt))<SUB>477</SUB>> ]
+"5483" [label = <(UNKNOWN,void *,void *)<SUB>442</SUB>> ]
+"5510" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>447</SUB>> ]
+"5513" [label = <(&lt;operator&gt;.indirection,*pElt)<SUB>447</SUB>> ]
+"5532" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>453</SUB>> ]
+"5540" [label = <(FIELD_IDENTIFIER,bRehash,bRehash)<SUB>454</SUB>> ]
+"5542" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>454</SUB>> ]
+"5549" [label = <(FIELD_IDENTIFIER,nSize,nSize)<SUB>455</SUB>> ]
+"5551" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>455</SUB>> ]
+"5566" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>460</SUB>> ]
+"5570" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>461</SUB>> ]
+"5580" [label = <(false,false)<SUB>463</SUB>> ]
+"5606" [label = <(UNKNOWN,void *,void *)<SUB>474</SUB>> ]
+"5615" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>477</SUB>> ]
+"5512" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>447</SUB>> ]
+"5534" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>453</SUB>> ]
+"5544" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>454</SUB>> ]
+"5553" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>455</SUB>> ]
+"5568" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>460</SUB>> ]
+"5572" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>461</SUB>> ]
+"5574" [label = <(set-&gt;fnFreeEltFunc,set-&gt;fnFreeEltFunc(elt))<SUB>462</SUB>> ]
+"5617" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>477</SUB>> ]
+"5575" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnFreeEltFunc)<SUB>462</SUB>> ]
+"5577" [label = <(FIELD_IDENTIFIER,fnFreeEltFunc,fnFreeEltFunc)<SUB>462</SUB>> ]
+"5473" [label = <(METHOD,TIFFHashSetInsert)<SUB>440</SUB>> ]
+"5652" [label = <(METHOD_RETURN,bool)<SUB>440</SUB>> ]
+  "5477" -> "5483" 
+  "5477" -> "5496" 
+  "5494" -> "5500" 
+  "5584" -> "5598" 
+  "5596" -> "5603" 
+  "5623" -> "5631" 
+  "5628" -> "5641" 
+  "5637" -> "5647" 
+  "5644" -> "5649" 
+  "5648" -> "5652" 
+  "5496" -> "5494" 
+  "5500" -> "5507" 
+  "5500" -> "5528" 
+  "5524" -> "5559" 
+  "5524" -> "5590" 
+  "5586" -> "5584" 
+  "5598" -> "5596" 
+  "5601" -> "5612" 
+  "5601" -> "5626" 
+  "5624" -> "5623" 
+  "5629" -> "5635" 
+  "5632" -> "5628" 
+  "5638" -> "5637" 
+  "5645" -> "5644" 
+  "5649" -> "5648" 
+  "5479" -> "5496" 
+  "5515" -> "5520" 
+  "5519" -> "5652" 
+  "5525" -> "5524" 
+  "5525" -> "5540" 
+  "5536" -> "5524" 
+  "5556" -> "5562" 
+  "5587" -> "5594" 
+  "5592" -> "5586" 
+  "5603" -> "5606" 
+  "5603" -> "5601" 
+  "5619" -> "5652" 
+  "5626" -> "5624" 
+  "5631" -> "5629" 
+  "5633" -> "5632" 
+  "5639" -> "5638" 
+  "5647" -> "5645" 
+  "5480" -> "5486" 
+  "5480" -> "5488" 
+  "5485" -> "5479" 
+  "5488" -> "5479" 
+  "5505" -> "5512" 
+  "5505" -> "5516" 
+  "5516" -> "5515" 
+  "5520" -> "5519" 
+  "5526" -> "5534" 
+  "5529" -> "5525" 
+  "5537" -> "5536" 
+  "5537" -> "5549" 
+  "5546" -> "5536" 
+  "5557" -> "5556" 
+  "5561" -> "5568" 
+  "5561" -> "5590" 
+  "5588" -> "5587" 
+  "5594" -> "5592" 
+  "5610" -> "5620" 
+  "5610" -> "5617" 
+  "5620" -> "5619" 
+  "5635" -> "5633" 
+  "5641" -> "5639" 
+  "5482" -> "5480" 
+  "5486" -> "5485" 
+  "5507" -> "5505" 
+  "5509" -> "5516" 
+  "5528" -> "5526" 
+  "5530" -> "5529" 
+  "5538" -> "5537" 
+  "5538" -> "5544" 
+  "5541" -> "5537" 
+  "5547" -> "5553" 
+  "5550" -> "5546" 
+  "5559" -> "5557" 
+  "5562" -> "5561" 
+  "5565" -> "5572" 
+  "5579" -> "5652" 
+  "5590" -> "5588" 
+  "5605" -> "5601" 
+  "5612" -> "5610" 
+  "5614" -> "5620" 
+  "5483" -> "5482" 
+  "5510" -> "5513" 
+  "5513" -> "5509" 
+  "5532" -> "5530" 
+  "5540" -> "5538" 
+  "5542" -> "5541" 
+  "5549" -> "5547" 
+  "5551" -> "5550" 
+  "5566" -> "5565" 
+  "5570" -> "5580" 
+  "5570" -> "5577" 
+  "5580" -> "5579" 
+  "5606" -> "5605" 
+  "5615" -> "5614" 
+  "5512" -> "5510" 
+  "5534" -> "5532" 
+  "5544" -> "5542" 
+  "5553" -> "5551" 
+  "5568" -> "5566" 
+  "5572" -> "5570" 
+  "5574" -> "5580" 
+  "5617" -> "5615" 
+  "5575" -> "5574" 
+  "5577" -> "5575" 
+  "5473" -> "5477" 
+}

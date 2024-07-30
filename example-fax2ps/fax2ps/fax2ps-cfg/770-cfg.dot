@@ -1,0 +1,48 @@
+digraph "_tiffSeekProc" {  
+"33788" [label = <(&lt;operator&gt;.assignment,off_io = (_TIFF_off_t)off)<SUB>122</SUB>> ]
+"33810" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>128</SUB>> ]
+"33815" [label = <(RETURN,return ((uint64_t)_TIFF_lseek_f(fdh.fd, off_io, whence));,return ((uint64_t)_TIFF_lseek_f(fdh.fd, off_io, whence));)<SUB>129</SUB>> ]
+"33790" [label = <(&lt;operator&gt;.cast,(_TIFF_off_t)off)<SUB>122</SUB>> ]
+"33794" [label = <(&lt;operator&gt;.notEquals,(uint64_t)off_io != off)<SUB>123</SUB>> ]
+"33811" [label = <(&lt;operator&gt;.fieldAccess,fdh.h)<SUB>128</SUB>> ]
+"33816" [label = <(&lt;operator&gt;.cast,(uint64_t)_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33791" [label = <(UNKNOWN,_TIFF_off_t,_TIFF_off_t)<SUB>122</SUB>> ]
+"33795" [label = <(&lt;operator&gt;.cast,(uint64_t)off_io)<SUB>123</SUB>> ]
+"33800" [label = <(&lt;operator&gt;.assignment,(*__errno_location()) = 22)<SUB>125</SUB>> ]
+"33806" [label = <(RETURN,return (uint64_t)-1;,return (uint64_t)-1;)<SUB>126</SUB>> ]
+"33813" [label = <(FIELD_IDENTIFIER,h,h)<SUB>128</SUB>> ]
+"33817" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>129</SUB>> ]
+"33818" [label = <(_TIFF_lseek_f,_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33796" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>123</SUB>> ]
+"33801" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>125</SUB>> ]
+"33803" [label = <(EINVAL,EINVAL)<SUB>125</SUB>> ]
+"33807" [label = <(&lt;operator&gt;.subtraction,(uint64_t)-1)<SUB>126</SUB>> ]
+"33819" [label = <(&lt;operator&gt;.fieldAccess,fdh.fd)<SUB>129</SUB>> ]
+"33802" [label = <(__errno_location,__errno_location())<SUB>125</SUB>> ]
+"33821" [label = <(FIELD_IDENTIFIER,fd,fd)<SUB>129</SUB>> ]
+"33781" [label = <(METHOD,_tiffSeekProc)<SUB>119</SUB>> ]
+"33824" [label = <(METHOD_RETURN,uint64_t)<SUB>119</SUB>> ]
+  "33788" -> "33796" 
+  "33810" -> "33817" 
+  "33815" -> "33824" 
+  "33790" -> "33788" 
+  "33794" -> "33802" 
+  "33794" -> "33813" 
+  "33811" -> "33810" 
+  "33816" -> "33815" 
+  "33791" -> "33790" 
+  "33795" -> "33794" 
+  "33800" -> "33807" 
+  "33806" -> "33824" 
+  "33813" -> "33811" 
+  "33817" -> "33821" 
+  "33818" -> "33816" 
+  "33796" -> "33795" 
+  "33801" -> "33803" 
+  "33803" -> "33800" 
+  "33807" -> "33806" 
+  "33819" -> "33818" 
+  "33802" -> "33801" 
+  "33821" -> "33819" 
+  "33781" -> "33791" 
+}

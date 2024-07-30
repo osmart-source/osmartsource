@@ -1,0 +1,43 @@
+digraph "setByteArray" {  
+"39656" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>46</SUB>> ]
+"39668" [label = <(&lt;operator&gt;.logicalAnd,vp &amp;&amp; 1)<SUB>51</SUB>> ]
+"39659" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, *vpp))<SUB>48</SUB>> ]
+"39663" [label = <(&lt;operator&gt;.assignment,*vpp = 0)<SUB>49</SUB>> ]
+"39673" [label = <(&lt;operator&gt;.assignment,bytes = _TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39661" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>48</SUB>> ]
+"39664" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>49</SUB>> ]
+"39675" [label = <(_TIFFMultiplySSize,_TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39681" [label = <(&lt;operator&gt;.logicalAnd,bytes &amp;&amp; 1)<SUB>54</SUB>> ]
+"39694" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>56</SUB>> ]
+"39685" [label = <(&lt;operator&gt;.assignment,*vpp = (void *)_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39697" [label = <(_TIFFmemcpy,_TIFFmemcpy(*vpp, vp, bytes))<SUB>57</SUB>> ]
+"39686" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>55</SUB>> ]
+"39688" [label = <(&lt;operator&gt;.cast,(void *)_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39698" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>57</SUB>> ]
+"39689" [label = <(UNKNOWN,void *,void *)<SUB>55</SUB>> ]
+"39690" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39648" [label = <(METHOD,setByteArray)<SUB>43</SUB>> ]
+"39702" [label = <(METHOD_RETURN,void)<SUB>43</SUB>> ]
+  "39656" -> "39661" 
+  "39656" -> "39668" 
+  "39668" -> "39702" 
+  "39668" -> "39675" 
+  "39659" -> "39664" 
+  "39663" -> "39668" 
+  "39673" -> "39681" 
+  "39661" -> "39659" 
+  "39664" -> "39663" 
+  "39675" -> "39673" 
+  "39681" -> "39686" 
+  "39681" -> "39694" 
+  "39694" -> "39702" 
+  "39694" -> "39698" 
+  "39685" -> "39694" 
+  "39697" -> "39702" 
+  "39686" -> "39689" 
+  "39688" -> "39685" 
+  "39698" -> "39697" 
+  "39689" -> "39690" 
+  "39690" -> "39688" 
+  "39648" -> "39656" 
+}

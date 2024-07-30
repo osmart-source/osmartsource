@@ -1,0 +1,140 @@
+digraph "TIFFCheckTile" {  
+"29362" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>73</SUB>> ]
+"29474" [label = <(RETURN,return (1);,return (1);)<SUB>102</SUB>> ]
+"29364" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>73</SUB>> ]
+"29369" [label = <(&lt;operator&gt;.greaterEqualsThan,x &gt;= td-&gt;td_imagewidth)<SUB>75</SUB>> ]
+"29394" [label = <(&lt;operator&gt;.greaterEqualsThan,y &gt;= td-&gt;td_imagelength)<SUB>81</SUB>> ]
+"29419" [label = <(&lt;operator&gt;.greaterEqualsThan,z &gt;= td-&gt;td_imagedepth)<SUB>88</SUB>> ]
+"29444" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE &amp;&amp;\012        s &gt;= td-&gt;td_samplesperpixel)<SUB>94</SUB>> ]
+"29365" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>73</SUB>> ]
+"29371" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>75</SUB>> ]
+"29375" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;%lu: Col out of range, max %lu&quot;,\012                      (unsigned long)x, (unsigned long)(td-&gt;td_imagewidth - 1)))<SUB>77</SUB>> ]
+"29391" [label = <(RETURN,return (0);,return (0);)<SUB>79</SUB>> ]
+"29396" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>81</SUB>> ]
+"29400" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;%lu: Row out of range, max %lu&quot;,\012                      (unsigned long)y,\012                      (unsigned long)(td-&gt;td_imagelength - 1)))<SUB>83</SUB>> ]
+"29416" [label = <(RETURN,return (0);,return (0);)<SUB>86</SUB>> ]
+"29421" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>88</SUB>> ]
+"29425" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;%lu: Depth out of range, max %lu&quot;,\012                      (unsigned long)z, (unsigned long)(td-&gt;td_imagedepth - 1)))<SUB>90</SUB>> ]
+"29441" [label = <(RETURN,return (0);,return (0);)<SUB>92</SUB>> ]
+"29445" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>94</SUB>> ]
+"29450" [label = <(&lt;operator&gt;.greaterEqualsThan,s &gt;= td-&gt;td_samplesperpixel)<SUB>95</SUB>> ]
+"29456" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;%lu: Sample out of range, max %lu&quot;,\012                      (unsigned long)s,\012                      (unsigned long)(td-&gt;td_samplesperpixel - 1)))<SUB>97</SUB>> ]
+"29472" [label = <(RETURN,return (0);,return (0);)<SUB>100</SUB>> ]
+"29367" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>73</SUB>> ]
+"29373" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>75</SUB>> ]
+"29377" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>77</SUB>> ]
+"29381" [label = <(&lt;operator&gt;.cast,(unsigned long)x)<SUB>78</SUB>> ]
+"29384" [label = <(&lt;operator&gt;.cast,(unsigned long)(td-&gt;td_imagewidth - 1))<SUB>78</SUB>> ]
+"29398" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>81</SUB>> ]
+"29402" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>83</SUB>> ]
+"29406" [label = <(&lt;operator&gt;.cast,(unsigned long)y)<SUB>84</SUB>> ]
+"29409" [label = <(&lt;operator&gt;.cast,(unsigned long)(td-&gt;td_imagelength - 1))<SUB>85</SUB>> ]
+"29423" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>88</SUB>> ]
+"29427" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>90</SUB>> ]
+"29431" [label = <(&lt;operator&gt;.cast,(unsigned long)z)<SUB>91</SUB>> ]
+"29434" [label = <(&lt;operator&gt;.cast,(unsigned long)(td-&gt;td_imagedepth - 1))<SUB>91</SUB>> ]
+"29446" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>94</SUB>> ]
+"29452" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>95</SUB>> ]
+"29458" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>97</SUB>> ]
+"29462" [label = <(&lt;operator&gt;.cast,(unsigned long)s)<SUB>98</SUB>> ]
+"29465" [label = <(&lt;operator&gt;.cast,(unsigned long)(td-&gt;td_samplesperpixel - 1))<SUB>99</SUB>> ]
+"29379" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>77</SUB>> ]
+"29382" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>78</SUB>> ]
+"29385" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>78</SUB>> ]
+"29386" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_imagewidth - 1)<SUB>78</SUB>> ]
+"29404" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>83</SUB>> ]
+"29407" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>84</SUB>> ]
+"29410" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>85</SUB>> ]
+"29411" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_imagelength - 1)<SUB>85</SUB>> ]
+"29429" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>90</SUB>> ]
+"29432" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>91</SUB>> ]
+"29435" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>91</SUB>> ]
+"29436" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_imagedepth - 1)<SUB>91</SUB>> ]
+"29448" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>94</SUB>> ]
+"29454" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>95</SUB>> ]
+"29460" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>97</SUB>> ]
+"29463" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>98</SUB>> ]
+"29466" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>99</SUB>> ]
+"29467" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_samplesperpixel - 1)<SUB>99</SUB>> ]
+"29387" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>78</SUB>> ]
+"29412" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>85</SUB>> ]
+"29437" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>91</SUB>> ]
+"29468" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>99</SUB>> ]
+"29389" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>78</SUB>> ]
+"29414" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>85</SUB>> ]
+"29439" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>91</SUB>> ]
+"29470" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>99</SUB>> ]
+"29354" [label = <(METHOD,TIFFCheckTile)<SUB>71</SUB>> ]
+"29476" [label = <(METHOD_RETURN,int)<SUB>71</SUB>> ]
+  "29362" -> "29373" 
+  "29474" -> "29476" 
+  "29364" -> "29362" 
+  "29369" -> "29379" 
+  "29369" -> "29398" 
+  "29394" -> "29404" 
+  "29394" -> "29423" 
+  "29419" -> "29429" 
+  "29419" -> "29448" 
+  "29444" -> "29460" 
+  "29444" -> "29474" 
+  "29365" -> "29364" 
+  "29371" -> "29369" 
+  "29375" -> "29391" 
+  "29391" -> "29476" 
+  "29396" -> "29394" 
+  "29400" -> "29416" 
+  "29416" -> "29476" 
+  "29421" -> "29419" 
+  "29425" -> "29441" 
+  "29441" -> "29476" 
+  "29445" -> "29444" 
+  "29445" -> "29454" 
+  "29450" -> "29444" 
+  "29456" -> "29472" 
+  "29472" -> "29476" 
+  "29367" -> "29365" 
+  "29373" -> "29371" 
+  "29377" -> "29382" 
+  "29381" -> "29385" 
+  "29384" -> "29375" 
+  "29398" -> "29396" 
+  "29402" -> "29407" 
+  "29406" -> "29410" 
+  "29409" -> "29400" 
+  "29423" -> "29421" 
+  "29427" -> "29432" 
+  "29431" -> "29435" 
+  "29434" -> "29425" 
+  "29446" -> "29445" 
+  "29452" -> "29450" 
+  "29458" -> "29463" 
+  "29462" -> "29466" 
+  "29465" -> "29456" 
+  "29379" -> "29377" 
+  "29382" -> "29381" 
+  "29385" -> "29389" 
+  "29386" -> "29384" 
+  "29404" -> "29402" 
+  "29407" -> "29406" 
+  "29410" -> "29414" 
+  "29411" -> "29409" 
+  "29429" -> "29427" 
+  "29432" -> "29431" 
+  "29435" -> "29439" 
+  "29436" -> "29434" 
+  "29448" -> "29446" 
+  "29454" -> "29452" 
+  "29460" -> "29458" 
+  "29463" -> "29462" 
+  "29466" -> "29470" 
+  "29467" -> "29465" 
+  "29387" -> "29386" 
+  "29412" -> "29411" 
+  "29437" -> "29436" 
+  "29468" -> "29467" 
+  "29389" -> "29387" 
+  "29414" -> "29412" 
+  "29439" -> "29437" 
+  "29470" -> "29468" 
+  "29354" -> "29367" 
+}

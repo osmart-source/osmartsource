@@ -1,0 +1,41 @@
+digraph "TIFFSetFileName" {  
+"1425" [label = <(METHOD,TIFFSetFileName)<SUB>659</SUB>> ]
+"1426" [label = <(PARAM,TIFF *tif)<SUB>659</SUB>> ]
+"1427" [label = <(PARAM,const char *name)<SUB>659</SUB>> ]
+"1428" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>660</SUB>> ]
+"1429" [label = <(LOCAL,const char* old_name: char)<SUB>661</SUB>> ]
+"1430" [label = <(&lt;operator&gt;.assignment,*old_name = tif-&gt;tif_name)<SUB>661</SUB>> ]
+"1431" [label = <(IDENTIFIER,old_name,*old_name = tif-&gt;tif_name)<SUB>661</SUB>> ]
+"1432" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>661</SUB>> ]
+"1433" [label = <(IDENTIFIER,tif,*old_name = tif-&gt;tif_name)<SUB>661</SUB>> ]
+"1434" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>661</SUB>> ]
+"1435" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_name = (char *)name)<SUB>662</SUB>> ]
+"1436" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>662</SUB>> ]
+"1437" [label = <(IDENTIFIER,tif,tif-&gt;tif_name = (char *)name)<SUB>662</SUB>> ]
+"1438" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>662</SUB>> ]
+"1439" [label = <(&lt;operator&gt;.cast,(char *)name)<SUB>662</SUB>> ]
+"1440" [label = <(UNKNOWN,char *,char *)<SUB>662</SUB>> ]
+"1441" [label = <(IDENTIFIER,name,(char *)name)<SUB>662</SUB>> ]
+"1442" [label = <(RETURN,return (old_name);,return (old_name);)<SUB>663</SUB>> ]
+"1443" [label = <(IDENTIFIER,old_name,return (old_name);)<SUB>663</SUB>> ]
+"1444" [label = <(METHOD_RETURN,const char*)<SUB>659</SUB>> ]
+  "1425" -> "1426" 
+  "1425" -> "1427" 
+  "1425" -> "1428" 
+  "1425" -> "1444" 
+  "1428" -> "1429" 
+  "1428" -> "1430" 
+  "1428" -> "1435" 
+  "1428" -> "1442" 
+  "1430" -> "1431" 
+  "1430" -> "1432" 
+  "1432" -> "1433" 
+  "1432" -> "1434" 
+  "1435" -> "1436" 
+  "1435" -> "1439" 
+  "1436" -> "1437" 
+  "1436" -> "1438" 
+  "1439" -> "1440" 
+  "1439" -> "1441" 
+  "1442" -> "1443" 
+}

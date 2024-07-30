@@ -1,0 +1,18 @@
+digraph "bcopy" {  
+"98931" [label = <(METHOD,bcopy)<SUB>38</SUB>> ]
+"98932" [label = <(PARAM,const void *__src)<SUB>38</SUB>> ]
+"98933" [label = <(PARAM,void *__dest)<SUB>38</SUB>> ]
+"98934" [label = <(PARAM,size_t __n)<SUB>38</SUB>> ]
+"98935" [label = <(METHOD_RETURN,void)<SUB>38</SUB>> ]
+  "98931" -> "98932"  [ label = "AST: "] 
+  "98931" -> "98933"  [ label = "AST: "] 
+  "98931" -> "98934"  [ label = "AST: "] 
+  "98931" -> "98935"  [ label = "AST: "] 
+  "98931" -> "98935"  [ label = "CFG: "] 
+  "98932" -> "98935"  [ label = "DDG: __src"] 
+  "98933" -> "98935"  [ label = "DDG: __dest"] 
+  "98934" -> "98935"  [ label = "DDG: __n"] 
+  "98931" -> "98932"  [ label = "DDG: "] 
+  "98931" -> "98933"  [ label = "DDG: "] 
+  "98931" -> "98934"  [ label = "DDG: "] 
+}

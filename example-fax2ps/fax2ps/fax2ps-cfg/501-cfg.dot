@@ -1,0 +1,25 @@
+digraph "pcompar" {  
+"10263" [label = <(&lt;operator&gt;.assignment,*pa = (const int *)va)<SUB>335</SUB>> ]
+"10269" [label = <(&lt;operator&gt;.assignment,*pb = (const int *)vb)<SUB>336</SUB>> ]
+"10274" [label = <(RETURN,return (*pa - *pb);,return (*pa - *pb);)<SUB>337</SUB>> ]
+"10265" [label = <(&lt;operator&gt;.cast,(const int *)va)<SUB>335</SUB>> ]
+"10271" [label = <(&lt;operator&gt;.cast,(const int *)vb)<SUB>336</SUB>> ]
+"10275" [label = <(&lt;operator&gt;.subtraction,*pa - *pb)<SUB>337</SUB>> ]
+"10266" [label = <(UNKNOWN,const int *,const int *)<SUB>335</SUB>> ]
+"10272" [label = <(UNKNOWN,const int *,const int *)<SUB>336</SUB>> ]
+"10276" [label = <(&lt;operator&gt;.indirection,*pa)<SUB>337</SUB>> ]
+"10278" [label = <(&lt;operator&gt;.indirection,*pb)<SUB>337</SUB>> ]
+"10258" [label = <(METHOD,pcompar)<SUB>333</SUB>> ]
+"10280" [label = <(METHOD_RETURN,int)<SUB>333</SUB>> ]
+  "10263" -> "10272" 
+  "10269" -> "10276" 
+  "10274" -> "10280" 
+  "10265" -> "10263" 
+  "10271" -> "10269" 
+  "10275" -> "10274" 
+  "10266" -> "10265" 
+  "10272" -> "10271" 
+  "10276" -> "10278" 
+  "10278" -> "10275" 
+  "10258" -> "10266" 
+}

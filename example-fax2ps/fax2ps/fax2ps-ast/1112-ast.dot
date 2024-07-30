@@ -1,0 +1,77 @@
+digraph "TIFFWriteDirectoryTagCheckedLong" {  
+"70076" [label = <(METHOD,TIFFWriteDirectoryTagCheckedLong)<SUB>2262</SUB>> ]
+"70077" [label = <(PARAM,TIFF *tif)<SUB>2262</SUB>> ]
+"70078" [label = <(PARAM,uint32_t *ndir)<SUB>2262</SUB>> ]
+"70079" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2263</SUB>> ]
+"70080" [label = <(PARAM,uint16_t tag)<SUB>2263</SUB>> ]
+"70081" [label = <(PARAM,uint32_t value)<SUB>2264</SUB>> ]
+"70082" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2265</SUB>> ]
+"70083" [label = <(LOCAL,uint32_t m: uint32_t)<SUB>2266</SUB>> ]
+"70084" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>2267</SUB>> ]
+"70085" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>2267</SUB>> ]
+"70086" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2267</SUB>> ]
+"70087" [label = <(IDENTIFIER,uint32_t,sizeof(uint32_t))<SUB>2267</SUB>> ]
+"70088" [label = <(LITERAL,4,sizeof(uint32_t) == 4)<SUB>2267</SUB>> ]
+"70089" [label = <(&lt;operator&gt;.assignment,m = value)<SUB>2268</SUB>> ]
+"70090" [label = <(IDENTIFIER,m,m = value)<SUB>2268</SUB>> ]
+"70091" [label = <(IDENTIFIER,value,m = value)<SUB>2268</SUB>> ]
+"70092" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2269</SUB>> ]
+"70093" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2269</SUB>> ]
+"70094" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2269</SUB>> ]
+"70095" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2269</SUB>> ]
+"70096" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2269</SUB>> ]
+"70097" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2269</SUB>> ]
+"70098" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2270</SUB>> ]
+"70099" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;m))<SUB>2270</SUB>> ]
+"70100" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2270</SUB>> ]
+"70101" [label = <(IDENTIFIER,m,TIFFSwabLong(&amp;m))<SUB>2270</SUB>> ]
+"70102" [label = <(RETURN,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m));,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m));)<SUB>2271</SUB>> ]
+"70103" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70104" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70105" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70106" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70107" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70108" [label = <(IDENTIFIER,TIFF_LONG,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70109" [label = <(LITERAL,1,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70110" [label = <(LITERAL,4,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70111" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2272</SUB>> ]
+"70112" [label = <(IDENTIFIER,m,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70113" [label = <(METHOD_RETURN,int)<SUB>2262</SUB>> ]
+  "70076" -> "70077" 
+  "70076" -> "70078" 
+  "70076" -> "70079" 
+  "70076" -> "70080" 
+  "70076" -> "70081" 
+  "70076" -> "70082" 
+  "70076" -> "70113" 
+  "70082" -> "70083" 
+  "70082" -> "70084" 
+  "70082" -> "70089" 
+  "70082" -> "70092" 
+  "70082" -> "70102" 
+  "70084" -> "70085" 
+  "70085" -> "70086" 
+  "70085" -> "70088" 
+  "70086" -> "70087" 
+  "70089" -> "70090" 
+  "70089" -> "70091" 
+  "70092" -> "70093" 
+  "70092" -> "70098" 
+  "70093" -> "70094" 
+  "70093" -> "70097" 
+  "70094" -> "70095" 
+  "70094" -> "70096" 
+  "70098" -> "70099" 
+  "70099" -> "70100" 
+  "70100" -> "70101" 
+  "70102" -> "70103" 
+  "70103" -> "70104" 
+  "70103" -> "70105" 
+  "70103" -> "70106" 
+  "70103" -> "70107" 
+  "70103" -> "70108" 
+  "70103" -> "70109" 
+  "70103" -> "70110" 
+  "70103" -> "70111" 
+  "70111" -> "70112" 
+}

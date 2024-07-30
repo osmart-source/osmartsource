@@ -1,0 +1,53 @@
+digraph "isCCITTCompression" {  
+"46112" [label = <(METHOD,isCCITTCompression)<SUB>300</SUB>> ]
+"46113" [label = <(PARAM,TIFF *tif)<SUB>300</SUB>> ]
+"46114" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>301</SUB>> ]
+"46115" [label = <(LOCAL,uint16_t compress: uint16_t)<SUB>302</SUB>> ]
+"46116" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compress))<SUB>303</SUB>> ]
+"46117" [label = <(IDENTIFIER,tif,TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compress))<SUB>303</SUB>> ]
+"46118" [label = <(IDENTIFIER,TIFFTAG_COMPRESSION,TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compress))<SUB>303</SUB>> ]
+"46119" [label = <(&lt;operator&gt;.addressOf,&amp;compress)<SUB>303</SUB>> ]
+"46120" [label = <(IDENTIFIER,compress,TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compress))<SUB>303</SUB>> ]
+"46121" [label = <(RETURN,return (compress == COMPRESSION_CCITTFAX3 ||\012            compress == COMPRESSION_CCITTFAX4 ||\012            compress == COMPRESSION_CCITTRLE ||\012            compress == COMPRESSION_CCITTRLEW);,return (compress == COMPRESSION_CCITTFAX3 ||\012            compress == COMPRESSION_CCITTFAX4 ||\012            compress == COMPRESSION_CCITTRLE ||\012            compress == COMPRESSION_CCITTRLEW);)<SUB>304</SUB>> ]
+"46122" [label = <(&lt;operator&gt;.logicalOr,compress == COMPRESSION_CCITTFAX3 ||\012            compress == COMPRESSION_CCITTFAX4 ||\012            compress == COMPRESSION_CCITTRLE ||\012            compress == COMPRESSION_CCITTRLEW)<SUB>304</SUB>> ]
+"46123" [label = <(&lt;operator&gt;.logicalOr,compress == COMPRESSION_CCITTFAX3 ||\012            compress == COMPRESSION_CCITTFAX4 ||\012            compress == COMPRESSION_CCITTRLE)<SUB>304</SUB>> ]
+"46124" [label = <(&lt;operator&gt;.logicalOr,compress == COMPRESSION_CCITTFAX3 ||\012            compress == COMPRESSION_CCITTFAX4)<SUB>304</SUB>> ]
+"46125" [label = <(&lt;operator&gt;.equals,compress == COMPRESSION_CCITTFAX3)<SUB>304</SUB>> ]
+"46126" [label = <(IDENTIFIER,compress,compress == COMPRESSION_CCITTFAX3)<SUB>304</SUB>> ]
+"46127" [label = <(IDENTIFIER,COMPRESSION_CCITTFAX3,compress == COMPRESSION_CCITTFAX3)<SUB>304</SUB>> ]
+"46128" [label = <(&lt;operator&gt;.equals,compress == COMPRESSION_CCITTFAX4)<SUB>305</SUB>> ]
+"46129" [label = <(IDENTIFIER,compress,compress == COMPRESSION_CCITTFAX4)<SUB>305</SUB>> ]
+"46130" [label = <(IDENTIFIER,COMPRESSION_CCITTFAX4,compress == COMPRESSION_CCITTFAX4)<SUB>305</SUB>> ]
+"46131" [label = <(&lt;operator&gt;.equals,compress == COMPRESSION_CCITTRLE)<SUB>306</SUB>> ]
+"46132" [label = <(IDENTIFIER,compress,compress == COMPRESSION_CCITTRLE)<SUB>306</SUB>> ]
+"46133" [label = <(IDENTIFIER,COMPRESSION_CCITTRLE,compress == COMPRESSION_CCITTRLE)<SUB>306</SUB>> ]
+"46134" [label = <(&lt;operator&gt;.equals,compress == COMPRESSION_CCITTRLEW)<SUB>307</SUB>> ]
+"46135" [label = <(IDENTIFIER,compress,compress == COMPRESSION_CCITTRLEW)<SUB>307</SUB>> ]
+"46136" [label = <(IDENTIFIER,COMPRESSION_CCITTRLEW,compress == COMPRESSION_CCITTRLEW)<SUB>307</SUB>> ]
+"46137" [label = <(METHOD_RETURN,int)<SUB>300</SUB>> ]
+  "46112" -> "46113" 
+  "46112" -> "46114" 
+  "46112" -> "46137" 
+  "46114" -> "46115" 
+  "46114" -> "46116" 
+  "46114" -> "46121" 
+  "46116" -> "46117" 
+  "46116" -> "46118" 
+  "46116" -> "46119" 
+  "46119" -> "46120" 
+  "46121" -> "46122" 
+  "46122" -> "46123" 
+  "46122" -> "46134" 
+  "46123" -> "46124" 
+  "46123" -> "46131" 
+  "46124" -> "46125" 
+  "46124" -> "46128" 
+  "46125" -> "46126" 
+  "46125" -> "46127" 
+  "46128" -> "46129" 
+  "46128" -> "46130" 
+  "46131" -> "46132" 
+  "46131" -> "46133" 
+  "46134" -> "46135" 
+  "46134" -> "46136" 
+}

@@ -1,0 +1,55 @@
+digraph "TIFFWriteDirectoryTagByteArray" {  
+"67944" [label = <(METHOD,TIFFWriteDirectoryTagByteArray)<SUB>1416</SUB>> ]
+"67945" [label = <(PARAM,TIFF *tif)<SUB>1416</SUB>> ]
+"67946" [label = <(PARAM,uint32_t *ndir)<SUB>1416</SUB>> ]
+"67947" [label = <(PARAM,TIFFDirEntry *dir)<SUB>1417</SUB>> ]
+"67948" [label = <(PARAM,uint16_t tag)<SUB>1417</SUB>> ]
+"67949" [label = <(PARAM,uint32_t count)<SUB>1418</SUB>> ]
+"67950" [label = <(PARAM,uint8_t *value)<SUB>1418</SUB>> ]
+"67951" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1419</SUB>> ]
+"67952" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>1420</SUB>> ]
+"67953" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1420</SUB>> ]
+"67954" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>1420</SUB>> ]
+"67955" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>1420</SUB>> ]
+"67956" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1421</SUB>> ]
+"67957" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1422</SUB>> ]
+"67958" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1422</SUB>> ]
+"67959" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>1422</SUB>> ]
+"67960" [label = <(RETURN,return (1);,return (1);)<SUB>1423</SUB>> ]
+"67961" [label = <(LITERAL,1,return (1);)<SUB>1423</SUB>> ]
+"67962" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value));,return (TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value));)<SUB>1425</SUB>> ]
+"67963" [label = <(TIFFWriteDirectoryTagCheckedByteArray,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1425</SUB>> ]
+"67964" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1425</SUB>> ]
+"67965" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1425</SUB>> ]
+"67966" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1425</SUB>> ]
+"67967" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1425</SUB>> ]
+"67968" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1425</SUB>> ]
+"67969" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagCheckedByteArray(tif, ndir, dir, tag, count,\012                                                  value))<SUB>1426</SUB>> ]
+"67970" [label = <(METHOD_RETURN,int)<SUB>1416</SUB>> ]
+  "67944" -> "67945" 
+  "67944" -> "67946" 
+  "67944" -> "67947" 
+  "67944" -> "67948" 
+  "67944" -> "67949" 
+  "67944" -> "67950" 
+  "67944" -> "67951" 
+  "67944" -> "67970" 
+  "67951" -> "67952" 
+  "67951" -> "67962" 
+  "67952" -> "67953" 
+  "67952" -> "67956" 
+  "67953" -> "67954" 
+  "67953" -> "67955" 
+  "67956" -> "67957" 
+  "67956" -> "67960" 
+  "67957" -> "67958" 
+  "67958" -> "67959" 
+  "67960" -> "67961" 
+  "67962" -> "67963" 
+  "67963" -> "67964" 
+  "67963" -> "67965" 
+  "67963" -> "67966" 
+  "67963" -> "67967" 
+  "67963" -> "67968" 
+  "67963" -> "67969" 
+}

@@ -1,0 +1,82 @@
+digraph "TIFFWriteDirectoryTagCheckedRationalDoubleArray" {  
+"70633" [label = <(&lt;operator&gt;.assignment,module[] =\012        &quot;TIFFWriteDirectoryTagCheckedRationalDoubleArray&quot;)<SUB>2443</SUB>> ]
+"70641" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>2450</SUB>> ]
+"70646" [label = <(&lt;operator&gt;.assignment,m = _TIFFmallocExt(tif, count * 2 * sizeof(uint32_t)))<SUB>2451</SUB>> ]
+"70714" [label = <(&lt;operator&gt;.assignment,o = TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_RATIONAL, count,\012                                  count * 8, &amp;m[0]))<SUB>2463</SUB>> ]
+"70730" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, m))<SUB>2465</SUB>> ]
+"70733" [label = <(RETURN,return (o);,return (o);)<SUB>2466</SUB>> ]
+"70642" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>2450</SUB>> ]
+"70648" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * 2 * sizeof(uint32_t)))<SUB>2451</SUB>> ]
+"70657" [label = <(&lt;operator&gt;.equals,m == NULL)<SUB>2452</SUB>> ]
+"70679" [label = <(&lt;operator&gt;.lessThan,nc &lt; count)<SUB>2457</SUB>> ]
+"70703" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2461</SUB>> ]
+"70716" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_RATIONAL, count,\012                                  count * 8, &amp;m[0]))<SUB>2463</SUB>> ]
+"70643" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2450</SUB>> ]
+"70650" [label = <(&lt;operator&gt;.multiplication,count * 2 * sizeof(uint32_t))<SUB>2451</SUB>> ]
+"70661" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2454</SUB>> ]
+"70665" [label = <(RETURN,return (0);,return (0);)<SUB>2455</SUB>> ]
+"70683" [label = <(&lt;operator&gt;.postIncrement,na++)<SUB>2457</SUB>> ]
+"70685" [label = <(&lt;operator&gt;.assignmentPlus,nb += 2)<SUB>2457</SUB>> ]
+"70688" [label = <(&lt;operator&gt;.postIncrement,nc++)<SUB>2457</SUB>> ]
+"70691" [label = <(DoubleToRational,DoubleToRational(*na, &amp;nb[0], &amp;nb[1]))<SUB>2459</SUB>> ]
+"70704" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2461</SUB>> ]
+"70709" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(m, count * 2))<SUB>2462</SUB>> ]
+"70723" [label = <(&lt;operator&gt;.multiplication,count * 8)<SUB>2464</SUB>> ]
+"70726" [label = <(&lt;operator&gt;.addressOf,&amp;m[0])<SUB>2464</SUB>> ]
+"70651" [label = <(&lt;operator&gt;.multiplication,count * 2)<SUB>2451</SUB>> ]
+"70654" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2451</SUB>> ]
+"70670" [label = <(&lt;operator&gt;.assignment,na = value)<SUB>2457</SUB>> ]
+"70673" [label = <(&lt;operator&gt;.assignment,nb = m)<SUB>2457</SUB>> ]
+"70676" [label = <(&lt;operator&gt;.assignment,nc = 0)<SUB>2457</SUB>> ]
+"70692" [label = <(&lt;operator&gt;.indirection,*na)<SUB>2459</SUB>> ]
+"70694" [label = <(&lt;operator&gt;.addressOf,&amp;nb[0])<SUB>2459</SUB>> ]
+"70698" [label = <(&lt;operator&gt;.addressOf,&amp;nb[1])<SUB>2459</SUB>> ]
+"70706" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2461</SUB>> ]
+"70711" [label = <(&lt;operator&gt;.multiplication,count * 2)<SUB>2462</SUB>> ]
+"70727" [label = <(&lt;operator&gt;.indirectIndexAccess,m[0])<SUB>2464</SUB>> ]
+"70695" [label = <(&lt;operator&gt;.indirectIndexAccess,nb[0])<SUB>2459</SUB>> ]
+"70699" [label = <(&lt;operator&gt;.indirectIndexAccess,nb[1])<SUB>2459</SUB>> ]
+"70624" [label = <(METHOD,TIFFWriteDirectoryTagCheckedRationalDoubleArray)<SUB>2438</SUB>> ]
+"70735" [label = <(METHOD_RETURN,int)<SUB>2438</SUB>> ]
+  "70633" -> "70643" 
+  "70641" -> "70651" 
+  "70646" -> "70657" 
+  "70714" -> "70730" 
+  "70730" -> "70733" 
+  "70733" -> "70735" 
+  "70642" -> "70641" 
+  "70648" -> "70646" 
+  "70657" -> "70661" 
+  "70657" -> "70670" 
+  "70679" -> "70692" 
+  "70679" -> "70706" 
+  "70703" -> "70711" 
+  "70703" -> "70723" 
+  "70716" -> "70714" 
+  "70643" -> "70642" 
+  "70650" -> "70648" 
+  "70661" -> "70665" 
+  "70665" -> "70735" 
+  "70683" -> "70685" 
+  "70685" -> "70688" 
+  "70688" -> "70679" 
+  "70691" -> "70683" 
+  "70704" -> "70703" 
+  "70709" -> "70723" 
+  "70723" -> "70727" 
+  "70726" -> "70716" 
+  "70651" -> "70654" 
+  "70654" -> "70650" 
+  "70670" -> "70673" 
+  "70673" -> "70676" 
+  "70676" -> "70679" 
+  "70692" -> "70695" 
+  "70694" -> "70699" 
+  "70698" -> "70691" 
+  "70706" -> "70704" 
+  "70711" -> "70709" 
+  "70727" -> "70726" 
+  "70695" -> "70694" 
+  "70699" -> "70698" 
+  "70624" -> "70633" 
+}

@@ -1,0 +1,143 @@
+digraph "_TIFFPrintFieldInfo" {  
+"27051" [label = <(METHOD,_TIFFPrintFieldInfo)<SUB>811</SUB>> ]
+"27052" [label = <(PARAM,TIFF *tif)<SUB>811</SUB>> ]
+"27053" [label = <(PARAM,FILE *fd)<SUB>811</SUB>> ]
+"27054" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>812</SUB>> ]
+"27055" [label = <(LOCAL,uint32_t i: uint32_t)<SUB>813</SUB>> ]
+"27056" [label = <(fprintf,fprintf(fd, &quot;%s: \n&quot;, tif-&gt;tif_name))<SUB>815</SUB>> ]
+"27057" [label = <(IDENTIFIER,fd,fprintf(fd, &quot;%s: \n&quot;, tif-&gt;tif_name))<SUB>815</SUB>> ]
+"27058" [label = <(LITERAL,&quot;%s: \n&quot;,fprintf(fd, &quot;%s: \n&quot;, tif-&gt;tif_name))<SUB>815</SUB>> ]
+"27059" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>815</SUB>> ]
+"27060" [label = <(IDENTIFIER,tif,fprintf(fd, &quot;%s: \n&quot;, tif-&gt;tif_name))<SUB>815</SUB>> ]
+"27061" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>815</SUB>> ]
+"27062" [label = <(CONTROL_STRUCTURE,for (i = 0;i &lt; tif-&gt;tif_nfields;i++),for (i = 0;i &lt; tif-&gt;tif_nfields;i++))<SUB>816</SUB>> ]
+"27063" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>816</SUB>> ]
+"27064" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>816</SUB>> ]
+"27065" [label = <(IDENTIFIER,i,i = 0)<SUB>816</SUB>> ]
+"27066" [label = <(LITERAL,0,i = 0)<SUB>816</SUB>> ]
+"27067" [label = <(&lt;operator&gt;.lessThan,i &lt; tif-&gt;tif_nfields)<SUB>816</SUB>> ]
+"27068" [label = <(IDENTIFIER,i,i &lt; tif-&gt;tif_nfields)<SUB>816</SUB>> ]
+"27069" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfields)<SUB>816</SUB>> ]
+"27070" [label = <(IDENTIFIER,tif,i &lt; tif-&gt;tif_nfields)<SUB>816</SUB>> ]
+"27071" [label = <(FIELD_IDENTIFIER,tif_nfields,tif_nfields)<SUB>816</SUB>> ]
+"27072" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>816</SUB>> ]
+"27073" [label = <(IDENTIFIER,i,i++)<SUB>816</SUB>> ]
+"27074" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>817</SUB>> ]
+"27075" [label = <(LOCAL,const TIFFField* fip: TIFFField)<SUB>818</SUB>> ]
+"27076" [label = <(&lt;operator&gt;.assignment,*fip = tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27077" [label = <(IDENTIFIER,fip,*fip = tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27078" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27079" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>818</SUB>> ]
+"27080" [label = <(IDENTIFIER,tif,*fip = tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27081" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>818</SUB>> ]
+"27082" [label = <(IDENTIFIER,i,*fip = tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27083" [label = <(fprintf,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>819</SUB>> ]
+"27084" [label = <(IDENTIFIER,fd,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>819</SUB>> ]
+"27085" [label = <(LITERAL,&quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>819</SUB>> ]
+"27086" [label = <(&lt;operator&gt;.cast,(int)i)<SUB>820</SUB>> ]
+"27087" [label = <(UNKNOWN,int,int)<SUB>820</SUB>> ]
+"27088" [label = <(IDENTIFIER,i,(int)i)<SUB>820</SUB>> ]
+"27089" [label = <(&lt;operator&gt;.cast,(unsigned long)fip-&gt;field_tag)<SUB>820</SUB>> ]
+"27090" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>820</SUB>> ]
+"27091" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_tag)<SUB>820</SUB>> ]
+"27092" [label = <(IDENTIFIER,fip,(unsigned long)fip-&gt;field_tag)<SUB>820</SUB>> ]
+"27093" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>820</SUB>> ]
+"27094" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_readcount)<SUB>820</SUB>> ]
+"27095" [label = <(IDENTIFIER,fip,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>820</SUB>> ]
+"27096" [label = <(FIELD_IDENTIFIER,field_readcount,field_readcount)<SUB>820</SUB>> ]
+"27097" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_writecount)<SUB>821</SUB>> ]
+"27098" [label = <(IDENTIFIER,fip,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>821</SUB>> ]
+"27099" [label = <(FIELD_IDENTIFIER,field_writecount,field_writecount)<SUB>821</SUB>> ]
+"27100" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_type)<SUB>821</SUB>> ]
+"27101" [label = <(IDENTIFIER,fip,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>821</SUB>> ]
+"27102" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>821</SUB>> ]
+"27103" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>821</SUB>> ]
+"27104" [label = <(IDENTIFIER,fip,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>821</SUB>> ]
+"27105" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>821</SUB>> ]
+"27106" [label = <(&lt;operator&gt;.conditional,fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>822</SUB>> ]
+"27107" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_oktochange)<SUB>822</SUB>> ]
+"27108" [label = <(IDENTIFIER,fip,fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>822</SUB>> ]
+"27109" [label = <(FIELD_IDENTIFIER,field_oktochange,field_oktochange)<SUB>822</SUB>> ]
+"27110" [label = <(LITERAL,&quot;TRUE&quot;,fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>822</SUB>> ]
+"27111" [label = <(LITERAL,&quot;FALSE&quot;,fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>822</SUB>> ]
+"27112" [label = <(&lt;operator&gt;.conditional,fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>823</SUB>> ]
+"27113" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_passcount)<SUB>823</SUB>> ]
+"27114" [label = <(IDENTIFIER,fip,fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>823</SUB>> ]
+"27115" [label = <(FIELD_IDENTIFIER,field_passcount,field_passcount)<SUB>823</SUB>> ]
+"27116" [label = <(LITERAL,&quot;TRUE&quot;,fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>823</SUB>> ]
+"27117" [label = <(LITERAL,&quot;FALSE&quot;,fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>823</SUB>> ]
+"27118" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>823</SUB>> ]
+"27119" [label = <(IDENTIFIER,fip,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>823</SUB>> ]
+"27120" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>823</SUB>> ]
+"27121" [label = <(METHOD_RETURN,void)<SUB>811</SUB>> ]
+  "27051" -> "27052" 
+  "27051" -> "27053" 
+  "27051" -> "27054" 
+  "27051" -> "27121" 
+  "27054" -> "27055" 
+  "27054" -> "27056" 
+  "27054" -> "27062" 
+  "27056" -> "27057" 
+  "27056" -> "27058" 
+  "27056" -> "27059" 
+  "27059" -> "27060" 
+  "27059" -> "27061" 
+  "27062" -> "27063" 
+  "27062" -> "27067" 
+  "27062" -> "27072" 
+  "27062" -> "27074" 
+  "27063" -> "27064" 
+  "27064" -> "27065" 
+  "27064" -> "27066" 
+  "27067" -> "27068" 
+  "27067" -> "27069" 
+  "27069" -> "27070" 
+  "27069" -> "27071" 
+  "27072" -> "27073" 
+  "27074" -> "27075" 
+  "27074" -> "27076" 
+  "27074" -> "27083" 
+  "27076" -> "27077" 
+  "27076" -> "27078" 
+  "27078" -> "27079" 
+  "27078" -> "27082" 
+  "27079" -> "27080" 
+  "27079" -> "27081" 
+  "27083" -> "27084" 
+  "27083" -> "27085" 
+  "27083" -> "27086" 
+  "27083" -> "27089" 
+  "27083" -> "27094" 
+  "27083" -> "27097" 
+  "27083" -> "27100" 
+  "27083" -> "27103" 
+  "27083" -> "27106" 
+  "27083" -> "27112" 
+  "27083" -> "27118" 
+  "27086" -> "27087" 
+  "27086" -> "27088" 
+  "27089" -> "27090" 
+  "27089" -> "27091" 
+  "27091" -> "27092" 
+  "27091" -> "27093" 
+  "27094" -> "27095" 
+  "27094" -> "27096" 
+  "27097" -> "27098" 
+  "27097" -> "27099" 
+  "27100" -> "27101" 
+  "27100" -> "27102" 
+  "27103" -> "27104" 
+  "27103" -> "27105" 
+  "27106" -> "27107" 
+  "27106" -> "27110" 
+  "27106" -> "27111" 
+  "27107" -> "27108" 
+  "27107" -> "27109" 
+  "27112" -> "27113" 
+  "27112" -> "27116" 
+  "27112" -> "27117" 
+  "27113" -> "27114" 
+  "27113" -> "27115" 
+  "27118" -> "27119" 
+  "27118" -> "27120" 
+}

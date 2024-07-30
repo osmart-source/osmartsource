@@ -1,0 +1,483 @@
+digraph "_TIFFReadEncodedTileAndAllocBuffer" {  
+"76190" [label = <(METHOD,_TIFFReadEncodedTileAndAllocBuffer)<SUB>999</SUB>> ]
+"76191" [label = <(PARAM,TIFF *tif)<SUB>999</SUB>> ]
+"76192" [label = <(PARAM,uint32_t tile)<SUB>999</SUB>> ]
+"76193" [label = <(PARAM,void **buf)<SUB>1000</SUB>> ]
+"76194" [label = <(PARAM,tmsize_t bufsizetoalloc)<SUB>1000</SUB>> ]
+"76195" [label = <(PARAM,tmsize_t size_to_read)<SUB>1001</SUB>> ]
+"76196" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1002</SUB>> ]
+"76197" [label = <(LOCAL,constchar[] module: char[])<SUB>1003</SUB>> ]
+"76198" [label = <(&lt;operator&gt;.assignment,module[] = &quot;_TIFFReadEncodedTileAndAllocBuffer&quot;)<SUB>1003</SUB>> ]
+"76199" [label = <(IDENTIFIER,module,module[] = &quot;_TIFFReadEncodedTileAndAllocBuffer&quot;)<SUB>1003</SUB>> ]
+"76200" [label = <(LITERAL,&quot;_TIFFReadEncodedTileAndAllocBuffer&quot;,module[] = &quot;_TIFFReadEncodedTileAndAllocBuffer&quot;)<SUB>1003</SUB>> ]
+"76201" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>1004</SUB>> ]
+"76202" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1004</SUB>> ]
+"76203" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>1004</SUB>> ]
+"76204" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1004</SUB>> ]
+"76205" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1004</SUB>> ]
+"76206" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>1004</SUB>> ]
+"76207" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1004</SUB>> ]
+"76208" [label = <(LOCAL,tmsize_t tilesize: tmsize_t)<SUB>1005</SUB>> ]
+"76209" [label = <(&lt;operator&gt;.assignment,tilesize = tif-&gt;tif_tilesize)<SUB>1005</SUB>> ]
+"76210" [label = <(IDENTIFIER,tilesize,tilesize = tif-&gt;tif_tilesize)<SUB>1005</SUB>> ]
+"76211" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_tilesize)<SUB>1005</SUB>> ]
+"76212" [label = <(IDENTIFIER,tif,tilesize = tif-&gt;tif_tilesize)<SUB>1005</SUB>> ]
+"76213" [label = <(FIELD_IDENTIFIER,tif_tilesize,tif_tilesize)<SUB>1005</SUB>> ]
+"76214" [label = <(CONTROL_STRUCTURE,if (*buf != NULL),if (*buf != NULL))<SUB>1007</SUB>> ]
+"76215" [label = <(&lt;operator&gt;.notEquals,*buf != NULL)<SUB>1007</SUB>> ]
+"76216" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1007</SUB>> ]
+"76217" [label = <(IDENTIFIER,buf,*buf != NULL)<SUB>1007</SUB>> ]
+"76218" [label = <(NULL,NULL)<SUB>1007</SUB>> ]
+"76219" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"76220" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1007</SUB>> ]
+"76221" [label = <(UNKNOWN,void *,void *)<SUB>1007</SUB>> ]
+"76222" [label = <(LITERAL,0,(void *)0)<SUB>1007</SUB>> ]
+"76223" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1008</SUB>> ]
+"76224" [label = <(RETURN,return TIFFReadEncodedTile(tif, tile, *buf, size_to_read);,return TIFFReadEncodedTile(tif, tile, *buf, size_to_read);)<SUB>1009</SUB>> ]
+"76225" [label = <(TIFFReadEncodedTile,TIFFReadEncodedTile(tif, tile, *buf, size_to_read))<SUB>1009</SUB>> ]
+"76226" [label = <(IDENTIFIER,tif,TIFFReadEncodedTile(tif, tile, *buf, size_to_read))<SUB>1009</SUB>> ]
+"76227" [label = <(IDENTIFIER,tile,TIFFReadEncodedTile(tif, tile, *buf, size_to_read))<SUB>1009</SUB>> ]
+"76228" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1009</SUB>> ]
+"76229" [label = <(IDENTIFIER,buf,TIFFReadEncodedTile(tif, tile, *buf, size_to_read))<SUB>1009</SUB>> ]
+"76230" [label = <(IDENTIFIER,size_to_read,TIFFReadEncodedTile(tif, tile, *buf, size_to_read))<SUB>1009</SUB>> ]
+"76231" [label = <(CONTROL_STRUCTURE,if (!TIFFCheckRead(tif, 1)),if (!TIFFCheckRead(tif, 1)))<SUB>1012</SUB>> ]
+"76232" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 1))<SUB>1012</SUB>> ]
+"76233" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 1))<SUB>1012</SUB>> ]
+"76234" [label = <(IDENTIFIER,tif,TIFFCheckRead(tif, 1))<SUB>1012</SUB>> ]
+"76235" [label = <(LITERAL,1,TIFFCheckRead(tif, 1))<SUB>1012</SUB>> ]
+"76236" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1013</SUB>> ]
+"76237" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1013</SUB>> ]
+"76238" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1013</SUB>> ]
+"76239" [label = <(&lt;operator&gt;.minus,-1)<SUB>1013</SUB>> ]
+"76240" [label = <(LITERAL,1,-1)<SUB>1013</SUB>> ]
+"76241" [label = <(CONTROL_STRUCTURE,if (tile &gt;= td-&gt;td_nstrips),if (tile &gt;= td-&gt;td_nstrips))<SUB>1014</SUB>> ]
+"76242" [label = <(&lt;operator&gt;.greaterEqualsThan,tile &gt;= td-&gt;td_nstrips)<SUB>1014</SUB>> ]
+"76243" [label = <(IDENTIFIER,tile,tile &gt;= td-&gt;td_nstrips)<SUB>1014</SUB>> ]
+"76244" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>1014</SUB>> ]
+"76245" [label = <(IDENTIFIER,td,tile &gt;= td-&gt;td_nstrips)<SUB>1014</SUB>> ]
+"76246" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>1014</SUB>> ]
+"76247" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1015</SUB>> ]
+"76248" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Tile out of range, max %&quot; PRIu32, tile,\012                      td-&gt;td_nstrips);,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Tile out of range, max %&quot; PRIu32, tile,\012                      td-&gt;td_nstrips);)<SUB>1016</SUB>> ]
+"76249" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1019</SUB>> ]
+"76250" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1019</SUB>> ]
+"76251" [label = <(&lt;operator&gt;.minus,-1)<SUB>1019</SUB>> ]
+"76252" [label = <(LITERAL,1,-1)<SUB>1019</SUB>> ]
+"76253" [label = <(CONTROL_STRUCTURE,if (!TIFFFillTile(tif, tile)),if (!TIFFFillTile(tif, tile)))<SUB>1022</SUB>> ]
+"76254" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillTile(tif, tile))<SUB>1022</SUB>> ]
+"76255" [label = <(TIFFFillTile,TIFFFillTile(tif, tile))<SUB>1022</SUB>> ]
+"76256" [label = <(IDENTIFIER,tif,TIFFFillTile(tif, tile))<SUB>1022</SUB>> ]
+"76257" [label = <(IDENTIFIER,tile,TIFFFillTile(tif, tile))<SUB>1022</SUB>> ]
+"76258" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1023</SUB>> ]
+"76259" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1023</SUB>> ]
+"76260" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1023</SUB>> ]
+"76261" [label = <(&lt;operator&gt;.minus,-1)<SUB>1023</SUB>> ]
+"76262" [label = <(LITERAL,1,-1)<SUB>1023</SUB>> ]
+"76263" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_compression == COMPRESSION_NONE),if (td-&gt;td_compression == COMPRESSION_NONE))<SUB>1027</SUB>> ]
+"76264" [label = <(&lt;operator&gt;.equals,td-&gt;td_compression == COMPRESSION_NONE)<SUB>1027</SUB>> ]
+"76265" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_compression)<SUB>1027</SUB>> ]
+"76266" [label = <(IDENTIFIER,td,td-&gt;td_compression == COMPRESSION_NONE)<SUB>1027</SUB>> ]
+"76267" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>1027</SUB>> ]
+"76268" [label = <(IDENTIFIER,COMPRESSION_NONE,td-&gt;td_compression == COMPRESSION_NONE)<SUB>1027</SUB>> ]
+"76269" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1028</SUB>> ]
+"76270" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_rawdatasize != tilesize),if (tif-&gt;tif_rawdatasize != tilesize))<SUB>1029</SUB>> ]
+"76271" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_rawdatasize != tilesize)<SUB>1029</SUB>> ]
+"76272" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdatasize)<SUB>1029</SUB>> ]
+"76273" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawdatasize != tilesize)<SUB>1029</SUB>> ]
+"76274" [label = <(FIELD_IDENTIFIER,tif_rawdatasize,tif_rawdatasize)<SUB>1029</SUB>> ]
+"76275" [label = <(IDENTIFIER,tilesize,tif-&gt;tif_rawdatasize != tilesize)<SUB>1029</SUB>> ]
+"76276" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1030</SUB>> ]
+"76277" [label = <(UNKNOWN,TIFFErrorExtR(tif, TIFFFileName(tif),\012                          &quot;Invalid tile byte count for tile %u. &quot;\012                          &quot;Expected %&quot; PRIu64 &quot;, got %&quot; PRIu64,\012                          tile, (uint64_t)tilesize,\012                          (uint64_t)tif-&gt;tif_rawdatasize);,TIFFErrorExtR(tif, TIFFFileName(tif),\012                          &quot;Invalid tile byte count for tile %u. &quot;\012                          &quot;Expected %&quot; PRIu64 &quot;, got %&quot; PRIu64,\012                          tile, (uint64_t)tilesize,\012                          (uint64_t)tif-&gt;tif_rawdatasize);)<SUB>1031</SUB>> ]
+"76278" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1036</SUB>> ]
+"76279" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1036</SUB>> ]
+"76280" [label = <(&lt;operator&gt;.minus,-1)<SUB>1036</SUB>> ]
+"76281" [label = <(LITERAL,1,-1)<SUB>1036</SUB>> ]
+"76282" [label = <(CONTROL_STRUCTURE,else,else)<SUB>1040</SUB>> ]
+"76283" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1040</SUB>> ]
+"76284" [label = <(LOCAL,const int maxCompressionRatio: int)<SUB>1045</SUB>> ]
+"76285" [label = <(&lt;operator&gt;.assignment,maxCompressionRatio =\012            td-&gt;td_compression == COMPRESSION_ZSTD ? 33000\012            : td-&gt;td_compression == COMPRESSION_JXL\012                ?\012                /* Evaluated on a 8000x8000 tile */\012                25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)\012                : td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1045</SUB>> ]
+"76286" [label = <(IDENTIFIER,maxCompressionRatio,maxCompressionRatio =\012            td-&gt;td_compression == COMPRESSION_ZSTD ? 33000\012            : td-&gt;td_compression == COMPRESSION_JXL\012                ?\012                /* Evaluated on a 8000x8000 tile */\012                25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)\012                : td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1045</SUB>> ]
+"76287" [label = <(&lt;operator&gt;.conditional,td-&gt;td_compression == COMPRESSION_ZSTD ? 33000\012            : td-&gt;td_compression == COMPRESSION_JXL\012                ?\012                /* Evaluated on a 8000x8000 tile */\012                25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)\012                : td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1046</SUB>> ]
+"76288" [label = <(&lt;operator&gt;.equals,td-&gt;td_compression == COMPRESSION_ZSTD)<SUB>1046</SUB>> ]
+"76289" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_compression)<SUB>1046</SUB>> ]
+"76290" [label = <(IDENTIFIER,td,td-&gt;td_compression == COMPRESSION_ZSTD)<SUB>1046</SUB>> ]
+"76291" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>1046</SUB>> ]
+"76292" [label = <(IDENTIFIER,COMPRESSION_ZSTD,td-&gt;td_compression == COMPRESSION_ZSTD)<SUB>1046</SUB>> ]
+"76293" [label = <(LITERAL,33000,td-&gt;td_compression == COMPRESSION_ZSTD ? 33000\012            : td-&gt;td_compression == COMPRESSION_JXL\012                ?\012                /* Evaluated on a 8000x8000 tile */\012                25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)\012                : td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1046</SUB>> ]
+"76294" [label = <(&lt;operator&gt;.conditional,td-&gt;td_compression == COMPRESSION_JXL\012                ?\012                /* Evaluated on a 8000x8000 tile */\012                25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)\012                : td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1047</SUB>> ]
+"76295" [label = <(&lt;operator&gt;.equals,td-&gt;td_compression == COMPRESSION_JXL)<SUB>1047</SUB>> ]
+"76296" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_compression)<SUB>1047</SUB>> ]
+"76297" [label = <(IDENTIFIER,td,td-&gt;td_compression == COMPRESSION_JXL)<SUB>1047</SUB>> ]
+"76298" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>1047</SUB>> ]
+"76299" [label = <(IDENTIFIER,COMPRESSION_JXL,td-&gt;td_compression == COMPRESSION_JXL)<SUB>1047</SUB>> ]
+"76300" [label = <(&lt;operator&gt;.multiplication,25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1))<SUB>1050</SUB>> ]
+"76301" [label = <(LITERAL,25000,25000 * (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1))<SUB>1050</SUB>> ]
+"76302" [label = <(&lt;operator&gt;.conditional,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)<SUB>1050</SUB>> ]
+"76303" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>1050</SUB>> ]
+"76304" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>1050</SUB>> ]
+"76305" [label = <(IDENTIFIER,td,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>1050</SUB>> ]
+"76306" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>1050</SUB>> ]
+"76307" [label = <(IDENTIFIER,PLANARCONFIG_CONTIG,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>1050</SUB>> ]
+"76308" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>1051</SUB>> ]
+"76309" [label = <(IDENTIFIER,td,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)<SUB>1051</SUB>> ]
+"76310" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>1051</SUB>> ]
+"76311" [label = <(LITERAL,1,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG\012                             ? td-&gt;td_samplesperpixel\012                             : 1)<SUB>1052</SUB>> ]
+"76312" [label = <(&lt;operator&gt;.conditional,td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1053</SUB>> ]
+"76313" [label = <(&lt;operator&gt;.equals,td-&gt;td_compression == COMPRESSION_LZMA)<SUB>1053</SUB>> ]
+"76314" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_compression)<SUB>1053</SUB>> ]
+"76315" [label = <(IDENTIFIER,td,td-&gt;td_compression == COMPRESSION_LZMA)<SUB>1053</SUB>> ]
+"76316" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>1053</SUB>> ]
+"76317" [label = <(IDENTIFIER,COMPRESSION_LZMA,td-&gt;td_compression == COMPRESSION_LZMA)<SUB>1053</SUB>> ]
+"76318" [label = <(LITERAL,7000,td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1053</SUB>> ]
+"76319" [label = <(LITERAL,1000,td-&gt;td_compression == COMPRESSION_LZMA ? 7000 : 1000)<SUB>1053</SUB>> ]
+"76320" [label = <(CONTROL_STRUCTURE,if (bufsizetoalloc &gt; 100 * 1000 * 1000 &amp;&amp;\012            tif-&gt;tif_rawdatasize &lt; tilesize / maxCompressionRatio),if (bufsizetoalloc &gt; 100 * 1000 * 1000 &amp;&amp;\012            tif-&gt;tif_rawdatasize &lt; tilesize / maxCompressionRatio))<SUB>1054</SUB>> ]
+"76321" [label = <(&lt;operator&gt;.logicalAnd,bufsizetoalloc &gt; 100 * 1000 * 1000 &amp;&amp;\012            tif-&gt;tif_rawdatasize &lt; tilesize / maxCompressionRatio)<SUB>1054</SUB>> ]
+"76322" [label = <(&lt;operator&gt;.greaterThan,bufsizetoalloc &gt; 100 * 1000 * 1000)<SUB>1054</SUB>> ]
+"76323" [label = <(IDENTIFIER,bufsizetoalloc,bufsizetoalloc &gt; 100 * 1000 * 1000)<SUB>1054</SUB>> ]
+"76324" [label = <(&lt;operator&gt;.multiplication,100 * 1000 * 1000)<SUB>1054</SUB>> ]
+"76325" [label = <(&lt;operator&gt;.multiplication,100 * 1000)<SUB>1054</SUB>> ]
+"76326" [label = <(LITERAL,100,100 * 1000)<SUB>1054</SUB>> ]
+"76327" [label = <(LITERAL,1000,100 * 1000)<SUB>1054</SUB>> ]
+"76328" [label = <(LITERAL,1000,100 * 1000 * 1000)<SUB>1054</SUB>> ]
+"76329" [label = <(&lt;operator&gt;.lessThan,tif-&gt;tif_rawdatasize &lt; tilesize / maxCompressionRatio)<SUB>1055</SUB>> ]
+"76330" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdatasize)<SUB>1055</SUB>> ]
+"76331" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawdatasize &lt; tilesize / maxCompressionRatio)<SUB>1055</SUB>> ]
+"76332" [label = <(FIELD_IDENTIFIER,tif_rawdatasize,tif_rawdatasize)<SUB>1055</SUB>> ]
+"76333" [label = <(&lt;operator&gt;.division,tilesize / maxCompressionRatio)<SUB>1055</SUB>> ]
+"76334" [label = <(IDENTIFIER,tilesize,tilesize / maxCompressionRatio)<SUB>1055</SUB>> ]
+"76335" [label = <(IDENTIFIER,maxCompressionRatio,tilesize / maxCompressionRatio)<SUB>1055</SUB>> ]
+"76336" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1056</SUB>> ]
+"76337" [label = <(UNKNOWN,TIFFErrorExtR(tif, TIFFFileName(tif),\012                          &quot;Likely invalid tile byte count for tile %u. &quot;\012                          &quot;Uncompressed tile size is %&quot; PRIu64 &quot;, &quot;\012                          &quot;compressed one is %&quot; PRIu64,\012                          tile, (uint64_t)tilesize,\012                          (uint64_t)tif-&gt;tif_rawdatasize);,TIFFErrorExtR(tif, TIFFFileName(tif),\012                          &quot;Likely invalid tile byte count for tile %u. &quot;\012                          &quot;Uncompressed tile size is %&quot; PRIu64 &quot;, &quot;\012                          &quot;compressed one is %&quot; PRIu64,\012                          tile, (uint64_t)tilesize,\012                          (uint64_t)tif-&gt;tif_rawdatasize);)<SUB>1057</SUB>> ]
+"76338" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1063</SUB>> ]
+"76339" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1063</SUB>> ]
+"76340" [label = <(&lt;operator&gt;.minus,-1)<SUB>1063</SUB>> ]
+"76341" [label = <(LITERAL,1,-1)<SUB>1063</SUB>> ]
+"76342" [label = <(&lt;operator&gt;.assignment,*buf = _TIFFmallocExt(tif, bufsizetoalloc))<SUB>1067</SUB>> ]
+"76343" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1067</SUB>> ]
+"76344" [label = <(IDENTIFIER,buf,*buf = _TIFFmallocExt(tif, bufsizetoalloc))<SUB>1067</SUB>> ]
+"76345" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, bufsizetoalloc))<SUB>1067</SUB>> ]
+"76346" [label = <(IDENTIFIER,tif,_TIFFmallocExt(tif, bufsizetoalloc))<SUB>1067</SUB>> ]
+"76347" [label = <(IDENTIFIER,bufsizetoalloc,_TIFFmallocExt(tif, bufsizetoalloc))<SUB>1067</SUB>> ]
+"76348" [label = <(CONTROL_STRUCTURE,if (*buf == NULL),if (*buf == NULL))<SUB>1068</SUB>> ]
+"76349" [label = <(&lt;operator&gt;.equals,*buf == NULL)<SUB>1068</SUB>> ]
+"76350" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1068</SUB>> ]
+"76351" [label = <(IDENTIFIER,buf,*buf == NULL)<SUB>1068</SUB>> ]
+"76352" [label = <(NULL,NULL)<SUB>1068</SUB>> ]
+"76353" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"76354" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1068</SUB>> ]
+"76355" [label = <(UNKNOWN,void *,void *)<SUB>1068</SUB>> ]
+"76356" [label = <(LITERAL,0,(void *)0)<SUB>1068</SUB>> ]
+"76357" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1069</SUB>> ]
+"76358" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;No space for tile buffer&quot;))<SUB>1070</SUB>> ]
+"76359" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;No space for tile buffer&quot;))<SUB>1070</SUB>> ]
+"76360" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>1070</SUB>> ]
+"76361" [label = <(IDENTIFIER,tif,TIFFFileName(tif))<SUB>1070</SUB>> ]
+"76362" [label = <(LITERAL,&quot;No space for tile buffer&quot;,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;No space for tile buffer&quot;))<SUB>1070</SUB>> ]
+"76363" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1071</SUB>> ]
+"76364" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1071</SUB>> ]
+"76365" [label = <(&lt;operator&gt;.minus,-1)<SUB>1071</SUB>> ]
+"76366" [label = <(LITERAL,1,-1)<SUB>1071</SUB>> ]
+"76367" [label = <(_TIFFmemset,_TIFFmemset(*buf, 0, bufsizetoalloc))<SUB>1073</SUB>> ]
+"76368" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1073</SUB>> ]
+"76369" [label = <(IDENTIFIER,buf,_TIFFmemset(*buf, 0, bufsizetoalloc))<SUB>1073</SUB>> ]
+"76370" [label = <(LITERAL,0,_TIFFmemset(*buf, 0, bufsizetoalloc))<SUB>1073</SUB>> ]
+"76371" [label = <(IDENTIFIER,bufsizetoalloc,_TIFFmemset(*buf, 0, bufsizetoalloc))<SUB>1073</SUB>> ]
+"76372" [label = <(CONTROL_STRUCTURE,if (size_to_read == (tmsize_t)(-1)),if (size_to_read == (tmsize_t)(-1)))<SUB>1075</SUB>> ]
+"76373" [label = <(&lt;operator&gt;.equals,size_to_read == (tmsize_t)(-1))<SUB>1075</SUB>> ]
+"76374" [label = <(IDENTIFIER,size_to_read,size_to_read == (tmsize_t)(-1))<SUB>1075</SUB>> ]
+"76375" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1075</SUB>> ]
+"76376" [label = <(&lt;operator&gt;.minus,-1)<SUB>1075</SUB>> ]
+"76377" [label = <(LITERAL,1,-1)<SUB>1075</SUB>> ]
+"76378" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1076</SUB>> ]
+"76379" [label = <(&lt;operator&gt;.assignment,size_to_read = tilesize)<SUB>1076</SUB>> ]
+"76380" [label = <(IDENTIFIER,size_to_read,size_to_read = tilesize)<SUB>1076</SUB>> ]
+"76381" [label = <(IDENTIFIER,tilesize,size_to_read = tilesize)<SUB>1076</SUB>> ]
+"76382" [label = <(CONTROL_STRUCTURE,else,else)<SUB>1077</SUB>> ]
+"76383" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1077</SUB>> ]
+"76384" [label = <(CONTROL_STRUCTURE,if (size_to_read &gt; tilesize),if (size_to_read &gt; tilesize))<SUB>1077</SUB>> ]
+"76385" [label = <(&lt;operator&gt;.greaterThan,size_to_read &gt; tilesize)<SUB>1077</SUB>> ]
+"76386" [label = <(IDENTIFIER,size_to_read,size_to_read &gt; tilesize)<SUB>1077</SUB>> ]
+"76387" [label = <(IDENTIFIER,tilesize,size_to_read &gt; tilesize)<SUB>1077</SUB>> ]
+"76388" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1078</SUB>> ]
+"76389" [label = <(&lt;operator&gt;.assignment,size_to_read = tilesize)<SUB>1078</SUB>> ]
+"76390" [label = <(IDENTIFIER,size_to_read,size_to_read = tilesize)<SUB>1078</SUB>> ]
+"76391" [label = <(IDENTIFIER,tilesize,size_to_read = tilesize)<SUB>1078</SUB>> ]
+"76392" [label = <(CONTROL_STRUCTURE,if ((*tif-&gt;tif_decodetile)(tif, (uint8_t *)*buf, size_to_read,\012                               (uint16_t)(tile / td-&gt;td_stripsperimage))),if ((*tif-&gt;tif_decodetile)(tif, (uint8_t *)*buf, size_to_read,\012                               (uint16_t)(tile / td-&gt;td_stripsperimage))))<SUB>1079</SUB>> ]
+"76393" [label = <(*tif-&gt;tif_decodetile,(*tif-&gt;tif_decodetile)(tif, (uint8_t *)*buf, size_to_read,\012                               (uint16_t)(tile / td-&gt;td_stripsperimage)))<SUB>1079</SUB>> ]
+"76394" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_decodetile)<SUB>1079</SUB>> ]
+"76395" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_decodetile)<SUB>1079</SUB>> ]
+"76396" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_decodetile)(tif, (uint8_t *)*buf, size_to_read,\012                               (uint16_t)(tile / td-&gt;td_stripsperimage)))<SUB>1079</SUB>> ]
+"76397" [label = <(FIELD_IDENTIFIER,tif_decodetile,tif_decodetile)<SUB>1079</SUB>> ]
+"76398" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_decodetile)(tif, (uint8_t *)*buf, size_to_read,\012                               (uint16_t)(tile / td-&gt;td_stripsperimage)))<SUB>1079</SUB>> ]
+"76399" [label = <(&lt;operator&gt;.cast,(uint8_t *)*buf)<SUB>1079</SUB>> ]
+"76400" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>1079</SUB>> ]
+"76401" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1079</SUB>> ]
+"76402" [label = <(IDENTIFIER,buf,(uint8_t *)*buf)<SUB>1079</SUB>> ]
+"76403" [label = <(IDENTIFIER,size_to_read,(*tif-&gt;tif_decodetile)(tif, (uint8_t *)*buf, size_to_read,\012                               (uint16_t)(tile / td-&gt;td_stripsperimage)))<SUB>1079</SUB>> ]
+"76404" [label = <(uint16_t,(uint16_t)(tile / td-&gt;td_stripsperimage))<SUB>1080</SUB>> ]
+"76405" [label = <(&lt;operator&gt;.division,tile / td-&gt;td_stripsperimage)<SUB>1080</SUB>> ]
+"76406" [label = <(IDENTIFIER,tile,tile / td-&gt;td_stripsperimage)<SUB>1080</SUB>> ]
+"76407" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>1080</SUB>> ]
+"76408" [label = <(IDENTIFIER,td,tile / td-&gt;td_stripsperimage)<SUB>1080</SUB>> ]
+"76409" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>1080</SUB>> ]
+"76410" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1081</SUB>> ]
+"76411" [label = <(*tif-&gt;tif_postdecode,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)*buf, size_to_read))<SUB>1082</SUB>> ]
+"76412" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postdecode)<SUB>1082</SUB>> ]
+"76413" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>1082</SUB>> ]
+"76414" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)*buf, size_to_read))<SUB>1082</SUB>> ]
+"76415" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>1082</SUB>> ]
+"76416" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)*buf, size_to_read))<SUB>1082</SUB>> ]
+"76417" [label = <(&lt;operator&gt;.cast,(uint8_t *)*buf)<SUB>1082</SUB>> ]
+"76418" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>1082</SUB>> ]
+"76419" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>1082</SUB>> ]
+"76420" [label = <(IDENTIFIER,buf,(uint8_t *)*buf)<SUB>1082</SUB>> ]
+"76421" [label = <(IDENTIFIER,size_to_read,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)*buf, size_to_read))<SUB>1082</SUB>> ]
+"76422" [label = <(RETURN,return (size_to_read);,return (size_to_read);)<SUB>1083</SUB>> ]
+"76423" [label = <(IDENTIFIER,size_to_read,return (size_to_read);)<SUB>1083</SUB>> ]
+"76424" [label = <(CONTROL_STRUCTURE,else,else)<SUB>1086</SUB>> ]
+"76425" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1086</SUB>> ]
+"76426" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1086</SUB>> ]
+"76427" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1086</SUB>> ]
+"76428" [label = <(&lt;operator&gt;.minus,-1)<SUB>1086</SUB>> ]
+"76429" [label = <(LITERAL,1,-1)<SUB>1086</SUB>> ]
+"76430" [label = <(METHOD_RETURN,tmsize_t)<SUB>999</SUB>> ]
+  "76190" -> "76191" 
+  "76190" -> "76192" 
+  "76190" -> "76193" 
+  "76190" -> "76194" 
+  "76190" -> "76195" 
+  "76190" -> "76196" 
+  "76190" -> "76430" 
+  "76196" -> "76197" 
+  "76196" -> "76198" 
+  "76196" -> "76201" 
+  "76196" -> "76202" 
+  "76196" -> "76208" 
+  "76196" -> "76209" 
+  "76196" -> "76214" 
+  "76196" -> "76231" 
+  "76196" -> "76241" 
+  "76196" -> "76253" 
+  "76196" -> "76263" 
+  "76196" -> "76342" 
+  "76196" -> "76348" 
+  "76196" -> "76367" 
+  "76196" -> "76372" 
+  "76196" -> "76392" 
+  "76198" -> "76199" 
+  "76198" -> "76200" 
+  "76202" -> "76203" 
+  "76202" -> "76204" 
+  "76204" -> "76205" 
+  "76205" -> "76206" 
+  "76205" -> "76207" 
+  "76209" -> "76210" 
+  "76209" -> "76211" 
+  "76211" -> "76212" 
+  "76211" -> "76213" 
+  "76214" -> "76215" 
+  "76214" -> "76223" 
+  "76215" -> "76216" 
+  "76215" -> "76218" 
+  "76216" -> "76217" 
+  "76218" -> "76219" 
+  "76219" -> "76220" 
+  "76220" -> "76221" 
+  "76220" -> "76222" 
+  "76223" -> "76224" 
+  "76224" -> "76225" 
+  "76225" -> "76226" 
+  "76225" -> "76227" 
+  "76225" -> "76228" 
+  "76225" -> "76230" 
+  "76228" -> "76229" 
+  "76231" -> "76232" 
+  "76231" -> "76236" 
+  "76232" -> "76233" 
+  "76233" -> "76234" 
+  "76233" -> "76235" 
+  "76236" -> "76237" 
+  "76237" -> "76238" 
+  "76238" -> "76239" 
+  "76239" -> "76240" 
+  "76241" -> "76242" 
+  "76241" -> "76247" 
+  "76242" -> "76243" 
+  "76242" -> "76244" 
+  "76244" -> "76245" 
+  "76244" -> "76246" 
+  "76247" -> "76248" 
+  "76247" -> "76249" 
+  "76249" -> "76250" 
+  "76250" -> "76251" 
+  "76251" -> "76252" 
+  "76253" -> "76254" 
+  "76253" -> "76258" 
+  "76254" -> "76255" 
+  "76255" -> "76256" 
+  "76255" -> "76257" 
+  "76258" -> "76259" 
+  "76259" -> "76260" 
+  "76260" -> "76261" 
+  "76261" -> "76262" 
+  "76263" -> "76264" 
+  "76263" -> "76269" 
+  "76263" -> "76282" 
+  "76264" -> "76265" 
+  "76264" -> "76268" 
+  "76265" -> "76266" 
+  "76265" -> "76267" 
+  "76269" -> "76270" 
+  "76270" -> "76271" 
+  "76270" -> "76276" 
+  "76271" -> "76272" 
+  "76271" -> "76275" 
+  "76272" -> "76273" 
+  "76272" -> "76274" 
+  "76276" -> "76277" 
+  "76276" -> "76278" 
+  "76278" -> "76279" 
+  "76279" -> "76280" 
+  "76280" -> "76281" 
+  "76282" -> "76283" 
+  "76283" -> "76284" 
+  "76283" -> "76285" 
+  "76283" -> "76320" 
+  "76285" -> "76286" 
+  "76285" -> "76287" 
+  "76287" -> "76288" 
+  "76287" -> "76293" 
+  "76287" -> "76294" 
+  "76288" -> "76289" 
+  "76288" -> "76292" 
+  "76289" -> "76290" 
+  "76289" -> "76291" 
+  "76294" -> "76295" 
+  "76294" -> "76300" 
+  "76294" -> "76312" 
+  "76295" -> "76296" 
+  "76295" -> "76299" 
+  "76296" -> "76297" 
+  "76296" -> "76298" 
+  "76300" -> "76301" 
+  "76300" -> "76302" 
+  "76302" -> "76303" 
+  "76302" -> "76308" 
+  "76302" -> "76311" 
+  "76303" -> "76304" 
+  "76303" -> "76307" 
+  "76304" -> "76305" 
+  "76304" -> "76306" 
+  "76308" -> "76309" 
+  "76308" -> "76310" 
+  "76312" -> "76313" 
+  "76312" -> "76318" 
+  "76312" -> "76319" 
+  "76313" -> "76314" 
+  "76313" -> "76317" 
+  "76314" -> "76315" 
+  "76314" -> "76316" 
+  "76320" -> "76321" 
+  "76320" -> "76336" 
+  "76321" -> "76322" 
+  "76321" -> "76329" 
+  "76322" -> "76323" 
+  "76322" -> "76324" 
+  "76324" -> "76325" 
+  "76324" -> "76328" 
+  "76325" -> "76326" 
+  "76325" -> "76327" 
+  "76329" -> "76330" 
+  "76329" -> "76333" 
+  "76330" -> "76331" 
+  "76330" -> "76332" 
+  "76333" -> "76334" 
+  "76333" -> "76335" 
+  "76336" -> "76337" 
+  "76336" -> "76338" 
+  "76338" -> "76339" 
+  "76339" -> "76340" 
+  "76340" -> "76341" 
+  "76342" -> "76343" 
+  "76342" -> "76345" 
+  "76343" -> "76344" 
+  "76345" -> "76346" 
+  "76345" -> "76347" 
+  "76348" -> "76349" 
+  "76348" -> "76357" 
+  "76349" -> "76350" 
+  "76349" -> "76352" 
+  "76350" -> "76351" 
+  "76352" -> "76353" 
+  "76353" -> "76354" 
+  "76354" -> "76355" 
+  "76354" -> "76356" 
+  "76357" -> "76358" 
+  "76357" -> "76363" 
+  "76358" -> "76359" 
+  "76358" -> "76360" 
+  "76358" -> "76362" 
+  "76360" -> "76361" 
+  "76363" -> "76364" 
+  "76364" -> "76365" 
+  "76365" -> "76366" 
+  "76367" -> "76368" 
+  "76367" -> "76370" 
+  "76367" -> "76371" 
+  "76368" -> "76369" 
+  "76372" -> "76373" 
+  "76372" -> "76378" 
+  "76372" -> "76382" 
+  "76373" -> "76374" 
+  "76373" -> "76375" 
+  "76375" -> "76376" 
+  "76376" -> "76377" 
+  "76378" -> "76379" 
+  "76379" -> "76380" 
+  "76379" -> "76381" 
+  "76382" -> "76383" 
+  "76383" -> "76384" 
+  "76384" -> "76385" 
+  "76384" -> "76388" 
+  "76385" -> "76386" 
+  "76385" -> "76387" 
+  "76388" -> "76389" 
+  "76389" -> "76390" 
+  "76389" -> "76391" 
+  "76392" -> "76393" 
+  "76392" -> "76410" 
+  "76392" -> "76424" 
+  "76393" -> "76394" 
+  "76393" -> "76398" 
+  "76393" -> "76399" 
+  "76393" -> "76403" 
+  "76393" -> "76404" 
+  "76394" -> "76395" 
+  "76395" -> "76396" 
+  "76395" -> "76397" 
+  "76399" -> "76400" 
+  "76399" -> "76401" 
+  "76401" -> "76402" 
+  "76404" -> "76405" 
+  "76405" -> "76406" 
+  "76405" -> "76407" 
+  "76407" -> "76408" 
+  "76407" -> "76409" 
+  "76410" -> "76411" 
+  "76410" -> "76422" 
+  "76411" -> "76412" 
+  "76411" -> "76416" 
+  "76411" -> "76417" 
+  "76411" -> "76421" 
+  "76412" -> "76413" 
+  "76413" -> "76414" 
+  "76413" -> "76415" 
+  "76417" -> "76418" 
+  "76417" -> "76419" 
+  "76419" -> "76420" 
+  "76422" -> "76423" 
+  "76424" -> "76425" 
+  "76425" -> "76426" 
+  "76426" -> "76427" 
+  "76427" -> "76428" 
+  "76428" -> "76429" 
+}

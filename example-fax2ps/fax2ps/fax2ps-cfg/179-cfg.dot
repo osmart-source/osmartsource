@@ -1,0 +1,122 @@
+digraph "TIFFHashSetRehash" {  
+"5304" [label = <(&lt;operator&gt;.assignment,nNewAllocatedSize = anPrimes[set-&gt;nIndiceAllocatedSize])<SUB>368</SUB>> ]
+"5312" [label = <(&lt;operator&gt;.assignment,**newTabList =\012        (TIFFList **)(calloc(sizeof(TIFFList *), nNewAllocatedSize)))<SUB>369</SUB>> ]
+"5391" [label = <(free,free(set-&gt;tabList))<SUB>398</SUB>> ]
+"5395" [label = <(&lt;operator&gt;.assignment,set-&gt;tabList = newTabList)<SUB>399</SUB>> ]
+"5400" [label = <(&lt;operator&gt;.assignment,set-&gt;nAllocatedSize = nNewAllocatedSize)<SUB>400</SUB>> ]
+"5405" [label = <(&lt;operator&gt;.assignment,set-&gt;bRehash = false)<SUB>401</SUB>> ]
+"5412" [label = <(RETURN,return true;,return true;)<SUB>402</SUB>> ]
+"5306" [label = <(&lt;operator&gt;.indirectIndexAccess,anPrimes[set-&gt;nIndiceAllocatedSize])<SUB>368</SUB>> ]
+"5314" [label = <(&lt;operator&gt;.cast,(TIFFList **)(calloc(sizeof(TIFFList *), nNewAllocatedSize)))<SUB>370</SUB>> ]
+"5321" [label = <(&lt;operator&gt;.equals,newTabList == NULL)<SUB>371</SUB>> ]
+"5339" [label = <(&lt;operator&gt;.lessThan,i &lt; set-&gt;nAllocatedSize)<SUB>381</SUB>> ]
+"5344" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>381</SUB>> ]
+"5392" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>398</SUB>> ]
+"5396" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>399</SUB>> ]
+"5401" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>400</SUB>> ]
+"5406" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;bRehash)<SUB>401</SUB>> ]
+"5409" [label = <(false,false)<SUB>401</SUB>> ]
+"5413" [label = <(true,true)<SUB>402</SUB>> ]
+"5308" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nIndiceAllocatedSize)<SUB>368</SUB>> ]
+"5315" [label = <(UNKNOWN,TIFFList **,TIFFList **)<SUB>370</SUB>> ]
+"5316" [label = <(calloc,calloc(sizeof(TIFFList *), nNewAllocatedSize))<SUB>370</SUB>> ]
+"5323" [label = <(NULL,NULL)<SUB>371</SUB>> ]
+"5329" [label = <(RETURN,return false;,return false;)<SUB>372</SUB>> ]
+"5336" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>381</SUB>> ]
+"5341" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;nAllocatedSize)<SUB>381</SUB>> ]
+"5348" [label = <(&lt;operator&gt;.assignment,*cur = set-&gt;tabList[i])<SUB>383</SUB>> ]
+"5394" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>398</SUB>> ]
+"5398" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>399</SUB>> ]
+"5403" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>400</SUB>> ]
+"5408" [label = <(FIELD_IDENTIFIER,bRehash,bRehash)<SUB>401</SUB>> ]
+"5310" [label = <(FIELD_IDENTIFIER,nIndiceAllocatedSize,nIndiceAllocatedSize)<SUB>368</SUB>> ]
+"5317" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFList *))<SUB>370</SUB>> ]
+"5330" [label = <(false,false)<SUB>372</SUB>> ]
+"5343" [label = <(FIELD_IDENTIFIER,nAllocatedSize,nAllocatedSize)<SUB>381</SUB>> ]
+"5350" [label = <(&lt;operator&gt;.indirectIndexAccess,set-&gt;tabList[i])<SUB>383</SUB>> ]
+"5325" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>371</SUB>> ]
+"5351" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>383</SUB>> ]
+"5359" [label = <(&lt;operator&gt;.assignment,nNewHashVal =\012                set-&gt;fnHashFunc(cur-&gt;pData) % nNewAllocatedSize)<SUB>386</SUB>> ]
+"5371" [label = <(&lt;operator&gt;.assignment,*psNext = cur-&gt;psNext)<SUB>392</SUB>> ]
+"5376" [label = <(&lt;operator&gt;.assignment,cur-&gt;psNext = newTabList[nNewHashVal])<SUB>393</SUB>> ]
+"5383" [label = <(&lt;operator&gt;.assignment,newTabList[nNewHashVal] = cur)<SUB>394</SUB>> ]
+"5388" [label = <(&lt;operator&gt;.assignment,cur = psNext)<SUB>395</SUB>> ]
+"5326" [label = <(UNKNOWN,void *,void *)<SUB>371</SUB>> ]
+"5353" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>383</SUB>> ]
+"5361" [label = <(&lt;operator&gt;.modulo,set-&gt;fnHashFunc(cur-&gt;pData) % nNewAllocatedSize)<SUB>387</SUB>> ]
+"5373" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;psNext)<SUB>392</SUB>> ]
+"5377" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;psNext)<SUB>393</SUB>> ]
+"5380" [label = <(&lt;operator&gt;.indirectIndexAccess,newTabList[nNewHashVal])<SUB>393</SUB>> ]
+"5384" [label = <(&lt;operator&gt;.indirectIndexAccess,newTabList[nNewHashVal])<SUB>394</SUB>> ]
+"5362" [label = <(set-&gt;fnHashFunc,set-&gt;fnHashFunc(cur-&gt;pData))<SUB>387</SUB>> ]
+"5375" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>392</SUB>> ]
+"5379" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>393</SUB>> ]
+"5363" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;fnHashFunc)<SUB>387</SUB>> ]
+"5366" [label = <(&lt;operator&gt;.indirectFieldAccess,cur-&gt;pData)<SUB>387</SUB>> ]
+"5365" [label = <(FIELD_IDENTIFIER,fnHashFunc,fnHashFunc)<SUB>387</SUB>> ]
+"5368" [label = <(FIELD_IDENTIFIER,pData,pData)<SUB>387</SUB>> ]
+"5300" [label = <(METHOD,TIFFHashSetRehash)<SUB>366</SUB>> ]
+"5416" [label = <(METHOD_RETURN,bool)<SUB>366</SUB>> ]
+  "5304" -> "5315" 
+  "5312" -> "5323" 
+  "5391" -> "5398" 
+  "5395" -> "5403" 
+  "5400" -> "5408" 
+  "5405" -> "5413" 
+  "5412" -> "5416" 
+  "5306" -> "5304" 
+  "5314" -> "5312" 
+  "5321" -> "5330" 
+  "5321" -> "5336" 
+  "5339" -> "5353" 
+  "5339" -> "5394" 
+  "5344" -> "5343" 
+  "5392" -> "5391" 
+  "5396" -> "5395" 
+  "5401" -> "5400" 
+  "5406" -> "5409" 
+  "5409" -> "5405" 
+  "5413" -> "5412" 
+  "5308" -> "5306" 
+  "5315" -> "5317" 
+  "5316" -> "5314" 
+  "5323" -> "5326" 
+  "5323" -> "5321" 
+  "5329" -> "5416" 
+  "5336" -> "5343" 
+  "5341" -> "5339" 
+  "5348" -> "5365" 
+  "5348" -> "5344" 
+  "5394" -> "5392" 
+  "5398" -> "5396" 
+  "5403" -> "5401" 
+  "5408" -> "5406" 
+  "5310" -> "5308" 
+  "5317" -> "5316" 
+  "5330" -> "5329" 
+  "5343" -> "5341" 
+  "5350" -> "5348" 
+  "5325" -> "5321" 
+  "5351" -> "5350" 
+  "5359" -> "5375" 
+  "5371" -> "5379" 
+  "5376" -> "5384" 
+  "5383" -> "5388" 
+  "5388" -> "5365" 
+  "5388" -> "5344" 
+  "5326" -> "5325" 
+  "5353" -> "5351" 
+  "5361" -> "5359" 
+  "5373" -> "5371" 
+  "5377" -> "5380" 
+  "5380" -> "5376" 
+  "5384" -> "5383" 
+  "5362" -> "5361" 
+  "5375" -> "5373" 
+  "5379" -> "5377" 
+  "5363" -> "5368" 
+  "5366" -> "5362" 
+  "5365" -> "5363" 
+  "5368" -> "5366" 
+  "5300" -> "5310" 
+}

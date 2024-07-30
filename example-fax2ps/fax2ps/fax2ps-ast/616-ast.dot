@@ -1,0 +1,115 @@
+digraph "tagNameCompare" {  
+"26857" [label = <(METHOD,tagNameCompare)<SUB>752</SUB>> ]
+"26858" [label = <(PARAM,const void *a)<SUB>752</SUB>> ]
+"26859" [label = <(PARAM,const void *b)<SUB>752</SUB>> ]
+"26860" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>753</SUB>> ]
+"26861" [label = <(LOCAL,const TIFFField* ta: TIFFField)<SUB>754</SUB>> ]
+"26862" [label = <(&lt;operator&gt;.assignment,*ta = *(const TIFFField **)a)<SUB>754</SUB>> ]
+"26863" [label = <(IDENTIFIER,ta,*ta = *(const TIFFField **)a)<SUB>754</SUB>> ]
+"26864" [label = <(&lt;operator&gt;.indirection,*(const TIFFField **)a)<SUB>754</SUB>> ]
+"26865" [label = <(&lt;operator&gt;.cast,(const TIFFField **)a)<SUB>754</SUB>> ]
+"26866" [label = <(UNKNOWN,const TIFFField **,const TIFFField **)<SUB>754</SUB>> ]
+"26867" [label = <(IDENTIFIER,a,(const TIFFField **)a)<SUB>754</SUB>> ]
+"26868" [label = <(LOCAL,const TIFFField* tb: TIFFField)<SUB>755</SUB>> ]
+"26869" [label = <(&lt;operator&gt;.assignment,*tb = *(const TIFFField **)b)<SUB>755</SUB>> ]
+"26870" [label = <(IDENTIFIER,tb,*tb = *(const TIFFField **)b)<SUB>755</SUB>> ]
+"26871" [label = <(&lt;operator&gt;.indirection,*(const TIFFField **)b)<SUB>755</SUB>> ]
+"26872" [label = <(&lt;operator&gt;.cast,(const TIFFField **)b)<SUB>755</SUB>> ]
+"26873" [label = <(UNKNOWN,const TIFFField **,const TIFFField **)<SUB>755</SUB>> ]
+"26874" [label = <(IDENTIFIER,b,(const TIFFField **)b)<SUB>755</SUB>> ]
+"26875" [label = <(LOCAL,int ret: int)<SUB>756</SUB>> ]
+"26876" [label = <(&lt;operator&gt;.assignment,ret = strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26877" [label = <(IDENTIFIER,ret,ret = strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26878" [label = <(strcmp,strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26879" [label = <(&lt;operator&gt;.indirectFieldAccess,ta-&gt;field_name)<SUB>756</SUB>> ]
+"26880" [label = <(IDENTIFIER,ta,strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26881" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>756</SUB>> ]
+"26882" [label = <(&lt;operator&gt;.indirectFieldAccess,tb-&gt;field_name)<SUB>756</SUB>> ]
+"26883" [label = <(IDENTIFIER,tb,strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26884" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>756</SUB>> ]
+"26885" [label = <(CONTROL_STRUCTURE,if (ret &amp;&amp; 1),if (ret &amp;&amp; 1))<SUB>758</SUB>> ]
+"26886" [label = <(&lt;operator&gt;.logicalAnd,ret &amp;&amp; 1)<SUB>758</SUB>> ]
+"26887" [label = <(IDENTIFIER,ret,ret &amp;&amp; 1)<SUB>758</SUB>> ]
+"26888" [label = <(LITERAL,1,ret &amp;&amp; 1)<SUB>758</SUB>> ]
+"26889" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>759</SUB>> ]
+"26890" [label = <(RETURN,return ret;,return ret;)<SUB>759</SUB>> ]
+"26891" [label = <(IDENTIFIER,ret,return ret;)<SUB>759</SUB>> ]
+"26892" [label = <(CONTROL_STRUCTURE,else,else)<SUB>761</SUB>> ]
+"26893" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>761</SUB>> ]
+"26894" [label = <(RETURN,return (ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type);,return (ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type);)<SUB>761</SUB>> ]
+"26895" [label = <(&lt;operator&gt;.conditional,(ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type))<SUB>761</SUB>> ]
+"26896" [label = <(&lt;operator&gt;.equals,ta-&gt;field_type == TIFF_ANY)<SUB>761</SUB>> ]
+"26897" [label = <(&lt;operator&gt;.indirectFieldAccess,ta-&gt;field_type)<SUB>761</SUB>> ]
+"26898" [label = <(IDENTIFIER,ta,ta-&gt;field_type == TIFF_ANY)<SUB>761</SUB>> ]
+"26899" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>761</SUB>> ]
+"26900" [label = <(IDENTIFIER,TIFF_ANY,ta-&gt;field_type == TIFF_ANY)<SUB>761</SUB>> ]
+"26901" [label = <(LITERAL,0,(ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type))<SUB>762</SUB>> ]
+"26902" [label = <(&lt;operator&gt;.subtraction,(int)tb-&gt;field_type - (int)ta-&gt;field_type)<SUB>763</SUB>> ]
+"26903" [label = <(&lt;operator&gt;.cast,(int)tb-&gt;field_type)<SUB>763</SUB>> ]
+"26904" [label = <(UNKNOWN,int,int)<SUB>763</SUB>> ]
+"26905" [label = <(&lt;operator&gt;.indirectFieldAccess,tb-&gt;field_type)<SUB>763</SUB>> ]
+"26906" [label = <(IDENTIFIER,tb,(int)tb-&gt;field_type)<SUB>763</SUB>> ]
+"26907" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>763</SUB>> ]
+"26908" [label = <(&lt;operator&gt;.cast,(int)ta-&gt;field_type)<SUB>763</SUB>> ]
+"26909" [label = <(UNKNOWN,int,int)<SUB>763</SUB>> ]
+"26910" [label = <(&lt;operator&gt;.indirectFieldAccess,ta-&gt;field_type)<SUB>763</SUB>> ]
+"26911" [label = <(IDENTIFIER,ta,(int)ta-&gt;field_type)<SUB>763</SUB>> ]
+"26912" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>763</SUB>> ]
+"26913" [label = <(METHOD_RETURN,int)<SUB>752</SUB>> ]
+  "26857" -> "26858" 
+  "26857" -> "26859" 
+  "26857" -> "26860" 
+  "26857" -> "26913" 
+  "26860" -> "26861" 
+  "26860" -> "26862" 
+  "26860" -> "26868" 
+  "26860" -> "26869" 
+  "26860" -> "26875" 
+  "26860" -> "26876" 
+  "26860" -> "26885" 
+  "26862" -> "26863" 
+  "26862" -> "26864" 
+  "26864" -> "26865" 
+  "26865" -> "26866" 
+  "26865" -> "26867" 
+  "26869" -> "26870" 
+  "26869" -> "26871" 
+  "26871" -> "26872" 
+  "26872" -> "26873" 
+  "26872" -> "26874" 
+  "26876" -> "26877" 
+  "26876" -> "26878" 
+  "26878" -> "26879" 
+  "26878" -> "26882" 
+  "26879" -> "26880" 
+  "26879" -> "26881" 
+  "26882" -> "26883" 
+  "26882" -> "26884" 
+  "26885" -> "26886" 
+  "26885" -> "26889" 
+  "26885" -> "26892" 
+  "26886" -> "26887" 
+  "26886" -> "26888" 
+  "26889" -> "26890" 
+  "26890" -> "26891" 
+  "26892" -> "26893" 
+  "26893" -> "26894" 
+  "26894" -> "26895" 
+  "26895" -> "26896" 
+  "26895" -> "26901" 
+  "26895" -> "26902" 
+  "26896" -> "26897" 
+  "26896" -> "26900" 
+  "26897" -> "26898" 
+  "26897" -> "26899" 
+  "26902" -> "26903" 
+  "26902" -> "26908" 
+  "26903" -> "26904" 
+  "26903" -> "26905" 
+  "26905" -> "26906" 
+  "26905" -> "26907" 
+  "26908" -> "26909" 
+  "26908" -> "26910" 
+  "26910" -> "26911" 
+  "26910" -> "26912" 
+}

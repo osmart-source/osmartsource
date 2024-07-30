@@ -1,0 +1,63 @@
+digraph "put16bitbwtile" {  
+"49992" [label = <(&lt;operator&gt;.assignment,samplesperpixel = img-&gt;samplesperpixel)<SUB>1574</SUB>> ]
+"49998" [label = <(&lt;operator&gt;.assignment,**BWmap = img-&gt;BWmap)<SUB>1575</SUB>> ]
+"50003" [label = <(&lt;operator&gt;.cast,(void)y)<SUB>1577</SUB>> ]
+"49994" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;samplesperpixel)<SUB>1574</SUB>> ]
+"50000" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;BWmap)<SUB>1575</SUB>> ]
+"50004" [label = <(UNKNOWN,void,void)<SUB>1577</SUB>> ]
+"50008" [label = <(&lt;operator&gt;.greaterThan,h &gt; 0)<SUB>1578</SUB>> ]
+"50011" [label = <(&lt;operator&gt;.preDecrement,--h)<SUB>1578</SUB>> ]
+"49996" [label = <(FIELD_IDENTIFIER,samplesperpixel,samplesperpixel)<SUB>1574</SUB>> ]
+"50002" [label = <(FIELD_IDENTIFIER,BWmap,BWmap)<SUB>1575</SUB>> ]
+"50015" [label = <(&lt;operator&gt;.assignment,*wp = (uint16_t *)pp)<SUB>1580</SUB>> ]
+"50051" [label = <(&lt;operator&gt;.assignmentPlus,cp += toskew)<SUB>1590</SUB>> ]
+"50054" [label = <(&lt;operator&gt;.assignmentPlus,pp += fromskew)<SUB>1591</SUB>> ]
+"50017" [label = <(&lt;operator&gt;.cast,(uint16_t *)pp)<SUB>1580</SUB>> ]
+"50025" [label = <(&lt;operator&gt;.greaterThan,x &gt; 0)<SUB>1582</SUB>> ]
+"50028" [label = <(&lt;operator&gt;.preDecrement,--x)<SUB>1582</SUB>> ]
+"50018" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>1580</SUB>> ]
+"50022" [label = <(&lt;operator&gt;.assignment,x = w)<SUB>1582</SUB>> ]
+"50031" [label = <(&lt;operator&gt;.assignment,*cp++ = BWmap[*wp &gt;&gt; 8][0])<SUB>1586</SUB>> ]
+"50043" [label = <(&lt;operator&gt;.assignmentPlus,pp += 2 * samplesperpixel)<SUB>1587</SUB>> ]
+"50048" [label = <(&lt;operator&gt;.assignmentPlus,wp += samplesperpixel)<SUB>1588</SUB>> ]
+"50032" [label = <(&lt;operator&gt;.indirection,*cp++)<SUB>1586</SUB>> ]
+"50035" [label = <(&lt;operator&gt;.indirectIndexAccess,BWmap[*wp &gt;&gt; 8][0])<SUB>1586</SUB>> ]
+"50045" [label = <(&lt;operator&gt;.multiplication,2 * samplesperpixel)<SUB>1587</SUB>> ]
+"50033" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>1586</SUB>> ]
+"50036" [label = <(&lt;operator&gt;.indirectIndexAccess,BWmap[*wp &gt;&gt; 8])<SUB>1586</SUB>> ]
+"50038" [label = <(&lt;operator&gt;.arithmeticShiftRight,*wp &gt;&gt; 8)<SUB>1586</SUB>> ]
+"50039" [label = <(&lt;operator&gt;.indirection,*wp)<SUB>1586</SUB>> ]
+"49980" [label = <(METHOD,put16bitbwtile)<SUB>1572</SUB>> ]
+"50057" [label = <(METHOD_RETURN,void)<SUB>1572</SUB>> ]
+  "49992" -> "50002" 
+  "49998" -> "50004" 
+  "50003" -> "50008" 
+  "49994" -> "49992" 
+  "50000" -> "49998" 
+  "50004" -> "50003" 
+  "50008" -> "50057" 
+  "50008" -> "50018" 
+  "50011" -> "50008" 
+  "49996" -> "49994" 
+  "50002" -> "50000" 
+  "50015" -> "50022" 
+  "50051" -> "50054" 
+  "50054" -> "50011" 
+  "50017" -> "50015" 
+  "50025" -> "50033" 
+  "50025" -> "50051" 
+  "50028" -> "50025" 
+  "50018" -> "50017" 
+  "50022" -> "50025" 
+  "50031" -> "50045" 
+  "50043" -> "50048" 
+  "50048" -> "50028" 
+  "50032" -> "50039" 
+  "50035" -> "50031" 
+  "50045" -> "50043" 
+  "50033" -> "50032" 
+  "50036" -> "50035" 
+  "50038" -> "50036" 
+  "50039" -> "50038" 
+  "49980" -> "49996" 
+}

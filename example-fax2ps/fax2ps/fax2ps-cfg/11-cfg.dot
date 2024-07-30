@@ -1,0 +1,53 @@
+digraph "_TIFFcallocExt" {  
+"262" [label = <(RETURN,return _TIFFcalloc(nmemb, siz);,return _TIFFcalloc(nmemb, siz);)<SUB>146</SUB>> ]
+"218" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>135</SUB>> ]
+"263" [label = <(_TIFFcalloc,_TIFFcalloc(nmemb, siz))<SUB>146</SUB>> ]
+"219" [label = <(&lt;operator&gt;.notEquals,tif != NULL)<SUB>135</SUB>> ]
+"222" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>135</SUB>> ]
+"223" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_max_single_mem_alloc)<SUB>135</SUB>> ]
+"229" [label = <(&lt;operator&gt;.logicalOr,nmemb &lt;= 0 || siz &lt;= 0 || nmemb &gt; TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"246" [label = <(&lt;operator&gt;.greaterThan,nmemb * siz &gt; tif-&gt;tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"225" [label = <(FIELD_IDENTIFIER,tif_max_single_mem_alloc,tif_max_single_mem_alloc)<SUB>135</SUB>> ]
+"230" [label = <(&lt;operator&gt;.logicalOr,nmemb &lt;= 0 || siz &lt;= 0)<SUB>137</SUB>> ]
+"237" [label = <(&lt;operator&gt;.greaterThan,nmemb &gt; TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"243" [label = <(RETURN,return NULL;,return NULL;)<SUB>138</SUB>> ]
+"247" [label = <(&lt;operator&gt;.multiplication,nmemb * siz)<SUB>139</SUB>> ]
+"250" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"254" [label = <(_TIFFEmitErrorAboveMaxSingleMemAlloc,_TIFFEmitErrorAboveMaxSingleMemAlloc(tif, &quot;_TIFFcallocExt&quot;,\012                                                 nmemb * siz))<SUB>141</SUB>> ]
+"260" [label = <(RETURN,return NULL;,return NULL;)<SUB>143</SUB>> ]
+"231" [label = <(&lt;operator&gt;.lessEqualsThan,nmemb &lt;= 0)<SUB>137</SUB>> ]
+"234" [label = <(&lt;operator&gt;.lessEqualsThan,siz &lt;= 0)<SUB>137</SUB>> ]
+"239" [label = <(&lt;operator&gt;.division,TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"252" [label = <(FIELD_IDENTIFIER,tif_max_single_mem_alloc,tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"257" [label = <(&lt;operator&gt;.multiplication,nmemb * siz)<SUB>142</SUB>> ]
+"212" [label = <(METHOD,_TIFFcallocExt)<SUB>133</SUB>> ]
+"266" [label = <(METHOD_RETURN,void*)<SUB>133</SUB>> ]
+  "262" -> "266" 
+  "218" -> "231" 
+  "218" -> "263" 
+  "263" -> "262" 
+  "219" -> "218" 
+  "219" -> "225" 
+  "222" -> "218" 
+  "223" -> "222" 
+  "229" -> "243" 
+  "229" -> "247" 
+  "246" -> "257" 
+  "246" -> "263" 
+  "225" -> "223" 
+  "230" -> "229" 
+  "230" -> "239" 
+  "237" -> "229" 
+  "243" -> "266" 
+  "247" -> "252" 
+  "250" -> "246" 
+  "254" -> "260" 
+  "260" -> "266" 
+  "231" -> "230" 
+  "231" -> "234" 
+  "234" -> "230" 
+  "239" -> "237" 
+  "252" -> "250" 
+  "257" -> "254" 
+  "212" -> "219" 
+}

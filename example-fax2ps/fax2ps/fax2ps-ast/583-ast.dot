@@ -1,0 +1,43 @@
+digraph "_TIFFSeekOK" {  
+"21656" [label = <(METHOD,_TIFFSeekOK)<SUB>453</SUB>> ]
+"21657" [label = <(PARAM,TIFF *tif)<SUB>453</SUB>> ]
+"21658" [label = <(PARAM,toff_t off)<SUB>453</SUB>> ]
+"21659" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>454</SUB>> ]
+"21660" [label = <(RETURN,return off &lt;= (~(uint64_t)0) / 2 &amp;&amp; TIFFSeekFile(tif, off, SEEK_SET) == off;,return off &lt;= (~(uint64_t)0) / 2 &amp;&amp; TIFFSeekFile(tif, off, SEEK_SET) == off;)<SUB>457</SUB>> ]
+"21661" [label = <(&lt;operator&gt;.logicalAnd,off &lt;= (~(uint64_t)0) / 2 &amp;&amp; TIFFSeekFile(tif, off, SEEK_SET) == off)<SUB>457</SUB>> ]
+"21662" [label = <(&lt;operator&gt;.lessEqualsThan,off &lt;= (~(uint64_t)0) / 2)<SUB>457</SUB>> ]
+"21663" [label = <(IDENTIFIER,off,off &lt;= (~(uint64_t)0) / 2)<SUB>457</SUB>> ]
+"21664" [label = <(&lt;operator&gt;.division,(~(uint64_t)0) / 2)<SUB>457</SUB>> ]
+"21665" [label = <(&lt;operator&gt;.not,~(uint64_t)0)<SUB>457</SUB>> ]
+"21666" [label = <(&lt;operator&gt;.cast,(uint64_t)0)<SUB>457</SUB>> ]
+"21667" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>457</SUB>> ]
+"21668" [label = <(LITERAL,0,(uint64_t)0)<SUB>457</SUB>> ]
+"21669" [label = <(LITERAL,2,(~(uint64_t)0) / 2)<SUB>457</SUB>> ]
+"21670" [label = <(&lt;operator&gt;.equals,TIFFSeekFile(tif, off, SEEK_SET) == off)<SUB>457</SUB>> ]
+"21671" [label = <(TIFFSeekFile,TIFFSeekFile(tif, off, SEEK_SET))<SUB>457</SUB>> ]
+"21672" [label = <(IDENTIFIER,tif,TIFFSeekFile(tif, off, SEEK_SET))<SUB>457</SUB>> ]
+"21673" [label = <(IDENTIFIER,off,TIFFSeekFile(tif, off, SEEK_SET))<SUB>457</SUB>> ]
+"21674" [label = <(IDENTIFIER,SEEK_SET,TIFFSeekFile(tif, off, SEEK_SET))<SUB>457</SUB>> ]
+"21675" [label = <(IDENTIFIER,off,TIFFSeekFile(tif, off, SEEK_SET) == off)<SUB>457</SUB>> ]
+"21676" [label = <(METHOD_RETURN,int)<SUB>453</SUB>> ]
+  "21656" -> "21657" 
+  "21656" -> "21658" 
+  "21656" -> "21659" 
+  "21656" -> "21676" 
+  "21659" -> "21660" 
+  "21660" -> "21661" 
+  "21661" -> "21662" 
+  "21661" -> "21670" 
+  "21662" -> "21663" 
+  "21662" -> "21664" 
+  "21664" -> "21665" 
+  "21664" -> "21669" 
+  "21665" -> "21666" 
+  "21666" -> "21667" 
+  "21666" -> "21668" 
+  "21670" -> "21671" 
+  "21670" -> "21675" 
+  "21671" -> "21672" 
+  "21671" -> "21673" 
+  "21671" -> "21674" 
+}

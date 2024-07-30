@@ -1,0 +1,24 @@
+digraph "__bswap_16" {  
+"33211" [label = <(RETURN,return __bswap_constant_16 (__bsx);,return __bswap_constant_16 (__bsx);)<SUB>39</SUB>> ]
+"33212" [label = <(__bswap_constant_16,__bswap_constant_16 (__bsx))<SUB>39</SUB>> ]
+"33215" [label = <(&lt;operator&gt;.cast,(__uint16_t)((((__bsx) &gt;&gt; 8) &amp; 0xff) | (((__bsx) &amp; 0xff) &lt;&lt; 8)))<SUB>39</SUB>> ]
+"33216" [label = <(UNKNOWN,__uint16_t,__uint16_t)<SUB>39</SUB>> ]
+"33217" [label = <(&lt;operator&gt;.or,(((__bsx) &gt;&gt; 8) &amp; 0xff) | (((__bsx) &amp; 0xff) &lt;&lt; 8))<SUB>39</SUB>> ]
+"33218" [label = <(&lt;operator&gt;.and,((__bsx) &gt;&gt; 8) &amp; 0xff)<SUB>39</SUB>> ]
+"33223" [label = <(&lt;operator&gt;.shiftLeft,((__bsx) &amp; 0xff) &lt;&lt; 8)<SUB>39</SUB>> ]
+"33219" [label = <(&lt;operator&gt;.arithmeticShiftRight,(__bsx) &gt;&gt; 8)<SUB>39</SUB>> ]
+"33224" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0xff)<SUB>39</SUB>> ]
+"33208" [label = <(METHOD,__bswap_16)<SUB>33</SUB>> ]
+"33228" [label = <(METHOD_RETURN,__uint16_t)<SUB>33</SUB>> ]
+  "33211" -> "33228" 
+  "33212" -> "33216" 
+  "33212" -> "33211" 
+  "33215" -> "33211" 
+  "33216" -> "33219" 
+  "33217" -> "33215" 
+  "33218" -> "33224" 
+  "33223" -> "33217" 
+  "33219" -> "33218" 
+  "33224" -> "33223" 
+  "33208" -> "33212" 
+}

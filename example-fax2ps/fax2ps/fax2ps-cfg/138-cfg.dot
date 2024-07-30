@@ -1,0 +1,103 @@
+digraph "_TIFFPrintField" {  
+"3141" [label = <(&lt;operator&gt;.assignment,*field_name = fip-&gt;field_name)<SUB>82</SUB>> ]
+"3189" [label = <(fprintf,fprintf(fd, &quot;  %s: &quot;, field_name))<SUB>94</SUB>> ]
+"3230" [label = <(fprintf,fprintf(fd, &quot;\n&quot;))<SUB>148</SUB>> ]
+"3143" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>82</SUB>> ]
+"3147" [label = <(TIFFFieldIsAnonymous,TIFFFieldIsAnonymous(fip))<SUB>83</SUB>> ]
+"3198" [label = <(&lt;operator&gt;.lessThan,j &lt; value_count)<SUB>96</SUB>> ]
+"3201" [label = <(&lt;operator&gt;.postIncrement,j++)<SUB>96</SUB>> ]
+"3145" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>82</SUB>> ]
+"3195" [label = <(&lt;operator&gt;.assignment,j = 0)<SUB>96</SUB>> ]
+"3204" [label = <(UNKNOWN,if (fip-&gt;field_type == TIFF_BYTE)\012            fprintf(fd, &quot;%&quot; PRIu8, ((uint8_t *)raw_data)[j]);,if (fip-&gt;field_type == TIFF_BYTE)\012            fprintf(fd, &quot;%&quot; PRIu8, ((uint8_t *)raw_data)[j]);)<SUB>98</SUB>> ]
+"3205" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_UNDEFINED)\012            fprintf(fd, &quot;0x%&quot; PRIx8, ((uint8_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_UNDEFINED)\012            fprintf(fd, &quot;0x%&quot; PRIx8, ((uint8_t *)raw_data)[j]);)<SUB>100</SUB>> ]
+"3206" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_SBYTE)\012            fprintf(fd, &quot;%&quot; PRId8, ((int8_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_SBYTE)\012            fprintf(fd, &quot;%&quot; PRId8, ((int8_t *)raw_data)[j]);)<SUB>102</SUB>> ]
+"3207" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_SHORT)\012            fprintf(fd, &quot;%&quot; PRIu16, ((uint16_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_SHORT)\012            fprintf(fd, &quot;%&quot; PRIu16, ((uint16_t *)raw_data)[j]);)<SUB>104</SUB>> ]
+"3208" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_SSHORT)\012            fprintf(fd, &quot;%&quot; PRId16, ((int16_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_SSHORT)\012            fprintf(fd, &quot;%&quot; PRId16, ((int16_t *)raw_data)[j]);)<SUB>106</SUB>> ]
+"3209" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_LONG)\012            fprintf(fd, &quot;%&quot; PRIu32, ((uint32_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_LONG)\012            fprintf(fd, &quot;%&quot; PRIu32, ((uint32_t *)raw_data)[j]);)<SUB>108</SUB>> ]
+"3210" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_SLONG)\012            fprintf(fd, &quot;%&quot; PRId32, ((int32_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_SLONG)\012            fprintf(fd, &quot;%&quot; PRId32, ((int32_t *)raw_data)[j]);)<SUB>110</SUB>> ]
+"3211" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_IFD)\012            fprintf(fd, &quot;0x%&quot; PRIx32, ((uint32_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_IFD)\012            fprintf(fd, &quot;0x%&quot; PRIx32, ((uint32_t *)raw_data)[j]);)<SUB>112</SUB>> ]
+"3212" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_RATIONAL ||\012                 fip-&gt;field_type == TIFF_SRATIONAL)\012        {\012            int tv_size = TIFFFieldSetGetSize(fip);\012            if (tv_size == 8)\012                fprintf(fd, &quot;%lf&quot;, ((double *)raw_data)[j]);\012            else\012                fprintf(fd, &quot;%f&quot;, ((float *)raw_data)[j]);\012        },else if (fip-&gt;field_type == TIFF_RATIONAL ||\012                 fip-&gt;field_type == TIFF_SRATIONAL)\012        {\012            int tv_size = TIFFFieldSetGetSize(fip);\012            if (tv_size == 8)\012                fprintf(fd, &quot;%lf&quot;, ((double *)raw_data)[j]);\012            else\012                fprintf(fd, &quot;%f&quot;, ((float *)raw_data)[j]);\012        })<SUB>114</SUB>> ]
+"3213" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_FLOAT)\012            fprintf(fd, &quot;%f&quot;, ((float *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_FLOAT)\012            fprintf(fd, &quot;%f&quot;, ((float *)raw_data)[j]);)<SUB>123</SUB>> ]
+"3214" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_LONG8)\012            fprintf(fd, &quot;%&quot; PRIu64, ((uint64_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_LONG8)\012            fprintf(fd, &quot;%&quot; PRIu64, ((uint64_t *)raw_data)[j]);)<SUB>125</SUB>> ]
+"3215" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_SLONG8)\012            fprintf(fd, &quot;%&quot; PRId64, ((int64_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_SLONG8)\012            fprintf(fd, &quot;%&quot; PRId64, ((int64_t *)raw_data)[j]);)<SUB>127</SUB>> ]
+"3216" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_IFD8)\012            fprintf(fd, &quot;0x%&quot; PRIx64, ((uint64_t *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_IFD8)\012            fprintf(fd, &quot;0x%&quot; PRIx64, ((uint64_t *)raw_data)[j]);)<SUB>129</SUB>> ]
+"3217" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_DOUBLE)\012            fprintf(fd, &quot;%lf&quot;, ((double *)raw_data)[j]);,else if (fip-&gt;field_type == TIFF_DOUBLE)\012            fprintf(fd, &quot;%lf&quot;, ((double *)raw_data)[j]);)<SUB>131</SUB>> ]
+"3218" [label = <(UNKNOWN,else if (fip-&gt;field_type == TIFF_ASCII)\012        {\012            fprintf(fd, &quot;%s&quot;, (char *)raw_data);\012            break;\012        },else if (fip-&gt;field_type == TIFF_ASCII)\012        {\012            fprintf(fd, &quot;%s&quot;, (char *)raw_data);\012            break;\012        })<SUB>133</SUB>> ]
+"3219" [label = <(UNKNOWN,else\012        {\012            fprintf(fd, &quot;&lt;unsupported data type in TIFFPrint&gt;&quot;);\012            break;\012        },else\012        {\012            fprintf(fd, &quot;&lt;unsupported data type in TIFFPrint&gt;&quot;);\012            break;\012        })<SUB>138</SUB>> ]
+"3156" [label = <(&lt;operator&gt;.lessThan,i &lt; NTAGS)<SUB>85</SUB>> ]
+"3167" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>85</SUB>> ]
+"3221" [label = <(&lt;operator&gt;.lessThan,j &lt; value_count - 1)<SUB>144</SUB>> ]
+"3153" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>85</SUB>> ]
+"3158" [label = <(NTAGS,NTAGS)<SUB>85</SUB>> ]
+"3223" [label = <(&lt;operator&gt;.subtraction,value_count - 1)<SUB>144</SUB>> ]
+"3227" [label = <(fprintf,fprintf(fd, &quot;,&quot;))<SUB>145</SUB>> ]
+"3171" [label = <(&lt;operator&gt;.equals,fip-&gt;field_tag == tagnames[i].tag)<SUB>87</SUB>> ]
+"3160" [label = <(&lt;operator&gt;.division,sizeof (tagnames) / sizeof (tagnames[0]))<SUB>85</SUB>> ]
+"3172" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_tag)<SUB>87</SUB>> ]
+"3175" [label = <(&lt;operator&gt;.fieldAccess,tagnames[i].tag)<SUB>87</SUB>> ]
+"3181" [label = <(&lt;operator&gt;.assignment,field_name = tagnames[i].name)<SUB>89</SUB>> ]
+"3161" [label = <(&lt;operator&gt;.sizeOf,sizeof (tagnames))<SUB>85</SUB>> ]
+"3163" [label = <(&lt;operator&gt;.sizeOf,sizeof (tagnames[0]))<SUB>85</SUB>> ]
+"3174" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>87</SUB>> ]
+"3176" [label = <(&lt;operator&gt;.indirectIndexAccess,tagnames[i])<SUB>87</SUB>> ]
+"3179" [label = <(FIELD_IDENTIFIER,tag,tag)<SUB>87</SUB>> ]
+"3183" [label = <(&lt;operator&gt;.fieldAccess,tagnames[i].name)<SUB>89</SUB>> ]
+"3164" [label = <(&lt;operator&gt;.indirectIndexAccess,tagnames[0])<SUB>85</SUB>> ]
+"3184" [label = <(&lt;operator&gt;.indirectIndexAccess,tagnames[i])<SUB>89</SUB>> ]
+"3187" [label = <(FIELD_IDENTIFIER,name,name)<SUB>89</SUB>> ]
+"3133" [label = <(METHOD,_TIFFPrintField)<SUB>75</SUB>> ]
+"3233" [label = <(METHOD_RETURN,void)<SUB>75</SUB>> ]
+  "3141" -> "3147" 
+  "3189" -> "3195" 
+  "3230" -> "3233" 
+  "3143" -> "3141" 
+  "3147" -> "3153" 
+  "3147" -> "3189" 
+  "3198" -> "3204" 
+  "3198" -> "3230" 
+  "3201" -> "3198" 
+  "3145" -> "3143" 
+  "3195" -> "3198" 
+  "3204" -> "3205" 
+  "3205" -> "3206" 
+  "3206" -> "3207" 
+  "3207" -> "3208" 
+  "3208" -> "3209" 
+  "3209" -> "3210" 
+  "3210" -> "3211" 
+  "3211" -> "3212" 
+  "3212" -> "3213" 
+  "3213" -> "3214" 
+  "3214" -> "3215" 
+  "3215" -> "3216" 
+  "3216" -> "3217" 
+  "3217" -> "3218" 
+  "3218" -> "3219" 
+  "3219" -> "3223" 
+  "3156" -> "3174" 
+  "3156" -> "3189" 
+  "3167" -> "3158" 
+  "3221" -> "3227" 
+  "3221" -> "3201" 
+  "3153" -> "3158" 
+  "3158" -> "3156" 
+  "3158" -> "3161" 
+  "3223" -> "3221" 
+  "3227" -> "3201" 
+  "3171" -> "3184" 
+  "3171" -> "3167" 
+  "3160" -> "3156" 
+  "3172" -> "3176" 
+  "3175" -> "3171" 
+  "3181" -> "3189" 
+  "3161" -> "3164" 
+  "3163" -> "3160" 
+  "3174" -> "3172" 
+  "3176" -> "3179" 
+  "3179" -> "3175" 
+  "3183" -> "3181" 
+  "3164" -> "3163" 
+  "3184" -> "3187" 
+  "3187" -> "3183" 
+  "3133" -> "3145" 
+}

@@ -1,0 +1,28 @@
+digraph "TIFFSetCompressionScheme" {  
+"2054" [label = <(&lt;operator&gt;.assignment,*c = TIFFFindCODEC((uint16_t)scheme))<SUB>168</SUB>> ]
+"2060" [label = <(_TIFFSetDefaultCompressionState,_TIFFSetDefaultCompressionState(tif))<SUB>170</SUB>> ]
+"2062" [label = <(RETURN,return (c ? (*c-&gt;init)(tif, scheme) : 1);,return (c ? (*c-&gt;init)(tif, scheme) : 1);)<SUB>177</SUB>> ]
+"2056" [label = <(TIFFFindCODEC,TIFFFindCODEC((uint16_t)scheme))<SUB>168</SUB>> ]
+"2063" [label = <(&lt;operator&gt;.conditional,c ? (*c-&gt;init)(tif, scheme) : 1)<SUB>177</SUB>> ]
+"2057" [label = <(&lt;operator&gt;.cast,(uint16_t)scheme)<SUB>168</SUB>> ]
+"2065" [label = <(*c-&gt;init,(*c-&gt;init)(tif, scheme))<SUB>177</SUB>> ]
+"2058" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>168</SUB>> ]
+"2066" [label = <(&lt;operator&gt;.indirection,*c-&gt;init)<SUB>177</SUB>> ]
+"2067" [label = <(&lt;operator&gt;.indirectFieldAccess,c-&gt;init)<SUB>177</SUB>> ]
+"2069" [label = <(FIELD_IDENTIFIER,init,init)<SUB>177</SUB>> ]
+"2049" [label = <(METHOD,TIFFSetCompressionScheme)<SUB>166</SUB>> ]
+"2073" [label = <(METHOD_RETURN,int)<SUB>166</SUB>> ]
+  "2054" -> "2060" 
+  "2060" -> "2069" 
+  "2060" -> "2063" 
+  "2062" -> "2073" 
+  "2056" -> "2054" 
+  "2063" -> "2062" 
+  "2057" -> "2056" 
+  "2065" -> "2063" 
+  "2058" -> "2057" 
+  "2066" -> "2065" 
+  "2067" -> "2066" 
+  "2069" -> "2067" 
+  "2049" -> "2058" 
+}

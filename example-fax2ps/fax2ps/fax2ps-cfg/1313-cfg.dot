@@ -1,0 +1,198 @@
+digraph "allocChoppedUpStripArrays" {  
+"96868" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96881" [label = <(&lt;operator&gt;.assignment,offset = TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96886" [label = <(&lt;operator&gt;.assignment,last_offset = TIFFGetStrileOffset(tif, td-&gt;td_nstrips - 1))<SUB>7091</SUB>> ]
+"96895" [label = <(&lt;operator&gt;.assignment,last_bytecount = TIFFGetStrileByteCount(tif, td-&gt;td_nstrips - 1))<SUB>7092</SUB>> ]
+"96920" [label = <(&lt;operator&gt;.assignment,bytecount = last_offset + last_bytecount - offset)<SUB>7098</SUB>> ]
+"96927" [label = <(&lt;operator&gt;.assignment,newcounts =\012        (uint64_t *)_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7100</SUB>> ]
+"96937" [label = <(&lt;operator&gt;.assignment,newoffsets = (uint64_t *)_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"97027" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripsperimage = td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97036" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_ROWSPERSTRIP, rowsperstrip))<SUB>7136</SUB>> ]
+"97040" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, td-&gt;td_stripbytecount_p))<SUB>7138</SUB>> ]
+"97045" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, td-&gt;td_stripoffset_p))<SUB>7139</SUB>> ]
+"97050" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripbytecount_p = newcounts)<SUB>7140</SUB>> ]
+"97055" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripoffset_p = newoffsets)<SUB>7141</SUB>> ]
+"97060" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_CHOPPEDUPARRAYS)<SUB>7145</SUB>> ]
+"96870" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96883" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96888" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, td-&gt;td_nstrips - 1))<SUB>7091</SUB>> ]
+"96897" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, td-&gt;td_nstrips - 1))<SUB>7092</SUB>> ]
+"96905" [label = <(&lt;operator&gt;.logicalOr,last_offset &gt; UINT64_MAX - last_bytecount ||\012        last_offset + last_bytecount &lt; offset)<SUB>7093</SUB>> ]
+"96922" [label = <(&lt;operator&gt;.subtraction,last_offset + last_bytecount - offset)<SUB>7098</SUB>> ]
+"96929" [label = <(&lt;operator&gt;.cast,(uint64_t *)_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7101</SUB>> ]
+"96939" [label = <(&lt;operator&gt;.cast,(uint64_t *)_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"96948" [label = <(&lt;operator&gt;.logicalOr,newcounts == NULL || newoffsets == NULL)<SUB>7105</SUB>> ]
+"96994" [label = <(&lt;operator&gt;.lessThan,i &lt; nstrips)<SUB>7122</SUB>> ]
+"96997" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>7122</SUB>> ]
+"97028" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>7135</SUB>> ]
+"97031" [label = <(&lt;operator&gt;.assignment,td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97042" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7138</SUB>> ]
+"97047" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7139</SUB>> ]
+"97051" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7140</SUB>> ]
+"97056" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7141</SUB>> ]
+"97061" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7145</SUB>> ]
+"96871" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96890" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_nstrips - 1)<SUB>7091</SUB>> ]
+"96899" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_nstrips - 1)<SUB>7092</SUB>> ]
+"96906" [label = <(&lt;operator&gt;.greaterThan,last_offset &gt; UINT64_MAX - last_bytecount)<SUB>7093</SUB>> ]
+"96913" [label = <(&lt;operator&gt;.lessThan,last_offset + last_bytecount &lt; offset)<SUB>7094</SUB>> ]
+"96919" [label = <(RETURN,return;,return;)<SUB>7096</SUB>> ]
+"96923" [label = <(&lt;operator&gt;.addition,last_offset + last_bytecount)<SUB>7098</SUB>> ]
+"96930" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>7101</SUB>> ]
+"96931" [label = <(_TIFFCheckMalloc,_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7101</SUB>> ]
+"96940" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>7103</SUB>> ]
+"96941" [label = <(_TIFFCheckMalloc,_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"96949" [label = <(&lt;operator&gt;.equals,newcounts == NULL)<SUB>7105</SUB>> ]
+"96956" [label = <(&lt;operator&gt;.equals,newoffsets == NULL)<SUB>7105</SUB>> ]
+"96988" [label = <(RETURN,return;,return;)<SUB>7115</SUB>> ]
+"96991" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>7122</SUB>> ]
+"97008" [label = <(&lt;operator&gt;.assignment,newcounts[i] = stripbytes)<SUB>7126</SUB>> ]
+"97013" [label = <(&lt;operator&gt;.assignment,newoffsets[i] = stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97021" [label = <(&lt;operator&gt;.assignmentPlus,offset += stripbytes)<SUB>7128</SUB>> ]
+"97024" [label = <(&lt;operator&gt;.assignmentMinus,bytecount -= stripbytes)<SUB>7129</SUB>> ]
+"97030" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>7135</SUB>> ]
+"97032" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7135</SUB>> ]
+"97044" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7138</SUB>> ]
+"97049" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7139</SUB>> ]
+"97053" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7140</SUB>> ]
+"97058" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7141</SUB>> ]
+"97063" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7145</SUB>> ]
+"96873" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7081</SUB>> ]
+"96891" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7091</SUB>> ]
+"96900" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7092</SUB>> ]
+"96908" [label = <(UINT64_MAX,UINT64_MAX - last_bytecount)<SUB>7093</SUB>> ]
+"96914" [label = <(&lt;operator&gt;.addition,last_offset + last_bytecount)<SUB>7094</SUB>> ]
+"96934" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>7101</SUB>> ]
+"96944" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>7104</SUB>> ]
+"96951" [label = <(NULL,NULL)<SUB>7105</SUB>> ]
+"96958" [label = <(NULL,NULL)<SUB>7105</SUB>> ]
+"96965" [label = <(&lt;operator&gt;.notEquals,newcounts != NULL)<SUB>7111</SUB>> ]
+"96977" [label = <(&lt;operator&gt;.notEquals,newoffsets != NULL)<SUB>7113</SUB>> ]
+"97001" [label = <(&lt;operator&gt;.greaterThan,stripbytes &gt; bytecount)<SUB>7124</SUB>> ]
+"97009" [label = <(&lt;operator&gt;.indirectIndexAccess,newcounts[i])<SUB>7126</SUB>> ]
+"97014" [label = <(&lt;operator&gt;.indirectIndexAccess,newoffsets[i])<SUB>7127</SUB>> ]
+"97017" [label = <(&lt;operator&gt;.conditional,stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97034" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7135</SUB>> ]
+"96893" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7091</SUB>> ]
+"96902" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7092</SUB>> ]
+"96967" [label = <(NULL,NULL)<SUB>7111</SUB>> ]
+"96973" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, newcounts))<SUB>7112</SUB>> ]
+"96979" [label = <(NULL,NULL)<SUB>7113</SUB>> ]
+"96985" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, newoffsets))<SUB>7114</SUB>> ]
+"97005" [label = <(&lt;operator&gt;.assignment,stripbytes = bytecount)<SUB>7125</SUB>> ]
+"96910" [label = <(&lt;operator&gt;.subtraction,(18446744073709551615ULL) - last_bytecount)<SUB>7093</SUB>> ]
+"96953" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7105</SUB>> ]
+"96960" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7105</SUB>> ]
+"96954" [label = <(UNKNOWN,void *,void *)<SUB>7105</SUB>> ]
+"96961" [label = <(UNKNOWN,void *,void *)<SUB>7105</SUB>> ]
+"96969" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7111</SUB>> ]
+"96981" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7113</SUB>> ]
+"96970" [label = <(UNKNOWN,void *,void *)<SUB>7111</SUB>> ]
+"96982" [label = <(UNKNOWN,void *,void *)<SUB>7113</SUB>> ]
+"96861" [label = <(METHOD,allocChoppedUpStripArrays)<SUB>7077</SUB>> ]
+"97065" [label = <(METHOD_RETURN,void)<SUB>7077</SUB>> ]
+  "96868" -> "96883" 
+  "96881" -> "96893" 
+  "96886" -> "96902" 
+  "96895" -> "96908" 
+  "96920" -> "96930" 
+  "96927" -> "96940" 
+  "96937" -> "96951" 
+  "97027" -> "97036" 
+  "97036" -> "97044" 
+  "97040" -> "97049" 
+  "97045" -> "97053" 
+  "97050" -> "97058" 
+  "97055" -> "97063" 
+  "97060" -> "97065" 
+  "96870" -> "96868" 
+  "96883" -> "96881" 
+  "96888" -> "96886" 
+  "96897" -> "96895" 
+  "96905" -> "96919" 
+  "96905" -> "96923" 
+  "96922" -> "96920" 
+  "96929" -> "96927" 
+  "96939" -> "96937" 
+  "96948" -> "96967" 
+  "96948" -> "96991" 
+  "96994" -> "97001" 
+  "96994" -> "97030" 
+  "96997" -> "96994" 
+  "97028" -> "97034" 
+  "97031" -> "97027" 
+  "97042" -> "97040" 
+  "97047" -> "97045" 
+  "97051" -> "97050" 
+  "97056" -> "97055" 
+  "97061" -> "97060" 
+  "96871" -> "96870" 
+  "96890" -> "96888" 
+  "96899" -> "96897" 
+  "96906" -> "96905" 
+  "96906" -> "96914" 
+  "96913" -> "96905" 
+  "96919" -> "97065" 
+  "96923" -> "96922" 
+  "96930" -> "96934" 
+  "96931" -> "96929" 
+  "96940" -> "96944" 
+  "96941" -> "96939" 
+  "96949" -> "96948" 
+  "96949" -> "96958" 
+  "96956" -> "96948" 
+  "96988" -> "97065" 
+  "96991" -> "96994" 
+  "97008" -> "97014" 
+  "97013" -> "97021" 
+  "97021" -> "97024" 
+  "97024" -> "96997" 
+  "97030" -> "97028" 
+  "97032" -> "97031" 
+  "97044" -> "97042" 
+  "97049" -> "97047" 
+  "97053" -> "97051" 
+  "97058" -> "97056" 
+  "97063" -> "97061" 
+  "96873" -> "96871" 
+  "96891" -> "96890" 
+  "96900" -> "96899" 
+  "96908" -> "96906" 
+  "96908" -> "96910" 
+  "96914" -> "96913" 
+  "96934" -> "96931" 
+  "96944" -> "96941" 
+  "96951" -> "96954" 
+  "96951" -> "96949" 
+  "96958" -> "96961" 
+  "96958" -> "96956" 
+  "96965" -> "96973" 
+  "96965" -> "96979" 
+  "96977" -> "96988" 
+  "96977" -> "96985" 
+  "97001" -> "97005" 
+  "97001" -> "97009" 
+  "97009" -> "97008" 
+  "97014" -> "97017" 
+  "97017" -> "97013" 
+  "97034" -> "97032" 
+  "96893" -> "96891" 
+  "96902" -> "96900" 
+  "96967" -> "96970" 
+  "96967" -> "96965" 
+  "96973" -> "96979" 
+  "96979" -> "96982" 
+  "96979" -> "96977" 
+  "96985" -> "96988" 
+  "97005" -> "97009" 
+  "96910" -> "96906" 
+  "96953" -> "96949" 
+  "96960" -> "96956" 
+  "96954" -> "96953" 
+  "96961" -> "96960" 
+  "96969" -> "96965" 
+  "96981" -> "96977" 
+  "96970" -> "96969" 
+  "96982" -> "96981" 
+  "96861" -> "96873" 
+}

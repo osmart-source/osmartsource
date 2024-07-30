@@ -1,0 +1,14 @@
+digraph "stat" {  
+"33420" [label = <(METHOD,stat)<SUB>205</SUB>> ]
+"33421" [label = <(PARAM,const char *__restrict __file)<SUB>205</SUB>> ]
+"33422" [label = <(PARAM,struct stat *__restrict __buf)<SUB>206</SUB>> ]
+"33423" [label = <(METHOD_RETURN,int)<SUB>205</SUB>> ]
+  "33420" -> "33421"  [ label = "AST: "] 
+  "33420" -> "33422"  [ label = "AST: "] 
+  "33420" -> "33423"  [ label = "AST: "] 
+  "33420" -> "33423"  [ label = "CFG: "] 
+  "33421" -> "33423"  [ label = "DDG: __file"] 
+  "33422" -> "33423"  [ label = "DDG: __buf"] 
+  "33420" -> "33421"  [ label = "DDG: "] 
+  "33420" -> "33422"  [ label = "DDG: "] 
+}

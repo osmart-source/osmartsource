@@ -1,0 +1,14 @@
+digraph "fputs" {  
+"30264" [label = <(METHOD,fputs)<SUB>626</SUB>> ]
+"30265" [label = <(PARAM,const char *__restrict __s)<SUB>626</SUB>> ]
+"30266" [label = <(PARAM,FILE *__restrict __stream)<SUB>626</SUB>> ]
+"30267" [label = <(METHOD_RETURN,int)<SUB>626</SUB>> ]
+  "30264" -> "30265"  [ label = "AST: "] 
+  "30264" -> "30266"  [ label = "AST: "] 
+  "30264" -> "30267"  [ label = "AST: "] 
+  "30264" -> "30267"  [ label = "CFG: "] 
+  "30265" -> "30267"  [ label = "DDG: __s"] 
+  "30266" -> "30267"  [ label = "DDG: __stream"] 
+  "30264" -> "30265"  [ label = "DDG: "] 
+  "30264" -> "30266"  [ label = "DDG: "] 
+}

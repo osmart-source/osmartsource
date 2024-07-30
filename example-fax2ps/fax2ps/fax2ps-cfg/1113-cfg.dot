@@ -1,0 +1,30 @@
+digraph "TIFFWriteDirectoryTagCheckedLongArray" {  
+"70123" [label = <(assert,assert(count &lt; 0x40000000))<SUB>2280</SUB>> ]
+"70127" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>2281</SUB>> ]
+"70142" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, count,\012                                      count * 4, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, count,\012                                      count * 4, value));)<SUB>2284</SUB>> ]
+"70124" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x40000000)<SUB>2280</SUB>> ]
+"70128" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>2281</SUB>> ]
+"70133" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2282</SUB>> ]
+"70143" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, count,\012                                      count * 4, value))<SUB>2284</SUB>> ]
+"70129" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2281</SUB>> ]
+"70134" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2282</SUB>> ]
+"70139" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(value, count))<SUB>2283</SUB>> ]
+"70150" [label = <(&lt;operator&gt;.multiplication,count * 4)<SUB>2285</SUB>> ]
+"70136" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2282</SUB>> ]
+"70115" [label = <(METHOD,TIFFWriteDirectoryTagCheckedLongArray)<SUB>2275</SUB>> ]
+"70154" [label = <(METHOD_RETURN,int)<SUB>2275</SUB>> ]
+  "70123" -> "70129" 
+  "70127" -> "70136" 
+  "70142" -> "70154" 
+  "70124" -> "70123" 
+  "70128" -> "70127" 
+  "70133" -> "70139" 
+  "70133" -> "70150" 
+  "70143" -> "70142" 
+  "70129" -> "70128" 
+  "70134" -> "70133" 
+  "70139" -> "70150" 
+  "70150" -> "70143" 
+  "70136" -> "70134" 
+  "70115" -> "70124" 
+}

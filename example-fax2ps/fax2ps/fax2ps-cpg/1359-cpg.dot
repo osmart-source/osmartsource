@@ -1,0 +1,14 @@
+digraph "strnlen" {  
+"98905" [label = <(METHOD,strnlen)<SUB>391</SUB>> ]
+"98906" [label = <(PARAM,const char *__string)<SUB>391</SUB>> ]
+"98907" [label = <(PARAM,size_t __maxlen)<SUB>391</SUB>> ]
+"98908" [label = <(METHOD_RETURN,size_t)<SUB>391</SUB>> ]
+  "98905" -> "98906"  [ label = "AST: "] 
+  "98905" -> "98907"  [ label = "AST: "] 
+  "98905" -> "98908"  [ label = "AST: "] 
+  "98905" -> "98908"  [ label = "CFG: "] 
+  "98906" -> "98908"  [ label = "DDG: __string"] 
+  "98907" -> "98908"  [ label = "DDG: __maxlen"] 
+  "98905" -> "98906"  [ label = "DDG: "] 
+  "98905" -> "98907"  [ label = "DDG: "] 
+}

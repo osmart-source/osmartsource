@@ -1,0 +1,16 @@
+digraph "clock_nanosleep" {  
+"7984" [label = <(METHOD,clock_nanosleep)<SUB>224</SUB>> ]
+"7989" [label = <(METHOD_RETURN,int)<SUB>224</SUB>> ]
+"7985" [label = <(PARAM,clockid_t __clock_id)<SUB>224</SUB>> ]
+"7986" [label = <(PARAM,int __flags)<SUB>224</SUB>> ]
+"7987" [label = <(PARAM,const struct timespec *__req)<SUB>225</SUB>> ]
+"7988" [label = <(PARAM,struct timespec *__rem)<SUB>226</SUB>> ]
+  "7985" -> "7989"  [ label = "DDG: __clock_id"] 
+  "7986" -> "7989"  [ label = "DDG: __flags"] 
+  "7987" -> "7989"  [ label = "DDG: __req"] 
+  "7988" -> "7989"  [ label = "DDG: __rem"] 
+  "7984" -> "7985"  [ label = "DDG: "] 
+  "7984" -> "7986"  [ label = "DDG: "] 
+  "7984" -> "7987"  [ label = "DDG: "] 
+  "7984" -> "7988"  [ label = "DDG: "] 
+}

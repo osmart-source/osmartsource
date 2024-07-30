@@ -1,0 +1,83 @@
+digraph "TIFFReadDirectoryFindEntry" {  
+"90651" [label = <(METHOD,TIFFReadDirectoryFindEntry)<SUB>4964</SUB>> ]
+"90652" [label = <(PARAM,TIFF *tif)<SUB>4964</SUB>> ]
+"90653" [label = <(PARAM,TIFFDirEntry *dir)<SUB>4964</SUB>> ]
+"90654" [label = <(PARAM,uint16_t dircount)<SUB>4965</SUB>> ]
+"90655" [label = <(PARAM,uint16_t tagid)<SUB>4966</SUB>> ]
+"90656" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4967</SUB>> ]
+"90657" [label = <(LOCAL,TIFFDirEntry* m: TIFFDirEntry)<SUB>4968</SUB>> ]
+"90658" [label = <(LOCAL,uint16_t n: uint16_t)<SUB>4969</SUB>> ]
+"90659" [label = <(&lt;operator&gt;.cast,(void)tif)<SUB>4970</SUB>> ]
+"90660" [label = <(UNKNOWN,void,void)<SUB>4970</SUB>> ]
+"90661" [label = <(IDENTIFIER,tif,(void)tif)<SUB>4970</SUB>> ]
+"90662" [label = <(CONTROL_STRUCTURE,for (m = dir, n = 0;n &lt; dircount;m++, n++),for (m = dir, n = 0;n &lt; dircount;m++, n++))<SUB>4971</SUB>> ]
+"90663" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4971</SUB>> ]
+"90664" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4971</SUB>> ]
+"90665" [label = <(&lt;operator&gt;.assignment,m = dir)<SUB>4971</SUB>> ]
+"90666" [label = <(IDENTIFIER,m,m = dir)<SUB>4971</SUB>> ]
+"90667" [label = <(IDENTIFIER,dir,m = dir)<SUB>4971</SUB>> ]
+"90668" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>4971</SUB>> ]
+"90669" [label = <(IDENTIFIER,n,n = 0)<SUB>4971</SUB>> ]
+"90670" [label = <(LITERAL,0,n = 0)<SUB>4971</SUB>> ]
+"90671" [label = <(&lt;operator&gt;.lessThan,n &lt; dircount)<SUB>4971</SUB>> ]
+"90672" [label = <(IDENTIFIER,n,n &lt; dircount)<SUB>4971</SUB>> ]
+"90673" [label = <(IDENTIFIER,dircount,n &lt; dircount)<SUB>4971</SUB>> ]
+"90674" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4971</SUB>> ]
+"90675" [label = <(&lt;operator&gt;.postIncrement,m++)<SUB>4971</SUB>> ]
+"90676" [label = <(IDENTIFIER,m,m++)<SUB>4971</SUB>> ]
+"90677" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>4971</SUB>> ]
+"90678" [label = <(IDENTIFIER,n,n++)<SUB>4971</SUB>> ]
+"90679" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4972</SUB>> ]
+"90680" [label = <(CONTROL_STRUCTURE,if (m-&gt;tdir_tag == tagid),if (m-&gt;tdir_tag == tagid))<SUB>4973</SUB>> ]
+"90681" [label = <(&lt;operator&gt;.equals,m-&gt;tdir_tag == tagid)<SUB>4973</SUB>> ]
+"90682" [label = <(&lt;operator&gt;.indirectFieldAccess,m-&gt;tdir_tag)<SUB>4973</SUB>> ]
+"90683" [label = <(IDENTIFIER,m,m-&gt;tdir_tag == tagid)<SUB>4973</SUB>> ]
+"90684" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4973</SUB>> ]
+"90685" [label = <(IDENTIFIER,tagid,m-&gt;tdir_tag == tagid)<SUB>4973</SUB>> ]
+"90686" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4974</SUB>> ]
+"90687" [label = <(RETURN,return (m);,return (m);)<SUB>4974</SUB>> ]
+"90688" [label = <(IDENTIFIER,m,return (m);)<SUB>4974</SUB>> ]
+"90689" [label = <(RETURN,return (0);,return (0);)<SUB>4976</SUB>> ]
+"90690" [label = <(LITERAL,0,return (0);)<SUB>4976</SUB>> ]
+"90691" [label = <(METHOD_RETURN,TIFFDirEntry)<SUB>4964</SUB>> ]
+  "90651" -> "90652" 
+  "90651" -> "90653" 
+  "90651" -> "90654" 
+  "90651" -> "90655" 
+  "90651" -> "90656" 
+  "90651" -> "90691" 
+  "90656" -> "90657" 
+  "90656" -> "90658" 
+  "90656" -> "90659" 
+  "90656" -> "90662" 
+  "90656" -> "90689" 
+  "90659" -> "90660" 
+  "90659" -> "90661" 
+  "90662" -> "90663" 
+  "90662" -> "90671" 
+  "90662" -> "90674" 
+  "90662" -> "90679" 
+  "90663" -> "90664" 
+  "90664" -> "90665" 
+  "90664" -> "90668" 
+  "90665" -> "90666" 
+  "90665" -> "90667" 
+  "90668" -> "90669" 
+  "90668" -> "90670" 
+  "90671" -> "90672" 
+  "90671" -> "90673" 
+  "90674" -> "90675" 
+  "90674" -> "90677" 
+  "90675" -> "90676" 
+  "90677" -> "90678" 
+  "90679" -> "90680" 
+  "90680" -> "90681" 
+  "90680" -> "90686" 
+  "90681" -> "90682" 
+  "90681" -> "90685" 
+  "90682" -> "90683" 
+  "90682" -> "90684" 
+  "90686" -> "90687" 
+  "90687" -> "90688" 
+  "90689" -> "90690" 
+}

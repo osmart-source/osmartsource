@@ -1,0 +1,32 @@
+digraph "__bswap_32" {  
+"21692" [label = <(RETURN,return __bswap_constant_32 (__bsx);,return __bswap_constant_32 (__bsx);)<SUB>54</SUB>> ]
+"21693" [label = <(__bswap_constant_32,__bswap_constant_32 (__bsx))<SUB>54</SUB>> ]
+"21696" [label = <(&lt;operator&gt;.or,(((__bsx) &amp; 0xff000000u) &gt;&gt; 24) | (((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8) | (((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8) | (((__bsx) &amp; 0x000000ffu) &lt;&lt; 24))<SUB>54</SUB>> ]
+"21697" [label = <(&lt;operator&gt;.or,(((__bsx) &amp; 0xff000000u) &gt;&gt; 24) | (((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8) | (((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8))<SUB>54</SUB>> ]
+"21714" [label = <(&lt;operator&gt;.shiftLeft,((__bsx) &amp; 0x000000ffu) &lt;&lt; 24)<SUB>54</SUB>> ]
+"21698" [label = <(&lt;operator&gt;.or,(((__bsx) &amp; 0xff000000u) &gt;&gt; 24) | (((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8))<SUB>54</SUB>> ]
+"21709" [label = <(&lt;operator&gt;.shiftLeft,((__bsx) &amp; 0x0000ff00u) &lt;&lt; 8)<SUB>54</SUB>> ]
+"21715" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0x000000ffu)<SUB>54</SUB>> ]
+"21699" [label = <(&lt;operator&gt;.arithmeticShiftRight,((__bsx) &amp; 0xff000000u) &gt;&gt; 24)<SUB>54</SUB>> ]
+"21704" [label = <(&lt;operator&gt;.arithmeticShiftRight,((__bsx) &amp; 0x00ff0000u) &gt;&gt; 8)<SUB>54</SUB>> ]
+"21710" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0x0000ff00u)<SUB>54</SUB>> ]
+"21700" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0xff000000u)<SUB>54</SUB>> ]
+"21705" [label = <(&lt;operator&gt;.and,(__bsx) &amp; 0x00ff0000u)<SUB>54</SUB>> ]
+"21689" [label = <(METHOD,__bswap_32)<SUB>48</SUB>> ]
+"21719" [label = <(METHOD_RETURN,__uint32_t)<SUB>48</SUB>> ]
+  "21692" -> "21719" 
+  "21693" -> "21692" 
+  "21693" -> "21700" 
+  "21696" -> "21692" 
+  "21697" -> "21715" 
+  "21714" -> "21696" 
+  "21698" -> "21710" 
+  "21709" -> "21697" 
+  "21715" -> "21714" 
+  "21699" -> "21705" 
+  "21704" -> "21698" 
+  "21710" -> "21709" 
+  "21700" -> "21699" 
+  "21705" -> "21704" 
+  "21689" -> "21693" 
+}

@@ -1,0 +1,89 @@
+digraph "_tiffSeekProc" {  
+"33781" [label = <(METHOD,_tiffSeekProc)<SUB>119</SUB>> ]
+"33782" [label = <(PARAM,thandle_t fd)<SUB>119</SUB>> ]
+"33783" [label = <(PARAM,uint64_t off)<SUB>119</SUB>> ]
+"33784" [label = <(PARAM,int whence)<SUB>119</SUB>> ]
+"33785" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>120</SUB>> ]
+"33786" [label = <(LOCAL,fd_as_handle_union_t fdh: fd_as_handle_union_t)<SUB>121</SUB>> ]
+"33787" [label = <(LOCAL,_TIFF_off_t off_io: _TIFF_off_t)<SUB>122</SUB>> ]
+"33788" [label = <(&lt;operator&gt;.assignment,off_io = (_TIFF_off_t)off)<SUB>122</SUB>> ]
+"33789" [label = <(IDENTIFIER,off_io,off_io = (_TIFF_off_t)off)<SUB>122</SUB>> ]
+"33790" [label = <(&lt;operator&gt;.cast,(_TIFF_off_t)off)<SUB>122</SUB>> ]
+"33791" [label = <(UNKNOWN,_TIFF_off_t,_TIFF_off_t)<SUB>122</SUB>> ]
+"33792" [label = <(IDENTIFIER,off,(_TIFF_off_t)off)<SUB>122</SUB>> ]
+"33793" [label = <(CONTROL_STRUCTURE,if ((uint64_t)off_io != off),if ((uint64_t)off_io != off))<SUB>123</SUB>> ]
+"33794" [label = <(&lt;operator&gt;.notEquals,(uint64_t)off_io != off)<SUB>123</SUB>> ]
+"33795" [label = <(&lt;operator&gt;.cast,(uint64_t)off_io)<SUB>123</SUB>> ]
+"33796" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>123</SUB>> ]
+"33797" [label = <(IDENTIFIER,off_io,(uint64_t)off_io)<SUB>123</SUB>> ]
+"33798" [label = <(IDENTIFIER,off,(uint64_t)off_io != off)<SUB>123</SUB>> ]
+"33799" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>124</SUB>> ]
+"33800" [label = <(&lt;operator&gt;.assignment,(*__errno_location()) = 22)<SUB>125</SUB>> ]
+"33801" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>125</SUB>> ]
+"33802" [label = <(__errno_location,__errno_location())<SUB>125</SUB>> ]
+"33803" [label = <(EINVAL,EINVAL)<SUB>125</SUB>> ]
+"33804" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"33805" [label = <(LITERAL,22,&lt;empty&gt;)<SUB>125</SUB>> ]
+"33806" [label = <(RETURN,return (uint64_t)-1;,return (uint64_t)-1;)<SUB>126</SUB>> ]
+"33807" [label = <(&lt;operator&gt;.subtraction,(uint64_t)-1)<SUB>126</SUB>> ]
+"33808" [label = <(IDENTIFIER,uint64_t,(uint64_t)-1)<SUB>126</SUB>> ]
+"33809" [label = <(LITERAL,1,(uint64_t)-1)<SUB>126</SUB>> ]
+"33810" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>128</SUB>> ]
+"33811" [label = <(&lt;operator&gt;.fieldAccess,fdh.h)<SUB>128</SUB>> ]
+"33812" [label = <(IDENTIFIER,fdh,fdh.h = fd)<SUB>128</SUB>> ]
+"33813" [label = <(FIELD_IDENTIFIER,h,h)<SUB>128</SUB>> ]
+"33814" [label = <(IDENTIFIER,fd,fdh.h = fd)<SUB>128</SUB>> ]
+"33815" [label = <(RETURN,return ((uint64_t)_TIFF_lseek_f(fdh.fd, off_io, whence));,return ((uint64_t)_TIFF_lseek_f(fdh.fd, off_io, whence));)<SUB>129</SUB>> ]
+"33816" [label = <(&lt;operator&gt;.cast,(uint64_t)_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33817" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>129</SUB>> ]
+"33818" [label = <(_TIFF_lseek_f,_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33819" [label = <(&lt;operator&gt;.fieldAccess,fdh.fd)<SUB>129</SUB>> ]
+"33820" [label = <(IDENTIFIER,fdh,_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33821" [label = <(FIELD_IDENTIFIER,fd,fd)<SUB>129</SUB>> ]
+"33822" [label = <(IDENTIFIER,off_io,_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33823" [label = <(IDENTIFIER,whence,_TIFF_lseek_f(fdh.fd, off_io, whence))<SUB>129</SUB>> ]
+"33824" [label = <(METHOD_RETURN,uint64_t)<SUB>119</SUB>> ]
+  "33781" -> "33782" 
+  "33781" -> "33783" 
+  "33781" -> "33784" 
+  "33781" -> "33785" 
+  "33781" -> "33824" 
+  "33785" -> "33786" 
+  "33785" -> "33787" 
+  "33785" -> "33788" 
+  "33785" -> "33793" 
+  "33785" -> "33810" 
+  "33785" -> "33815" 
+  "33788" -> "33789" 
+  "33788" -> "33790" 
+  "33790" -> "33791" 
+  "33790" -> "33792" 
+  "33793" -> "33794" 
+  "33793" -> "33799" 
+  "33794" -> "33795" 
+  "33794" -> "33798" 
+  "33795" -> "33796" 
+  "33795" -> "33797" 
+  "33799" -> "33800" 
+  "33799" -> "33806" 
+  "33800" -> "33801" 
+  "33800" -> "33803" 
+  "33801" -> "33802" 
+  "33803" -> "33804" 
+  "33804" -> "33805" 
+  "33806" -> "33807" 
+  "33807" -> "33808" 
+  "33807" -> "33809" 
+  "33810" -> "33811" 
+  "33810" -> "33814" 
+  "33811" -> "33812" 
+  "33811" -> "33813" 
+  "33815" -> "33816" 
+  "33816" -> "33817" 
+  "33816" -> "33818" 
+  "33818" -> "33819" 
+  "33818" -> "33822" 
+  "33818" -> "33823" 
+  "33819" -> "33820" 
+  "33819" -> "33821" 
+}

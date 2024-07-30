@@ -1,0 +1,179 @@
+digraph "DumpModeEncode" {  
+"63696" [label = <(METHOD,DumpModeEncode)<SUB>41</SUB>> ]
+"63697" [label = <(PARAM,TIFF *tif)<SUB>41</SUB>> ]
+"63698" [label = <(PARAM,uint8_t *pp)<SUB>41</SUB>> ]
+"63699" [label = <(PARAM,tmsize_t cc)<SUB>41</SUB>> ]
+"63700" [label = <(PARAM,uint16_t s)<SUB>41</SUB>> ]
+"63701" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>42</SUB>> ]
+"63702" [label = <(&lt;operator&gt;.cast,(void)s)<SUB>43</SUB>> ]
+"63703" [label = <(UNKNOWN,void,void)<SUB>43</SUB>> ]
+"63704" [label = <(IDENTIFIER,s,(void)s)<SUB>43</SUB>> ]
+"63705" [label = <(CONTROL_STRUCTURE,while (cc &gt; 0),while (cc &gt; 0))<SUB>44</SUB>> ]
+"63706" [label = <(&lt;operator&gt;.greaterThan,cc &gt; 0)<SUB>44</SUB>> ]
+"63707" [label = <(IDENTIFIER,cc,cc &gt; 0)<SUB>44</SUB>> ]
+"63708" [label = <(LITERAL,0,cc &gt; 0)<SUB>44</SUB>> ]
+"63709" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>45</SUB>> ]
+"63710" [label = <(LOCAL,tmsize_t n: tmsize_t)<SUB>46</SUB>> ]
+"63711" [label = <(&lt;operator&gt;.assignment,n = cc)<SUB>48</SUB>> ]
+"63712" [label = <(IDENTIFIER,n,n = cc)<SUB>48</SUB>> ]
+"63713" [label = <(IDENTIFIER,cc,n = cc)<SUB>48</SUB>> ]
+"63714" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_rawcc + n &gt; tif-&gt;tif_rawdatasize),if (tif-&gt;tif_rawcc + n &gt; tif-&gt;tif_rawdatasize))<SUB>49</SUB>> ]
+"63715" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_rawcc + n &gt; tif-&gt;tif_rawdatasize)<SUB>49</SUB>> ]
+"63716" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_rawcc + n)<SUB>49</SUB>> ]
+"63717" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>49</SUB>> ]
+"63718" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc + n)<SUB>49</SUB>> ]
+"63719" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>49</SUB>> ]
+"63720" [label = <(IDENTIFIER,n,tif-&gt;tif_rawcc + n)<SUB>49</SUB>> ]
+"63721" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdatasize)<SUB>49</SUB>> ]
+"63722" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc + n &gt; tif-&gt;tif_rawdatasize)<SUB>49</SUB>> ]
+"63723" [label = <(FIELD_IDENTIFIER,tif_rawdatasize,tif_rawdatasize)<SUB>49</SUB>> ]
+"63724" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>50</SUB>> ]
+"63725" [label = <(&lt;operator&gt;.assignment,n = tif-&gt;tif_rawdatasize - tif-&gt;tif_rawcc)<SUB>50</SUB>> ]
+"63726" [label = <(IDENTIFIER,n,n = tif-&gt;tif_rawdatasize - tif-&gt;tif_rawcc)<SUB>50</SUB>> ]
+"63727" [label = <(&lt;operator&gt;.subtraction,tif-&gt;tif_rawdatasize - tif-&gt;tif_rawcc)<SUB>50</SUB>> ]
+"63728" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdatasize)<SUB>50</SUB>> ]
+"63729" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawdatasize - tif-&gt;tif_rawcc)<SUB>50</SUB>> ]
+"63730" [label = <(FIELD_IDENTIFIER,tif_rawdatasize,tif_rawdatasize)<SUB>50</SUB>> ]
+"63731" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>50</SUB>> ]
+"63732" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawdatasize - tif-&gt;tif_rawcc)<SUB>50</SUB>> ]
+"63733" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>50</SUB>> ]
+"63734" [label = <(assert,assert(n &gt; 0))<SUB>52</SUB>> ]
+"63735" [label = <(&lt;operator&gt;.greaterThan,n &gt; 0)<SUB>52</SUB>> ]
+"63736" [label = <(IDENTIFIER,n,n &gt; 0)<SUB>52</SUB>> ]
+"63737" [label = <(LITERAL,0,n &gt; 0)<SUB>52</SUB>> ]
+"63738" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_rawcp != pp),if (tif-&gt;tif_rawcp != pp))<SUB>58</SUB>> ]
+"63739" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_rawcp != pp)<SUB>58</SUB>> ]
+"63740" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>58</SUB>> ]
+"63741" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcp != pp)<SUB>58</SUB>> ]
+"63742" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>58</SUB>> ]
+"63743" [label = <(IDENTIFIER,pp,tif-&gt;tif_rawcp != pp)<SUB>58</SUB>> ]
+"63744" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>59</SUB>> ]
+"63745" [label = <(_TIFFmemcpy,_TIFFmemcpy(tif-&gt;tif_rawcp, pp, n))<SUB>59</SUB>> ]
+"63746" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>59</SUB>> ]
+"63747" [label = <(IDENTIFIER,tif,_TIFFmemcpy(tif-&gt;tif_rawcp, pp, n))<SUB>59</SUB>> ]
+"63748" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>59</SUB>> ]
+"63749" [label = <(IDENTIFIER,pp,_TIFFmemcpy(tif-&gt;tif_rawcp, pp, n))<SUB>59</SUB>> ]
+"63750" [label = <(IDENTIFIER,n,_TIFFmemcpy(tif-&gt;tif_rawcp, pp, n))<SUB>59</SUB>> ]
+"63751" [label = <(&lt;operator&gt;.assignmentPlus,tif-&gt;tif_rawcp += n)<SUB>60</SUB>> ]
+"63752" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>60</SUB>> ]
+"63753" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcp += n)<SUB>60</SUB>> ]
+"63754" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>60</SUB>> ]
+"63755" [label = <(IDENTIFIER,n,tif-&gt;tif_rawcp += n)<SUB>60</SUB>> ]
+"63756" [label = <(&lt;operator&gt;.assignmentPlus,tif-&gt;tif_rawcc += n)<SUB>61</SUB>> ]
+"63757" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>61</SUB>> ]
+"63758" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc += n)<SUB>61</SUB>> ]
+"63759" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>61</SUB>> ]
+"63760" [label = <(IDENTIFIER,n,tif-&gt;tif_rawcc += n)<SUB>61</SUB>> ]
+"63761" [label = <(&lt;operator&gt;.assignmentPlus,pp += n)<SUB>62</SUB>> ]
+"63762" [label = <(IDENTIFIER,pp,pp += n)<SUB>62</SUB>> ]
+"63763" [label = <(IDENTIFIER,n,pp += n)<SUB>62</SUB>> ]
+"63764" [label = <(&lt;operator&gt;.assignmentMinus,cc -= n)<SUB>63</SUB>> ]
+"63765" [label = <(IDENTIFIER,cc,cc -= n)<SUB>63</SUB>> ]
+"63766" [label = <(IDENTIFIER,n,cc -= n)<SUB>63</SUB>> ]
+"63767" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_rawcc &gt;= tif-&gt;tif_rawdatasize &amp;&amp; !TIFFFlushData1(tif)),if (tif-&gt;tif_rawcc &gt;= tif-&gt;tif_rawdatasize &amp;&amp; !TIFFFlushData1(tif)))<SUB>64</SUB>> ]
+"63768" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_rawcc &gt;= tif-&gt;tif_rawdatasize &amp;&amp; !TIFFFlushData1(tif))<SUB>64</SUB>> ]
+"63769" [label = <(&lt;operator&gt;.greaterEqualsThan,tif-&gt;tif_rawcc &gt;= tif-&gt;tif_rawdatasize)<SUB>64</SUB>> ]
+"63770" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>64</SUB>> ]
+"63771" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc &gt;= tif-&gt;tif_rawdatasize)<SUB>64</SUB>> ]
+"63772" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>64</SUB>> ]
+"63773" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdatasize)<SUB>64</SUB>> ]
+"63774" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc &gt;= tif-&gt;tif_rawdatasize)<SUB>64</SUB>> ]
+"63775" [label = <(FIELD_IDENTIFIER,tif_rawdatasize,tif_rawdatasize)<SUB>64</SUB>> ]
+"63776" [label = <(&lt;operator&gt;.logicalNot,!TIFFFlushData1(tif))<SUB>64</SUB>> ]
+"63777" [label = <(TIFFFlushData1,TIFFFlushData1(tif))<SUB>64</SUB>> ]
+"63778" [label = <(IDENTIFIER,tif,TIFFFlushData1(tif))<SUB>64</SUB>> ]
+"63779" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>65</SUB>> ]
+"63780" [label = <(RETURN,return (0);,return (0);)<SUB>65</SUB>> ]
+"63781" [label = <(LITERAL,0,return (0);)<SUB>65</SUB>> ]
+"63782" [label = <(RETURN,return (1);,return (1);)<SUB>67</SUB>> ]
+"63783" [label = <(LITERAL,1,return (1);)<SUB>67</SUB>> ]
+"63784" [label = <(METHOD_RETURN,int)<SUB>41</SUB>> ]
+  "63696" -> "63697" 
+  "63696" -> "63698" 
+  "63696" -> "63699" 
+  "63696" -> "63700" 
+  "63696" -> "63701" 
+  "63696" -> "63784" 
+  "63701" -> "63702" 
+  "63701" -> "63705" 
+  "63701" -> "63782" 
+  "63702" -> "63703" 
+  "63702" -> "63704" 
+  "63705" -> "63706" 
+  "63705" -> "63709" 
+  "63706" -> "63707" 
+  "63706" -> "63708" 
+  "63709" -> "63710" 
+  "63709" -> "63711" 
+  "63709" -> "63714" 
+  "63709" -> "63734" 
+  "63709" -> "63738" 
+  "63709" -> "63751" 
+  "63709" -> "63756" 
+  "63709" -> "63761" 
+  "63709" -> "63764" 
+  "63709" -> "63767" 
+  "63711" -> "63712" 
+  "63711" -> "63713" 
+  "63714" -> "63715" 
+  "63714" -> "63724" 
+  "63715" -> "63716" 
+  "63715" -> "63721" 
+  "63716" -> "63717" 
+  "63716" -> "63720" 
+  "63717" -> "63718" 
+  "63717" -> "63719" 
+  "63721" -> "63722" 
+  "63721" -> "63723" 
+  "63724" -> "63725" 
+  "63725" -> "63726" 
+  "63725" -> "63727" 
+  "63727" -> "63728" 
+  "63727" -> "63731" 
+  "63728" -> "63729" 
+  "63728" -> "63730" 
+  "63731" -> "63732" 
+  "63731" -> "63733" 
+  "63734" -> "63735" 
+  "63735" -> "63736" 
+  "63735" -> "63737" 
+  "63738" -> "63739" 
+  "63738" -> "63744" 
+  "63739" -> "63740" 
+  "63739" -> "63743" 
+  "63740" -> "63741" 
+  "63740" -> "63742" 
+  "63744" -> "63745" 
+  "63745" -> "63746" 
+  "63745" -> "63749" 
+  "63745" -> "63750" 
+  "63746" -> "63747" 
+  "63746" -> "63748" 
+  "63751" -> "63752" 
+  "63751" -> "63755" 
+  "63752" -> "63753" 
+  "63752" -> "63754" 
+  "63756" -> "63757" 
+  "63756" -> "63760" 
+  "63757" -> "63758" 
+  "63757" -> "63759" 
+  "63761" -> "63762" 
+  "63761" -> "63763" 
+  "63764" -> "63765" 
+  "63764" -> "63766" 
+  "63767" -> "63768" 
+  "63767" -> "63779" 
+  "63768" -> "63769" 
+  "63768" -> "63776" 
+  "63769" -> "63770" 
+  "63769" -> "63773" 
+  "63770" -> "63771" 
+  "63770" -> "63772" 
+  "63773" -> "63774" 
+  "63773" -> "63775" 
+  "63776" -> "63777" 
+  "63777" -> "63778" 
+  "63779" -> "63780" 
+  "63780" -> "63781" 
+  "63782" -> "63783" 
+}

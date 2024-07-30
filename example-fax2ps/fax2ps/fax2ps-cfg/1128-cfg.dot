@@ -1,0 +1,38 @@
+digraph "TIFFWriteDirectoryTagCheckedIfd8Array" {  
+"71629" [label = <(assert,assert(count &lt; 0x20000000))<SUB>2840</SUB>> ]
+"71633" [label = <(assert,assert(sizeof(uint64_t) == 8))<SUB>2841</SUB>> ]
+"71638" [label = <(assert,assert(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2842</SUB>> ]
+"71654" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value));)<SUB>2845</SUB>> ]
+"71630" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x20000000)<SUB>2840</SUB>> ]
+"71634" [label = <(&lt;operator&gt;.equals,sizeof(uint64_t) == 8)<SUB>2841</SUB>> ]
+"71639" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2842</SUB>> ]
+"71645" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2843</SUB>> ]
+"71655" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_IFD8, count,\012                                      count * 8, value))<SUB>2845</SUB>> ]
+"71635" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>2841</SUB>> ]
+"71640" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2842</SUB>> ]
+"71646" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2843</SUB>> ]
+"71651" [label = <(TIFFSwabArrayOfLong8,TIFFSwabArrayOfLong8(value, count))<SUB>2844</SUB>> ]
+"71662" [label = <(&lt;operator&gt;.multiplication,count * 8)<SUB>2846</SUB>> ]
+"71642" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2842</SUB>> ]
+"71648" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2843</SUB>> ]
+"71621" [label = <(METHOD,TIFFWriteDirectoryTagCheckedIfd8Array)<SUB>2835</SUB>> ]
+"71666" [label = <(METHOD_RETURN,int)<SUB>2835</SUB>> ]
+  "71629" -> "71635" 
+  "71633" -> "71642" 
+  "71638" -> "71648" 
+  "71654" -> "71666" 
+  "71630" -> "71629" 
+  "71634" -> "71633" 
+  "71639" -> "71638" 
+  "71645" -> "71651" 
+  "71645" -> "71662" 
+  "71655" -> "71654" 
+  "71635" -> "71634" 
+  "71640" -> "71639" 
+  "71646" -> "71645" 
+  "71651" -> "71662" 
+  "71662" -> "71655" 
+  "71642" -> "71640" 
+  "71648" -> "71646" 
+  "71621" -> "71630" 
+}

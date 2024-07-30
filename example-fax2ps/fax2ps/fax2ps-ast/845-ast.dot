@@ -1,0 +1,259 @@
+digraph "PredictorEncodeTile" {  
+"39104" [label = <(METHOD,PredictorEncodeTile)<SUB>872</SUB>> ]
+"39105" [label = <(PARAM,TIFF *tif)<SUB>872</SUB>> ]
+"39106" [label = <(PARAM,uint8_t *bp0)<SUB>872</SUB>> ]
+"39107" [label = <(PARAM,tmsize_t cc0)<SUB>872</SUB>> ]
+"39108" [label = <(PARAM,uint16_t s)<SUB>873</SUB>> ]
+"39109" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>874</SUB>> ]
+"39110" [label = <(LOCAL,constchar[] module: char[])<SUB>875</SUB>> ]
+"39111" [label = <(&lt;operator&gt;.assignment,module[] = &quot;PredictorEncodeTile&quot;)<SUB>875</SUB>> ]
+"39112" [label = <(IDENTIFIER,module,module[] = &quot;PredictorEncodeTile&quot;)<SUB>875</SUB>> ]
+"39113" [label = <(LITERAL,&quot;PredictorEncodeTile&quot;,module[] = &quot;PredictorEncodeTile&quot;)<SUB>875</SUB>> ]
+"39114" [label = <(LOCAL,TIFFPredictorState* sp: TIFFPredictorState)<SUB>876</SUB>> ]
+"39115" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>876</SUB>> ]
+"39116" [label = <(IDENTIFIER,sp,*sp = PredictorState(tif))<SUB>876</SUB>> ]
+"39117" [label = <(PredictorState,PredictorState(tif))<SUB>876</SUB>> ]
+"39118" [label = <(IDENTIFIER,tif,PredictorState(tif))<SUB>876</SUB>> ]
+"39119" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"39120" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>876</SUB>> ]
+"39121" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>876</SUB>> ]
+"39122" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>876</SUB>> ]
+"39123" [label = <(IDENTIFIER,tif,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>876</SUB>> ]
+"39124" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>876</SUB>> ]
+"39125" [label = <(LOCAL,uint8_t* working_copy: uint8_t)<SUB>877</SUB>> ]
+"39126" [label = <(LOCAL,tmsize_t cc: tmsize_t)<SUB>878</SUB>> ]
+"39127" [label = <(LOCAL,tmsize_t rowsize: tmsize_t)<SUB>878</SUB>> ]
+"39128" [label = <(&lt;operator&gt;.assignment,cc = cc0)<SUB>878</SUB>> ]
+"39129" [label = <(IDENTIFIER,cc,cc = cc0)<SUB>878</SUB>> ]
+"39130" [label = <(IDENTIFIER,cc0,cc = cc0)<SUB>878</SUB>> ]
+"39131" [label = <(LOCAL,unsigned char* bp: unsignedchar)<SUB>879</SUB>> ]
+"39132" [label = <(LOCAL,int result_code: int)<SUB>880</SUB>> ]
+"39133" [label = <(assert,assert(sp != NULL))<SUB>882</SUB>> ]
+"39134" [label = <(&lt;operator&gt;.notEquals,sp != NULL)<SUB>882</SUB>> ]
+"39135" [label = <(IDENTIFIER,sp,sp != NULL)<SUB>882</SUB>> ]
+"39136" [label = <(IDENTIFIER,NULL,sp != NULL)<SUB>882</SUB>> ]
+"39137" [label = <(assert,assert(sp-&gt;encodepfunc != NULL))<SUB>883</SUB>> ]
+"39138" [label = <(&lt;operator&gt;.notEquals,sp-&gt;encodepfunc != NULL)<SUB>883</SUB>> ]
+"39139" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodepfunc)<SUB>883</SUB>> ]
+"39140" [label = <(IDENTIFIER,sp,sp-&gt;encodepfunc != NULL)<SUB>883</SUB>> ]
+"39141" [label = <(FIELD_IDENTIFIER,encodepfunc,encodepfunc)<SUB>883</SUB>> ]
+"39142" [label = <(IDENTIFIER,NULL,sp-&gt;encodepfunc != NULL)<SUB>883</SUB>> ]
+"39143" [label = <(assert,assert(sp-&gt;encodetile != NULL))<SUB>884</SUB>> ]
+"39144" [label = <(&lt;operator&gt;.notEquals,sp-&gt;encodetile != NULL)<SUB>884</SUB>> ]
+"39145" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodetile)<SUB>884</SUB>> ]
+"39146" [label = <(IDENTIFIER,sp,sp-&gt;encodetile != NULL)<SUB>884</SUB>> ]
+"39147" [label = <(FIELD_IDENTIFIER,encodetile,encodetile)<SUB>884</SUB>> ]
+"39148" [label = <(IDENTIFIER,NULL,sp-&gt;encodetile != NULL)<SUB>884</SUB>> ]
+"39149" [label = <(&lt;operator&gt;.assignment,working_copy = (uint8_t *)_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39150" [label = <(IDENTIFIER,working_copy,working_copy = (uint8_t *)_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39151" [label = <(&lt;operator&gt;.cast,(uint8_t *)_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39152" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>890</SUB>> ]
+"39153" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39154" [label = <(IDENTIFIER,tif,_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39155" [label = <(IDENTIFIER,cc0,_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39156" [label = <(CONTROL_STRUCTURE,if (working_copy == NULL),if (working_copy == NULL))<SUB>891</SUB>> ]
+"39157" [label = <(&lt;operator&gt;.equals,working_copy == NULL)<SUB>891</SUB>> ]
+"39158" [label = <(IDENTIFIER,working_copy,working_copy == NULL)<SUB>891</SUB>> ]
+"39159" [label = <(IDENTIFIER,NULL,working_copy == NULL)<SUB>891</SUB>> ]
+"39160" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>892</SUB>> ]
+"39161" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;Out of memory allocating %&quot; PRId64 &quot; byte temp buffer.&quot;,\012                      (int64_t)cc0);,TIFFErrorExtR(tif, module,\012                      &quot;Out of memory allocating %&quot; PRId64 &quot; byte temp buffer.&quot;,\012                      (int64_t)cc0);)<SUB>893</SUB>> ]
+"39162" [label = <(RETURN,return 0;,return 0;)<SUB>896</SUB>> ]
+"39163" [label = <(LITERAL,0,return 0;)<SUB>896</SUB>> ]
+"39164" [label = <(memcpy,memcpy(working_copy, bp0, cc0))<SUB>898</SUB>> ]
+"39165" [label = <(IDENTIFIER,working_copy,memcpy(working_copy, bp0, cc0))<SUB>898</SUB>> ]
+"39166" [label = <(IDENTIFIER,bp0,memcpy(working_copy, bp0, cc0))<SUB>898</SUB>> ]
+"39167" [label = <(IDENTIFIER,cc0,memcpy(working_copy, bp0, cc0))<SUB>898</SUB>> ]
+"39168" [label = <(&lt;operator&gt;.assignment,bp = working_copy)<SUB>899</SUB>> ]
+"39169" [label = <(IDENTIFIER,bp,bp = working_copy)<SUB>899</SUB>> ]
+"39170" [label = <(IDENTIFIER,working_copy,bp = working_copy)<SUB>899</SUB>> ]
+"39171" [label = <(&lt;operator&gt;.assignment,rowsize = sp-&gt;rowsize)<SUB>901</SUB>> ]
+"39172" [label = <(IDENTIFIER,rowsize,rowsize = sp-&gt;rowsize)<SUB>901</SUB>> ]
+"39173" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;rowsize)<SUB>901</SUB>> ]
+"39174" [label = <(IDENTIFIER,sp,rowsize = sp-&gt;rowsize)<SUB>901</SUB>> ]
+"39175" [label = <(FIELD_IDENTIFIER,rowsize,rowsize)<SUB>901</SUB>> ]
+"39176" [label = <(assert,assert(rowsize &gt; 0))<SUB>902</SUB>> ]
+"39177" [label = <(&lt;operator&gt;.greaterThan,rowsize &gt; 0)<SUB>902</SUB>> ]
+"39178" [label = <(IDENTIFIER,rowsize,rowsize &gt; 0)<SUB>902</SUB>> ]
+"39179" [label = <(LITERAL,0,rowsize &gt; 0)<SUB>902</SUB>> ]
+"39180" [label = <(CONTROL_STRUCTURE,if ((cc0 % rowsize) != 0),if ((cc0 % rowsize) != 0))<SUB>903</SUB>> ]
+"39181" [label = <(&lt;operator&gt;.notEquals,(cc0 % rowsize) != 0)<SUB>903</SUB>> ]
+"39182" [label = <(&lt;operator&gt;.modulo,cc0 % rowsize)<SUB>903</SUB>> ]
+"39183" [label = <(IDENTIFIER,cc0,cc0 % rowsize)<SUB>903</SUB>> ]
+"39184" [label = <(IDENTIFIER,rowsize,cc0 % rowsize)<SUB>903</SUB>> ]
+"39185" [label = <(LITERAL,0,(cc0 % rowsize) != 0)<SUB>903</SUB>> ]
+"39186" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>904</SUB>> ]
+"39187" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;PredictorEncodeTile&quot;, &quot;%s&quot;, &quot;(cc0%rowsize)!=0&quot;))<SUB>905</SUB>> ]
+"39188" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, &quot;PredictorEncodeTile&quot;, &quot;%s&quot;, &quot;(cc0%rowsize)!=0&quot;))<SUB>905</SUB>> ]
+"39189" [label = <(LITERAL,&quot;PredictorEncodeTile&quot;,TIFFErrorExtR(tif, &quot;PredictorEncodeTile&quot;, &quot;%s&quot;, &quot;(cc0%rowsize)!=0&quot;))<SUB>905</SUB>> ]
+"39190" [label = <(LITERAL,&quot;%s&quot;,TIFFErrorExtR(tif, &quot;PredictorEncodeTile&quot;, &quot;%s&quot;, &quot;(cc0%rowsize)!=0&quot;))<SUB>905</SUB>> ]
+"39191" [label = <(LITERAL,&quot;(cc0%rowsize)!=0&quot;,TIFFErrorExtR(tif, &quot;PredictorEncodeTile&quot;, &quot;%s&quot;, &quot;(cc0%rowsize)!=0&quot;))<SUB>905</SUB>> ]
+"39192" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, working_copy))<SUB>906</SUB>> ]
+"39193" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, working_copy))<SUB>906</SUB>> ]
+"39194" [label = <(IDENTIFIER,working_copy,_TIFFfreeExt(tif, working_copy))<SUB>906</SUB>> ]
+"39195" [label = <(RETURN,return 0;,return 0;)<SUB>907</SUB>> ]
+"39196" [label = <(LITERAL,0,return 0;)<SUB>907</SUB>> ]
+"39197" [label = <(CONTROL_STRUCTURE,while (cc &gt; 0),while (cc &gt; 0))<SUB>909</SUB>> ]
+"39198" [label = <(&lt;operator&gt;.greaterThan,cc &gt; 0)<SUB>909</SUB>> ]
+"39199" [label = <(IDENTIFIER,cc,cc &gt; 0)<SUB>909</SUB>> ]
+"39200" [label = <(LITERAL,0,cc &gt; 0)<SUB>909</SUB>> ]
+"39201" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>910</SUB>> ]
+"39202" [label = <(*sp-&gt;encodepfunc,(*sp-&gt;encodepfunc)(tif, bp, rowsize))<SUB>911</SUB>> ]
+"39203" [label = <(&lt;operator&gt;.indirection,*sp-&gt;encodepfunc)<SUB>911</SUB>> ]
+"39204" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodepfunc)<SUB>911</SUB>> ]
+"39205" [label = <(IDENTIFIER,sp,(*sp-&gt;encodepfunc)(tif, bp, rowsize))<SUB>911</SUB>> ]
+"39206" [label = <(FIELD_IDENTIFIER,encodepfunc,encodepfunc)<SUB>911</SUB>> ]
+"39207" [label = <(IDENTIFIER,tif,(*sp-&gt;encodepfunc)(tif, bp, rowsize))<SUB>911</SUB>> ]
+"39208" [label = <(IDENTIFIER,bp,(*sp-&gt;encodepfunc)(tif, bp, rowsize))<SUB>911</SUB>> ]
+"39209" [label = <(IDENTIFIER,rowsize,(*sp-&gt;encodepfunc)(tif, bp, rowsize))<SUB>911</SUB>> ]
+"39210" [label = <(&lt;operator&gt;.assignmentMinus,cc -= rowsize)<SUB>912</SUB>> ]
+"39211" [label = <(IDENTIFIER,cc,cc -= rowsize)<SUB>912</SUB>> ]
+"39212" [label = <(IDENTIFIER,rowsize,cc -= rowsize)<SUB>912</SUB>> ]
+"39213" [label = <(&lt;operator&gt;.assignmentPlus,bp += rowsize)<SUB>913</SUB>> ]
+"39214" [label = <(IDENTIFIER,bp,bp += rowsize)<SUB>913</SUB>> ]
+"39215" [label = <(IDENTIFIER,rowsize,bp += rowsize)<SUB>913</SUB>> ]
+"39216" [label = <(&lt;operator&gt;.assignment,result_code = (*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39217" [label = <(IDENTIFIER,result_code,result_code = (*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39218" [label = <(*sp-&gt;encodetile,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39219" [label = <(&lt;operator&gt;.indirection,*sp-&gt;encodetile)<SUB>915</SUB>> ]
+"39220" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodetile)<SUB>915</SUB>> ]
+"39221" [label = <(IDENTIFIER,sp,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39222" [label = <(FIELD_IDENTIFIER,encodetile,encodetile)<SUB>915</SUB>> ]
+"39223" [label = <(IDENTIFIER,tif,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39224" [label = <(IDENTIFIER,working_copy,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39225" [label = <(IDENTIFIER,cc0,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39226" [label = <(IDENTIFIER,s,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39227" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, working_copy))<SUB>917</SUB>> ]
+"39228" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, working_copy))<SUB>917</SUB>> ]
+"39229" [label = <(IDENTIFIER,working_copy,_TIFFfreeExt(tif, working_copy))<SUB>917</SUB>> ]
+"39230" [label = <(RETURN,return result_code;,return result_code;)<SUB>919</SUB>> ]
+"39231" [label = <(IDENTIFIER,result_code,return result_code;)<SUB>919</SUB>> ]
+"39232" [label = <(METHOD_RETURN,int)<SUB>872</SUB>> ]
+  "39104" -> "39105" 
+  "39104" -> "39106" 
+  "39104" -> "39107" 
+  "39104" -> "39108" 
+  "39104" -> "39109" 
+  "39104" -> "39232" 
+  "39109" -> "39110" 
+  "39109" -> "39111" 
+  "39109" -> "39114" 
+  "39109" -> "39115" 
+  "39109" -> "39125" 
+  "39109" -> "39126" 
+  "39109" -> "39127" 
+  "39109" -> "39128" 
+  "39109" -> "39131" 
+  "39109" -> "39132" 
+  "39109" -> "39133" 
+  "39109" -> "39137" 
+  "39109" -> "39143" 
+  "39109" -> "39149" 
+  "39109" -> "39156" 
+  "39109" -> "39164" 
+  "39109" -> "39168" 
+  "39109" -> "39171" 
+  "39109" -> "39176" 
+  "39109" -> "39180" 
+  "39109" -> "39197" 
+  "39109" -> "39216" 
+  "39109" -> "39227" 
+  "39109" -> "39230" 
+  "39111" -> "39112" 
+  "39111" -> "39113" 
+  "39115" -> "39116" 
+  "39115" -> "39117" 
+  "39117" -> "39118" 
+  "39117" -> "39119" 
+  "39119" -> "39120" 
+  "39120" -> "39121" 
+  "39120" -> "39122" 
+  "39122" -> "39123" 
+  "39122" -> "39124" 
+  "39128" -> "39129" 
+  "39128" -> "39130" 
+  "39133" -> "39134" 
+  "39134" -> "39135" 
+  "39134" -> "39136" 
+  "39137" -> "39138" 
+  "39138" -> "39139" 
+  "39138" -> "39142" 
+  "39139" -> "39140" 
+  "39139" -> "39141" 
+  "39143" -> "39144" 
+  "39144" -> "39145" 
+  "39144" -> "39148" 
+  "39145" -> "39146" 
+  "39145" -> "39147" 
+  "39149" -> "39150" 
+  "39149" -> "39151" 
+  "39151" -> "39152" 
+  "39151" -> "39153" 
+  "39153" -> "39154" 
+  "39153" -> "39155" 
+  "39156" -> "39157" 
+  "39156" -> "39160" 
+  "39157" -> "39158" 
+  "39157" -> "39159" 
+  "39160" -> "39161" 
+  "39160" -> "39162" 
+  "39162" -> "39163" 
+  "39164" -> "39165" 
+  "39164" -> "39166" 
+  "39164" -> "39167" 
+  "39168" -> "39169" 
+  "39168" -> "39170" 
+  "39171" -> "39172" 
+  "39171" -> "39173" 
+  "39173" -> "39174" 
+  "39173" -> "39175" 
+  "39176" -> "39177" 
+  "39177" -> "39178" 
+  "39177" -> "39179" 
+  "39180" -> "39181" 
+  "39180" -> "39186" 
+  "39181" -> "39182" 
+  "39181" -> "39185" 
+  "39182" -> "39183" 
+  "39182" -> "39184" 
+  "39186" -> "39187" 
+  "39186" -> "39192" 
+  "39186" -> "39195" 
+  "39187" -> "39188" 
+  "39187" -> "39189" 
+  "39187" -> "39190" 
+  "39187" -> "39191" 
+  "39192" -> "39193" 
+  "39192" -> "39194" 
+  "39195" -> "39196" 
+  "39197" -> "39198" 
+  "39197" -> "39201" 
+  "39198" -> "39199" 
+  "39198" -> "39200" 
+  "39201" -> "39202" 
+  "39201" -> "39210" 
+  "39201" -> "39213" 
+  "39202" -> "39203" 
+  "39202" -> "39207" 
+  "39202" -> "39208" 
+  "39202" -> "39209" 
+  "39203" -> "39204" 
+  "39204" -> "39205" 
+  "39204" -> "39206" 
+  "39210" -> "39211" 
+  "39210" -> "39212" 
+  "39213" -> "39214" 
+  "39213" -> "39215" 
+  "39216" -> "39217" 
+  "39216" -> "39218" 
+  "39218" -> "39219" 
+  "39218" -> "39223" 
+  "39218" -> "39224" 
+  "39218" -> "39225" 
+  "39218" -> "39226" 
+  "39219" -> "39220" 
+  "39220" -> "39221" 
+  "39220" -> "39222" 
+  "39227" -> "39228" 
+  "39227" -> "39229" 
+  "39230" -> "39231" 
+}

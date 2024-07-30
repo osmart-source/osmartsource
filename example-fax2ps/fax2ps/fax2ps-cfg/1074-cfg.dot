@@ -1,0 +1,287 @@
+digraph "TIFFWriteDirectoryTagSampleformatArray" {  
+"67555" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagSampleformatArray&quot;)<SUB>1309</SUB>> ]
+"67561" [label = <(&lt;operator&gt;.assignment,conv = _TIFFmallocExt(tif, count * sizeof(double)))<SUB>1313</SUB>> ]
+"67881" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, conv))<SUB>1386</SUB>> ]
+"67884" [label = <(RETURN,return (ok);,return (ok);)<SUB>1387</SUB>> ]
+"67563" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * sizeof(double)))<SUB>1313</SUB>> ]
+"67570" [label = <(&lt;operator&gt;.equals,conv == NULL)<SUB>1314</SUB>> ]
+"67581" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_sampleformat)<SUB>1320</SUB>> ]
+"67565" [label = <(&lt;operator&gt;.multiplication,count * sizeof(double))<SUB>1313</SUB>> ]
+"67574" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1316</SUB>> ]
+"67578" [label = <(RETURN,return (0);,return (0);)<SUB>1317</SUB>> ]
+"67582" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1320</SUB>> ]
+"67585" [label = <(FIELD_IDENTIFIER,td_sampleformat,td_sampleformat)<SUB>1320</SUB>> ]
+"67878" [label = <(&lt;operator&gt;.assignment,ok = 0)<SUB>1383</SUB>> ]
+"67567" [label = <(&lt;operator&gt;.sizeOf,sizeof(double))<SUB>1313</SUB>> ]
+"67584" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1320</SUB>> ]
+"67590" [label = <(&lt;operator&gt;.lessEqualsThan,tif-&gt;tif_dir.td_bitspersample &lt;= 32)<SUB>1323</SUB>> ]
+"67644" [label = <(&lt;operator&gt;.lessEqualsThan,tif-&gt;tif_dir.td_bitspersample &lt;= 8)<SUB>1337</SUB>> ]
+"67762" [label = <(&lt;operator&gt;.lessEqualsThan,tif-&gt;tif_dir.td_bitspersample &lt;= 8)<SUB>1360</SUB>> ]
+"67591" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>1323</SUB>> ]
+"67618" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagFloatArray(tif, ndir, dir, tag, count,\012                                                     (float *)conv))<SUB>1327</SUB>> ]
+"67645" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>1337</SUB>> ]
+"67672" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagSbyteArray(tif, ndir, dir, tag, count,\012                                                     (int8_t *)conv))<SUB>1341</SUB>> ]
+"67763" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>1360</SUB>> ]
+"67790" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagByteArray(tif, ndir, dir, tag, count,\012                                                    (uint8_t *)conv))<SUB>1364</SUB>> ]
+"67592" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1323</SUB>> ]
+"67595" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>1323</SUB>> ]
+"67603" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1325</SUB>> ]
+"67606" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1325</SUB>> ]
+"67608" [label = <(&lt;operator&gt;.assignment,((float *)conv)[i] = _TIFFClampDoubleToFloat(value[i]))<SUB>1326</SUB>> ]
+"67620" [label = <(TIFFWriteDirectoryTagFloatArray,TIFFWriteDirectoryTagFloatArray(tif, ndir, dir, tag, count,\012                                                     (float *)conv))<SUB>1327</SUB>> ]
+"67631" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagDoubleArray(tif, ndir, dir, tag,\012                                                      count, value))<SUB>1332</SUB>> ]
+"67646" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1337</SUB>> ]
+"67649" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>1337</SUB>> ]
+"67657" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1339</SUB>> ]
+"67660" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1339</SUB>> ]
+"67662" [label = <(&lt;operator&gt;.assignment,((int8_t *)conv)[i] = TIFFClampDoubleToInt8(value[i]))<SUB>1340</SUB>> ]
+"67674" [label = <(TIFFWriteDirectoryTagSbyteArray,TIFFWriteDirectoryTagSbyteArray(tif, ndir, dir, tag, count,\012                                                     (int8_t *)conv))<SUB>1341</SUB>> ]
+"67764" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1360</SUB>> ]
+"67767" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>1360</SUB>> ]
+"67775" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1362</SUB>> ]
+"67778" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1362</SUB>> ]
+"67780" [label = <(&lt;operator&gt;.assignment,((uint8_t *)conv)[i] = TIFFClampDoubleToUInt8(value[i]))<SUB>1363</SUB>> ]
+"67792" [label = <(TIFFWriteDirectoryTagByteArray,TIFFWriteDirectoryTagByteArray(tif, ndir, dir, tag, count,\012                                                    (uint8_t *)conv))<SUB>1364</SUB>> ]
+"67594" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1323</SUB>> ]
+"67600" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1325</SUB>> ]
+"67609" [label = <(&lt;operator&gt;.indirectIndexAccess,((float *)conv)[i])<SUB>1326</SUB>> ]
+"67614" [label = <(_TIFFClampDoubleToFloat,_TIFFClampDoubleToFloat(value[i]))<SUB>1326</SUB>> ]
+"67626" [label = <(&lt;operator&gt;.cast,(float *)conv)<SUB>1328</SUB>> ]
+"67633" [label = <(TIFFWriteDirectoryTagDoubleArray,TIFFWriteDirectoryTagDoubleArray(tif, ndir, dir, tag,\012                                                      count, value))<SUB>1332</SUB>> ]
+"67648" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1337</SUB>> ]
+"67654" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1339</SUB>> ]
+"67663" [label = <(&lt;operator&gt;.indirectIndexAccess,((int8_t *)conv)[i])<SUB>1340</SUB>> ]
+"67668" [label = <(TIFFClampDoubleToInt8,TIFFClampDoubleToInt8(value[i]))<SUB>1340</SUB>> ]
+"67680" [label = <(&lt;operator&gt;.cast,(int8_t *)conv)<SUB>1342</SUB>> ]
+"67686" [label = <(&lt;operator&gt;.lessEqualsThan,tif-&gt;tif_dir.td_bitspersample &lt;= 16)<SUB>1344</SUB>> ]
+"67766" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1360</SUB>> ]
+"67772" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1362</SUB>> ]
+"67781" [label = <(&lt;operator&gt;.indirectIndexAccess,((uint8_t *)conv)[i])<SUB>1363</SUB>> ]
+"67786" [label = <(TIFFClampDoubleToUInt8,TIFFClampDoubleToUInt8(value[i]))<SUB>1363</SUB>> ]
+"67798" [label = <(&lt;operator&gt;.cast,(uint8_t *)conv)<SUB>1365</SUB>> ]
+"67804" [label = <(&lt;operator&gt;.lessEqualsThan,tif-&gt;tif_dir.td_bitspersample &lt;= 16)<SUB>1367</SUB>> ]
+"67610" [label = <(&lt;operator&gt;.cast,(float *)conv)<SUB>1326</SUB>> ]
+"67615" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1326</SUB>> ]
+"67627" [label = <(UNKNOWN,float *,float *)<SUB>1328</SUB>> ]
+"67664" [label = <(&lt;operator&gt;.cast,(int8_t *)conv)<SUB>1340</SUB>> ]
+"67669" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1340</SUB>> ]
+"67681" [label = <(UNKNOWN,int8_t *,int8_t *)<SUB>1342</SUB>> ]
+"67687" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>1344</SUB>> ]
+"67714" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagSshortArray(tif, ndir, dir, tag,\012                                                      count, (int16_t *)conv))<SUB>1348</SUB>> ]
+"67782" [label = <(&lt;operator&gt;.cast,(uint8_t *)conv)<SUB>1363</SUB>> ]
+"67787" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1363</SUB>> ]
+"67799" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>1365</SUB>> ]
+"67805" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>1367</SUB>> ]
+"67832" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagShortArray(tif, ndir, dir, tag, count,\012                                                     (uint16_t *)conv))<SUB>1371</SUB>> ]
+"67611" [label = <(UNKNOWN,float *,float *)<SUB>1326</SUB>> ]
+"67665" [label = <(UNKNOWN,int8_t *,int8_t *)<SUB>1340</SUB>> ]
+"67688" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1344</SUB>> ]
+"67691" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>1344</SUB>> ]
+"67699" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1346</SUB>> ]
+"67702" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1346</SUB>> ]
+"67704" [label = <(&lt;operator&gt;.assignment,((int16_t *)conv)[i] = TIFFClampDoubleToInt16(value[i]))<SUB>1347</SUB>> ]
+"67716" [label = <(TIFFWriteDirectoryTagSshortArray,TIFFWriteDirectoryTagSshortArray(tif, ndir, dir, tag,\012                                                      count, (int16_t *)conv))<SUB>1348</SUB>> ]
+"67747" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagSlongArray(tif, ndir, dir, tag, count,\012                                                     (int32_t *)conv))<SUB>1355</SUB>> ]
+"67783" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>1363</SUB>> ]
+"67806" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1367</SUB>> ]
+"67809" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>1367</SUB>> ]
+"67817" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1369</SUB>> ]
+"67820" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1369</SUB>> ]
+"67822" [label = <(&lt;operator&gt;.assignment,((uint16_t *)conv)[i] = TIFFClampDoubleToUInt16(value[i]))<SUB>1370</SUB>> ]
+"67834" [label = <(TIFFWriteDirectoryTagShortArray,TIFFWriteDirectoryTagShortArray(tif, ndir, dir, tag, count,\012                                                     (uint16_t *)conv))<SUB>1371</SUB>> ]
+"67865" [label = <(&lt;operator&gt;.assignment,ok = TIFFWriteDirectoryTagLongArray(tif, ndir, dir, tag, count,\012                                                    (uint32_t *)conv))<SUB>1378</SUB>> ]
+"67690" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1344</SUB>> ]
+"67696" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1346</SUB>> ]
+"67705" [label = <(&lt;operator&gt;.indirectIndexAccess,((int16_t *)conv)[i])<SUB>1347</SUB>> ]
+"67710" [label = <(TIFFClampDoubleToInt16,TIFFClampDoubleToInt16(value[i]))<SUB>1347</SUB>> ]
+"67722" [label = <(&lt;operator&gt;.cast,(int16_t *)conv)<SUB>1349</SUB>> ]
+"67732" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1353</SUB>> ]
+"67735" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1353</SUB>> ]
+"67737" [label = <(&lt;operator&gt;.assignment,((int32_t *)conv)[i] = TIFFClampDoubleToInt32(value[i]))<SUB>1354</SUB>> ]
+"67749" [label = <(TIFFWriteDirectoryTagSlongArray,TIFFWriteDirectoryTagSlongArray(tif, ndir, dir, tag, count,\012                                                     (int32_t *)conv))<SUB>1355</SUB>> ]
+"67808" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1367</SUB>> ]
+"67814" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1369</SUB>> ]
+"67823" [label = <(&lt;operator&gt;.indirectIndexAccess,((uint16_t *)conv)[i])<SUB>1370</SUB>> ]
+"67828" [label = <(TIFFClampDoubleToUInt16,TIFFClampDoubleToUInt16(value[i]))<SUB>1370</SUB>> ]
+"67840" [label = <(&lt;operator&gt;.cast,(uint16_t *)conv)<SUB>1372</SUB>> ]
+"67850" [label = <(&lt;operator&gt;.lessThan,i &lt; count)<SUB>1376</SUB>> ]
+"67853" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>1376</SUB>> ]
+"67855" [label = <(&lt;operator&gt;.assignment,((uint32_t *)conv)[i] = TIFFClampDoubleToUInt32(value[i]))<SUB>1377</SUB>> ]
+"67867" [label = <(TIFFWriteDirectoryTagLongArray,TIFFWriteDirectoryTagLongArray(tif, ndir, dir, tag, count,\012                                                    (uint32_t *)conv))<SUB>1378</SUB>> ]
+"67706" [label = <(&lt;operator&gt;.cast,(int16_t *)conv)<SUB>1347</SUB>> ]
+"67711" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1347</SUB>> ]
+"67723" [label = <(UNKNOWN,int16_t *,int16_t *)<SUB>1349</SUB>> ]
+"67729" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1353</SUB>> ]
+"67738" [label = <(&lt;operator&gt;.indirectIndexAccess,((int32_t *)conv)[i])<SUB>1354</SUB>> ]
+"67743" [label = <(TIFFClampDoubleToInt32,TIFFClampDoubleToInt32(value[i]))<SUB>1354</SUB>> ]
+"67755" [label = <(&lt;operator&gt;.cast,(int32_t *)conv)<SUB>1356</SUB>> ]
+"67824" [label = <(&lt;operator&gt;.cast,(uint16_t *)conv)<SUB>1370</SUB>> ]
+"67829" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1370</SUB>> ]
+"67841" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>1372</SUB>> ]
+"67847" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1376</SUB>> ]
+"67856" [label = <(&lt;operator&gt;.indirectIndexAccess,((uint32_t *)conv)[i])<SUB>1377</SUB>> ]
+"67861" [label = <(TIFFClampDoubleToUInt32,TIFFClampDoubleToUInt32(value[i]))<SUB>1377</SUB>> ]
+"67873" [label = <(&lt;operator&gt;.cast,(uint32_t *)conv)<SUB>1379</SUB>> ]
+"67707" [label = <(UNKNOWN,int16_t *,int16_t *)<SUB>1347</SUB>> ]
+"67739" [label = <(&lt;operator&gt;.cast,(int32_t *)conv)<SUB>1354</SUB>> ]
+"67744" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1354</SUB>> ]
+"67756" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>1356</SUB>> ]
+"67825" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>1370</SUB>> ]
+"67857" [label = <(&lt;operator&gt;.cast,(uint32_t *)conv)<SUB>1377</SUB>> ]
+"67862" [label = <(&lt;operator&gt;.indirectIndexAccess,value[i])<SUB>1377</SUB>> ]
+"67874" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>1379</SUB>> ]
+"67740" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>1354</SUB>> ]
+"67858" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>1377</SUB>> ]
+"67546" [label = <(METHOD,TIFFWriteDirectoryTagSampleformatArray)<SUB>1304</SUB>> ]
+"67886" [label = <(METHOD_RETURN,int)<SUB>1304</SUB>> ]
+  "67555" -> "67567" 
+  "67561" -> "67570" 
+  "67881" -> "67884" 
+  "67884" -> "67886" 
+  "67563" -> "67561" 
+  "67570" -> "67574" 
+  "67570" -> "67584" 
+  "67581" -> "67594" 
+  "67581" -> "67648" 
+  "67581" -> "67766" 
+  "67581" -> "67878" 
+  "67565" -> "67563" 
+  "67574" -> "67578" 
+  "67578" -> "67886" 
+  "67582" -> "67585" 
+  "67585" -> "67581" 
+  "67878" -> "67881" 
+  "67567" -> "67565" 
+  "67584" -> "67582" 
+  "67590" -> "67600" 
+  "67590" -> "67633" 
+  "67644" -> "67654" 
+  "67644" -> "67690" 
+  "67762" -> "67772" 
+  "67762" -> "67808" 
+  "67591" -> "67590" 
+  "67618" -> "67881" 
+  "67645" -> "67644" 
+  "67672" -> "67881" 
+  "67763" -> "67762" 
+  "67790" -> "67881" 
+  "67592" -> "67595" 
+  "67595" -> "67591" 
+  "67603" -> "67611" 
+  "67603" -> "67627" 
+  "67606" -> "67603" 
+  "67608" -> "67606" 
+  "67620" -> "67618" 
+  "67631" -> "67881" 
+  "67646" -> "67649" 
+  "67649" -> "67645" 
+  "67657" -> "67665" 
+  "67657" -> "67681" 
+  "67660" -> "67657" 
+  "67662" -> "67660" 
+  "67674" -> "67672" 
+  "67764" -> "67767" 
+  "67767" -> "67763" 
+  "67775" -> "67783" 
+  "67775" -> "67799" 
+  "67778" -> "67775" 
+  "67780" -> "67778" 
+  "67792" -> "67790" 
+  "67594" -> "67592" 
+  "67600" -> "67603" 
+  "67609" -> "67615" 
+  "67614" -> "67608" 
+  "67626" -> "67620" 
+  "67633" -> "67631" 
+  "67648" -> "67646" 
+  "67654" -> "67657" 
+  "67663" -> "67669" 
+  "67668" -> "67662" 
+  "67680" -> "67674" 
+  "67686" -> "67696" 
+  "67686" -> "67729" 
+  "67766" -> "67764" 
+  "67772" -> "67775" 
+  "67781" -> "67787" 
+  "67786" -> "67780" 
+  "67798" -> "67792" 
+  "67804" -> "67814" 
+  "67804" -> "67847" 
+  "67610" -> "67609" 
+  "67615" -> "67614" 
+  "67627" -> "67626" 
+  "67664" -> "67663" 
+  "67669" -> "67668" 
+  "67681" -> "67680" 
+  "67687" -> "67686" 
+  "67714" -> "67881" 
+  "67782" -> "67781" 
+  "67787" -> "67786" 
+  "67799" -> "67798" 
+  "67805" -> "67804" 
+  "67832" -> "67881" 
+  "67611" -> "67610" 
+  "67665" -> "67664" 
+  "67688" -> "67691" 
+  "67691" -> "67687" 
+  "67699" -> "67707" 
+  "67699" -> "67723" 
+  "67702" -> "67699" 
+  "67704" -> "67702" 
+  "67716" -> "67714" 
+  "67747" -> "67881" 
+  "67783" -> "67782" 
+  "67806" -> "67809" 
+  "67809" -> "67805" 
+  "67817" -> "67825" 
+  "67817" -> "67841" 
+  "67820" -> "67817" 
+  "67822" -> "67820" 
+  "67834" -> "67832" 
+  "67865" -> "67881" 
+  "67690" -> "67688" 
+  "67696" -> "67699" 
+  "67705" -> "67711" 
+  "67710" -> "67704" 
+  "67722" -> "67716" 
+  "67732" -> "67740" 
+  "67732" -> "67756" 
+  "67735" -> "67732" 
+  "67737" -> "67735" 
+  "67749" -> "67747" 
+  "67808" -> "67806" 
+  "67814" -> "67817" 
+  "67823" -> "67829" 
+  "67828" -> "67822" 
+  "67840" -> "67834" 
+  "67850" -> "67858" 
+  "67850" -> "67874" 
+  "67853" -> "67850" 
+  "67855" -> "67853" 
+  "67867" -> "67865" 
+  "67706" -> "67705" 
+  "67711" -> "67710" 
+  "67723" -> "67722" 
+  "67729" -> "67732" 
+  "67738" -> "67744" 
+  "67743" -> "67737" 
+  "67755" -> "67749" 
+  "67824" -> "67823" 
+  "67829" -> "67828" 
+  "67841" -> "67840" 
+  "67847" -> "67850" 
+  "67856" -> "67862" 
+  "67861" -> "67855" 
+  "67873" -> "67867" 
+  "67707" -> "67706" 
+  "67739" -> "67738" 
+  "67744" -> "67743" 
+  "67756" -> "67755" 
+  "67825" -> "67824" 
+  "67857" -> "67856" 
+  "67862" -> "67861" 
+  "67874" -> "67873" 
+  "67740" -> "67739" 
+  "67858" -> "67857" 
+  "67546" -> "67555" 
+}

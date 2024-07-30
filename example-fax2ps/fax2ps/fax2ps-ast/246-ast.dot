@@ -1,0 +1,45 @@
+digraph "CLAMPw" {  
+"7352" [label = <(METHOD,CLAMPw)<SUB>220</SUB>> ]
+"7353" [label = <(PARAM,float v)<SUB>220</SUB>> ]
+"7354" [label = <(PARAM,float vmin)<SUB>220</SUB>> ]
+"7355" [label = <(PARAM,float vmax)<SUB>220</SUB>> ]
+"7356" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>221</SUB>> ]
+"7357" [label = <(CONTROL_STRUCTURE,if (v &lt; vmin),if (v &lt; vmin))<SUB>222</SUB>> ]
+"7358" [label = <(&lt;operator&gt;.lessThan,v &lt; vmin)<SUB>222</SUB>> ]
+"7359" [label = <(IDENTIFIER,v,v &lt; vmin)<SUB>222</SUB>> ]
+"7360" [label = <(IDENTIFIER,vmin,v &lt; vmin)<SUB>222</SUB>> ]
+"7361" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>223</SUB>> ]
+"7362" [label = <(RETURN,return vmin;,return vmin;)<SUB>225</SUB>> ]
+"7363" [label = <(IDENTIFIER,vmin,return vmin;)<SUB>225</SUB>> ]
+"7364" [label = <(CONTROL_STRUCTURE,if (v &gt; vmax),if (v &gt; vmax))<SUB>227</SUB>> ]
+"7365" [label = <(&lt;operator&gt;.greaterThan,v &gt; vmax)<SUB>227</SUB>> ]
+"7366" [label = <(IDENTIFIER,v,v &gt; vmax)<SUB>227</SUB>> ]
+"7367" [label = <(IDENTIFIER,vmax,v &gt; vmax)<SUB>227</SUB>> ]
+"7368" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>228</SUB>> ]
+"7369" [label = <(RETURN,return vmax;,return vmax;)<SUB>230</SUB>> ]
+"7370" [label = <(IDENTIFIER,vmax,return vmax;)<SUB>230</SUB>> ]
+"7371" [label = <(RETURN,return v;,return v;)<SUB>232</SUB>> ]
+"7372" [label = <(IDENTIFIER,v,return v;)<SUB>232</SUB>> ]
+"7373" [label = <(METHOD_RETURN,float)<SUB>220</SUB>> ]
+  "7352" -> "7353" 
+  "7352" -> "7354" 
+  "7352" -> "7355" 
+  "7352" -> "7356" 
+  "7352" -> "7373" 
+  "7356" -> "7357" 
+  "7356" -> "7364" 
+  "7356" -> "7371" 
+  "7357" -> "7358" 
+  "7357" -> "7361" 
+  "7358" -> "7359" 
+  "7358" -> "7360" 
+  "7361" -> "7362" 
+  "7362" -> "7363" 
+  "7364" -> "7365" 
+  "7364" -> "7368" 
+  "7365" -> "7366" 
+  "7365" -> "7367" 
+  "7368" -> "7369" 
+  "7369" -> "7370" 
+  "7371" -> "7372" 
+}

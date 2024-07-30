@@ -1,0 +1,37 @@
+digraph "_TIFFgetMode" {  
+"48" [label = <(&lt;operator&gt;.assignment,m = -1)<SUB>52</SUB>> ]
+"101" [label = <(RETURN,return (m);,return (m);)<SUB>71</SUB>> ]
+"50" [label = <(&lt;operator&gt;.minus,-1)<SUB>52</SUB>> ]
+"53" [label = <(&lt;operator&gt;.indirectIndexAccess,mode[0])<SUB>54</SUB>> ]
+"59" [label = <(&lt;operator&gt;.assignment,m = O_RDONLY)<SUB>57</SUB>> ]
+"77" [label = <(&lt;operator&gt;.assignment,m = O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"94" [label = <(_TIFFErrorEarly,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"63" [label = <(&lt;operator&gt;.equals,mode[1] == '+')<SUB>58</SUB>> ]
+"79" [label = <(&lt;operator&gt;.or,O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"83" [label = <(&lt;operator&gt;.equals,mode[0] == 'w')<SUB>64</SUB>> ]
+"64" [label = <(&lt;operator&gt;.indirectIndexAccess,mode[1])<SUB>58</SUB>> ]
+"69" [label = <(&lt;operator&gt;.assignment,m = O_RDWR)<SUB>59</SUB>> ]
+"84" [label = <(&lt;operator&gt;.indirectIndexAccess,mode[0])<SUB>64</SUB>> ]
+"89" [label = <(&lt;operators&gt;.assignmentOr,m |= O_TRUNC)<SUB>65</SUB>> ]
+"41" [label = <(METHOD,_TIFFgetMode)<SUB>49</SUB>> ]
+"103" [label = <(METHOD_RETURN,int)<SUB>49</SUB>> ]
+  "48" -> "53" 
+  "101" -> "103" 
+  "50" -> "48" 
+  "53" -> "59" 
+  "53" -> "79" 
+  "53" -> "94" 
+  "59" -> "64" 
+  "77" -> "84" 
+  "94" -> "101" 
+  "63" -> "69" 
+  "63" -> "101" 
+  "79" -> "77" 
+  "83" -> "89" 
+  "83" -> "101" 
+  "64" -> "63" 
+  "69" -> "101" 
+  "84" -> "83" 
+  "89" -> "101" 
+  "41" -> "50" 
+}

@@ -1,0 +1,18 @@
+digraph "hashFuncNumberToOffset" {  
+"91704" [label = <(METHOD,hashFuncNumberToOffset)<SUB>5306</SUB>> ]
+"91717" [label = <(METHOD_RETURN,unsigned long)<SUB>5306</SUB>> ]
+"91705" [label = <(PARAM,const void *elt)<SUB>5306</SUB>> ]
+"91708" [label = <(&lt;operator&gt;.assignment,*offsetAndDirNumber =\012        (const TIFFOffsetAndDirNumber *)elt)<SUB>5308</SUB>> ]
+"91713" [label = <(RETURN,return offsetAndDirNumber-&gt;dirNumber;,return offsetAndDirNumber-&gt;dirNumber;)<SUB>5310</SUB>> ]
+"91710" [label = <(&lt;operator&gt;.cast,(const TIFFOffsetAndDirNumber *)elt)<SUB>5309</SUB>> ]
+  "91713" -> "91717"  [ label = "DDG: &lt;RET&gt;"] 
+  "91708" -> "91717"  [ label = "DDG: offsetAndDirNumber"] 
+  "91710" -> "91717"  [ label = "DDG: elt"] 
+  "91708" -> "91717"  [ label = "DDG: (const TIFFOffsetAndDirNumber *)elt"] 
+  "91704" -> "91705"  [ label = "DDG: "] 
+  "91705" -> "91708"  [ label = "DDG: elt"] 
+  "91704" -> "91708"  [ label = "DDG: "] 
+  "91704" -> "91713"  [ label = "DDG: "] 
+  "91705" -> "91710"  [ label = "DDG: elt"] 
+  "91704" -> "91710"  [ label = "DDG: "] 
+}

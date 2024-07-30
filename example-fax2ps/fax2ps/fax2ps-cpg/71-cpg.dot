@@ -1,0 +1,18 @@
+digraph "vfprintf" {  
+"2543" [label = <(METHOD,vfprintf)<SUB>341</SUB>> ]
+"2544" [label = <(PARAM,FILE *__restrict __s)<SUB>341</SUB>> ]
+"2545" [label = <(PARAM,const char *__restrict __format)<SUB>341</SUB>> ]
+"2546" [label = <(PARAM,__gnuc_va_list __arg)<SUB>342</SUB>> ]
+"2547" [label = <(METHOD_RETURN,int)<SUB>341</SUB>> ]
+  "2543" -> "2544"  [ label = "AST: "] 
+  "2543" -> "2545"  [ label = "AST: "] 
+  "2543" -> "2546"  [ label = "AST: "] 
+  "2543" -> "2547"  [ label = "AST: "] 
+  "2543" -> "2547"  [ label = "CFG: "] 
+  "2544" -> "2547"  [ label = "DDG: __s"] 
+  "2545" -> "2547"  [ label = "DDG: __format"] 
+  "2546" -> "2547"  [ label = "DDG: __arg"] 
+  "2543" -> "2544"  [ label = "DDG: "] 
+  "2543" -> "2545"  [ label = "DDG: "] 
+  "2543" -> "2546"  [ label = "DDG: "] 
+}

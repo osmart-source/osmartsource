@@ -1,0 +1,917 @@
+digraph "TIFFReadDirEntrySlongArray" {  
+"83620" [label = <(METHOD,TIFFReadDirEntrySlongArray)<SUB>2255</SUB>> ]
+"83621" [label = <(PARAM,TIFF *tif)<SUB>2256</SUB>> ]
+"83622" [label = <(PARAM,TIFFDirEntry *direntry)<SUB>2256</SUB>> ]
+"83623" [label = <(PARAM,int32_t **value)<SUB>2256</SUB>> ]
+"83624" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2257</SUB>> ]
+"83625" [label = <(LOCAL,enum TIFFReadDirEntryErr err: TIFFReadDirEntryErr)<SUB>2258</SUB>> ]
+"83626" [label = <(LOCAL,uint32_t count: uint32_t)<SUB>2259</SUB>> ]
+"83627" [label = <(LOCAL,void* origdata: void)<SUB>2260</SUB>> ]
+"83628" [label = <(LOCAL,int32_t* data: int32_t)<SUB>2261</SUB>> ]
+"83629" [label = <(CONTROL_STRUCTURE,switch(direntry-&gt;tdir_type),switch(direntry-&gt;tdir_type))<SUB>2262</SUB>> ]
+"83630" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>2262</SUB>> ]
+"83631" [label = <(IDENTIFIER,direntry,switch(direntry-&gt;tdir_type))<SUB>2262</SUB>> ]
+"83632" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>2262</SUB>> ]
+"83633" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2263</SUB>> ]
+"83634" [label = <(JUMP_TARGET,case)<SUB>2264</SUB>> ]
+"83635" [label = <(IDENTIFIER,TIFF_BYTE,&lt;empty&gt;)<SUB>2264</SUB>> ]
+"83636" [label = <(JUMP_TARGET,case)<SUB>2265</SUB>> ]
+"83637" [label = <(IDENTIFIER,TIFF_SBYTE,&lt;empty&gt;)<SUB>2265</SUB>> ]
+"83638" [label = <(JUMP_TARGET,case)<SUB>2266</SUB>> ]
+"83639" [label = <(IDENTIFIER,TIFF_SHORT,&lt;empty&gt;)<SUB>2266</SUB>> ]
+"83640" [label = <(JUMP_TARGET,case)<SUB>2267</SUB>> ]
+"83641" [label = <(IDENTIFIER,TIFF_SSHORT,&lt;empty&gt;)<SUB>2267</SUB>> ]
+"83642" [label = <(JUMP_TARGET,case)<SUB>2268</SUB>> ]
+"83643" [label = <(IDENTIFIER,TIFF_LONG,&lt;empty&gt;)<SUB>2268</SUB>> ]
+"83644" [label = <(JUMP_TARGET,case)<SUB>2269</SUB>> ]
+"83645" [label = <(IDENTIFIER,TIFF_SLONG,&lt;empty&gt;)<SUB>2269</SUB>> ]
+"83646" [label = <(JUMP_TARGET,case)<SUB>2270</SUB>> ]
+"83647" [label = <(IDENTIFIER,TIFF_LONG8,&lt;empty&gt;)<SUB>2270</SUB>> ]
+"83648" [label = <(JUMP_TARGET,case)<SUB>2271</SUB>> ]
+"83649" [label = <(IDENTIFIER,TIFF_SLONG8,&lt;empty&gt;)<SUB>2271</SUB>> ]
+"83650" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2272</SUB>> ]
+"83651" [label = <(JUMP_TARGET,default)<SUB>2273</SUB>> ]
+"83652" [label = <(RETURN,return (TIFFReadDirEntryErrType);,return (TIFFReadDirEntryErrType);)<SUB>2274</SUB>> ]
+"83653" [label = <(IDENTIFIER,TIFFReadDirEntryErrType,return (TIFFReadDirEntryErrType);)<SUB>2274</SUB>> ]
+"83654" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83655" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83656" [label = <(TIFFReadDirEntryArray,TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83657" [label = <(IDENTIFIER,tif,TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83658" [label = <(IDENTIFIER,direntry,TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83659" [label = <(&lt;operator&gt;.addressOf,&amp;count)<SUB>2276</SUB>> ]
+"83660" [label = <(IDENTIFIER,count,TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83661" [label = <(LITERAL,4,TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83662" [label = <(&lt;operator&gt;.addressOf,&amp;origdata)<SUB>2276</SUB>> ]
+"83663" [label = <(IDENTIFIER,origdata,TIFFReadDirEntryArray(tif, direntry, &amp;count, 4, &amp;origdata))<SUB>2276</SUB>> ]
+"83664" [label = <(CONTROL_STRUCTURE,if ((err != TIFFReadDirEntryErrOk) || (origdata == 0)),if ((err != TIFFReadDirEntryErrOk) || (origdata == 0)))<SUB>2277</SUB>> ]
+"83665" [label = <(&lt;operator&gt;.logicalOr,(err != TIFFReadDirEntryErrOk) || (origdata == 0))<SUB>2277</SUB>> ]
+"83666" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>2277</SUB>> ]
+"83667" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>2277</SUB>> ]
+"83668" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>2277</SUB>> ]
+"83669" [label = <(&lt;operator&gt;.equals,origdata == 0)<SUB>2277</SUB>> ]
+"83670" [label = <(IDENTIFIER,origdata,origdata == 0)<SUB>2277</SUB>> ]
+"83671" [label = <(LITERAL,0,origdata == 0)<SUB>2277</SUB>> ]
+"83672" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2278</SUB>> ]
+"83673" [label = <(&lt;operator&gt;.assignment,*value = 0)<SUB>2279</SUB>> ]
+"83674" [label = <(&lt;operator&gt;.indirection,*value)<SUB>2279</SUB>> ]
+"83675" [label = <(IDENTIFIER,value,*value = 0)<SUB>2279</SUB>> ]
+"83676" [label = <(LITERAL,0,*value = 0)<SUB>2279</SUB>> ]
+"83677" [label = <(RETURN,return (err);,return (err);)<SUB>2280</SUB>> ]
+"83678" [label = <(IDENTIFIER,err,return (err);)<SUB>2280</SUB>> ]
+"83679" [label = <(CONTROL_STRUCTURE,switch(direntry-&gt;tdir_type),switch(direntry-&gt;tdir_type))<SUB>2282</SUB>> ]
+"83680" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>2282</SUB>> ]
+"83681" [label = <(IDENTIFIER,direntry,switch(direntry-&gt;tdir_type))<SUB>2282</SUB>> ]
+"83682" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>2282</SUB>> ]
+"83683" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2283</SUB>> ]
+"83684" [label = <(JUMP_TARGET,case)<SUB>2284</SUB>> ]
+"83685" [label = <(IDENTIFIER,TIFF_LONG,&lt;empty&gt;)<SUB>2284</SUB>> ]
+"83686" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2285</SUB>> ]
+"83687" [label = <(LOCAL,uint32_t* m: uint32_t)<SUB>2286</SUB>> ]
+"83688" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2287</SUB>> ]
+"83689" [label = <(&lt;operator&gt;.assignment,m = (uint32_t *)origdata)<SUB>2288</SUB>> ]
+"83690" [label = <(IDENTIFIER,m,m = (uint32_t *)origdata)<SUB>2288</SUB>> ]
+"83691" [label = <(&lt;operator&gt;.cast,(uint32_t *)origdata)<SUB>2288</SUB>> ]
+"83692" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>2288</SUB>> ]
+"83693" [label = <(IDENTIFIER,origdata,(uint32_t *)origdata)<SUB>2288</SUB>> ]
+"83694" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2289</SUB>> ]
+"83695" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2289</SUB>> ]
+"83696" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2289</SUB>> ]
+"83697" [label = <(IDENTIFIER,n,n = 0)<SUB>2289</SUB>> ]
+"83698" [label = <(LITERAL,0,n = 0)<SUB>2289</SUB>> ]
+"83699" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2289</SUB>> ]
+"83700" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2289</SUB>> ]
+"83701" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2289</SUB>> ]
+"83702" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2289</SUB>> ]
+"83703" [label = <(IDENTIFIER,n,n++)<SUB>2289</SUB>> ]
+"83704" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2290</SUB>> ]
+"83705" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2291</SUB>> ]
+"83706" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2291</SUB>> ]
+"83707" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2291</SUB>> ]
+"83708" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2291</SUB>> ]
+"83709" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2291</SUB>> ]
+"83710" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2291</SUB>> ]
+"83711" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2292</SUB>> ]
+"83712" [label = <(TIFFSwabLong,TIFFSwabLong((uint32_t *)m))<SUB>2292</SUB>> ]
+"83713" [label = <(&lt;operator&gt;.cast,(uint32_t *)m)<SUB>2292</SUB>> ]
+"83714" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>2292</SUB>> ]
+"83715" [label = <(IDENTIFIER,m,(uint32_t *)m)<SUB>2292</SUB>> ]
+"83716" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeSlongLong(*m))<SUB>2293</SUB>> ]
+"83717" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeSlongLong(*m))<SUB>2293</SUB>> ]
+"83718" [label = <(TIFFReadDirEntryCheckRangeSlongLong,TIFFReadDirEntryCheckRangeSlongLong(*m))<SUB>2293</SUB>> ]
+"83719" [label = <(&lt;operator&gt;.indirection,*m)<SUB>2293</SUB>> ]
+"83720" [label = <(IDENTIFIER,m,TIFFReadDirEntryCheckRangeSlongLong(*m))<SUB>2293</SUB>> ]
+"83721" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>2294</SUB>> ]
+"83722" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>2294</SUB>> ]
+"83723" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>2294</SUB>> ]
+"83724" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>2294</SUB>> ]
+"83725" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2295</SUB>> ]
+"83726" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, origdata))<SUB>2296</SUB>> ]
+"83727" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, origdata))<SUB>2296</SUB>> ]
+"83728" [label = <(IDENTIFIER,origdata,_TIFFfreeExt(tif, origdata))<SUB>2296</SUB>> ]
+"83729" [label = <(RETURN,return (err);,return (err);)<SUB>2297</SUB>> ]
+"83730" [label = <(IDENTIFIER,err,return (err);)<SUB>2297</SUB>> ]
+"83731" [label = <(&lt;operator&gt;.postIncrement,m++)<SUB>2299</SUB>> ]
+"83732" [label = <(IDENTIFIER,m,m++)<SUB>2299</SUB>> ]
+"83733" [label = <(&lt;operator&gt;.assignment,*value = (int32_t *)origdata)<SUB>2301</SUB>> ]
+"83734" [label = <(&lt;operator&gt;.indirection,*value)<SUB>2301</SUB>> ]
+"83735" [label = <(IDENTIFIER,value,*value = (int32_t *)origdata)<SUB>2301</SUB>> ]
+"83736" [label = <(&lt;operator&gt;.cast,(int32_t *)origdata)<SUB>2301</SUB>> ]
+"83737" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>2301</SUB>> ]
+"83738" [label = <(IDENTIFIER,origdata,(int32_t *)origdata)<SUB>2301</SUB>> ]
+"83739" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>2302</SUB>> ]
+"83740" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>2302</SUB>> ]
+"83741" [label = <(JUMP_TARGET,case)<SUB>2304</SUB>> ]
+"83742" [label = <(IDENTIFIER,TIFF_SLONG,&lt;empty&gt;)<SUB>2304</SUB>> ]
+"83743" [label = <(&lt;operator&gt;.assignment,*value = (int32_t *)origdata)<SUB>2305</SUB>> ]
+"83744" [label = <(&lt;operator&gt;.indirection,*value)<SUB>2305</SUB>> ]
+"83745" [label = <(IDENTIFIER,value,*value = (int32_t *)origdata)<SUB>2305</SUB>> ]
+"83746" [label = <(&lt;operator&gt;.cast,(int32_t *)origdata)<SUB>2305</SUB>> ]
+"83747" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>2305</SUB>> ]
+"83748" [label = <(IDENTIFIER,origdata,(int32_t *)origdata)<SUB>2305</SUB>> ]
+"83749" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2306</SUB>> ]
+"83750" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2306</SUB>> ]
+"83751" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2306</SUB>> ]
+"83752" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2306</SUB>> ]
+"83753" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2306</SUB>> ]
+"83754" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2306</SUB>> ]
+"83755" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2307</SUB>> ]
+"83756" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong((uint32_t *)(*value), count))<SUB>2307</SUB>> ]
+"83757" [label = <(&lt;operator&gt;.cast,(uint32_t *)(*value))<SUB>2307</SUB>> ]
+"83758" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>2307</SUB>> ]
+"83759" [label = <(&lt;operator&gt;.indirection,*value)<SUB>2307</SUB>> ]
+"83760" [label = <(IDENTIFIER,value,(uint32_t *)(*value))<SUB>2307</SUB>> ]
+"83761" [label = <(IDENTIFIER,count,TIFFSwabArrayOfLong((uint32_t *)(*value), count))<SUB>2307</SUB>> ]
+"83762" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>2308</SUB>> ]
+"83763" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>2308</SUB>> ]
+"83764" [label = <(&lt;operator&gt;.assignment,data = (int32_t *)_TIFFmallocExt(tif, count * 4))<SUB>2310</SUB>> ]
+"83765" [label = <(IDENTIFIER,data,data = (int32_t *)_TIFFmallocExt(tif, count * 4))<SUB>2310</SUB>> ]
+"83766" [label = <(&lt;operator&gt;.cast,(int32_t *)_TIFFmallocExt(tif, count * 4))<SUB>2310</SUB>> ]
+"83767" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>2310</SUB>> ]
+"83768" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * 4))<SUB>2310</SUB>> ]
+"83769" [label = <(IDENTIFIER,tif,_TIFFmallocExt(tif, count * 4))<SUB>2310</SUB>> ]
+"83770" [label = <(&lt;operator&gt;.multiplication,count * 4)<SUB>2310</SUB>> ]
+"83771" [label = <(IDENTIFIER,count,count * 4)<SUB>2310</SUB>> ]
+"83772" [label = <(LITERAL,4,count * 4)<SUB>2310</SUB>> ]
+"83773" [label = <(CONTROL_STRUCTURE,if (data == 0),if (data == 0))<SUB>2311</SUB>> ]
+"83774" [label = <(&lt;operator&gt;.equals,data == 0)<SUB>2311</SUB>> ]
+"83775" [label = <(IDENTIFIER,data,data == 0)<SUB>2311</SUB>> ]
+"83776" [label = <(LITERAL,0,data == 0)<SUB>2311</SUB>> ]
+"83777" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2312</SUB>> ]
+"83778" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, origdata))<SUB>2313</SUB>> ]
+"83779" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, origdata))<SUB>2313</SUB>> ]
+"83780" [label = <(IDENTIFIER,origdata,_TIFFfreeExt(tif, origdata))<SUB>2313</SUB>> ]
+"83781" [label = <(RETURN,return (TIFFReadDirEntryErrAlloc);,return (TIFFReadDirEntryErrAlloc);)<SUB>2314</SUB>> ]
+"83782" [label = <(IDENTIFIER,TIFFReadDirEntryErrAlloc,return (TIFFReadDirEntryErrAlloc);)<SUB>2314</SUB>> ]
+"83783" [label = <(CONTROL_STRUCTURE,switch(direntry-&gt;tdir_type),switch(direntry-&gt;tdir_type))<SUB>2316</SUB>> ]
+"83784" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>2316</SUB>> ]
+"83785" [label = <(IDENTIFIER,direntry,switch(direntry-&gt;tdir_type))<SUB>2316</SUB>> ]
+"83786" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>2316</SUB>> ]
+"83787" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2317</SUB>> ]
+"83788" [label = <(JUMP_TARGET,case)<SUB>2318</SUB>> ]
+"83789" [label = <(IDENTIFIER,TIFF_BYTE,&lt;empty&gt;)<SUB>2318</SUB>> ]
+"83790" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2319</SUB>> ]
+"83791" [label = <(LOCAL,uint8_t* ma: uint8_t)<SUB>2320</SUB>> ]
+"83792" [label = <(LOCAL,int32_t* mb: int32_t)<SUB>2321</SUB>> ]
+"83793" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2322</SUB>> ]
+"83794" [label = <(&lt;operator&gt;.assignment,ma = (uint8_t *)origdata)<SUB>2323</SUB>> ]
+"83795" [label = <(IDENTIFIER,ma,ma = (uint8_t *)origdata)<SUB>2323</SUB>> ]
+"83796" [label = <(&lt;operator&gt;.cast,(uint8_t *)origdata)<SUB>2323</SUB>> ]
+"83797" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>2323</SUB>> ]
+"83798" [label = <(IDENTIFIER,origdata,(uint8_t *)origdata)<SUB>2323</SUB>> ]
+"83799" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>2324</SUB>> ]
+"83800" [label = <(IDENTIFIER,mb,mb = data)<SUB>2324</SUB>> ]
+"83801" [label = <(IDENTIFIER,data,mb = data)<SUB>2324</SUB>> ]
+"83802" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2325</SUB>> ]
+"83803" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2325</SUB>> ]
+"83804" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2325</SUB>> ]
+"83805" [label = <(IDENTIFIER,n,n = 0)<SUB>2325</SUB>> ]
+"83806" [label = <(LITERAL,0,n = 0)<SUB>2325</SUB>> ]
+"83807" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2325</SUB>> ]
+"83808" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2325</SUB>> ]
+"83809" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2325</SUB>> ]
+"83810" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2325</SUB>> ]
+"83811" [label = <(IDENTIFIER,n,n++)<SUB>2325</SUB>> ]
+"83812" [label = <(&lt;operator&gt;.assignment,*mb++ = (int32_t)(*ma++))<SUB>2326</SUB>> ]
+"83813" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>2326</SUB>> ]
+"83814" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2326</SUB>> ]
+"83815" [label = <(IDENTIFIER,mb,mb++)<SUB>2326</SUB>> ]
+"83816" [label = <(&lt;operator&gt;.cast,(int32_t)(*ma++))<SUB>2326</SUB>> ]
+"83817" [label = <(UNKNOWN,int32_t,int32_t)<SUB>2326</SUB>> ]
+"83818" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>2326</SUB>> ]
+"83819" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2326</SUB>> ]
+"83820" [label = <(IDENTIFIER,ma,ma++)<SUB>2326</SUB>> ]
+"83821" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2328</SUB>> ]
+"83822" [label = <(JUMP_TARGET,case)<SUB>2329</SUB>> ]
+"83823" [label = <(IDENTIFIER,TIFF_SBYTE,&lt;empty&gt;)<SUB>2329</SUB>> ]
+"83824" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2330</SUB>> ]
+"83825" [label = <(LOCAL,int8_t* ma: int8_t)<SUB>2331</SUB>> ]
+"83826" [label = <(LOCAL,int32_t* mb: int32_t)<SUB>2332</SUB>> ]
+"83827" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2333</SUB>> ]
+"83828" [label = <(&lt;operator&gt;.assignment,ma = (int8_t *)origdata)<SUB>2334</SUB>> ]
+"83829" [label = <(IDENTIFIER,ma,ma = (int8_t *)origdata)<SUB>2334</SUB>> ]
+"83830" [label = <(&lt;operator&gt;.cast,(int8_t *)origdata)<SUB>2334</SUB>> ]
+"83831" [label = <(UNKNOWN,int8_t *,int8_t *)<SUB>2334</SUB>> ]
+"83832" [label = <(IDENTIFIER,origdata,(int8_t *)origdata)<SUB>2334</SUB>> ]
+"83833" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>2335</SUB>> ]
+"83834" [label = <(IDENTIFIER,mb,mb = data)<SUB>2335</SUB>> ]
+"83835" [label = <(IDENTIFIER,data,mb = data)<SUB>2335</SUB>> ]
+"83836" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2336</SUB>> ]
+"83837" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2336</SUB>> ]
+"83838" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2336</SUB>> ]
+"83839" [label = <(IDENTIFIER,n,n = 0)<SUB>2336</SUB>> ]
+"83840" [label = <(LITERAL,0,n = 0)<SUB>2336</SUB>> ]
+"83841" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2336</SUB>> ]
+"83842" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2336</SUB>> ]
+"83843" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2336</SUB>> ]
+"83844" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2336</SUB>> ]
+"83845" [label = <(IDENTIFIER,n,n++)<SUB>2336</SUB>> ]
+"83846" [label = <(&lt;operator&gt;.assignment,*mb++ = (int32_t)(*ma++))<SUB>2337</SUB>> ]
+"83847" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>2337</SUB>> ]
+"83848" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2337</SUB>> ]
+"83849" [label = <(IDENTIFIER,mb,mb++)<SUB>2337</SUB>> ]
+"83850" [label = <(&lt;operator&gt;.cast,(int32_t)(*ma++))<SUB>2337</SUB>> ]
+"83851" [label = <(UNKNOWN,int32_t,int32_t)<SUB>2337</SUB>> ]
+"83852" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>2337</SUB>> ]
+"83853" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2337</SUB>> ]
+"83854" [label = <(IDENTIFIER,ma,ma++)<SUB>2337</SUB>> ]
+"83855" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2339</SUB>> ]
+"83856" [label = <(JUMP_TARGET,case)<SUB>2340</SUB>> ]
+"83857" [label = <(IDENTIFIER,TIFF_SHORT,&lt;empty&gt;)<SUB>2340</SUB>> ]
+"83858" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2341</SUB>> ]
+"83859" [label = <(LOCAL,uint16_t* ma: uint16_t)<SUB>2342</SUB>> ]
+"83860" [label = <(LOCAL,int32_t* mb: int32_t)<SUB>2343</SUB>> ]
+"83861" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2344</SUB>> ]
+"83862" [label = <(&lt;operator&gt;.assignment,ma = (uint16_t *)origdata)<SUB>2345</SUB>> ]
+"83863" [label = <(IDENTIFIER,ma,ma = (uint16_t *)origdata)<SUB>2345</SUB>> ]
+"83864" [label = <(&lt;operator&gt;.cast,(uint16_t *)origdata)<SUB>2345</SUB>> ]
+"83865" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>2345</SUB>> ]
+"83866" [label = <(IDENTIFIER,origdata,(uint16_t *)origdata)<SUB>2345</SUB>> ]
+"83867" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>2346</SUB>> ]
+"83868" [label = <(IDENTIFIER,mb,mb = data)<SUB>2346</SUB>> ]
+"83869" [label = <(IDENTIFIER,data,mb = data)<SUB>2346</SUB>> ]
+"83870" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2347</SUB>> ]
+"83871" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2347</SUB>> ]
+"83872" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2347</SUB>> ]
+"83873" [label = <(IDENTIFIER,n,n = 0)<SUB>2347</SUB>> ]
+"83874" [label = <(LITERAL,0,n = 0)<SUB>2347</SUB>> ]
+"83875" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2347</SUB>> ]
+"83876" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2347</SUB>> ]
+"83877" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2347</SUB>> ]
+"83878" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2347</SUB>> ]
+"83879" [label = <(IDENTIFIER,n,n++)<SUB>2347</SUB>> ]
+"83880" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2348</SUB>> ]
+"83881" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2349</SUB>> ]
+"83882" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2349</SUB>> ]
+"83883" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2349</SUB>> ]
+"83884" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2349</SUB>> ]
+"83885" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2349</SUB>> ]
+"83886" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2349</SUB>> ]
+"83887" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2350</SUB>> ]
+"83888" [label = <(TIFFSwabShort,TIFFSwabShort(ma))<SUB>2350</SUB>> ]
+"83889" [label = <(IDENTIFIER,ma,TIFFSwabShort(ma))<SUB>2350</SUB>> ]
+"83890" [label = <(&lt;operator&gt;.assignment,*mb++ = (int32_t)(*ma++))<SUB>2351</SUB>> ]
+"83891" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>2351</SUB>> ]
+"83892" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2351</SUB>> ]
+"83893" [label = <(IDENTIFIER,mb,mb++)<SUB>2351</SUB>> ]
+"83894" [label = <(&lt;operator&gt;.cast,(int32_t)(*ma++))<SUB>2351</SUB>> ]
+"83895" [label = <(UNKNOWN,int32_t,int32_t)<SUB>2351</SUB>> ]
+"83896" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>2351</SUB>> ]
+"83897" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2351</SUB>> ]
+"83898" [label = <(IDENTIFIER,ma,ma++)<SUB>2351</SUB>> ]
+"83899" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2354</SUB>> ]
+"83900" [label = <(JUMP_TARGET,case)<SUB>2355</SUB>> ]
+"83901" [label = <(IDENTIFIER,TIFF_SSHORT,&lt;empty&gt;)<SUB>2355</SUB>> ]
+"83902" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2356</SUB>> ]
+"83903" [label = <(LOCAL,int16_t* ma: int16_t)<SUB>2357</SUB>> ]
+"83904" [label = <(LOCAL,int32_t* mb: int32_t)<SUB>2358</SUB>> ]
+"83905" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2359</SUB>> ]
+"83906" [label = <(&lt;operator&gt;.assignment,ma = (int16_t *)origdata)<SUB>2360</SUB>> ]
+"83907" [label = <(IDENTIFIER,ma,ma = (int16_t *)origdata)<SUB>2360</SUB>> ]
+"83908" [label = <(&lt;operator&gt;.cast,(int16_t *)origdata)<SUB>2360</SUB>> ]
+"83909" [label = <(UNKNOWN,int16_t *,int16_t *)<SUB>2360</SUB>> ]
+"83910" [label = <(IDENTIFIER,origdata,(int16_t *)origdata)<SUB>2360</SUB>> ]
+"83911" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>2361</SUB>> ]
+"83912" [label = <(IDENTIFIER,mb,mb = data)<SUB>2361</SUB>> ]
+"83913" [label = <(IDENTIFIER,data,mb = data)<SUB>2361</SUB>> ]
+"83914" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2362</SUB>> ]
+"83915" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2362</SUB>> ]
+"83916" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2362</SUB>> ]
+"83917" [label = <(IDENTIFIER,n,n = 0)<SUB>2362</SUB>> ]
+"83918" [label = <(LITERAL,0,n = 0)<SUB>2362</SUB>> ]
+"83919" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2362</SUB>> ]
+"83920" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2362</SUB>> ]
+"83921" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2362</SUB>> ]
+"83922" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2362</SUB>> ]
+"83923" [label = <(IDENTIFIER,n,n++)<SUB>2362</SUB>> ]
+"83924" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2363</SUB>> ]
+"83925" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2364</SUB>> ]
+"83926" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2364</SUB>> ]
+"83927" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2364</SUB>> ]
+"83928" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2364</SUB>> ]
+"83929" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2364</SUB>> ]
+"83930" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2364</SUB>> ]
+"83931" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2365</SUB>> ]
+"83932" [label = <(TIFFSwabShort,TIFFSwabShort((uint16_t *)ma))<SUB>2365</SUB>> ]
+"83933" [label = <(&lt;operator&gt;.cast,(uint16_t *)ma)<SUB>2365</SUB>> ]
+"83934" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>2365</SUB>> ]
+"83935" [label = <(IDENTIFIER,ma,(uint16_t *)ma)<SUB>2365</SUB>> ]
+"83936" [label = <(&lt;operator&gt;.assignment,*mb++ = (int32_t)(*ma++))<SUB>2366</SUB>> ]
+"83937" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>2366</SUB>> ]
+"83938" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2366</SUB>> ]
+"83939" [label = <(IDENTIFIER,mb,mb++)<SUB>2366</SUB>> ]
+"83940" [label = <(&lt;operator&gt;.cast,(int32_t)(*ma++))<SUB>2366</SUB>> ]
+"83941" [label = <(UNKNOWN,int32_t,int32_t)<SUB>2366</SUB>> ]
+"83942" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>2366</SUB>> ]
+"83943" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2366</SUB>> ]
+"83944" [label = <(IDENTIFIER,ma,ma++)<SUB>2366</SUB>> ]
+"83945" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2369</SUB>> ]
+"83946" [label = <(JUMP_TARGET,case)<SUB>2370</SUB>> ]
+"83947" [label = <(IDENTIFIER,TIFF_LONG8,&lt;empty&gt;)<SUB>2370</SUB>> ]
+"83948" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2371</SUB>> ]
+"83949" [label = <(LOCAL,uint64_t* ma: uint64_t)<SUB>2372</SUB>> ]
+"83950" [label = <(LOCAL,int32_t* mb: int32_t)<SUB>2373</SUB>> ]
+"83951" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2374</SUB>> ]
+"83952" [label = <(&lt;operator&gt;.assignment,ma = (uint64_t *)origdata)<SUB>2375</SUB>> ]
+"83953" [label = <(IDENTIFIER,ma,ma = (uint64_t *)origdata)<SUB>2375</SUB>> ]
+"83954" [label = <(&lt;operator&gt;.cast,(uint64_t *)origdata)<SUB>2375</SUB>> ]
+"83955" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>2375</SUB>> ]
+"83956" [label = <(IDENTIFIER,origdata,(uint64_t *)origdata)<SUB>2375</SUB>> ]
+"83957" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>2376</SUB>> ]
+"83958" [label = <(IDENTIFIER,mb,mb = data)<SUB>2376</SUB>> ]
+"83959" [label = <(IDENTIFIER,data,mb = data)<SUB>2376</SUB>> ]
+"83960" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2377</SUB>> ]
+"83961" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2377</SUB>> ]
+"83962" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2377</SUB>> ]
+"83963" [label = <(IDENTIFIER,n,n = 0)<SUB>2377</SUB>> ]
+"83964" [label = <(LITERAL,0,n = 0)<SUB>2377</SUB>> ]
+"83965" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2377</SUB>> ]
+"83966" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2377</SUB>> ]
+"83967" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2377</SUB>> ]
+"83968" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2377</SUB>> ]
+"83969" [label = <(IDENTIFIER,n,n++)<SUB>2377</SUB>> ]
+"83970" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2378</SUB>> ]
+"83971" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2379</SUB>> ]
+"83972" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2379</SUB>> ]
+"83973" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2379</SUB>> ]
+"83974" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2379</SUB>> ]
+"83975" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2379</SUB>> ]
+"83976" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2379</SUB>> ]
+"83977" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2380</SUB>> ]
+"83978" [label = <(TIFFSwabLong8,TIFFSwabLong8(ma))<SUB>2380</SUB>> ]
+"83979" [label = <(IDENTIFIER,ma,TIFFSwabLong8(ma))<SUB>2380</SUB>> ]
+"83980" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeSlongLong8(*ma))<SUB>2381</SUB>> ]
+"83981" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeSlongLong8(*ma))<SUB>2381</SUB>> ]
+"83982" [label = <(TIFFReadDirEntryCheckRangeSlongLong8,TIFFReadDirEntryCheckRangeSlongLong8(*ma))<SUB>2381</SUB>> ]
+"83983" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>2381</SUB>> ]
+"83984" [label = <(IDENTIFIER,ma,TIFFReadDirEntryCheckRangeSlongLong8(*ma))<SUB>2381</SUB>> ]
+"83985" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>2382</SUB>> ]
+"83986" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>2382</SUB>> ]
+"83987" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>2382</SUB>> ]
+"83988" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>2382</SUB>> ]
+"83989" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2383</SUB>> ]
+"83990" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2383</SUB>> ]
+"83991" [label = <(&lt;operator&gt;.assignment,*mb++ = (int32_t)(*ma++))<SUB>2384</SUB>> ]
+"83992" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>2384</SUB>> ]
+"83993" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2384</SUB>> ]
+"83994" [label = <(IDENTIFIER,mb,mb++)<SUB>2384</SUB>> ]
+"83995" [label = <(&lt;operator&gt;.cast,(int32_t)(*ma++))<SUB>2384</SUB>> ]
+"83996" [label = <(UNKNOWN,int32_t,int32_t)<SUB>2384</SUB>> ]
+"83997" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>2384</SUB>> ]
+"83998" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2384</SUB>> ]
+"83999" [label = <(IDENTIFIER,ma,ma++)<SUB>2384</SUB>> ]
+"84000" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2387</SUB>> ]
+"84001" [label = <(JUMP_TARGET,case)<SUB>2388</SUB>> ]
+"84002" [label = <(IDENTIFIER,TIFF_SLONG8,&lt;empty&gt;)<SUB>2388</SUB>> ]
+"84003" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2389</SUB>> ]
+"84004" [label = <(LOCAL,int64_t* ma: int64_t)<SUB>2390</SUB>> ]
+"84005" [label = <(LOCAL,int32_t* mb: int32_t)<SUB>2391</SUB>> ]
+"84006" [label = <(LOCAL,uint32_t n: uint32_t)<SUB>2392</SUB>> ]
+"84007" [label = <(&lt;operator&gt;.assignment,ma = (int64_t *)origdata)<SUB>2393</SUB>> ]
+"84008" [label = <(IDENTIFIER,ma,ma = (int64_t *)origdata)<SUB>2393</SUB>> ]
+"84009" [label = <(&lt;operator&gt;.cast,(int64_t *)origdata)<SUB>2393</SUB>> ]
+"84010" [label = <(UNKNOWN,int64_t *,int64_t *)<SUB>2393</SUB>> ]
+"84011" [label = <(IDENTIFIER,origdata,(int64_t *)origdata)<SUB>2393</SUB>> ]
+"84012" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>2394</SUB>> ]
+"84013" [label = <(IDENTIFIER,mb,mb = data)<SUB>2394</SUB>> ]
+"84014" [label = <(IDENTIFIER,data,mb = data)<SUB>2394</SUB>> ]
+"84015" [label = <(CONTROL_STRUCTURE,for (n = 0;n &lt; count;n++),for (n = 0;n &lt; count;n++))<SUB>2395</SUB>> ]
+"84016" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2395</SUB>> ]
+"84017" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>2395</SUB>> ]
+"84018" [label = <(IDENTIFIER,n,n = 0)<SUB>2395</SUB>> ]
+"84019" [label = <(LITERAL,0,n = 0)<SUB>2395</SUB>> ]
+"84020" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>2395</SUB>> ]
+"84021" [label = <(IDENTIFIER,n,n &lt; count)<SUB>2395</SUB>> ]
+"84022" [label = <(IDENTIFIER,count,n &lt; count)<SUB>2395</SUB>> ]
+"84023" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>2395</SUB>> ]
+"84024" [label = <(IDENTIFIER,n,n++)<SUB>2395</SUB>> ]
+"84025" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2396</SUB>> ]
+"84026" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2397</SUB>> ]
+"84027" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2397</SUB>> ]
+"84028" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2397</SUB>> ]
+"84029" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2397</SUB>> ]
+"84030" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2397</SUB>> ]
+"84031" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2397</SUB>> ]
+"84032" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2398</SUB>> ]
+"84033" [label = <(TIFFSwabLong8,TIFFSwabLong8((uint64_t *)ma))<SUB>2398</SUB>> ]
+"84034" [label = <(&lt;operator&gt;.cast,(uint64_t *)ma)<SUB>2398</SUB>> ]
+"84035" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>2398</SUB>> ]
+"84036" [label = <(IDENTIFIER,ma,(uint64_t *)ma)<SUB>2398</SUB>> ]
+"84037" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryCheckRangeSlongSlong8(*ma))<SUB>2399</SUB>> ]
+"84038" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryCheckRangeSlongSlong8(*ma))<SUB>2399</SUB>> ]
+"84039" [label = <(TIFFReadDirEntryCheckRangeSlongSlong8,TIFFReadDirEntryCheckRangeSlongSlong8(*ma))<SUB>2399</SUB>> ]
+"84040" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>2399</SUB>> ]
+"84041" [label = <(IDENTIFIER,ma,TIFFReadDirEntryCheckRangeSlongSlong8(*ma))<SUB>2399</SUB>> ]
+"84042" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>2400</SUB>> ]
+"84043" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>2400</SUB>> ]
+"84044" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>2400</SUB>> ]
+"84045" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>2400</SUB>> ]
+"84046" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2401</SUB>> ]
+"84047" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2401</SUB>> ]
+"84048" [label = <(&lt;operator&gt;.assignment,*mb++ = (int32_t)(*ma++))<SUB>2402</SUB>> ]
+"84049" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>2402</SUB>> ]
+"84050" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2402</SUB>> ]
+"84051" [label = <(IDENTIFIER,mb,mb++)<SUB>2402</SUB>> ]
+"84052" [label = <(&lt;operator&gt;.cast,(int32_t)(*ma++))<SUB>2402</SUB>> ]
+"84053" [label = <(UNKNOWN,int32_t,int32_t)<SUB>2402</SUB>> ]
+"84054" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>2402</SUB>> ]
+"84055" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2402</SUB>> ]
+"84056" [label = <(IDENTIFIER,ma,ma++)<SUB>2402</SUB>> ]
+"84057" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>2405</SUB>> ]
+"84058" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, origdata))<SUB>2407</SUB>> ]
+"84059" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, origdata))<SUB>2407</SUB>> ]
+"84060" [label = <(IDENTIFIER,origdata,_TIFFfreeExt(tif, origdata))<SUB>2407</SUB>> ]
+"84061" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>2408</SUB>> ]
+"84062" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>2408</SUB>> ]
+"84063" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>2408</SUB>> ]
+"84064" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>2408</SUB>> ]
+"84065" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2409</SUB>> ]
+"84066" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, data))<SUB>2410</SUB>> ]
+"84067" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, data))<SUB>2410</SUB>> ]
+"84068" [label = <(IDENTIFIER,data,_TIFFfreeExt(tif, data))<SUB>2410</SUB>> ]
+"84069" [label = <(RETURN,return (err);,return (err);)<SUB>2411</SUB>> ]
+"84070" [label = <(IDENTIFIER,err,return (err);)<SUB>2411</SUB>> ]
+"84071" [label = <(&lt;operator&gt;.assignment,*value = data)<SUB>2413</SUB>> ]
+"84072" [label = <(&lt;operator&gt;.indirection,*value)<SUB>2413</SUB>> ]
+"84073" [label = <(IDENTIFIER,value,*value = data)<SUB>2413</SUB>> ]
+"84074" [label = <(IDENTIFIER,data,*value = data)<SUB>2413</SUB>> ]
+"84075" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>2414</SUB>> ]
+"84076" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>2414</SUB>> ]
+"84077" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>2255</SUB>> ]
+  "83620" -> "83621" 
+  "83620" -> "83622" 
+  "83620" -> "83623" 
+  "83620" -> "83624" 
+  "83620" -> "84077" 
+  "83624" -> "83625" 
+  "83624" -> "83626" 
+  "83624" -> "83627" 
+  "83624" -> "83628" 
+  "83624" -> "83629" 
+  "83624" -> "83654" 
+  "83624" -> "83664" 
+  "83624" -> "83679" 
+  "83624" -> "83764" 
+  "83624" -> "83773" 
+  "83624" -> "83783" 
+  "83624" -> "84058" 
+  "83624" -> "84061" 
+  "83624" -> "84071" 
+  "83624" -> "84075" 
+  "83629" -> "83630" 
+  "83629" -> "83633" 
+  "83630" -> "83631" 
+  "83630" -> "83632" 
+  "83633" -> "83634" 
+  "83633" -> "83635" 
+  "83633" -> "83636" 
+  "83633" -> "83637" 
+  "83633" -> "83638" 
+  "83633" -> "83639" 
+  "83633" -> "83640" 
+  "83633" -> "83641" 
+  "83633" -> "83642" 
+  "83633" -> "83643" 
+  "83633" -> "83644" 
+  "83633" -> "83645" 
+  "83633" -> "83646" 
+  "83633" -> "83647" 
+  "83633" -> "83648" 
+  "83633" -> "83649" 
+  "83633" -> "83650" 
+  "83633" -> "83651" 
+  "83633" -> "83652" 
+  "83652" -> "83653" 
+  "83654" -> "83655" 
+  "83654" -> "83656" 
+  "83656" -> "83657" 
+  "83656" -> "83658" 
+  "83656" -> "83659" 
+  "83656" -> "83661" 
+  "83656" -> "83662" 
+  "83659" -> "83660" 
+  "83662" -> "83663" 
+  "83664" -> "83665" 
+  "83664" -> "83672" 
+  "83665" -> "83666" 
+  "83665" -> "83669" 
+  "83666" -> "83667" 
+  "83666" -> "83668" 
+  "83669" -> "83670" 
+  "83669" -> "83671" 
+  "83672" -> "83673" 
+  "83672" -> "83677" 
+  "83673" -> "83674" 
+  "83673" -> "83676" 
+  "83674" -> "83675" 
+  "83677" -> "83678" 
+  "83679" -> "83680" 
+  "83679" -> "83683" 
+  "83680" -> "83681" 
+  "83680" -> "83682" 
+  "83683" -> "83684" 
+  "83683" -> "83685" 
+  "83683" -> "83686" 
+  "83683" -> "83741" 
+  "83683" -> "83742" 
+  "83683" -> "83743" 
+  "83683" -> "83749" 
+  "83683" -> "83762" 
+  "83686" -> "83687" 
+  "83686" -> "83688" 
+  "83686" -> "83689" 
+  "83686" -> "83694" 
+  "83686" -> "83733" 
+  "83686" -> "83739" 
+  "83689" -> "83690" 
+  "83689" -> "83691" 
+  "83691" -> "83692" 
+  "83691" -> "83693" 
+  "83694" -> "83695" 
+  "83694" -> "83699" 
+  "83694" -> "83702" 
+  "83694" -> "83704" 
+  "83695" -> "83696" 
+  "83696" -> "83697" 
+  "83696" -> "83698" 
+  "83699" -> "83700" 
+  "83699" -> "83701" 
+  "83702" -> "83703" 
+  "83704" -> "83705" 
+  "83704" -> "83716" 
+  "83704" -> "83721" 
+  "83704" -> "83731" 
+  "83705" -> "83706" 
+  "83705" -> "83711" 
+  "83706" -> "83707" 
+  "83706" -> "83710" 
+  "83707" -> "83708" 
+  "83707" -> "83709" 
+  "83711" -> "83712" 
+  "83712" -> "83713" 
+  "83713" -> "83714" 
+  "83713" -> "83715" 
+  "83716" -> "83717" 
+  "83716" -> "83718" 
+  "83718" -> "83719" 
+  "83719" -> "83720" 
+  "83721" -> "83722" 
+  "83721" -> "83725" 
+  "83722" -> "83723" 
+  "83722" -> "83724" 
+  "83725" -> "83726" 
+  "83725" -> "83729" 
+  "83726" -> "83727" 
+  "83726" -> "83728" 
+  "83729" -> "83730" 
+  "83731" -> "83732" 
+  "83733" -> "83734" 
+  "83733" -> "83736" 
+  "83734" -> "83735" 
+  "83736" -> "83737" 
+  "83736" -> "83738" 
+  "83739" -> "83740" 
+  "83743" -> "83744" 
+  "83743" -> "83746" 
+  "83744" -> "83745" 
+  "83746" -> "83747" 
+  "83746" -> "83748" 
+  "83749" -> "83750" 
+  "83749" -> "83755" 
+  "83750" -> "83751" 
+  "83750" -> "83754" 
+  "83751" -> "83752" 
+  "83751" -> "83753" 
+  "83755" -> "83756" 
+  "83756" -> "83757" 
+  "83756" -> "83761" 
+  "83757" -> "83758" 
+  "83757" -> "83759" 
+  "83759" -> "83760" 
+  "83762" -> "83763" 
+  "83764" -> "83765" 
+  "83764" -> "83766" 
+  "83766" -> "83767" 
+  "83766" -> "83768" 
+  "83768" -> "83769" 
+  "83768" -> "83770" 
+  "83770" -> "83771" 
+  "83770" -> "83772" 
+  "83773" -> "83774" 
+  "83773" -> "83777" 
+  "83774" -> "83775" 
+  "83774" -> "83776" 
+  "83777" -> "83778" 
+  "83777" -> "83781" 
+  "83778" -> "83779" 
+  "83778" -> "83780" 
+  "83781" -> "83782" 
+  "83783" -> "83784" 
+  "83783" -> "83787" 
+  "83784" -> "83785" 
+  "83784" -> "83786" 
+  "83787" -> "83788" 
+  "83787" -> "83789" 
+  "83787" -> "83790" 
+  "83787" -> "83821" 
+  "83787" -> "83822" 
+  "83787" -> "83823" 
+  "83787" -> "83824" 
+  "83787" -> "83855" 
+  "83787" -> "83856" 
+  "83787" -> "83857" 
+  "83787" -> "83858" 
+  "83787" -> "83899" 
+  "83787" -> "83900" 
+  "83787" -> "83901" 
+  "83787" -> "83902" 
+  "83787" -> "83945" 
+  "83787" -> "83946" 
+  "83787" -> "83947" 
+  "83787" -> "83948" 
+  "83787" -> "84000" 
+  "83787" -> "84001" 
+  "83787" -> "84002" 
+  "83787" -> "84003" 
+  "83787" -> "84057" 
+  "83790" -> "83791" 
+  "83790" -> "83792" 
+  "83790" -> "83793" 
+  "83790" -> "83794" 
+  "83790" -> "83799" 
+  "83790" -> "83802" 
+  "83794" -> "83795" 
+  "83794" -> "83796" 
+  "83796" -> "83797" 
+  "83796" -> "83798" 
+  "83799" -> "83800" 
+  "83799" -> "83801" 
+  "83802" -> "83803" 
+  "83802" -> "83807" 
+  "83802" -> "83810" 
+  "83802" -> "83812" 
+  "83803" -> "83804" 
+  "83804" -> "83805" 
+  "83804" -> "83806" 
+  "83807" -> "83808" 
+  "83807" -> "83809" 
+  "83810" -> "83811" 
+  "83812" -> "83813" 
+  "83812" -> "83816" 
+  "83813" -> "83814" 
+  "83814" -> "83815" 
+  "83816" -> "83817" 
+  "83816" -> "83818" 
+  "83818" -> "83819" 
+  "83819" -> "83820" 
+  "83824" -> "83825" 
+  "83824" -> "83826" 
+  "83824" -> "83827" 
+  "83824" -> "83828" 
+  "83824" -> "83833" 
+  "83824" -> "83836" 
+  "83828" -> "83829" 
+  "83828" -> "83830" 
+  "83830" -> "83831" 
+  "83830" -> "83832" 
+  "83833" -> "83834" 
+  "83833" -> "83835" 
+  "83836" -> "83837" 
+  "83836" -> "83841" 
+  "83836" -> "83844" 
+  "83836" -> "83846" 
+  "83837" -> "83838" 
+  "83838" -> "83839" 
+  "83838" -> "83840" 
+  "83841" -> "83842" 
+  "83841" -> "83843" 
+  "83844" -> "83845" 
+  "83846" -> "83847" 
+  "83846" -> "83850" 
+  "83847" -> "83848" 
+  "83848" -> "83849" 
+  "83850" -> "83851" 
+  "83850" -> "83852" 
+  "83852" -> "83853" 
+  "83853" -> "83854" 
+  "83858" -> "83859" 
+  "83858" -> "83860" 
+  "83858" -> "83861" 
+  "83858" -> "83862" 
+  "83858" -> "83867" 
+  "83858" -> "83870" 
+  "83862" -> "83863" 
+  "83862" -> "83864" 
+  "83864" -> "83865" 
+  "83864" -> "83866" 
+  "83867" -> "83868" 
+  "83867" -> "83869" 
+  "83870" -> "83871" 
+  "83870" -> "83875" 
+  "83870" -> "83878" 
+  "83870" -> "83880" 
+  "83871" -> "83872" 
+  "83872" -> "83873" 
+  "83872" -> "83874" 
+  "83875" -> "83876" 
+  "83875" -> "83877" 
+  "83878" -> "83879" 
+  "83880" -> "83881" 
+  "83880" -> "83890" 
+  "83881" -> "83882" 
+  "83881" -> "83887" 
+  "83882" -> "83883" 
+  "83882" -> "83886" 
+  "83883" -> "83884" 
+  "83883" -> "83885" 
+  "83887" -> "83888" 
+  "83888" -> "83889" 
+  "83890" -> "83891" 
+  "83890" -> "83894" 
+  "83891" -> "83892" 
+  "83892" -> "83893" 
+  "83894" -> "83895" 
+  "83894" -> "83896" 
+  "83896" -> "83897" 
+  "83897" -> "83898" 
+  "83902" -> "83903" 
+  "83902" -> "83904" 
+  "83902" -> "83905" 
+  "83902" -> "83906" 
+  "83902" -> "83911" 
+  "83902" -> "83914" 
+  "83906" -> "83907" 
+  "83906" -> "83908" 
+  "83908" -> "83909" 
+  "83908" -> "83910" 
+  "83911" -> "83912" 
+  "83911" -> "83913" 
+  "83914" -> "83915" 
+  "83914" -> "83919" 
+  "83914" -> "83922" 
+  "83914" -> "83924" 
+  "83915" -> "83916" 
+  "83916" -> "83917" 
+  "83916" -> "83918" 
+  "83919" -> "83920" 
+  "83919" -> "83921" 
+  "83922" -> "83923" 
+  "83924" -> "83925" 
+  "83924" -> "83936" 
+  "83925" -> "83926" 
+  "83925" -> "83931" 
+  "83926" -> "83927" 
+  "83926" -> "83930" 
+  "83927" -> "83928" 
+  "83927" -> "83929" 
+  "83931" -> "83932" 
+  "83932" -> "83933" 
+  "83933" -> "83934" 
+  "83933" -> "83935" 
+  "83936" -> "83937" 
+  "83936" -> "83940" 
+  "83937" -> "83938" 
+  "83938" -> "83939" 
+  "83940" -> "83941" 
+  "83940" -> "83942" 
+  "83942" -> "83943" 
+  "83943" -> "83944" 
+  "83948" -> "83949" 
+  "83948" -> "83950" 
+  "83948" -> "83951" 
+  "83948" -> "83952" 
+  "83948" -> "83957" 
+  "83948" -> "83960" 
+  "83952" -> "83953" 
+  "83952" -> "83954" 
+  "83954" -> "83955" 
+  "83954" -> "83956" 
+  "83957" -> "83958" 
+  "83957" -> "83959" 
+  "83960" -> "83961" 
+  "83960" -> "83965" 
+  "83960" -> "83968" 
+  "83960" -> "83970" 
+  "83961" -> "83962" 
+  "83962" -> "83963" 
+  "83962" -> "83964" 
+  "83965" -> "83966" 
+  "83965" -> "83967" 
+  "83968" -> "83969" 
+  "83970" -> "83971" 
+  "83970" -> "83980" 
+  "83970" -> "83985" 
+  "83970" -> "83991" 
+  "83971" -> "83972" 
+  "83971" -> "83977" 
+  "83972" -> "83973" 
+  "83972" -> "83976" 
+  "83973" -> "83974" 
+  "83973" -> "83975" 
+  "83977" -> "83978" 
+  "83978" -> "83979" 
+  "83980" -> "83981" 
+  "83980" -> "83982" 
+  "83982" -> "83983" 
+  "83983" -> "83984" 
+  "83985" -> "83986" 
+  "83985" -> "83989" 
+  "83986" -> "83987" 
+  "83986" -> "83988" 
+  "83989" -> "83990" 
+  "83991" -> "83992" 
+  "83991" -> "83995" 
+  "83992" -> "83993" 
+  "83993" -> "83994" 
+  "83995" -> "83996" 
+  "83995" -> "83997" 
+  "83997" -> "83998" 
+  "83998" -> "83999" 
+  "84003" -> "84004" 
+  "84003" -> "84005" 
+  "84003" -> "84006" 
+  "84003" -> "84007" 
+  "84003" -> "84012" 
+  "84003" -> "84015" 
+  "84007" -> "84008" 
+  "84007" -> "84009" 
+  "84009" -> "84010" 
+  "84009" -> "84011" 
+  "84012" -> "84013" 
+  "84012" -> "84014" 
+  "84015" -> "84016" 
+  "84015" -> "84020" 
+  "84015" -> "84023" 
+  "84015" -> "84025" 
+  "84016" -> "84017" 
+  "84017" -> "84018" 
+  "84017" -> "84019" 
+  "84020" -> "84021" 
+  "84020" -> "84022" 
+  "84023" -> "84024" 
+  "84025" -> "84026" 
+  "84025" -> "84037" 
+  "84025" -> "84042" 
+  "84025" -> "84048" 
+  "84026" -> "84027" 
+  "84026" -> "84032" 
+  "84027" -> "84028" 
+  "84027" -> "84031" 
+  "84028" -> "84029" 
+  "84028" -> "84030" 
+  "84032" -> "84033" 
+  "84033" -> "84034" 
+  "84034" -> "84035" 
+  "84034" -> "84036" 
+  "84037" -> "84038" 
+  "84037" -> "84039" 
+  "84039" -> "84040" 
+  "84040" -> "84041" 
+  "84042" -> "84043" 
+  "84042" -> "84046" 
+  "84043" -> "84044" 
+  "84043" -> "84045" 
+  "84046" -> "84047" 
+  "84048" -> "84049" 
+  "84048" -> "84052" 
+  "84049" -> "84050" 
+  "84050" -> "84051" 
+  "84052" -> "84053" 
+  "84052" -> "84054" 
+  "84054" -> "84055" 
+  "84055" -> "84056" 
+  "84058" -> "84059" 
+  "84058" -> "84060" 
+  "84061" -> "84062" 
+  "84061" -> "84065" 
+  "84062" -> "84063" 
+  "84062" -> "84064" 
+  "84065" -> "84066" 
+  "84065" -> "84069" 
+  "84066" -> "84067" 
+  "84066" -> "84068" 
+  "84069" -> "84070" 
+  "84071" -> "84072" 
+  "84071" -> "84074" 
+  "84072" -> "84073" 
+  "84075" -> "84076" 
+}

@@ -1,0 +1,14 @@
+digraph "nextafter" {  
+"6380" [label = <(METHOD,nextafter)<SUB>259</SUB>> ]
+"6381" [label = <(PARAM,__MATHCALL (nextafter,, (_Mdouble_ __x, _Mdouble_ __y)))<SUB>259</SUB>> ]
+"6382" [label = <(PARAM,__MATHCALL (nextafter,, (_Mdouble_ __x, _Mdouble_ __y)))<SUB>259</SUB>> ]
+"6383" [label = <(METHOD_RETURN,double)<SUB>259</SUB>> ]
+  "6380" -> "6381"  [ label = "AST: "] 
+  "6380" -> "6382"  [ label = "AST: "] 
+  "6380" -> "6383"  [ label = "AST: "] 
+  "6380" -> "6383"  [ label = "CFG: "] 
+  "6381" -> "6383"  [ label = "DDG: __x"] 
+  "6382" -> "6383"  [ label = "DDG: __y"] 
+  "6380" -> "6381"  [ label = "DDG: "] 
+  "6380" -> "6382"  [ label = "DDG: "] 
+}

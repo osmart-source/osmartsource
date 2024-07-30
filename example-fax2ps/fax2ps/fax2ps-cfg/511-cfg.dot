@@ -1,0 +1,65 @@
+digraph "TIFFErrorExtR" {  
+"10835" [label = <(&lt;operator&gt;.logicalAnd,tif &amp;&amp; tif-&gt;tif_errorhandler)<SUB>110</SUB>> ]
+"10868" [label = <(&lt;operator&gt;.logicalAnd,_TIFFerrorHandler &amp;&amp; 1)<SUB>119</SUB>> ]
+"10884" [label = <(&lt;operator&gt;.logicalAnd,_TIFFerrorHandlerExt &amp;&amp; 1)<SUB>125</SUB>> ]
+"10837" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_errorhandler)<SUB>110</SUB>> ]
+"10841" [label = <(va_start,va_start(ap, fmt))<SUB>112</SUB>> ]
+"10845" [label = <(&lt;operator&gt;.assignment,stop = (*tif-&gt;tif_errorhandler)(\012            tif, tif-&gt;tif_errorhandler_user_data, module, fmt, ap))<SUB>113</SUB>> ]
+"10859" [label = <(va_end,va_end(ap))<SUB>115</SUB>> ]
+"10872" [label = <(va_start,va_start(ap, fmt))<SUB>121</SUB>> ]
+"10875" [label = <(*_TIFFerrorHandler,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>122</SUB>> ]
+"10881" [label = <(va_end,va_end(ap))<SUB>123</SUB>> ]
+"10888" [label = <(va_start,va_start(ap, fmt))<SUB>127</SUB>> ]
+"10891" [label = <(*_TIFFerrorHandlerExt,(*_TIFFerrorHandlerExt)(tif ? tif-&gt;tif_clientdata : NULL, module, fmt,\012                                ap))<SUB>128</SUB>> ]
+"10903" [label = <(va_end,va_end(ap))<SUB>130</SUB>> ]
+"10839" [label = <(FIELD_IDENTIFIER,tif_errorhandler,tif_errorhandler)<SUB>110</SUB>> ]
+"10847" [label = <(*tif-&gt;tif_errorhandler,(*tif-&gt;tif_errorhandler)(\012            tif, tif-&gt;tif_errorhandler_user_data, module, fmt, ap))<SUB>113</SUB>> ]
+"10862" [label = <(&lt;operator&gt;.logicalAnd,stop &amp;&amp; 1)<SUB>116</SUB>> ]
+"10876" [label = <(&lt;operator&gt;.indirection,*_TIFFerrorHandler)<SUB>122</SUB>> ]
+"10892" [label = <(&lt;operator&gt;.indirection,*_TIFFerrorHandlerExt)<SUB>128</SUB>> ]
+"10894" [label = <(&lt;operator&gt;.conditional,tif ? tif-&gt;tif_clientdata : NULL)<SUB>128</SUB>> ]
+"10848" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_errorhandler)<SUB>113</SUB>> ]
+"10853" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_errorhandler_user_data)<SUB>114</SUB>> ]
+"10866" [label = <(RETURN,return;,return;)<SUB>117</SUB>> ]
+"10896" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientdata)<SUB>128</SUB>> ]
+"10849" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_errorhandler)<SUB>113</SUB>> ]
+"10855" [label = <(FIELD_IDENTIFIER,tif_errorhandler_user_data,tif_errorhandler_user_data)<SUB>114</SUB>> ]
+"10898" [label = <(FIELD_IDENTIFIER,tif_clientdata,tif_clientdata)<SUB>128</SUB>> ]
+"10851" [label = <(FIELD_IDENTIFIER,tif_errorhandler,tif_errorhandler)<SUB>113</SUB>> ]
+"10828" [label = <(METHOD,TIFFErrorExtR)<SUB>107</SUB>> ]
+"10905" [label = <(METHOD_RETURN,void)<SUB>107</SUB>> ]
+  "10835" -> "10841" 
+  "10835" -> "10868" 
+  "10868" -> "10872" 
+  "10868" -> "10884" 
+  "10884" -> "10905" 
+  "10884" -> "10888" 
+  "10837" -> "10835" 
+  "10841" -> "10851" 
+  "10845" -> "10859" 
+  "10859" -> "10862" 
+  "10872" -> "10876" 
+  "10875" -> "10881" 
+  "10881" -> "10884" 
+  "10888" -> "10892" 
+  "10891" -> "10903" 
+  "10903" -> "10905" 
+  "10839" -> "10837" 
+  "10847" -> "10845" 
+  "10862" -> "10866" 
+  "10862" -> "10868" 
+  "10876" -> "10875" 
+  "10892" -> "10898" 
+  "10892" -> "10894" 
+  "10894" -> "10891" 
+  "10848" -> "10855" 
+  "10853" -> "10847" 
+  "10866" -> "10905" 
+  "10896" -> "10894" 
+  "10849" -> "10848" 
+  "10855" -> "10853" 
+  "10898" -> "10896" 
+  "10851" -> "10849" 
+  "10828" -> "10835" 
+  "10828" -> "10839" 
+}

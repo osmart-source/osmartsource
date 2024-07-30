@@ -1,0 +1,99 @@
+digraph "TIFFWriteDirectoryTagSlong8Array" {  
+"68384" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagSlong8Array&quot;)<SUB>1615</SUB>> ]
+"68417" [label = <(&lt;operator&gt;.assignment,p = _TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1637</SUB>> ]
+"68494" [label = <(&lt;operator&gt;.assignment,o = TIFFWriteDirectoryTagCheckedSlongArray(tif, ndir, dir, tag, count, p))<SUB>1669</SUB>> ]
+"68503" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>1670</SUB>> ]
+"68506" [label = <(RETURN,return (o);,return (o);)<SUB>1672</SUB>> ]
+"68393" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1623</SUB>> ]
+"68403" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1629</SUB>> ]
+"68419" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1637</SUB>> ]
+"68426" [label = <(&lt;operator&gt;.equals,p == NULL)<SUB>1638</SUB>> ]
+"68448" [label = <(&lt;operator&gt;.lessThan,mb &lt; count)<SUB>1644</SUB>> ]
+"68496" [label = <(TIFFWriteDirectoryTagCheckedSlongArray,TIFFWriteDirectoryTagCheckedSlongArray(tif, ndir, dir, tag, count, p))<SUB>1669</SUB>> ]
+"68397" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1625</SUB>> ]
+"68400" [label = <(RETURN,return (1);,return (1);)<SUB>1626</SUB>> ]
+"68404" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1629</SUB>> ]
+"68409" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedSlong8Array(tif, ndir, dir, tag,\012                                                        count, value));,return (TIFFWriteDirectoryTagCheckedSlong8Array(tif, ndir, dir, tag,\012                                                        count, value));)<SUB>1630</SUB>> ]
+"68421" [label = <(&lt;operator&gt;.multiplication,count * sizeof(uint32_t))<SUB>1637</SUB>> ]
+"68430" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1640</SUB>> ]
+"68434" [label = <(RETURN,return (0);,return (0);)<SUB>1641</SUB>> ]
+"68452" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>1644</SUB>> ]
+"68454" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>1644</SUB>> ]
+"68456" [label = <(&lt;operator&gt;.postIncrement,q++)<SUB>1644</SUB>> ]
+"68488" [label = <(&lt;operator&gt;.assignment,*q = (int32_t)(*ma))<SUB>1666</SUB>> ]
+"68398" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1625</SUB>> ]
+"68406" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1629</SUB>> ]
+"68410" [label = <(TIFFWriteDirectoryTagCheckedSlong8Array,TIFFWriteDirectoryTagCheckedSlong8Array(tif, ndir, dir, tag,\012                                                        count, value))<SUB>1630</SUB>> ]
+"68423" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1637</SUB>> ]
+"68439" [label = <(&lt;operator&gt;.assignment,q = p)<SUB>1644</SUB>> ]
+"68442" [label = <(&lt;operator&gt;.assignment,ma = value)<SUB>1644</SUB>> ]
+"68445" [label = <(&lt;operator&gt;.assignment,mb = 0)<SUB>1644</SUB>> ]
+"68460" [label = <(&lt;operator&gt;.greaterThan,*ma &gt; (2147483647))<SUB>1646</SUB>> ]
+"68489" [label = <(&lt;operator&gt;.indirection,*q)<SUB>1666</SUB>> ]
+"68491" [label = <(int32_t,(int32_t)(*ma))<SUB>1666</SUB>> ]
+"68461" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>1646</SUB>> ]
+"68465" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write signed long value %&quot; PRIi64\012                          &quot; larger than 0x7FFFFFFF (2147483647) for tag %d in &quot;\012                          &quot;Classic TIFF file. TIFF writing to file aborted&quot;,\012                          *ma, tag);,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write signed long value %&quot; PRIi64\012                          &quot; larger than 0x7FFFFFFF (2147483647) for tag %d in &quot;\012                          &quot;Classic TIFF file. TIFF writing to file aborted&quot;,\012                          *ma, tag);)<SUB>1648</SUB>> ]
+"68466" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>1653</SUB>> ]
+"68469" [label = <(RETURN,return (0);,return (0);)<SUB>1654</SUB>> ]
+"68492" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>1666</SUB>> ]
+"68474" [label = <(&lt;operator&gt;.lessThan,*ma &lt; (-2147483647 - 1))<SUB>1656</SUB>> ]
+"68475" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>1656</SUB>> ]
+"68477" [label = <(&lt;operator&gt;.subtraction,-2147483647 - 1)<SUB>1656</SUB>> ]
+"68482" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write signed long value %&quot; PRIi64\012                          &quot; smaller than 0x80000000 (-2147483648) for tag %d &quot;\012                          &quot;in Classic TIFF file. TIFF writing to file aborted&quot;,\012                          *ma, tag);,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write signed long value %&quot; PRIi64\012                          &quot; smaller than 0x80000000 (-2147483648) for tag %d &quot;\012                          &quot;in Classic TIFF file. TIFF writing to file aborted&quot;,\012                          *ma, tag);)<SUB>1658</SUB>> ]
+"68483" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>1663</SUB>> ]
+"68486" [label = <(RETURN,return (0);,return (0);)<SUB>1664</SUB>> ]
+"68478" [label = <(&lt;operator&gt;.minus,-2147483647)<SUB>1656</SUB>> ]
+"68375" [label = <(METHOD,TIFFWriteDirectoryTagSlong8Array)<SUB>1611</SUB>> ]
+"68508" [label = <(METHOD_RETURN,int)<SUB>1611</SUB>> ]
+  "68384" -> "68393" 
+  "68417" -> "68426" 
+  "68494" -> "68503" 
+  "68503" -> "68506" 
+  "68506" -> "68508" 
+  "68393" -> "68398" 
+  "68393" -> "68406" 
+  "68403" -> "68410" 
+  "68403" -> "68423" 
+  "68419" -> "68417" 
+  "68426" -> "68430" 
+  "68426" -> "68439" 
+  "68448" -> "68461" 
+  "68448" -> "68496" 
+  "68496" -> "68494" 
+  "68397" -> "68400" 
+  "68400" -> "68508" 
+  "68404" -> "68403" 
+  "68409" -> "68508" 
+  "68421" -> "68419" 
+  "68430" -> "68434" 
+  "68434" -> "68508" 
+  "68452" -> "68454" 
+  "68454" -> "68456" 
+  "68456" -> "68448" 
+  "68488" -> "68452" 
+  "68398" -> "68397" 
+  "68406" -> "68404" 
+  "68410" -> "68409" 
+  "68423" -> "68421" 
+  "68439" -> "68442" 
+  "68442" -> "68445" 
+  "68445" -> "68448" 
+  "68460" -> "68465" 
+  "68460" -> "68475" 
+  "68489" -> "68492" 
+  "68491" -> "68488" 
+  "68461" -> "68460" 
+  "68465" -> "68466" 
+  "68466" -> "68469" 
+  "68469" -> "68508" 
+  "68492" -> "68491" 
+  "68474" -> "68482" 
+  "68474" -> "68489" 
+  "68475" -> "68478" 
+  "68477" -> "68474" 
+  "68482" -> "68483" 
+  "68483" -> "68486" 
+  "68486" -> "68508" 
+  "68478" -> "68477" 
+  "68375" -> "68384" 
+}

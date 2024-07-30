@@ -1,0 +1,441 @@
+digraph "TIFFRewriteDirectory" {  
+"64497" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFRewriteDirectory&quot;)<SUB>313</SUB>> ]
+"64924" [label = <(RETURN,return TIFFWriteDirectory(tif);,return TIFFWriteDirectory(tif);)<SUB>465</SUB>> ]
+"64501" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_diroff == 0)<SUB>316</SUB>> ]
+"64511" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>324</SUB>> ]
+"64925" [label = <(TIFFWriteDirectory,TIFFWriteDirectory(tif))<SUB>465</SUB>> ]
+"64502" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>316</SUB>> ]
+"64507" [label = <(RETURN,return TIFFWriteDirectory(tif);,return TIFFWriteDirectory(tif);)<SUB>317</SUB>> ]
+"64512" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>324</SUB>> ]
+"64504" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>316</SUB>> ]
+"64508" [label = <(TIFFWriteDirectory,TIFFWriteDirectory(tif))<SUB>317</SUB>> ]
+"64513" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>324</SUB>> ]
+"64519" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_header.classic.tiff_diroff == tif-&gt;tif_diroff)<SUB>326</SUB>> ]
+"64515" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>324</SUB>> ]
+"64520" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>326</SUB>> ]
+"64527" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>326</SUB>> ]
+"64531" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_header.classic.tiff_diroff = 0)<SUB>328</SUB>> ]
+"64540" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_diroff = 0)<SUB>329</SUB>> ]
+"64545" [label = <(TIFFSeekFile,TIFFSeekFile(tif, 4, SEEK_SET))<SUB>331</SUB>> ]
+"64722" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_header.big.tiff_diroff == tif-&gt;tif_diroff)<SUB>393</SUB>> ]
+"64521" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>326</SUB>> ]
+"64526" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>326</SUB>> ]
+"64529" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>326</SUB>> ]
+"64532" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>328</SUB>> ]
+"64541" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>329</SUB>> ]
+"64550" [label = <(&lt;operator&gt;.logicalNot,!WriteOK(tif, &amp;(tif-&gt;tif_header.classic.tiff_diroff), 4))<SUB>332</SUB>> ]
+"64723" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>393</SUB>> ]
+"64730" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>393</SUB>> ]
+"64734" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_header.big.tiff_diroff = 0)<SUB>395</SUB>> ]
+"64743" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_diroff = 0)<SUB>396</SUB>> ]
+"64748" [label = <(TIFFSeekFile,TIFFSeekFile(tif, 8, SEEK_SET))<SUB>398</SUB>> ]
+"64522" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>326</SUB>> ]
+"64525" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>326</SUB>> ]
+"64533" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>328</SUB>> ]
+"64538" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>328</SUB>> ]
+"64543" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>329</SUB>> ]
+"64551" [label = <(WriteOK,WriteOK(tif, &amp;(tif-&gt;tif_header.classic.tiff_diroff), 4))<SUB>332</SUB>> ]
+"64563" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;Error updating TIFF header&quot;))<SUB>334</SUB>> ]
+"64569" [label = <(RETURN,return (0);,return (0);)<SUB>335</SUB>> ]
+"64574" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_diroff &gt; 0xFFFFFFFFU)<SUB>338</SUB>> ]
+"64724" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>393</SUB>> ]
+"64729" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>393</SUB>> ]
+"64732" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>393</SUB>> ]
+"64735" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>395</SUB>> ]
+"64744" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>396</SUB>> ]
+"64753" [label = <(&lt;operator&gt;.logicalNot,!WriteOK(tif, &amp;(tif-&gt;tif_header.big.tiff_diroff), 8))<SUB>399</SUB>> ]
+"64777" [label = <(&lt;operator&gt;.assignment,nextdir = tif-&gt;tif_header.big.tiff_diroff)<SUB>408</SUB>> ]
+"64524" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>326</SUB>> ]
+"64534" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>328</SUB>> ]
+"64537" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>328</SUB>> ]
+"64553" [label = <(&lt;operator&gt;.addressOf,&amp;(tif-&gt;tif_header.classic.tiff_diroff))<SUB>332</SUB>> ]
+"64565" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>334</SUB>> ]
+"64575" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>338</SUB>> ]
+"64580" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                          &quot;tif-&gt;tif_diroff exceeds 32 bit range allowed for &quot;\012                          &quot;Classic TIFF&quot;))<SUB>340</SUB>> ]
+"64584" [label = <(RETURN,return (0);,return (0);)<SUB>343</SUB>> ]
+"64725" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>393</SUB>> ]
+"64728" [label = <(FIELD_IDENTIFIER,big,big)<SUB>393</SUB>> ]
+"64736" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>395</SUB>> ]
+"64741" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>395</SUB>> ]
+"64746" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>396</SUB>> ]
+"64754" [label = <(WriteOK,WriteOK(tif, &amp;(tif-&gt;tif_header.big.tiff_diroff), 8))<SUB>399</SUB>> ]
+"64766" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;Error updating TIFF header&quot;))<SUB>401</SUB>> ]
+"64772" [label = <(RETURN,return (0);,return (0);)<SUB>402</SUB>> ]
+"64779" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>408</SUB>> ]
+"64536" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>328</SUB>> ]
+"64554" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>332</SUB>> ]
+"64567" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>334</SUB>> ]
+"64577" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>338</SUB>> ]
+"64589" [label = <(&lt;operator&gt;.assignment,nextdir = tif-&gt;tif_header.classic.tiff_diroff)<SUB>348</SUB>> ]
+"64727" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>393</SUB>> ]
+"64737" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>395</SUB>> ]
+"64740" [label = <(FIELD_IDENTIFIER,big,big)<SUB>395</SUB>> ]
+"64756" [label = <(&lt;operator&gt;.addressOf,&amp;(tif-&gt;tif_header.big.tiff_diroff))<SUB>399</SUB>> ]
+"64768" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>401</SUB>> ]
+"64780" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>408</SUB>> ]
+"64785" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>408</SUB>> ]
+"64832" [label = <(&lt;operator&gt;.assignment,dircount = (uint16_t)dircount64)<SUB>430</SUB>> ]
+"64837" [label = <(&lt;operator&gt;.cast,(void)TIFFSeekFile(tif, nextdir + 8 + dircount * 20, SEEK_SET))<SUB>431</SUB>> ]
+"64921" [label = <(&lt;operator&gt;.assignment,nextdir = nextnextdir)<SUB>456</SUB>> ]
+"64555" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>332</SUB>> ]
+"64560" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>332</SUB>> ]
+"64591" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic.tiff_diroff)<SUB>348</SUB>> ]
+"64739" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>395</SUB>> ]
+"64757" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big.tiff_diroff)<SUB>399</SUB>> ]
+"64770" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>401</SUB>> ]
+"64781" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>408</SUB>> ]
+"64784" [label = <(FIELD_IDENTIFIER,big,big)<SUB>408</SUB>> ]
+"64793" [label = <(&lt;operator&gt;.logicalOr,!SeekOK(tif, nextdir) || !ReadOK(tif, &amp;dircount64, 8))<SUB>415</SUB>> ]
+"64812" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>421</SUB>> ]
+"64822" [label = <(&lt;operator&gt;.greaterThan,dircount64 &gt; 0xFFFF)<SUB>423</SUB>> ]
+"64834" [label = <(&lt;operator&gt;.cast,(uint16_t)dircount64)<SUB>430</SUB>> ]
+"64838" [label = <(UNKNOWN,void,void)<SUB>431</SUB>> ]
+"64839" [label = <(TIFFSeekFile,TIFFSeekFile(tif, nextdir + 8 + dircount * 20, SEEK_SET))<SUB>431</SUB>> ]
+"64850" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;nextnextdir, 8))<SUB>432</SUB>> ]
+"64864" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>437</SUB>> ]
+"64874" [label = <(&lt;operator&gt;.equals,nextnextdir == tif-&gt;tif_diroff)<SUB>439</SUB>> ]
+"64556" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>332</SUB>> ]
+"64559" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>332</SUB>> ]
+"64592" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.classic)<SUB>348</SUB>> ]
+"64597" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>348</SUB>> ]
+"64632" [label = <(&lt;operator&gt;.cast,(void)TIFFSeekFile(tif, nextdir + 2 + dircount * 12, SEEK_SET))<SUB>362</SUB>> ]
+"64716" [label = <(&lt;operator&gt;.assignment,nextdir = nextnextdir)<SUB>387</SUB>> ]
+"64758" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_header.big)<SUB>399</SUB>> ]
+"64763" [label = <(FIELD_IDENTIFIER,tiff_diroff,tiff_diroff)<SUB>399</SUB>> ]
+"64783" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>408</SUB>> ]
+"64794" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, nextdir))<SUB>415</SUB>> ]
+"64798" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;dircount64, 8))<SUB>415</SUB>> ]
+"64805" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                                  &quot;Error fetching directory count&quot;))<SUB>417</SUB>> ]
+"64809" [label = <(RETURN,return (0);,return (0);)<SUB>419</SUB>> ]
+"64813" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>421</SUB>> ]
+"64818" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;dircount64))<SUB>422</SUB>> ]
+"64826" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                                  &quot;Sanity check on tag count failed, likely &quot;\012                                  &quot;corrupt TIFF&quot;))<SUB>425</SUB>> ]
+"64830" [label = <(RETURN,return (0);,return (0);)<SUB>428</SUB>> ]
+"64835" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>430</SUB>> ]
+"64841" [label = <(&lt;operator&gt;.addition,nextdir + 8 + dircount * 20)<SUB>431</SUB>> ]
+"64851" [label = <(ReadOK,ReadOK(tif, &amp;nextnextdir, 8))<SUB>432</SUB>> ]
+"64857" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory link&quot;))<SUB>434</SUB>> ]
+"64861" [label = <(RETURN,return (0);,return (0);)<SUB>435</SUB>> ]
+"64865" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>437</SUB>> ]
+"64870" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;nextnextdir))<SUB>438</SUB>> ]
+"64876" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>439</SUB>> ]
+"64881" [label = <(&lt;operator&gt;.assignment,m = 0)<SUB>442</SUB>> ]
+"64884" [label = <(&lt;operator&gt;.cast,(void)TIFFSeekFile(tif, nextdir + 8 + dircount * 20,\012                                       SEEK_SET))<SUB>443</SUB>> ]
+"64910" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_diroff = 0)<SUB>451</SUB>> ]
+"64915" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_lastdiroff = 0)<SUB>453</SUB>> ]
+"64558" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>332</SUB>> ]
+"64593" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>348</SUB>> ]
+"64596" [label = <(FIELD_IDENTIFIER,classic,classic)<SUB>348</SUB>> ]
+"64604" [label = <(&lt;operator&gt;.logicalOr,!SeekOK(tif, nextdir) || !ReadOK(tif, &amp;dircount, 2))<SUB>354</SUB>> ]
+"64623" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>360</SUB>> ]
+"64633" [label = <(UNKNOWN,void,void)<SUB>362</SUB>> ]
+"64634" [label = <(TIFFSeekFile,TIFFSeekFile(tif, nextdir + 2 + dircount * 12, SEEK_SET))<SUB>362</SUB>> ]
+"64645" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;nextnextdir, 4))<SUB>363</SUB>> ]
+"64659" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>368</SUB>> ]
+"64669" [label = <(&lt;operator&gt;.equals,nextnextdir == tif-&gt;tif_diroff)<SUB>370</SUB>> ]
+"64759" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_header)<SUB>399</SUB>> ]
+"64762" [label = <(FIELD_IDENTIFIER,big,big)<SUB>399</SUB>> ]
+"64795" [label = <(SeekOK,SeekOK(tif, nextdir))<SUB>415</SUB>> ]
+"64799" [label = <(ReadOK,ReadOK(tif, &amp;dircount64, 8))<SUB>415</SUB>> ]
+"64815" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>421</SUB>> ]
+"64819" [label = <(&lt;operator&gt;.addressOf,&amp;dircount64)<SUB>422</SUB>> ]
+"64842" [label = <(&lt;operator&gt;.addition,nextdir + 8)<SUB>431</SUB>> ]
+"64845" [label = <(&lt;operator&gt;.multiplication,dircount * 20)<SUB>431</SUB>> ]
+"64853" [label = <(&lt;operator&gt;.addressOf,&amp;nextnextdir)<SUB>432</SUB>> ]
+"64867" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>437</SUB>> ]
+"64871" [label = <(&lt;operator&gt;.addressOf,&amp;nextnextdir)<SUB>438</SUB>> ]
+"64878" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>439</SUB>> ]
+"64885" [label = <(UNKNOWN,void,void)<SUB>443</SUB>> ]
+"64886" [label = <(TIFFSeekFile,TIFFSeekFile(tif, nextdir + 8 + dircount * 20,\012                                       SEEK_SET))<SUB>443</SUB>> ]
+"64897" [label = <(&lt;operator&gt;.logicalNot,!WriteOK(tif, &amp;m, 8))<SUB>445</SUB>> ]
+"64911" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>451</SUB>> ]
+"64916" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_lastdiroff)<SUB>453</SUB>> ]
+"64595" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>348</SUB>> ]
+"64605" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, nextdir))<SUB>354</SUB>> ]
+"64609" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, &amp;dircount, 2))<SUB>354</SUB>> ]
+"64616" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                                  &quot;Error fetching directory count&quot;))<SUB>356</SUB>> ]
+"64620" [label = <(RETURN,return (0);,return (0);)<SUB>358</SUB>> ]
+"64624" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>360</SUB>> ]
+"64629" [label = <(TIFFSwabShort,TIFFSwabShort(&amp;dircount))<SUB>361</SUB>> ]
+"64636" [label = <(&lt;operator&gt;.addition,nextdir + 2 + dircount * 12)<SUB>362</SUB>> ]
+"64646" [label = <(ReadOK,ReadOK(tif, &amp;nextnextdir, 4))<SUB>363</SUB>> ]
+"64652" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Error fetching directory link&quot;))<SUB>365</SUB>> ]
+"64656" [label = <(RETURN,return (0);,return (0);)<SUB>366</SUB>> ]
+"64660" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>368</SUB>> ]
+"64665" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;nextnextdir))<SUB>369</SUB>> ]
+"64671" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>370</SUB>> ]
+"64676" [label = <(&lt;operator&gt;.assignment,m = 0)<SUB>373</SUB>> ]
+"64679" [label = <(&lt;operator&gt;.cast,(void)TIFFSeekFile(tif, nextdir + 2 + dircount * 12,\012                                       SEEK_SET))<SUB>374</SUB>> ]
+"64705" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_diroff = 0)<SUB>382</SUB>> ]
+"64710" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_lastdiroff = 0)<SUB>384</SUB>> ]
+"64761" [label = <(FIELD_IDENTIFIER,tif_header,tif_header)<SUB>399</SUB>> ]
+"64801" [label = <(&lt;operator&gt;.addressOf,&amp;dircount64)<SUB>415</SUB>> ]
+"64888" [label = <(&lt;operator&gt;.addition,nextdir + 8 + dircount * 20)<SUB>443</SUB>> ]
+"64898" [label = <(WriteOK,WriteOK(tif, &amp;m, 8))<SUB>445</SUB>> ]
+"64904" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                                      &quot;Error writing directory link&quot;))<SUB>447</SUB>> ]
+"64908" [label = <(RETURN,return (0);,return (0);)<SUB>449</SUB>> ]
+"64913" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>451</SUB>> ]
+"64918" [label = <(FIELD_IDENTIFIER,tif_lastdiroff,tif_lastdiroff)<SUB>453</SUB>> ]
+"64606" [label = <(SeekOK,SeekOK(tif, nextdir))<SUB>354</SUB>> ]
+"64610" [label = <(ReadOK,ReadOK(tif, &amp;dircount, 2))<SUB>354</SUB>> ]
+"64626" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>360</SUB>> ]
+"64630" [label = <(&lt;operator&gt;.addressOf,&amp;dircount)<SUB>361</SUB>> ]
+"64637" [label = <(&lt;operator&gt;.addition,nextdir + 2)<SUB>362</SUB>> ]
+"64640" [label = <(&lt;operator&gt;.multiplication,dircount * 12)<SUB>362</SUB>> ]
+"64648" [label = <(&lt;operator&gt;.addressOf,&amp;nextnextdir)<SUB>363</SUB>> ]
+"64662" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>368</SUB>> ]
+"64666" [label = <(&lt;operator&gt;.addressOf,&amp;nextnextdir)<SUB>369</SUB>> ]
+"64673" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>370</SUB>> ]
+"64680" [label = <(UNKNOWN,void,void)<SUB>374</SUB>> ]
+"64681" [label = <(TIFFSeekFile,TIFFSeekFile(tif, nextdir + 2 + dircount * 12,\012                                       SEEK_SET))<SUB>374</SUB>> ]
+"64692" [label = <(&lt;operator&gt;.logicalNot,!WriteOK(tif, &amp;m, 4))<SUB>376</SUB>> ]
+"64706" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>382</SUB>> ]
+"64711" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_lastdiroff)<SUB>384</SUB>> ]
+"64889" [label = <(&lt;operator&gt;.addition,nextdir + 8)<SUB>443</SUB>> ]
+"64892" [label = <(&lt;operator&gt;.multiplication,dircount * 20)<SUB>443</SUB>> ]
+"64900" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>445</SUB>> ]
+"64612" [label = <(&lt;operator&gt;.addressOf,&amp;dircount)<SUB>354</SUB>> ]
+"64683" [label = <(&lt;operator&gt;.addition,nextdir + 2 + dircount * 12)<SUB>374</SUB>> ]
+"64693" [label = <(WriteOK,WriteOK(tif, &amp;m, 4))<SUB>376</SUB>> ]
+"64699" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                                      &quot;Error writing directory link&quot;))<SUB>378</SUB>> ]
+"64703" [label = <(RETURN,return (0);,return (0);)<SUB>380</SUB>> ]
+"64708" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>382</SUB>> ]
+"64713" [label = <(FIELD_IDENTIFIER,tif_lastdiroff,tif_lastdiroff)<SUB>384</SUB>> ]
+"64684" [label = <(&lt;operator&gt;.addition,nextdir + 2)<SUB>374</SUB>> ]
+"64687" [label = <(&lt;operator&gt;.multiplication,dircount * 12)<SUB>374</SUB>> ]
+"64695" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>376</SUB>> ]
+"64493" [label = <(METHOD,TIFFRewriteDirectory)<SUB>311</SUB>> ]
+"64927" [label = <(METHOD_RETURN,int)<SUB>311</SUB>> ]
+  "64497" -> "64504" 
+  "64924" -> "64927" 
+  "64501" -> "64508" 
+  "64501" -> "64515" 
+  "64511" -> "64524" 
+  "64511" -> "64727" 
+  "64925" -> "64924" 
+  "64502" -> "64501" 
+  "64507" -> "64927" 
+  "64512" -> "64511" 
+  "64504" -> "64502" 
+  "64508" -> "64507" 
+  "64513" -> "64512" 
+  "64519" -> "64536" 
+  "64519" -> "64577" 
+  "64515" -> "64513" 
+  "64520" -> "64529" 
+  "64527" -> "64519" 
+  "64531" -> "64543" 
+  "64540" -> "64545" 
+  "64545" -> "64558" 
+  "64722" -> "64739" 
+  "64722" -> "64783" 
+  "64521" -> "64526" 
+  "64526" -> "64520" 
+  "64529" -> "64527" 
+  "64532" -> "64531" 
+  "64541" -> "64540" 
+  "64550" -> "64567" 
+  "64550" -> "64925" 
+  "64723" -> "64732" 
+  "64730" -> "64722" 
+  "64734" -> "64746" 
+  "64743" -> "64748" 
+  "64748" -> "64761" 
+  "64522" -> "64525" 
+  "64525" -> "64521" 
+  "64533" -> "64538" 
+  "64538" -> "64532" 
+  "64543" -> "64541" 
+  "64551" -> "64550" 
+  "64563" -> "64569" 
+  "64569" -> "64927" 
+  "64574" -> "64580" 
+  "64574" -> "64595" 
+  "64724" -> "64729" 
+  "64729" -> "64723" 
+  "64732" -> "64730" 
+  "64735" -> "64734" 
+  "64744" -> "64743" 
+  "64753" -> "64770" 
+  "64753" -> "64925" 
+  "64777" -> "64795" 
+  "64777" -> "64925" 
+  "64524" -> "64522" 
+  "64534" -> "64537" 
+  "64537" -> "64533" 
+  "64553" -> "64551" 
+  "64565" -> "64563" 
+  "64575" -> "64574" 
+  "64580" -> "64584" 
+  "64584" -> "64927" 
+  "64725" -> "64728" 
+  "64728" -> "64724" 
+  "64736" -> "64741" 
+  "64741" -> "64735" 
+  "64746" -> "64744" 
+  "64754" -> "64753" 
+  "64766" -> "64772" 
+  "64772" -> "64927" 
+  "64779" -> "64777" 
+  "64536" -> "64534" 
+  "64554" -> "64553" 
+  "64567" -> "64565" 
+  "64577" -> "64575" 
+  "64589" -> "64606" 
+  "64589" -> "64925" 
+  "64727" -> "64725" 
+  "64737" -> "64740" 
+  "64740" -> "64736" 
+  "64756" -> "64754" 
+  "64768" -> "64766" 
+  "64780" -> "64785" 
+  "64785" -> "64779" 
+  "64832" -> "64838" 
+  "64837" -> "64853" 
+  "64921" -> "64795" 
+  "64921" -> "64925" 
+  "64555" -> "64560" 
+  "64560" -> "64554" 
+  "64591" -> "64589" 
+  "64739" -> "64737" 
+  "64757" -> "64756" 
+  "64770" -> "64768" 
+  "64781" -> "64784" 
+  "64784" -> "64780" 
+  "64793" -> "64805" 
+  "64793" -> "64815" 
+  "64812" -> "64819" 
+  "64812" -> "64822" 
+  "64822" -> "64826" 
+  "64822" -> "64835" 
+  "64834" -> "64832" 
+  "64838" -> "64842" 
+  "64839" -> "64837" 
+  "64850" -> "64857" 
+  "64850" -> "64867" 
+  "64864" -> "64871" 
+  "64864" -> "64878" 
+  "64874" -> "64881" 
+  "64874" -> "64921" 
+  "64556" -> "64559" 
+  "64559" -> "64555" 
+  "64592" -> "64597" 
+  "64597" -> "64591" 
+  "64632" -> "64648" 
+  "64716" -> "64606" 
+  "64716" -> "64925" 
+  "64758" -> "64763" 
+  "64763" -> "64757" 
+  "64783" -> "64781" 
+  "64794" -> "64793" 
+  "64794" -> "64801" 
+  "64798" -> "64793" 
+  "64805" -> "64809" 
+  "64809" -> "64927" 
+  "64813" -> "64812" 
+  "64818" -> "64822" 
+  "64826" -> "64830" 
+  "64830" -> "64927" 
+  "64835" -> "64834" 
+  "64841" -> "64839" 
+  "64851" -> "64850" 
+  "64857" -> "64861" 
+  "64861" -> "64927" 
+  "64865" -> "64864" 
+  "64870" -> "64878" 
+  "64876" -> "64874" 
+  "64881" -> "64885" 
+  "64884" -> "64900" 
+  "64910" -> "64918" 
+  "64915" -> "64925" 
+  "64558" -> "64556" 
+  "64593" -> "64596" 
+  "64596" -> "64592" 
+  "64604" -> "64616" 
+  "64604" -> "64626" 
+  "64623" -> "64633" 
+  "64623" -> "64630" 
+  "64633" -> "64637" 
+  "64634" -> "64632" 
+  "64645" -> "64652" 
+  "64645" -> "64662" 
+  "64659" -> "64666" 
+  "64659" -> "64673" 
+  "64669" -> "64676" 
+  "64669" -> "64716" 
+  "64759" -> "64762" 
+  "64762" -> "64758" 
+  "64795" -> "64794" 
+  "64799" -> "64798" 
+  "64815" -> "64813" 
+  "64819" -> "64818" 
+  "64842" -> "64845" 
+  "64845" -> "64841" 
+  "64853" -> "64851" 
+  "64867" -> "64865" 
+  "64871" -> "64870" 
+  "64878" -> "64876" 
+  "64885" -> "64889" 
+  "64886" -> "64884" 
+  "64897" -> "64904" 
+  "64897" -> "64913" 
+  "64911" -> "64910" 
+  "64916" -> "64915" 
+  "64595" -> "64593" 
+  "64605" -> "64604" 
+  "64605" -> "64612" 
+  "64609" -> "64604" 
+  "64616" -> "64620" 
+  "64620" -> "64927" 
+  "64624" -> "64623" 
+  "64629" -> "64633" 
+  "64636" -> "64634" 
+  "64646" -> "64645" 
+  "64652" -> "64656" 
+  "64656" -> "64927" 
+  "64660" -> "64659" 
+  "64665" -> "64673" 
+  "64671" -> "64669" 
+  "64676" -> "64680" 
+  "64679" -> "64695" 
+  "64705" -> "64713" 
+  "64710" -> "64925" 
+  "64761" -> "64759" 
+  "64801" -> "64799" 
+  "64888" -> "64886" 
+  "64898" -> "64897" 
+  "64904" -> "64908" 
+  "64908" -> "64927" 
+  "64913" -> "64911" 
+  "64918" -> "64916" 
+  "64606" -> "64605" 
+  "64610" -> "64609" 
+  "64626" -> "64624" 
+  "64630" -> "64629" 
+  "64637" -> "64640" 
+  "64640" -> "64636" 
+  "64648" -> "64646" 
+  "64662" -> "64660" 
+  "64666" -> "64665" 
+  "64673" -> "64671" 
+  "64680" -> "64684" 
+  "64681" -> "64679" 
+  "64692" -> "64699" 
+  "64692" -> "64708" 
+  "64706" -> "64705" 
+  "64711" -> "64710" 
+  "64889" -> "64892" 
+  "64892" -> "64888" 
+  "64900" -> "64898" 
+  "64612" -> "64610" 
+  "64683" -> "64681" 
+  "64693" -> "64692" 
+  "64699" -> "64703" 
+  "64703" -> "64927" 
+  "64708" -> "64706" 
+  "64713" -> "64711" 
+  "64684" -> "64687" 
+  "64687" -> "64683" 
+  "64695" -> "64693" 
+  "64493" -> "64497" 
+}

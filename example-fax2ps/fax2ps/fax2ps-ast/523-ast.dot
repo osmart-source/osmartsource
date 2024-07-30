@@ -1,0 +1,117 @@
+digraph "_TIFFDefaultStripSize" {  
+"11384" [label = <(METHOD,_TIFFDefaultStripSize)<SUB>211</SUB>> ]
+"11385" [label = <(PARAM,TIFF *tif)<SUB>211</SUB>> ]
+"11386" [label = <(PARAM,uint32_t s)<SUB>211</SUB>> ]
+"11387" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>212</SUB>> ]
+"11388" [label = <(CONTROL_STRUCTURE,if ((int32_t)s &lt; 1),if ((int32_t)s &lt; 1))<SUB>213</SUB>> ]
+"11389" [label = <(&lt;operator&gt;.lessThan,(int32_t)s &lt; 1)<SUB>213</SUB>> ]
+"11390" [label = <(&lt;operator&gt;.cast,(int32_t)s)<SUB>213</SUB>> ]
+"11391" [label = <(UNKNOWN,int32_t,int32_t)<SUB>213</SUB>> ]
+"11392" [label = <(IDENTIFIER,s,(int32_t)s)<SUB>213</SUB>> ]
+"11393" [label = <(LITERAL,1,(int32_t)s &lt; 1)<SUB>213</SUB>> ]
+"11394" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>214</SUB>> ]
+"11395" [label = <(LOCAL,uint64_t scanlinesize: uint64_t)<SUB>220</SUB>> ]
+"11396" [label = <(LOCAL,uint64_t rows: uint64_t)<SUB>221</SUB>> ]
+"11397" [label = <(&lt;operator&gt;.assignment,scanlinesize = TIFFScanlineSize64(tif))<SUB>222</SUB>> ]
+"11398" [label = <(IDENTIFIER,scanlinesize,scanlinesize = TIFFScanlineSize64(tif))<SUB>222</SUB>> ]
+"11399" [label = <(TIFFScanlineSize64,TIFFScanlineSize64(tif))<SUB>222</SUB>> ]
+"11400" [label = <(IDENTIFIER,tif,TIFFScanlineSize64(tif))<SUB>222</SUB>> ]
+"11401" [label = <(CONTROL_STRUCTURE,if (scanlinesize == 0),if (scanlinesize == 0))<SUB>223</SUB>> ]
+"11402" [label = <(&lt;operator&gt;.equals,scanlinesize == 0)<SUB>223</SUB>> ]
+"11403" [label = <(IDENTIFIER,scanlinesize,scanlinesize == 0)<SUB>223</SUB>> ]
+"11404" [label = <(LITERAL,0,scanlinesize == 0)<SUB>223</SUB>> ]
+"11405" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>224</SUB>> ]
+"11406" [label = <(&lt;operator&gt;.assignment,scanlinesize = 1)<SUB>224</SUB>> ]
+"11407" [label = <(IDENTIFIER,scanlinesize,scanlinesize = 1)<SUB>224</SUB>> ]
+"11408" [label = <(LITERAL,1,scanlinesize = 1)<SUB>224</SUB>> ]
+"11409" [label = <(&lt;operator&gt;.assignment,rows = (uint64_t)STRIP_SIZE_DEFAULT / scanlinesize)<SUB>225</SUB>> ]
+"11410" [label = <(IDENTIFIER,rows,rows = (uint64_t)STRIP_SIZE_DEFAULT / scanlinesize)<SUB>225</SUB>> ]
+"11411" [label = <(&lt;operator&gt;.division,(uint64_t)STRIP_SIZE_DEFAULT / scanlinesize)<SUB>225</SUB>> ]
+"11412" [label = <(&lt;operator&gt;.cast,(uint64_t)STRIP_SIZE_DEFAULT)<SUB>225</SUB>> ]
+"11413" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>225</SUB>> ]
+"11414" [label = <(IDENTIFIER,STRIP_SIZE_DEFAULT,(uint64_t)STRIP_SIZE_DEFAULT)<SUB>225</SUB>> ]
+"11415" [label = <(IDENTIFIER,scanlinesize,(uint64_t)STRIP_SIZE_DEFAULT / scanlinesize)<SUB>225</SUB>> ]
+"11416" [label = <(CONTROL_STRUCTURE,if (rows == 0),if (rows == 0))<SUB>226</SUB>> ]
+"11417" [label = <(&lt;operator&gt;.equals,rows == 0)<SUB>226</SUB>> ]
+"11418" [label = <(IDENTIFIER,rows,rows == 0)<SUB>226</SUB>> ]
+"11419" [label = <(LITERAL,0,rows == 0)<SUB>226</SUB>> ]
+"11420" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>227</SUB>> ]
+"11421" [label = <(&lt;operator&gt;.assignment,rows = 1)<SUB>227</SUB>> ]
+"11422" [label = <(IDENTIFIER,rows,rows = 1)<SUB>227</SUB>> ]
+"11423" [label = <(LITERAL,1,rows = 1)<SUB>227</SUB>> ]
+"11424" [label = <(CONTROL_STRUCTURE,else,else)<SUB>228</SUB>> ]
+"11425" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>228</SUB>> ]
+"11426" [label = <(CONTROL_STRUCTURE,if (rows &gt; 0xFFFFFFFF),if (rows &gt; 0xFFFFFFFF))<SUB>228</SUB>> ]
+"11427" [label = <(&lt;operator&gt;.greaterThan,rows &gt; 0xFFFFFFFF)<SUB>228</SUB>> ]
+"11428" [label = <(IDENTIFIER,rows,rows &gt; 0xFFFFFFFF)<SUB>228</SUB>> ]
+"11429" [label = <(LITERAL,0xFFFFFFFF,rows &gt; 0xFFFFFFFF)<SUB>228</SUB>> ]
+"11430" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>229</SUB>> ]
+"11431" [label = <(&lt;operator&gt;.assignment,rows = 0xFFFFFFFF)<SUB>229</SUB>> ]
+"11432" [label = <(IDENTIFIER,rows,rows = 0xFFFFFFFF)<SUB>229</SUB>> ]
+"11433" [label = <(LITERAL,0xFFFFFFFF,rows = 0xFFFFFFFF)<SUB>229</SUB>> ]
+"11434" [label = <(&lt;operator&gt;.assignment,s = (uint32_t)rows)<SUB>230</SUB>> ]
+"11435" [label = <(IDENTIFIER,s,s = (uint32_t)rows)<SUB>230</SUB>> ]
+"11436" [label = <(&lt;operator&gt;.cast,(uint32_t)rows)<SUB>230</SUB>> ]
+"11437" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>230</SUB>> ]
+"11438" [label = <(IDENTIFIER,rows,(uint32_t)rows)<SUB>230</SUB>> ]
+"11439" [label = <(RETURN,return (s);,return (s);)<SUB>232</SUB>> ]
+"11440" [label = <(IDENTIFIER,s,return (s);)<SUB>232</SUB>> ]
+"11441" [label = <(METHOD_RETURN,uint32_t)<SUB>211</SUB>> ]
+  "11384" -> "11385" 
+  "11384" -> "11386" 
+  "11384" -> "11387" 
+  "11384" -> "11441" 
+  "11387" -> "11388" 
+  "11387" -> "11439" 
+  "11388" -> "11389" 
+  "11388" -> "11394" 
+  "11389" -> "11390" 
+  "11389" -> "11393" 
+  "11390" -> "11391" 
+  "11390" -> "11392" 
+  "11394" -> "11395" 
+  "11394" -> "11396" 
+  "11394" -> "11397" 
+  "11394" -> "11401" 
+  "11394" -> "11409" 
+  "11394" -> "11416" 
+  "11394" -> "11434" 
+  "11397" -> "11398" 
+  "11397" -> "11399" 
+  "11399" -> "11400" 
+  "11401" -> "11402" 
+  "11401" -> "11405" 
+  "11402" -> "11403" 
+  "11402" -> "11404" 
+  "11405" -> "11406" 
+  "11406" -> "11407" 
+  "11406" -> "11408" 
+  "11409" -> "11410" 
+  "11409" -> "11411" 
+  "11411" -> "11412" 
+  "11411" -> "11415" 
+  "11412" -> "11413" 
+  "11412" -> "11414" 
+  "11416" -> "11417" 
+  "11416" -> "11420" 
+  "11416" -> "11424" 
+  "11417" -> "11418" 
+  "11417" -> "11419" 
+  "11420" -> "11421" 
+  "11421" -> "11422" 
+  "11421" -> "11423" 
+  "11424" -> "11425" 
+  "11425" -> "11426" 
+  "11426" -> "11427" 
+  "11426" -> "11430" 
+  "11427" -> "11428" 
+  "11427" -> "11429" 
+  "11430" -> "11431" 
+  "11431" -> "11432" 
+  "11431" -> "11433" 
+  "11434" -> "11435" 
+  "11434" -> "11436" 
+  "11436" -> "11437" 
+  "11436" -> "11438" 
+  "11439" -> "11440" 
+}

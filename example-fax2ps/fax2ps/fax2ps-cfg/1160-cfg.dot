@@ -1,0 +1,130 @@
+digraph "_TIFFReadEncodedStripAndAllocBuffer" {  
+"75123" [label = <(&lt;operator&gt;.assignment,this_stripsize = TIFFReadEncodedStripGetStripSize(tif, strip, &amp;plane))<SUB>573</SUB>> ]
+"75165" [label = <(&lt;operator&gt;.assignment,*buf = _TIFFmallocExt(tif, bufsizetoalloc))<SUB>582</SUB>> ]
+"75190" [label = <(_TIFFmemset,_TIFFmemset(*buf, 0, bufsizetoalloc))<SUB>588</SUB>> ]
+"75213" [label = <(*tif-&gt;tif_postdecode,(*tif-&gt;tif_postdecode)(tif, *buf, this_stripsize))<SUB>592</SUB>> ]
+"75222" [label = <(RETURN,return (this_stripsize);,return (this_stripsize);)<SUB>593</SUB>> ]
+"75107" [label = <(&lt;operator&gt;.notEquals,*buf != NULL)<SUB>568</SUB>> ]
+"75125" [label = <(TIFFReadEncodedStripGetStripSize,TIFFReadEncodedStripGetStripSize(tif, strip, &amp;plane))<SUB>573</SUB>> ]
+"75131" [label = <(&lt;operator&gt;.equals,this_stripsize == ((tmsize_t)(-1)))<SUB>574</SUB>> ]
+"75142" [label = <(&lt;operator&gt;.logicalAnd,(size_to_read != (tmsize_t)(-1)) &amp;&amp; (size_to_read &lt; this_stripsize))<SUB>577</SUB>> ]
+"75156" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillStrip(tif, strip))<SUB>579</SUB>> ]
+"75166" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>582</SUB>> ]
+"75168" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, bufsizetoalloc))<SUB>582</SUB>> ]
+"75172" [label = <(&lt;operator&gt;.equals,*buf == NULL)<SUB>583</SUB>> ]
+"75191" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>588</SUB>> ]
+"75196" [label = <(&lt;operator&gt;.lessEqualsThan,(*tif-&gt;tif_decodestrip)(tif, *buf, this_stripsize, plane) &lt;= 0)<SUB>590</SUB>> ]
+"75214" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postdecode)<SUB>592</SUB>> ]
+"75219" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>592</SUB>> ]
+"75108" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>568</SUB>> ]
+"75110" [label = <(NULL,NULL)<SUB>568</SUB>> ]
+"75116" [label = <(RETURN,return TIFFReadEncodedStrip(tif, strip, *buf, size_to_read);,return TIFFReadEncodedStrip(tif, strip, *buf, size_to_read);)<SUB>570</SUB>> ]
+"75128" [label = <(&lt;operator&gt;.addressOf,&amp;plane)<SUB>573</SUB>> ]
+"75133" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>574</SUB>> ]
+"75137" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>575</SUB>> ]
+"75143" [label = <(&lt;operator&gt;.notEquals,size_to_read != (tmsize_t)(-1))<SUB>577</SUB>> ]
+"75148" [label = <(&lt;operator&gt;.lessThan,size_to_read &lt; this_stripsize)<SUB>577</SUB>> ]
+"75152" [label = <(&lt;operator&gt;.assignment,this_stripsize = size_to_read)<SUB>578</SUB>> ]
+"75157" [label = <(TIFFFillStrip,TIFFFillStrip(tif, strip))<SUB>579</SUB>> ]
+"75161" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>580</SUB>> ]
+"75173" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>583</SUB>> ]
+"75175" [label = <(NULL,NULL)<SUB>583</SUB>> ]
+"75181" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;No space for strip buffer&quot;))<SUB>585</SUB>> ]
+"75186" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>586</SUB>> ]
+"75197" [label = <(*tif-&gt;tif_decodestrip,(*tif-&gt;tif_decodestrip)(tif, *buf, this_stripsize, plane))<SUB>590</SUB>> ]
+"75209" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>591</SUB>> ]
+"75215" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>592</SUB>> ]
+"75117" [label = <(TIFFReadEncodedStrip,TIFFReadEncodedStrip(tif, strip, *buf, size_to_read))<SUB>570</SUB>> ]
+"75134" [label = <(&lt;operator&gt;.minus,-1)<SUB>574</SUB>> ]
+"75138" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>575</SUB>> ]
+"75145" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>577</SUB>> ]
+"75162" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>580</SUB>> ]
+"75183" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>585</SUB>> ]
+"75187" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>586</SUB>> ]
+"75198" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_decodestrip)<SUB>590</SUB>> ]
+"75203" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>590</SUB>> ]
+"75210" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>591</SUB>> ]
+"75217" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>592</SUB>> ]
+"75112" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>568</SUB>> ]
+"75120" [label = <(&lt;operator&gt;.indirection,*buf)<SUB>570</SUB>> ]
+"75139" [label = <(&lt;operator&gt;.minus,-1)<SUB>575</SUB>> ]
+"75146" [label = <(&lt;operator&gt;.minus,-1)<SUB>577</SUB>> ]
+"75163" [label = <(&lt;operator&gt;.minus,-1)<SUB>580</SUB>> ]
+"75177" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>583</SUB>> ]
+"75188" [label = <(&lt;operator&gt;.minus,-1)<SUB>586</SUB>> ]
+"75199" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_decodestrip)<SUB>590</SUB>> ]
+"75211" [label = <(&lt;operator&gt;.minus,-1)<SUB>591</SUB>> ]
+"75113" [label = <(UNKNOWN,void *,void *)<SUB>568</SUB>> ]
+"75178" [label = <(UNKNOWN,void *,void *)<SUB>583</SUB>> ]
+"75201" [label = <(FIELD_IDENTIFIER,tif_decodestrip,tif_decodestrip)<SUB>590</SUB>> ]
+"75097" [label = <(METHOD,_TIFFReadEncodedStripAndAllocBuffer)<SUB>560</SUB>> ]
+"75224" [label = <(METHOD_RETURN,tmsize_t)<SUB>560</SUB>> ]
+  "75123" -> "75134" 
+  "75165" -> "75173" 
+  "75190" -> "75201" 
+  "75213" -> "75222" 
+  "75222" -> "75224" 
+  "75107" -> "75120" 
+  "75107" -> "75128" 
+  "75125" -> "75123" 
+  "75131" -> "75139" 
+  "75131" -> "75146" 
+  "75142" -> "75152" 
+  "75142" -> "75157" 
+  "75156" -> "75163" 
+  "75156" -> "75166" 
+  "75166" -> "75168" 
+  "75168" -> "75165" 
+  "75172" -> "75183" 
+  "75172" -> "75191" 
+  "75191" -> "75190" 
+  "75196" -> "75211" 
+  "75196" -> "75217" 
+  "75214" -> "75219" 
+  "75219" -> "75213" 
+  "75108" -> "75110" 
+  "75110" -> "75113" 
+  "75110" -> "75107" 
+  "75116" -> "75224" 
+  "75128" -> "75125" 
+  "75133" -> "75131" 
+  "75137" -> "75224" 
+  "75143" -> "75142" 
+  "75143" -> "75148" 
+  "75148" -> "75142" 
+  "75152" -> "75157" 
+  "75157" -> "75156" 
+  "75161" -> "75224" 
+  "75173" -> "75175" 
+  "75175" -> "75178" 
+  "75175" -> "75172" 
+  "75181" -> "75188" 
+  "75186" -> "75224" 
+  "75197" -> "75196" 
+  "75209" -> "75224" 
+  "75215" -> "75214" 
+  "75117" -> "75116" 
+  "75134" -> "75133" 
+  "75138" -> "75137" 
+  "75145" -> "75143" 
+  "75162" -> "75161" 
+  "75183" -> "75181" 
+  "75187" -> "75186" 
+  "75198" -> "75203" 
+  "75203" -> "75197" 
+  "75210" -> "75209" 
+  "75217" -> "75215" 
+  "75112" -> "75107" 
+  "75120" -> "75117" 
+  "75139" -> "75138" 
+  "75146" -> "75145" 
+  "75163" -> "75162" 
+  "75177" -> "75172" 
+  "75188" -> "75187" 
+  "75199" -> "75198" 
+  "75211" -> "75210" 
+  "75113" -> "75112" 
+  "75178" -> "75177" 
+  "75201" -> "75199" 
+  "75097" -> "75108" 
+}

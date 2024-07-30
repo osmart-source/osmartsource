@@ -1,0 +1,18 @@
+digraph "memchr" {  
+"98772" [label = <(METHOD,memchr)<SUB>91</SUB>> ]
+"98773" [label = <(PARAM,const void *__s)<SUB>91</SUB>> ]
+"98774" [label = <(PARAM,int __c)<SUB>91</SUB>> ]
+"98775" [label = <(PARAM,size_t __n)<SUB>91</SUB>> ]
+"98776" [label = <(METHOD_RETURN,void*)<SUB>91</SUB>> ]
+  "98772" -> "98773"  [ label = "AST: "] 
+  "98772" -> "98774"  [ label = "AST: "] 
+  "98772" -> "98775"  [ label = "AST: "] 
+  "98772" -> "98776"  [ label = "AST: "] 
+  "98772" -> "98776"  [ label = "CFG: "] 
+  "98773" -> "98776"  [ label = "DDG: __s"] 
+  "98774" -> "98776"  [ label = "DDG: __c"] 
+  "98775" -> "98776"  [ label = "DDG: __n"] 
+  "98772" -> "98773"  [ label = "DDG: "] 
+  "98772" -> "98774"  [ label = "DDG: "] 
+  "98772" -> "98775"  [ label = "DDG: "] 
+}

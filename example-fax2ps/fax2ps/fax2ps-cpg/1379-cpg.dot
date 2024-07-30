@@ -1,0 +1,14 @@
+digraph "stpcpy" {  
+"99007" [label = <(METHOD,stpcpy)<SUB>452</SUB>> ]
+"99008" [label = <(PARAM,char *__restrict __dest)<SUB>452</SUB>> ]
+"99009" [label = <(PARAM,const char *__restrict __src)<SUB>452</SUB>> ]
+"99010" [label = <(METHOD_RETURN,char*)<SUB>452</SUB>> ]
+  "99007" -> "99008"  [ label = "AST: "] 
+  "99007" -> "99009"  [ label = "AST: "] 
+  "99007" -> "99010"  [ label = "AST: "] 
+  "99007" -> "99010"  [ label = "CFG: "] 
+  "99008" -> "99010"  [ label = "DDG: __dest"] 
+  "99009" -> "99010"  [ label = "DDG: __src"] 
+  "99007" -> "99008"  [ label = "DDG: "] 
+  "99007" -> "99009"  [ label = "DDG: "] 
+}

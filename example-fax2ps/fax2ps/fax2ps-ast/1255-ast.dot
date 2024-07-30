@@ -1,0 +1,39 @@
+digraph "TIFFReadDirEntryCheckRangeByteSlong" {  
+"87390" [label = <(METHOD,TIFFReadDirEntryCheckRangeByteSlong)<SUB>3552</SUB>> ]
+"87391" [label = <(PARAM,int32_t value)<SUB>3553</SUB>> ]
+"87392" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3554</SUB>> ]
+"87393" [label = <(CONTROL_STRUCTURE,if ((value &lt; 0) || (value &gt; 0xFF)),if ((value &lt; 0) || (value &gt; 0xFF)))<SUB>3555</SUB>> ]
+"87394" [label = <(&lt;operator&gt;.logicalOr,(value &lt; 0) || (value &gt; 0xFF))<SUB>3555</SUB>> ]
+"87395" [label = <(&lt;operator&gt;.lessThan,value &lt; 0)<SUB>3555</SUB>> ]
+"87396" [label = <(IDENTIFIER,value,value &lt; 0)<SUB>3555</SUB>> ]
+"87397" [label = <(LITERAL,0,value &lt; 0)<SUB>3555</SUB>> ]
+"87398" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0xFF)<SUB>3555</SUB>> ]
+"87399" [label = <(IDENTIFIER,value,value &gt; 0xFF)<SUB>3555</SUB>> ]
+"87400" [label = <(LITERAL,0xFF,value &gt; 0xFF)<SUB>3555</SUB>> ]
+"87401" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3556</SUB>> ]
+"87402" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3556</SUB>> ]
+"87403" [label = <(IDENTIFIER,TIFFReadDirEntryErrRange,return (TIFFReadDirEntryErrRange);)<SUB>3556</SUB>> ]
+"87404" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3558</SUB>> ]
+"87405" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3558</SUB>> ]
+"87406" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3558</SUB>> ]
+"87407" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>3558</SUB>> ]
+"87408" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3552</SUB>> ]
+  "87390" -> "87391" 
+  "87390" -> "87392" 
+  "87390" -> "87408" 
+  "87392" -> "87393" 
+  "87393" -> "87394" 
+  "87393" -> "87401" 
+  "87393" -> "87404" 
+  "87394" -> "87395" 
+  "87394" -> "87398" 
+  "87395" -> "87396" 
+  "87395" -> "87397" 
+  "87398" -> "87399" 
+  "87398" -> "87400" 
+  "87401" -> "87402" 
+  "87402" -> "87403" 
+  "87404" -> "87405" 
+  "87405" -> "87406" 
+  "87406" -> "87407" 
+}

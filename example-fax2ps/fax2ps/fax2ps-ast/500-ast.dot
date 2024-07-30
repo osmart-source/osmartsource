@@ -1,0 +1,155 @@
+digraph "fax2ps" {  
+"10180" [label = <(METHOD,fax2ps)<SUB>304</SUB>> ]
+"10181" [label = <(PARAM,TIFF *tif)<SUB>304</SUB>> ]
+"10182" [label = <(PARAM,uint16_t npages)<SUB>304</SUB>> ]
+"10183" [label = <(PARAM,uint16_t *pages)<SUB>304</SUB>> ]
+"10184" [label = <(PARAM,char *filename)<SUB>304</SUB>> ]
+"10185" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>305</SUB>> ]
+"10186" [label = <(CONTROL_STRUCTURE,if (npages &gt; 0),if (npages &gt; 0))<SUB>306</SUB>> ]
+"10187" [label = <(&lt;operator&gt;.greaterThan,npages &gt; 0)<SUB>306</SUB>> ]
+"10188" [label = <(IDENTIFIER,npages,npages &gt; 0)<SUB>306</SUB>> ]
+"10189" [label = <(LITERAL,0,npages &gt; 0)<SUB>306</SUB>> ]
+"10190" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>307</SUB>> ]
+"10191" [label = <(LOCAL,uint16_t pn: uint16_t)<SUB>308</SUB>> ]
+"10192" [label = <(LOCAL,uint16_t ptotal: uint16_t)<SUB>308</SUB>> ]
+"10193" [label = <(LOCAL,int i: int)<SUB>309</SUB>> ]
+"10194" [label = <(CONTROL_STRUCTURE,if (!GetPageNumber(tif)),if (!GetPageNumber(tif)))<SUB>311</SUB>> ]
+"10195" [label = <(&lt;operator&gt;.logicalNot,!GetPageNumber(tif))<SUB>311</SUB>> ]
+"10196" [label = <(GetPageNumber,GetPageNumber(tif))<SUB>311</SUB>> ]
+"10197" [label = <(IDENTIFIER,tif,GetPageNumber(tif))<SUB>311</SUB>> ]
+"10198" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"10199" [label = <(TIFFGetField,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>311</SUB>> ]
+"10200" [label = <(IDENTIFIER,tif,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>311</SUB>> ]
+"10201" [label = <(LITERAL,297,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>311</SUB>> ]
+"10202" [label = <(&lt;operator&gt;.addressOf,&amp;pn)<SUB>311</SUB>> ]
+"10203" [label = <(IDENTIFIER,pn,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>311</SUB>> ]
+"10204" [label = <(&lt;operator&gt;.addressOf,&amp;ptotal)<SUB>311</SUB>> ]
+"10205" [label = <(IDENTIFIER,ptotal,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>311</SUB>> ]
+"10206" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>312</SUB>> ]
+"10207" [label = <(fprintf,fprintf(stderr, &quot;%s: No page numbers, counting directories.\n&quot;,\012                    filename))<SUB>312</SUB>> ]
+"10208" [label = <(IDENTIFIER,stderr,fprintf(stderr, &quot;%s: No page numbers, counting directories.\n&quot;,\012                    filename))<SUB>312</SUB>> ]
+"10209" [label = <(LITERAL,&quot;%s: No page numbers, counting directories.\n&quot;,fprintf(stderr, &quot;%s: No page numbers, counting directories.\n&quot;,\012                    filename))<SUB>312</SUB>> ]
+"10210" [label = <(IDENTIFIER,filename,fprintf(stderr, &quot;%s: No page numbers, counting directories.\n&quot;,\012                    filename))<SUB>313</SUB>> ]
+"10211" [label = <(CONTROL_STRUCTURE,for (i = 0;i &lt; npages;i++),for (i = 0;i &lt; npages;i++))<SUB>314</SUB>> ]
+"10212" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>314</SUB>> ]
+"10213" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>314</SUB>> ]
+"10214" [label = <(IDENTIFIER,i,i = 0)<SUB>314</SUB>> ]
+"10215" [label = <(LITERAL,0,i = 0)<SUB>314</SUB>> ]
+"10216" [label = <(&lt;operator&gt;.lessThan,i &lt; npages)<SUB>314</SUB>> ]
+"10217" [label = <(IDENTIFIER,i,i &lt; npages)<SUB>314</SUB>> ]
+"10218" [label = <(IDENTIFIER,npages,i &lt; npages)<SUB>314</SUB>> ]
+"10219" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>314</SUB>> ]
+"10220" [label = <(IDENTIFIER,i,i++)<SUB>314</SUB>> ]
+"10221" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>315</SUB>> ]
+"10222" [label = <(CONTROL_STRUCTURE,if (findPage(tif, pages[i])),if (findPage(tif, pages[i])))<SUB>316</SUB>> ]
+"10223" [label = <(findPage,findPage(tif, pages[i]))<SUB>316</SUB>> ]
+"10224" [label = <(IDENTIFIER,tif,findPage(tif, pages[i]))<SUB>316</SUB>> ]
+"10225" [label = <(&lt;operator&gt;.indirectIndexAccess,pages[i])<SUB>316</SUB>> ]
+"10226" [label = <(IDENTIFIER,pages,findPage(tif, pages[i]))<SUB>316</SUB>> ]
+"10227" [label = <(IDENTIFIER,i,findPage(tif, pages[i]))<SUB>316</SUB>> ]
+"10228" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>317</SUB>> ]
+"10229" [label = <(printTIF,printTIF(tif, pages[i]))<SUB>317</SUB>> ]
+"10230" [label = <(IDENTIFIER,tif,printTIF(tif, pages[i]))<SUB>317</SUB>> ]
+"10231" [label = <(&lt;operator&gt;.indirectIndexAccess,pages[i])<SUB>317</SUB>> ]
+"10232" [label = <(IDENTIFIER,pages,printTIF(tif, pages[i]))<SUB>317</SUB>> ]
+"10233" [label = <(IDENTIFIER,i,printTIF(tif, pages[i]))<SUB>317</SUB>> ]
+"10234" [label = <(CONTROL_STRUCTURE,else,else)<SUB>319</SUB>> ]
+"10235" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>319</SUB>> ]
+"10236" [label = <(fprintf,fprintf(stderr, &quot;%s: No page number %d\n&quot;, filename, pages[i]))<SUB>319</SUB>> ]
+"10237" [label = <(IDENTIFIER,stderr,fprintf(stderr, &quot;%s: No page number %d\n&quot;, filename, pages[i]))<SUB>319</SUB>> ]
+"10238" [label = <(LITERAL,&quot;%s: No page number %d\n&quot;,fprintf(stderr, &quot;%s: No page number %d\n&quot;, filename, pages[i]))<SUB>319</SUB>> ]
+"10239" [label = <(IDENTIFIER,filename,fprintf(stderr, &quot;%s: No page number %d\n&quot;, filename, pages[i]))<SUB>319</SUB>> ]
+"10240" [label = <(&lt;operator&gt;.indirectIndexAccess,pages[i])<SUB>319</SUB>> ]
+"10241" [label = <(IDENTIFIER,pages,fprintf(stderr, &quot;%s: No page number %d\n&quot;, filename, pages[i]))<SUB>319</SUB>> ]
+"10242" [label = <(IDENTIFIER,i,fprintf(stderr, &quot;%s: No page number %d\n&quot;, filename, pages[i]))<SUB>319</SUB>> ]
+"10243" [label = <(CONTROL_STRUCTURE,else,else)<SUB>323</SUB>> ]
+"10244" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>323</SUB>> ]
+"10245" [label = <(LOCAL,uint16_t pageNumber: uint16_t)<SUB>324</SUB>> ]
+"10246" [label = <(&lt;operator&gt;.assignment,pageNumber = 0)<SUB>324</SUB>> ]
+"10247" [label = <(IDENTIFIER,pageNumber,pageNumber = 0)<SUB>324</SUB>> ]
+"10248" [label = <(LITERAL,0,pageNumber = 0)<SUB>324</SUB>> ]
+"10249" [label = <(CONTROL_STRUCTURE,do\012            printTIF(tif, pageNumber++);\012        while (TIFFReadDirectory(tif));,do\012            printTIF(tif, pageNumber++);\012        while (TIFFReadDirectory(tif));)<SUB>325</SUB>> ]
+"10250" [label = <(printTIF,printTIF(tif, pageNumber++))<SUB>326</SUB>> ]
+"10251" [label = <(IDENTIFIER,tif,printTIF(tif, pageNumber++))<SUB>326</SUB>> ]
+"10252" [label = <(&lt;operator&gt;.postIncrement,pageNumber++)<SUB>326</SUB>> ]
+"10253" [label = <(IDENTIFIER,pageNumber,pageNumber++)<SUB>326</SUB>> ]
+"10254" [label = <(TIFFReadDirectory,TIFFReadDirectory(tif))<SUB>327</SUB>> ]
+"10255" [label = <(IDENTIFIER,tif,TIFFReadDirectory(tif))<SUB>327</SUB>> ]
+"10256" [label = <(METHOD_RETURN,void)<SUB>304</SUB>> ]
+  "10180" -> "10181" 
+  "10180" -> "10182" 
+  "10180" -> "10183" 
+  "10180" -> "10184" 
+  "10180" -> "10185" 
+  "10180" -> "10256" 
+  "10185" -> "10186" 
+  "10186" -> "10187" 
+  "10186" -> "10190" 
+  "10186" -> "10243" 
+  "10187" -> "10188" 
+  "10187" -> "10189" 
+  "10190" -> "10191" 
+  "10190" -> "10192" 
+  "10190" -> "10193" 
+  "10190" -> "10194" 
+  "10190" -> "10211" 
+  "10194" -> "10195" 
+  "10194" -> "10206" 
+  "10195" -> "10196" 
+  "10196" -> "10197" 
+  "10196" -> "10198" 
+  "10198" -> "10199" 
+  "10199" -> "10200" 
+  "10199" -> "10201" 
+  "10199" -> "10202" 
+  "10199" -> "10204" 
+  "10202" -> "10203" 
+  "10204" -> "10205" 
+  "10206" -> "10207" 
+  "10207" -> "10208" 
+  "10207" -> "10209" 
+  "10207" -> "10210" 
+  "10211" -> "10212" 
+  "10211" -> "10216" 
+  "10211" -> "10219" 
+  "10211" -> "10221" 
+  "10212" -> "10213" 
+  "10213" -> "10214" 
+  "10213" -> "10215" 
+  "10216" -> "10217" 
+  "10216" -> "10218" 
+  "10219" -> "10220" 
+  "10221" -> "10222" 
+  "10222" -> "10223" 
+  "10222" -> "10228" 
+  "10222" -> "10234" 
+  "10223" -> "10224" 
+  "10223" -> "10225" 
+  "10225" -> "10226" 
+  "10225" -> "10227" 
+  "10228" -> "10229" 
+  "10229" -> "10230" 
+  "10229" -> "10231" 
+  "10231" -> "10232" 
+  "10231" -> "10233" 
+  "10234" -> "10235" 
+  "10235" -> "10236" 
+  "10236" -> "10237" 
+  "10236" -> "10238" 
+  "10236" -> "10239" 
+  "10236" -> "10240" 
+  "10240" -> "10241" 
+  "10240" -> "10242" 
+  "10243" -> "10244" 
+  "10244" -> "10245" 
+  "10244" -> "10246" 
+  "10244" -> "10249" 
+  "10246" -> "10247" 
+  "10246" -> "10248" 
+  "10249" -> "10250" 
+  "10249" -> "10254" 
+  "10250" -> "10251" 
+  "10250" -> "10252" 
+  "10252" -> "10253" 
+  "10254" -> "10255" 
+}

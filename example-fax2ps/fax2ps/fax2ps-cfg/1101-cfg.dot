@@ -1,0 +1,84 @@
+digraph "TIFFWriteDirectoryTagIfdIfd8Array" {  
+"69177" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagIfdIfd8Array&quot;)<SUB>1975</SUB>> ]
+"69210" [label = <(&lt;operator&gt;.assignment,p = _TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1999</SUB>> ]
+"69273" [label = <(&lt;operator&gt;.assignment,o = TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count, p))<SUB>2019</SUB>> ]
+"69282" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>2020</SUB>> ]
+"69285" [label = <(RETURN,return (o);,return (o);)<SUB>2022</SUB>> ]
+"69186" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1983</SUB>> ]
+"69196" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1990</SUB>> ]
+"69212" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1999</SUB>> ]
+"69219" [label = <(&lt;operator&gt;.equals,p == NULL)<SUB>2000</SUB>> ]
+"69241" [label = <(&lt;operator&gt;.lessThan,mb &lt; count)<SUB>2006</SUB>> ]
+"69275" [label = <(TIFFWriteDirectoryTagCheckedIfdArray,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count, p))<SUB>2019</SUB>> ]
+"69190" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1985</SUB>> ]
+"69193" [label = <(RETURN,return (1);,return (1);)<SUB>1986</SUB>> ]
+"69197" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1990</SUB>> ]
+"69202" [label = <(RETURN,return TIFFWriteDirectoryTagCheckedIfd8Array(tif, ndir, dir, tag, count,\012                                                     value);,return TIFFWriteDirectoryTagCheckedIfd8Array(tif, ndir, dir, tag, count,\012                                                     value);)<SUB>1991</SUB>> ]
+"69214" [label = <(&lt;operator&gt;.multiplication,count * sizeof(uint32_t))<SUB>1999</SUB>> ]
+"69223" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2002</SUB>> ]
+"69227" [label = <(RETURN,return (0);,return (0);)<SUB>2003</SUB>> ]
+"69245" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>2006</SUB>> ]
+"69247" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>2006</SUB>> ]
+"69249" [label = <(&lt;operator&gt;.postIncrement,q++)<SUB>2006</SUB>> ]
+"69267" [label = <(&lt;operator&gt;.assignment,*q = (uint32_t)(*ma))<SUB>2016</SUB>> ]
+"69191" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1985</SUB>> ]
+"69199" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1990</SUB>> ]
+"69203" [label = <(TIFFWriteDirectoryTagCheckedIfd8Array,TIFFWriteDirectoryTagCheckedIfd8Array(tif, ndir, dir, tag, count,\012                                                     value))<SUB>1991</SUB>> ]
+"69216" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1999</SUB>> ]
+"69232" [label = <(&lt;operator&gt;.assignment,q = p)<SUB>2006</SUB>> ]
+"69235" [label = <(&lt;operator&gt;.assignment,ma = value)<SUB>2006</SUB>> ]
+"69238" [label = <(&lt;operator&gt;.assignment,mb = 0)<SUB>2006</SUB>> ]
+"69253" [label = <(&lt;operator&gt;.greaterThan,*ma &gt; 0xFFFFFFFF)<SUB>2008</SUB>> ]
+"69268" [label = <(&lt;operator&gt;.indirection,*q)<SUB>2016</SUB>> ]
+"69270" [label = <(uint32_t,(uint32_t)(*ma))<SUB>2016</SUB>> ]
+"69254" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>2008</SUB>> ]
+"69258" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write value larger than 0xFFFFFFFF in &quot;\012                          &quot;Classic TIFF file.&quot;))<SUB>2010</SUB>> ]
+"69262" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>2013</SUB>> ]
+"69265" [label = <(RETURN,return (0);,return (0);)<SUB>2014</SUB>> ]
+"69271" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>2016</SUB>> ]
+"69168" [label = <(METHOD,TIFFWriteDirectoryTagIfdIfd8Array)<SUB>1971</SUB>> ]
+"69287" [label = <(METHOD_RETURN,int)<SUB>1971</SUB>> ]
+  "69177" -> "69186" 
+  "69210" -> "69219" 
+  "69273" -> "69282" 
+  "69282" -> "69285" 
+  "69285" -> "69287" 
+  "69186" -> "69191" 
+  "69186" -> "69199" 
+  "69196" -> "69203" 
+  "69196" -> "69216" 
+  "69212" -> "69210" 
+  "69219" -> "69223" 
+  "69219" -> "69232" 
+  "69241" -> "69254" 
+  "69241" -> "69275" 
+  "69275" -> "69273" 
+  "69190" -> "69193" 
+  "69193" -> "69287" 
+  "69197" -> "69196" 
+  "69202" -> "69287" 
+  "69214" -> "69212" 
+  "69223" -> "69227" 
+  "69227" -> "69287" 
+  "69245" -> "69247" 
+  "69247" -> "69249" 
+  "69249" -> "69241" 
+  "69267" -> "69245" 
+  "69191" -> "69190" 
+  "69199" -> "69197" 
+  "69203" -> "69202" 
+  "69216" -> "69214" 
+  "69232" -> "69235" 
+  "69235" -> "69238" 
+  "69238" -> "69241" 
+  "69253" -> "69258" 
+  "69253" -> "69268" 
+  "69268" -> "69271" 
+  "69270" -> "69267" 
+  "69254" -> "69253" 
+  "69258" -> "69262" 
+  "69262" -> "69265" 
+  "69265" -> "69287" 
+  "69271" -> "69270" 
+  "69168" -> "69177" 
+}

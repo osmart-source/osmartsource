@@ -1,0 +1,14 @@
+digraph "strcmp" {  
+"98800" [label = <(METHOD,strcmp)<SUB>137</SUB>> ]
+"98801" [label = <(PARAM,const char *__s1)<SUB>137</SUB>> ]
+"98802" [label = <(PARAM,const char *__s2)<SUB>137</SUB>> ]
+"98803" [label = <(METHOD_RETURN,int)<SUB>137</SUB>> ]
+  "98800" -> "98801"  [ label = "AST: "] 
+  "98800" -> "98802"  [ label = "AST: "] 
+  "98800" -> "98803"  [ label = "AST: "] 
+  "98800" -> "98803"  [ label = "CFG: "] 
+  "98801" -> "98803"  [ label = "DDG: __s1"] 
+  "98802" -> "98803"  [ label = "DDG: __s2"] 
+  "98800" -> "98801"  [ label = "DDG: "] 
+  "98800" -> "98802"  [ label = "DDG: "] 
+}

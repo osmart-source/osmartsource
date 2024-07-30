@@ -1,0 +1,53 @@
+digraph "unixErrorHandler" {  
+"34242" [label = <(METHOD,unixErrorHandler)<SUB>363</SUB>> ]
+"34243" [label = <(PARAM,const char *module)<SUB>363</SUB>> ]
+"34244" [label = <(PARAM,const char *fmt)<SUB>363</SUB>> ]
+"34245" [label = <(PARAM,va_list ap)<SUB>363</SUB>> ]
+"34246" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>364</SUB>> ]
+"34247" [label = <(CONTROL_STRUCTURE,if (module != NULL),if (module != NULL))<SUB>365</SUB>> ]
+"34248" [label = <(&lt;operator&gt;.notEquals,module != NULL)<SUB>365</SUB>> ]
+"34249" [label = <(IDENTIFIER,module,module != NULL)<SUB>365</SUB>> ]
+"34250" [label = <(NULL,NULL)<SUB>365</SUB>> ]
+"34251" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"34252" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>365</SUB>> ]
+"34253" [label = <(UNKNOWN,void *,void *)<SUB>365</SUB>> ]
+"34254" [label = <(LITERAL,0,(void *)0)<SUB>365</SUB>> ]
+"34255" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>366</SUB>> ]
+"34256" [label = <(fprintf,fprintf(stderr, &quot;%s: &quot;, module))<SUB>366</SUB>> ]
+"34257" [label = <(IDENTIFIER,stderr,fprintf(stderr, &quot;%s: &quot;, module))<SUB>366</SUB>> ]
+"34258" [label = <(LITERAL,&quot;%s: &quot;,fprintf(stderr, &quot;%s: &quot;, module))<SUB>366</SUB>> ]
+"34259" [label = <(IDENTIFIER,module,fprintf(stderr, &quot;%s: &quot;, module))<SUB>366</SUB>> ]
+"34260" [label = <(vfprintf,vfprintf(stderr, fmt, ap))<SUB>367</SUB>> ]
+"34261" [label = <(IDENTIFIER,stderr,vfprintf(stderr, fmt, ap))<SUB>367</SUB>> ]
+"34262" [label = <(IDENTIFIER,fmt,vfprintf(stderr, fmt, ap))<SUB>367</SUB>> ]
+"34263" [label = <(IDENTIFIER,ap,vfprintf(stderr, fmt, ap))<SUB>367</SUB>> ]
+"34264" [label = <(fprintf,fprintf(stderr, &quot;.\n&quot;))<SUB>368</SUB>> ]
+"34265" [label = <(IDENTIFIER,stderr,fprintf(stderr, &quot;.\n&quot;))<SUB>368</SUB>> ]
+"34266" [label = <(LITERAL,&quot;.\n&quot;,fprintf(stderr, &quot;.\n&quot;))<SUB>368</SUB>> ]
+"34267" [label = <(METHOD_RETURN,void)<SUB>363</SUB>> ]
+  "34242" -> "34243" 
+  "34242" -> "34244" 
+  "34242" -> "34245" 
+  "34242" -> "34246" 
+  "34242" -> "34267" 
+  "34246" -> "34247" 
+  "34246" -> "34260" 
+  "34246" -> "34264" 
+  "34247" -> "34248" 
+  "34247" -> "34255" 
+  "34248" -> "34249" 
+  "34248" -> "34250" 
+  "34250" -> "34251" 
+  "34251" -> "34252" 
+  "34252" -> "34253" 
+  "34252" -> "34254" 
+  "34255" -> "34256" 
+  "34256" -> "34257" 
+  "34256" -> "34258" 
+  "34256" -> "34259" 
+  "34260" -> "34261" 
+  "34260" -> "34262" 
+  "34260" -> "34263" 
+  "34264" -> "34265" 
+  "34264" -> "34266" 
+}

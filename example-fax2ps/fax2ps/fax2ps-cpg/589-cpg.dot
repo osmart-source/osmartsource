@@ -1,0 +1,14 @@
+digraph "setstate_r" {  
+"21769" [label = <(METHOD,setstate_r)<SUB>445</SUB>> ]
+"21770" [label = <(PARAM,char *__restrict __statebuf)<SUB>445</SUB>> ]
+"21771" [label = <(PARAM,struct random_data *__restrict __buf)<SUB>446</SUB>> ]
+"21772" [label = <(METHOD_RETURN,int)<SUB>445</SUB>> ]
+  "21769" -> "21770"  [ label = "AST: "] 
+  "21769" -> "21771"  [ label = "AST: "] 
+  "21769" -> "21772"  [ label = "AST: "] 
+  "21769" -> "21772"  [ label = "CFG: "] 
+  "21770" -> "21772"  [ label = "DDG: __statebuf"] 
+  "21771" -> "21772"  [ label = "DDG: __buf"] 
+  "21769" -> "21770"  [ label = "DDG: "] 
+  "21769" -> "21771"  [ label = "DDG: "] 
+}

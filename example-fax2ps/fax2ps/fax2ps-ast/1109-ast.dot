@@ -1,0 +1,77 @@
+digraph "TIFFWriteDirectoryTagCheckedShort" {  
+"69953" [label = <(METHOD,TIFFWriteDirectoryTagCheckedShort)<SUB>2223</SUB>> ]
+"69954" [label = <(PARAM,TIFF *tif)<SUB>2223</SUB>> ]
+"69955" [label = <(PARAM,uint32_t *ndir)<SUB>2223</SUB>> ]
+"69956" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2224</SUB>> ]
+"69957" [label = <(PARAM,uint16_t tag)<SUB>2224</SUB>> ]
+"69958" [label = <(PARAM,uint16_t value)<SUB>2225</SUB>> ]
+"69959" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2226</SUB>> ]
+"69960" [label = <(LOCAL,uint16_t m: uint16_t)<SUB>2227</SUB>> ]
+"69961" [label = <(assert,assert(sizeof(uint16_t) == 2))<SUB>2228</SUB>> ]
+"69962" [label = <(&lt;operator&gt;.equals,sizeof(uint16_t) == 2)<SUB>2228</SUB>> ]
+"69963" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2228</SUB>> ]
+"69964" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2228</SUB>> ]
+"69965" [label = <(LITERAL,2,sizeof(uint16_t) == 2)<SUB>2228</SUB>> ]
+"69966" [label = <(&lt;operator&gt;.assignment,m = value)<SUB>2229</SUB>> ]
+"69967" [label = <(IDENTIFIER,m,m = value)<SUB>2229</SUB>> ]
+"69968" [label = <(IDENTIFIER,value,m = value)<SUB>2229</SUB>> ]
+"69969" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2230</SUB>> ]
+"69970" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2230</SUB>> ]
+"69971" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2230</SUB>> ]
+"69972" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2230</SUB>> ]
+"69973" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2230</SUB>> ]
+"69974" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2230</SUB>> ]
+"69975" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2231</SUB>> ]
+"69976" [label = <(TIFFSwabShort,TIFFSwabShort(&amp;m))<SUB>2231</SUB>> ]
+"69977" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2231</SUB>> ]
+"69978" [label = <(IDENTIFIER,m,TIFFSwabShort(&amp;m))<SUB>2231</SUB>> ]
+"69979" [label = <(RETURN,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m));,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m));)<SUB>2232</SUB>> ]
+"69980" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69981" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69982" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69983" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69984" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69985" [label = <(IDENTIFIER,TIFF_SHORT,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69986" [label = <(LITERAL,1,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69987" [label = <(LITERAL,2,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69988" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2233</SUB>> ]
+"69989" [label = <(IDENTIFIER,m,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69990" [label = <(METHOD_RETURN,int)<SUB>2223</SUB>> ]
+  "69953" -> "69954" 
+  "69953" -> "69955" 
+  "69953" -> "69956" 
+  "69953" -> "69957" 
+  "69953" -> "69958" 
+  "69953" -> "69959" 
+  "69953" -> "69990" 
+  "69959" -> "69960" 
+  "69959" -> "69961" 
+  "69959" -> "69966" 
+  "69959" -> "69969" 
+  "69959" -> "69979" 
+  "69961" -> "69962" 
+  "69962" -> "69963" 
+  "69962" -> "69965" 
+  "69963" -> "69964" 
+  "69966" -> "69967" 
+  "69966" -> "69968" 
+  "69969" -> "69970" 
+  "69969" -> "69975" 
+  "69970" -> "69971" 
+  "69970" -> "69974" 
+  "69971" -> "69972" 
+  "69971" -> "69973" 
+  "69975" -> "69976" 
+  "69976" -> "69977" 
+  "69977" -> "69978" 
+  "69979" -> "69980" 
+  "69980" -> "69981" 
+  "69980" -> "69982" 
+  "69980" -> "69983" 
+  "69980" -> "69984" 
+  "69980" -> "69985" 
+  "69980" -> "69986" 
+  "69980" -> "69987" 
+  "69980" -> "69988" 
+  "69988" -> "69989" 
+}

@@ -1,0 +1,111 @@
+digraph "_TIFFcallocExt" {  
+"212" [label = <(METHOD,_TIFFcallocExt)<SUB>133</SUB>> ]
+"213" [label = <(PARAM,TIFF *tif)<SUB>133</SUB>> ]
+"214" [label = <(PARAM,tmsize_t nmemb)<SUB>133</SUB>> ]
+"215" [label = <(PARAM,tmsize_t siz)<SUB>133</SUB>> ]
+"216" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>134</SUB>> ]
+"217" [label = <(CONTROL_STRUCTURE,if (tif != NULL &amp;&amp; tif-&gt;tif_max_single_mem_alloc &gt; 0),if (tif != NULL &amp;&amp; tif-&gt;tif_max_single_mem_alloc &gt; 0))<SUB>135</SUB>> ]
+"218" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>135</SUB>> ]
+"219" [label = <(&lt;operator&gt;.notEquals,tif != NULL)<SUB>135</SUB>> ]
+"220" [label = <(IDENTIFIER,tif,tif != NULL)<SUB>135</SUB>> ]
+"221" [label = <(IDENTIFIER,NULL,tif != NULL)<SUB>135</SUB>> ]
+"222" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>135</SUB>> ]
+"223" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_max_single_mem_alloc)<SUB>135</SUB>> ]
+"224" [label = <(IDENTIFIER,tif,tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>135</SUB>> ]
+"225" [label = <(FIELD_IDENTIFIER,tif_max_single_mem_alloc,tif_max_single_mem_alloc)<SUB>135</SUB>> ]
+"226" [label = <(LITERAL,0,tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>135</SUB>> ]
+"227" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>136</SUB>> ]
+"228" [label = <(CONTROL_STRUCTURE,if (nmemb &lt;= 0 || siz &lt;= 0 || nmemb &gt; TIFF_TMSIZE_T_MAX / siz),if (nmemb &lt;= 0 || siz &lt;= 0 || nmemb &gt; TIFF_TMSIZE_T_MAX / siz))<SUB>137</SUB>> ]
+"229" [label = <(&lt;operator&gt;.logicalOr,nmemb &lt;= 0 || siz &lt;= 0 || nmemb &gt; TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"230" [label = <(&lt;operator&gt;.logicalOr,nmemb &lt;= 0 || siz &lt;= 0)<SUB>137</SUB>> ]
+"231" [label = <(&lt;operator&gt;.lessEqualsThan,nmemb &lt;= 0)<SUB>137</SUB>> ]
+"232" [label = <(IDENTIFIER,nmemb,nmemb &lt;= 0)<SUB>137</SUB>> ]
+"233" [label = <(LITERAL,0,nmemb &lt;= 0)<SUB>137</SUB>> ]
+"234" [label = <(&lt;operator&gt;.lessEqualsThan,siz &lt;= 0)<SUB>137</SUB>> ]
+"235" [label = <(IDENTIFIER,siz,siz &lt;= 0)<SUB>137</SUB>> ]
+"236" [label = <(LITERAL,0,siz &lt;= 0)<SUB>137</SUB>> ]
+"237" [label = <(&lt;operator&gt;.greaterThan,nmemb &gt; TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"238" [label = <(IDENTIFIER,nmemb,nmemb &gt; TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"239" [label = <(&lt;operator&gt;.division,TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"240" [label = <(IDENTIFIER,TIFF_TMSIZE_T_MAX,TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"241" [label = <(IDENTIFIER,siz,TIFF_TMSIZE_T_MAX / siz)<SUB>137</SUB>> ]
+"242" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>138</SUB>> ]
+"243" [label = <(RETURN,return NULL;,return NULL;)<SUB>138</SUB>> ]
+"244" [label = <(IDENTIFIER,NULL,return NULL;)<SUB>138</SUB>> ]
+"245" [label = <(CONTROL_STRUCTURE,if (nmemb * siz &gt; tif-&gt;tif_max_single_mem_alloc),if (nmemb * siz &gt; tif-&gt;tif_max_single_mem_alloc))<SUB>139</SUB>> ]
+"246" [label = <(&lt;operator&gt;.greaterThan,nmemb * siz &gt; tif-&gt;tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"247" [label = <(&lt;operator&gt;.multiplication,nmemb * siz)<SUB>139</SUB>> ]
+"248" [label = <(IDENTIFIER,nmemb,nmemb * siz)<SUB>139</SUB>> ]
+"249" [label = <(IDENTIFIER,siz,nmemb * siz)<SUB>139</SUB>> ]
+"250" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"251" [label = <(IDENTIFIER,tif,nmemb * siz &gt; tif-&gt;tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"252" [label = <(FIELD_IDENTIFIER,tif_max_single_mem_alloc,tif_max_single_mem_alloc)<SUB>139</SUB>> ]
+"253" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>140</SUB>> ]
+"254" [label = <(_TIFFEmitErrorAboveMaxSingleMemAlloc,_TIFFEmitErrorAboveMaxSingleMemAlloc(tif, &quot;_TIFFcallocExt&quot;,\012                                                 nmemb * siz))<SUB>141</SUB>> ]
+"255" [label = <(IDENTIFIER,tif,_TIFFEmitErrorAboveMaxSingleMemAlloc(tif, &quot;_TIFFcallocExt&quot;,\012                                                 nmemb * siz))<SUB>141</SUB>> ]
+"256" [label = <(LITERAL,&quot;_TIFFcallocExt&quot;,_TIFFEmitErrorAboveMaxSingleMemAlloc(tif, &quot;_TIFFcallocExt&quot;,\012                                                 nmemb * siz))<SUB>141</SUB>> ]
+"257" [label = <(&lt;operator&gt;.multiplication,nmemb * siz)<SUB>142</SUB>> ]
+"258" [label = <(IDENTIFIER,nmemb,nmemb * siz)<SUB>142</SUB>> ]
+"259" [label = <(IDENTIFIER,siz,nmemb * siz)<SUB>142</SUB>> ]
+"260" [label = <(RETURN,return NULL;,return NULL;)<SUB>143</SUB>> ]
+"261" [label = <(IDENTIFIER,NULL,return NULL;)<SUB>143</SUB>> ]
+"262" [label = <(RETURN,return _TIFFcalloc(nmemb, siz);,return _TIFFcalloc(nmemb, siz);)<SUB>146</SUB>> ]
+"263" [label = <(_TIFFcalloc,_TIFFcalloc(nmemb, siz))<SUB>146</SUB>> ]
+"264" [label = <(IDENTIFIER,nmemb,_TIFFcalloc(nmemb, siz))<SUB>146</SUB>> ]
+"265" [label = <(IDENTIFIER,siz,_TIFFcalloc(nmemb, siz))<SUB>146</SUB>> ]
+"266" [label = <(METHOD_RETURN,void*)<SUB>133</SUB>> ]
+  "212" -> "213" 
+  "212" -> "214" 
+  "212" -> "215" 
+  "212" -> "216" 
+  "212" -> "266" 
+  "216" -> "217" 
+  "216" -> "262" 
+  "217" -> "218" 
+  "217" -> "227" 
+  "218" -> "219" 
+  "218" -> "222" 
+  "219" -> "220" 
+  "219" -> "221" 
+  "222" -> "223" 
+  "222" -> "226" 
+  "223" -> "224" 
+  "223" -> "225" 
+  "227" -> "228" 
+  "227" -> "245" 
+  "228" -> "229" 
+  "228" -> "242" 
+  "229" -> "230" 
+  "229" -> "237" 
+  "230" -> "231" 
+  "230" -> "234" 
+  "231" -> "232" 
+  "231" -> "233" 
+  "234" -> "235" 
+  "234" -> "236" 
+  "237" -> "238" 
+  "237" -> "239" 
+  "239" -> "240" 
+  "239" -> "241" 
+  "242" -> "243" 
+  "243" -> "244" 
+  "245" -> "246" 
+  "245" -> "253" 
+  "246" -> "247" 
+  "246" -> "250" 
+  "247" -> "248" 
+  "247" -> "249" 
+  "250" -> "251" 
+  "250" -> "252" 
+  "253" -> "254" 
+  "253" -> "260" 
+  "254" -> "255" 
+  "254" -> "256" 
+  "254" -> "257" 
+  "257" -> "258" 
+  "257" -> "259" 
+  "260" -> "261" 
+  "262" -> "263" 
+  "263" -> "264" 
+  "263" -> "265" 
+}

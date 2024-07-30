@@ -1,0 +1,420 @@
+digraph "_TIFFPartialReadStripArray" {  
+"97530" [label = <(&lt;operator&gt;.assignment,module[] = &quot;_TIFFPartialReadStripArray&quot;)<SUB>7330</SUB>> ]
+"97535" [label = <(&lt;operator&gt;.assignment,bSwab = (tif-&gt;tif_flags &amp; TIFF_SWAB) != 0)<SUB>7334</SUB>> ]
+"97555" [label = <(&lt;operator&gt;.assignment,arraySize = tif-&gt;tif_dir.td_stripoffsetbyteallocsize)<SUB>7345</SUB>> ]
+"97563" [label = <(assert,assert(dirent-&gt;tdir_count &gt; 4))<SUB>7348</SUB>> ]
+"97632" [label = <(&lt;operator&gt;.assignment,sizeofvalint = (int)(sizeofval))<SUB>7375</SUB>> ]
+"97705" [label = <(&lt;operator&gt;.assignment,nOffset = nBaseOffset + sizeofval * strile)<SUB>7399</SUB>> ]
+"97712" [label = <(&lt;operator&gt;.assignment,nOffsetStartPage = (nOffset / IO_CACHE_PAGE_SIZE) * IO_CACHE_PAGE_SIZE)<SUB>7400</SUB>> ]
+"97723" [label = <(&lt;operator&gt;.assignment,nOffsetEndPage = nOffsetStartPage + IO_CACHE_PAGE_SIZE)<SUB>7401</SUB>> ]
+"97742" [label = <(&lt;operator&gt;.assignment,nLastStripOffset = nBaseOffset + arraySize * sizeofval)<SUB>7407</SUB>> ]
+"97787" [label = <(&lt;operator&gt;.assignment,nToRead = (tmsize_t)(nOffsetEndPage - nOffsetStartPage))<SUB>7423</SUB>> ]
+"97793" [label = <(&lt;operator&gt;.assignment,nRead = TIFFReadFile(tif, buffer, nToRead))<SUB>7424</SUB>> ]
+"97811" [label = <(&lt;operator&gt;.assignment,iStartBefore = -(int)((nOffset - nOffsetStartPage) / sizeofval))<SUB>7431</SUB>> ]
+"98008" [label = <(RETURN,return 1;,return 1;)<SUB>7482</SUB>> ]
+"97537" [label = <(&lt;operator&gt;.notEquals,(tif-&gt;tif_flags &amp; TIFF_SWAB) != 0)<SUB>7334</SUB>> ]
+"97557" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffsetbyteallocsize)<SUB>7345</SUB>> ]
+"97564" [label = <(&lt;operator&gt;.greaterThan,dirent-&gt;tdir_count &gt; 4)<SUB>7348</SUB>> ]
+"97570" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_SHORT)<SUB>7350</SUB>> ]
+"97634" [label = <(&lt;operator&gt;.cast,(int)(sizeofval))<SUB>7375</SUB>> ]
+"97638" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>7377</SUB>> ]
+"97685" [label = <(&lt;operator&gt;.greaterThan,nBaseOffset &gt; (uint64_t)INT64_MAX)<SUB>7392</SUB>> ]
+"97707" [label = <(&lt;operator&gt;.addition,nBaseOffset + sizeofval * strile)<SUB>7399</SUB>> ]
+"97714" [label = <(&lt;operator&gt;.multiplication,(nOffset / IO_CACHE_PAGE_SIZE) * IO_CACHE_PAGE_SIZE)<SUB>7400</SUB>> ]
+"97725" [label = <(&lt;operator&gt;.addition,nOffsetStartPage + IO_CACHE_PAGE_SIZE)<SUB>7401</SUB>> ]
+"97731" [label = <(&lt;operator&gt;.greaterThan,nOffset + sizeofval &gt; nOffsetEndPage)<SUB>7403</SUB>> ]
+"97744" [label = <(&lt;operator&gt;.addition,nBaseOffset + arraySize * sizeofval)<SUB>7407</SUB>> ]
+"97750" [label = <(&lt;operator&gt;.lessThan,nLastStripOffset &lt; nOffsetEndPage)<SUB>7408</SUB>> ]
+"97758" [label = <(&lt;operator&gt;.greaterEqualsThan,nOffsetStartPage &gt;= nOffsetEndPage)<SUB>7410</SUB>> ]
+"97775" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, nOffsetStartPage))<SUB>7417</SUB>> ]
+"97789" [label = <(tmsize_t,(tmsize_t)(nOffsetEndPage - nOffsetStartPage))<SUB>7423</SUB>> ]
+"97795" [label = <(TIFFReadFile,TIFFReadFile(tif, buffer, nToRead))<SUB>7424</SUB>> ]
+"97800" [label = <(&lt;operator&gt;.lessThan,nRead &lt; nToRead)<SUB>7425</SUB>> ]
+"97813" [label = <(&lt;operator&gt;.minus,-(int)((nOffset - nOffsetStartPage) / sizeofval))<SUB>7431</SUB>> ]
+"97822" [label = <(&lt;operator&gt;.lessThan,strile + iStartBefore &lt; 0)<SUB>7432</SUB>> ]
+"97837" [label = <(&lt;operator&gt;.logicalAnd,(uint32_t)(strile + i) &lt; arraySize &amp;&amp;\012         _TIFFUnsanitizedAddUInt64AndInt(nOffset, (i + 1) * sizeofvalint) &lt;=\012             nOffsetEndPage)<SUB>7435</SUB>> ]
+"97854" [label = <(&lt;operator&gt;.preIncrement,++i)<SUB>7438</SUB>> ]
+"97538" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>7334</SUB>> ]
+"97558" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7345</SUB>> ]
+"97561" [label = <(FIELD_IDENTIFIER,td_stripoffsetbyteallocsize,td_stripoffsetbyteallocsize)<SUB>7345</SUB>> ]
+"97565" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_count)<SUB>7348</SUB>> ]
+"97571" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7350</SUB>> ]
+"97576" [label = <(&lt;operator&gt;.assignment,sizeofval = sizeof(uint16_t))<SUB>7352</SUB>> ]
+"97635" [label = <(UNKNOWN,int,int)<SUB>7375</SUB>> ]
+"97639" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7377</SUB>> ]
+"97645" [label = <(&lt;operator&gt;.assignment,offset = dirent-&gt;tdir_offset.toff_long8)<SUB>7379</SUB>> ]
+"97660" [label = <(&lt;operator&gt;.assignment,nBaseOffset = offset)<SUB>7382</SUB>> ]
+"97687" [label = <(&lt;operator&gt;.cast,(uint64_t)INT64_MAX)<SUB>7392</SUB>> ]
+"97693" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Cannot read offset/size for strile %d&quot;,\012                      strile))<SUB>7394</SUB>> ]
+"97698" [label = <(&lt;operator&gt;.assignment,panVals[strile] = 0)<SUB>7396</SUB>> ]
+"97703" [label = <(RETURN,return 0;,return 0;)<SUB>7397</SUB>> ]
+"97709" [label = <(&lt;operator&gt;.multiplication,sizeofval * strile)<SUB>7399</SUB>> ]
+"97715" [label = <(&lt;operator&gt;.division,nOffset / IO_CACHE_PAGE_SIZE)<SUB>7400</SUB>> ]
+"97720" [label = <(IO_CACHE_PAGE_SIZE,IO_CACHE_PAGE_SIZE)<SUB>7400</SUB>> ]
+"97727" [label = <(IO_CACHE_PAGE_SIZE,IO_CACHE_PAGE_SIZE)<SUB>7401</SUB>> ]
+"97732" [label = <(&lt;operator&gt;.addition,nOffset + sizeofval)<SUB>7403</SUB>> ]
+"97737" [label = <(&lt;operator&gt;.assignmentPlus,nOffsetEndPage += IO_CACHE_PAGE_SIZE)<SUB>7404</SUB>> ]
+"97746" [label = <(&lt;operator&gt;.multiplication,arraySize * sizeofval)<SUB>7407</SUB>> ]
+"97754" [label = <(&lt;operator&gt;.assignment,nOffsetEndPage = nLastStripOffset)<SUB>7409</SUB>> ]
+"97762" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Cannot read offset/size for strile %d&quot;,\012                      strile))<SUB>7412</SUB>> ]
+"97767" [label = <(&lt;operator&gt;.assignment,panVals[strile] = 0)<SUB>7414</SUB>> ]
+"97772" [label = <(RETURN,return 0;,return 0;)<SUB>7415</SUB>> ]
+"97776" [label = <(SeekOK,SeekOK(tif, nOffsetStartPage))<SUB>7417</SUB>> ]
+"97780" [label = <(&lt;operator&gt;.assignment,panVals[strile] = 0)<SUB>7419</SUB>> ]
+"97785" [label = <(RETURN,return 0;,return 0;)<SUB>7420</SUB>> ]
+"97790" [label = <(&lt;operator&gt;.subtraction,nOffsetEndPage - nOffsetStartPage)<SUB>7423</SUB>> ]
+"97804" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Cannot read offset/size for strile around ~%d&quot;, strile))<SUB>7427</SUB>> ]
+"97809" [label = <(RETURN,return 0;,return 0;)<SUB>7429</SUB>> ]
+"97814" [label = <(&lt;operator&gt;.cast,(int)((nOffset - nOffsetStartPage) / sizeofval))<SUB>7431</SUB>> ]
+"97823" [label = <(&lt;operator&gt;.addition,strile + iStartBefore)<SUB>7432</SUB>> ]
+"97828" [label = <(&lt;operator&gt;.assignment,iStartBefore = -strile)<SUB>7433</SUB>> ]
+"97834" [label = <(&lt;operator&gt;.assignment,i = iStartBefore)<SUB>7434</SUB>> ]
+"97838" [label = <(&lt;operator&gt;.lessThan,(uint32_t)(strile + i) &lt; arraySize)<SUB>7435</SUB>> ]
+"97845" [label = <(&lt;operator&gt;.lessEqualsThan,_TIFFUnsanitizedAddUInt64AndInt(nOffset, (i + 1) * sizeofvalint) &lt;=\012             nOffsetEndPage)<SUB>7436</SUB>> ]
+"97539" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7334</SUB>> ]
+"97560" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7345</SUB>> ]
+"97567" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>7348</SUB>> ]
+"97573" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7350</SUB>> ]
+"97578" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>7352</SUB>> ]
+"97641" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7377</SUB>> ]
+"97647" [label = <(&lt;operator&gt;.fieldAccess,dirent-&gt;tdir_offset.toff_long8)<SUB>7379</SUB>> ]
+"97653" [label = <(&lt;operator&gt;.logicalAnd,bSwab &amp;&amp; 1)<SUB>7380</SUB>> ]
+"97666" [label = <(&lt;operator&gt;.assignment,offset = dirent-&gt;tdir_offset.toff_long)<SUB>7386</SUB>> ]
+"97681" [label = <(&lt;operator&gt;.assignment,nBaseOffset = offset)<SUB>7389</SUB>> ]
+"97688" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>7392</SUB>> ]
+"97689" [label = <(INT64_MAX,INT64_MAX)<SUB>7392</SUB>> ]
+"97699" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile])<SUB>7396</SUB>> ]
+"97717" [label = <(IO_CACHE_PAGE_SIZE,IO_CACHE_PAGE_SIZE)<SUB>7400</SUB>> ]
+"97739" [label = <(IO_CACHE_PAGE_SIZE,IO_CACHE_PAGE_SIZE)<SUB>7404</SUB>> ]
+"97768" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile])<SUB>7414</SUB>> ]
+"97781" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile])<SUB>7419</SUB>> ]
+"97815" [label = <(UNKNOWN,int,int)<SUB>7431</SUB>> ]
+"97816" [label = <(&lt;operator&gt;.division,(nOffset - nOffsetStartPage) / sizeofval)<SUB>7431</SUB>> ]
+"97830" [label = <(&lt;operator&gt;.minus,-strile)<SUB>7433</SUB>> ]
+"97839" [label = <(&lt;operator&gt;.cast,(uint32_t)(strile + i))<SUB>7435</SUB>> ]
+"97846" [label = <(_TIFFUnsanitizedAddUInt64AndInt,_TIFFUnsanitizedAddUInt64AndInt(nOffset, (i + 1) * sizeofvalint))<SUB>7436</SUB>> ]
+"97858" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_SHORT)<SUB>7440</SUB>> ]
+"97541" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7334</SUB>> ]
+"97583" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_LONG)<SUB>7354</SUB>> ]
+"97648" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_offset)<SUB>7379</SUB>> ]
+"97651" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>7379</SUB>> ]
+"97657" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;offset))<SUB>7381</SUB>> ]
+"97668" [label = <(&lt;operator&gt;.fieldAccess,dirent-&gt;tdir_offset.toff_long)<SUB>7386</SUB>> ]
+"97674" [label = <(&lt;operator&gt;.logicalAnd,bSwab &amp;&amp; 1)<SUB>7387</SUB>> ]
+"97817" [label = <(&lt;operator&gt;.subtraction,nOffset - nOffsetStartPage)<SUB>7431</SUB>> ]
+"97840" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>7435</SUB>> ]
+"97841" [label = <(&lt;operator&gt;.addition,strile + i)<SUB>7435</SUB>> ]
+"97848" [label = <(&lt;operator&gt;.multiplication,(i + 1) * sizeofvalint)<SUB>7436</SUB>> ]
+"97859" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7440</SUB>> ]
+"97865" [label = <(memcpy,memcpy(&amp;val,\012                   buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint,\012                   sizeof(val)))<SUB>7443</SUB>> ]
+"97887" [label = <(&lt;operator&gt;.assignment,panVals[strile + i] = val)<SUB>7448</SUB>> ]
+"97584" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7354</SUB>> ]
+"97589" [label = <(&lt;operator&gt;.assignment,sizeofval = sizeof(uint32_t))<SUB>7356</SUB>> ]
+"97650" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>7379</SUB>> ]
+"97658" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>7381</SUB>> ]
+"97669" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_offset)<SUB>7386</SUB>> ]
+"97672" [label = <(FIELD_IDENTIFIER,toff_long,toff_long)<SUB>7386</SUB>> ]
+"97678" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;offset))<SUB>7388</SUB>> ]
+"97849" [label = <(&lt;operator&gt;.addition,i + 1)<SUB>7436</SUB>> ]
+"97861" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7440</SUB>> ]
+"97866" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7443</SUB>> ]
+"97868" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint)<SUB>7444</SUB>> ]
+"97877" [label = <(&lt;operator&gt;.sizeOf,sizeof(val))<SUB>7445</SUB>> ]
+"97880" [label = <(&lt;operator&gt;.logicalAnd,bSwab &amp;&amp; 1)<SUB>7446</SUB>> ]
+"97888" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile + i])<SUB>7448</SUB>> ]
+"97586" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7354</SUB>> ]
+"97591" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>7356</SUB>> ]
+"97671" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>7386</SUB>> ]
+"97679" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>7388</SUB>> ]
+"97869" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage))<SUB>7444</SUB>> ]
+"97874" [label = <(&lt;operator&gt;.multiplication,i * sizeofvalint)<SUB>7444</SUB>> ]
+"97884" [label = <(TIFFSwabShort,TIFFSwabShort(&amp;val))<SUB>7447</SUB>> ]
+"97890" [label = <(&lt;operator&gt;.addition,strile + i)<SUB>7448</SUB>> ]
+"97897" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_LONG)<SUB>7450</SUB>> ]
+"97596" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_LONG8)<SUB>7358</SUB>> ]
+"97871" [label = <(&lt;operator&gt;.subtraction,nOffset - nOffsetStartPage)<SUB>7444</SUB>> ]
+"97885" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7447</SUB>> ]
+"97898" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7450</SUB>> ]
+"97904" [label = <(memcpy,memcpy(&amp;val,\012                   buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint,\012                   sizeof(val)))<SUB>7453</SUB>> ]
+"97926" [label = <(&lt;operator&gt;.assignment,panVals[strile + i] = val)<SUB>7458</SUB>> ]
+"97597" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7358</SUB>> ]
+"97602" [label = <(&lt;operator&gt;.assignment,sizeofval = sizeof(uint64_t))<SUB>7360</SUB>> ]
+"97900" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7450</SUB>> ]
+"97905" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7453</SUB>> ]
+"97907" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint)<SUB>7454</SUB>> ]
+"97916" [label = <(&lt;operator&gt;.sizeOf,sizeof(val))<SUB>7455</SUB>> ]
+"97919" [label = <(&lt;operator&gt;.logicalAnd,bSwab &amp;&amp; 1)<SUB>7456</SUB>> ]
+"97927" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile + i])<SUB>7458</SUB>> ]
+"97599" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7358</SUB>> ]
+"97604" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>7360</SUB>> ]
+"97908" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage))<SUB>7454</SUB>> ]
+"97913" [label = <(&lt;operator&gt;.multiplication,i * sizeofvalint)<SUB>7454</SUB>> ]
+"97923" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;val))<SUB>7457</SUB>> ]
+"97929" [label = <(&lt;operator&gt;.addition,strile + i)<SUB>7458</SUB>> ]
+"97936" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_LONG8)<SUB>7460</SUB>> ]
+"97609" [label = <(&lt;operator&gt;.equals,dirent-&gt;tdir_type == TIFF_SLONG8)<SUB>7362</SUB>> ]
+"97910" [label = <(&lt;operator&gt;.subtraction,nOffset - nOffsetStartPage)<SUB>7454</SUB>> ]
+"97924" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7457</SUB>> ]
+"97937" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7460</SUB>> ]
+"97943" [label = <(memcpy,memcpy(&amp;val,\012                   buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint,\012                   sizeof(val)))<SUB>7463</SUB>> ]
+"97965" [label = <(&lt;operator&gt;.assignment,panVals[strile + i] = val)<SUB>7468</SUB>> ]
+"97610" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_type)<SUB>7362</SUB>> ]
+"97615" [label = <(&lt;operator&gt;.assignment,sizeofval = sizeof(int64_t))<SUB>7366</SUB>> ]
+"97939" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7460</SUB>> ]
+"97944" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7463</SUB>> ]
+"97946" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint)<SUB>7464</SUB>> ]
+"97955" [label = <(&lt;operator&gt;.sizeOf,sizeof(val))<SUB>7465</SUB>> ]
+"97958" [label = <(&lt;operator&gt;.logicalAnd,bSwab &amp;&amp; 1)<SUB>7466</SUB>> ]
+"97966" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile + i])<SUB>7468</SUB>> ]
+"97975" [label = <(memcpy,memcpy(&amp;val,\012                   buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint,\012                   sizeof(val)))<SUB>7474</SUB>> ]
+"97999" [label = <(&lt;operator&gt;.assignment,panVals[strile + i] = (uint64_t)val)<SUB>7479</SUB>> ]
+"97612" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>7362</SUB>> ]
+"97617" [label = <(&lt;operator&gt;.sizeOf,sizeof(int64_t))<SUB>7366</SUB>> ]
+"97621" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Invalid type for [Strip|Tile][Offset/ByteCount] tag&quot;))<SUB>7370</SUB>> ]
+"97625" [label = <(&lt;operator&gt;.assignment,panVals[strile] = 0)<SUB>7372</SUB>> ]
+"97630" [label = <(RETURN,return 0;,return 0;)<SUB>7373</SUB>> ]
+"97947" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage))<SUB>7464</SUB>> ]
+"97952" [label = <(&lt;operator&gt;.multiplication,i * sizeofvalint)<SUB>7464</SUB>> ]
+"97962" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;val))<SUB>7467</SUB>> ]
+"97968" [label = <(&lt;operator&gt;.addition,strile + i)<SUB>7468</SUB>> ]
+"97976" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7474</SUB>> ]
+"97978" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage) + i * sizeofvalint)<SUB>7475</SUB>> ]
+"97987" [label = <(&lt;operator&gt;.sizeOf,sizeof(val))<SUB>7476</SUB>> ]
+"97990" [label = <(&lt;operator&gt;.logicalAnd,bSwab &amp;&amp; 1)<SUB>7477</SUB>> ]
+"98000" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile + i])<SUB>7479</SUB>> ]
+"98005" [label = <(&lt;operator&gt;.cast,(uint64_t)val)<SUB>7479</SUB>> ]
+"97626" [label = <(&lt;operator&gt;.indirectIndexAccess,panVals[strile])<SUB>7372</SUB>> ]
+"97949" [label = <(&lt;operator&gt;.subtraction,nOffset - nOffsetStartPage)<SUB>7464</SUB>> ]
+"97963" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7467</SUB>> ]
+"97979" [label = <(&lt;operator&gt;.addition,buffer + (nOffset - nOffsetStartPage))<SUB>7475</SUB>> ]
+"97984" [label = <(&lt;operator&gt;.multiplication,i * sizeofvalint)<SUB>7475</SUB>> ]
+"97994" [label = <(TIFFSwabLong8,TIFFSwabLong8((uint64_t *)&amp;val))<SUB>7478</SUB>> ]
+"98002" [label = <(&lt;operator&gt;.addition,strile + i)<SUB>7479</SUB>> ]
+"98006" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>7479</SUB>> ]
+"97981" [label = <(&lt;operator&gt;.subtraction,nOffset - nOffsetStartPage)<SUB>7475</SUB>> ]
+"97995" [label = <(&lt;operator&gt;.cast,(uint64_t *)&amp;val)<SUB>7478</SUB>> ]
+"97996" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>7478</SUB>> ]
+"97997" [label = <(&lt;operator&gt;.addressOf,&amp;val)<SUB>7478</SUB>> ]
+"97523" [label = <(METHOD,_TIFFPartialReadStripArray)<SUB>7327</SUB>> ]
+"98010" [label = <(METHOD_RETURN,int)<SUB>7327</SUB>> ]
+  "97530" -> "97541" 
+  "97535" -> "97560" 
+  "97555" -> "97567" 
+  "97563" -> "97573" 
+  "97632" -> "97641" 
+  "97705" -> "97717" 
+  "97712" -> "97727" 
+  "97723" -> "97732" 
+  "97742" -> "97750" 
+  "97787" -> "97795" 
+  "97793" -> "97800" 
+  "97811" -> "97823" 
+  "98008" -> "98010" 
+  "97537" -> "97535" 
+  "97557" -> "97555" 
+  "97564" -> "97563" 
+  "97570" -> "97578" 
+  "97570" -> "97586" 
+  "97634" -> "97632" 
+  "97638" -> "97650" 
+  "97638" -> "97671" 
+  "97685" -> "97693" 
+  "97685" -> "97709" 
+  "97707" -> "97705" 
+  "97714" -> "97712" 
+  "97725" -> "97723" 
+  "97731" -> "97739" 
+  "97731" -> "97746" 
+  "97744" -> "97742" 
+  "97750" -> "97754" 
+  "97750" -> "97758" 
+  "97758" -> "97762" 
+  "97758" -> "97776" 
+  "97775" -> "97781" 
+  "97775" -> "97790" 
+  "97789" -> "97787" 
+  "97795" -> "97793" 
+  "97800" -> "97804" 
+  "97800" -> "97815" 
+  "97813" -> "97811" 
+  "97822" -> "97830" 
+  "97822" -> "97834" 
+  "97837" -> "97861" 
+  "97837" -> "98008" 
+  "97854" -> "97840" 
+  "97538" -> "97537" 
+  "97558" -> "97561" 
+  "97561" -> "97557" 
+  "97565" -> "97564" 
+  "97571" -> "97570" 
+  "97576" -> "97635" 
+  "97635" -> "97634" 
+  "97639" -> "97638" 
+  "97645" -> "97653" 
+  "97660" -> "97688" 
+  "97687" -> "97685" 
+  "97693" -> "97699" 
+  "97698" -> "97703" 
+  "97703" -> "98010" 
+  "97709" -> "97707" 
+  "97715" -> "97720" 
+  "97720" -> "97714" 
+  "97727" -> "97725" 
+  "97732" -> "97731" 
+  "97737" -> "97746" 
+  "97746" -> "97744" 
+  "97754" -> "97758" 
+  "97762" -> "97768" 
+  "97767" -> "97772" 
+  "97772" -> "98010" 
+  "97776" -> "97775" 
+  "97780" -> "97785" 
+  "97785" -> "98010" 
+  "97790" -> "97789" 
+  "97804" -> "97809" 
+  "97809" -> "98010" 
+  "97814" -> "97813" 
+  "97823" -> "97822" 
+  "97828" -> "97834" 
+  "97834" -> "97840" 
+  "97838" -> "97837" 
+  "97838" -> "97849" 
+  "97845" -> "97837" 
+  "97539" -> "97538" 
+  "97560" -> "97558" 
+  "97567" -> "97565" 
+  "97573" -> "97571" 
+  "97578" -> "97576" 
+  "97641" -> "97639" 
+  "97647" -> "97645" 
+  "97653" -> "97658" 
+  "97653" -> "97660" 
+  "97666" -> "97674" 
+  "97681" -> "97688" 
+  "97688" -> "97689" 
+  "97689" -> "97687" 
+  "97699" -> "97698" 
+  "97717" -> "97715" 
+  "97739" -> "97737" 
+  "97768" -> "97767" 
+  "97781" -> "97780" 
+  "97815" -> "97817" 
+  "97816" -> "97814" 
+  "97830" -> "97828" 
+  "97839" -> "97838" 
+  "97846" -> "97845" 
+  "97858" -> "97866" 
+  "97858" -> "97900" 
+  "97541" -> "97539" 
+  "97583" -> "97591" 
+  "97583" -> "97599" 
+  "97648" -> "97651" 
+  "97651" -> "97647" 
+  "97657" -> "97660" 
+  "97668" -> "97666" 
+  "97674" -> "97679" 
+  "97674" -> "97681" 
+  "97817" -> "97816" 
+  "97840" -> "97841" 
+  "97841" -> "97839" 
+  "97848" -> "97846" 
+  "97859" -> "97858" 
+  "97865" -> "97880" 
+  "97887" -> "97854" 
+  "97584" -> "97583" 
+  "97589" -> "97635" 
+  "97650" -> "97648" 
+  "97658" -> "97657" 
+  "97669" -> "97672" 
+  "97672" -> "97668" 
+  "97678" -> "97681" 
+  "97849" -> "97848" 
+  "97861" -> "97859" 
+  "97866" -> "97871" 
+  "97868" -> "97877" 
+  "97877" -> "97865" 
+  "97880" -> "97885" 
+  "97880" -> "97890" 
+  "97888" -> "97887" 
+  "97586" -> "97584" 
+  "97591" -> "97589" 
+  "97671" -> "97669" 
+  "97679" -> "97678" 
+  "97869" -> "97874" 
+  "97874" -> "97868" 
+  "97884" -> "97890" 
+  "97890" -> "97888" 
+  "97897" -> "97905" 
+  "97897" -> "97939" 
+  "97596" -> "97604" 
+  "97596" -> "97612" 
+  "97871" -> "97869" 
+  "97885" -> "97884" 
+  "97898" -> "97897" 
+  "97904" -> "97919" 
+  "97926" -> "97854" 
+  "97597" -> "97596" 
+  "97602" -> "97635" 
+  "97900" -> "97898" 
+  "97905" -> "97910" 
+  "97907" -> "97916" 
+  "97916" -> "97904" 
+  "97919" -> "97924" 
+  "97919" -> "97929" 
+  "97927" -> "97926" 
+  "97599" -> "97597" 
+  "97604" -> "97602" 
+  "97908" -> "97913" 
+  "97913" -> "97907" 
+  "97923" -> "97929" 
+  "97929" -> "97927" 
+  "97936" -> "97944" 
+  "97936" -> "97976" 
+  "97609" -> "97617" 
+  "97609" -> "97621" 
+  "97910" -> "97908" 
+  "97924" -> "97923" 
+  "97937" -> "97936" 
+  "97943" -> "97958" 
+  "97965" -> "97854" 
+  "97610" -> "97609" 
+  "97615" -> "97635" 
+  "97939" -> "97937" 
+  "97944" -> "97949" 
+  "97946" -> "97955" 
+  "97955" -> "97943" 
+  "97958" -> "97963" 
+  "97958" -> "97968" 
+  "97966" -> "97965" 
+  "97975" -> "97990" 
+  "97999" -> "97854" 
+  "97612" -> "97610" 
+  "97617" -> "97615" 
+  "97621" -> "97626" 
+  "97625" -> "97630" 
+  "97630" -> "98010" 
+  "97947" -> "97952" 
+  "97952" -> "97946" 
+  "97962" -> "97968" 
+  "97968" -> "97966" 
+  "97976" -> "97981" 
+  "97978" -> "97987" 
+  "97987" -> "97975" 
+  "97990" -> "97996" 
+  "97990" -> "98002" 
+  "98000" -> "98006" 
+  "98005" -> "97999" 
+  "97626" -> "97625" 
+  "97949" -> "97947" 
+  "97963" -> "97962" 
+  "97979" -> "97984" 
+  "97984" -> "97978" 
+  "97994" -> "98002" 
+  "98002" -> "98000" 
+  "98006" -> "98005" 
+  "97981" -> "97979" 
+  "97995" -> "97994" 
+  "97996" -> "97997" 
+  "97997" -> "97995" 
+  "97523" -> "97530" 
+}

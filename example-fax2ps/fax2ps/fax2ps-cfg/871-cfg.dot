@@ -1,0 +1,121 @@
+digraph "TIFFUnsetField" {  
+"42454" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42460" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42562" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>1194</SUB>> ]
+"42567" [label = <(RETURN,return (1);,return (1);)<SUB>1196</SUB>> ]
+"42456" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42462" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42467" [label = <(&lt;operator&gt;.logicalNot,!fip)<SUB>1165</SUB>> ]
+"42473" [label = <(&lt;operator&gt;.notEquals,fip-&gt;field_bit != FIELD_CUSTOM)<SUB>1168</SUB>> ]
+"42563" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1194</SUB>> ]
+"42463" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42470" [label = <(RETURN,return 0;,return 0;)<SUB>1166</SUB>> ]
+"42474" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1168</SUB>> ]
+"42479" [label = <(TIFFClrFieldBit,TIFFClrFieldBit(tif, fip-&gt;field_bit))<SUB>1169</SUB>> ]
+"42565" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1194</SUB>> ]
+"42465" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1163</SUB>> ]
+"42476" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1168</SUB>> ]
+"42481" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1169</SUB>> ]
+"42487" [label = <(&lt;operator&gt;.assignment,*tv = NULL)<SUB>1172</SUB>> ]
+"42483" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1169</SUB>> ]
+"42496" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount)<SUB>1175</SUB>> ]
+"42501" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>1175</SUB>> ]
+"42522" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount)<SUB>1183</SUB>> ]
+"42493" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1175</SUB>> ]
+"42498" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1175</SUB>> ]
+"42504" [label = <(&lt;operator&gt;.assignment,tv = td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42524" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1183</SUB>> ]
+"42528" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tv-&gt;value))<SUB>1185</SUB>> ]
+"42558" [label = <(&lt;operator&gt;.postDecrement,td-&gt;td_customValueCount--)<SUB>1190</SUB>> ]
+"42500" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1175</SUB>> ]
+"42506" [label = <(&lt;operator&gt;.addition,td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42512" [label = <(&lt;operator&gt;.equals,tv-&gt;info-&gt;field_tag == tag)<SUB>1179</SUB>> ]
+"42526" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1183</SUB>> ]
+"42530" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;value)<SUB>1185</SUB>> ]
+"42535" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42542" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>1186</SUB>> ]
+"42559" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1190</SUB>> ]
+"42507" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1178</SUB>> ]
+"42513" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;info-&gt;field_tag)<SUB>1179</SUB>> ]
+"42532" [label = <(FIELD_IDENTIFIER,value,value)<SUB>1185</SUB>> ]
+"42537" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42545" [label = <(&lt;operator&gt;.assignment,td-&gt;td_customValues[i] = td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42561" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1190</SUB>> ]
+"42509" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1178</SUB>> ]
+"42514" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;info)<SUB>1179</SUB>> ]
+"42517" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>1179</SUB>> ]
+"42538" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1186</SUB>> ]
+"42546" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_customValues[i])<SUB>1188</SUB>> ]
+"42551" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42516" [label = <(FIELD_IDENTIFIER,info,info)<SUB>1179</SUB>> ]
+"42540" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1186</SUB>> ]
+"42547" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1188</SUB>> ]
+"42552" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1188</SUB>> ]
+"42555" [label = <(&lt;operator&gt;.addition,i + 1)<SUB>1188</SUB>> ]
+"42549" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1188</SUB>> ]
+"42554" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1188</SUB>> ]
+"42449" [label = <(METHOD,TIFFUnsetField)<SUB>1160</SUB>> ]
+"42569" [label = <(METHOD_RETURN,int)<SUB>1160</SUB>> ]
+  "42454" -> "42465" 
+  "42460" -> "42467" 
+  "42562" -> "42567" 
+  "42567" -> "42569" 
+  "42456" -> "42454" 
+  "42462" -> "42460" 
+  "42467" -> "42470" 
+  "42467" -> "42476" 
+  "42473" -> "42483" 
+  "42473" -> "42487" 
+  "42563" -> "42562" 
+  "42463" -> "42462" 
+  "42470" -> "42569" 
+  "42474" -> "42473" 
+  "42479" -> "42565" 
+  "42565" -> "42563" 
+  "42465" -> "42463" 
+  "42476" -> "42474" 
+  "42481" -> "42479" 
+  "42487" -> "42493" 
+  "42483" -> "42481" 
+  "42496" -> "42509" 
+  "42496" -> "42526" 
+  "42501" -> "42500" 
+  "42522" -> "42532" 
+  "42522" -> "42565" 
+  "42493" -> "42500" 
+  "42498" -> "42496" 
+  "42504" -> "42516" 
+  "42524" -> "42522" 
+  "42528" -> "42540" 
+  "42558" -> "42565" 
+  "42500" -> "42498" 
+  "42506" -> "42504" 
+  "42512" -> "42526" 
+  "42512" -> "42501" 
+  "42526" -> "42524" 
+  "42530" -> "42528" 
+  "42535" -> "42549" 
+  "42535" -> "42561" 
+  "42542" -> "42540" 
+  "42559" -> "42558" 
+  "42507" -> "42506" 
+  "42513" -> "42512" 
+  "42532" -> "42530" 
+  "42537" -> "42535" 
+  "42545" -> "42542" 
+  "42561" -> "42559" 
+  "42509" -> "42507" 
+  "42514" -> "42517" 
+  "42517" -> "42513" 
+  "42538" -> "42537" 
+  "42546" -> "42554" 
+  "42551" -> "42545" 
+  "42516" -> "42514" 
+  "42540" -> "42538" 
+  "42547" -> "42546" 
+  "42552" -> "42555" 
+  "42555" -> "42551" 
+  "42549" -> "42547" 
+  "42554" -> "42552" 
+  "42449" -> "42456" 
+}

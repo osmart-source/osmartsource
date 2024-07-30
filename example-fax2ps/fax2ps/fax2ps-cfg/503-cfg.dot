@@ -1,0 +1,260 @@
+digraph "main" {  
+"10295" [label = <(&lt;operator&gt;.assignment,*pages = NULL)<SUB>348</SUB>> ]
+"10302" [label = <(&lt;operator&gt;.assignment,npages = 0)<SUB>348</SUB>> ]
+"10307" [label = <(&lt;operator&gt;.assignment,dowarnings = 0)<SUB>349</SUB>> ]
+"10593" [label = <(printf,printf(&quot;%%%%Trailer\n&quot;))<SUB>454</SUB>> ]
+"10595" [label = <(printf,printf(&quot;%%%%Pages: %u\n&quot;, totalPages))<SUB>455</SUB>> ]
+"10598" [label = <(printf,printf(&quot;%%%%EOF\n&quot;))<SUB>456</SUB>> ]
+"10600" [label = <(RETURN,return (EXIT_SUCCESS);,return (EXIT_SUCCESS);)<SUB>458</SUB>> ]
+"10297" [label = <(NULL,NULL)<SUB>348</SUB>> ]
+"10312" [label = <(&lt;operator&gt;.notEquals,(c = getopt(argc, argv, &quot;l:p:x:y:W:H:wSh&quot;)) != -1)<SUB>352</SUB>> ]
+"10450" [label = <(&lt;operator&gt;.greaterThan,npages &gt; 0)<SUB>396</SUB>> ]
+"10461" [label = <(&lt;operator&gt;.logicalNot,!dowarnings)<SUB>398</SUB>> ]
+"10467" [label = <(&lt;operator&gt;.lessThan,optind &lt; argc)<SUB>400</SUB>> ]
+"10601" [label = <(EXIT_SUCCESS,EXIT_SUCCESS)<SUB>458</SUB>> ]
+"10313" [label = <(&lt;operator&gt;.assignment,c = getopt(argc, argv, &quot;l:p:x:y:W:H:wSh&quot;))<SUB>352</SUB>> ]
+"10319" [label = <(&lt;operator&gt;.minus,-1)<SUB>352</SUB>> ]
+"10454" [label = <(qsort,qsort(pages, npages, sizeof(uint16_t), pcompar))<SUB>397</SUB>> ]
+"10464" [label = <(TIFFSetWarningHandler,TIFFSetWarningHandler(0))<SUB>399</SUB>> ]
+"10299" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>348</SUB>> ]
+"10315" [label = <(getopt,getopt(argc, argv, &quot;l:p:x:y:W:H:wSh&quot;))<SUB>352</SUB>> ]
+"10326" [label = <(&lt;operator&gt;.assignment,pageHeight = (float)atof(optarg))<SUB>356</SUB>> ]
+"10335" [label = <(&lt;operator&gt;.assignment,scaleToPage = 1)<SUB>359</SUB>> ]
+"10341" [label = <(&lt;operator&gt;.assignment,pageWidth = (float)atof(optarg))<SUB>362</SUB>> ]
+"10350" [label = <(&lt;operator&gt;.assignment,pageNumber = (uint16_t)atoi(optarg))<SUB>365</SUB>> ]
+"10398" [label = <(&lt;operator&gt;.assignment,pages[npages++] = pageNumber)<SUB>376</SUB>> ]
+"10407" [label = <(&lt;operator&gt;.assignment,dowarnings = 1)<SUB>379</SUB>> ]
+"10413" [label = <(&lt;operator&gt;.assignment,defxres = (float)atof(optarg))<SUB>382</SUB>> ]
+"10422" [label = <(&lt;operator&gt;.assignment,defyres = (float)atof(optarg))<SUB>385</SUB>> ]
+"10431" [label = <(&lt;operator&gt;.assignment,maxline = atoi(optarg))<SUB>388</SUB>> ]
+"10438" [label = <(usage,usage(EXIT_SUCCESS))<SUB>391</SUB>> ]
+"10445" [label = <(usage,usage(EXIT_FAILURE))<SUB>394</SUB>> ]
+"10457" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>397</SUB>> ]
+"10502" [label = <(&lt;operator&gt;.lessThan,++optind &lt; argc)<SUB>413</SUB>> ]
+"10511" [label = <(&lt;operator&gt;.assignment,fd = tmpfile())<SUB>421</SUB>> ]
+"10560" [label = <(_TIFF_lseek_f,_TIFF_lseek_f(fileno(fd), 0, SEEK_SET))<SUB>439</SUB>> ]
+"10567" [label = <(&lt;operator&gt;.assignment,tif = TIFFFdOpen(fileno(fd), &quot;temp&quot;, &quot;r&quot;))<SUB>443</SUB>> ]
+"10591" [label = <(fclose,fclose(fd))<SUB>452</SUB>> ]
+"10300" [label = <(UNKNOWN,void *,void *)<SUB>348</SUB>> ]
+"10328" [label = <(&lt;operator&gt;.cast,(float)atof(optarg))<SUB>356</SUB>> ]
+"10343" [label = <(&lt;operator&gt;.cast,(float)atof(optarg))<SUB>362</SUB>> ]
+"10352" [label = <(&lt;operator&gt;.cast,(uint16_t)atoi(optarg))<SUB>365</SUB>> ]
+"10357" [label = <(&lt;operator&gt;.logicalAnd,pages &amp;&amp; 1)<SUB>366</SUB>> ]
+"10383" [label = <(&lt;operator&gt;.equals,pages == NULL)<SUB>371</SUB>> ]
+"10399" [label = <(&lt;operator&gt;.indirectIndexAccess,pages[npages++])<SUB>376</SUB>> ]
+"10415" [label = <(&lt;operator&gt;.cast,(float)atof(optarg))<SUB>382</SUB>> ]
+"10424" [label = <(&lt;operator&gt;.cast,(float)atof(optarg))<SUB>385</SUB>> ]
+"10433" [label = <(atoi,atoi(optarg))<SUB>388</SUB>> ]
+"10439" [label = <(EXIT_SUCCESS,EXIT_SUCCESS)<SUB>391</SUB>> ]
+"10446" [label = <(EXIT_FAILURE,EXIT_FAILURE)<SUB>394</SUB>> ]
+"10473" [label = <(&lt;operator&gt;.assignment,tif = TIFFOpen(argv[optind], &quot;r&quot;))<SUB>404</SUB>> ]
+"10503" [label = <(&lt;operator&gt;.preIncrement,++optind)<SUB>413</SUB>> ]
+"10513" [label = <(tmpfile,tmpfile())<SUB>421</SUB>> ]
+"10515" [label = <(&lt;operator&gt;.equals,fd == NULL)<SUB>422</SUB>> ]
+"10531" [label = <(&lt;operator&gt;.greaterThan,(n = read(fileno(stdin), buf, sizeof(buf))) &gt; 0)<SUB>430</SUB>> ]
+"10561" [label = <(fileno,fileno(fd))<SUB>439</SUB>> ]
+"10564" [label = <(SEEK_SET,SEEK_SET)<SUB>439</SUB>> ]
+"10569" [label = <(TIFFFdOpen,TIFFFdOpen(fileno(fd), &quot;temp&quot;, &quot;r&quot;))<SUB>443</SUB>> ]
+"10575" [label = <(&lt;operator&gt;.logicalAnd,tif &amp;&amp; 1)<SUB>445</SUB>> ]
+"10329" [label = <(UNKNOWN,float,float)<SUB>356</SUB>> ]
+"10330" [label = <(atof,atof(optarg))<SUB>356</SUB>> ]
+"10344" [label = <(UNKNOWN,float,float)<SUB>362</SUB>> ]
+"10345" [label = <(atof,atof(optarg))<SUB>362</SUB>> ]
+"10353" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>365</SUB>> ]
+"10354" [label = <(atoi,atoi(optarg))<SUB>365</SUB>> ]
+"10361" [label = <(&lt;operator&gt;.assignment,pages = (uint16_t *)realloc(pages, (npages + 1) *\012                                                           sizeof(uint16_t)))<SUB>367</SUB>> ]
+"10385" [label = <(NULL,NULL)<SUB>371</SUB>> ]
+"10391" [label = <(fprintf,fprintf(stderr, &quot;Out of memory\n&quot;))<SUB>373</SUB>> ]
+"10394" [label = <(exit,exit(EXIT_FAILURE))<SUB>374</SUB>> ]
+"10401" [label = <(&lt;operator&gt;.postIncrement,npages++)<SUB>376</SUB>> ]
+"10416" [label = <(UNKNOWN,float,float)<SUB>382</SUB>> ]
+"10417" [label = <(atof,atof(optarg))<SUB>382</SUB>> ]
+"10425" [label = <(UNKNOWN,float,float)<SUB>385</SUB>> ]
+"10426" [label = <(atof,atof(optarg))<SUB>385</SUB>> ]
+"10475" [label = <(TIFFOpen,TIFFOpen(argv[optind], &quot;r&quot;))<SUB>404</SUB>> ]
+"10481" [label = <(&lt;operator&gt;.logicalAnd,tif &amp;&amp; 1)<SUB>405</SUB>> ]
+"10517" [label = <(NULL,NULL)<SUB>422</SUB>> ]
+"10523" [label = <(fprintf,fprintf(stderr, &quot;Could not obtain temporary file.\n&quot;))<SUB>424</SUB>> ]
+"10526" [label = <(exit,exit(EXIT_FAILURE))<SUB>425</SUB>> ]
+"10532" [label = <(&lt;operator&gt;.assignment,n = read(fileno(stdin), buf, sizeof(buf)))<SUB>430</SUB>> ]
+"10570" [label = <(fileno,fileno(fd))<SUB>443</SUB>> ]
+"10579" [label = <(fax2ps,fax2ps(tif, npages, pages, &quot;&lt;stdin&gt;&quot;))<SUB>447</SUB>> ]
+"10584" [label = <(TIFFClose,TIFFClose(tif))<SUB>448</SUB>> ]
+"10363" [label = <(&lt;operator&gt;.cast,(uint16_t *)realloc(pages, (npages + 1) *\012                                                           sizeof(uint16_t)))<SUB>367</SUB>> ]
+"10375" [label = <(&lt;operator&gt;.assignment,pages = (uint16_t *)malloc(sizeof(uint16_t)))<SUB>370</SUB>> ]
+"10395" [label = <(EXIT_FAILURE,EXIT_FAILURE)<SUB>374</SUB>> ]
+"10476" [label = <(&lt;operator&gt;.indirectIndexAccess,argv[optind])<SUB>404</SUB>> ]
+"10485" [label = <(fax2ps,fax2ps(tif, npages, pages, argv[optind]))<SUB>407</SUB>> ]
+"10492" [label = <(TIFFClose,TIFFClose(tif))<SUB>408</SUB>> ]
+"10527" [label = <(EXIT_FAILURE,EXIT_FAILURE)<SUB>425</SUB>> ]
+"10534" [label = <(read,read(fileno(stdin), buf, sizeof(buf)))<SUB>430</SUB>> ]
+"10543" [label = <(&lt;operator&gt;.notEquals,write(fileno(fd), buf, n) != n)<SUB>432</SUB>> ]
+"10588" [label = <(fprintf,fprintf(stderr, &quot;Can not open, or not a TIFF file.\n&quot;))<SUB>451</SUB>> ]
+"10364" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>367</SUB>> ]
+"10365" [label = <(realloc,realloc(pages, (npages + 1) *\012                                                           sizeof(uint16_t)))<SUB>367</SUB>> ]
+"10377" [label = <(&lt;operator&gt;.cast,(uint16_t *)malloc(sizeof(uint16_t)))<SUB>370</SUB>> ]
+"10387" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>371</SUB>> ]
+"10489" [label = <(&lt;operator&gt;.indirectIndexAccess,argv[optind])<SUB>407</SUB>> ]
+"10496" [label = <(fprintf,fprintf(stderr, &quot;%s: Can not open, or not a TIFF file.\n&quot;,\012                        argv[optind]))<SUB>411</SUB>> ]
+"10519" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>422</SUB>> ]
+"10535" [label = <(fileno,fileno(stdin))<SUB>430</SUB>> ]
+"10538" [label = <(&lt;operator&gt;.sizeOf,sizeof(buf))<SUB>430</SUB>> ]
+"10544" [label = <(write,write(fileno(fd), buf, n))<SUB>432</SUB>> ]
+"10551" [label = <(fclose,fclose(fd))<SUB>434</SUB>> ]
+"10553" [label = <(fprintf,fprintf(stderr, &quot;Could not copy stdin to temporary file.\n&quot;))<SUB>435</SUB>> ]
+"10556" [label = <(exit,exit(EXIT_FAILURE))<SUB>436</SUB>> ]
+"10367" [label = <(&lt;operator&gt;.multiplication,(npages + 1) *\012                                                           sizeof(uint16_t))<SUB>367</SUB>> ]
+"10378" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>370</SUB>> ]
+"10379" [label = <(malloc,malloc(sizeof(uint16_t)))<SUB>370</SUB>> ]
+"10388" [label = <(UNKNOWN,void *,void *)<SUB>371</SUB>> ]
+"10499" [label = <(&lt;operator&gt;.indirectIndexAccess,argv[optind])<SUB>412</SUB>> ]
+"10520" [label = <(UNKNOWN,void *,void *)<SUB>422</SUB>> ]
+"10545" [label = <(fileno,fileno(fd))<SUB>432</SUB>> ]
+"10557" [label = <(EXIT_FAILURE,EXIT_FAILURE)<SUB>436</SUB>> ]
+"10368" [label = <(&lt;operator&gt;.addition,npages + 1)<SUB>367</SUB>> ]
+"10371" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>368</SUB>> ]
+"10380" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>370</SUB>> ]
+"10286" [label = <(METHOD,main)<SUB>342</SUB>> ]
+"10604" [label = <(METHOD_RETURN,int)<SUB>342</SUB>> ]
+  "10295" -> "10302" 
+  "10302" -> "10307" 
+  "10307" -> "10315" 
+  "10593" -> "10595" 
+  "10595" -> "10598" 
+  "10598" -> "10601" 
+  "10600" -> "10604" 
+  "10297" -> "10300" 
+  "10297" -> "10295" 
+  "10312" -> "10315" 
+  "10312" -> "10329" 
+  "10312" -> "10335" 
+  "10312" -> "10344" 
+  "10312" -> "10353" 
+  "10312" -> "10407" 
+  "10312" -> "10416" 
+  "10312" -> "10425" 
+  "10312" -> "10433" 
+  "10312" -> "10439" 
+  "10312" -> "10446" 
+  "10312" -> "10450" 
+  "10450" -> "10457" 
+  "10450" -> "10461" 
+  "10461" -> "10464" 
+  "10461" -> "10467" 
+  "10467" -> "10476" 
+  "10467" -> "10513" 
+  "10601" -> "10600" 
+  "10313" -> "10319" 
+  "10319" -> "10312" 
+  "10454" -> "10461" 
+  "10464" -> "10467" 
+  "10299" -> "10295" 
+  "10315" -> "10313" 
+  "10326" -> "10315" 
+  "10335" -> "10315" 
+  "10341" -> "10315" 
+  "10350" -> "10357" 
+  "10398" -> "10315" 
+  "10407" -> "10315" 
+  "10413" -> "10315" 
+  "10422" -> "10315" 
+  "10431" -> "10315" 
+  "10438" -> "10315" 
+  "10445" -> "10315" 
+  "10457" -> "10454" 
+  "10502" -> "10476" 
+  "10502" -> "10593" 
+  "10511" -> "10517" 
+  "10560" -> "10570" 
+  "10567" -> "10575" 
+  "10591" -> "10593" 
+  "10300" -> "10299" 
+  "10328" -> "10326" 
+  "10343" -> "10341" 
+  "10352" -> "10350" 
+  "10357" -> "10364" 
+  "10357" -> "10378" 
+  "10383" -> "10391" 
+  "10383" -> "10401" 
+  "10399" -> "10398" 
+  "10415" -> "10413" 
+  "10424" -> "10422" 
+  "10433" -> "10431" 
+  "10439" -> "10438" 
+  "10446" -> "10445" 
+  "10473" -> "10481" 
+  "10503" -> "10502" 
+  "10513" -> "10511" 
+  "10515" -> "10523" 
+  "10515" -> "10535" 
+  "10531" -> "10545" 
+  "10531" -> "10561" 
+  "10561" -> "10564" 
+  "10564" -> "10560" 
+  "10569" -> "10567" 
+  "10575" -> "10579" 
+  "10575" -> "10588" 
+  "10329" -> "10330" 
+  "10330" -> "10328" 
+  "10344" -> "10345" 
+  "10345" -> "10343" 
+  "10353" -> "10354" 
+  "10354" -> "10352" 
+  "10361" -> "10385" 
+  "10385" -> "10388" 
+  "10385" -> "10383" 
+  "10391" -> "10395" 
+  "10394" -> "10401" 
+  "10401" -> "10399" 
+  "10416" -> "10417" 
+  "10417" -> "10415" 
+  "10425" -> "10426" 
+  "10426" -> "10424" 
+  "10475" -> "10473" 
+  "10481" -> "10489" 
+  "10481" -> "10499" 
+  "10517" -> "10520" 
+  "10517" -> "10515" 
+  "10523" -> "10527" 
+  "10526" -> "10535" 
+  "10532" -> "10531" 
+  "10570" -> "10569" 
+  "10579" -> "10584" 
+  "10584" -> "10591" 
+  "10363" -> "10361" 
+  "10375" -> "10385" 
+  "10395" -> "10394" 
+  "10476" -> "10475" 
+  "10485" -> "10492" 
+  "10492" -> "10503" 
+  "10527" -> "10526" 
+  "10534" -> "10532" 
+  "10543" -> "10535" 
+  "10543" -> "10551" 
+  "10588" -> "10591" 
+  "10364" -> "10368" 
+  "10365" -> "10363" 
+  "10377" -> "10375" 
+  "10387" -> "10383" 
+  "10489" -> "10485" 
+  "10496" -> "10503" 
+  "10519" -> "10515" 
+  "10535" -> "10538" 
+  "10538" -> "10534" 
+  "10544" -> "10543" 
+  "10551" -> "10553" 
+  "10553" -> "10557" 
+  "10556" -> "10535" 
+  "10367" -> "10365" 
+  "10378" -> "10380" 
+  "10379" -> "10377" 
+  "10388" -> "10387" 
+  "10499" -> "10496" 
+  "10520" -> "10519" 
+  "10545" -> "10544" 
+  "10557" -> "10556" 
+  "10368" -> "10371" 
+  "10371" -> "10367" 
+  "10380" -> "10379" 
+  "10286" -> "10297" 
+}

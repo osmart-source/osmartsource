@@ -1,0 +1,197 @@
+digraph "_TIFFFillStrilesInternal" {  
+"98550" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>7670</SUB>> ]
+"98557" [label = <(&lt;operator&gt;.assignment,return_value = 1)<SUB>7671</SUB>> ]
+"98688" [label = <(_TIFFmemset,_TIFFmemset(&amp;(td-&gt;td_stripoffset_entry), 0, sizeof(TIFFDirEntry)))<SUB>7710</SUB>> ]
+"98696" [label = <(_TIFFmemset,_TIFFmemset(&amp;(td-&gt;td_stripbytecount_entry), 0, sizeof(TIFFDirEntry)))<SUB>7711</SUB>> ]
+"98704" [label = <(RETURN,return return_value;,return return_value;)<SUB>7731</SUB>> ]
+"98552" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>7670</SUB>> ]
+"98561" [label = <(&lt;operator&gt;.logicalOr,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) ||\012        (tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS) != 0)<SUB>7674</SUB>> ]
+"98579" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD)<SUB>7678</SUB>> ]
+"98625" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_stripoffset_p != NULL)<SUB>7690</SUB>> ]
+"98638" [label = <(&lt;operator&gt;.equals,td-&gt;td_stripoffset_entry.tdir_count == 0)<SUB>7694</SUB>> ]
+"98649" [label = <(&lt;operator&gt;.logicalNot,!TIFFFetchStripThing(tif, &amp;(td-&gt;td_stripoffset_entry), td-&gt;td_nstrips,\012                             &amp;td-&gt;td_stripoffset_p))<SUB>7697</SUB>> ]
+"98668" [label = <(&lt;operator&gt;.logicalAnd,loadStripByteCount &amp;&amp;\012        !TIFFFetchStripThing(tif, &amp;(td-&gt;td_stripbytecount_entry),\012                             td-&gt;td_nstrips, &amp;td-&gt;td_stripbytecount_p))<SUB>7703</SUB>> ]
+"98689" [label = <(&lt;operator&gt;.addressOf,&amp;(td-&gt;td_stripoffset_entry))<SUB>7710</SUB>> ]
+"98694" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFDirEntry))<SUB>7710</SUB>> ]
+"98697" [label = <(&lt;operator&gt;.addressOf,&amp;(td-&gt;td_stripbytecount_entry))<SUB>7711</SUB>> ]
+"98702" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFDirEntry))<SUB>7711</SUB>> ]
+"98553" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7670</SUB>> ]
+"98562" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD))<SUB>7674</SUB>> ]
+"98568" [label = <(&lt;operator&gt;.notEquals,(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS) != 0)<SUB>7675</SUB>> ]
+"98576" [label = <(RETURN,return 1;,return 1;)<SUB>7676</SUB>> ]
+"98580" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7678</SUB>> ]
+"98585" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, td-&gt;td_stripoffset_p))<SUB>7681</SUB>> ]
+"98590" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, td-&gt;td_stripbytecount_p))<SUB>7682</SUB>> ]
+"98595" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripoffset_p = NULL)<SUB>7683</SUB>> ]
+"98604" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripbytecount_p = NULL)<SUB>7684</SUB>> ]
+"98613" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripoffsetbyteallocsize = 0)<SUB>7685</SUB>> ]
+"98618" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_LAZYSTRILELOAD)<SUB>7686</SUB>> ]
+"98626" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7690</SUB>> ]
+"98629" [label = <(NULL,NULL)<SUB>7690</SUB>> ]
+"98635" [label = <(RETURN,return 1;,return 1;)<SUB>7691</SUB>> ]
+"98639" [label = <(&lt;operator&gt;.fieldAccess,td-&gt;td_stripoffset_entry.tdir_count)<SUB>7694</SUB>> ]
+"98646" [label = <(RETURN,return 0;,return 0;)<SUB>7695</SUB>> ]
+"98650" [label = <(TIFFFetchStripThing,TIFFFetchStripThing(tif, &amp;(td-&gt;td_stripoffset_entry), td-&gt;td_nstrips,\012                             &amp;td-&gt;td_stripoffset_p))<SUB>7697</SUB>> ]
+"98664" [label = <(&lt;operator&gt;.assignment,return_value = 0)<SUB>7700</SUB>> ]
+"98670" [label = <(&lt;operator&gt;.logicalNot,!TIFFFetchStripThing(tif, &amp;(td-&gt;td_stripbytecount_entry),\012                             td-&gt;td_nstrips, &amp;td-&gt;td_stripbytecount_p))<SUB>7704</SUB>> ]
+"98685" [label = <(&lt;operator&gt;.assignment,return_value = 0)<SUB>7707</SUB>> ]
+"98690" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_entry)<SUB>7710</SUB>> ]
+"98698" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_entry)<SUB>7711</SUB>> ]
+"98555" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7670</SUB>> ]
+"98563" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>7674</SUB>> ]
+"98569" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)<SUB>7675</SUB>> ]
+"98582" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7678</SUB>> ]
+"98587" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7681</SUB>> ]
+"98592" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7682</SUB>> ]
+"98596" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7683</SUB>> ]
+"98599" [label = <(NULL,NULL)<SUB>7683</SUB>> ]
+"98605" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7684</SUB>> ]
+"98608" [label = <(NULL,NULL)<SUB>7684</SUB>> ]
+"98614" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffsetbyteallocsize)<SUB>7685</SUB>> ]
+"98619" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7686</SUB>> ]
+"98622" [label = <(&lt;operator&gt;.not,~TIFF_LAZYSTRILELOAD)<SUB>7686</SUB>> ]
+"98628" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7690</SUB>> ]
+"98640" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_entry)<SUB>7694</SUB>> ]
+"98643" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>7694</SUB>> ]
+"98652" [label = <(&lt;operator&gt;.addressOf,&amp;(td-&gt;td_stripoffset_entry))<SUB>7697</SUB>> ]
+"98656" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7697</SUB>> ]
+"98659" [label = <(&lt;operator&gt;.addressOf,&amp;td-&gt;td_stripoffset_p)<SUB>7698</SUB>> ]
+"98671" [label = <(TIFFFetchStripThing,TIFFFetchStripThing(tif, &amp;(td-&gt;td_stripbytecount_entry),\012                             td-&gt;td_nstrips, &amp;td-&gt;td_stripbytecount_p))<SUB>7704</SUB>> ]
+"98692" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>7710</SUB>> ]
+"98700" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>7711</SUB>> ]
+"98564" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7674</SUB>> ]
+"98570" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7675</SUB>> ]
+"98589" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7681</SUB>> ]
+"98594" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7682</SUB>> ]
+"98598" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7683</SUB>> ]
+"98607" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7684</SUB>> ]
+"98616" [label = <(FIELD_IDENTIFIER,td_stripoffsetbyteallocsize,td_stripoffsetbyteallocsize)<SUB>7685</SUB>> ]
+"98621" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7686</SUB>> ]
+"98631" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7690</SUB>> ]
+"98642" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>7694</SUB>> ]
+"98653" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_entry)<SUB>7697</SUB>> ]
+"98658" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7697</SUB>> ]
+"98660" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7698</SUB>> ]
+"98673" [label = <(&lt;operator&gt;.addressOf,&amp;(td-&gt;td_stripbytecount_entry))<SUB>7704</SUB>> ]
+"98677" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7705</SUB>> ]
+"98680" [label = <(&lt;operator&gt;.addressOf,&amp;td-&gt;td_stripbytecount_p)<SUB>7705</SUB>> ]
+"98566" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7674</SUB>> ]
+"98572" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7675</SUB>> ]
+"98601" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7683</SUB>> ]
+"98610" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7684</SUB>> ]
+"98632" [label = <(UNKNOWN,void *,void *)<SUB>7690</SUB>> ]
+"98655" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>7697</SUB>> ]
+"98662" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7698</SUB>> ]
+"98674" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_entry)<SUB>7704</SUB>> ]
+"98679" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7705</SUB>> ]
+"98681" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7705</SUB>> ]
+"98602" [label = <(UNKNOWN,void *,void *)<SUB>7683</SUB>> ]
+"98611" [label = <(UNKNOWN,void *,void *)<SUB>7684</SUB>> ]
+"98676" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>7704</SUB>> ]
+"98683" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7705</SUB>> ]
+"98545" [label = <(METHOD,_TIFFFillStrilesInternal)<SUB>7668</SUB>> ]
+"98706" [label = <(METHOD_RETURN,int)<SUB>7668</SUB>> ]
+  "98550" -> "98557" 
+  "98557" -> "98566" 
+  "98688" -> "98700" 
+  "98696" -> "98704" 
+  "98704" -> "98706" 
+  "98552" -> "98550" 
+  "98561" -> "98576" 
+  "98561" -> "98582" 
+  "98579" -> "98589" 
+  "98579" -> "98628" 
+  "98625" -> "98635" 
+  "98625" -> "98642" 
+  "98638" -> "98646" 
+  "98638" -> "98655" 
+  "98649" -> "98664" 
+  "98649" -> "98668" 
+  "98649" -> "98676" 
+  "98668" -> "98685" 
+  "98668" -> "98692" 
+  "98689" -> "98694" 
+  "98694" -> "98688" 
+  "98697" -> "98702" 
+  "98702" -> "98696" 
+  "98553" -> "98552" 
+  "98562" -> "98561" 
+  "98562" -> "98572" 
+  "98568" -> "98561" 
+  "98576" -> "98706" 
+  "98580" -> "98579" 
+  "98585" -> "98594" 
+  "98590" -> "98598" 
+  "98595" -> "98607" 
+  "98604" -> "98616" 
+  "98613" -> "98621" 
+  "98618" -> "98628" 
+  "98626" -> "98629" 
+  "98629" -> "98632" 
+  "98629" -> "98625" 
+  "98635" -> "98706" 
+  "98639" -> "98638" 
+  "98646" -> "98706" 
+  "98650" -> "98649" 
+  "98664" -> "98668" 
+  "98664" -> "98676" 
+  "98670" -> "98668" 
+  "98685" -> "98692" 
+  "98690" -> "98689" 
+  "98698" -> "98697" 
+  "98555" -> "98553" 
+  "98563" -> "98562" 
+  "98569" -> "98568" 
+  "98582" -> "98580" 
+  "98587" -> "98585" 
+  "98592" -> "98590" 
+  "98596" -> "98599" 
+  "98599" -> "98602" 
+  "98599" -> "98595" 
+  "98605" -> "98608" 
+  "98608" -> "98611" 
+  "98608" -> "98604" 
+  "98614" -> "98613" 
+  "98619" -> "98622" 
+  "98622" -> "98618" 
+  "98628" -> "98626" 
+  "98640" -> "98643" 
+  "98643" -> "98639" 
+  "98652" -> "98658" 
+  "98656" -> "98662" 
+  "98659" -> "98650" 
+  "98671" -> "98670" 
+  "98692" -> "98690" 
+  "98700" -> "98698" 
+  "98564" -> "98563" 
+  "98570" -> "98569" 
+  "98589" -> "98587" 
+  "98594" -> "98592" 
+  "98598" -> "98596" 
+  "98607" -> "98605" 
+  "98616" -> "98614" 
+  "98621" -> "98619" 
+  "98631" -> "98625" 
+  "98642" -> "98640" 
+  "98653" -> "98652" 
+  "98658" -> "98656" 
+  "98660" -> "98659" 
+  "98673" -> "98679" 
+  "98677" -> "98683" 
+  "98680" -> "98671" 
+  "98566" -> "98564" 
+  "98572" -> "98570" 
+  "98601" -> "98595" 
+  "98610" -> "98604" 
+  "98632" -> "98631" 
+  "98655" -> "98653" 
+  "98662" -> "98660" 
+  "98674" -> "98673" 
+  "98679" -> "98677" 
+  "98681" -> "98680" 
+  "98602" -> "98601" 
+  "98611" -> "98610" 
+  "98676" -> "98674" 
+  "98683" -> "98681" 
+  "98545" -> "98555" 
+}

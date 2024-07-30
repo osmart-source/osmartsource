@@ -1,0 +1,73 @@
+digraph "TIFFVGetField" {  
+"43176" [label = <(METHOD,TIFFVGetField)<SUB>1599</SUB>> ]
+"43177" [label = <(PARAM,TIFF *tif)<SUB>1599</SUB>> ]
+"43178" [label = <(PARAM,uint32_t tag)<SUB>1599</SUB>> ]
+"43179" [label = <(PARAM,va_list ap)<SUB>1599</SUB>> ]
+"43180" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1600</SUB>> ]
+"43181" [label = <(LOCAL,const TIFFField* fip: TIFFField)<SUB>1601</SUB>> ]
+"43182" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43183" [label = <(IDENTIFIER,fip,*fip = TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43184" [label = <(TIFFFindField,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43185" [label = <(IDENTIFIER,tif,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43186" [label = <(IDENTIFIER,tag,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43187" [label = <(IDENTIFIER,TIFF_ANY,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43188" [label = <(RETURN,return (fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0);,return (fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0);)<SUB>1602</SUB>> ]
+"43189" [label = <(&lt;operator&gt;.conditional,fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0)<SUB>1602</SUB>> ]
+"43190" [label = <(&lt;operator&gt;.logicalAnd,fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit)))<SUB>1602</SUB>> ]
+"43191" [label = <(IDENTIFIER,fip,fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit)))<SUB>1602</SUB>> ]
+"43192" [label = <(&lt;operator&gt;.logicalOr,isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))<SUB>1602</SUB>> ]
+"43193" [label = <(isPseudoTag,isPseudoTag(tag))<SUB>1602</SUB>> ]
+"43194" [label = <(IDENTIFIER,tag,isPseudoTag(tag))<SUB>1602</SUB>> ]
+"43195" [label = <(TIFFFieldSet,TIFFFieldSet(tif, fip-&gt;field_bit))<SUB>1602</SUB>> ]
+"43196" [label = <(IDENTIFIER,tif,TIFFFieldSet(tif, fip-&gt;field_bit))<SUB>1602</SUB>> ]
+"43197" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1602</SUB>> ]
+"43198" [label = <(IDENTIFIER,fip,TIFFFieldSet(tif, fip-&gt;field_bit))<SUB>1602</SUB>> ]
+"43199" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1602</SUB>> ]
+"43200" [label = <(*tif-&gt;tif_tagmethods.vgetfield,(*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap))<SUB>1603</SUB>> ]
+"43201" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_tagmethods.vgetfield)<SUB>1603</SUB>> ]
+"43202" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_tagmethods.vgetfield)<SUB>1603</SUB>> ]
+"43203" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_tagmethods)<SUB>1603</SUB>> ]
+"43204" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap))<SUB>1603</SUB>> ]
+"43205" [label = <(FIELD_IDENTIFIER,tif_tagmethods,tif_tagmethods)<SUB>1603</SUB>> ]
+"43206" [label = <(FIELD_IDENTIFIER,vgetfield,vgetfield)<SUB>1603</SUB>> ]
+"43207" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap))<SUB>1603</SUB>> ]
+"43208" [label = <(IDENTIFIER,tag,(*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap))<SUB>1603</SUB>> ]
+"43209" [label = <(IDENTIFIER,ap,(*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap))<SUB>1603</SUB>> ]
+"43210" [label = <(LITERAL,0,fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0)<SUB>1604</SUB>> ]
+"43211" [label = <(METHOD_RETURN,int)<SUB>1599</SUB>> ]
+  "43176" -> "43177" 
+  "43176" -> "43178" 
+  "43176" -> "43179" 
+  "43176" -> "43180" 
+  "43176" -> "43211" 
+  "43180" -> "43181" 
+  "43180" -> "43182" 
+  "43180" -> "43188" 
+  "43182" -> "43183" 
+  "43182" -> "43184" 
+  "43184" -> "43185" 
+  "43184" -> "43186" 
+  "43184" -> "43187" 
+  "43188" -> "43189" 
+  "43189" -> "43190" 
+  "43189" -> "43200" 
+  "43189" -> "43210" 
+  "43190" -> "43191" 
+  "43190" -> "43192" 
+  "43192" -> "43193" 
+  "43192" -> "43195" 
+  "43193" -> "43194" 
+  "43195" -> "43196" 
+  "43195" -> "43197" 
+  "43197" -> "43198" 
+  "43197" -> "43199" 
+  "43200" -> "43201" 
+  "43200" -> "43207" 
+  "43200" -> "43208" 
+  "43200" -> "43209" 
+  "43201" -> "43202" 
+  "43202" -> "43203" 
+  "43202" -> "43206" 
+  "43203" -> "43204" 
+  "43203" -> "43205" 
+}

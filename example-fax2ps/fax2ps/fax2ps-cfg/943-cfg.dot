@@ -1,0 +1,351 @@
+digraph "gtStripContig" {  
+"48323" [label = <(&lt;operator&gt;.assignment,*tif = img-&gt;tif)<SUB>1053</SUB>> ]
+"48329" [label = <(&lt;operator&gt;.assignment,put = img-&gt;put.contig)<SUB>1054</SUB>> ]
+"48343" [label = <(&lt;operator&gt;.assignment,*buf = NULL)<SUB>1057</SUB>> ]
+"48354" [label = <(&lt;operator&gt;.assignment,imagewidth = img-&gt;width)<SUB>1060</SUB>> ]
+"48364" [label = <(&lt;operator&gt;.assignment,ret = 1)<SUB>1063</SUB>> ]
+"48368" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING, &amp;subsamplinghor,\012                          &amp;subsamplingver))<SUB>1066</SUB>> ]
+"48387" [label = <(&lt;operator&gt;.assignment,maxstripsize = TIFFStripSize(tif))<SUB>1075</SUB>> ]
+"48391" [label = <(&lt;operator&gt;.assignment,flip = setorientation(img))<SUB>1077</SUB>> ]
+"48438" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_ROWSPERSTRIP, &amp;rowsperstrip))<SUB>1094</SUB>> ]
+"48443" [label = <(&lt;operator&gt;.assignment,scanline = TIFFScanlineSize(tif))<SUB>1096</SUB>> ]
+"48447" [label = <(&lt;operator&gt;.assignment,fromskew = (w &lt; imagewidth ? imagewidth - w : 0))<SUB>1097</SUB>> ]
+"48699" [label = <(_TIFFfreeExt,_TIFFfreeExt(img-&gt;tif, buf))<SUB>1151</SUB>> ]
+"48704" [label = <(RETURN,return (ret);,return (ret);)<SUB>1152</SUB>> ]
+"48325" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>1053</SUB>> ]
+"48331" [label = <(&lt;operator&gt;.fieldAccess,img-&gt;put.contig)<SUB>1054</SUB>> ]
+"48345" [label = <(NULL,NULL)<SUB>1057</SUB>> ]
+"48356" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;width)<SUB>1060</SUB>> ]
+"48371" [label = <(&lt;operator&gt;.addressOf,&amp;subsamplinghor)<SUB>1066</SUB>> ]
+"48373" [label = <(&lt;operator&gt;.addressOf,&amp;subsamplingver)<SUB>1067</SUB>> ]
+"48376" [label = <(&lt;operator&gt;.equals,subsamplingver == 0)<SUB>1068</SUB>> ]
+"48389" [label = <(TIFFStripSize,TIFFStripSize(tif))<SUB>1075</SUB>> ]
+"48393" [label = <(setorientation,setorientation(img))<SUB>1077</SUB>> ]
+"48396" [label = <(&lt;operator&gt;.and,flip &amp; FLIP_VERTICALLY)<SUB>1078</SUB>> ]
+"48441" [label = <(&lt;operator&gt;.addressOf,&amp;rowsperstrip)<SUB>1094</SUB>> ]
+"48445" [label = <(TIFFScanlineSize,TIFFScanlineSize(tif))<SUB>1096</SUB>> ]
+"48449" [label = <(&lt;operator&gt;.conditional,w &lt; imagewidth ? imagewidth - w : 0)<SUB>1097</SUB>> ]
+"48462" [label = <(&lt;operator&gt;.lessThan,row &lt; h)<SUB>1098</SUB>> ]
+"48465" [label = <(&lt;operator&gt;.assignmentPlus,row += nrow)<SUB>1098</SUB>> ]
+"48642" [label = <(&lt;operator&gt;.and,flip &amp; FLIP_HORIZONTALLY)<SUB>1131</SUB>> ]
+"48700" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>1151</SUB>> ]
+"48327" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>1053</SUB>> ]
+"48332" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;put)<SUB>1054</SUB>> ]
+"48335" [label = <(FIELD_IDENTIFIER,contig,contig)<SUB>1054</SUB>> ]
+"48358" [label = <(FIELD_IDENTIFIER,width,width)<SUB>1060</SUB>> ]
+"48380" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Invalid vertical YCbCr subsampling&quot;))<SUB>1070</SUB>> ]
+"48385" [label = <(RETURN,return (0);,return (0);)<SUB>1072</SUB>> ]
+"48398" [label = <(FLIP_VERTICALLY,FLIP_VERTICALLY)<SUB>1078</SUB>> ]
+"48414" [label = <(&lt;operator&gt;.assignment,y = h - 1)<SUB>1085</SUB>> ]
+"48419" [label = <(&lt;operator&gt;.assignment,toskew = -(int32_t)(w + w))<SUB>1086</SUB>> ]
+"48450" [label = <(&lt;operator&gt;.lessThan,w &lt; imagewidth)<SUB>1097</SUB>> ]
+"48453" [label = <(&lt;operator&gt;.subtraction,imagewidth - w)<SUB>1097</SUB>> ]
+"48459" [label = <(&lt;operator&gt;.assignment,row = 0)<SUB>1098</SUB>> ]
+"48470" [label = <(&lt;operator&gt;.assignment,rowstoread = rowsperstrip - (row + img-&gt;row_offset) % rowsperstrip)<SUB>1101</SUB>> ]
+"48481" [label = <(&lt;operator&gt;.assignment,nrow = (row + rowstoread &gt; h ? h - row : rowstoread))<SUB>1102</SUB>> ]
+"48493" [label = <(&lt;operator&gt;.assignment,nrowsub = nrow)<SUB>1103</SUB>> ]
+"48510" [label = <(&lt;operator&gt;.assignment,temp = (row + img-&gt;row_offset) % rowsperstrip + nrowsub)<SUB>1106</SUB>> ]
+"48581" [label = <(&lt;operator&gt;.assignment,pos = ((row + img-&gt;row_offset) % rowsperstrip) * scanline +\012              ((tmsize_t)img-&gt;col_offset * img-&gt;samplesperpixel))<SUB>1123</SUB>> ]
+"48603" [label = <(&lt;operator&gt;.assignment,roffset = (tmsize_t)y * w)<SUB>1125</SUB>> ]
+"48610" [label = <(*put,(*put)(img, raster + roffset, 0, y, w, nrow, fromskew, toskew,\012               buf + pos))<SUB>1126</SUB>> ]
+"48626" [label = <(&lt;operator&gt;.assignmentPlus,y += ((flip &amp; FLIP_VERTICALLY) ? -(int32_t)nrow : (int32_t)nrow))<SUB>1128</SUB>> ]
+"48644" [label = <(FLIP_HORIZONTALLY,FLIP_HORIZONTALLY)<SUB>1131</SUB>> ]
+"48702" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>1151</SUB>> ]
+"48334" [label = <(FIELD_IDENTIFIER,put,put)<SUB>1054</SUB>> ]
+"48347" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1057</SUB>> ]
+"48382" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>1070</SUB>> ]
+"48403" [label = <(&lt;operator&gt;.greaterThan,w &gt; INT_MAX)<SUB>1080</SUB>> ]
+"48416" [label = <(&lt;operator&gt;.subtraction,h - 1)<SUB>1085</SUB>> ]
+"48421" [label = <(&lt;operator&gt;.minus,-(int32_t)(w + w))<SUB>1086</SUB>> ]
+"48428" [label = <(&lt;operator&gt;.assignment,y = 0)<SUB>1090</SUB>> ]
+"48431" [label = <(&lt;operator&gt;.assignment,toskew = -(int32_t)(w - w))<SUB>1091</SUB>> ]
+"48472" [label = <(&lt;operator&gt;.subtraction,rowsperstrip - (row + img-&gt;row_offset) % rowsperstrip)<SUB>1101</SUB>> ]
+"48483" [label = <(&lt;operator&gt;.conditional,row + rowstoread &gt; h ? h - row : rowstoread)<SUB>1102</SUB>> ]
+"48497" [label = <(&lt;operator&gt;.notEquals,(nrowsub % subsamplingver) != 0)<SUB>1104</SUB>> ]
+"48512" [label = <(&lt;operator&gt;.addition,(row + img-&gt;row_offset) % rowsperstrip + nrowsub)<SUB>1106</SUB>> ]
+"48522" [label = <(&lt;operator&gt;.logicalAnd,scanline &gt; 0 &amp;&amp; temp &gt; (size_t)(TIFF_TMSIZE_T_MAX / scanline))<SUB>1107</SUB>> ]
+"48542" [label = <(&lt;operator&gt;.logicalAnd,_TIFFReadEncodedStripAndAllocBuffer(\012                tif, TIFFComputeStrip(tif, row + img-&gt;row_offset, 0),\012                (void **)(&amp;buf), maxstripsize,\012                temp * scanline) == (tmsize_t)(-1) &amp;&amp;\012            (buf == NULL || img-&gt;stoponerr))<SUB>1113</SUB>> ]
+"48583" [label = <(&lt;operator&gt;.addition,((row + img-&gt;row_offset) % rowsperstrip) * scanline +\012              ((tmsize_t)img-&gt;col_offset * img-&gt;samplesperpixel))<SUB>1123</SUB>> ]
+"48605" [label = <(&lt;operator&gt;.multiplication,(tmsize_t)y * w)<SUB>1125</SUB>> ]
+"48611" [label = <(&lt;operator&gt;.indirection,*put)<SUB>1126</SUB>> ]
+"48614" [label = <(&lt;operator&gt;.addition,raster + roffset)<SUB>1126</SUB>> ]
+"48623" [label = <(&lt;operator&gt;.addition,buf + pos)<SUB>1127</SUB>> ]
+"48628" [label = <(&lt;operator&gt;.conditional,(flip &amp; FLIP_VERTICALLY) ? -(int32_t)nrow : (int32_t)nrow)<SUB>1128</SUB>> ]
+"48654" [label = <(&lt;operator&gt;.lessThan,line &lt; h)<SUB>1135</SUB>> ]
+"48657" [label = <(&lt;operator&gt;.postIncrement,line++)<SUB>1135</SUB>> ]
+"48348" [label = <(UNKNOWN,void *,void *)<SUB>1057</SUB>> ]
+"48407" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;Width overflow&quot;))<SUB>1082</SUB>> ]
+"48412" [label = <(RETURN,return (0);,return (0);)<SUB>1083</SUB>> ]
+"48422" [label = <(int32_t,(int32_t)(w + w))<SUB>1086</SUB>> ]
+"48433" [label = <(&lt;operator&gt;.minus,-(int32_t)(w - w))<SUB>1091</SUB>> ]
+"48474" [label = <(&lt;operator&gt;.modulo,(row + img-&gt;row_offset) % rowsperstrip)<SUB>1101</SUB>> ]
+"48484" [label = <(&lt;operator&gt;.greaterThan,row + rowstoread &gt; h)<SUB>1102</SUB>> ]
+"48489" [label = <(&lt;operator&gt;.subtraction,h - row)<SUB>1102</SUB>> ]
+"48498" [label = <(&lt;operator&gt;.modulo,nrowsub % subsamplingver)<SUB>1104</SUB>> ]
+"48503" [label = <(&lt;operator&gt;.assignmentPlus,nrowsub += subsamplingver - nrowsub % subsamplingver)<SUB>1105</SUB>> ]
+"48513" [label = <(&lt;operator&gt;.modulo,(row + img-&gt;row_offset) % rowsperstrip)<SUB>1106</SUB>> ]
+"48523" [label = <(&lt;operator&gt;.greaterThan,scanline &gt; 0)<SUB>1107</SUB>> ]
+"48526" [label = <(&lt;operator&gt;.greaterThan,temp &gt; (size_t)(TIFF_TMSIZE_T_MAX / scanline))<SUB>1107</SUB>> ]
+"48534" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif),\012                          &quot;Integer overflow in gtStripContig&quot;))<SUB>1109</SUB>> ]
+"48539" [label = <(RETURN,return 0;,return 0;)<SUB>1111</SUB>> ]
+"48543" [label = <(&lt;operator&gt;.equals,_TIFFReadEncodedStripAndAllocBuffer(\012                tif, TIFFComputeStrip(tif, row + img-&gt;row_offset, 0),\012                (void **)(&amp;buf), maxstripsize,\012                temp * scanline) == (tmsize_t)(-1))<SUB>1113</SUB>> ]
+"48565" [label = <(&lt;operator&gt;.logicalOr,buf == NULL || img-&gt;stoponerr)<SUB>1117</SUB>> ]
+"48577" [label = <(&lt;operator&gt;.assignment,ret = 0)<SUB>1119</SUB>> ]
+"48584" [label = <(&lt;operator&gt;.multiplication,((row + img-&gt;row_offset) % rowsperstrip) * scanline)<SUB>1123</SUB>> ]
+"48593" [label = <(&lt;operator&gt;.multiplication,(tmsize_t)img-&gt;col_offset * img-&gt;samplesperpixel)<SUB>1124</SUB>> ]
+"48606" [label = <(&lt;operator&gt;.cast,(tmsize_t)y)<SUB>1125</SUB>> ]
+"48629" [label = <(&lt;operator&gt;.and,flip &amp; FLIP_VERTICALLY)<SUB>1128</SUB>> ]
+"48634" [label = <(&lt;operator&gt;.minus,-(int32_t)nrow)<SUB>1128</SUB>> ]
+"48638" [label = <(&lt;operator&gt;.cast,(int32_t)nrow)<SUB>1128</SUB>> ]
+"48651" [label = <(&lt;operator&gt;.assignment,line = 0)<SUB>1135</SUB>> ]
+"48661" [label = <(&lt;operator&gt;.assignment,*left = raster + (line * w))<SUB>1137</SUB>> ]
+"48669" [label = <(&lt;operator&gt;.assignment,*right = left + w - 1)<SUB>1138</SUB>> ]
+"48409" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>1082</SUB>> ]
+"48423" [label = <(&lt;operator&gt;.addition,w + w)<SUB>1086</SUB>> ]
+"48434" [label = <(int32_t,(int32_t)(w - w))<SUB>1091</SUB>> ]
+"48475" [label = <(&lt;operator&gt;.addition,row + img-&gt;row_offset)<SUB>1101</SUB>> ]
+"48485" [label = <(&lt;operator&gt;.addition,row + rowstoread)<SUB>1102</SUB>> ]
+"48505" [label = <(&lt;operator&gt;.subtraction,subsamplingver - nrowsub % subsamplingver)<SUB>1105</SUB>> ]
+"48514" [label = <(&lt;operator&gt;.addition,row + img-&gt;row_offset)<SUB>1106</SUB>> ]
+"48528" [label = <(&lt;operator&gt;.cast,(size_t)(TIFF_TMSIZE_T_MAX / scanline))<SUB>1107</SUB>> ]
+"48536" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>1109</SUB>> ]
+"48544" [label = <(_TIFFReadEncodedStripAndAllocBuffer,_TIFFReadEncodedStripAndAllocBuffer(\012                tif, TIFFComputeStrip(tif, row + img-&gt;row_offset, 0),\012                (void **)(&amp;buf), maxstripsize,\012                temp * scanline))<SUB>1113</SUB>> ]
+"48562" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1116</SUB>> ]
+"48566" [label = <(&lt;operator&gt;.equals,buf == NULL)<SUB>1117</SUB>> ]
+"48573" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;stoponerr)<SUB>1117</SUB>> ]
+"48585" [label = <(&lt;operator&gt;.modulo,(row + img-&gt;row_offset) % rowsperstrip)<SUB>1123</SUB>> ]
+"48594" [label = <(&lt;operator&gt;.cast,(tmsize_t)img-&gt;col_offset)<SUB>1124</SUB>> ]
+"48599" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;samplesperpixel)<SUB>1124</SUB>> ]
+"48607" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1125</SUB>> ]
+"48631" [label = <(FLIP_VERTICALLY,FLIP_VERTICALLY)<SUB>1128</SUB>> ]
+"48635" [label = <(&lt;operator&gt;.cast,(int32_t)nrow)<SUB>1128</SUB>> ]
+"48639" [label = <(UNKNOWN,int32_t,int32_t)<SUB>1128</SUB>> ]
+"48663" [label = <(&lt;operator&gt;.addition,raster + (line * w))<SUB>1137</SUB>> ]
+"48671" [label = <(&lt;operator&gt;.subtraction,left + w - 1)<SUB>1138</SUB>> ]
+"48677" [label = <(&lt;operator&gt;.lessThan,left &lt; right)<SUB>1140</SUB>> ]
+"48435" [label = <(&lt;operator&gt;.subtraction,w - w)<SUB>1091</SUB>> ]
+"48477" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;row_offset)<SUB>1101</SUB>> ]
+"48507" [label = <(&lt;operator&gt;.modulo,nrowsub % subsamplingver)<SUB>1105</SUB>> ]
+"48516" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;row_offset)<SUB>1106</SUB>> ]
+"48529" [label = <(UNKNOWN,size_t,size_t)<SUB>1107</SUB>> ]
+"48530" [label = <(&lt;operator&gt;.division,TIFF_TMSIZE_T_MAX / scanline)<SUB>1107</SUB>> ]
+"48546" [label = <(TIFFComputeStrip,TIFFComputeStrip(tif, row + img-&gt;row_offset, 0))<SUB>1114</SUB>> ]
+"48554" [label = <(&lt;operator&gt;.cast,(void **)(&amp;buf))<SUB>1115</SUB>> ]
+"48559" [label = <(&lt;operator&gt;.multiplication,temp * scanline)<SUB>1116</SUB>> ]
+"48563" [label = <(&lt;operator&gt;.minus,-1)<SUB>1116</SUB>> ]
+"48568" [label = <(NULL,NULL)<SUB>1117</SUB>> ]
+"48575" [label = <(FIELD_IDENTIFIER,stoponerr,stoponerr)<SUB>1117</SUB>> ]
+"48586" [label = <(&lt;operator&gt;.addition,row + img-&gt;row_offset)<SUB>1123</SUB>> ]
+"48595" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1124</SUB>> ]
+"48596" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;col_offset)<SUB>1124</SUB>> ]
+"48601" [label = <(FIELD_IDENTIFIER,samplesperpixel,samplesperpixel)<SUB>1124</SUB>> ]
+"48636" [label = <(UNKNOWN,int32_t,int32_t)<SUB>1128</SUB>> ]
+"48665" [label = <(&lt;operator&gt;.multiplication,line * w)<SUB>1137</SUB>> ]
+"48672" [label = <(&lt;operator&gt;.addition,left + w)<SUB>1138</SUB>> ]
+"48682" [label = <(&lt;operator&gt;.assignment,temp = *left)<SUB>1142</SUB>> ]
+"48686" [label = <(&lt;operator&gt;.assignment,*left = *right)<SUB>1143</SUB>> ]
+"48691" [label = <(&lt;operator&gt;.assignment,*right = temp)<SUB>1144</SUB>> ]
+"48695" [label = <(&lt;operator&gt;.postIncrement,left++)<SUB>1145</SUB>> ]
+"48697" [label = <(&lt;operator&gt;.postDecrement,right--)<SUB>1146</SUB>> ]
+"48479" [label = <(FIELD_IDENTIFIER,row_offset,row_offset)<SUB>1101</SUB>> ]
+"48518" [label = <(FIELD_IDENTIFIER,row_offset,row_offset)<SUB>1106</SUB>> ]
+"48548" [label = <(&lt;operator&gt;.addition,row + img-&gt;row_offset)<SUB>1114</SUB>> ]
+"48555" [label = <(UNKNOWN,void **,void **)<SUB>1115</SUB>> ]
+"48556" [label = <(&lt;operator&gt;.addressOf,&amp;buf)<SUB>1115</SUB>> ]
+"48588" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;row_offset)<SUB>1123</SUB>> ]
+"48598" [label = <(FIELD_IDENTIFIER,col_offset,col_offset)<SUB>1124</SUB>> ]
+"48684" [label = <(&lt;operator&gt;.indirection,*left)<SUB>1142</SUB>> ]
+"48687" [label = <(&lt;operator&gt;.indirection,*left)<SUB>1143</SUB>> ]
+"48689" [label = <(&lt;operator&gt;.indirection,*right)<SUB>1143</SUB>> ]
+"48692" [label = <(&lt;operator&gt;.indirection,*right)<SUB>1144</SUB>> ]
+"48550" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;row_offset)<SUB>1114</SUB>> ]
+"48570" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1117</SUB>> ]
+"48590" [label = <(FIELD_IDENTIFIER,row_offset,row_offset)<SUB>1123</SUB>> ]
+"48552" [label = <(FIELD_IDENTIFIER,row_offset,row_offset)<SUB>1114</SUB>> ]
+"48571" [label = <(UNKNOWN,void *,void *)<SUB>1117</SUB>> ]
+"48316" [label = <(METHOD,gtStripContig)<SUB>1050</SUB>> ]
+"48706" [label = <(METHOD_RETURN,int)<SUB>1050</SUB>> ]
+  "48323" -> "48334" 
+  "48329" -> "48345" 
+  "48343" -> "48358" 
+  "48354" -> "48364" 
+  "48364" -> "48371" 
+  "48368" -> "48376" 
+  "48387" -> "48393" 
+  "48391" -> "48398" 
+  "48438" -> "48445" 
+  "48443" -> "48450" 
+  "48447" -> "48459" 
+  "48699" -> "48704" 
+  "48704" -> "48706" 
+  "48325" -> "48323" 
+  "48331" -> "48329" 
+  "48345" -> "48348" 
+  "48345" -> "48343" 
+  "48356" -> "48354" 
+  "48371" -> "48373" 
+  "48373" -> "48368" 
+  "48376" -> "48382" 
+  "48376" -> "48389" 
+  "48389" -> "48387" 
+  "48393" -> "48391" 
+  "48396" -> "48403" 
+  "48396" -> "48428" 
+  "48441" -> "48438" 
+  "48445" -> "48443" 
+  "48449" -> "48447" 
+  "48462" -> "48479" 
+  "48462" -> "48644" 
+  "48465" -> "48462" 
+  "48642" -> "48651" 
+  "48642" -> "48702" 
+  "48700" -> "48699" 
+  "48327" -> "48325" 
+  "48332" -> "48335" 
+  "48335" -> "48331" 
+  "48358" -> "48356" 
+  "48380" -> "48385" 
+  "48385" -> "48706" 
+  "48398" -> "48396" 
+  "48414" -> "48423" 
+  "48419" -> "48441" 
+  "48450" -> "48453" 
+  "48450" -> "48449" 
+  "48453" -> "48449" 
+  "48459" -> "48462" 
+  "48470" -> "48485" 
+  "48481" -> "48493" 
+  "48493" -> "48498" 
+  "48510" -> "48523" 
+  "48581" -> "48607" 
+  "48603" -> "48611" 
+  "48610" -> "48631" 
+  "48626" -> "48465" 
+  "48644" -> "48642" 
+  "48702" -> "48700" 
+  "48334" -> "48332" 
+  "48347" -> "48343" 
+  "48382" -> "48380" 
+  "48403" -> "48409" 
+  "48403" -> "48416" 
+  "48416" -> "48414" 
+  "48421" -> "48419" 
+  "48428" -> "48435" 
+  "48431" -> "48441" 
+  "48472" -> "48470" 
+  "48483" -> "48481" 
+  "48497" -> "48507" 
+  "48497" -> "48518" 
+  "48512" -> "48510" 
+  "48522" -> "48536" 
+  "48522" -> "48552" 
+  "48542" -> "48577" 
+  "48542" -> "48590" 
+  "48583" -> "48581" 
+  "48605" -> "48603" 
+  "48611" -> "48614" 
+  "48614" -> "48623" 
+  "48623" -> "48610" 
+  "48628" -> "48626" 
+  "48654" -> "48665" 
+  "48654" -> "48702" 
+  "48657" -> "48654" 
+  "48348" -> "48347" 
+  "48407" -> "48412" 
+  "48412" -> "48706" 
+  "48422" -> "48421" 
+  "48433" -> "48431" 
+  "48474" -> "48472" 
+  "48484" -> "48489" 
+  "48484" -> "48483" 
+  "48489" -> "48483" 
+  "48498" -> "48497" 
+  "48503" -> "48518" 
+  "48513" -> "48512" 
+  "48523" -> "48522" 
+  "48523" -> "48529" 
+  "48526" -> "48522" 
+  "48534" -> "48539" 
+  "48539" -> "48706" 
+  "48543" -> "48542" 
+  "48543" -> "48568" 
+  "48565" -> "48542" 
+  "48577" -> "48644" 
+  "48584" -> "48595" 
+  "48593" -> "48583" 
+  "48606" -> "48605" 
+  "48629" -> "48636" 
+  "48629" -> "48639" 
+  "48634" -> "48628" 
+  "48638" -> "48628" 
+  "48651" -> "48654" 
+  "48661" -> "48672" 
+  "48669" -> "48677" 
+  "48409" -> "48407" 
+  "48423" -> "48422" 
+  "48434" -> "48433" 
+  "48475" -> "48474" 
+  "48485" -> "48484" 
+  "48505" -> "48503" 
+  "48514" -> "48513" 
+  "48528" -> "48526" 
+  "48536" -> "48534" 
+  "48544" -> "48563" 
+  "48562" -> "48543" 
+  "48566" -> "48565" 
+  "48566" -> "48575" 
+  "48573" -> "48565" 
+  "48585" -> "48584" 
+  "48594" -> "48601" 
+  "48599" -> "48593" 
+  "48607" -> "48606" 
+  "48631" -> "48629" 
+  "48635" -> "48634" 
+  "48639" -> "48638" 
+  "48663" -> "48661" 
+  "48671" -> "48669" 
+  "48677" -> "48684" 
+  "48677" -> "48657" 
+  "48435" -> "48434" 
+  "48477" -> "48475" 
+  "48507" -> "48505" 
+  "48516" -> "48514" 
+  "48529" -> "48530" 
+  "48530" -> "48528" 
+  "48546" -> "48555" 
+  "48554" -> "48559" 
+  "48559" -> "48544" 
+  "48563" -> "48562" 
+  "48568" -> "48571" 
+  "48568" -> "48566" 
+  "48575" -> "48573" 
+  "48586" -> "48585" 
+  "48595" -> "48598" 
+  "48596" -> "48594" 
+  "48601" -> "48599" 
+  "48636" -> "48635" 
+  "48665" -> "48663" 
+  "48672" -> "48671" 
+  "48682" -> "48687" 
+  "48686" -> "48692" 
+  "48691" -> "48695" 
+  "48695" -> "48697" 
+  "48697" -> "48677" 
+  "48479" -> "48477" 
+  "48518" -> "48516" 
+  "48548" -> "48546" 
+  "48555" -> "48556" 
+  "48556" -> "48554" 
+  "48588" -> "48586" 
+  "48598" -> "48596" 
+  "48684" -> "48682" 
+  "48687" -> "48689" 
+  "48689" -> "48686" 
+  "48692" -> "48691" 
+  "48550" -> "48548" 
+  "48570" -> "48566" 
+  "48590" -> "48588" 
+  "48552" -> "48550" 
+  "48571" -> "48570" 
+  "48316" -> "48327" 
+}

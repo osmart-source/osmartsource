@@ -1,0 +1,18 @@
+digraph "setbuffer" {  
+"2532" [label = <(METHOD,setbuffer)<SUB>314</SUB>> ]
+"2533" [label = <(PARAM,FILE *__restrict __stream)<SUB>314</SUB>> ]
+"2534" [label = <(PARAM,char *__restrict __buf)<SUB>314</SUB>> ]
+"2535" [label = <(PARAM,size_t __size)<SUB>315</SUB>> ]
+"2536" [label = <(METHOD_RETURN,void)<SUB>314</SUB>> ]
+  "2532" -> "2533"  [ label = "AST: "] 
+  "2532" -> "2534"  [ label = "AST: "] 
+  "2532" -> "2535"  [ label = "AST: "] 
+  "2532" -> "2536"  [ label = "AST: "] 
+  "2532" -> "2536"  [ label = "CFG: "] 
+  "2533" -> "2536"  [ label = "DDG: __stream"] 
+  "2534" -> "2536"  [ label = "DDG: __buf"] 
+  "2535" -> "2536"  [ label = "DDG: __size"] 
+  "2532" -> "2533"  [ label = "DDG: "] 
+  "2532" -> "2534"  [ label = "DDG: "] 
+  "2532" -> "2535"  [ label = "DDG: "] 
+}

@@ -1,0 +1,168 @@
+digraph "TIFFReadEncodedStrip" {  
+"74942" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadEncodedStrip&quot;)<SUB>519</SUB>> ]
+"74946" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>520</SUB>> ]
+"74954" [label = <(&lt;operator&gt;.assignment,stripsize = TIFFReadEncodedStripGetStripSize(tif, strip, &amp;plane))<SUB>524</SUB>> ]
+"75085" [label = <(*tif-&gt;tif_postdecode,(*tif-&gt;tif_postdecode)(tif, buf, stripsize))<SUB>550</SUB>> ]
+"75093" [label = <(RETURN,return (stripsize);,return (stripsize);)<SUB>551</SUB>> ]
+"74948" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>520</SUB>> ]
+"74956" [label = <(TIFFReadEncodedStripGetStripSize,TIFFReadEncodedStripGetStripSize(tif, strip, &amp;plane))<SUB>524</SUB>> ]
+"74962" [label = <(&lt;operator&gt;.equals,stripsize == ((tmsize_t)(-1)))<SUB>525</SUB>> ]
+"74973" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_compression == COMPRESSION_NONE &amp;&amp; size != (tmsize_t)(-1) &amp;&amp;\012        size &gt;= stripsize &amp;&amp; !isMapped(tif) &amp;&amp;\012        ((tif-&gt;tif_flags &amp; TIFF_NOREADRAW) == 0))<SUB>529</SUB>> ]
+"75045" [label = <(&lt;operator&gt;.logicalAnd,(size != (tmsize_t)(-1)) &amp;&amp; (size &lt; stripsize))<SUB>544</SUB>> ]
+"75059" [label = <(&lt;operator&gt;.logicalNot,!TIFFFillStrip(tif, strip))<SUB>546</SUB>> ]
+"75069" [label = <(&lt;operator&gt;.lessEqualsThan,(*tif-&gt;tif_decodestrip)(tif, buf, stripsize, plane) &lt;= 0)<SUB>548</SUB>> ]
+"75086" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postdecode)<SUB>550</SUB>> ]
+"74949" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>520</SUB>> ]
+"74959" [label = <(&lt;operator&gt;.addressOf,&amp;plane)<SUB>524</SUB>> ]
+"74964" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>525</SUB>> ]
+"74968" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>526</SUB>> ]
+"74974" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_compression == COMPRESSION_NONE &amp;&amp; size != (tmsize_t)(-1) &amp;&amp;\012        size &gt;= stripsize &amp;&amp; !isMapped(tif))<SUB>529</SUB>> ]
+"74993" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_NOREADRAW) == 0)<SUB>531</SUB>> ]
+"75034" [label = <(*tif-&gt;tif_postdecode,(*tif-&gt;tif_postdecode)(tif, buf, stripsize))<SUB>540</SUB>> ]
+"75042" [label = <(RETURN,return (stripsize);,return (stripsize);)<SUB>541</SUB>> ]
+"75046" [label = <(&lt;operator&gt;.notEquals,size != (tmsize_t)(-1))<SUB>544</SUB>> ]
+"75051" [label = <(&lt;operator&gt;.lessThan,size &lt; stripsize)<SUB>544</SUB>> ]
+"75055" [label = <(&lt;operator&gt;.assignment,stripsize = size)<SUB>545</SUB>> ]
+"75060" [label = <(TIFFFillStrip,TIFFFillStrip(tif, strip))<SUB>546</SUB>> ]
+"75064" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>547</SUB>> ]
+"75070" [label = <(*tif-&gt;tif_decodestrip,(*tif-&gt;tif_decodestrip)(tif, buf, stripsize, plane))<SUB>548</SUB>> ]
+"75081" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>549</SUB>> ]
+"75087" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>550</SUB>> ]
+"74951" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>520</SUB>> ]
+"74965" [label = <(&lt;operator&gt;.minus,-1)<SUB>525</SUB>> ]
+"74969" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>526</SUB>> ]
+"74975" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_compression == COMPRESSION_NONE &amp;&amp; size != (tmsize_t)(-1) &amp;&amp;\012        size &gt;= stripsize)<SUB>529</SUB>> ]
+"74990" [label = <(&lt;operator&gt;.logicalNot,!isMapped(tif))<SUB>530</SUB>> ]
+"74994" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>531</SUB>> ]
+"75002" [label = <(&lt;operator&gt;.notEquals,TIFFReadRawStrip1(tif, strip, buf, stripsize, module) != stripsize)<SUB>533</SUB>> ]
+"75016" [label = <(&lt;operator&gt;.logicalAnd,!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012            (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>536</SUB>> ]
+"75035" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postdecode)<SUB>540</SUB>> ]
+"75048" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>544</SUB>> ]
+"75065" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>547</SUB>> ]
+"75071" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_decodestrip)<SUB>548</SUB>> ]
+"75082" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>549</SUB>> ]
+"75089" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>550</SUB>> ]
+"74970" [label = <(&lt;operator&gt;.minus,-1)<SUB>526</SUB>> ]
+"74976" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_compression == COMPRESSION_NONE &amp;&amp; size != (tmsize_t)(-1))<SUB>529</SUB>> ]
+"74987" [label = <(&lt;operator&gt;.greaterEqualsThan,size &gt;= stripsize)<SUB>530</SUB>> ]
+"74991" [label = <(isMapped,isMapped(tif))<SUB>530</SUB>> ]
+"74995" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>531</SUB>> ]
+"75003" [label = <(TIFFReadRawStrip1,TIFFReadRawStrip1(tif, strip, buf, stripsize, module))<SUB>533</SUB>> ]
+"75011" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>534</SUB>> ]
+"75017" [label = <(&lt;operator&gt;.logicalNot,!isFillOrder(tif, td-&gt;td_fillorder))<SUB>536</SUB>> ]
+"75023" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>537</SUB>> ]
+"75031" [label = <(TIFFReverseBits,TIFFReverseBits(buf, stripsize))<SUB>538</SUB>> ]
+"75036" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>540</SUB>> ]
+"75049" [label = <(&lt;operator&gt;.minus,-1)<SUB>544</SUB>> ]
+"75066" [label = <(&lt;operator&gt;.minus,-1)<SUB>547</SUB>> ]
+"75072" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_decodestrip)<SUB>548</SUB>> ]
+"75083" [label = <(&lt;operator&gt;.minus,-1)<SUB>549</SUB>> ]
+"74977" [label = <(&lt;operator&gt;.equals,td-&gt;td_compression == COMPRESSION_NONE)<SUB>529</SUB>> ]
+"74982" [label = <(&lt;operator&gt;.notEquals,size != (tmsize_t)(-1))<SUB>529</SUB>> ]
+"74997" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>531</SUB>> ]
+"75012" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>534</SUB>> ]
+"75018" [label = <(isFillOrder,isFillOrder(tif, td-&gt;td_fillorder))<SUB>536</SUB>> ]
+"75024" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>537</SUB>> ]
+"75038" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>540</SUB>> ]
+"75074" [label = <(FIELD_IDENTIFIER,tif_decodestrip,tif_decodestrip)<SUB>548</SUB>> ]
+"74978" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_compression)<SUB>529</SUB>> ]
+"74984" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>529</SUB>> ]
+"75013" [label = <(&lt;operator&gt;.minus,-1)<SUB>534</SUB>> ]
+"75020" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_fillorder)<SUB>536</SUB>> ]
+"75025" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>537</SUB>> ]
+"74980" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>529</SUB>> ]
+"74985" [label = <(&lt;operator&gt;.minus,-1)<SUB>529</SUB>> ]
+"75022" [label = <(FIELD_IDENTIFIER,td_fillorder,td_fillorder)<SUB>536</SUB>> ]
+"75027" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>537</SUB>> ]
+"74935" [label = <(METHOD,TIFFReadEncodedStrip)<SUB>516</SUB>> ]
+"75095" [label = <(METHOD_RETURN,tmsize_t)<SUB>516</SUB>> ]
+  "74942" -> "74951" 
+  "74946" -> "74959" 
+  "74954" -> "74965" 
+  "75085" -> "75093" 
+  "75093" -> "75095" 
+  "74948" -> "74946" 
+  "74956" -> "74954" 
+  "74962" -> "74970" 
+  "74962" -> "74980" 
+  "74973" -> "75003" 
+  "74973" -> "75049" 
+  "75045" -> "75055" 
+  "75045" -> "75060" 
+  "75059" -> "75066" 
+  "75059" -> "75074" 
+  "75069" -> "75083" 
+  "75069" -> "75089" 
+  "75086" -> "75085" 
+  "74949" -> "74948" 
+  "74959" -> "74956" 
+  "74964" -> "74962" 
+  "74968" -> "75095" 
+  "74974" -> "74973" 
+  "74974" -> "74997" 
+  "74993" -> "74973" 
+  "75034" -> "75042" 
+  "75042" -> "75095" 
+  "75046" -> "75045" 
+  "75046" -> "75051" 
+  "75051" -> "75045" 
+  "75055" -> "75060" 
+  "75060" -> "75059" 
+  "75064" -> "75095" 
+  "75070" -> "75069" 
+  "75081" -> "75095" 
+  "75087" -> "75086" 
+  "74951" -> "74949" 
+  "74965" -> "74964" 
+  "74969" -> "74968" 
+  "74975" -> "74974" 
+  "74975" -> "74991" 
+  "74990" -> "74974" 
+  "74994" -> "74993" 
+  "75002" -> "75013" 
+  "75002" -> "75022" 
+  "75016" -> "75031" 
+  "75016" -> "75038" 
+  "75035" -> "75034" 
+  "75048" -> "75046" 
+  "75065" -> "75064" 
+  "75071" -> "75070" 
+  "75082" -> "75081" 
+  "75089" -> "75087" 
+  "74970" -> "74969" 
+  "74976" -> "74975" 
+  "74976" -> "74987" 
+  "74987" -> "74975" 
+  "74991" -> "74990" 
+  "74995" -> "74994" 
+  "75003" -> "75002" 
+  "75011" -> "75095" 
+  "75017" -> "75016" 
+  "75017" -> "75027" 
+  "75023" -> "75016" 
+  "75031" -> "75038" 
+  "75036" -> "75035" 
+  "75049" -> "75048" 
+  "75066" -> "75065" 
+  "75072" -> "75071" 
+  "75083" -> "75082" 
+  "74977" -> "74976" 
+  "74977" -> "74985" 
+  "74982" -> "74976" 
+  "74997" -> "74995" 
+  "75012" -> "75011" 
+  "75018" -> "75017" 
+  "75024" -> "75023" 
+  "75038" -> "75036" 
+  "75074" -> "75072" 
+  "74978" -> "74977" 
+  "74984" -> "74982" 
+  "75013" -> "75012" 
+  "75020" -> "75018" 
+  "75025" -> "75024" 
+  "74980" -> "74978" 
+  "74985" -> "74984" 
+  "75022" -> "75020" 
+  "75027" -> "75025" 
+  "74935" -> "74942" 
+}

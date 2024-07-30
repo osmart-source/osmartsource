@@ -1,0 +1,149 @@
+digraph "TIFFReadScanline" {  
+"74741" [label = <(METHOD,TIFFReadScanline)<SUB>447</SUB>> ]
+"74742" [label = <(PARAM,TIFF *tif)<SUB>447</SUB>> ]
+"74743" [label = <(PARAM,void *buf)<SUB>447</SUB>> ]
+"74744" [label = <(PARAM,uint32_t row)<SUB>447</SUB>> ]
+"74745" [label = <(PARAM,uint16_t sample)<SUB>447</SUB>> ]
+"74746" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>448</SUB>> ]
+"74747" [label = <(LOCAL,int e: int)<SUB>449</SUB>> ]
+"74748" [label = <(CONTROL_STRUCTURE,if (!TIFFCheckRead(tif, 0)),if (!TIFFCheckRead(tif, 0)))<SUB>451</SUB>> ]
+"74749" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 0))<SUB>451</SUB>> ]
+"74750" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 0))<SUB>451</SUB>> ]
+"74751" [label = <(IDENTIFIER,tif,TIFFCheckRead(tif, 0))<SUB>451</SUB>> ]
+"74752" [label = <(LITERAL,0,TIFFCheckRead(tif, 0))<SUB>451</SUB>> ]
+"74753" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>452</SUB>> ]
+"74754" [label = <(RETURN,return (-1);,return (-1);)<SUB>452</SUB>> ]
+"74755" [label = <(&lt;operator&gt;.minus,-1)<SUB>452</SUB>> ]
+"74756" [label = <(LITERAL,1,-1)<SUB>452</SUB>> ]
+"74757" [label = <(CONTROL_STRUCTURE,if ((e = TIFFSeek(tif, row, sample)) != 0),if ((e = TIFFSeek(tif, row, sample)) != 0))<SUB>453</SUB>> ]
+"74758" [label = <(&lt;operator&gt;.notEquals,(e = TIFFSeek(tif, row, sample)) != 0)<SUB>453</SUB>> ]
+"74759" [label = <(&lt;operator&gt;.assignment,e = TIFFSeek(tif, row, sample))<SUB>453</SUB>> ]
+"74760" [label = <(IDENTIFIER,e,e = TIFFSeek(tif, row, sample))<SUB>453</SUB>> ]
+"74761" [label = <(TIFFSeek,TIFFSeek(tif, row, sample))<SUB>453</SUB>> ]
+"74762" [label = <(IDENTIFIER,tif,TIFFSeek(tif, row, sample))<SUB>453</SUB>> ]
+"74763" [label = <(IDENTIFIER,row,TIFFSeek(tif, row, sample))<SUB>453</SUB>> ]
+"74764" [label = <(IDENTIFIER,sample,TIFFSeek(tif, row, sample))<SUB>453</SUB>> ]
+"74765" [label = <(LITERAL,0,(e = TIFFSeek(tif, row, sample)) != 0)<SUB>453</SUB>> ]
+"74766" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>454</SUB>> ]
+"74767" [label = <(&lt;operator&gt;.assignment,e = (*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>458</SUB>> ]
+"74768" [label = <(IDENTIFIER,e,e = (*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>458</SUB>> ]
+"74769" [label = <(*tif-&gt;tif_decoderow,(*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>458</SUB>> ]
+"74770" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_decoderow)<SUB>458</SUB>> ]
+"74771" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_decoderow)<SUB>458</SUB>> ]
+"74772" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>458</SUB>> ]
+"74773" [label = <(FIELD_IDENTIFIER,tif_decoderow,tif_decoderow)<SUB>458</SUB>> ]
+"74774" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>458</SUB>> ]
+"74775" [label = <(&lt;operator&gt;.cast,(uint8_t *)buf)<SUB>458</SUB>> ]
+"74776" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>458</SUB>> ]
+"74777" [label = <(IDENTIFIER,buf,(uint8_t *)buf)<SUB>458</SUB>> ]
+"74778" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>458</SUB>> ]
+"74779" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>458</SUB>> ]
+"74780" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>458</SUB>> ]
+"74781" [label = <(IDENTIFIER,sample,(*tif-&gt;tif_decoderow)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize,\012                                  sample))<SUB>459</SUB>> ]
+"74782" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = row + 1)<SUB>462</SUB>> ]
+"74783" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>462</SUB>> ]
+"74784" [label = <(IDENTIFIER,tif,tif-&gt;tif_row = row + 1)<SUB>462</SUB>> ]
+"74785" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>462</SUB>> ]
+"74786" [label = <(&lt;operator&gt;.addition,row + 1)<SUB>462</SUB>> ]
+"74787" [label = <(IDENTIFIER,row,row + 1)<SUB>462</SUB>> ]
+"74788" [label = <(LITERAL,1,row + 1)<SUB>462</SUB>> ]
+"74789" [label = <(CONTROL_STRUCTURE,if (e &amp;&amp; 1),if (e &amp;&amp; 1))<SUB>464</SUB>> ]
+"74790" [label = <(&lt;operator&gt;.logicalAnd,e &amp;&amp; 1)<SUB>464</SUB>> ]
+"74791" [label = <(IDENTIFIER,e,e &amp;&amp; 1)<SUB>464</SUB>> ]
+"74792" [label = <(LITERAL,1,e &amp;&amp; 1)<SUB>464</SUB>> ]
+"74793" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>465</SUB>> ]
+"74794" [label = <(*tif-&gt;tif_postdecode,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize))<SUB>465</SUB>> ]
+"74795" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postdecode)<SUB>465</SUB>> ]
+"74796" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>465</SUB>> ]
+"74797" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize))<SUB>465</SUB>> ]
+"74798" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>465</SUB>> ]
+"74799" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize))<SUB>465</SUB>> ]
+"74800" [label = <(&lt;operator&gt;.cast,(uint8_t *)buf)<SUB>465</SUB>> ]
+"74801" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>465</SUB>> ]
+"74802" [label = <(IDENTIFIER,buf,(uint8_t *)buf)<SUB>465</SUB>> ]
+"74803" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>465</SUB>> ]
+"74804" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postdecode)(tif, (uint8_t *)buf, tif-&gt;tif_scanlinesize))<SUB>465</SUB>> ]
+"74805" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>465</SUB>> ]
+"74806" [label = <(RETURN,return (e &gt; 0 ? 1 : -1);,return (e &gt; 0 ? 1 : -1);)<SUB>467</SUB>> ]
+"74807" [label = <(&lt;operator&gt;.conditional,e &gt; 0 ? 1 : -1)<SUB>467</SUB>> ]
+"74808" [label = <(&lt;operator&gt;.greaterThan,e &gt; 0)<SUB>467</SUB>> ]
+"74809" [label = <(IDENTIFIER,e,e &gt; 0)<SUB>467</SUB>> ]
+"74810" [label = <(LITERAL,0,e &gt; 0)<SUB>467</SUB>> ]
+"74811" [label = <(LITERAL,1,e &gt; 0 ? 1 : -1)<SUB>467</SUB>> ]
+"74812" [label = <(&lt;operator&gt;.minus,-1)<SUB>467</SUB>> ]
+"74813" [label = <(LITERAL,1,-1)<SUB>467</SUB>> ]
+"74814" [label = <(METHOD_RETURN,int)<SUB>447</SUB>> ]
+  "74741" -> "74742" 
+  "74741" -> "74743" 
+  "74741" -> "74744" 
+  "74741" -> "74745" 
+  "74741" -> "74746" 
+  "74741" -> "74814" 
+  "74746" -> "74747" 
+  "74746" -> "74748" 
+  "74746" -> "74757" 
+  "74746" -> "74806" 
+  "74748" -> "74749" 
+  "74748" -> "74753" 
+  "74749" -> "74750" 
+  "74750" -> "74751" 
+  "74750" -> "74752" 
+  "74753" -> "74754" 
+  "74754" -> "74755" 
+  "74755" -> "74756" 
+  "74757" -> "74758" 
+  "74757" -> "74766" 
+  "74758" -> "74759" 
+  "74758" -> "74765" 
+  "74759" -> "74760" 
+  "74759" -> "74761" 
+  "74761" -> "74762" 
+  "74761" -> "74763" 
+  "74761" -> "74764" 
+  "74766" -> "74767" 
+  "74766" -> "74782" 
+  "74766" -> "74789" 
+  "74767" -> "74768" 
+  "74767" -> "74769" 
+  "74769" -> "74770" 
+  "74769" -> "74774" 
+  "74769" -> "74775" 
+  "74769" -> "74778" 
+  "74769" -> "74781" 
+  "74770" -> "74771" 
+  "74771" -> "74772" 
+  "74771" -> "74773" 
+  "74775" -> "74776" 
+  "74775" -> "74777" 
+  "74778" -> "74779" 
+  "74778" -> "74780" 
+  "74782" -> "74783" 
+  "74782" -> "74786" 
+  "74783" -> "74784" 
+  "74783" -> "74785" 
+  "74786" -> "74787" 
+  "74786" -> "74788" 
+  "74789" -> "74790" 
+  "74789" -> "74793" 
+  "74790" -> "74791" 
+  "74790" -> "74792" 
+  "74793" -> "74794" 
+  "74794" -> "74795" 
+  "74794" -> "74799" 
+  "74794" -> "74800" 
+  "74794" -> "74803" 
+  "74795" -> "74796" 
+  "74796" -> "74797" 
+  "74796" -> "74798" 
+  "74800" -> "74801" 
+  "74800" -> "74802" 
+  "74803" -> "74804" 
+  "74803" -> "74805" 
+  "74806" -> "74807" 
+  "74807" -> "74808" 
+  "74807" -> "74811" 
+  "74807" -> "74812" 
+  "74808" -> "74809" 
+  "74808" -> "74810" 
+  "74812" -> "74813" 
+}

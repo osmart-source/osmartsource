@@ -1,0 +1,21 @@
+digraph "usage" {  
+"10614" [label = <(&lt;operator&gt;.assignment,*out = (code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10624" [label = <(fprintf,fprintf(out, &quot;%s\n\n&quot;, TIFFGetVersion()))<SUB>478</SUB>> ]
+"10628" [label = <(fprintf,fprintf(out, &quot;%s&quot;, usage_info))<SUB>479</SUB>> ]
+"10632" [label = <(exit,exit(code))<SUB>480</SUB>> ]
+"10616" [label = <(&lt;operator&gt;.conditional,(code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10627" [label = <(TIFFGetVersion,TIFFGetVersion())<SUB>478</SUB>> ]
+"10617" [label = <(&lt;operator&gt;.equals,code == EXIT_SUCCESS)<SUB>476</SUB>> ]
+"10619" [label = <(EXIT_SUCCESS,EXIT_SUCCESS)<SUB>476</SUB>> ]
+"10610" [label = <(METHOD,usage)<SUB>474</SUB>> ]
+"10634" [label = <(METHOD_RETURN,void)<SUB>474</SUB>> ]
+  "10614" -> "10627" 
+  "10624" -> "10628" 
+  "10628" -> "10632" 
+  "10632" -> "10634" 
+  "10616" -> "10614" 
+  "10627" -> "10624" 
+  "10617" -> "10616" 
+  "10619" -> "10617" 
+  "10610" -> "10619" 
+}

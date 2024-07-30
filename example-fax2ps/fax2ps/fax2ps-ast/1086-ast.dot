@@ -1,0 +1,235 @@
+digraph "TIFFWriteDirectoryTagLong8Array" {  
+"68257" [label = <(METHOD,TIFFWriteDirectoryTagLong8Array)<SUB>1551</SUB>> ]
+"68258" [label = <(PARAM,TIFF *tif)<SUB>1551</SUB>> ]
+"68259" [label = <(PARAM,uint32_t *ndir)<SUB>1551</SUB>> ]
+"68260" [label = <(PARAM,TIFFDirEntry *dir)<SUB>1552</SUB>> ]
+"68261" [label = <(PARAM,uint16_t tag)<SUB>1552</SUB>> ]
+"68262" [label = <(PARAM,uint32_t count)<SUB>1553</SUB>> ]
+"68263" [label = <(PARAM,uint64_t *value)<SUB>1553</SUB>> ]
+"68264" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1554</SUB>> ]
+"68265" [label = <(LOCAL,constchar[] module: char[])<SUB>1555</SUB>> ]
+"68266" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagLong8Array&quot;)<SUB>1555</SUB>> ]
+"68267" [label = <(IDENTIFIER,module,module[] = &quot;TIFFWriteDirectoryTagLong8Array&quot;)<SUB>1555</SUB>> ]
+"68268" [label = <(LITERAL,&quot;TIFFWriteDirectoryTagLong8Array&quot;,module[] = &quot;TIFFWriteDirectoryTagLong8Array&quot;)<SUB>1555</SUB>> ]
+"68269" [label = <(LOCAL,uint64_t* ma: uint64_t)<SUB>1556</SUB>> ]
+"68270" [label = <(LOCAL,uint32_t mb: uint32_t)<SUB>1557</SUB>> ]
+"68271" [label = <(LOCAL,uint32_t* p: uint32_t)<SUB>1558</SUB>> ]
+"68272" [label = <(LOCAL,uint32_t* q: uint32_t)<SUB>1559</SUB>> ]
+"68273" [label = <(LOCAL,int o: int)<SUB>1560</SUB>> ]
+"68274" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>1563</SUB>> ]
+"68275" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1563</SUB>> ]
+"68276" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>1563</SUB>> ]
+"68277" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>1563</SUB>> ]
+"68278" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1564</SUB>> ]
+"68279" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1565</SUB>> ]
+"68280" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1565</SUB>> ]
+"68281" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>1565</SUB>> ]
+"68282" [label = <(RETURN,return (1);,return (1);)<SUB>1566</SUB>> ]
+"68283" [label = <(LITERAL,1,return (1);)<SUB>1566</SUB>> ]
+"68284" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_BIGTIFF),if (tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>1570</SUB>> ]
+"68285" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1570</SUB>> ]
+"68286" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1570</SUB>> ]
+"68287" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1570</SUB>> ]
+"68288" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1570</SUB>> ]
+"68289" [label = <(IDENTIFIER,TIFF_BIGTIFF,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1570</SUB>> ]
+"68290" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1571</SUB>> ]
+"68291" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value));,return (TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value));)<SUB>1571</SUB>> ]
+"68292" [label = <(TIFFWriteDirectoryTagCheckedLong8Array,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1571</SUB>> ]
+"68293" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1571</SUB>> ]
+"68294" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1571</SUB>> ]
+"68295" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1571</SUB>> ]
+"68296" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1571</SUB>> ]
+"68297" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1572</SUB>> ]
+"68298" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagCheckedLong8Array(tif, ndir, dir, tag,\012                                                       count, value))<SUB>1572</SUB>> ]
+"68299" [label = <(&lt;operator&gt;.assignment,p = _TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1578</SUB>> ]
+"68300" [label = <(IDENTIFIER,p,p = _TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1578</SUB>> ]
+"68301" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1578</SUB>> ]
+"68302" [label = <(IDENTIFIER,tif,_TIFFmallocExt(tif, count * sizeof(uint32_t)))<SUB>1578</SUB>> ]
+"68303" [label = <(&lt;operator&gt;.multiplication,count * sizeof(uint32_t))<SUB>1578</SUB>> ]
+"68304" [label = <(IDENTIFIER,count,count * sizeof(uint32_t))<SUB>1578</SUB>> ]
+"68305" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>1578</SUB>> ]
+"68306" [label = <(IDENTIFIER,uint32_t,sizeof(uint32_t))<SUB>1578</SUB>> ]
+"68307" [label = <(CONTROL_STRUCTURE,if (p == NULL),if (p == NULL))<SUB>1579</SUB>> ]
+"68308" [label = <(&lt;operator&gt;.equals,p == NULL)<SUB>1579</SUB>> ]
+"68309" [label = <(IDENTIFIER,p,p == NULL)<SUB>1579</SUB>> ]
+"68310" [label = <(IDENTIFIER,NULL,p == NULL)<SUB>1579</SUB>> ]
+"68311" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1580</SUB>> ]
+"68312" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1581</SUB>> ]
+"68313" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1581</SUB>> ]
+"68314" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1581</SUB>> ]
+"68315" [label = <(LITERAL,&quot;Out of memory&quot;,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1581</SUB>> ]
+"68316" [label = <(RETURN,return (0);,return (0);)<SUB>1582</SUB>> ]
+"68317" [label = <(LITERAL,0,return (0);)<SUB>1582</SUB>> ]
+"68318" [label = <(CONTROL_STRUCTURE,for (q = p, ma = value, mb = 0;mb &lt; count;ma++, mb++, q++),for (q = p, ma = value, mb = 0;mb &lt; count;ma++, mb++, q++))<SUB>1585</SUB>> ]
+"68319" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1585</SUB>> ]
+"68320" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1585</SUB>> ]
+"68321" [label = <(&lt;operator&gt;.assignment,q = p)<SUB>1585</SUB>> ]
+"68322" [label = <(IDENTIFIER,q,q = p)<SUB>1585</SUB>> ]
+"68323" [label = <(IDENTIFIER,p,q = p)<SUB>1585</SUB>> ]
+"68324" [label = <(&lt;operator&gt;.assignment,ma = value)<SUB>1585</SUB>> ]
+"68325" [label = <(IDENTIFIER,ma,ma = value)<SUB>1585</SUB>> ]
+"68326" [label = <(IDENTIFIER,value,ma = value)<SUB>1585</SUB>> ]
+"68327" [label = <(&lt;operator&gt;.assignment,mb = 0)<SUB>1585</SUB>> ]
+"68328" [label = <(IDENTIFIER,mb,mb = 0)<SUB>1585</SUB>> ]
+"68329" [label = <(LITERAL,0,mb = 0)<SUB>1585</SUB>> ]
+"68330" [label = <(&lt;operator&gt;.lessThan,mb &lt; count)<SUB>1585</SUB>> ]
+"68331" [label = <(IDENTIFIER,mb,mb &lt; count)<SUB>1585</SUB>> ]
+"68332" [label = <(IDENTIFIER,count,mb &lt; count)<SUB>1585</SUB>> ]
+"68333" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1585</SUB>> ]
+"68334" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>1585</SUB>> ]
+"68335" [label = <(IDENTIFIER,ma,ma++)<SUB>1585</SUB>> ]
+"68336" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>1585</SUB>> ]
+"68337" [label = <(IDENTIFIER,mb,mb++)<SUB>1585</SUB>> ]
+"68338" [label = <(&lt;operator&gt;.postIncrement,q++)<SUB>1585</SUB>> ]
+"68339" [label = <(IDENTIFIER,q,q++)<SUB>1585</SUB>> ]
+"68340" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1586</SUB>> ]
+"68341" [label = <(CONTROL_STRUCTURE,if (*ma &gt; 0xFFFFFFFF),if (*ma &gt; 0xFFFFFFFF))<SUB>1587</SUB>> ]
+"68342" [label = <(&lt;operator&gt;.greaterThan,*ma &gt; 0xFFFFFFFF)<SUB>1587</SUB>> ]
+"68343" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>1587</SUB>> ]
+"68344" [label = <(IDENTIFIER,ma,*ma &gt; 0xFFFFFFFF)<SUB>1587</SUB>> ]
+"68345" [label = <(LITERAL,0xFFFFFFFF,*ma &gt; 0xFFFFFFFF)<SUB>1587</SUB>> ]
+"68346" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1588</SUB>> ]
+"68347" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write unsigned long value %&quot; PRIu64\012                          &quot; larger than 0xFFFFFFFF for tag %d in Classic TIFF &quot;\012                          &quot;file. TIFF file writing aborted&quot;,\012                          *ma, tag);,TIFFErrorExtR(tif, module,\012                          &quot;Attempt to write unsigned long value %&quot; PRIu64\012                          &quot; larger than 0xFFFFFFFF for tag %d in Classic TIFF &quot;\012                          &quot;file. TIFF file writing aborted&quot;,\012                          *ma, tag);)<SUB>1589</SUB>> ]
+"68348" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>1594</SUB>> ]
+"68349" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, p))<SUB>1594</SUB>> ]
+"68350" [label = <(IDENTIFIER,p,_TIFFfreeExt(tif, p))<SUB>1594</SUB>> ]
+"68351" [label = <(RETURN,return (0);,return (0);)<SUB>1595</SUB>> ]
+"68352" [label = <(LITERAL,0,return (0);)<SUB>1595</SUB>> ]
+"68353" [label = <(&lt;operator&gt;.assignment,*q = (uint32_t)(*ma))<SUB>1597</SUB>> ]
+"68354" [label = <(&lt;operator&gt;.indirection,*q)<SUB>1597</SUB>> ]
+"68355" [label = <(IDENTIFIER,q,*q = (uint32_t)(*ma))<SUB>1597</SUB>> ]
+"68356" [label = <(uint32_t,(uint32_t)(*ma))<SUB>1597</SUB>> ]
+"68357" [label = <(&lt;operator&gt;.indirection,*ma)<SUB>1597</SUB>> ]
+"68358" [label = <(IDENTIFIER,ma,(uint32_t)(*ma))<SUB>1597</SUB>> ]
+"68359" [label = <(&lt;operator&gt;.assignment,o = TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68360" [label = <(IDENTIFIER,o,o = TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68361" [label = <(TIFFWriteDirectoryTagCheckedLongArray,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68362" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68363" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68364" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68365" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68366" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68367" [label = <(IDENTIFIER,p,TIFFWriteDirectoryTagCheckedLongArray(tif, ndir, dir, tag, count, p))<SUB>1600</SUB>> ]
+"68368" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, p))<SUB>1601</SUB>> ]
+"68369" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, p))<SUB>1601</SUB>> ]
+"68370" [label = <(IDENTIFIER,p,_TIFFfreeExt(tif, p))<SUB>1601</SUB>> ]
+"68371" [label = <(RETURN,return (o);,return (o);)<SUB>1603</SUB>> ]
+"68372" [label = <(IDENTIFIER,o,return (o);)<SUB>1603</SUB>> ]
+"68373" [label = <(METHOD_RETURN,int)<SUB>1551</SUB>> ]
+  "68257" -> "68258" 
+  "68257" -> "68259" 
+  "68257" -> "68260" 
+  "68257" -> "68261" 
+  "68257" -> "68262" 
+  "68257" -> "68263" 
+  "68257" -> "68264" 
+  "68257" -> "68373" 
+  "68264" -> "68265" 
+  "68264" -> "68266" 
+  "68264" -> "68269" 
+  "68264" -> "68270" 
+  "68264" -> "68271" 
+  "68264" -> "68272" 
+  "68264" -> "68273" 
+  "68264" -> "68274" 
+  "68264" -> "68284" 
+  "68264" -> "68299" 
+  "68264" -> "68307" 
+  "68264" -> "68318" 
+  "68264" -> "68359" 
+  "68264" -> "68368" 
+  "68264" -> "68371" 
+  "68266" -> "68267" 
+  "68266" -> "68268" 
+  "68274" -> "68275" 
+  "68274" -> "68278" 
+  "68275" -> "68276" 
+  "68275" -> "68277" 
+  "68278" -> "68279" 
+  "68278" -> "68282" 
+  "68279" -> "68280" 
+  "68280" -> "68281" 
+  "68282" -> "68283" 
+  "68284" -> "68285" 
+  "68284" -> "68290" 
+  "68285" -> "68286" 
+  "68285" -> "68289" 
+  "68286" -> "68287" 
+  "68286" -> "68288" 
+  "68290" -> "68291" 
+  "68291" -> "68292" 
+  "68292" -> "68293" 
+  "68292" -> "68294" 
+  "68292" -> "68295" 
+  "68292" -> "68296" 
+  "68292" -> "68297" 
+  "68292" -> "68298" 
+  "68299" -> "68300" 
+  "68299" -> "68301" 
+  "68301" -> "68302" 
+  "68301" -> "68303" 
+  "68303" -> "68304" 
+  "68303" -> "68305" 
+  "68305" -> "68306" 
+  "68307" -> "68308" 
+  "68307" -> "68311" 
+  "68308" -> "68309" 
+  "68308" -> "68310" 
+  "68311" -> "68312" 
+  "68311" -> "68316" 
+  "68312" -> "68313" 
+  "68312" -> "68314" 
+  "68312" -> "68315" 
+  "68316" -> "68317" 
+  "68318" -> "68319" 
+  "68318" -> "68330" 
+  "68318" -> "68333" 
+  "68318" -> "68340" 
+  "68319" -> "68320" 
+  "68320" -> "68321" 
+  "68320" -> "68324" 
+  "68320" -> "68327" 
+  "68321" -> "68322" 
+  "68321" -> "68323" 
+  "68324" -> "68325" 
+  "68324" -> "68326" 
+  "68327" -> "68328" 
+  "68327" -> "68329" 
+  "68330" -> "68331" 
+  "68330" -> "68332" 
+  "68333" -> "68334" 
+  "68333" -> "68336" 
+  "68333" -> "68338" 
+  "68334" -> "68335" 
+  "68336" -> "68337" 
+  "68338" -> "68339" 
+  "68340" -> "68341" 
+  "68340" -> "68353" 
+  "68341" -> "68342" 
+  "68341" -> "68346" 
+  "68342" -> "68343" 
+  "68342" -> "68345" 
+  "68343" -> "68344" 
+  "68346" -> "68347" 
+  "68346" -> "68348" 
+  "68346" -> "68351" 
+  "68348" -> "68349" 
+  "68348" -> "68350" 
+  "68351" -> "68352" 
+  "68353" -> "68354" 
+  "68353" -> "68356" 
+  "68354" -> "68355" 
+  "68356" -> "68357" 
+  "68357" -> "68358" 
+  "68359" -> "68360" 
+  "68359" -> "68361" 
+  "68361" -> "68362" 
+  "68361" -> "68363" 
+  "68361" -> "68364" 
+  "68361" -> "68365" 
+  "68361" -> "68366" 
+  "68361" -> "68367" 
+  "68368" -> "68369" 
+  "68368" -> "68370" 
+  "68371" -> "68372" 
+}

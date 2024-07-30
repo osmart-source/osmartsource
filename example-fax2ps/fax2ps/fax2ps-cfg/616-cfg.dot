@@ -1,0 +1,67 @@
+digraph "tagNameCompare" {  
+"26862" [label = <(&lt;operator&gt;.assignment,*ta = *(const TIFFField **)a)<SUB>754</SUB>> ]
+"26869" [label = <(&lt;operator&gt;.assignment,*tb = *(const TIFFField **)b)<SUB>755</SUB>> ]
+"26876" [label = <(&lt;operator&gt;.assignment,ret = strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26864" [label = <(&lt;operator&gt;.indirection,*(const TIFFField **)a)<SUB>754</SUB>> ]
+"26871" [label = <(&lt;operator&gt;.indirection,*(const TIFFField **)b)<SUB>755</SUB>> ]
+"26878" [label = <(strcmp,strcmp(ta-&gt;field_name, tb-&gt;field_name))<SUB>756</SUB>> ]
+"26886" [label = <(&lt;operator&gt;.logicalAnd,ret &amp;&amp; 1)<SUB>758</SUB>> ]
+"26865" [label = <(&lt;operator&gt;.cast,(const TIFFField **)a)<SUB>754</SUB>> ]
+"26872" [label = <(&lt;operator&gt;.cast,(const TIFFField **)b)<SUB>755</SUB>> ]
+"26879" [label = <(&lt;operator&gt;.indirectFieldAccess,ta-&gt;field_name)<SUB>756</SUB>> ]
+"26882" [label = <(&lt;operator&gt;.indirectFieldAccess,tb-&gt;field_name)<SUB>756</SUB>> ]
+"26890" [label = <(RETURN,return ret;,return ret;)<SUB>759</SUB>> ]
+"26866" [label = <(UNKNOWN,const TIFFField **,const TIFFField **)<SUB>754</SUB>> ]
+"26873" [label = <(UNKNOWN,const TIFFField **,const TIFFField **)<SUB>755</SUB>> ]
+"26881" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>756</SUB>> ]
+"26884" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>756</SUB>> ]
+"26894" [label = <(RETURN,return (ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type);,return (ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type);)<SUB>761</SUB>> ]
+"26895" [label = <(&lt;operator&gt;.conditional,(ta-&gt;field_type == TIFF_ANY)\012                   ? 0\012                   : ((int)tb-&gt;field_type - (int)ta-&gt;field_type))<SUB>761</SUB>> ]
+"26896" [label = <(&lt;operator&gt;.equals,ta-&gt;field_type == TIFF_ANY)<SUB>761</SUB>> ]
+"26902" [label = <(&lt;operator&gt;.subtraction,(int)tb-&gt;field_type - (int)ta-&gt;field_type)<SUB>763</SUB>> ]
+"26897" [label = <(&lt;operator&gt;.indirectFieldAccess,ta-&gt;field_type)<SUB>761</SUB>> ]
+"26903" [label = <(&lt;operator&gt;.cast,(int)tb-&gt;field_type)<SUB>763</SUB>> ]
+"26908" [label = <(&lt;operator&gt;.cast,(int)ta-&gt;field_type)<SUB>763</SUB>> ]
+"26899" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>761</SUB>> ]
+"26904" [label = <(UNKNOWN,int,int)<SUB>763</SUB>> ]
+"26905" [label = <(&lt;operator&gt;.indirectFieldAccess,tb-&gt;field_type)<SUB>763</SUB>> ]
+"26909" [label = <(UNKNOWN,int,int)<SUB>763</SUB>> ]
+"26910" [label = <(&lt;operator&gt;.indirectFieldAccess,ta-&gt;field_type)<SUB>763</SUB>> ]
+"26907" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>763</SUB>> ]
+"26912" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>763</SUB>> ]
+"26857" [label = <(METHOD,tagNameCompare)<SUB>752</SUB>> ]
+"26913" [label = <(METHOD_RETURN,int)<SUB>752</SUB>> ]
+  "26862" -> "26873" 
+  "26869" -> "26881" 
+  "26876" -> "26886" 
+  "26864" -> "26862" 
+  "26871" -> "26869" 
+  "26878" -> "26876" 
+  "26886" -> "26890" 
+  "26886" -> "26899" 
+  "26865" -> "26864" 
+  "26872" -> "26871" 
+  "26879" -> "26884" 
+  "26882" -> "26878" 
+  "26890" -> "26913" 
+  "26866" -> "26865" 
+  "26873" -> "26872" 
+  "26881" -> "26879" 
+  "26884" -> "26882" 
+  "26894" -> "26913" 
+  "26895" -> "26894" 
+  "26896" -> "26904" 
+  "26896" -> "26895" 
+  "26902" -> "26895" 
+  "26897" -> "26896" 
+  "26903" -> "26909" 
+  "26908" -> "26902" 
+  "26899" -> "26897" 
+  "26904" -> "26907" 
+  "26905" -> "26903" 
+  "26909" -> "26912" 
+  "26910" -> "26908" 
+  "26907" -> "26905" 
+  "26912" -> "26910" 
+  "26857" -> "26866" 
+}

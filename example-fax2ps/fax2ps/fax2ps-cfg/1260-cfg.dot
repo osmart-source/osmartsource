@@ -1,0 +1,19 @@
+digraph "TIFFReadDirEntryCheckRangeSbyteSshort" {  
+"87482" [label = <(&lt;operator&gt;.logicalOr,(value &lt; -0x80) || (value &gt; 0x7F))<SUB>3600</SUB>> ]
+"87483" [label = <(&lt;operator&gt;.lessThan,value &lt; -0x80)<SUB>3600</SUB>> ]
+"87487" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0x7F)<SUB>3600</SUB>> ]
+"87491" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3601</SUB>> ]
+"87485" [label = <(&lt;operator&gt;.minus,-0x80)<SUB>3600</SUB>> ]
+"87495" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3603</SUB>> ]
+"87478" [label = <(METHOD,TIFFReadDirEntryCheckRangeSbyteSshort)<SUB>3597</SUB>> ]
+"87497" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3597</SUB>> ]
+  "87482" -> "87491" 
+  "87482" -> "87495" 
+  "87483" -> "87482" 
+  "87483" -> "87487" 
+  "87487" -> "87482" 
+  "87491" -> "87497" 
+  "87485" -> "87483" 
+  "87495" -> "87497" 
+  "87478" -> "87485" 
+}

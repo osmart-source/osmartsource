@@ -1,0 +1,165 @@
+digraph "TIFFComputeTile" {  
+"29184" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>38</SUB>> ]
+"29191" [label = <(&lt;operator&gt;.assignment,dx = td-&gt;td_tilewidth)<SUB>39</SUB>> ]
+"29197" [label = <(&lt;operator&gt;.assignment,dy = td-&gt;td_tilelength)<SUB>40</SUB>> ]
+"29203" [label = <(&lt;operator&gt;.assignment,dz = td-&gt;td_tiledepth)<SUB>41</SUB>> ]
+"29209" [label = <(&lt;operator&gt;.assignment,tile = 1)<SUB>42</SUB>> ]
+"29350" [label = <(RETURN,return (tile);,return (tile);)<SUB>64</SUB>> ]
+"29186" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>38</SUB>> ]
+"29193" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilewidth)<SUB>39</SUB>> ]
+"29199" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilelength)<SUB>40</SUB>> ]
+"29205" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tiledepth)<SUB>41</SUB>> ]
+"29213" [label = <(&lt;operator&gt;.equals,td-&gt;td_imagedepth == 1)<SUB>44</SUB>> ]
+"29223" [label = <(&lt;operator&gt;.equals,dx == (uint32_t)-1)<SUB>46</SUB>> ]
+"29235" [label = <(&lt;operator&gt;.equals,dy == (uint32_t)-1)<SUB>48</SUB>> ]
+"29247" [label = <(&lt;operator&gt;.equals,dz == (uint32_t)-1)<SUB>50</SUB>> ]
+"29259" [label = <(&lt;operator&gt;.logicalAnd,dx != 0 &amp;&amp; dy != 0 &amp;&amp; dz != 0)<SUB>52</SUB>> ]
+"29187" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>38</SUB>> ]
+"29195" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>39</SUB>> ]
+"29201" [label = <(FIELD_IDENTIFIER,td_tilelength,td_tilelength)<SUB>40</SUB>> ]
+"29207" [label = <(FIELD_IDENTIFIER,td_tiledepth,td_tiledepth)<SUB>41</SUB>> ]
+"29214" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>44</SUB>> ]
+"29219" [label = <(&lt;operator&gt;.assignment,z = 0)<SUB>45</SUB>> ]
+"29225" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>46</SUB>> ]
+"29229" [label = <(&lt;operator&gt;.assignment,dx = td-&gt;td_imagewidth)<SUB>47</SUB>> ]
+"29237" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>48</SUB>> ]
+"29241" [label = <(&lt;operator&gt;.assignment,dy = td-&gt;td_imagelength)<SUB>49</SUB>> ]
+"29249" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>50</SUB>> ]
+"29253" [label = <(&lt;operator&gt;.assignment,dz = td-&gt;td_imagedepth)<SUB>51</SUB>> ]
+"29260" [label = <(&lt;operator&gt;.logicalAnd,dx != 0 &amp;&amp; dy != 0)<SUB>52</SUB>> ]
+"29267" [label = <(&lt;operator&gt;.notEquals,dz != 0)<SUB>52</SUB>> ]
+"29272" [label = <(&lt;operator&gt;.assignment,xpt = TIFFhowmany_32(td-&gt;td_imagewidth, dx))<SUB>54</SUB>> ]
+"29280" [label = <(&lt;operator&gt;.assignment,ypt = TIFFhowmany_32(td-&gt;td_imagelength, dy))<SUB>55</SUB>> ]
+"29288" [label = <(&lt;operator&gt;.assignment,zpt = TIFFhowmany_32(td-&gt;td_imagedepth, dz))<SUB>56</SUB>> ]
+"29189" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>38</SUB>> ]
+"29216" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>44</SUB>> ]
+"29231" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>47</SUB>> ]
+"29243" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>49</SUB>> ]
+"29255" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>51</SUB>> ]
+"29261" [label = <(&lt;operator&gt;.notEquals,dx != 0)<SUB>52</SUB>> ]
+"29264" [label = <(&lt;operator&gt;.notEquals,dy != 0)<SUB>52</SUB>> ]
+"29274" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagewidth, dx))<SUB>54</SUB>> ]
+"29282" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, dy))<SUB>55</SUB>> ]
+"29290" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagedepth, dz))<SUB>56</SUB>> ]
+"29296" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>58</SUB>> ]
+"29233" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>47</SUB>> ]
+"29245" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>49</SUB>> ]
+"29257" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>51</SUB>> ]
+"29275" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>54</SUB>> ]
+"29283" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>55</SUB>> ]
+"29291" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>56</SUB>> ]
+"29297" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>58</SUB>> ]
+"29302" [label = <(&lt;operator&gt;.assignment,tile = (xpt * ypt * zpt) * s + (xpt * ypt) * (z / dz) +\012                   xpt * (y / dy) + x / dx)<SUB>59</SUB>> ]
+"29277" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>54</SUB>> ]
+"29285" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>55</SUB>> ]
+"29293" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>56</SUB>> ]
+"29299" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>58</SUB>> ]
+"29304" [label = <(&lt;operator&gt;.addition,(xpt * ypt * zpt) * s + (xpt * ypt) * (z / dz) +\012                   xpt * (y / dy) + x / dx)<SUB>59</SUB>> ]
+"29331" [label = <(&lt;operator&gt;.assignment,tile = (xpt * ypt) * (z / dz) + xpt * (y / dy) + x / dx)<SUB>62</SUB>> ]
+"29305" [label = <(&lt;operator&gt;.addition,(xpt * ypt * zpt) * s + (xpt * ypt) * (z / dz) +\012                   xpt * (y / dy))<SUB>59</SUB>> ]
+"29326" [label = <(&lt;operator&gt;.division,x / dx)<SUB>60</SUB>> ]
+"29333" [label = <(&lt;operator&gt;.addition,(xpt * ypt) * (z / dz) + xpt * (y / dy) + x / dx)<SUB>62</SUB>> ]
+"29306" [label = <(&lt;operator&gt;.addition,(xpt * ypt * zpt) * s + (xpt * ypt) * (z / dz))<SUB>59</SUB>> ]
+"29321" [label = <(&lt;operator&gt;.multiplication,xpt * (y / dy))<SUB>60</SUB>> ]
+"29334" [label = <(&lt;operator&gt;.addition,(xpt * ypt) * (z / dz) + xpt * (y / dy))<SUB>62</SUB>> ]
+"29347" [label = <(&lt;operator&gt;.division,x / dx)<SUB>62</SUB>> ]
+"29307" [label = <(&lt;operator&gt;.multiplication,(xpt * ypt * zpt) * s)<SUB>59</SUB>> ]
+"29314" [label = <(&lt;operator&gt;.multiplication,(xpt * ypt) * (z / dz))<SUB>59</SUB>> ]
+"29323" [label = <(&lt;operator&gt;.division,y / dy)<SUB>60</SUB>> ]
+"29335" [label = <(&lt;operator&gt;.multiplication,(xpt * ypt) * (z / dz))<SUB>62</SUB>> ]
+"29342" [label = <(&lt;operator&gt;.multiplication,xpt * (y / dy))<SUB>62</SUB>> ]
+"29308" [label = <(&lt;operator&gt;.multiplication,xpt * ypt * zpt)<SUB>59</SUB>> ]
+"29315" [label = <(&lt;operator&gt;.multiplication,xpt * ypt)<SUB>59</SUB>> ]
+"29318" [label = <(&lt;operator&gt;.division,z / dz)<SUB>59</SUB>> ]
+"29336" [label = <(&lt;operator&gt;.multiplication,xpt * ypt)<SUB>62</SUB>> ]
+"29339" [label = <(&lt;operator&gt;.division,z / dz)<SUB>62</SUB>> ]
+"29344" [label = <(&lt;operator&gt;.division,y / dy)<SUB>62</SUB>> ]
+"29309" [label = <(&lt;operator&gt;.multiplication,xpt * ypt)<SUB>59</SUB>> ]
+"29176" [label = <(METHOD,TIFFComputeTile)<SUB>35</SUB>> ]
+"29352" [label = <(METHOD_RETURN,uint32_t)<SUB>35</SUB>> ]
+  "29184" -> "29195" 
+  "29191" -> "29201" 
+  "29197" -> "29207" 
+  "29203" -> "29209" 
+  "29209" -> "29216" 
+  "29350" -> "29352" 
+  "29186" -> "29184" 
+  "29193" -> "29191" 
+  "29199" -> "29197" 
+  "29205" -> "29203" 
+  "29213" -> "29219" 
+  "29213" -> "29225" 
+  "29223" -> "29233" 
+  "29223" -> "29237" 
+  "29235" -> "29245" 
+  "29235" -> "29249" 
+  "29247" -> "29257" 
+  "29247" -> "29261" 
+  "29259" -> "29277" 
+  "29259" -> "29350" 
+  "29187" -> "29186" 
+  "29195" -> "29193" 
+  "29201" -> "29199" 
+  "29207" -> "29205" 
+  "29214" -> "29213" 
+  "29219" -> "29225" 
+  "29225" -> "29223" 
+  "29229" -> "29237" 
+  "29237" -> "29235" 
+  "29241" -> "29249" 
+  "29249" -> "29247" 
+  "29253" -> "29261" 
+  "29260" -> "29259" 
+  "29260" -> "29267" 
+  "29267" -> "29259" 
+  "29272" -> "29285" 
+  "29280" -> "29293" 
+  "29288" -> "29299" 
+  "29189" -> "29187" 
+  "29216" -> "29214" 
+  "29231" -> "29229" 
+  "29243" -> "29241" 
+  "29255" -> "29253" 
+  "29261" -> "29260" 
+  "29261" -> "29264" 
+  "29264" -> "29260" 
+  "29274" -> "29272" 
+  "29282" -> "29280" 
+  "29290" -> "29288" 
+  "29296" -> "29309" 
+  "29296" -> "29336" 
+  "29233" -> "29231" 
+  "29245" -> "29243" 
+  "29257" -> "29255" 
+  "29275" -> "29274" 
+  "29283" -> "29282" 
+  "29291" -> "29290" 
+  "29297" -> "29296" 
+  "29302" -> "29350" 
+  "29277" -> "29275" 
+  "29285" -> "29283" 
+  "29293" -> "29291" 
+  "29299" -> "29297" 
+  "29304" -> "29302" 
+  "29331" -> "29350" 
+  "29305" -> "29326" 
+  "29326" -> "29304" 
+  "29333" -> "29331" 
+  "29306" -> "29323" 
+  "29321" -> "29305" 
+  "29334" -> "29347" 
+  "29347" -> "29333" 
+  "29307" -> "29315" 
+  "29314" -> "29306" 
+  "29323" -> "29321" 
+  "29335" -> "29344" 
+  "29342" -> "29334" 
+  "29308" -> "29307" 
+  "29315" -> "29318" 
+  "29318" -> "29314" 
+  "29336" -> "29339" 
+  "29339" -> "29335" 
+  "29344" -> "29342" 
+  "29309" -> "29308" 
+  "29176" -> "29189" 
+}

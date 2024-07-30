@@ -1,0 +1,46 @@
+digraph "_TIFFMultiplySSize" {  
+"20749" [label = <(RETURN,return first * second;,return first * second;)<SUB>81</SUB>> ]
+"20702" [label = <(&lt;operator&gt;.logicalOr,first &lt;= 0 || second &lt;= 0)<SUB>62</SUB>> ]
+"20727" [label = <(&lt;operator&gt;.greaterThan,first &gt; TIFF_TMSIZE_T_MAX / second)<SUB>73</SUB>> ]
+"20750" [label = <(&lt;operator&gt;.multiplication,first * second)<SUB>81</SUB>> ]
+"20703" [label = <(&lt;operator&gt;.lessEqualsThan,first &lt;= 0)<SUB>62</SUB>> ]
+"20706" [label = <(&lt;operator&gt;.lessEqualsThan,second &lt;= 0)<SUB>62</SUB>> ]
+"20724" [label = <(RETURN,return 0;,return 0;)<SUB>70</SUB>> ]
+"20729" [label = <(&lt;operator&gt;.division,TIFF_TMSIZE_T_MAX / second)<SUB>73</SUB>> ]
+"20747" [label = <(RETURN,return 0;,return 0;)<SUB>79</SUB>> ]
+"20711" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; where != NULL)<SUB>64</SUB>> ]
+"20734" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; where != NULL)<SUB>75</SUB>> ]
+"20712" [label = <(&lt;operator&gt;.notEquals,tif != NULL)<SUB>64</SUB>> ]
+"20715" [label = <(&lt;operator&gt;.notEquals,where != NULL)<SUB>64</SUB>> ]
+"20719" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, where,\012                          &quot;Invalid argument to _TIFFMultiplySSize() in %s&quot;,\012                          where))<SUB>66</SUB>> ]
+"20735" [label = <(&lt;operator&gt;.notEquals,tif != NULL)<SUB>75</SUB>> ]
+"20738" [label = <(&lt;operator&gt;.notEquals,where != NULL)<SUB>75</SUB>> ]
+"20742" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, where, &quot;Integer overflow in %s&quot;, where))<SUB>77</SUB>> ]
+"20695" [label = <(METHOD,_TIFFMultiplySSize)<SUB>59</SUB>> ]
+"20753" [label = <(METHOD_RETURN,tmsize_t)<SUB>59</SUB>> ]
+  "20749" -> "20753" 
+  "20702" -> "20712" 
+  "20702" -> "20729" 
+  "20727" -> "20735" 
+  "20727" -> "20750" 
+  "20750" -> "20749" 
+  "20703" -> "20702" 
+  "20703" -> "20706" 
+  "20706" -> "20702" 
+  "20724" -> "20753" 
+  "20729" -> "20727" 
+  "20747" -> "20753" 
+  "20711" -> "20719" 
+  "20711" -> "20724" 
+  "20734" -> "20742" 
+  "20734" -> "20747" 
+  "20712" -> "20711" 
+  "20712" -> "20715" 
+  "20715" -> "20711" 
+  "20719" -> "20724" 
+  "20735" -> "20734" 
+  "20735" -> "20738" 
+  "20738" -> "20734" 
+  "20742" -> "20747" 
+  "20695" -> "20703" 
+}

@@ -1,0 +1,34 @@
+digraph "TIFFClampDoubleToInt32" {  
+"67459" [label = <(RETURN,return (int32_t)val;,return (int32_t)val;)<SUB>1274</SUB>> ]
+"67436" [label = <(&lt;operator&gt;.greaterThan,val &gt; 0x7FFFFFFF)<SUB>1270</SUB>> ]
+"67443" [label = <(&lt;operator&gt;.logicalOr,val &lt; -0x7FFFFFFF - 1 || val != val)<SUB>1272</SUB>> ]
+"67460" [label = <(&lt;operator&gt;.cast,(int32_t)val)<SUB>1274</SUB>> ]
+"67440" [label = <(RETURN,return 0x7FFFFFFF;,return 0x7FFFFFFF;)<SUB>1271</SUB>> ]
+"67444" [label = <(&lt;operator&gt;.lessThan,val &lt; -0x7FFFFFFF - 1)<SUB>1272</SUB>> ]
+"67450" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1272</SUB>> ]
+"67454" [label = <(RETURN,return -0x7FFFFFFF - 1;,return -0x7FFFFFFF - 1;)<SUB>1273</SUB>> ]
+"67461" [label = <(UNKNOWN,int32_t,int32_t)<SUB>1274</SUB>> ]
+"67446" [label = <(&lt;operator&gt;.subtraction,-0x7FFFFFFF - 1)<SUB>1272</SUB>> ]
+"67455" [label = <(&lt;operator&gt;.subtraction,-0x7FFFFFFF - 1)<SUB>1273</SUB>> ]
+"67447" [label = <(&lt;operator&gt;.minus,-0x7FFFFFFF)<SUB>1272</SUB>> ]
+"67456" [label = <(&lt;operator&gt;.minus,-0x7FFFFFFF)<SUB>1273</SUB>> ]
+"67432" [label = <(METHOD,TIFFClampDoubleToInt32)<SUB>1268</SUB>> ]
+"67463" [label = <(METHOD_RETURN,int32_t)<SUB>1268</SUB>> ]
+  "67459" -> "67463" 
+  "67436" -> "67440" 
+  "67436" -> "67447" 
+  "67443" -> "67461" 
+  "67443" -> "67456" 
+  "67460" -> "67459" 
+  "67440" -> "67463" 
+  "67444" -> "67443" 
+  "67444" -> "67450" 
+  "67450" -> "67443" 
+  "67454" -> "67463" 
+  "67461" -> "67460" 
+  "67446" -> "67444" 
+  "67455" -> "67454" 
+  "67447" -> "67446" 
+  "67456" -> "67455" 
+  "67432" -> "67436" 
+}

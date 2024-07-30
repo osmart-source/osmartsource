@@ -1,0 +1,29 @@
+digraph "TIFFWriteDirectoryTagShortLong" {  
+"68740" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1787</SUB>> ]
+"68750" [label = <(&lt;operator&gt;.lessEqualsThan,value &lt;= 0xFFFF)<SUB>1792</SUB>> ]
+"68744" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1789</SUB>> ]
+"68747" [label = <(RETURN,return (1);,return (1);)<SUB>1790</SUB>> ]
+"68754" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedShort(tif, ndir, dir, tag,\012                                                  (uint16_t)value));,return (TIFFWriteDirectoryTagCheckedShort(tif, ndir, dir, tag,\012                                                  (uint16_t)value));)<SUB>1793</SUB>> ]
+"68745" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1789</SUB>> ]
+"68755" [label = <(TIFFWriteDirectoryTagCheckedShort,TIFFWriteDirectoryTagCheckedShort(tif, ndir, dir, tag,\012                                                  (uint16_t)value))<SUB>1793</SUB>> ]
+"68765" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value));,return (TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value));)<SUB>1796</SUB>> ]
+"68760" [label = <(&lt;operator&gt;.cast,(uint16_t)value)<SUB>1794</SUB>> ]
+"68766" [label = <(TIFFWriteDirectoryTagCheckedLong,TIFFWriteDirectoryTagCheckedLong(tif, ndir, dir, tag, value))<SUB>1796</SUB>> ]
+"68761" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>1794</SUB>> ]
+"68732" [label = <(METHOD,TIFFWriteDirectoryTagShortLong)<SUB>1783</SUB>> ]
+"68772" [label = <(METHOD_RETURN,int)<SUB>1783</SUB>> ]
+  "68740" -> "68745" 
+  "68740" -> "68750" 
+  "68750" -> "68761" 
+  "68750" -> "68766" 
+  "68744" -> "68747" 
+  "68747" -> "68772" 
+  "68754" -> "68772" 
+  "68745" -> "68744" 
+  "68755" -> "68754" 
+  "68765" -> "68772" 
+  "68760" -> "68755" 
+  "68766" -> "68765" 
+  "68761" -> "68760" 
+  "68732" -> "68740" 
+}

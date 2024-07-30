@@ -1,0 +1,27 @@
+digraph "TIFFWarning" {  
+"45184" [label = <(&lt;operator&gt;.logicalAnd,_TIFFwarningHandler &amp;&amp; 1)<SUB>49</SUB>> ]
+"45200" [label = <(&lt;operator&gt;.logicalAnd,_TIFFwarningHandlerExt &amp;&amp; 1)<SUB>55</SUB>> ]
+"45188" [label = <(va_start,va_start(ap, fmt))<SUB>51</SUB>> ]
+"45191" [label = <(*_TIFFwarningHandler,(*_TIFFwarningHandler)(module, fmt, ap))<SUB>52</SUB>> ]
+"45197" [label = <(va_end,va_end(ap))<SUB>53</SUB>> ]
+"45204" [label = <(va_start,va_start(ap, fmt))<SUB>57</SUB>> ]
+"45207" [label = <(*_TIFFwarningHandlerExt,(*_TIFFwarningHandlerExt)(0, module, fmt, ap))<SUB>58</SUB>> ]
+"45214" [label = <(va_end,va_end(ap))<SUB>59</SUB>> ]
+"45192" [label = <(&lt;operator&gt;.indirection,*_TIFFwarningHandler)<SUB>52</SUB>> ]
+"45208" [label = <(&lt;operator&gt;.indirection,*_TIFFwarningHandlerExt)<SUB>58</SUB>> ]
+"45178" [label = <(METHOD,TIFFWarning)<SUB>46</SUB>> ]
+"45216" [label = <(METHOD_RETURN,void)<SUB>46</SUB>> ]
+  "45184" -> "45188" 
+  "45184" -> "45200" 
+  "45200" -> "45216" 
+  "45200" -> "45204" 
+  "45188" -> "45192" 
+  "45191" -> "45197" 
+  "45197" -> "45200" 
+  "45204" -> "45208" 
+  "45207" -> "45214" 
+  "45214" -> "45216" 
+  "45192" -> "45191" 
+  "45208" -> "45207" 
+  "45178" -> "45184" 
+}

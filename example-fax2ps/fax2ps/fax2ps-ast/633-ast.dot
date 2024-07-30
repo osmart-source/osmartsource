@@ -1,0 +1,87 @@
+digraph "_TIFFFindOrRegisterField" {  
+"27742" [label = <(METHOD,_TIFFFindOrRegisterField)<SUB>1073</SUB>> ]
+"27743" [label = <(PARAM,TIFF *tif)<SUB>1073</SUB>> ]
+"27744" [label = <(PARAM,uint32_t tag)<SUB>1073</SUB>> ]
+"27745" [label = <(PARAM,TIFFDataType dt)<SUB>1074</SUB>> ]
+"27746" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1076</SUB>> ]
+"27747" [label = <(LOCAL,const TIFFField* fld: TIFFField)<SUB>1077</SUB>> ]
+"27748" [label = <(&lt;operator&gt;.assignment,fld = TIFFFindField(tif, tag, dt))<SUB>1079</SUB>> ]
+"27749" [label = <(IDENTIFIER,fld,fld = TIFFFindField(tif, tag, dt))<SUB>1079</SUB>> ]
+"27750" [label = <(TIFFFindField,TIFFFindField(tif, tag, dt))<SUB>1079</SUB>> ]
+"27751" [label = <(IDENTIFIER,tif,TIFFFindField(tif, tag, dt))<SUB>1079</SUB>> ]
+"27752" [label = <(IDENTIFIER,tag,TIFFFindField(tif, tag, dt))<SUB>1079</SUB>> ]
+"27753" [label = <(IDENTIFIER,dt,TIFFFindField(tif, tag, dt))<SUB>1079</SUB>> ]
+"27754" [label = <(CONTROL_STRUCTURE,if (fld == NULL),if (fld == NULL))<SUB>1080</SUB>> ]
+"27755" [label = <(&lt;operator&gt;.equals,fld == NULL)<SUB>1080</SUB>> ]
+"27756" [label = <(IDENTIFIER,fld,fld == NULL)<SUB>1080</SUB>> ]
+"27757" [label = <(NULL,NULL)<SUB>1080</SUB>> ]
+"27758" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"27759" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1080</SUB>> ]
+"27760" [label = <(UNKNOWN,void *,void *)<SUB>1080</SUB>> ]
+"27761" [label = <(LITERAL,0,(void *)0)<SUB>1080</SUB>> ]
+"27762" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1081</SUB>> ]
+"27763" [label = <(&lt;operator&gt;.assignment,fld = _TIFFCreateAnonField(tif, tag, dt))<SUB>1082</SUB>> ]
+"27764" [label = <(IDENTIFIER,fld,fld = _TIFFCreateAnonField(tif, tag, dt))<SUB>1082</SUB>> ]
+"27765" [label = <(_TIFFCreateAnonField,_TIFFCreateAnonField(tif, tag, dt))<SUB>1082</SUB>> ]
+"27766" [label = <(IDENTIFIER,tif,_TIFFCreateAnonField(tif, tag, dt))<SUB>1082</SUB>> ]
+"27767" [label = <(IDENTIFIER,tag,_TIFFCreateAnonField(tif, tag, dt))<SUB>1082</SUB>> ]
+"27768" [label = <(IDENTIFIER,dt,_TIFFCreateAnonField(tif, tag, dt))<SUB>1082</SUB>> ]
+"27769" [label = <(CONTROL_STRUCTURE,if (!_TIFFMergeFields(tif, fld, 1)),if (!_TIFFMergeFields(tif, fld, 1)))<SUB>1083</SUB>> ]
+"27770" [label = <(&lt;operator&gt;.logicalNot,!_TIFFMergeFields(tif, fld, 1))<SUB>1083</SUB>> ]
+"27771" [label = <(_TIFFMergeFields,_TIFFMergeFields(tif, fld, 1))<SUB>1083</SUB>> ]
+"27772" [label = <(IDENTIFIER,tif,_TIFFMergeFields(tif, fld, 1))<SUB>1083</SUB>> ]
+"27773" [label = <(IDENTIFIER,fld,_TIFFMergeFields(tif, fld, 1))<SUB>1083</SUB>> ]
+"27774" [label = <(LITERAL,1,_TIFFMergeFields(tif, fld, 1))<SUB>1083</SUB>> ]
+"27775" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1084</SUB>> ]
+"27776" [label = <(RETURN,return NULL;,return NULL;)<SUB>1084</SUB>> ]
+"27777" [label = <(NULL,NULL)<SUB>1084</SUB>> ]
+"27778" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"27779" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1084</SUB>> ]
+"27780" [label = <(UNKNOWN,void *,void *)<SUB>1084</SUB>> ]
+"27781" [label = <(LITERAL,0,(void *)0)<SUB>1084</SUB>> ]
+"27782" [label = <(RETURN,return fld;,return fld;)<SUB>1087</SUB>> ]
+"27783" [label = <(IDENTIFIER,fld,return fld;)<SUB>1087</SUB>> ]
+"27784" [label = <(METHOD_RETURN,TIFFField)<SUB>1073</SUB>> ]
+  "27742" -> "27743" 
+  "27742" -> "27744" 
+  "27742" -> "27745" 
+  "27742" -> "27746" 
+  "27742" -> "27784" 
+  "27746" -> "27747" 
+  "27746" -> "27748" 
+  "27746" -> "27754" 
+  "27746" -> "27782" 
+  "27748" -> "27749" 
+  "27748" -> "27750" 
+  "27750" -> "27751" 
+  "27750" -> "27752" 
+  "27750" -> "27753" 
+  "27754" -> "27755" 
+  "27754" -> "27762" 
+  "27755" -> "27756" 
+  "27755" -> "27757" 
+  "27757" -> "27758" 
+  "27758" -> "27759" 
+  "27759" -> "27760" 
+  "27759" -> "27761" 
+  "27762" -> "27763" 
+  "27762" -> "27769" 
+  "27763" -> "27764" 
+  "27763" -> "27765" 
+  "27765" -> "27766" 
+  "27765" -> "27767" 
+  "27765" -> "27768" 
+  "27769" -> "27770" 
+  "27769" -> "27775" 
+  "27770" -> "27771" 
+  "27771" -> "27772" 
+  "27771" -> "27773" 
+  "27771" -> "27774" 
+  "27775" -> "27776" 
+  "27776" -> "27777" 
+  "27777" -> "27778" 
+  "27778" -> "27779" 
+  "27779" -> "27780" 
+  "27779" -> "27781" 
+  "27782" -> "27783" 
+}

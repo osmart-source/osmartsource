@@ -1,0 +1,51 @@
+digraph "TIFFReadDirEntryCheckedLong" {  
+"86708" [label = <(METHOD,TIFFReadDirEntryCheckedLong)<SUB>3350</SUB>> ]
+"86709" [label = <(PARAM,TIFF *tif)<SUB>3350</SUB>> ]
+"86710" [label = <(PARAM,TIFFDirEntry *direntry)<SUB>3350</SUB>> ]
+"86711" [label = <(PARAM,uint32_t *value)<SUB>3351</SUB>> ]
+"86712" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3352</SUB>> ]
+"86713" [label = <(&lt;operator&gt;.assignment,*value = *(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86714" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3353</SUB>> ]
+"86715" [label = <(IDENTIFIER,value,*value = *(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86716" [label = <(&lt;operator&gt;.indirection,*(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86717" [label = <(&lt;operator&gt;.cast,(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86718" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3353</SUB>> ]
+"86719" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3353</SUB>> ]
+"86720" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3353</SUB>> ]
+"86721" [label = <(IDENTIFIER,direntry,(uint32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3353</SUB>> ]
+"86722" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3353</SUB>> ]
+"86723" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>3354</SUB>> ]
+"86724" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3354</SUB>> ]
+"86725" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3354</SUB>> ]
+"86726" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3354</SUB>> ]
+"86727" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3354</SUB>> ]
+"86728" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3354</SUB>> ]
+"86729" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3355</SUB>> ]
+"86730" [label = <(TIFFSwabLong,TIFFSwabLong(value))<SUB>3355</SUB>> ]
+"86731" [label = <(IDENTIFIER,value,TIFFSwabLong(value))<SUB>3355</SUB>> ]
+"86732" [label = <(METHOD_RETURN,void)<SUB>3350</SUB>> ]
+  "86708" -> "86709" 
+  "86708" -> "86710" 
+  "86708" -> "86711" 
+  "86708" -> "86712" 
+  "86708" -> "86732" 
+  "86712" -> "86713" 
+  "86712" -> "86723" 
+  "86713" -> "86714" 
+  "86713" -> "86716" 
+  "86714" -> "86715" 
+  "86716" -> "86717" 
+  "86717" -> "86718" 
+  "86717" -> "86719" 
+  "86719" -> "86720" 
+  "86720" -> "86721" 
+  "86720" -> "86722" 
+  "86723" -> "86724" 
+  "86723" -> "86729" 
+  "86724" -> "86725" 
+  "86724" -> "86728" 
+  "86725" -> "86726" 
+  "86725" -> "86727" 
+  "86729" -> "86730" 
+  "86730" -> "86731" 
+}

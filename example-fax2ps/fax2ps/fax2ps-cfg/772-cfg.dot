@@ -1,0 +1,34 @@
+digraph "_tiffSizeProc" {  
+"33847" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>143</SUB>> ]
+"33848" [label = <(&lt;operator&gt;.fieldAccess,fdh.h)<SUB>143</SUB>> ]
+"33853" [label = <(&lt;operator&gt;.lessThan,_TIFF_fstat_f(fdh.fd, &amp;sb) &lt; 0)<SUB>144</SUB>> ]
+"33850" [label = <(FIELD_IDENTIFIER,h,h)<SUB>143</SUB>> ]
+"33854" [label = <(_TIFF_fstat_f,_TIFF_fstat_f(fdh.fd, &amp;sb))<SUB>144</SUB>> ]
+"33862" [label = <(RETURN,return (0);,return (0);)<SUB>145</SUB>> ]
+"33855" [label = <(&lt;operator&gt;.fieldAccess,fdh.fd)<SUB>144</SUB>> ]
+"33858" [label = <(&lt;operator&gt;.addressOf,&amp;sb)<SUB>144</SUB>> ]
+"33866" [label = <(RETURN,return ((uint64_t)sb.st_size);,return ((uint64_t)sb.st_size);)<SUB>147</SUB>> ]
+"33857" [label = <(FIELD_IDENTIFIER,fd,fd)<SUB>144</SUB>> ]
+"33867" [label = <(&lt;operator&gt;.cast,(uint64_t)sb.st_size)<SUB>147</SUB>> ]
+"33868" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>147</SUB>> ]
+"33869" [label = <(&lt;operator&gt;.fieldAccess,sb.st_size)<SUB>147</SUB>> ]
+"33871" [label = <(FIELD_IDENTIFIER,st_size,st_size)<SUB>147</SUB>> ]
+"33842" [label = <(METHOD,_tiffSizeProc)<SUB>139</SUB>> ]
+"33872" [label = <(METHOD_RETURN,uint64_t)<SUB>139</SUB>> ]
+  "33847" -> "33857" 
+  "33848" -> "33847" 
+  "33853" -> "33868" 
+  "33853" -> "33862" 
+  "33850" -> "33848" 
+  "33854" -> "33853" 
+  "33862" -> "33872" 
+  "33855" -> "33858" 
+  "33858" -> "33854" 
+  "33866" -> "33872" 
+  "33857" -> "33855" 
+  "33867" -> "33866" 
+  "33868" -> "33871" 
+  "33869" -> "33867" 
+  "33871" -> "33869" 
+  "33842" -> "33850" 
+}

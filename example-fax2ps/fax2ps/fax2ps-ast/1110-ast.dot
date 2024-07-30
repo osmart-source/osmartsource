@@ -1,0 +1,81 @@
+digraph "TIFFWriteDirectoryTagCheckedShortArray" {  
+"69992" [label = <(METHOD,TIFFWriteDirectoryTagCheckedShortArray)<SUB>2236</SUB>> ]
+"69993" [label = <(PARAM,TIFF *tif)<SUB>2236</SUB>> ]
+"69994" [label = <(PARAM,uint32_t *ndir)<SUB>2236</SUB>> ]
+"69995" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2237</SUB>> ]
+"69996" [label = <(PARAM,uint16_t tag)<SUB>2238</SUB>> ]
+"69997" [label = <(PARAM,uint32_t count)<SUB>2238</SUB>> ]
+"69998" [label = <(PARAM,uint16_t *value)<SUB>2239</SUB>> ]
+"69999" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2240</SUB>> ]
+"70000" [label = <(assert,assert(count &lt; 0x80000000))<SUB>2241</SUB>> ]
+"70001" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x80000000)<SUB>2241</SUB>> ]
+"70002" [label = <(IDENTIFIER,count,count &lt; 0x80000000)<SUB>2241</SUB>> ]
+"70003" [label = <(LITERAL,0x80000000,count &lt; 0x80000000)<SUB>2241</SUB>> ]
+"70004" [label = <(assert,assert(sizeof(uint16_t) == 2))<SUB>2242</SUB>> ]
+"70005" [label = <(&lt;operator&gt;.equals,sizeof(uint16_t) == 2)<SUB>2242</SUB>> ]
+"70006" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2242</SUB>> ]
+"70007" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2242</SUB>> ]
+"70008" [label = <(LITERAL,2,sizeof(uint16_t) == 2)<SUB>2242</SUB>> ]
+"70009" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>2243</SUB>> ]
+"70010" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2243</SUB>> ]
+"70011" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2243</SUB>> ]
+"70012" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2243</SUB>> ]
+"70013" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2243</SUB>> ]
+"70014" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2243</SUB>> ]
+"70015" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2244</SUB>> ]
+"70016" [label = <(TIFFSwabArrayOfShort,TIFFSwabArrayOfShort(value, count))<SUB>2244</SUB>> ]
+"70017" [label = <(IDENTIFIER,value,TIFFSwabArrayOfShort(value, count))<SUB>2244</SUB>> ]
+"70018" [label = <(IDENTIFIER,count,TIFFSwabArrayOfShort(value, count))<SUB>2244</SUB>> ]
+"70019" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value));)<SUB>2245</SUB>> ]
+"70020" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70021" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70022" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70023" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70024" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70025" [label = <(IDENTIFIER,TIFF_SHORT,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70026" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2245</SUB>> ]
+"70027" [label = <(&lt;operator&gt;.multiplication,count * 2)<SUB>2246</SUB>> ]
+"70028" [label = <(IDENTIFIER,count,count * 2)<SUB>2246</SUB>> ]
+"70029" [label = <(LITERAL,2,count * 2)<SUB>2246</SUB>> ]
+"70030" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, count,\012                                      count * 2, value))<SUB>2246</SUB>> ]
+"70031" [label = <(METHOD_RETURN,int)<SUB>2236</SUB>> ]
+  "69992" -> "69993" 
+  "69992" -> "69994" 
+  "69992" -> "69995" 
+  "69992" -> "69996" 
+  "69992" -> "69997" 
+  "69992" -> "69998" 
+  "69992" -> "69999" 
+  "69992" -> "70031" 
+  "69999" -> "70000" 
+  "69999" -> "70004" 
+  "69999" -> "70009" 
+  "69999" -> "70019" 
+  "70000" -> "70001" 
+  "70001" -> "70002" 
+  "70001" -> "70003" 
+  "70004" -> "70005" 
+  "70005" -> "70006" 
+  "70005" -> "70008" 
+  "70006" -> "70007" 
+  "70009" -> "70010" 
+  "70009" -> "70015" 
+  "70010" -> "70011" 
+  "70010" -> "70014" 
+  "70011" -> "70012" 
+  "70011" -> "70013" 
+  "70015" -> "70016" 
+  "70016" -> "70017" 
+  "70016" -> "70018" 
+  "70019" -> "70020" 
+  "70020" -> "70021" 
+  "70020" -> "70022" 
+  "70020" -> "70023" 
+  "70020" -> "70024" 
+  "70020" -> "70025" 
+  "70020" -> "70026" 
+  "70020" -> "70027" 
+  "70020" -> "70030" 
+  "70027" -> "70028" 
+  "70027" -> "70029" 
+}

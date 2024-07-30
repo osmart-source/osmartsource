@@ -1,0 +1,18 @@
+digraph "timer_create" {  
+"7996" [label = <(METHOD,timer_create)<SUB>234</SUB>> ]
+"7997" [label = <(PARAM,clockid_t __clock_id)<SUB>234</SUB>> ]
+"7998" [label = <(PARAM,struct sigevent *__restrict __evp)<SUB>235</SUB>> ]
+"7999" [label = <(PARAM,timer_t *__restrict __timerid)<SUB>236</SUB>> ]
+"8000" [label = <(METHOD_RETURN,int)<SUB>234</SUB>> ]
+  "7996" -> "7997"  [ label = "AST: "] 
+  "7996" -> "7998"  [ label = "AST: "] 
+  "7996" -> "7999"  [ label = "AST: "] 
+  "7996" -> "8000"  [ label = "AST: "] 
+  "7996" -> "8000"  [ label = "CFG: "] 
+  "7997" -> "8000"  [ label = "DDG: __clock_id"] 
+  "7998" -> "8000"  [ label = "DDG: __evp"] 
+  "7999" -> "8000"  [ label = "DDG: __timerid"] 
+  "7996" -> "7997"  [ label = "DDG: "] 
+  "7996" -> "7998"  [ label = "DDG: "] 
+  "7996" -> "7999"  [ label = "DDG: "] 
+}

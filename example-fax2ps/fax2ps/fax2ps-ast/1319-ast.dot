@@ -1,0 +1,239 @@
+digraph "_TIFFGetStrileOffsetOrByteCountValue" {  
+"98332" [label = <(METHOD,_TIFFGetStrileOffsetOrByteCountValue)<SUB>7588</SUB>> ]
+"98333" [label = <(PARAM,TIFF *tif)<SUB>7588</SUB>> ]
+"98334" [label = <(PARAM,uint32_t strile)<SUB>7588</SUB>> ]
+"98335" [label = <(PARAM,TIFFDirEntry *dirent)<SUB>7589</SUB>> ]
+"98336" [label = <(PARAM,uint64_t **parray)<SUB>7590</SUB>> ]
+"98337" [label = <(PARAM,int *pbErr)<SUB>7591</SUB>> ]
+"98338" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7592</SUB>> ]
+"98339" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>7593</SUB>> ]
+"98340" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98341" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98342" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98343" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98344" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>7593</SUB>> ]
+"98345" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7593</SUB>> ]
+"98346" [label = <(CONTROL_STRUCTURE,if (pbErr &amp;&amp; 1),if (pbErr &amp;&amp; 1))<SUB>7594</SUB>> ]
+"98347" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7594</SUB>> ]
+"98348" [label = <(IDENTIFIER,pbErr,pbErr &amp;&amp; 1)<SUB>7594</SUB>> ]
+"98349" [label = <(LITERAL,1,pbErr &amp;&amp; 1)<SUB>7594</SUB>> ]
+"98350" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7595</SUB>> ]
+"98351" [label = <(&lt;operator&gt;.assignment,*pbErr = 0)<SUB>7595</SUB>> ]
+"98352" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7595</SUB>> ]
+"98353" [label = <(IDENTIFIER,pbErr,*pbErr = 0)<SUB>7595</SUB>> ]
+"98354" [label = <(LITERAL,0,*pbErr = 0)<SUB>7595</SUB>> ]
+"98355" [label = <(CONTROL_STRUCTURE,if ((tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)),if ((tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)))<SUB>7596</SUB>> ]
+"98356" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS))<SUB>7596</SUB>> ]
+"98357" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>7596</SUB>> ]
+"98358" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7596</SUB>> ]
+"98359" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>7596</SUB>> ]
+"98360" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7596</SUB>> ]
+"98361" [label = <(IDENTIFIER,TIFF_DEFERSTRILELOAD,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>7596</SUB>> ]
+"98362" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS))<SUB>7597</SUB>> ]
+"98363" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)<SUB>7597</SUB>> ]
+"98364" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7597</SUB>> ]
+"98365" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)<SUB>7597</SUB>> ]
+"98366" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7597</SUB>> ]
+"98367" [label = <(IDENTIFIER,TIFF_CHOPPEDUPARRAYS,tif-&gt;tif_flags &amp; TIFF_CHOPPEDUPARRAYS)<SUB>7597</SUB>> ]
+"98368" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7598</SUB>> ]
+"98369" [label = <(CONTROL_STRUCTURE,if (!(tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD) ||\012            /* If the values may fit in the toff_long/toff_long8 member */\012            /* then use _TIFFFillStriles to simplify _TIFFFetchStrileValue */\012            dirent-&gt;tdir_count &lt;= 4),if (!(tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD) ||\012            /* If the values may fit in the toff_long/toff_long8 member */\012            /* then use _TIFFFillStriles to simplify _TIFFFetchStrileValue */\012            dirent-&gt;tdir_count &lt;= 4))<SUB>7599</SUB>> ]
+"98370" [label = <(&lt;operator&gt;.logicalOr,!(tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD) ||\012            /* If the values may fit in the toff_long/toff_long8 member */\012            /* then use _TIFFFillStriles to simplify _TIFFFetchStrileValue */\012            dirent-&gt;tdir_count &lt;= 4)<SUB>7599</SUB>> ]
+"98371" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD))<SUB>7599</SUB>> ]
+"98372" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD)<SUB>7599</SUB>> ]
+"98373" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7599</SUB>> ]
+"98374" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD)<SUB>7599</SUB>> ]
+"98375" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7599</SUB>> ]
+"98376" [label = <(IDENTIFIER,TIFF_LAZYSTRILELOAD,tif-&gt;tif_flags &amp; TIFF_LAZYSTRILELOAD)<SUB>7599</SUB>> ]
+"98377" [label = <(&lt;operator&gt;.lessEqualsThan,dirent-&gt;tdir_count &lt;= 4)<SUB>7602</SUB>> ]
+"98378" [label = <(&lt;operator&gt;.indirectFieldAccess,dirent-&gt;tdir_count)<SUB>7602</SUB>> ]
+"98379" [label = <(IDENTIFIER,dirent,dirent-&gt;tdir_count &lt;= 4)<SUB>7602</SUB>> ]
+"98380" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>7602</SUB>> ]
+"98381" [label = <(LITERAL,4,dirent-&gt;tdir_count &lt;= 4)<SUB>7602</SUB>> ]
+"98382" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7603</SUB>> ]
+"98383" [label = <(CONTROL_STRUCTURE,if (!_TIFFFillStriles(tif)),if (!_TIFFFillStriles(tif)))<SUB>7604</SUB>> ]
+"98384" [label = <(&lt;operator&gt;.logicalNot,!_TIFFFillStriles(tif))<SUB>7604</SUB>> ]
+"98385" [label = <(_TIFFFillStriles,_TIFFFillStriles(tif))<SUB>7604</SUB>> ]
+"98386" [label = <(IDENTIFIER,tif,_TIFFFillStriles(tif))<SUB>7604</SUB>> ]
+"98387" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7605</SUB>> ]
+"98388" [label = <(CONTROL_STRUCTURE,if (pbErr &amp;&amp; 1),if (pbErr &amp;&amp; 1))<SUB>7606</SUB>> ]
+"98389" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7606</SUB>> ]
+"98390" [label = <(IDENTIFIER,pbErr,pbErr &amp;&amp; 1)<SUB>7606</SUB>> ]
+"98391" [label = <(LITERAL,1,pbErr &amp;&amp; 1)<SUB>7606</SUB>> ]
+"98392" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7607</SUB>> ]
+"98393" [label = <(&lt;operator&gt;.assignment,*pbErr = 1)<SUB>7607</SUB>> ]
+"98394" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7607</SUB>> ]
+"98395" [label = <(IDENTIFIER,pbErr,*pbErr = 1)<SUB>7607</SUB>> ]
+"98396" [label = <(LITERAL,1,*pbErr = 1)<SUB>7607</SUB>> ]
+"98397" [label = <(CONTROL_STRUCTURE,else,else)<SUB>7614</SUB>> ]
+"98398" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7614</SUB>> ]
+"98399" [label = <(CONTROL_STRUCTURE,if (!_TIFFFetchStrileValue(tif, strile, dirent, parray)),if (!_TIFFFetchStrileValue(tif, strile, dirent, parray)))<SUB>7615</SUB>> ]
+"98400" [label = <(&lt;operator&gt;.logicalNot,!_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98401" [label = <(_TIFFFetchStrileValue,_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98402" [label = <(IDENTIFIER,tif,_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98403" [label = <(IDENTIFIER,strile,_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98404" [label = <(IDENTIFIER,dirent,_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98405" [label = <(IDENTIFIER,parray,_TIFFFetchStrileValue(tif, strile, dirent, parray))<SUB>7615</SUB>> ]
+"98406" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7616</SUB>> ]
+"98407" [label = <(CONTROL_STRUCTURE,if (pbErr &amp;&amp; 1),if (pbErr &amp;&amp; 1))<SUB>7617</SUB>> ]
+"98408" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7617</SUB>> ]
+"98409" [label = <(IDENTIFIER,pbErr,pbErr &amp;&amp; 1)<SUB>7617</SUB>> ]
+"98410" [label = <(LITERAL,1,pbErr &amp;&amp; 1)<SUB>7617</SUB>> ]
+"98411" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7618</SUB>> ]
+"98412" [label = <(&lt;operator&gt;.assignment,*pbErr = 1)<SUB>7618</SUB>> ]
+"98413" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7618</SUB>> ]
+"98414" [label = <(IDENTIFIER,pbErr,*pbErr = 1)<SUB>7618</SUB>> ]
+"98415" [label = <(LITERAL,1,*pbErr = 1)<SUB>7618</SUB>> ]
+"98416" [label = <(RETURN,return 0;,return 0;)<SUB>7619</SUB>> ]
+"98417" [label = <(LITERAL,0,return 0;)<SUB>7619</SUB>> ]
+"98418" [label = <(CONTROL_STRUCTURE,if (*parray == NULL || strile &gt;= td-&gt;td_nstrips),if (*parray == NULL || strile &gt;= td-&gt;td_nstrips))<SUB>7623</SUB>> ]
+"98419" [label = <(&lt;operator&gt;.logicalOr,*parray == NULL || strile &gt;= td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98420" [label = <(&lt;operator&gt;.equals,*parray == NULL)<SUB>7623</SUB>> ]
+"98421" [label = <(&lt;operator&gt;.indirection,*parray)<SUB>7623</SUB>> ]
+"98422" [label = <(IDENTIFIER,parray,*parray == NULL)<SUB>7623</SUB>> ]
+"98423" [label = <(NULL,NULL)<SUB>7623</SUB>> ]
+"98424" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"98425" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7623</SUB>> ]
+"98426" [label = <(UNKNOWN,void *,void *)<SUB>7623</SUB>> ]
+"98427" [label = <(LITERAL,0,(void *)0)<SUB>7623</SUB>> ]
+"98428" [label = <(&lt;operator&gt;.greaterEqualsThan,strile &gt;= td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98429" [label = <(IDENTIFIER,strile,strile &gt;= td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98430" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98431" [label = <(IDENTIFIER,td,strile &gt;= td-&gt;td_nstrips)<SUB>7623</SUB>> ]
+"98432" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7623</SUB>> ]
+"98433" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7624</SUB>> ]
+"98434" [label = <(CONTROL_STRUCTURE,if (pbErr &amp;&amp; 1),if (pbErr &amp;&amp; 1))<SUB>7625</SUB>> ]
+"98435" [label = <(&lt;operator&gt;.logicalAnd,pbErr &amp;&amp; 1)<SUB>7625</SUB>> ]
+"98436" [label = <(IDENTIFIER,pbErr,pbErr &amp;&amp; 1)<SUB>7625</SUB>> ]
+"98437" [label = <(LITERAL,1,pbErr &amp;&amp; 1)<SUB>7625</SUB>> ]
+"98438" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7626</SUB>> ]
+"98439" [label = <(&lt;operator&gt;.assignment,*pbErr = 1)<SUB>7626</SUB>> ]
+"98440" [label = <(&lt;operator&gt;.indirection,*pbErr)<SUB>7626</SUB>> ]
+"98441" [label = <(IDENTIFIER,pbErr,*pbErr = 1)<SUB>7626</SUB>> ]
+"98442" [label = <(LITERAL,1,*pbErr = 1)<SUB>7626</SUB>> ]
+"98443" [label = <(RETURN,return 0;,return 0;)<SUB>7627</SUB>> ]
+"98444" [label = <(LITERAL,0,return 0;)<SUB>7627</SUB>> ]
+"98445" [label = <(RETURN,return (*parray)[strile];,return (*parray)[strile];)<SUB>7629</SUB>> ]
+"98446" [label = <(&lt;operator&gt;.indirectIndexAccess,(*parray)[strile])<SUB>7629</SUB>> ]
+"98447" [label = <(&lt;operator&gt;.indirection,*parray)<SUB>7629</SUB>> ]
+"98448" [label = <(IDENTIFIER,parray,return (*parray)[strile];)<SUB>7629</SUB>> ]
+"98449" [label = <(IDENTIFIER,strile,return (*parray)[strile];)<SUB>7629</SUB>> ]
+"98450" [label = <(METHOD_RETURN,uint64_t)<SUB>7588</SUB>> ]
+  "98332" -> "98333" 
+  "98332" -> "98334" 
+  "98332" -> "98335" 
+  "98332" -> "98336" 
+  "98332" -> "98337" 
+  "98332" -> "98338" 
+  "98332" -> "98450" 
+  "98338" -> "98339" 
+  "98338" -> "98340" 
+  "98338" -> "98346" 
+  "98338" -> "98355" 
+  "98338" -> "98418" 
+  "98338" -> "98445" 
+  "98340" -> "98341" 
+  "98340" -> "98342" 
+  "98342" -> "98343" 
+  "98343" -> "98344" 
+  "98343" -> "98345" 
+  "98346" -> "98347" 
+  "98346" -> "98350" 
+  "98347" -> "98348" 
+  "98347" -> "98349" 
+  "98350" -> "98351" 
+  "98351" -> "98352" 
+  "98351" -> "98354" 
+  "98352" -> "98353" 
+  "98355" -> "98356" 
+  "98355" -> "98368" 
+  "98356" -> "98357" 
+  "98356" -> "98362" 
+  "98357" -> "98358" 
+  "98357" -> "98361" 
+  "98358" -> "98359" 
+  "98358" -> "98360" 
+  "98362" -> "98363" 
+  "98363" -> "98364" 
+  "98363" -> "98367" 
+  "98364" -> "98365" 
+  "98364" -> "98366" 
+  "98368" -> "98369" 
+  "98369" -> "98370" 
+  "98369" -> "98382" 
+  "98369" -> "98397" 
+  "98370" -> "98371" 
+  "98370" -> "98377" 
+  "98371" -> "98372" 
+  "98372" -> "98373" 
+  "98372" -> "98376" 
+  "98373" -> "98374" 
+  "98373" -> "98375" 
+  "98377" -> "98378" 
+  "98377" -> "98381" 
+  "98378" -> "98379" 
+  "98378" -> "98380" 
+  "98382" -> "98383" 
+  "98383" -> "98384" 
+  "98383" -> "98387" 
+  "98384" -> "98385" 
+  "98385" -> "98386" 
+  "98387" -> "98388" 
+  "98388" -> "98389" 
+  "98388" -> "98392" 
+  "98389" -> "98390" 
+  "98389" -> "98391" 
+  "98392" -> "98393" 
+  "98393" -> "98394" 
+  "98393" -> "98396" 
+  "98394" -> "98395" 
+  "98397" -> "98398" 
+  "98398" -> "98399" 
+  "98399" -> "98400" 
+  "98399" -> "98406" 
+  "98400" -> "98401" 
+  "98401" -> "98402" 
+  "98401" -> "98403" 
+  "98401" -> "98404" 
+  "98401" -> "98405" 
+  "98406" -> "98407" 
+  "98406" -> "98416" 
+  "98407" -> "98408" 
+  "98407" -> "98411" 
+  "98408" -> "98409" 
+  "98408" -> "98410" 
+  "98411" -> "98412" 
+  "98412" -> "98413" 
+  "98412" -> "98415" 
+  "98413" -> "98414" 
+  "98416" -> "98417" 
+  "98418" -> "98419" 
+  "98418" -> "98433" 
+  "98419" -> "98420" 
+  "98419" -> "98428" 
+  "98420" -> "98421" 
+  "98420" -> "98423" 
+  "98421" -> "98422" 
+  "98423" -> "98424" 
+  "98424" -> "98425" 
+  "98425" -> "98426" 
+  "98425" -> "98427" 
+  "98428" -> "98429" 
+  "98428" -> "98430" 
+  "98430" -> "98431" 
+  "98430" -> "98432" 
+  "98433" -> "98434" 
+  "98433" -> "98443" 
+  "98434" -> "98435" 
+  "98434" -> "98438" 
+  "98435" -> "98436" 
+  "98435" -> "98437" 
+  "98438" -> "98439" 
+  "98439" -> "98440" 
+  "98439" -> "98442" 
+  "98440" -> "98441" 
+  "98443" -> "98444" 
+  "98445" -> "98446" 
+  "98446" -> "98447" 
+  "98446" -> "98449" 
+  "98447" -> "98448" 
+}

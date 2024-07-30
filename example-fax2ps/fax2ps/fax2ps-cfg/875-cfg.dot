@@ -1,0 +1,40 @@
+digraph "TIFFVGetField" {  
+"43182" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43188" [label = <(RETURN,return (fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0);,return (fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0);)<SUB>1602</SUB>> ]
+"43184" [label = <(TIFFFindField,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1601</SUB>> ]
+"43189" [label = <(&lt;operator&gt;.conditional,fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))\012                ? (*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap)\012                : 0)<SUB>1602</SUB>> ]
+"43190" [label = <(&lt;operator&gt;.logicalAnd,fip &amp;&amp; (isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit)))<SUB>1602</SUB>> ]
+"43200" [label = <(*tif-&gt;tif_tagmethods.vgetfield,(*tif-&gt;tif_tagmethods.vgetfield)(tif, tag, ap))<SUB>1603</SUB>> ]
+"43192" [label = <(&lt;operator&gt;.logicalOr,isPseudoTag(tag) || TIFFFieldSet(tif, fip-&gt;field_bit))<SUB>1602</SUB>> ]
+"43201" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_tagmethods.vgetfield)<SUB>1603</SUB>> ]
+"43193" [label = <(isPseudoTag,isPseudoTag(tag))<SUB>1602</SUB>> ]
+"43195" [label = <(TIFFFieldSet,TIFFFieldSet(tif, fip-&gt;field_bit))<SUB>1602</SUB>> ]
+"43202" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_tagmethods.vgetfield)<SUB>1603</SUB>> ]
+"43197" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1602</SUB>> ]
+"43203" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_tagmethods)<SUB>1603</SUB>> ]
+"43206" [label = <(FIELD_IDENTIFIER,vgetfield,vgetfield)<SUB>1603</SUB>> ]
+"43199" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1602</SUB>> ]
+"43205" [label = <(FIELD_IDENTIFIER,tif_tagmethods,tif_tagmethods)<SUB>1603</SUB>> ]
+"43176" [label = <(METHOD,TIFFVGetField)<SUB>1599</SUB>> ]
+"43211" [label = <(METHOD_RETURN,int)<SUB>1599</SUB>> ]
+  "43182" -> "43190" 
+  "43182" -> "43193" 
+  "43188" -> "43211" 
+  "43184" -> "43182" 
+  "43189" -> "43188" 
+  "43190" -> "43205" 
+  "43190" -> "43189" 
+  "43200" -> "43189" 
+  "43192" -> "43190" 
+  "43201" -> "43200" 
+  "43193" -> "43192" 
+  "43193" -> "43199" 
+  "43195" -> "43192" 
+  "43202" -> "43201" 
+  "43197" -> "43195" 
+  "43203" -> "43206" 
+  "43206" -> "43202" 
+  "43199" -> "43197" 
+  "43205" -> "43203" 
+  "43176" -> "43184" 
+}

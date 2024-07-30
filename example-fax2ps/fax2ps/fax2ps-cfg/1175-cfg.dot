@@ -1,0 +1,206 @@
+digraph "TIFFStartTile" {  
+"77363" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFStartTile&quot;)<SUB>1441</SUB>> ]
+"77367" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1442</SUB>> ]
+"77399" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curtile = tile)<SUB>1451</SUB>> ]
+"77404" [label = <(&lt;operator&gt;.assignment,howmany32 = TIFFhowmany_32(td-&gt;td_imagewidth, td-&gt;td_tilewidth))<SUB>1452</SUB>> ]
+"77424" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = (tile % howmany32) * td-&gt;td_tilelength)<SUB>1458</SUB>> ]
+"77435" [label = <(&lt;operator&gt;.assignment,howmany32 = TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_tilelength))<SUB>1459</SUB>> ]
+"77455" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_col = (tile % howmany32) * td-&gt;td_tilewidth)<SUB>1465</SUB>> ]
+"77466" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_BUF4WRITE)<SUB>1466</SUB>> ]
+"77527" [label = <(RETURN,return (\012        (*tif-&gt;tif_predecode)(tif, (uint16_t)(tile / td-&gt;td_stripsperimage)));,return (\012        (*tif-&gt;tif_predecode)(tif, (uint16_t)(tile / td-&gt;td_stripsperimage)));)<SUB>1480</SUB>> ]
+"77369" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1442</SUB>> ]
+"77375" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_CODERSETUP) == 0)<SUB>1445</SUB>> ]
+"77400" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curtile)<SUB>1451</SUB>> ]
+"77406" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagewidth, td-&gt;td_tilewidth))<SUB>1452</SUB>> ]
+"77414" [label = <(&lt;operator&gt;.equals,howmany32 == 0)<SUB>1453</SUB>> ]
+"77425" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>1458</SUB>> ]
+"77428" [label = <(&lt;operator&gt;.multiplication,(tile % howmany32) * td-&gt;td_tilelength)<SUB>1458</SUB>> ]
+"77437" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_tilelength))<SUB>1459</SUB>> ]
+"77445" [label = <(&lt;operator&gt;.equals,howmany32 == 0)<SUB>1460</SUB>> ]
+"77456" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_col)<SUB>1465</SUB>> ]
+"77459" [label = <(&lt;operator&gt;.multiplication,(tile % howmany32) * td-&gt;td_tilewidth)<SUB>1465</SUB>> ]
+"77467" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1466</SUB>> ]
+"77470" [label = <(&lt;operator&gt;.not,~TIFF_BUF4WRITE)<SUB>1466</SUB>> ]
+"77473" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1467</SUB>> ]
+"77528" [label = <(*tif-&gt;tif_predecode,(*tif-&gt;tif_predecode)(tif, (uint16_t)(tile / td-&gt;td_stripsperimage)))<SUB>1481</SUB>> ]
+"77370" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1442</SUB>> ]
+"77376" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_CODERSETUP)<SUB>1445</SUB>> ]
+"77394" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_CODERSETUP)<SUB>1449</SUB>> ]
+"77402" [label = <(FIELD_IDENTIFIER,tif_curtile,tif_curtile)<SUB>1451</SUB>> ]
+"77407" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>1452</SUB>> ]
+"77410" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilewidth)<SUB>1452</SUB>> ]
+"77418" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Zero tiles&quot;))<SUB>1455</SUB>> ]
+"77422" [label = <(RETURN,return 0;,return 0;)<SUB>1456</SUB>> ]
+"77427" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>1458</SUB>> ]
+"77429" [label = <(&lt;operator&gt;.modulo,tile % howmany32)<SUB>1458</SUB>> ]
+"77432" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilelength)<SUB>1458</SUB>> ]
+"77438" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>1459</SUB>> ]
+"77441" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilelength)<SUB>1459</SUB>> ]
+"77449" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Zero tiles&quot;))<SUB>1462</SUB>> ]
+"77453" [label = <(RETURN,return 0;,return 0;)<SUB>1463</SUB>> ]
+"77458" [label = <(FIELD_IDENTIFIER,tif_col,tif_col)<SUB>1465</SUB>> ]
+"77460" [label = <(&lt;operator&gt;.modulo,tile % howmany32)<SUB>1465</SUB>> ]
+"77463" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilewidth)<SUB>1465</SUB>> ]
+"77469" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1466</SUB>> ]
+"77474" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1467</SUB>> ]
+"77479" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcp = NULL)<SUB>1469</SUB>> ]
+"77488" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = 0)<SUB>1470</SUB>> ]
+"77529" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_predecode)<SUB>1481</SUB>> ]
+"77534" [label = <(uint16_t,(uint16_t)(tile / td-&gt;td_stripsperimage))<SUB>1481</SUB>> ]
+"77372" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1442</SUB>> ]
+"77377" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1445</SUB>> ]
+"77384" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_setupdecode)(tif))<SUB>1447</SUB>> ]
+"77395" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1449</SUB>> ]
+"77409" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>1452</SUB>> ]
+"77412" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>1452</SUB>> ]
+"77434" [label = <(FIELD_IDENTIFIER,td_tilelength,td_tilelength)<SUB>1458</SUB>> ]
+"77440" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>1459</SUB>> ]
+"77443" [label = <(FIELD_IDENTIFIER,td_tilelength,td_tilelength)<SUB>1459</SUB>> ]
+"77465" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>1465</SUB>> ]
+"77476" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1467</SUB>> ]
+"77480" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>1469</SUB>> ]
+"77483" [label = <(NULL,NULL)<SUB>1469</SUB>> ]
+"77489" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>1470</SUB>> ]
+"77495" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>1474</SUB>> ]
+"77530" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_predecode)<SUB>1481</SUB>> ]
+"77535" [label = <(&lt;operator&gt;.division,tile / td-&gt;td_stripsperimage)<SUB>1481</SUB>> ]
+"77379" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1445</SUB>> ]
+"77385" [label = <(*tif-&gt;tif_setupdecode,(*tif-&gt;tif_setupdecode)(tif))<SUB>1447</SUB>> ]
+"77392" [label = <(RETURN,return (0);,return (0);)<SUB>1448</SUB>> ]
+"77397" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1449</SUB>> ]
+"77482" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>1469</SUB>> ]
+"77491" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>1470</SUB>> ]
+"77496" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>1474</SUB>> ]
+"77499" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>1474</SUB>> ]
+"77503" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_rawdataloaded &gt; 0)<SUB>1475</SUB>> ]
+"77532" [label = <(FIELD_IDENTIFIER,tif_predecode,tif_predecode)<SUB>1481</SUB>> ]
+"77537" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>1481</SUB>> ]
+"77386" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_setupdecode)<SUB>1447</SUB>> ]
+"77485" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1469</SUB>> ]
+"77498" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>1474</SUB>> ]
+"77501" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>1474</SUB>> ]
+"77504" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataloaded)<SUB>1475</SUB>> ]
+"77509" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = tif-&gt;tif_rawdataloaded)<SUB>1476</SUB>> ]
+"77539" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>1481</SUB>> ]
+"77387" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_setupdecode)<SUB>1447</SUB>> ]
+"77486" [label = <(UNKNOWN,void *,void *)<SUB>1469</SUB>> ]
+"77506" [label = <(FIELD_IDENTIFIER,tif_rawdataloaded,tif_rawdataloaded)<SUB>1475</SUB>> ]
+"77510" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>1476</SUB>> ]
+"77513" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdataloaded)<SUB>1476</SUB>> ]
+"77518" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = (tmsize_t)TIFFGetStrileByteCount(tif, tile))<SUB>1478</SUB>> ]
+"77389" [label = <(FIELD_IDENTIFIER,tif_setupdecode,tif_setupdecode)<SUB>1447</SUB>> ]
+"77512" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>1476</SUB>> ]
+"77515" [label = <(FIELD_IDENTIFIER,tif_rawdataloaded,tif_rawdataloaded)<SUB>1476</SUB>> ]
+"77519" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>1478</SUB>> ]
+"77522" [label = <(&lt;operator&gt;.cast,(tmsize_t)TIFFGetStrileByteCount(tif, tile))<SUB>1478</SUB>> ]
+"77521" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>1478</SUB>> ]
+"77523" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1478</SUB>> ]
+"77524" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, tile))<SUB>1478</SUB>> ]
+"77358" [label = <(METHOD,TIFFStartTile)<SUB>1439</SUB>> ]
+"77540" [label = <(METHOD_RETURN,int)<SUB>1439</SUB>> ]
+  "77363" -> "77372" 
+  "77367" -> "77379" 
+  "77399" -> "77409" 
+  "77404" -> "77414" 
+  "77424" -> "77440" 
+  "77435" -> "77445" 
+  "77455" -> "77469" 
+  "77466" -> "77476" 
+  "77527" -> "77540" 
+  "77369" -> "77367" 
+  "77375" -> "77389" 
+  "77375" -> "77402" 
+  "77400" -> "77399" 
+  "77406" -> "77404" 
+  "77414" -> "77418" 
+  "77414" -> "77427" 
+  "77425" -> "77429" 
+  "77428" -> "77424" 
+  "77437" -> "77435" 
+  "77445" -> "77449" 
+  "77445" -> "77458" 
+  "77456" -> "77460" 
+  "77459" -> "77455" 
+  "77467" -> "77470" 
+  "77470" -> "77466" 
+  "77473" -> "77482" 
+  "77473" -> "77498" 
+  "77528" -> "77527" 
+  "77370" -> "77369" 
+  "77376" -> "77375" 
+  "77394" -> "77402" 
+  "77402" -> "77400" 
+  "77407" -> "77412" 
+  "77410" -> "77406" 
+  "77418" -> "77422" 
+  "77422" -> "77540" 
+  "77427" -> "77425" 
+  "77429" -> "77434" 
+  "77432" -> "77428" 
+  "77438" -> "77443" 
+  "77441" -> "77437" 
+  "77449" -> "77453" 
+  "77453" -> "77540" 
+  "77458" -> "77456" 
+  "77460" -> "77465" 
+  "77463" -> "77459" 
+  "77469" -> "77467" 
+  "77474" -> "77473" 
+  "77479" -> "77491" 
+  "77488" -> "77532" 
+  "77529" -> "77539" 
+  "77534" -> "77528" 
+  "77372" -> "77370" 
+  "77377" -> "77376" 
+  "77384" -> "77392" 
+  "77384" -> "77397" 
+  "77395" -> "77394" 
+  "77409" -> "77407" 
+  "77412" -> "77410" 
+  "77434" -> "77432" 
+  "77440" -> "77438" 
+  "77443" -> "77441" 
+  "77465" -> "77463" 
+  "77476" -> "77474" 
+  "77480" -> "77483" 
+  "77483" -> "77486" 
+  "77483" -> "77479" 
+  "77489" -> "77488" 
+  "77495" -> "77506" 
+  "77530" -> "77529" 
+  "77535" -> "77534" 
+  "77379" -> "77377" 
+  "77385" -> "77384" 
+  "77392" -> "77540" 
+  "77397" -> "77395" 
+  "77482" -> "77480" 
+  "77491" -> "77489" 
+  "77496" -> "77501" 
+  "77499" -> "77495" 
+  "77503" -> "77512" 
+  "77503" -> "77521" 
+  "77532" -> "77530" 
+  "77537" -> "77535" 
+  "77386" -> "77385" 
+  "77485" -> "77479" 
+  "77498" -> "77496" 
+  "77501" -> "77499" 
+  "77504" -> "77503" 
+  "77509" -> "77532" 
+  "77539" -> "77537" 
+  "77387" -> "77386" 
+  "77486" -> "77485" 
+  "77506" -> "77504" 
+  "77510" -> "77515" 
+  "77513" -> "77509" 
+  "77518" -> "77532" 
+  "77389" -> "77387" 
+  "77512" -> "77510" 
+  "77515" -> "77513" 
+  "77519" -> "77523" 
+  "77522" -> "77518" 
+  "77521" -> "77519" 
+  "77523" -> "77524" 
+  "77524" -> "77522" 
+  "77358" -> "77363" 
+}

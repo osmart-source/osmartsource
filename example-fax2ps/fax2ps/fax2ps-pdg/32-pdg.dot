@@ -1,0 +1,15 @@
+digraph "TIFFIsBigEndian" {  
+"1604" [label = <(METHOD,TIFFIsBigEndian)<SUB>755</SUB>> ]
+"1617" [label = <(METHOD_RETURN,int)<SUB>755</SUB>> ]
+"1605" [label = <(PARAM,TIFF *tif)<SUB>755</SUB>> ]
+"1607" [label = <(RETURN,return (tif-&gt;tif_header.common.tiff_magic == TIFF_BIGENDIAN);,return (tif-&gt;tif_header.common.tiff_magic == TIFF_BIGENDIAN);)<SUB>757</SUB>> ]
+"1608" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_header.common.tiff_magic == TIFF_BIGENDIAN)<SUB>757</SUB>> ]
+  "1607" -> "1617"  [ label = "DDG: &lt;RET&gt;"] 
+  "1605" -> "1617"  [ label = "DDG: tif"] 
+  "1608" -> "1617"  [ label = "DDG: tif-&gt;tif_header.common.tiff_magic"] 
+  "1608" -> "1617"  [ label = "DDG: tif-&gt;tif_header.common.tiff_magic == TIFF_BIGENDIAN"] 
+  "1608" -> "1617"  [ label = "DDG: TIFF_BIGENDIAN"] 
+  "1604" -> "1605"  [ label = "DDG: "] 
+  "1608" -> "1607"  [ label = "DDG: tif-&gt;tif_header.common.tiff_magic == TIFF_BIGENDIAN"] 
+  "1604" -> "1608"  [ label = "DDG: "] 
+}

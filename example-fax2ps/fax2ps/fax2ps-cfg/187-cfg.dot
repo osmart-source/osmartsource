@@ -1,0 +1,291 @@
+digraph "TIFFForceStrileArrayWriting" {  
+"5954" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFForceStrileArrayWriting&quot;)<SUB>78</SUB>> ]
+"5958" [label = <(&lt;operator&gt;.assignment,isTiled = TIFFIsTiled(tif))<SUB>79</SUB>> ]
+"6171" [label = <(RETURN,return 0;,return 0;)<SUB>134</SUB>> ]
+"5960" [label = <(TIFFIsTiled,TIFFIsTiled(tif))<SUB>79</SUB>> ]
+"5963" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDONLY)<SUB>81</SUB>> ]
+"5978" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_diroff == 0)<SUB>86</SUB>> ]
+"5991" [label = <(&lt;operator&gt;.notEquals,(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT) != 0)<SUB>91</SUB>> ]
+"6006" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP))<SUB>99</SUB>> ]
+"6121" [label = <(&lt;operator&gt;.logicalAnd,_TIFFRewriteField(tif,\012                          isTiled ? TIFFTAG_TILEOFFSETS : TIFFTAG_STRIPOFFSETS,\012                          TIFF_LONG8, tif-&gt;tif_dir.td_nstrips,\012                          tif-&gt;tif_dir.td_stripoffset_p) &amp;&amp;\012        _TIFFRewriteField(\012            tif, isTiled ? TIFFTAG_TILEBYTECOUNTS : TIFFTAG_STRIPBYTECOUNTS,\012            TIFF_LONG8, tif-&gt;tif_dir.td_nstrips,\012            tif-&gt;tif_dir.td_stripbytecount_p))<SUB>120</SUB>> ]
+"5964" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>81</SUB>> ]
+"5969" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, tif-&gt;tif_name, &quot;File opened in read-only mode&quot;))<SUB>83</SUB>> ]
+"5975" [label = <(RETURN,return 0;,return 0;)<SUB>84</SUB>> ]
+"5979" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>86</SUB>> ]
+"5984" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Directory has not yet been written&quot;))<SUB>88</SUB>> ]
+"5988" [label = <(RETURN,return 0;,return 0;)<SUB>89</SUB>> ]
+"5992" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT)<SUB>91</SUB>> ]
+"5999" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Directory has changes other than the strile arrays. &quot;\012                      &quot;TIFFRewriteDirectory() should be called instead&quot;))<SUB>93</SUB>> ]
+"6003" [label = <(RETURN,return 0;,return 0;)<SUB>96</SUB>> ]
+"6007" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP)<SUB>99</SUB>> ]
+"6122" [label = <(_TIFFRewriteField,_TIFFRewriteField(tif,\012                          isTiled ? TIFFTAG_TILEOFFSETS : TIFFTAG_STRIPOFFSETS,\012                          TIFF_LONG8, tif-&gt;tif_dir.td_nstrips,\012                          tif-&gt;tif_dir.td_stripoffset_p))<SUB>120</SUB>> ]
+"6139" [label = <(_TIFFRewriteField,_TIFFRewriteField(\012            tif, isTiled ? TIFFTAG_TILEBYTECOUNTS : TIFFTAG_STRIPBYTECOUNTS,\012            TIFF_LONG8, tif-&gt;tif_dir.td_nstrips,\012            tif-&gt;tif_dir.td_stripbytecount_p))<SUB>124</SUB>> ]
+"6157" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_DIRTYSTRIP)<SUB>129</SUB>> ]
+"6163" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_BEENWRITING)<SUB>130</SUB>> ]
+"6169" [label = <(RETURN,return 1;,return 1;)<SUB>131</SUB>> ]
+"5966" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>81</SUB>> ]
+"5971" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>83</SUB>> ]
+"5981" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>86</SUB>> ]
+"5993" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>91</SUB>> ]
+"6008" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>99</SUB>> ]
+"6014" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8 == 0))<SUB>101</SUB>> ]
+"6106" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_p == NULL &amp;&amp; !TIFFSetupStrips(tif))<SUB>116</SUB>> ]
+"6124" [label = <(&lt;operator&gt;.conditional,isTiled ? TIFFTAG_TILEOFFSETS : TIFFTAG_STRIPOFFSETS)<SUB>121</SUB>> ]
+"6129" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>122</SUB>> ]
+"6134" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_p)<SUB>123</SUB>> ]
+"6141" [label = <(&lt;operator&gt;.conditional,isTiled ? TIFFTAG_TILEBYTECOUNTS : TIFFTAG_STRIPBYTECOUNTS)<SUB>125</SUB>> ]
+"6146" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>126</SUB>> ]
+"6151" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_p)<SUB>127</SUB>> ]
+"6158" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>129</SUB>> ]
+"6161" [label = <(&lt;operator&gt;.not,~TIFF_DIRTYSTRIP)<SUB>129</SUB>> ]
+"6164" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>130</SUB>> ]
+"6167" [label = <(&lt;operator&gt;.not,~TIFF_BEENWRITING)<SUB>130</SUB>> ]
+"5973" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>83</SUB>> ]
+"5995" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>91</SUB>> ]
+"6010" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>99</SUB>> ]
+"6015" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8 == 0)<SUB>101</SUB>> ]
+"6099" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                          &quot;Function not called together with &quot;\012                          &quot;TIFFDeferStrileArrayWriting()&quot;))<SUB>110</SUB>> ]
+"6103" [label = <(RETURN,return 0;,return 0;)<SUB>113</SUB>> ]
+"6107" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_p == NULL)<SUB>116</SUB>> ]
+"6114" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetupStrips(tif))<SUB>116</SUB>> ]
+"6118" [label = <(RETURN,return 0;,return 0;)<SUB>117</SUB>> ]
+"6130" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>122</SUB>> ]
+"6133" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>122</SUB>> ]
+"6135" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>123</SUB>> ]
+"6138" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>123</SUB>> ]
+"6147" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>126</SUB>> ]
+"6150" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>126</SUB>> ]
+"6152" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>127</SUB>> ]
+"6155" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>127</SUB>> ]
+"6160" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>129</SUB>> ]
+"6166" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>130</SUB>> ]
+"6016" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0)<SUB>101</SUB>> ]
+"6087" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8 == 0)<SUB>108</SUB>> ]
+"6108" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_p)<SUB>116</SUB>> ]
+"6115" [label = <(TIFFSetupStrips,TIFFSetupStrips(tif))<SUB>116</SUB>> ]
+"6132" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>122</SUB>> ]
+"6137" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>123</SUB>> ]
+"6149" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>126</SUB>> ]
+"6154" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>127</SUB>> ]
+"6017" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0)<SUB>101</SUB>> ]
+"6078" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0)<SUB>107</SUB>> ]
+"6088" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8)<SUB>108</SUB>> ]
+"6109" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>116</SUB>> ]
+"6112" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>116</SUB>> ]
+"6018" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0)<SUB>101</SUB>> ]
+"6069" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0)<SUB>106</SUB>> ]
+"6079" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type)<SUB>107</SUB>> ]
+"6089" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset)<SUB>108</SUB>> ]
+"6096" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>108</SUB>> ]
+"6111" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>116</SUB>> ]
+"6019" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0)<SUB>101</SUB>> ]
+"6060" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0)<SUB>105</SUB>> ]
+"6070" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count)<SUB>106</SUB>> ]
+"6080" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>107</SUB>> ]
+"6085" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>107</SUB>> ]
+"6090" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>108</SUB>> ]
+"6095" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>108</SUB>> ]
+"6020" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0)<SUB>101</SUB>> ]
+"6049" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0)<SUB>104</SUB>> ]
+"6061" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag)<SUB>105</SUB>> ]
+"6071" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>106</SUB>> ]
+"6076" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>106</SUB>> ]
+"6081" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>107</SUB>> ]
+"6084" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>107</SUB>> ]
+"6091" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>108</SUB>> ]
+"6094" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>108</SUB>> ]
+"6021" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012              tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0)<SUB>101</SUB>> ]
+"6040" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0)<SUB>103</SUB>> ]
+"6050" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8)<SUB>104</SUB>> ]
+"6062" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>105</SUB>> ]
+"6067" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>105</SUB>> ]
+"6072" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>106</SUB>> ]
+"6075" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>106</SUB>> ]
+"6083" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>107</SUB>> ]
+"6093" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>108</SUB>> ]
+"6022" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0)<SUB>101</SUB>> ]
+"6031" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0)<SUB>102</SUB>> ]
+"6041" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_type)<SUB>103</SUB>> ]
+"6051" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset)<SUB>104</SUB>> ]
+"6058" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>104</SUB>> ]
+"6063" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>105</SUB>> ]
+"6066" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>105</SUB>> ]
+"6074" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>106</SUB>> ]
+"6023" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag)<SUB>101</SUB>> ]
+"6032" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_count)<SUB>102</SUB>> ]
+"6042" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>103</SUB>> ]
+"6047" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>103</SUB>> ]
+"6052" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>104</SUB>> ]
+"6057" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>104</SUB>> ]
+"6065" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>105</SUB>> ]
+"6024" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>101</SUB>> ]
+"6029" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>101</SUB>> ]
+"6033" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>102</SUB>> ]
+"6038" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>102</SUB>> ]
+"6043" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>103</SUB>> ]
+"6046" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>103</SUB>> ]
+"6053" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>104</SUB>> ]
+"6056" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>104</SUB>> ]
+"6025" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>101</SUB>> ]
+"6028" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>101</SUB>> ]
+"6034" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>102</SUB>> ]
+"6037" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>102</SUB>> ]
+"6045" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>103</SUB>> ]
+"6055" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>104</SUB>> ]
+"6027" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>101</SUB>> ]
+"6036" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>102</SUB>> ]
+"5950" [label = <(METHOD,TIFFForceStrileArrayWriting)<SUB>76</SUB>> ]
+"6173" [label = <(METHOD_RETURN,int)<SUB>76</SUB>> ]
+  "5954" -> "5960" 
+  "5958" -> "5966" 
+  "6171" -> "6173" 
+  "5960" -> "5958" 
+  "5963" -> "5973" 
+  "5963" -> "5981" 
+  "5978" -> "5984" 
+  "5978" -> "5995" 
+  "5991" -> "5999" 
+  "5991" -> "6010" 
+  "6006" -> "6027" 
+  "6006" -> "6124" 
+  "6121" -> "6160" 
+  "6121" -> "6171" 
+  "5964" -> "5963" 
+  "5969" -> "5975" 
+  "5975" -> "6173" 
+  "5979" -> "5978" 
+  "5984" -> "5988" 
+  "5988" -> "6173" 
+  "5992" -> "5991" 
+  "5999" -> "6003" 
+  "6003" -> "6173" 
+  "6007" -> "6006" 
+  "6122" -> "6121" 
+  "6122" -> "6141" 
+  "6139" -> "6121" 
+  "6157" -> "6166" 
+  "6163" -> "6169" 
+  "6169" -> "6173" 
+  "5966" -> "5964" 
+  "5971" -> "5969" 
+  "5981" -> "5979" 
+  "5993" -> "5992" 
+  "6008" -> "6007" 
+  "6014" -> "6099" 
+  "6014" -> "6111" 
+  "6106" -> "6118" 
+  "6106" -> "6124" 
+  "6124" -> "6132" 
+  "6129" -> "6137" 
+  "6134" -> "6122" 
+  "6141" -> "6149" 
+  "6146" -> "6154" 
+  "6151" -> "6139" 
+  "6158" -> "6161" 
+  "6161" -> "6157" 
+  "6164" -> "6167" 
+  "6167" -> "6163" 
+  "5973" -> "5971" 
+  "5995" -> "5993" 
+  "6010" -> "6008" 
+  "6015" -> "6014" 
+  "6099" -> "6103" 
+  "6103" -> "6173" 
+  "6107" -> "6106" 
+  "6107" -> "6115" 
+  "6114" -> "6106" 
+  "6118" -> "6173" 
+  "6130" -> "6133" 
+  "6133" -> "6129" 
+  "6135" -> "6138" 
+  "6138" -> "6134" 
+  "6147" -> "6150" 
+  "6150" -> "6146" 
+  "6152" -> "6155" 
+  "6155" -> "6151" 
+  "6160" -> "6158" 
+  "6166" -> "6164" 
+  "6016" -> "6015" 
+  "6016" -> "6093" 
+  "6087" -> "6015" 
+  "6108" -> "6107" 
+  "6115" -> "6114" 
+  "6132" -> "6130" 
+  "6137" -> "6135" 
+  "6149" -> "6147" 
+  "6154" -> "6152" 
+  "6017" -> "6016" 
+  "6017" -> "6083" 
+  "6078" -> "6016" 
+  "6088" -> "6087" 
+  "6109" -> "6112" 
+  "6112" -> "6108" 
+  "6018" -> "6017" 
+  "6018" -> "6074" 
+  "6069" -> "6017" 
+  "6079" -> "6078" 
+  "6089" -> "6096" 
+  "6096" -> "6088" 
+  "6111" -> "6109" 
+  "6019" -> "6018" 
+  "6019" -> "6065" 
+  "6060" -> "6018" 
+  "6070" -> "6069" 
+  "6080" -> "6085" 
+  "6085" -> "6079" 
+  "6090" -> "6095" 
+  "6095" -> "6089" 
+  "6020" -> "6019" 
+  "6020" -> "6055" 
+  "6049" -> "6019" 
+  "6061" -> "6060" 
+  "6071" -> "6076" 
+  "6076" -> "6070" 
+  "6081" -> "6084" 
+  "6084" -> "6080" 
+  "6091" -> "6094" 
+  "6094" -> "6090" 
+  "6021" -> "6020" 
+  "6021" -> "6045" 
+  "6040" -> "6020" 
+  "6050" -> "6049" 
+  "6062" -> "6067" 
+  "6067" -> "6061" 
+  "6072" -> "6075" 
+  "6075" -> "6071" 
+  "6083" -> "6081" 
+  "6093" -> "6091" 
+  "6022" -> "6021" 
+  "6022" -> "6036" 
+  "6031" -> "6021" 
+  "6041" -> "6040" 
+  "6051" -> "6058" 
+  "6058" -> "6050" 
+  "6063" -> "6066" 
+  "6066" -> "6062" 
+  "6074" -> "6072" 
+  "6023" -> "6022" 
+  "6032" -> "6031" 
+  "6042" -> "6047" 
+  "6047" -> "6041" 
+  "6052" -> "6057" 
+  "6057" -> "6051" 
+  "6065" -> "6063" 
+  "6024" -> "6029" 
+  "6029" -> "6023" 
+  "6033" -> "6038" 
+  "6038" -> "6032" 
+  "6043" -> "6046" 
+  "6046" -> "6042" 
+  "6053" -> "6056" 
+  "6056" -> "6052" 
+  "6025" -> "6028" 
+  "6028" -> "6024" 
+  "6034" -> "6037" 
+  "6037" -> "6033" 
+  "6045" -> "6043" 
+  "6055" -> "6053" 
+  "6027" -> "6025" 
+  "6036" -> "6034" 
+  "5950" -> "5954" 
+}

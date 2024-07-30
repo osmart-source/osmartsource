@@ -1,0 +1,127 @@
+digraph "_TIFFgetMode" {  
+"41" [label = <(METHOD,_TIFFgetMode)<SUB>49</SUB>> ]
+"42" [label = <(PARAM,TIFFOpenOptions *opts)<SUB>49</SUB>> ]
+"43" [label = <(PARAM,thandle_t clientdata)<SUB>49</SUB>> ]
+"44" [label = <(PARAM,const char *mode)<SUB>49</SUB>> ]
+"45" [label = <(PARAM,const char *module)<SUB>50</SUB>> ]
+"46" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>51</SUB>> ]
+"47" [label = <(LOCAL,int m: int)<SUB>52</SUB>> ]
+"48" [label = <(&lt;operator&gt;.assignment,m = -1)<SUB>52</SUB>> ]
+"49" [label = <(IDENTIFIER,m,m = -1)<SUB>52</SUB>> ]
+"50" [label = <(&lt;operator&gt;.minus,-1)<SUB>52</SUB>> ]
+"51" [label = <(LITERAL,1,-1)<SUB>52</SUB>> ]
+"52" [label = <(CONTROL_STRUCTURE,switch(mode[0]),switch(mode[0]))<SUB>54</SUB>> ]
+"53" [label = <(&lt;operator&gt;.indirectIndexAccess,mode[0])<SUB>54</SUB>> ]
+"54" [label = <(IDENTIFIER,mode,switch(mode[0]))<SUB>54</SUB>> ]
+"55" [label = <(LITERAL,0,switch(mode[0]))<SUB>54</SUB>> ]
+"56" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>55</SUB>> ]
+"57" [label = <(JUMP_TARGET,case)<SUB>56</SUB>> ]
+"58" [label = <(LITERAL,'r',&lt;empty&gt;)<SUB>56</SUB>> ]
+"59" [label = <(&lt;operator&gt;.assignment,m = O_RDONLY)<SUB>57</SUB>> ]
+"60" [label = <(IDENTIFIER,m,m = O_RDONLY)<SUB>57</SUB>> ]
+"61" [label = <(IDENTIFIER,O_RDONLY,m = O_RDONLY)<SUB>57</SUB>> ]
+"62" [label = <(CONTROL_STRUCTURE,if (mode[1] == '+'),if (mode[1] == '+'))<SUB>58</SUB>> ]
+"63" [label = <(&lt;operator&gt;.equals,mode[1] == '+')<SUB>58</SUB>> ]
+"64" [label = <(&lt;operator&gt;.indirectIndexAccess,mode[1])<SUB>58</SUB>> ]
+"65" [label = <(IDENTIFIER,mode,mode[1] == '+')<SUB>58</SUB>> ]
+"66" [label = <(LITERAL,1,mode[1] == '+')<SUB>58</SUB>> ]
+"67" [label = <(LITERAL,'+',mode[1] == '+')<SUB>58</SUB>> ]
+"68" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>59</SUB>> ]
+"69" [label = <(&lt;operator&gt;.assignment,m = O_RDWR)<SUB>59</SUB>> ]
+"70" [label = <(IDENTIFIER,m,m = O_RDWR)<SUB>59</SUB>> ]
+"71" [label = <(IDENTIFIER,O_RDWR,m = O_RDWR)<SUB>59</SUB>> ]
+"72" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>60</SUB>> ]
+"73" [label = <(JUMP_TARGET,case)<SUB>61</SUB>> ]
+"74" [label = <(LITERAL,'w',&lt;empty&gt;)<SUB>61</SUB>> ]
+"75" [label = <(JUMP_TARGET,case)<SUB>62</SUB>> ]
+"76" [label = <(LITERAL,'a',&lt;empty&gt;)<SUB>62</SUB>> ]
+"77" [label = <(&lt;operator&gt;.assignment,m = O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"78" [label = <(IDENTIFIER,m,m = O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"79" [label = <(&lt;operator&gt;.or,O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"80" [label = <(IDENTIFIER,O_RDWR,O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"81" [label = <(IDENTIFIER,O_CREAT,O_RDWR | O_CREAT)<SUB>63</SUB>> ]
+"82" [label = <(CONTROL_STRUCTURE,if (mode[0] == 'w'),if (mode[0] == 'w'))<SUB>64</SUB>> ]
+"83" [label = <(&lt;operator&gt;.equals,mode[0] == 'w')<SUB>64</SUB>> ]
+"84" [label = <(&lt;operator&gt;.indirectIndexAccess,mode[0])<SUB>64</SUB>> ]
+"85" [label = <(IDENTIFIER,mode,mode[0] == 'w')<SUB>64</SUB>> ]
+"86" [label = <(LITERAL,0,mode[0] == 'w')<SUB>64</SUB>> ]
+"87" [label = <(LITERAL,'w',mode[0] == 'w')<SUB>64</SUB>> ]
+"88" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>65</SUB>> ]
+"89" [label = <(&lt;operators&gt;.assignmentOr,m |= O_TRUNC)<SUB>65</SUB>> ]
+"90" [label = <(IDENTIFIER,m,m |= O_TRUNC)<SUB>65</SUB>> ]
+"91" [label = <(IDENTIFIER,O_TRUNC,m |= O_TRUNC)<SUB>65</SUB>> ]
+"92" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>66</SUB>> ]
+"93" [label = <(JUMP_TARGET,default)<SUB>67</SUB>> ]
+"94" [label = <(_TIFFErrorEarly,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"95" [label = <(IDENTIFIER,opts,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"96" [label = <(IDENTIFIER,clientdata,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"97" [label = <(IDENTIFIER,module,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"98" [label = <(LITERAL,&quot;\&quot;%s\&quot;: Bad mode&quot;,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"99" [label = <(IDENTIFIER,mode,_TIFFErrorEarly(opts, clientdata, module, &quot;\&quot;%s\&quot;: Bad mode&quot;, mode))<SUB>68</SUB>> ]
+"100" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>69</SUB>> ]
+"101" [label = <(RETURN,return (m);,return (m);)<SUB>71</SUB>> ]
+"102" [label = <(IDENTIFIER,m,return (m);)<SUB>71</SUB>> ]
+"103" [label = <(METHOD_RETURN,int)<SUB>49</SUB>> ]
+  "41" -> "42" 
+  "41" -> "43" 
+  "41" -> "44" 
+  "41" -> "45" 
+  "41" -> "46" 
+  "41" -> "103" 
+  "46" -> "47" 
+  "46" -> "48" 
+  "46" -> "52" 
+  "46" -> "101" 
+  "48" -> "49" 
+  "48" -> "50" 
+  "50" -> "51" 
+  "52" -> "53" 
+  "52" -> "56" 
+  "53" -> "54" 
+  "53" -> "55" 
+  "56" -> "57" 
+  "56" -> "58" 
+  "56" -> "59" 
+  "56" -> "62" 
+  "56" -> "72" 
+  "56" -> "73" 
+  "56" -> "74" 
+  "56" -> "75" 
+  "56" -> "76" 
+  "56" -> "77" 
+  "56" -> "82" 
+  "56" -> "92" 
+  "56" -> "93" 
+  "56" -> "94" 
+  "56" -> "100" 
+  "59" -> "60" 
+  "59" -> "61" 
+  "62" -> "63" 
+  "62" -> "68" 
+  "63" -> "64" 
+  "63" -> "67" 
+  "64" -> "65" 
+  "64" -> "66" 
+  "68" -> "69" 
+  "69" -> "70" 
+  "69" -> "71" 
+  "77" -> "78" 
+  "77" -> "79" 
+  "79" -> "80" 
+  "79" -> "81" 
+  "82" -> "83" 
+  "82" -> "88" 
+  "83" -> "84" 
+  "83" -> "87" 
+  "84" -> "85" 
+  "84" -> "86" 
+  "88" -> "89" 
+  "89" -> "90" 
+  "89" -> "91" 
+  "94" -> "95" 
+  "94" -> "96" 
+  "94" -> "97" 
+  "94" -> "98" 
+  "94" -> "99" 
+  "101" -> "102" 
+}

@@ -1,0 +1,78 @@
+digraph "TIFFWriteDirectoryTagShortPerSample" {  
+"68062" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagShortPerSample&quot;)<SUB>1471</SUB>> ]
+"68079" [label = <(&lt;operator&gt;.assignment,m = _TIFFmallocExt(tif, tif-&gt;tif_dir.td_samplesperpixel * sizeof(uint16_t)))<SUB>1481</SUB>> ]
+"68127" [label = <(&lt;operator&gt;.assignment,o = TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, tag, tif-&gt;tif_dir.td_samplesperpixel, m))<SUB>1489</SUB>> ]
+"68140" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, m))<SUB>1491</SUB>> ]
+"68143" [label = <(RETURN,return (o);,return (o);)<SUB>1492</SUB>> ]
+"68070" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1476</SUB>> ]
+"68081" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, tif-&gt;tif_dir.td_samplesperpixel * sizeof(uint16_t)))<SUB>1481</SUB>> ]
+"68092" [label = <(&lt;operator&gt;.equals,m == NULL)<SUB>1482</SUB>> ]
+"68111" [label = <(&lt;operator&gt;.lessThan,nb &lt; tif-&gt;tif_dir.td_samplesperpixel)<SUB>1487</SUB>> ]
+"68123" [label = <(&lt;operator&gt;.assignment,*na = value)<SUB>1488</SUB>> ]
+"68129" [label = <(TIFFWriteDirectoryTagCheckedShortArray,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, tag, tif-&gt;tif_dir.td_samplesperpixel, m))<SUB>1489</SUB>> ]
+"68074" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1478</SUB>> ]
+"68077" [label = <(RETURN,return (1);,return (1);)<SUB>1479</SUB>> ]
+"68083" [label = <(&lt;operator&gt;.multiplication,tif-&gt;tif_dir.td_samplesperpixel * sizeof(uint16_t))<SUB>1481</SUB>> ]
+"68096" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>1484</SUB>> ]
+"68100" [label = <(RETURN,return (0);,return (0);)<SUB>1485</SUB>> ]
+"68113" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>1487</SUB>> ]
+"68119" [label = <(&lt;operator&gt;.postIncrement,na++)<SUB>1487</SUB>> ]
+"68121" [label = <(&lt;operator&gt;.postIncrement,nb++)<SUB>1487</SUB>> ]
+"68124" [label = <(&lt;operator&gt;.indirection,*na)<SUB>1488</SUB>> ]
+"68134" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>1490</SUB>> ]
+"68075" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1478</SUB>> ]
+"68084" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>1481</SUB>> ]
+"68089" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>1481</SUB>> ]
+"68105" [label = <(&lt;operator&gt;.assignment,na = m)<SUB>1487</SUB>> ]
+"68108" [label = <(&lt;operator&gt;.assignment,nb = 0)<SUB>1487</SUB>> ]
+"68114" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1487</SUB>> ]
+"68117" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>1487</SUB>> ]
+"68135" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1490</SUB>> ]
+"68138" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>1490</SUB>> ]
+"68085" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1481</SUB>> ]
+"68088" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>1481</SUB>> ]
+"68116" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1487</SUB>> ]
+"68137" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1490</SUB>> ]
+"68087" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1481</SUB>> ]
+"68054" [label = <(METHOD,TIFFWriteDirectoryTagShortPerSample)<SUB>1467</SUB>> ]
+"68145" [label = <(METHOD_RETURN,int)<SUB>1467</SUB>> ]
+  "68062" -> "68070" 
+  "68079" -> "68092" 
+  "68127" -> "68140" 
+  "68140" -> "68143" 
+  "68143" -> "68145" 
+  "68070" -> "68075" 
+  "68070" -> "68087" 
+  "68081" -> "68079" 
+  "68092" -> "68096" 
+  "68092" -> "68105" 
+  "68111" -> "68124" 
+  "68111" -> "68137" 
+  "68123" -> "68119" 
+  "68129" -> "68127" 
+  "68074" -> "68077" 
+  "68077" -> "68145" 
+  "68083" -> "68081" 
+  "68096" -> "68100" 
+  "68100" -> "68145" 
+  "68113" -> "68111" 
+  "68119" -> "68121" 
+  "68121" -> "68116" 
+  "68124" -> "68123" 
+  "68134" -> "68129" 
+  "68075" -> "68074" 
+  "68084" -> "68089" 
+  "68089" -> "68083" 
+  "68105" -> "68108" 
+  "68108" -> "68116" 
+  "68114" -> "68117" 
+  "68117" -> "68113" 
+  "68135" -> "68138" 
+  "68138" -> "68134" 
+  "68085" -> "68088" 
+  "68088" -> "68084" 
+  "68116" -> "68114" 
+  "68137" -> "68135" 
+  "68087" -> "68085" 
+  "68054" -> "68062" 
+}

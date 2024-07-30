@@ -1,0 +1,14 @@
+digraph "popen" {  
+"30302" [label = <(METHOD,popen)<SUB>800</SUB>> ]
+"30303" [label = <(PARAM,const char *__command)<SUB>800</SUB>> ]
+"30304" [label = <(PARAM,const char *__modes)<SUB>800</SUB>> ]
+"30305" [label = <(METHOD_RETURN,FILE*)<SUB>800</SUB>> ]
+  "30302" -> "30303"  [ label = "AST: "] 
+  "30302" -> "30304"  [ label = "AST: "] 
+  "30302" -> "30305"  [ label = "AST: "] 
+  "30302" -> "30305"  [ label = "CFG: "] 
+  "30303" -> "30305"  [ label = "DDG: __command"] 
+  "30304" -> "30305"  [ label = "DDG: __modes"] 
+  "30302" -> "30303"  [ label = "DDG: "] 
+  "30302" -> "30304"  [ label = "DDG: "] 
+}

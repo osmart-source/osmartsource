@@ -1,0 +1,49 @@
+digraph "TIFFHashSetDestroy" {  
+"5275" [label = <(METHOD,TIFFHashSetDestroy)<SUB>285</SUB>> ]
+"5276" [label = <(PARAM,TIFFHashSet *set)<SUB>285</SUB>> ]
+"5277" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>286</SUB>> ]
+"5278" [label = <(CONTROL_STRUCTURE,if (set &amp;&amp; 1),if (set &amp;&amp; 1))<SUB>287</SUB>> ]
+"5279" [label = <(&lt;operator&gt;.logicalAnd,set &amp;&amp; 1)<SUB>287</SUB>> ]
+"5280" [label = <(IDENTIFIER,set,set &amp;&amp; 1)<SUB>287</SUB>> ]
+"5281" [label = <(LITERAL,1,set &amp;&amp; 1)<SUB>287</SUB>> ]
+"5282" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>288</SUB>> ]
+"5283" [label = <(TIFFHashSetClearInternal,TIFFHashSetClearInternal(set, true))<SUB>289</SUB>> ]
+"5284" [label = <(IDENTIFIER,set,TIFFHashSetClearInternal(set, true))<SUB>289</SUB>> ]
+"5285" [label = <(true,true)<SUB>289</SUB>> ]
+"5286" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"5287" [label = <(LITERAL,1,&lt;empty&gt;)<SUB>289</SUB>> ]
+"5288" [label = <(free,free(set-&gt;tabList))<SUB>290</SUB>> ]
+"5289" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>290</SUB>> ]
+"5290" [label = <(IDENTIFIER,set,free(set-&gt;tabList))<SUB>290</SUB>> ]
+"5291" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>290</SUB>> ]
+"5292" [label = <(TIFFListDestroy,TIFFListDestroy(set-&gt;psRecyclingList))<SUB>291</SUB>> ]
+"5293" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>291</SUB>> ]
+"5294" [label = <(IDENTIFIER,set,TIFFListDestroy(set-&gt;psRecyclingList))<SUB>291</SUB>> ]
+"5295" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>291</SUB>> ]
+"5296" [label = <(free,free(set))<SUB>292</SUB>> ]
+"5297" [label = <(IDENTIFIER,set,free(set))<SUB>292</SUB>> ]
+"5298" [label = <(METHOD_RETURN,void)<SUB>285</SUB>> ]
+  "5275" -> "5276" 
+  "5275" -> "5277" 
+  "5275" -> "5298" 
+  "5277" -> "5278" 
+  "5278" -> "5279" 
+  "5278" -> "5282" 
+  "5279" -> "5280" 
+  "5279" -> "5281" 
+  "5282" -> "5283" 
+  "5282" -> "5288" 
+  "5282" -> "5292" 
+  "5282" -> "5296" 
+  "5283" -> "5284" 
+  "5283" -> "5285" 
+  "5285" -> "5286" 
+  "5286" -> "5287" 
+  "5288" -> "5289" 
+  "5289" -> "5290" 
+  "5289" -> "5291" 
+  "5292" -> "5293" 
+  "5293" -> "5294" 
+  "5293" -> "5295" 
+  "5296" -> "5297" 
+}

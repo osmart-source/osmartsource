@@ -1,0 +1,31 @@
+digraph "TIFFReadDirectoryFindEntry" {  
+"90659" [label = <(&lt;operator&gt;.cast,(void)tif)<SUB>4970</SUB>> ]
+"90689" [label = <(RETURN,return (0);,return (0);)<SUB>4976</SUB>> ]
+"90660" [label = <(UNKNOWN,void,void)<SUB>4970</SUB>> ]
+"90671" [label = <(&lt;operator&gt;.lessThan,n &lt; dircount)<SUB>4971</SUB>> ]
+"90675" [label = <(&lt;operator&gt;.postIncrement,m++)<SUB>4971</SUB>> ]
+"90677" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>4971</SUB>> ]
+"90665" [label = <(&lt;operator&gt;.assignment,m = dir)<SUB>4971</SUB>> ]
+"90668" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>4971</SUB>> ]
+"90681" [label = <(&lt;operator&gt;.equals,m-&gt;tdir_tag == tagid)<SUB>4973</SUB>> ]
+"90682" [label = <(&lt;operator&gt;.indirectFieldAccess,m-&gt;tdir_tag)<SUB>4973</SUB>> ]
+"90687" [label = <(RETURN,return (m);,return (m);)<SUB>4974</SUB>> ]
+"90684" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4973</SUB>> ]
+"90651" [label = <(METHOD,TIFFReadDirectoryFindEntry)<SUB>4964</SUB>> ]
+"90691" [label = <(METHOD_RETURN,TIFFDirEntry)<SUB>4964</SUB>> ]
+  "90659" -> "90665" 
+  "90689" -> "90691" 
+  "90660" -> "90659" 
+  "90671" -> "90684" 
+  "90671" -> "90689" 
+  "90675" -> "90677" 
+  "90677" -> "90671" 
+  "90665" -> "90668" 
+  "90668" -> "90671" 
+  "90681" -> "90687" 
+  "90681" -> "90675" 
+  "90682" -> "90681" 
+  "90687" -> "90691" 
+  "90684" -> "90682" 
+  "90651" -> "90660" 
+}

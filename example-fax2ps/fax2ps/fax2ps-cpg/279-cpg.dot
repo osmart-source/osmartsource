@@ -1,0 +1,18 @@
+digraph "wcstoumax" {  
+"8055" [label = <(METHOD,wcstoumax)<SUB>310</SUB>> ]
+"8056" [label = <(PARAM,const __gwchar_t *__restrict __nptr)<SUB>310</SUB>> ]
+"8057" [label = <(PARAM,__gwchar_t ** __restrict __endptr)<SUB>311</SUB>> ]
+"8058" [label = <(PARAM,int __base)<SUB>311</SUB>> ]
+"8059" [label = <(METHOD_RETURN,uintmax_t)<SUB>310</SUB>> ]
+  "8055" -> "8056"  [ label = "AST: "] 
+  "8055" -> "8057"  [ label = "AST: "] 
+  "8055" -> "8058"  [ label = "AST: "] 
+  "8055" -> "8059"  [ label = "AST: "] 
+  "8055" -> "8059"  [ label = "CFG: "] 
+  "8056" -> "8059"  [ label = "DDG: __nptr"] 
+  "8057" -> "8059"  [ label = "DDG: __endptr"] 
+  "8058" -> "8059"  [ label = "DDG: __base"] 
+  "8055" -> "8056"  [ label = "DDG: "] 
+  "8055" -> "8057"  [ label = "DDG: "] 
+  "8055" -> "8058"  [ label = "DDG: "] 
+}

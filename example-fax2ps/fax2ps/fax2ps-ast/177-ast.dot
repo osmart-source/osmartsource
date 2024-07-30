@@ -1,0 +1,45 @@
+digraph "TIFFListDestroy" {  
+"5252" [label = <(METHOD,TIFFListDestroy)<SUB>260</SUB>> ]
+"5253" [label = <(PARAM,TIFFList *psList)<SUB>260</SUB>> ]
+"5254" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>261</SUB>> ]
+"5255" [label = <(LOCAL,TIFFList* psCurrent: TIFFList)<SUB>262</SUB>> ]
+"5256" [label = <(&lt;operator&gt;.assignment,*psCurrent = psList)<SUB>262</SUB>> ]
+"5257" [label = <(IDENTIFIER,psCurrent,*psCurrent = psList)<SUB>262</SUB>> ]
+"5258" [label = <(IDENTIFIER,psList,*psCurrent = psList)<SUB>262</SUB>> ]
+"5259" [label = <(CONTROL_STRUCTURE,while (psCurrent),while (psCurrent))<SUB>264</SUB>> ]
+"5260" [label = <(IDENTIFIER,psCurrent,while (psCurrent))<SUB>264</SUB>> ]
+"5261" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>265</SUB>> ]
+"5262" [label = <(LOCAL,TIFFList* psNext: TIFFList)<SUB>266</SUB>> ]
+"5263" [label = <(&lt;operator&gt;.assignment,*const psNext = psCurrent-&gt;psNext)<SUB>266</SUB>> ]
+"5264" [label = <(IDENTIFIER,psNext,*const psNext = psCurrent-&gt;psNext)<SUB>266</SUB>> ]
+"5265" [label = <(&lt;operator&gt;.indirectFieldAccess,psCurrent-&gt;psNext)<SUB>266</SUB>> ]
+"5266" [label = <(IDENTIFIER,psCurrent,*const psNext = psCurrent-&gt;psNext)<SUB>266</SUB>> ]
+"5267" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>266</SUB>> ]
+"5268" [label = <(free,free(psCurrent))<SUB>267</SUB>> ]
+"5269" [label = <(IDENTIFIER,psCurrent,free(psCurrent))<SUB>267</SUB>> ]
+"5270" [label = <(&lt;operator&gt;.assignment,psCurrent = psNext)<SUB>268</SUB>> ]
+"5271" [label = <(IDENTIFIER,psCurrent,psCurrent = psNext)<SUB>268</SUB>> ]
+"5272" [label = <(IDENTIFIER,psNext,psCurrent = psNext)<SUB>268</SUB>> ]
+"5273" [label = <(METHOD_RETURN,void)<SUB>260</SUB>> ]
+  "5252" -> "5253" 
+  "5252" -> "5254" 
+  "5252" -> "5273" 
+  "5254" -> "5255" 
+  "5254" -> "5256" 
+  "5254" -> "5259" 
+  "5256" -> "5257" 
+  "5256" -> "5258" 
+  "5259" -> "5260" 
+  "5259" -> "5261" 
+  "5261" -> "5262" 
+  "5261" -> "5263" 
+  "5261" -> "5268" 
+  "5261" -> "5270" 
+  "5263" -> "5264" 
+  "5263" -> "5265" 
+  "5265" -> "5266" 
+  "5265" -> "5267" 
+  "5268" -> "5269" 
+  "5270" -> "5271" 
+  "5270" -> "5272" 
+}

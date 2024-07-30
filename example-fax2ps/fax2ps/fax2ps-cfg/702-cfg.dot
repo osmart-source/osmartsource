@@ -1,0 +1,26 @@
+digraph "TIFFWriteTile" {  
+"31329" [label = <(RETURN,return (TIFFWriteEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                 (tmsize_t)(-1)));,return (TIFFWriteEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                 (tmsize_t)(-1)));)<SUB>398</SUB>> ]
+"31317" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckTile(tif, x, y, z, s))<SUB>390</SUB>> ]
+"31330" [label = <(TIFFWriteEncodedTile,TIFFWriteEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                 (tmsize_t)(-1)))<SUB>398</SUB>> ]
+"31318" [label = <(TIFFCheckTile,TIFFCheckTile(tif, x, y, z, s))<SUB>390</SUB>> ]
+"31325" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>391</SUB>> ]
+"31332" [label = <(TIFFComputeTile,TIFFComputeTile(tif, x, y, z, s))<SUB>398</SUB>> ]
+"31339" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>399</SUB>> ]
+"31326" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>391</SUB>> ]
+"31340" [label = <(&lt;operator&gt;.minus,-1)<SUB>399</SUB>> ]
+"31327" [label = <(&lt;operator&gt;.minus,-1)<SUB>391</SUB>> ]
+"31308" [label = <(METHOD,TIFFWriteTile)<SUB>387</SUB>> ]
+"31342" [label = <(METHOD_RETURN,tmsize_t)<SUB>387</SUB>> ]
+  "31329" -> "31342" 
+  "31317" -> "31327" 
+  "31317" -> "31332" 
+  "31330" -> "31329" 
+  "31318" -> "31317" 
+  "31325" -> "31342" 
+  "31332" -> "31340" 
+  "31339" -> "31330" 
+  "31326" -> "31325" 
+  "31340" -> "31339" 
+  "31327" -> "31326" 
+  "31308" -> "31318" 
+}

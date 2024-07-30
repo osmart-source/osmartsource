@@ -1,0 +1,42 @@
+digraph "TIFFGetClientInfo" {  
+"11829" [label = <(&lt;operator&gt;.assignment,*psLink = tif-&gt;tif_clientinfo)<SUB>67</SUB>> ]
+"11831" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>67</SUB>> ]
+"11835" [label = <(&lt;operator&gt;.logicalAnd,psLink != NULL &amp;&amp; strcmp(psLink-&gt;name, name) != 0)<SUB>69</SUB>> ]
+"11846" [label = <(&lt;operator&gt;.assignment,psLink = psLink-&gt;next)<SUB>70</SUB>> ]
+"11852" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>72</SUB>> ]
+"11833" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>67</SUB>> ]
+"11836" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>69</SUB>> ]
+"11839" [label = <(&lt;operator&gt;.notEquals,strcmp(psLink-&gt;name, name) != 0)<SUB>69</SUB>> ]
+"11848" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;next)<SUB>70</SUB>> ]
+"11856" [label = <(RETURN,return psLink-&gt;data;,return psLink-&gt;data;)<SUB>73</SUB>> ]
+"11840" [label = <(strcmp,strcmp(psLink-&gt;name, name))<SUB>69</SUB>> ]
+"11850" [label = <(FIELD_IDENTIFIER,next,next)<SUB>70</SUB>> ]
+"11857" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;data)<SUB>73</SUB>> ]
+"11862" [label = <(RETURN,return NULL;,return NULL;)<SUB>75</SUB>> ]
+"11841" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>69</SUB>> ]
+"11859" [label = <(FIELD_IDENTIFIER,data,data)<SUB>73</SUB>> ]
+"11843" [label = <(FIELD_IDENTIFIER,name,name)<SUB>69</SUB>> ]
+"11824" [label = <(METHOD,TIFFGetClientInfo)<SUB>64</SUB>> ]
+"11864" [label = <(METHOD_RETURN,void*)<SUB>64</SUB>> ]
+  "11829" -> "11836" 
+  "11831" -> "11829" 
+  "11835" -> "11850" 
+  "11835" -> "11852" 
+  "11846" -> "11836" 
+  "11852" -> "11859" 
+  "11852" -> "11862" 
+  "11833" -> "11831" 
+  "11836" -> "11835" 
+  "11836" -> "11843" 
+  "11839" -> "11835" 
+  "11848" -> "11846" 
+  "11856" -> "11864" 
+  "11840" -> "11839" 
+  "11850" -> "11848" 
+  "11857" -> "11856" 
+  "11862" -> "11864" 
+  "11841" -> "11840" 
+  "11859" -> "11857" 
+  "11843" -> "11841" 
+  "11824" -> "11833" 
+}

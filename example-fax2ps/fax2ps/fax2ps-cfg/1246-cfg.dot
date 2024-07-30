@@ -1,0 +1,75 @@
+digraph "TIFFReadDirEntryCheckedSlong8" {  
+"86900" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3403</SUB>> ]
+"86837" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>3389</SUB>> ]
+"86890" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3401</SUB>> ]
+"86838" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>3389</SUB>> ]
+"86846" [label = <(&lt;operator&gt;.assignment,offset = direntry-&gt;tdir_offset.toff_long)<SUB>3392</SUB>> ]
+"86863" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3395</SUB>> ]
+"86891" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3401</SUB>> ]
+"86896" [label = <(TIFFSwabLong8,TIFFSwabLong8((uint64_t *)value))<SUB>3402</SUB>> ]
+"86839" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3389</SUB>> ]
+"86848" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long)<SUB>3392</SUB>> ]
+"86854" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3393</SUB>> ]
+"86865" [label = <(TIFFReadDirEntryData,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3395</SUB>> ]
+"86871" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>3396</SUB>> ]
+"86879" [label = <(&lt;operator&gt;.assignment,*value = *(int64_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3400</SUB>> ]
+"86893" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3401</SUB>> ]
+"86897" [label = <(&lt;operator&gt;.cast,(uint64_t *)value)<SUB>3402</SUB>> ]
+"86841" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3389</SUB>> ]
+"86849" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3392</SUB>> ]
+"86852" [label = <(FIELD_IDENTIFIER,toff_long,toff_long)<SUB>3392</SUB>> ]
+"86855" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3393</SUB>> ]
+"86860" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;offset))<SUB>3394</SUB>> ]
+"86875" [label = <(RETURN,return (err);,return (err);)<SUB>3397</SUB>> ]
+"86880" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3400</SUB>> ]
+"86882" [label = <(&lt;operator&gt;.indirection,*(int64_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3400</SUB>> ]
+"86898" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>3402</SUB>> ]
+"86851" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3392</SUB>> ]
+"86857" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3393</SUB>> ]
+"86861" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>3394</SUB>> ]
+"86883" [label = <(&lt;operator&gt;.cast,(int64_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3400</SUB>> ]
+"86884" [label = <(UNKNOWN,int64_t *,int64_t *)<SUB>3400</SUB>> ]
+"86885" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3400</SUB>> ]
+"86886" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3400</SUB>> ]
+"86888" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3400</SUB>> ]
+"86831" [label = <(METHOD,TIFFReadDirEntryCheckedSlong8)<SUB>3386</SUB>> ]
+"86902" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3386</SUB>> ]
+  "86900" -> "86902" 
+  "86837" -> "86851" 
+  "86837" -> "86880" 
+  "86890" -> "86898" 
+  "86890" -> "86900" 
+  "86838" -> "86837" 
+  "86846" -> "86857" 
+  "86863" -> "86871" 
+  "86891" -> "86890" 
+  "86896" -> "86900" 
+  "86839" -> "86838" 
+  "86848" -> "86846" 
+  "86854" -> "86861" 
+  "86854" -> "86865" 
+  "86865" -> "86863" 
+  "86871" -> "86875" 
+  "86871" -> "86893" 
+  "86879" -> "86893" 
+  "86893" -> "86891" 
+  "86897" -> "86896" 
+  "86841" -> "86839" 
+  "86849" -> "86852" 
+  "86852" -> "86848" 
+  "86855" -> "86854" 
+  "86860" -> "86865" 
+  "86875" -> "86902" 
+  "86880" -> "86884" 
+  "86882" -> "86879" 
+  "86898" -> "86897" 
+  "86851" -> "86849" 
+  "86857" -> "86855" 
+  "86861" -> "86860" 
+  "86883" -> "86882" 
+  "86884" -> "86888" 
+  "86885" -> "86883" 
+  "86886" -> "86885" 
+  "86888" -> "86886" 
+  "86831" -> "86841" 
+}

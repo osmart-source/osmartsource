@@ -1,0 +1,55 @@
+digraph "TIFFReadDirEntryCheckedSshort" {  
+"86680" [label = <(METHOD,TIFFReadDirEntryCheckedSshort)<SUB>3342</SUB>> ]
+"86681" [label = <(PARAM,TIFF *tif)<SUB>3342</SUB>> ]
+"86682" [label = <(PARAM,TIFFDirEntry *direntry)<SUB>3342</SUB>> ]
+"86683" [label = <(PARAM,int16_t *value)<SUB>3343</SUB>> ]
+"86684" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3344</SUB>> ]
+"86685" [label = <(&lt;operator&gt;.assignment,*value = *(int16_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3345</SUB>> ]
+"86686" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3345</SUB>> ]
+"86687" [label = <(IDENTIFIER,value,*value = *(int16_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3345</SUB>> ]
+"86688" [label = <(&lt;operator&gt;.indirection,*(int16_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3345</SUB>> ]
+"86689" [label = <(&lt;operator&gt;.cast,(int16_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3345</SUB>> ]
+"86690" [label = <(UNKNOWN,int16_t *,int16_t *)<SUB>3345</SUB>> ]
+"86691" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3345</SUB>> ]
+"86692" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3345</SUB>> ]
+"86693" [label = <(IDENTIFIER,direntry,(int16_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3345</SUB>> ]
+"86694" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3345</SUB>> ]
+"86695" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>3346</SUB>> ]
+"86696" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3346</SUB>> ]
+"86697" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3346</SUB>> ]
+"86698" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3346</SUB>> ]
+"86699" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3346</SUB>> ]
+"86700" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3346</SUB>> ]
+"86701" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3347</SUB>> ]
+"86702" [label = <(TIFFSwabShort,TIFFSwabShort((uint16_t *)value))<SUB>3347</SUB>> ]
+"86703" [label = <(&lt;operator&gt;.cast,(uint16_t *)value)<SUB>3347</SUB>> ]
+"86704" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>3347</SUB>> ]
+"86705" [label = <(IDENTIFIER,value,(uint16_t *)value)<SUB>3347</SUB>> ]
+"86706" [label = <(METHOD_RETURN,void)<SUB>3342</SUB>> ]
+  "86680" -> "86681" 
+  "86680" -> "86682" 
+  "86680" -> "86683" 
+  "86680" -> "86684" 
+  "86680" -> "86706" 
+  "86684" -> "86685" 
+  "86684" -> "86695" 
+  "86685" -> "86686" 
+  "86685" -> "86688" 
+  "86686" -> "86687" 
+  "86688" -> "86689" 
+  "86689" -> "86690" 
+  "86689" -> "86691" 
+  "86691" -> "86692" 
+  "86692" -> "86693" 
+  "86692" -> "86694" 
+  "86695" -> "86696" 
+  "86695" -> "86701" 
+  "86696" -> "86697" 
+  "86696" -> "86700" 
+  "86697" -> "86698" 
+  "86697" -> "86699" 
+  "86701" -> "86702" 
+  "86702" -> "86703" 
+  "86703" -> "86704" 
+  "86703" -> "86705" 
+}

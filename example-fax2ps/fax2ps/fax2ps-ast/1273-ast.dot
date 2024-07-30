@@ -1,0 +1,41 @@
+digraph "TIFFReadDirEntryCheckRangeSshortSlong" {  
+"87709" [label = <(METHOD,TIFFReadDirEntryCheckRangeSshortSlong)<SUB>3714</SUB>> ]
+"87710" [label = <(PARAM,int32_t value)<SUB>3715</SUB>> ]
+"87711" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3716</SUB>> ]
+"87712" [label = <(CONTROL_STRUCTURE,if ((value &lt; -0x8000) || (value &gt; 0x7FFF)),if ((value &lt; -0x8000) || (value &gt; 0x7FFF)))<SUB>3717</SUB>> ]
+"87713" [label = <(&lt;operator&gt;.logicalOr,(value &lt; -0x8000) || (value &gt; 0x7FFF))<SUB>3717</SUB>> ]
+"87714" [label = <(&lt;operator&gt;.lessThan,value &lt; -0x8000)<SUB>3717</SUB>> ]
+"87715" [label = <(IDENTIFIER,value,value &lt; -0x8000)<SUB>3717</SUB>> ]
+"87716" [label = <(&lt;operator&gt;.minus,-0x8000)<SUB>3717</SUB>> ]
+"87717" [label = <(LITERAL,0x8000,-0x8000)<SUB>3717</SUB>> ]
+"87718" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0x7FFF)<SUB>3717</SUB>> ]
+"87719" [label = <(IDENTIFIER,value,value &gt; 0x7FFF)<SUB>3717</SUB>> ]
+"87720" [label = <(LITERAL,0x7FFF,value &gt; 0x7FFF)<SUB>3717</SUB>> ]
+"87721" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3718</SUB>> ]
+"87722" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3718</SUB>> ]
+"87723" [label = <(IDENTIFIER,TIFFReadDirEntryErrRange,return (TIFFReadDirEntryErrRange);)<SUB>3718</SUB>> ]
+"87724" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3720</SUB>> ]
+"87725" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3720</SUB>> ]
+"87726" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3720</SUB>> ]
+"87727" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>3720</SUB>> ]
+"87728" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3714</SUB>> ]
+  "87709" -> "87710" 
+  "87709" -> "87711" 
+  "87709" -> "87728" 
+  "87711" -> "87712" 
+  "87712" -> "87713" 
+  "87712" -> "87721" 
+  "87712" -> "87724" 
+  "87713" -> "87714" 
+  "87713" -> "87718" 
+  "87714" -> "87715" 
+  "87714" -> "87716" 
+  "87716" -> "87717" 
+  "87718" -> "87719" 
+  "87718" -> "87720" 
+  "87721" -> "87722" 
+  "87722" -> "87723" 
+  "87724" -> "87725" 
+  "87725" -> "87726" 
+  "87726" -> "87727" 
+}

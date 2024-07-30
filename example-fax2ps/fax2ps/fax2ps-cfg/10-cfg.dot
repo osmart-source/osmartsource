@@ -1,0 +1,34 @@
+digraph "_TIFFmallocExt" {  
+"207" [label = <(RETURN,return _TIFFmalloc(s);,return _TIFFmalloc(s);)<SUB>129</SUB>> ]
+"185" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; tif-&gt;tif_max_single_mem_alloc &gt; 0 &amp;&amp;\012        s &gt; tif-&gt;tif_max_single_mem_alloc)<SUB>123</SUB>> ]
+"208" [label = <(_TIFFmalloc,_TIFFmalloc(s))<SUB>129</SUB>> ]
+"186" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>123</SUB>> ]
+"195" [label = <(&lt;operator&gt;.greaterThan,s &gt; tif-&gt;tif_max_single_mem_alloc)<SUB>124</SUB>> ]
+"201" [label = <(_TIFFEmitErrorAboveMaxSingleMemAlloc,_TIFFEmitErrorAboveMaxSingleMemAlloc(tif, &quot;_TIFFmallocExt&quot;, s))<SUB>126</SUB>> ]
+"205" [label = <(RETURN,return NULL;,return NULL;)<SUB>127</SUB>> ]
+"187" [label = <(&lt;operator&gt;.notEquals,tif != NULL)<SUB>123</SUB>> ]
+"190" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_max_single_mem_alloc &gt; 0)<SUB>123</SUB>> ]
+"197" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_max_single_mem_alloc)<SUB>124</SUB>> ]
+"191" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_max_single_mem_alloc)<SUB>123</SUB>> ]
+"199" [label = <(FIELD_IDENTIFIER,tif_max_single_mem_alloc,tif_max_single_mem_alloc)<SUB>124</SUB>> ]
+"193" [label = <(FIELD_IDENTIFIER,tif_max_single_mem_alloc,tif_max_single_mem_alloc)<SUB>123</SUB>> ]
+"180" [label = <(METHOD,_TIFFmallocExt)<SUB>121</SUB>> ]
+"210" [label = <(METHOD_RETURN,void*)<SUB>121</SUB>> ]
+  "207" -> "210" 
+  "185" -> "201" 
+  "185" -> "208" 
+  "208" -> "207" 
+  "186" -> "185" 
+  "186" -> "199" 
+  "195" -> "185" 
+  "201" -> "205" 
+  "205" -> "210" 
+  "187" -> "186" 
+  "187" -> "193" 
+  "190" -> "186" 
+  "197" -> "195" 
+  "191" -> "190" 
+  "199" -> "197" 
+  "193" -> "191" 
+  "180" -> "187" 
+}

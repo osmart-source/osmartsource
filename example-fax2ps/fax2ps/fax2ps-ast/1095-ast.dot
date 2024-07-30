@@ -1,0 +1,55 @@
+digraph "TIFFWriteDirectoryTagIfdArray" {  
+"68704" [label = <(METHOD,TIFFWriteDirectoryTagIfdArray)<SUB>1770</SUB>> ]
+"68705" [label = <(PARAM,TIFF *tif)<SUB>1770</SUB>> ]
+"68706" [label = <(PARAM,uint32_t *ndir)<SUB>1770</SUB>> ]
+"68707" [label = <(PARAM,TIFFDirEntry *dir)<SUB>1771</SUB>> ]
+"68708" [label = <(PARAM,uint16_t tag)<SUB>1771</SUB>> ]
+"68709" [label = <(PARAM,uint32_t count)<SUB>1772</SUB>> ]
+"68710" [label = <(PARAM,uint32_t *value)<SUB>1772</SUB>> ]
+"68711" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1773</SUB>> ]
+"68712" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>1774</SUB>> ]
+"68713" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>1774</SUB>> ]
+"68714" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>1774</SUB>> ]
+"68715" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>1774</SUB>> ]
+"68716" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1775</SUB>> ]
+"68717" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>1776</SUB>> ]
+"68718" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>1776</SUB>> ]
+"68719" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>1776</SUB>> ]
+"68720" [label = <(RETURN,return (1);,return (1);)<SUB>1777</SUB>> ]
+"68721" [label = <(LITERAL,1,return (1);)<SUB>1777</SUB>> ]
+"68722" [label = <(RETURN,return (TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value));,return (TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value));)<SUB>1779</SUB>> ]
+"68723" [label = <(TIFFWriteDirectoryTagCheckedIfdArray,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1779</SUB>> ]
+"68724" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1779</SUB>> ]
+"68725" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1779</SUB>> ]
+"68726" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1779</SUB>> ]
+"68727" [label = <(IDENTIFIER,tag,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1779</SUB>> ]
+"68728" [label = <(IDENTIFIER,count,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1779</SUB>> ]
+"68729" [label = <(IDENTIFIER,value,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, tag, count,\012                                                 value))<SUB>1780</SUB>> ]
+"68730" [label = <(METHOD_RETURN,int)<SUB>1770</SUB>> ]
+  "68704" -> "68705" 
+  "68704" -> "68706" 
+  "68704" -> "68707" 
+  "68704" -> "68708" 
+  "68704" -> "68709" 
+  "68704" -> "68710" 
+  "68704" -> "68711" 
+  "68704" -> "68730" 
+  "68711" -> "68712" 
+  "68711" -> "68722" 
+  "68712" -> "68713" 
+  "68712" -> "68716" 
+  "68713" -> "68714" 
+  "68713" -> "68715" 
+  "68716" -> "68717" 
+  "68716" -> "68720" 
+  "68717" -> "68718" 
+  "68718" -> "68719" 
+  "68720" -> "68721" 
+  "68722" -> "68723" 
+  "68723" -> "68724" 
+  "68723" -> "68725" 
+  "68723" -> "68726" 
+  "68723" -> "68727" 
+  "68723" -> "68728" 
+  "68723" -> "68729" 
+}

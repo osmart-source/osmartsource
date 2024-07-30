@@ -1,0 +1,65 @@
+digraph "TIFFWarningExtR" {  
+"45266" [label = <(&lt;operator&gt;.logicalAnd,tif &amp;&amp; tif-&gt;tif_warnhandler)<SUB>83</SUB>> ]
+"45299" [label = <(&lt;operator&gt;.logicalAnd,_TIFFwarningHandler &amp;&amp; 1)<SUB>92</SUB>> ]
+"45315" [label = <(&lt;operator&gt;.logicalAnd,_TIFFwarningHandlerExt &amp;&amp; 1)<SUB>98</SUB>> ]
+"45268" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_warnhandler)<SUB>83</SUB>> ]
+"45272" [label = <(va_start,va_start(ap, fmt))<SUB>85</SUB>> ]
+"45276" [label = <(&lt;operator&gt;.assignment,stop = (*tif-&gt;tif_warnhandler)(tif, tif-&gt;tif_warnhandler_user_data,\012                                           module, fmt, ap))<SUB>86</SUB>> ]
+"45290" [label = <(va_end,va_end(ap))<SUB>88</SUB>> ]
+"45303" [label = <(va_start,va_start(ap, fmt))<SUB>94</SUB>> ]
+"45306" [label = <(*_TIFFwarningHandler,(*_TIFFwarningHandler)(module, fmt, ap))<SUB>95</SUB>> ]
+"45312" [label = <(va_end,va_end(ap))<SUB>96</SUB>> ]
+"45319" [label = <(va_start,va_start(ap, fmt))<SUB>100</SUB>> ]
+"45322" [label = <(*_TIFFwarningHandlerExt,(*_TIFFwarningHandlerExt)(tif ? tif-&gt;tif_clientdata : 0, module, fmt,\012                                  ap))<SUB>101</SUB>> ]
+"45334" [label = <(va_end,va_end(ap))<SUB>103</SUB>> ]
+"45270" [label = <(FIELD_IDENTIFIER,tif_warnhandler,tif_warnhandler)<SUB>83</SUB>> ]
+"45278" [label = <(*tif-&gt;tif_warnhandler,(*tif-&gt;tif_warnhandler)(tif, tif-&gt;tif_warnhandler_user_data,\012                                           module, fmt, ap))<SUB>86</SUB>> ]
+"45293" [label = <(&lt;operator&gt;.logicalAnd,stop &amp;&amp; 1)<SUB>89</SUB>> ]
+"45307" [label = <(&lt;operator&gt;.indirection,*_TIFFwarningHandler)<SUB>95</SUB>> ]
+"45323" [label = <(&lt;operator&gt;.indirection,*_TIFFwarningHandlerExt)<SUB>101</SUB>> ]
+"45325" [label = <(&lt;operator&gt;.conditional,tif ? tif-&gt;tif_clientdata : 0)<SUB>101</SUB>> ]
+"45279" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_warnhandler)<SUB>86</SUB>> ]
+"45284" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_warnhandler_user_data)<SUB>86</SUB>> ]
+"45297" [label = <(RETURN,return;,return;)<SUB>90</SUB>> ]
+"45327" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientdata)<SUB>101</SUB>> ]
+"45280" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_warnhandler)<SUB>86</SUB>> ]
+"45286" [label = <(FIELD_IDENTIFIER,tif_warnhandler_user_data,tif_warnhandler_user_data)<SUB>86</SUB>> ]
+"45329" [label = <(FIELD_IDENTIFIER,tif_clientdata,tif_clientdata)<SUB>101</SUB>> ]
+"45282" [label = <(FIELD_IDENTIFIER,tif_warnhandler,tif_warnhandler)<SUB>86</SUB>> ]
+"45259" [label = <(METHOD,TIFFWarningExtR)<SUB>80</SUB>> ]
+"45336" [label = <(METHOD_RETURN,void)<SUB>80</SUB>> ]
+  "45266" -> "45272" 
+  "45266" -> "45299" 
+  "45299" -> "45303" 
+  "45299" -> "45315" 
+  "45315" -> "45336" 
+  "45315" -> "45319" 
+  "45268" -> "45266" 
+  "45272" -> "45282" 
+  "45276" -> "45290" 
+  "45290" -> "45293" 
+  "45303" -> "45307" 
+  "45306" -> "45312" 
+  "45312" -> "45315" 
+  "45319" -> "45323" 
+  "45322" -> "45334" 
+  "45334" -> "45336" 
+  "45270" -> "45268" 
+  "45278" -> "45276" 
+  "45293" -> "45297" 
+  "45293" -> "45299" 
+  "45307" -> "45306" 
+  "45323" -> "45329" 
+  "45323" -> "45325" 
+  "45325" -> "45322" 
+  "45279" -> "45286" 
+  "45284" -> "45278" 
+  "45297" -> "45336" 
+  "45327" -> "45325" 
+  "45280" -> "45279" 
+  "45286" -> "45284" 
+  "45329" -> "45327" 
+  "45282" -> "45280" 
+  "45259" -> "45266" 
+  "45259" -> "45270" 
+}

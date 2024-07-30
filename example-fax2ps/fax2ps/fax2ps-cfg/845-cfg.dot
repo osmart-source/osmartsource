@@ -1,0 +1,111 @@
+digraph "PredictorEncodeTile" {  
+"39111" [label = <(&lt;operator&gt;.assignment,module[] = &quot;PredictorEncodeTile&quot;)<SUB>875</SUB>> ]
+"39115" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>876</SUB>> ]
+"39128" [label = <(&lt;operator&gt;.assignment,cc = cc0)<SUB>878</SUB>> ]
+"39133" [label = <(assert,assert(sp != NULL))<SUB>882</SUB>> ]
+"39137" [label = <(assert,assert(sp-&gt;encodepfunc != NULL))<SUB>883</SUB>> ]
+"39143" [label = <(assert,assert(sp-&gt;encodetile != NULL))<SUB>884</SUB>> ]
+"39149" [label = <(&lt;operator&gt;.assignment,working_copy = (uint8_t *)_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39164" [label = <(memcpy,memcpy(working_copy, bp0, cc0))<SUB>898</SUB>> ]
+"39168" [label = <(&lt;operator&gt;.assignment,bp = working_copy)<SUB>899</SUB>> ]
+"39171" [label = <(&lt;operator&gt;.assignment,rowsize = sp-&gt;rowsize)<SUB>901</SUB>> ]
+"39176" [label = <(assert,assert(rowsize &gt; 0))<SUB>902</SUB>> ]
+"39216" [label = <(&lt;operator&gt;.assignment,result_code = (*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39227" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, working_copy))<SUB>917</SUB>> ]
+"39230" [label = <(RETURN,return result_code;,return result_code;)<SUB>919</SUB>> ]
+"39117" [label = <(PredictorState,PredictorState(tif))<SUB>876</SUB>> ]
+"39134" [label = <(&lt;operator&gt;.notEquals,sp != NULL)<SUB>882</SUB>> ]
+"39138" [label = <(&lt;operator&gt;.notEquals,sp-&gt;encodepfunc != NULL)<SUB>883</SUB>> ]
+"39144" [label = <(&lt;operator&gt;.notEquals,sp-&gt;encodetile != NULL)<SUB>884</SUB>> ]
+"39151" [label = <(&lt;operator&gt;.cast,(uint8_t *)_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39157" [label = <(&lt;operator&gt;.equals,working_copy == NULL)<SUB>891</SUB>> ]
+"39173" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;rowsize)<SUB>901</SUB>> ]
+"39177" [label = <(&lt;operator&gt;.greaterThan,rowsize &gt; 0)<SUB>902</SUB>> ]
+"39181" [label = <(&lt;operator&gt;.notEquals,(cc0 % rowsize) != 0)<SUB>903</SUB>> ]
+"39198" [label = <(&lt;operator&gt;.greaterThan,cc &gt; 0)<SUB>909</SUB>> ]
+"39218" [label = <(*sp-&gt;encodetile,(*sp-&gt;encodetile)(tif, working_copy, cc0, s))<SUB>915</SUB>> ]
+"39139" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodepfunc)<SUB>883</SUB>> ]
+"39145" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodetile)<SUB>884</SUB>> ]
+"39152" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>890</SUB>> ]
+"39153" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, cc0))<SUB>890</SUB>> ]
+"39161" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;Out of memory allocating %&quot; PRId64 &quot; byte temp buffer.&quot;,\012                      (int64_t)cc0);,TIFFErrorExtR(tif, module,\012                      &quot;Out of memory allocating %&quot; PRId64 &quot; byte temp buffer.&quot;,\012                      (int64_t)cc0);)<SUB>893</SUB>> ]
+"39162" [label = <(RETURN,return 0;,return 0;)<SUB>896</SUB>> ]
+"39175" [label = <(FIELD_IDENTIFIER,rowsize,rowsize)<SUB>901</SUB>> ]
+"39182" [label = <(&lt;operator&gt;.modulo,cc0 % rowsize)<SUB>903</SUB>> ]
+"39187" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;PredictorEncodeTile&quot;, &quot;%s&quot;, &quot;(cc0%rowsize)!=0&quot;))<SUB>905</SUB>> ]
+"39192" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, working_copy))<SUB>906</SUB>> ]
+"39195" [label = <(RETURN,return 0;,return 0;)<SUB>907</SUB>> ]
+"39202" [label = <(*sp-&gt;encodepfunc,(*sp-&gt;encodepfunc)(tif, bp, rowsize))<SUB>911</SUB>> ]
+"39210" [label = <(&lt;operator&gt;.assignmentMinus,cc -= rowsize)<SUB>912</SUB>> ]
+"39213" [label = <(&lt;operator&gt;.assignmentPlus,bp += rowsize)<SUB>913</SUB>> ]
+"39219" [label = <(&lt;operator&gt;.indirection,*sp-&gt;encodetile)<SUB>915</SUB>> ]
+"39120" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>876</SUB>> ]
+"39141" [label = <(FIELD_IDENTIFIER,encodepfunc,encodepfunc)<SUB>883</SUB>> ]
+"39147" [label = <(FIELD_IDENTIFIER,encodetile,encodetile)<SUB>884</SUB>> ]
+"39203" [label = <(&lt;operator&gt;.indirection,*sp-&gt;encodepfunc)<SUB>911</SUB>> ]
+"39220" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodetile)<SUB>915</SUB>> ]
+"39121" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>876</SUB>> ]
+"39122" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>876</SUB>> ]
+"39204" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;encodepfunc)<SUB>911</SUB>> ]
+"39222" [label = <(FIELD_IDENTIFIER,encodetile,encodetile)<SUB>915</SUB>> ]
+"39124" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>876</SUB>> ]
+"39206" [label = <(FIELD_IDENTIFIER,encodepfunc,encodepfunc)<SUB>911</SUB>> ]
+"39104" [label = <(METHOD,PredictorEncodeTile)<SUB>872</SUB>> ]
+"39232" [label = <(METHOD_RETURN,int)<SUB>872</SUB>> ]
+  "39111" -> "39117" 
+  "39115" -> "39128" 
+  "39128" -> "39134" 
+  "39133" -> "39141" 
+  "39137" -> "39147" 
+  "39143" -> "39152" 
+  "39149" -> "39157" 
+  "39164" -> "39168" 
+  "39168" -> "39175" 
+  "39171" -> "39177" 
+  "39176" -> "39182" 
+  "39216" -> "39227" 
+  "39227" -> "39230" 
+  "39230" -> "39232" 
+  "39117" -> "39121" 
+  "39117" -> "39115" 
+  "39134" -> "39133" 
+  "39138" -> "39137" 
+  "39144" -> "39143" 
+  "39151" -> "39149" 
+  "39157" -> "39161" 
+  "39157" -> "39164" 
+  "39173" -> "39171" 
+  "39177" -> "39176" 
+  "39181" -> "39187" 
+  "39181" -> "39198" 
+  "39198" -> "39206" 
+  "39198" -> "39222" 
+  "39218" -> "39216" 
+  "39139" -> "39138" 
+  "39145" -> "39144" 
+  "39152" -> "39153" 
+  "39153" -> "39151" 
+  "39161" -> "39162" 
+  "39162" -> "39232" 
+  "39175" -> "39173" 
+  "39182" -> "39181" 
+  "39187" -> "39192" 
+  "39192" -> "39195" 
+  "39195" -> "39232" 
+  "39202" -> "39210" 
+  "39210" -> "39213" 
+  "39213" -> "39198" 
+  "39219" -> "39218" 
+  "39120" -> "39115" 
+  "39141" -> "39139" 
+  "39147" -> "39145" 
+  "39203" -> "39202" 
+  "39220" -> "39219" 
+  "39121" -> "39124" 
+  "39122" -> "39120" 
+  "39204" -> "39203" 
+  "39222" -> "39220" 
+  "39124" -> "39122" 
+  "39206" -> "39204" 
+  "39104" -> "39111" 
+}

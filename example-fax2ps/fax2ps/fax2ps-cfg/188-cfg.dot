@@ -1,0 +1,48 @@
+digraph "TIFFFlushData" {  
+"6213" [label = <(RETURN,return (TIFFFlushData1(tif));,return (TIFFFlushData1(tif));)<SUB>156</SUB>> ]
+"6179" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_BEENWRITING) == 0)<SUB>148</SUB>> ]
+"6190" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_POSTENCODE)<SUB>150</SUB>> ]
+"6214" [label = <(TIFFFlushData1,TIFFFlushData1(tif))<SUB>156</SUB>> ]
+"6180" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BEENWRITING)<SUB>148</SUB>> ]
+"6187" [label = <(RETURN,return (1);,return (1);)<SUB>149</SUB>> ]
+"6191" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>150</SUB>> ]
+"6196" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_POSTENCODE)<SUB>152</SUB>> ]
+"6181" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>148</SUB>> ]
+"6193" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>150</SUB>> ]
+"6197" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>152</SUB>> ]
+"6200" [label = <(&lt;operator&gt;.not,~TIFF_POSTENCODE)<SUB>152</SUB>> ]
+"6203" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_postencode)(tif))<SUB>153</SUB>> ]
+"6183" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>148</SUB>> ]
+"6199" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>152</SUB>> ]
+"6204" [label = <(*tif-&gt;tif_postencode,(*tif-&gt;tif_postencode)(tif))<SUB>153</SUB>> ]
+"6211" [label = <(RETURN,return (0);,return (0);)<SUB>154</SUB>> ]
+"6205" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postencode)<SUB>153</SUB>> ]
+"6206" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postencode)<SUB>153</SUB>> ]
+"6208" [label = <(FIELD_IDENTIFIER,tif_postencode,tif_postencode)<SUB>153</SUB>> ]
+"6175" [label = <(METHOD,TIFFFlushData)<SUB>146</SUB>> ]
+"6216" [label = <(METHOD_RETURN,int)<SUB>146</SUB>> ]
+  "6213" -> "6216" 
+  "6179" -> "6187" 
+  "6179" -> "6193" 
+  "6190" -> "6199" 
+  "6190" -> "6214" 
+  "6214" -> "6213" 
+  "6180" -> "6179" 
+  "6187" -> "6216" 
+  "6191" -> "6190" 
+  "6196" -> "6208" 
+  "6181" -> "6180" 
+  "6193" -> "6191" 
+  "6197" -> "6200" 
+  "6200" -> "6196" 
+  "6203" -> "6211" 
+  "6203" -> "6214" 
+  "6183" -> "6181" 
+  "6199" -> "6197" 
+  "6204" -> "6203" 
+  "6211" -> "6216" 
+  "6205" -> "6204" 
+  "6206" -> "6205" 
+  "6208" -> "6206" 
+  "6175" -> "6183" 
+}

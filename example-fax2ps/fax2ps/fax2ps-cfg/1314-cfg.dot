@@ -1,0 +1,157 @@
+digraph "ChopUpSingleUncompressedStrip" {  
+"97071" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>7156</SUB>> ]
+"97084" [label = <(&lt;operator&gt;.assignment,bytecount = TIFFGetStrileByteCount(tif, 0))<SUB>7165</SUB>> ]
+"97101" [label = <(&lt;operator&gt;.assignment,offset = TIFFGetStrileByteCount(tif, 0))<SUB>7171</SUB>> ]
+"97106" [label = <(assert,assert(td-&gt;td_planarconfig == PLANARCONFIG_CONTIG))<SUB>7172</SUB>> ]
+"97135" [label = <(&lt;operator&gt;.assignment,rowblockbytes = TIFFVTileSize64(tif, rowblock))<SUB>7177</SUB>> ]
+"97187" [label = <(&lt;operator&gt;.assignment,nstrips = TIFFhowmany_32(td-&gt;td_imagelength, rowsperstrip))<SUB>7202</SUB>> ]
+"97228" [label = <(allocChoppedUpStripArrays,allocChoppedUpStripArrays(tif, nstrips, stripbytes, rowsperstrip))<SUB>7215</SUB>> ]
+"97073" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>7156</SUB>> ]
+"97086" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 0))<SUB>7165</SUB>> ]
+"97090" [label = <(&lt;operator&gt;.logicalAnd,bytecount == 0 &amp;&amp; tif-&gt;tif_mode != O_RDONLY)<SUB>7169</SUB>> ]
+"97103" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 0))<SUB>7171</SUB>> ]
+"97107" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>7172</SUB>> ]
+"97113" [label = <(&lt;operator&gt;.logicalAnd,(td-&gt;td_photometric == PHOTOMETRIC_YCBCR) &amp;&amp; (!isUpSampled(tif)))<SUB>7173</SUB>> ]
+"97137" [label = <(TIFFVTileSize64,TIFFVTileSize64(tif, rowblock))<SUB>7177</SUB>> ]
+"97141" [label = <(&lt;operator&gt;.greaterThan,rowblockbytes &gt; STRIP_SIZE_DEFAULT)<SUB>7182</SUB>> ]
+"97180" [label = <(&lt;operator&gt;.greaterEqualsThan,rowsperstrip &gt;= td-&gt;td_rowsperstrip)<SUB>7200</SUB>> ]
+"97189" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, rowsperstrip))<SUB>7202</SUB>> ]
+"97195" [label = <(&lt;operator&gt;.equals,nstrips == 0)<SUB>7203</SUB>> ]
+"97201" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDONLY &amp;&amp; nstrips &gt; 1000000 &amp;&amp;\012        (offset &gt;= TIFFGetFileSize(tif) ||\012         stripbytes &gt; (TIFFGetFileSize(tif) - offset) / (nstrips - 1)))<SUB>7208</SUB>> ]
+"97074" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7156</SUB>> ]
+"97091" [label = <(&lt;operator&gt;.equals,bytecount == 0)<SUB>7169</SUB>> ]
+"97094" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_mode != O_RDONLY)<SUB>7169</SUB>> ]
+"97100" [label = <(RETURN,return;,return;)<SUB>7170</SUB>> ]
+"97108" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>7172</SUB>> ]
+"97114" [label = <(&lt;operator&gt;.equals,td-&gt;td_photometric == PHOTOMETRIC_YCBCR)<SUB>7173</SUB>> ]
+"97119" [label = <(&lt;operator&gt;.logicalNot,!isUpSampled(tif))<SUB>7173</SUB>> ]
+"97123" [label = <(&lt;operator&gt;.assignment,rowblock = td-&gt;td_ycbcrsubsampling[1])<SUB>7174</SUB>> ]
+"97145" [label = <(&lt;operator&gt;.assignment,stripbytes = rowblockbytes)<SUB>7184</SUB>> ]
+"97148" [label = <(&lt;operator&gt;.assignment,rowsperstrip = rowblock)<SUB>7185</SUB>> ]
+"97182" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>7200</SUB>> ]
+"97186" [label = <(RETURN,return;,return;)<SUB>7201</SUB>> ]
+"97190" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>7202</SUB>> ]
+"97199" [label = <(RETURN,return;,return;)<SUB>7204</SUB>> ]
+"97202" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDONLY &amp;&amp; nstrips &gt; 1000000)<SUB>7208</SUB>> ]
+"97211" [label = <(&lt;operator&gt;.logicalOr,offset &gt;= TIFFGetFileSize(tif) ||\012         stripbytes &gt; (TIFFGetFileSize(tif) - offset) / (nstrips - 1))<SUB>7209</SUB>> ]
+"97227" [label = <(RETURN,return;,return;)<SUB>7212</SUB>> ]
+"97076" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7156</SUB>> ]
+"97095" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>7169</SUB>> ]
+"97110" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>7172</SUB>> ]
+"97115" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_photometric)<SUB>7173</SUB>> ]
+"97120" [label = <(isUpSampled,isUpSampled(tif))<SUB>7173</SUB>> ]
+"97125" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_ycbcrsubsampling[1])<SUB>7174</SUB>> ]
+"97132" [label = <(&lt;operator&gt;.assignment,rowblock = 1)<SUB>7176</SUB>> ]
+"97184" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>7200</SUB>> ]
+"97192" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>7202</SUB>> ]
+"97203" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDONLY)<SUB>7208</SUB>> ]
+"97208" [label = <(&lt;operator&gt;.greaterThan,nstrips &gt; 1000000)<SUB>7208</SUB>> ]
+"97212" [label = <(&lt;operator&gt;.greaterEqualsThan,offset &gt;= TIFFGetFileSize(tif))<SUB>7209</SUB>> ]
+"97216" [label = <(&lt;operator&gt;.greaterThan,stripbytes &gt; (TIFFGetFileSize(tif) - offset) / (nstrips - 1))<SUB>7210</SUB>> ]
+"97097" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>7169</SUB>> ]
+"97117" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>7173</SUB>> ]
+"97126" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_ycbcrsubsampling)<SUB>7174</SUB>> ]
+"97154" [label = <(&lt;operator&gt;.greaterThan,rowblockbytes &gt; 0)<SUB>7187</SUB>> ]
+"97204" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>7208</SUB>> ]
+"97214" [label = <(TIFFGetFileSize,TIFFGetFileSize(tif))<SUB>7209</SUB>> ]
+"97218" [label = <(&lt;operator&gt;.division,(TIFFGetFileSize(tif) - offset) / (nstrips - 1))<SUB>7210</SUB>> ]
+"97128" [label = <(FIELD_IDENTIFIER,td_ycbcrsubsampling,td_ycbcrsubsampling)<SUB>7174</SUB>> ]
+"97159" [label = <(&lt;operator&gt;.assignment,rowblocksperstrip = (uint32_t)(STRIP_SIZE_DEFAULT / rowblockbytes))<SUB>7190</SUB>> ]
+"97166" [label = <(&lt;operator&gt;.assignment,rowsperstrip = rowblocksperstrip * rowblock)<SUB>7191</SUB>> ]
+"97171" [label = <(&lt;operator&gt;.assignment,stripbytes = rowblocksperstrip * rowblockbytes)<SUB>7192</SUB>> ]
+"97206" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>7208</SUB>> ]
+"97219" [label = <(&lt;operator&gt;.subtraction,TIFFGetFileSize(tif) - offset)<SUB>7210</SUB>> ]
+"97223" [label = <(&lt;operator&gt;.subtraction,nstrips - 1)<SUB>7210</SUB>> ]
+"97161" [label = <(&lt;operator&gt;.cast,(uint32_t)(STRIP_SIZE_DEFAULT / rowblockbytes))<SUB>7190</SUB>> ]
+"97168" [label = <(&lt;operator&gt;.multiplication,rowblocksperstrip * rowblock)<SUB>7191</SUB>> ]
+"97173" [label = <(&lt;operator&gt;.multiplication,rowblocksperstrip * rowblockbytes)<SUB>7192</SUB>> ]
+"97178" [label = <(RETURN,return;,return;)<SUB>7195</SUB>> ]
+"97220" [label = <(TIFFGetFileSize,TIFFGetFileSize(tif))<SUB>7210</SUB>> ]
+"97162" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>7190</SUB>> ]
+"97163" [label = <(&lt;operator&gt;.division,STRIP_SIZE_DEFAULT / rowblockbytes)<SUB>7190</SUB>> ]
+"97067" [label = <(METHOD,ChopUpSingleUncompressedStrip)<SUB>7154</SUB>> ]
+"97233" [label = <(METHOD_RETURN,void)<SUB>7154</SUB>> ]
+  "97071" -> "97086" 
+  "97084" -> "97091" 
+  "97101" -> "97110" 
+  "97106" -> "97117" 
+  "97135" -> "97141" 
+  "97187" -> "97195" 
+  "97228" -> "97233" 
+  "97073" -> "97071" 
+  "97086" -> "97084" 
+  "97090" -> "97100" 
+  "97090" -> "97103" 
+  "97103" -> "97101" 
+  "97107" -> "97106" 
+  "97113" -> "97128" 
+  "97113" -> "97132" 
+  "97137" -> "97135" 
+  "97141" -> "97145" 
+  "97141" -> "97154" 
+  "97180" -> "97186" 
+  "97180" -> "97192" 
+  "97189" -> "97187" 
+  "97195" -> "97199" 
+  "97195" -> "97206" 
+  "97201" -> "97227" 
+  "97201" -> "97228" 
+  "97074" -> "97073" 
+  "97091" -> "97090" 
+  "97091" -> "97097" 
+  "97094" -> "97090" 
+  "97100" -> "97233" 
+  "97108" -> "97107" 
+  "97114" -> "97113" 
+  "97114" -> "97120" 
+  "97119" -> "97113" 
+  "97123" -> "97137" 
+  "97145" -> "97148" 
+  "97148" -> "97184" 
+  "97182" -> "97180" 
+  "97186" -> "97233" 
+  "97190" -> "97189" 
+  "97199" -> "97233" 
+  "97202" -> "97201" 
+  "97202" -> "97214" 
+  "97211" -> "97201" 
+  "97227" -> "97233" 
+  "97076" -> "97074" 
+  "97095" -> "97094" 
+  "97110" -> "97108" 
+  "97115" -> "97114" 
+  "97120" -> "97119" 
+  "97125" -> "97123" 
+  "97132" -> "97137" 
+  "97184" -> "97182" 
+  "97192" -> "97190" 
+  "97203" -> "97202" 
+  "97203" -> "97208" 
+  "97208" -> "97202" 
+  "97212" -> "97211" 
+  "97212" -> "97220" 
+  "97216" -> "97211" 
+  "97097" -> "97095" 
+  "97117" -> "97115" 
+  "97126" -> "97125" 
+  "97154" -> "97178" 
+  "97154" -> "97162" 
+  "97204" -> "97203" 
+  "97214" -> "97212" 
+  "97218" -> "97216" 
+  "97128" -> "97126" 
+  "97159" -> "97168" 
+  "97166" -> "97173" 
+  "97171" -> "97184" 
+  "97206" -> "97204" 
+  "97219" -> "97223" 
+  "97223" -> "97218" 
+  "97161" -> "97159" 
+  "97168" -> "97166" 
+  "97173" -> "97171" 
+  "97178" -> "97233" 
+  "97220" -> "97219" 
+  "97162" -> "97163" 
+  "97163" -> "97161" 
+  "97067" -> "97076" 
+}

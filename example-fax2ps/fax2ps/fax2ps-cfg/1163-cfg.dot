@@ -1,0 +1,95 @@
+digraph "TIFFReadRawStrip" {  
+"75433" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadRawStrip&quot;)<SUB>695</SUB>> ]
+"75437" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>696</SUB>> ]
+"75482" [label = <(&lt;operator&gt;.assignment,bytecount64 = TIFFGetStrileByteCount(tif, strip))<SUB>716</SUB>> ]
+"75520" [label = <(RETURN,return (TIFFReadRawStrip1(tif, strip, buf, bytecountm, module));,return (TIFFReadRawStrip1(tif, strip, buf, bytecountm, module));)<SUB>725</SUB>> ]
+"75439" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>696</SUB>> ]
+"75446" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 0))<SUB>700</SUB>> ]
+"75456" [label = <(&lt;operator&gt;.greaterEqualsThan,strip &gt;= td-&gt;td_nstrips)<SUB>702</SUB>> ]
+"75468" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>709</SUB>> ]
+"75484" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, strip))<SUB>716</SUB>> ]
+"75488" [label = <(&lt;operator&gt;.logicalAnd,size != (tmsize_t)(-1) &amp;&amp; (uint64_t)size &lt;= bytecount64)<SUB>717</SUB>> ]
+"75512" [label = <(&lt;operator&gt;.equals,bytecountm == 0)<SUB>721</SUB>> ]
+"75521" [label = <(TIFFReadRawStrip1,TIFFReadRawStrip1(tif, strip, buf, bytecountm, module))<SUB>725</SUB>> ]
+"75440" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>696</SUB>> ]
+"75447" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 0))<SUB>700</SUB>> ]
+"75451" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>701</SUB>> ]
+"75458" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>702</SUB>> ]
+"75462" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Strip out of range, max %&quot; PRIu32, strip,\012                      td-&gt;td_nstrips);,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Strip out of range, max %&quot; PRIu32, strip,\012                      td-&gt;td_nstrips);)<SUB>704</SUB>> ]
+"75463" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>707</SUB>> ]
+"75469" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>709</SUB>> ]
+"75474" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;))<SUB>711</SUB>> ]
+"75478" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>714</SUB>> ]
+"75489" [label = <(&lt;operator&gt;.notEquals,size != (tmsize_t)(-1))<SUB>717</SUB>> ]
+"75494" [label = <(&lt;operator&gt;.lessEqualsThan,(uint64_t)size &lt;= bytecount64)<SUB>717</SUB>> ]
+"75500" [label = <(&lt;operator&gt;.assignment,bytecountm = size)<SUB>718</SUB>> ]
+"75516" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>723</SUB>> ]
+"75442" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>696</SUB>> ]
+"75452" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>701</SUB>> ]
+"75460" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>702</SUB>> ]
+"75464" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>707</SUB>> ]
+"75471" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>709</SUB>> ]
+"75479" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>714</SUB>> ]
+"75491" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>717</SUB>> ]
+"75495" [label = <(&lt;operator&gt;.cast,(uint64_t)size)<SUB>717</SUB>> ]
+"75505" [label = <(&lt;operator&gt;.assignment,bytecountm = _TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>720</SUB>> ]
+"75517" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>723</SUB>> ]
+"75453" [label = <(&lt;operator&gt;.minus,-1)<SUB>701</SUB>> ]
+"75465" [label = <(&lt;operator&gt;.minus,-1)<SUB>707</SUB>> ]
+"75480" [label = <(&lt;operator&gt;.minus,-1)<SUB>714</SUB>> ]
+"75492" [label = <(&lt;operator&gt;.minus,-1)<SUB>717</SUB>> ]
+"75496" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>717</SUB>> ]
+"75507" [label = <(_TIFFCastUInt64ToSSize,_TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>720</SUB>> ]
+"75518" [label = <(&lt;operator&gt;.minus,-1)<SUB>723</SUB>> ]
+"75426" [label = <(METHOD,TIFFReadRawStrip)<SUB>693</SUB>> ]
+"75527" [label = <(METHOD_RETURN,tmsize_t)<SUB>693</SUB>> ]
+  "75433" -> "75442" 
+  "75437" -> "75447" 
+  "75482" -> "75492" 
+  "75520" -> "75527" 
+  "75439" -> "75437" 
+  "75446" -> "75453" 
+  "75446" -> "75460" 
+  "75456" -> "75462" 
+  "75456" -> "75471" 
+  "75468" -> "75474" 
+  "75468" -> "75484" 
+  "75484" -> "75482" 
+  "75488" -> "75500" 
+  "75488" -> "75507" 
+  "75512" -> "75518" 
+  "75512" -> "75521" 
+  "75521" -> "75520" 
+  "75440" -> "75439" 
+  "75447" -> "75446" 
+  "75451" -> "75527" 
+  "75458" -> "75456" 
+  "75462" -> "75465" 
+  "75463" -> "75527" 
+  "75469" -> "75468" 
+  "75474" -> "75480" 
+  "75478" -> "75527" 
+  "75489" -> "75496" 
+  "75489" -> "75488" 
+  "75494" -> "75488" 
+  "75500" -> "75512" 
+  "75516" -> "75527" 
+  "75442" -> "75440" 
+  "75452" -> "75451" 
+  "75460" -> "75458" 
+  "75464" -> "75463" 
+  "75471" -> "75469" 
+  "75479" -> "75478" 
+  "75491" -> "75489" 
+  "75495" -> "75494" 
+  "75505" -> "75512" 
+  "75517" -> "75516" 
+  "75453" -> "75452" 
+  "75465" -> "75464" 
+  "75480" -> "75479" 
+  "75492" -> "75491" 
+  "75496" -> "75495" 
+  "75507" -> "75505" 
+  "75518" -> "75517" 
+  "75426" -> "75433" 
+}

@@ -1,0 +1,181 @@
+digraph "PredictorSetup" {  
+"35742" [label = <(&lt;operator&gt;.assignment,module[] = &quot;PredictorSetup&quot;)<SUB>61</SUB>> ]
+"35746" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>63</SUB>> ]
+"35757" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>64</SUB>> ]
+"35854" [label = <(&lt;operator&gt;.assignment,sp-&gt;stride =\012        (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG ? td-&gt;td_samplesperpixel\012                                                    : 1))<SUB>107</SUB>> ]
+"35895" [label = <(RETURN,return 1;,return 1;)<SUB>120</SUB>> ]
+"35748" [label = <(PredictorState,PredictorState(tif))<SUB>63</SUB>> ]
+"35759" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>64</SUB>> ]
+"35764" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;predictor)<SUB>66</SUB>> ]
+"35855" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;stride)<SUB>107</SUB>> ]
+"35858" [label = <(&lt;operator&gt;.conditional,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG ? td-&gt;td_samplesperpixel\012                                                    : 1)<SUB>108</SUB>> ]
+"35869" [label = <(isTiled,isTiled(tif))<SUB>113</SUB>> ]
+"35887" [label = <(&lt;operator&gt;.equals,sp-&gt;rowsize == 0)<SUB>117</SUB>> ]
+"35760" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>64</SUB>> ]
+"35766" [label = <(FIELD_IDENTIFIER,predictor,predictor)<SUB>66</SUB>> ]
+"35770" [label = <(RETURN,return 1;,return 1;)<SUB>69</SUB>> ]
+"35845" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;\&quot;Predictor\&quot; value %d not supported&quot;,\012                          sp-&gt;predictor))<SUB>103</SUB>> ]
+"35852" [label = <(RETURN,return 0;,return 0;)<SUB>105</SUB>> ]
+"35857" [label = <(FIELD_IDENTIFIER,stride,stride)<SUB>107</SUB>> ]
+"35859" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>108</SUB>> ]
+"35864" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>108</SUB>> ]
+"35872" [label = <(&lt;operator&gt;.assignment,sp-&gt;rowsize = TIFFTileRowSize(tif))<SUB>114</SUB>> ]
+"35888" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;rowsize)<SUB>117</SUB>> ]
+"35893" [label = <(RETURN,return 0;,return 0;)<SUB>118</SUB>> ]
+"35751" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>63</SUB>> ]
+"35762" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>64</SUB>> ]
+"35775" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_bitspersample != 8 &amp;&amp; td-&gt;td_bitspersample != 16 &amp;&amp;\012                td-&gt;td_bitspersample != 32 &amp;&amp; td-&gt;td_bitspersample != 64)<SUB>71</SUB>> ]
+"35806" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_sampleformat != SAMPLEFORMAT_IEEEFP)<SUB>82</SUB>> ]
+"35816" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_bitspersample != 16 &amp;&amp; td-&gt;td_bitspersample != 24 &amp;&amp;\012                td-&gt;td_bitspersample != 32 &amp;&amp; td-&gt;td_bitspersample != 64)<SUB>91</SUB>> ]
+"35849" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;predictor)<SUB>104</SUB>> ]
+"35860" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>108</SUB>> ]
+"35866" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>108</SUB>> ]
+"35873" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;rowsize)<SUB>114</SUB>> ]
+"35876" [label = <(TIFFTileRowSize,TIFFTileRowSize(tif))<SUB>114</SUB>> ]
+"35880" [label = <(&lt;operator&gt;.assignment,sp-&gt;rowsize = TIFFScanlineSize(tif))<SUB>116</SUB>> ]
+"35890" [label = <(FIELD_IDENTIFIER,rowsize,rowsize)<SUB>117</SUB>> ]
+"35752" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>63</SUB>> ]
+"35753" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>63</SUB>> ]
+"35776" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_bitspersample != 8 &amp;&amp; td-&gt;td_bitspersample != 16 &amp;&amp;\012                td-&gt;td_bitspersample != 32)<SUB>71</SUB>> ]
+"35793" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 64)<SUB>72</SUB>> ]
+"35799" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                              &quot;Horizontal differencing \&quot;Predictor\&quot; not &quot;\012                              &quot;supported with %&quot; PRIu16 &quot;-bit samples&quot;,\012                              td-&gt;td_bitspersample);,TIFFErrorExtR(tif, module,\012                              &quot;Horizontal differencing \&quot;Predictor\&quot; not &quot;\012                              &quot;supported with %&quot; PRIu16 &quot;-bit samples&quot;,\012                              td-&gt;td_bitspersample);)<SUB>74</SUB>> ]
+"35800" [label = <(RETURN,return 0;,return 0;)<SUB>78</SUB>> ]
+"35807" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_sampleformat)<SUB>82</SUB>> ]
+"35812" [label = <(UNKNOWN,TIFFErrorExtR(\012                    tif, module,\012                    &quot;Floating point \&quot;Predictor\&quot; not supported with %&quot; PRIu16\012                    &quot; data format&quot;,\012                    td-&gt;td_sampleformat);,TIFFErrorExtR(\012                    tif, module,\012                    &quot;Floating point \&quot;Predictor\&quot; not supported with %&quot; PRIu16\012                    &quot; data format&quot;,\012                    td-&gt;td_sampleformat);)<SUB>84</SUB>> ]
+"35813" [label = <(RETURN,return 0;,return 0;)<SUB>89</SUB>> ]
+"35817" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_bitspersample != 16 &amp;&amp; td-&gt;td_bitspersample != 24 &amp;&amp;\012                td-&gt;td_bitspersample != 32)<SUB>91</SUB>> ]
+"35834" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 64)<SUB>92</SUB>> ]
+"35840" [label = <(UNKNOWN,TIFFErrorExtR(\012                    tif, module,\012                    &quot;Floating point \&quot;Predictor\&quot; not supported with %&quot; PRIu16\012                    &quot;-bit samples&quot;,\012                    td-&gt;td_bitspersample);,TIFFErrorExtR(\012                    tif, module,\012                    &quot;Floating point \&quot;Predictor\&quot; not supported with %&quot; PRIu16\012                    &quot;-bit samples&quot;,\012                    td-&gt;td_bitspersample);)<SUB>94</SUB>> ]
+"35841" [label = <(RETURN,return 0;,return 0;)<SUB>99</SUB>> ]
+"35851" [label = <(FIELD_IDENTIFIER,predictor,predictor)<SUB>104</SUB>> ]
+"35862" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>108</SUB>> ]
+"35875" [label = <(FIELD_IDENTIFIER,rowsize,rowsize)<SUB>114</SUB>> ]
+"35881" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;rowsize)<SUB>116</SUB>> ]
+"35884" [label = <(TIFFScanlineSize,TIFFScanlineSize(tif))<SUB>116</SUB>> ]
+"35755" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>63</SUB>> ]
+"35777" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_bitspersample != 8 &amp;&amp; td-&gt;td_bitspersample != 16)<SUB>71</SUB>> ]
+"35788" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 32)<SUB>72</SUB>> ]
+"35794" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>72</SUB>> ]
+"35809" [label = <(FIELD_IDENTIFIER,td_sampleformat,td_sampleformat)<SUB>82</SUB>> ]
+"35818" [label = <(&lt;operator&gt;.logicalAnd,td-&gt;td_bitspersample != 16 &amp;&amp; td-&gt;td_bitspersample != 24)<SUB>91</SUB>> ]
+"35829" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 32)<SUB>92</SUB>> ]
+"35835" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>92</SUB>> ]
+"35883" [label = <(FIELD_IDENTIFIER,rowsize,rowsize)<SUB>116</SUB>> ]
+"35778" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 8)<SUB>71</SUB>> ]
+"35783" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 16)<SUB>71</SUB>> ]
+"35789" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>72</SUB>> ]
+"35796" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>72</SUB>> ]
+"35819" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 16)<SUB>91</SUB>> ]
+"35824" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_bitspersample != 24)<SUB>91</SUB>> ]
+"35830" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>92</SUB>> ]
+"35837" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>92</SUB>> ]
+"35779" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>71</SUB>> ]
+"35784" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>71</SUB>> ]
+"35791" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>72</SUB>> ]
+"35820" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>91</SUB>> ]
+"35825" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>91</SUB>> ]
+"35832" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>92</SUB>> ]
+"35781" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>71</SUB>> ]
+"35786" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>71</SUB>> ]
+"35822" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>91</SUB>> ]
+"35827" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>91</SUB>> ]
+"35738" [label = <(METHOD,PredictorSetup)<SUB>59</SUB>> ]
+"35897" [label = <(METHOD_RETURN,int)<SUB>59</SUB>> ]
+  "35742" -> "35748" 
+  "35746" -> "35762" 
+  "35757" -> "35766" 
+  "35854" -> "35869" 
+  "35895" -> "35897" 
+  "35748" -> "35752" 
+  "35748" -> "35746" 
+  "35759" -> "35757" 
+  "35764" -> "35770" 
+  "35764" -> "35781" 
+  "35764" -> "35809" 
+  "35764" -> "35851" 
+  "35855" -> "35862" 
+  "35858" -> "35854" 
+  "35869" -> "35875" 
+  "35869" -> "35883" 
+  "35887" -> "35893" 
+  "35887" -> "35895" 
+  "35760" -> "35759" 
+  "35766" -> "35764" 
+  "35770" -> "35897" 
+  "35845" -> "35852" 
+  "35852" -> "35897" 
+  "35857" -> "35855" 
+  "35859" -> "35866" 
+  "35859" -> "35858" 
+  "35864" -> "35858" 
+  "35872" -> "35890" 
+  "35888" -> "35887" 
+  "35893" -> "35897" 
+  "35751" -> "35746" 
+  "35762" -> "35760" 
+  "35775" -> "35799" 
+  "35775" -> "35857" 
+  "35806" -> "35812" 
+  "35806" -> "35822" 
+  "35816" -> "35840" 
+  "35816" -> "35857" 
+  "35849" -> "35845" 
+  "35860" -> "35859" 
+  "35866" -> "35864" 
+  "35873" -> "35876" 
+  "35876" -> "35872" 
+  "35880" -> "35890" 
+  "35890" -> "35888" 
+  "35752" -> "35755" 
+  "35753" -> "35751" 
+  "35776" -> "35775" 
+  "35776" -> "35796" 
+  "35793" -> "35775" 
+  "35799" -> "35800" 
+  "35800" -> "35897" 
+  "35807" -> "35806" 
+  "35812" -> "35813" 
+  "35813" -> "35897" 
+  "35817" -> "35816" 
+  "35817" -> "35837" 
+  "35834" -> "35816" 
+  "35840" -> "35841" 
+  "35841" -> "35897" 
+  "35851" -> "35849" 
+  "35862" -> "35860" 
+  "35875" -> "35873" 
+  "35881" -> "35884" 
+  "35884" -> "35880" 
+  "35755" -> "35753" 
+  "35777" -> "35776" 
+  "35777" -> "35791" 
+  "35788" -> "35776" 
+  "35794" -> "35793" 
+  "35809" -> "35807" 
+  "35818" -> "35817" 
+  "35818" -> "35832" 
+  "35829" -> "35817" 
+  "35835" -> "35834" 
+  "35883" -> "35881" 
+  "35778" -> "35777" 
+  "35778" -> "35786" 
+  "35783" -> "35777" 
+  "35789" -> "35788" 
+  "35796" -> "35794" 
+  "35819" -> "35818" 
+  "35819" -> "35827" 
+  "35824" -> "35818" 
+  "35830" -> "35829" 
+  "35837" -> "35835" 
+  "35779" -> "35778" 
+  "35784" -> "35783" 
+  "35791" -> "35789" 
+  "35820" -> "35819" 
+  "35825" -> "35824" 
+  "35832" -> "35830" 
+  "35781" -> "35779" 
+  "35786" -> "35784" 
+  "35822" -> "35820" 
+  "35827" -> "35825" 
+  "35738" -> "35742" 
+}

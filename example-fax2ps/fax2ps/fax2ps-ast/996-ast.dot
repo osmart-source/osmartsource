@@ -1,0 +1,493 @@
+digraph "TIFFReadRGBATileExt" {  
+"63200" [label = <(METHOD,TIFFReadRGBATileExt)<SUB>3261</SUB>> ]
+"63201" [label = <(PARAM,TIFF *tif)<SUB>3261</SUB>> ]
+"63202" [label = <(PARAM,uint32_t col)<SUB>3261</SUB>> ]
+"63203" [label = <(PARAM,uint32_t row)<SUB>3261</SUB>> ]
+"63204" [label = <(PARAM,uint32_t *raster)<SUB>3261</SUB>> ]
+"63205" [label = <(PARAM,int stop_on_error)<SUB>3262</SUB>> ]
+"63206" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3263</SUB>> ]
+"63207" [label = <(LOCAL,char[1024] emsg: char[1024])<SUB>3264</SUB>> ]
+"63208" [label = <(&lt;operator&gt;.assignment,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>3264</SUB>> ]
+"63209" [label = <(IDENTIFIER,emsg,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>3264</SUB>> ]
+"63210" [label = <(LITERAL,&quot;&quot;,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>3264</SUB>> ]
+"63211" [label = <(LOCAL,TIFFRGBAImage img: TIFFRGBAImage)<SUB>3265</SUB>> ]
+"63212" [label = <(LOCAL,int ok: int)<SUB>3266</SUB>> ]
+"63213" [label = <(LOCAL,uint32_t tile_xsize: uint32_t)<SUB>3267</SUB>> ]
+"63214" [label = <(LOCAL,uint32_t tile_ysize: uint32_t)<SUB>3267</SUB>> ]
+"63215" [label = <(LOCAL,uint32_t read_xsize: uint32_t)<SUB>3268</SUB>> ]
+"63216" [label = <(LOCAL,uint32_t read_ysize: uint32_t)<SUB>3268</SUB>> ]
+"63217" [label = <(LOCAL,uint32_t i_row: uint32_t)<SUB>3269</SUB>> ]
+"63218" [label = <(CONTROL_STRUCTURE,if (!TIFFIsTiled(tif)),if (!TIFFIsTiled(tif)))<SUB>3276</SUB>> ]
+"63219" [label = <(&lt;operator&gt;.logicalNot,!TIFFIsTiled(tif))<SUB>3276</SUB>> ]
+"63220" [label = <(TIFFIsTiled,TIFFIsTiled(tif))<SUB>3276</SUB>> ]
+"63221" [label = <(IDENTIFIER,tif,TIFFIsTiled(tif))<SUB>3276</SUB>> ]
+"63222" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3277</SUB>> ]
+"63223" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Can't use TIFFReadRGBATile() with striped file.&quot;))<SUB>3278</SUB>> ]
+"63224" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Can't use TIFFReadRGBATile() with striped file.&quot;))<SUB>3278</SUB>> ]
+"63225" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>3278</SUB>> ]
+"63226" [label = <(IDENTIFIER,tif,TIFFFileName(tif))<SUB>3278</SUB>> ]
+"63227" [label = <(LITERAL,&quot;Can't use TIFFReadRGBATile() with striped file.&quot;,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Can't use TIFFReadRGBATile() with striped file.&quot;))<SUB>3279</SUB>> ]
+"63228" [label = <(RETURN,return (0);,return (0);)<SUB>3280</SUB>> ]
+"63229" [label = <(LITERAL,0,return (0);)<SUB>3280</SUB>> ]
+"63230" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_TILEWIDTH, &amp;tile_xsize))<SUB>3283</SUB>> ]
+"63231" [label = <(IDENTIFIER,tif,TIFFGetFieldDefaulted(tif, TIFFTAG_TILEWIDTH, &amp;tile_xsize))<SUB>3283</SUB>> ]
+"63232" [label = <(IDENTIFIER,TIFFTAG_TILEWIDTH,TIFFGetFieldDefaulted(tif, TIFFTAG_TILEWIDTH, &amp;tile_xsize))<SUB>3283</SUB>> ]
+"63233" [label = <(&lt;operator&gt;.addressOf,&amp;tile_xsize)<SUB>3283</SUB>> ]
+"63234" [label = <(IDENTIFIER,tile_xsize,TIFFGetFieldDefaulted(tif, TIFFTAG_TILEWIDTH, &amp;tile_xsize))<SUB>3283</SUB>> ]
+"63235" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_TILELENGTH, &amp;tile_ysize))<SUB>3284</SUB>> ]
+"63236" [label = <(IDENTIFIER,tif,TIFFGetFieldDefaulted(tif, TIFFTAG_TILELENGTH, &amp;tile_ysize))<SUB>3284</SUB>> ]
+"63237" [label = <(IDENTIFIER,TIFFTAG_TILELENGTH,TIFFGetFieldDefaulted(tif, TIFFTAG_TILELENGTH, &amp;tile_ysize))<SUB>3284</SUB>> ]
+"63238" [label = <(&lt;operator&gt;.addressOf,&amp;tile_ysize)<SUB>3284</SUB>> ]
+"63239" [label = <(IDENTIFIER,tile_ysize,TIFFGetFieldDefaulted(tif, TIFFTAG_TILELENGTH, &amp;tile_ysize))<SUB>3284</SUB>> ]
+"63240" [label = <(CONTROL_STRUCTURE,if ((col % tile_xsize) != 0 || (row % tile_ysize) != 0),if ((col % tile_xsize) != 0 || (row % tile_ysize) != 0))<SUB>3285</SUB>> ]
+"63241" [label = <(&lt;operator&gt;.logicalOr,(col % tile_xsize) != 0 || (row % tile_ysize) != 0)<SUB>3285</SUB>> ]
+"63242" [label = <(&lt;operator&gt;.notEquals,(col % tile_xsize) != 0)<SUB>3285</SUB>> ]
+"63243" [label = <(&lt;operator&gt;.modulo,col % tile_xsize)<SUB>3285</SUB>> ]
+"63244" [label = <(IDENTIFIER,col,col % tile_xsize)<SUB>3285</SUB>> ]
+"63245" [label = <(IDENTIFIER,tile_xsize,col % tile_xsize)<SUB>3285</SUB>> ]
+"63246" [label = <(LITERAL,0,(col % tile_xsize) != 0)<SUB>3285</SUB>> ]
+"63247" [label = <(&lt;operator&gt;.notEquals,(row % tile_ysize) != 0)<SUB>3285</SUB>> ]
+"63248" [label = <(&lt;operator&gt;.modulo,row % tile_ysize)<SUB>3285</SUB>> ]
+"63249" [label = <(IDENTIFIER,row,row % tile_ysize)<SUB>3285</SUB>> ]
+"63250" [label = <(IDENTIFIER,tile_ysize,row % tile_ysize)<SUB>3285</SUB>> ]
+"63251" [label = <(LITERAL,0,(row % tile_ysize) != 0)<SUB>3285</SUB>> ]
+"63252" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3286</SUB>> ]
+"63253" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Row/col passed to TIFFReadRGBATile() must be top&quot;\012                      &quot;left corner of a tile.&quot;))<SUB>3287</SUB>> ]
+"63254" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Row/col passed to TIFFReadRGBATile() must be top&quot;\012                      &quot;left corner of a tile.&quot;))<SUB>3287</SUB>> ]
+"63255" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>3287</SUB>> ]
+"63256" [label = <(IDENTIFIER,tif,TIFFFileName(tif))<SUB>3287</SUB>> ]
+"63257" [label = <(LITERAL,&quot;Row/col passed to TIFFReadRGBATile() must be top&quot;\012                      &quot;left corner of a tile.&quot;,TIFFErrorExtR(tif, TIFFFileName(tif),\012                      &quot;Row/col passed to TIFFReadRGBATile() must be top&quot;\012                      &quot;left corner of a tile.&quot;))<SUB>3288</SUB>> ]
+"63258" [label = <(RETURN,return (0);,return (0);)<SUB>3290</SUB>> ]
+"63259" [label = <(LITERAL,0,return (0);)<SUB>3290</SUB>> ]
+"63260" [label = <(CONTROL_STRUCTURE,if (!TIFFRGBAImageOK(tif, emsg) ||\012        !TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg)),if (!TIFFRGBAImageOK(tif, emsg) ||\012        !TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg)))<SUB>3297</SUB>> ]
+"63261" [label = <(&lt;operator&gt;.logicalOr,!TIFFRGBAImageOK(tif, emsg) ||\012        !TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3297</SUB>> ]
+"63262" [label = <(&lt;operator&gt;.logicalNot,!TIFFRGBAImageOK(tif, emsg))<SUB>3297</SUB>> ]
+"63263" [label = <(TIFFRGBAImageOK,TIFFRGBAImageOK(tif, emsg))<SUB>3297</SUB>> ]
+"63264" [label = <(IDENTIFIER,tif,TIFFRGBAImageOK(tif, emsg))<SUB>3297</SUB>> ]
+"63265" [label = <(IDENTIFIER,emsg,TIFFRGBAImageOK(tif, emsg))<SUB>3297</SUB>> ]
+"63266" [label = <(&lt;operator&gt;.logicalNot,!TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3298</SUB>> ]
+"63267" [label = <(TIFFRGBAImageBegin,TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3298</SUB>> ]
+"63268" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>3298</SUB>> ]
+"63269" [label = <(IDENTIFIER,img,TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3298</SUB>> ]
+"63270" [label = <(IDENTIFIER,tif,TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3298</SUB>> ]
+"63271" [label = <(IDENTIFIER,stop_on_error,TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3298</SUB>> ]
+"63272" [label = <(IDENTIFIER,emsg,TIFFRGBAImageBegin(&amp;img, tif, stop_on_error, emsg))<SUB>3298</SUB>> ]
+"63273" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3299</SUB>> ]
+"63274" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>3300</SUB>> ]
+"63275" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>3300</SUB>> ]
+"63276" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>3300</SUB>> ]
+"63277" [label = <(IDENTIFIER,tif,TIFFFileName(tif))<SUB>3300</SUB>> ]
+"63278" [label = <(LITERAL,&quot;%s&quot;,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>3300</SUB>> ]
+"63279" [label = <(IDENTIFIER,emsg,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>3300</SUB>> ]
+"63280" [label = <(RETURN,return (0);,return (0);)<SUB>3301</SUB>> ]
+"63281" [label = <(LITERAL,0,return (0);)<SUB>3301</SUB>> ]
+"63282" [label = <(CONTROL_STRUCTURE,if (row + tile_ysize &gt; img.height),if (row + tile_ysize &gt; img.height))<SUB>3311</SUB>> ]
+"63283" [label = <(&lt;operator&gt;.greaterThan,row + tile_ysize &gt; img.height)<SUB>3311</SUB>> ]
+"63284" [label = <(&lt;operator&gt;.addition,row + tile_ysize)<SUB>3311</SUB>> ]
+"63285" [label = <(IDENTIFIER,row,row + tile_ysize)<SUB>3311</SUB>> ]
+"63286" [label = <(IDENTIFIER,tile_ysize,row + tile_ysize)<SUB>3311</SUB>> ]
+"63287" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>3311</SUB>> ]
+"63288" [label = <(IDENTIFIER,img,row + tile_ysize &gt; img.height)<SUB>3311</SUB>> ]
+"63289" [label = <(FIELD_IDENTIFIER,height,height)<SUB>3311</SUB>> ]
+"63290" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3312</SUB>> ]
+"63291" [label = <(&lt;operator&gt;.assignment,read_ysize = img.height - row)<SUB>3312</SUB>> ]
+"63292" [label = <(IDENTIFIER,read_ysize,read_ysize = img.height - row)<SUB>3312</SUB>> ]
+"63293" [label = <(&lt;operator&gt;.subtraction,img.height - row)<SUB>3312</SUB>> ]
+"63294" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>3312</SUB>> ]
+"63295" [label = <(IDENTIFIER,img,img.height - row)<SUB>3312</SUB>> ]
+"63296" [label = <(FIELD_IDENTIFIER,height,height)<SUB>3312</SUB>> ]
+"63297" [label = <(IDENTIFIER,row,img.height - row)<SUB>3312</SUB>> ]
+"63298" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3314</SUB>> ]
+"63299" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3314</SUB>> ]
+"63300" [label = <(&lt;operator&gt;.assignment,read_ysize = tile_ysize)<SUB>3314</SUB>> ]
+"63301" [label = <(IDENTIFIER,read_ysize,read_ysize = tile_ysize)<SUB>3314</SUB>> ]
+"63302" [label = <(IDENTIFIER,tile_ysize,read_ysize = tile_ysize)<SUB>3314</SUB>> ]
+"63303" [label = <(CONTROL_STRUCTURE,if (col + tile_xsize &gt; img.width),if (col + tile_xsize &gt; img.width))<SUB>3316</SUB>> ]
+"63304" [label = <(&lt;operator&gt;.greaterThan,col + tile_xsize &gt; img.width)<SUB>3316</SUB>> ]
+"63305" [label = <(&lt;operator&gt;.addition,col + tile_xsize)<SUB>3316</SUB>> ]
+"63306" [label = <(IDENTIFIER,col,col + tile_xsize)<SUB>3316</SUB>> ]
+"63307" [label = <(IDENTIFIER,tile_xsize,col + tile_xsize)<SUB>3316</SUB>> ]
+"63308" [label = <(&lt;operator&gt;.fieldAccess,img.width)<SUB>3316</SUB>> ]
+"63309" [label = <(IDENTIFIER,img,col + tile_xsize &gt; img.width)<SUB>3316</SUB>> ]
+"63310" [label = <(FIELD_IDENTIFIER,width,width)<SUB>3316</SUB>> ]
+"63311" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3317</SUB>> ]
+"63312" [label = <(&lt;operator&gt;.assignment,read_xsize = img.width - col)<SUB>3317</SUB>> ]
+"63313" [label = <(IDENTIFIER,read_xsize,read_xsize = img.width - col)<SUB>3317</SUB>> ]
+"63314" [label = <(&lt;operator&gt;.subtraction,img.width - col)<SUB>3317</SUB>> ]
+"63315" [label = <(&lt;operator&gt;.fieldAccess,img.width)<SUB>3317</SUB>> ]
+"63316" [label = <(IDENTIFIER,img,img.width - col)<SUB>3317</SUB>> ]
+"63317" [label = <(FIELD_IDENTIFIER,width,width)<SUB>3317</SUB>> ]
+"63318" [label = <(IDENTIFIER,col,img.width - col)<SUB>3317</SUB>> ]
+"63319" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3319</SUB>> ]
+"63320" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3319</SUB>> ]
+"63321" [label = <(&lt;operator&gt;.assignment,read_xsize = tile_xsize)<SUB>3319</SUB>> ]
+"63322" [label = <(IDENTIFIER,read_xsize,read_xsize = tile_xsize)<SUB>3319</SUB>> ]
+"63323" [label = <(IDENTIFIER,tile_xsize,read_xsize = tile_xsize)<SUB>3319</SUB>> ]
+"63324" [label = <(&lt;operator&gt;.assignment,img.row_offset = row)<SUB>3325</SUB>> ]
+"63325" [label = <(&lt;operator&gt;.fieldAccess,img.row_offset)<SUB>3325</SUB>> ]
+"63326" [label = <(IDENTIFIER,img,img.row_offset = row)<SUB>3325</SUB>> ]
+"63327" [label = <(FIELD_IDENTIFIER,row_offset,row_offset)<SUB>3325</SUB>> ]
+"63328" [label = <(IDENTIFIER,row,img.row_offset = row)<SUB>3325</SUB>> ]
+"63329" [label = <(&lt;operator&gt;.assignment,img.col_offset = col)<SUB>3326</SUB>> ]
+"63330" [label = <(&lt;operator&gt;.fieldAccess,img.col_offset)<SUB>3326</SUB>> ]
+"63331" [label = <(IDENTIFIER,img,img.col_offset = col)<SUB>3326</SUB>> ]
+"63332" [label = <(FIELD_IDENTIFIER,col_offset,col_offset)<SUB>3326</SUB>> ]
+"63333" [label = <(IDENTIFIER,col,img.col_offset = col)<SUB>3326</SUB>> ]
+"63334" [label = <(&lt;operator&gt;.assignment,ok = TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63335" [label = <(IDENTIFIER,ok,ok = TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63336" [label = <(TIFFRGBAImageGet,TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63337" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>3328</SUB>> ]
+"63338" [label = <(IDENTIFIER,img,TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63339" [label = <(IDENTIFIER,raster,TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63340" [label = <(IDENTIFIER,read_xsize,TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63341" [label = <(IDENTIFIER,read_ysize,TIFFRGBAImageGet(&amp;img, raster, read_xsize, read_ysize))<SUB>3328</SUB>> ]
+"63342" [label = <(TIFFRGBAImageEnd,TIFFRGBAImageEnd(&amp;img))<SUB>3330</SUB>> ]
+"63343" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>3330</SUB>> ]
+"63344" [label = <(IDENTIFIER,img,TIFFRGBAImageEnd(&amp;img))<SUB>3330</SUB>> ]
+"63345" [label = <(CONTROL_STRUCTURE,if (read_xsize == tile_xsize &amp;&amp; read_ysize == tile_ysize),if (read_xsize == tile_xsize &amp;&amp; read_ysize == tile_ysize))<SUB>3340</SUB>> ]
+"63346" [label = <(&lt;operator&gt;.logicalAnd,read_xsize == tile_xsize &amp;&amp; read_ysize == tile_ysize)<SUB>3340</SUB>> ]
+"63347" [label = <(&lt;operator&gt;.equals,read_xsize == tile_xsize)<SUB>3340</SUB>> ]
+"63348" [label = <(IDENTIFIER,read_xsize,read_xsize == tile_xsize)<SUB>3340</SUB>> ]
+"63349" [label = <(IDENTIFIER,tile_xsize,read_xsize == tile_xsize)<SUB>3340</SUB>> ]
+"63350" [label = <(&lt;operator&gt;.equals,read_ysize == tile_ysize)<SUB>3340</SUB>> ]
+"63351" [label = <(IDENTIFIER,read_ysize,read_ysize == tile_ysize)<SUB>3340</SUB>> ]
+"63352" [label = <(IDENTIFIER,tile_ysize,read_ysize == tile_ysize)<SUB>3340</SUB>> ]
+"63353" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3341</SUB>> ]
+"63354" [label = <(RETURN,return (ok);,return (ok);)<SUB>3341</SUB>> ]
+"63355" [label = <(IDENTIFIER,ok,return (ok);)<SUB>3341</SUB>> ]
+"63356" [label = <(CONTROL_STRUCTURE,for (i_row = 0;i_row &lt; read_ysize;i_row++),for (i_row = 0;i_row &lt; read_ysize;i_row++))<SUB>3343</SUB>> ]
+"63357" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3343</SUB>> ]
+"63358" [label = <(&lt;operator&gt;.assignment,i_row = 0)<SUB>3343</SUB>> ]
+"63359" [label = <(IDENTIFIER,i_row,i_row = 0)<SUB>3343</SUB>> ]
+"63360" [label = <(LITERAL,0,i_row = 0)<SUB>3343</SUB>> ]
+"63361" [label = <(&lt;operator&gt;.lessThan,i_row &lt; read_ysize)<SUB>3343</SUB>> ]
+"63362" [label = <(IDENTIFIER,i_row,i_row &lt; read_ysize)<SUB>3343</SUB>> ]
+"63363" [label = <(IDENTIFIER,read_ysize,i_row &lt; read_ysize)<SUB>3343</SUB>> ]
+"63364" [label = <(&lt;operator&gt;.postIncrement,i_row++)<SUB>3343</SUB>> ]
+"63365" [label = <(IDENTIFIER,i_row,i_row++)<SUB>3343</SUB>> ]
+"63366" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3344</SUB>> ]
+"63367" [label = <(memmove,memmove(raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize,\012                raster + (size_t)(read_ysize - i_row - 1) * read_xsize,\012                read_xsize * sizeof(uint32_t)))<SUB>3345</SUB>> ]
+"63368" [label = <(&lt;operator&gt;.addition,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3345</SUB>> ]
+"63369" [label = <(IDENTIFIER,raster,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3345</SUB>> ]
+"63370" [label = <(&lt;operator&gt;.multiplication,(size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3345</SUB>> ]
+"63371" [label = <(&lt;operator&gt;.cast,(size_t)(tile_ysize - i_row - 1))<SUB>3345</SUB>> ]
+"63372" [label = <(UNKNOWN,size_t,size_t)<SUB>3345</SUB>> ]
+"63373" [label = <(&lt;operator&gt;.subtraction,tile_ysize - i_row - 1)<SUB>3345</SUB>> ]
+"63374" [label = <(&lt;operator&gt;.subtraction,tile_ysize - i_row)<SUB>3345</SUB>> ]
+"63375" [label = <(IDENTIFIER,tile_ysize,tile_ysize - i_row)<SUB>3345</SUB>> ]
+"63376" [label = <(IDENTIFIER,i_row,tile_ysize - i_row)<SUB>3345</SUB>> ]
+"63377" [label = <(LITERAL,1,tile_ysize - i_row - 1)<SUB>3345</SUB>> ]
+"63378" [label = <(IDENTIFIER,tile_xsize,(size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3345</SUB>> ]
+"63379" [label = <(&lt;operator&gt;.addition,raster + (size_t)(read_ysize - i_row - 1) * read_xsize)<SUB>3346</SUB>> ]
+"63380" [label = <(IDENTIFIER,raster,raster + (size_t)(read_ysize - i_row - 1) * read_xsize)<SUB>3346</SUB>> ]
+"63381" [label = <(&lt;operator&gt;.multiplication,(size_t)(read_ysize - i_row - 1) * read_xsize)<SUB>3346</SUB>> ]
+"63382" [label = <(&lt;operator&gt;.cast,(size_t)(read_ysize - i_row - 1))<SUB>3346</SUB>> ]
+"63383" [label = <(UNKNOWN,size_t,size_t)<SUB>3346</SUB>> ]
+"63384" [label = <(&lt;operator&gt;.subtraction,read_ysize - i_row - 1)<SUB>3346</SUB>> ]
+"63385" [label = <(&lt;operator&gt;.subtraction,read_ysize - i_row)<SUB>3346</SUB>> ]
+"63386" [label = <(IDENTIFIER,read_ysize,read_ysize - i_row)<SUB>3346</SUB>> ]
+"63387" [label = <(IDENTIFIER,i_row,read_ysize - i_row)<SUB>3346</SUB>> ]
+"63388" [label = <(LITERAL,1,read_ysize - i_row - 1)<SUB>3346</SUB>> ]
+"63389" [label = <(IDENTIFIER,read_xsize,(size_t)(read_ysize - i_row - 1) * read_xsize)<SUB>3346</SUB>> ]
+"63390" [label = <(&lt;operator&gt;.multiplication,read_xsize * sizeof(uint32_t))<SUB>3347</SUB>> ]
+"63391" [label = <(IDENTIFIER,read_xsize,read_xsize * sizeof(uint32_t))<SUB>3347</SUB>> ]
+"63392" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>3347</SUB>> ]
+"63393" [label = <(IDENTIFIER,uint32_t,sizeof(uint32_t))<SUB>3347</SUB>> ]
+"63394" [label = <(_TIFFmemset,_TIFFmemset(raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize +\012                        read_xsize,\012                    0, sizeof(uint32_t) * (tile_xsize - read_xsize)))<SUB>3348</SUB>> ]
+"63395" [label = <(&lt;operator&gt;.addition,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize +\012                        read_xsize)<SUB>3348</SUB>> ]
+"63396" [label = <(&lt;operator&gt;.addition,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3348</SUB>> ]
+"63397" [label = <(IDENTIFIER,raster,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3348</SUB>> ]
+"63398" [label = <(&lt;operator&gt;.multiplication,(size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3348</SUB>> ]
+"63399" [label = <(&lt;operator&gt;.cast,(size_t)(tile_ysize - i_row - 1))<SUB>3348</SUB>> ]
+"63400" [label = <(UNKNOWN,size_t,size_t)<SUB>3348</SUB>> ]
+"63401" [label = <(&lt;operator&gt;.subtraction,tile_ysize - i_row - 1)<SUB>3348</SUB>> ]
+"63402" [label = <(&lt;operator&gt;.subtraction,tile_ysize - i_row)<SUB>3348</SUB>> ]
+"63403" [label = <(IDENTIFIER,tile_ysize,tile_ysize - i_row)<SUB>3348</SUB>> ]
+"63404" [label = <(IDENTIFIER,i_row,tile_ysize - i_row)<SUB>3348</SUB>> ]
+"63405" [label = <(LITERAL,1,tile_ysize - i_row - 1)<SUB>3348</SUB>> ]
+"63406" [label = <(IDENTIFIER,tile_xsize,(size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3348</SUB>> ]
+"63407" [label = <(IDENTIFIER,read_xsize,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize +\012                        read_xsize)<SUB>3349</SUB>> ]
+"63408" [label = <(LITERAL,0,_TIFFmemset(raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize +\012                        read_xsize,\012                    0, sizeof(uint32_t) * (tile_xsize - read_xsize)))<SUB>3350</SUB>> ]
+"63409" [label = <(&lt;operator&gt;.multiplication,sizeof(uint32_t) * (tile_xsize - read_xsize))<SUB>3350</SUB>> ]
+"63410" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>3350</SUB>> ]
+"63411" [label = <(IDENTIFIER,uint32_t,sizeof(uint32_t))<SUB>3350</SUB>> ]
+"63412" [label = <(&lt;operator&gt;.subtraction,tile_xsize - read_xsize)<SUB>3350</SUB>> ]
+"63413" [label = <(IDENTIFIER,tile_xsize,tile_xsize - read_xsize)<SUB>3350</SUB>> ]
+"63414" [label = <(IDENTIFIER,read_xsize,tile_xsize - read_xsize)<SUB>3350</SUB>> ]
+"63415" [label = <(CONTROL_STRUCTURE,for (i_row = read_ysize;i_row &lt; tile_ysize;i_row++),for (i_row = read_ysize;i_row &lt; tile_ysize;i_row++))<SUB>3353</SUB>> ]
+"63416" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3353</SUB>> ]
+"63417" [label = <(&lt;operator&gt;.assignment,i_row = read_ysize)<SUB>3353</SUB>> ]
+"63418" [label = <(IDENTIFIER,i_row,i_row = read_ysize)<SUB>3353</SUB>> ]
+"63419" [label = <(IDENTIFIER,read_ysize,i_row = read_ysize)<SUB>3353</SUB>> ]
+"63420" [label = <(&lt;operator&gt;.lessThan,i_row &lt; tile_ysize)<SUB>3353</SUB>> ]
+"63421" [label = <(IDENTIFIER,i_row,i_row &lt; tile_ysize)<SUB>3353</SUB>> ]
+"63422" [label = <(IDENTIFIER,tile_ysize,i_row &lt; tile_ysize)<SUB>3353</SUB>> ]
+"63423" [label = <(&lt;operator&gt;.postIncrement,i_row++)<SUB>3353</SUB>> ]
+"63424" [label = <(IDENTIFIER,i_row,i_row++)<SUB>3353</SUB>> ]
+"63425" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3354</SUB>> ]
+"63426" [label = <(_TIFFmemset,_TIFFmemset(raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize, 0,\012                    sizeof(uint32_t) * tile_xsize))<SUB>3355</SUB>> ]
+"63427" [label = <(&lt;operator&gt;.addition,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3355</SUB>> ]
+"63428" [label = <(IDENTIFIER,raster,raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3355</SUB>> ]
+"63429" [label = <(&lt;operator&gt;.multiplication,(size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3355</SUB>> ]
+"63430" [label = <(&lt;operator&gt;.cast,(size_t)(tile_ysize - i_row - 1))<SUB>3355</SUB>> ]
+"63431" [label = <(UNKNOWN,size_t,size_t)<SUB>3355</SUB>> ]
+"63432" [label = <(&lt;operator&gt;.subtraction,tile_ysize - i_row - 1)<SUB>3355</SUB>> ]
+"63433" [label = <(&lt;operator&gt;.subtraction,tile_ysize - i_row)<SUB>3355</SUB>> ]
+"63434" [label = <(IDENTIFIER,tile_ysize,tile_ysize - i_row)<SUB>3355</SUB>> ]
+"63435" [label = <(IDENTIFIER,i_row,tile_ysize - i_row)<SUB>3355</SUB>> ]
+"63436" [label = <(LITERAL,1,tile_ysize - i_row - 1)<SUB>3355</SUB>> ]
+"63437" [label = <(IDENTIFIER,tile_xsize,(size_t)(tile_ysize - i_row - 1) * tile_xsize)<SUB>3355</SUB>> ]
+"63438" [label = <(LITERAL,0,_TIFFmemset(raster + (size_t)(tile_ysize - i_row - 1) * tile_xsize, 0,\012                    sizeof(uint32_t) * tile_xsize))<SUB>3355</SUB>> ]
+"63439" [label = <(&lt;operator&gt;.multiplication,sizeof(uint32_t) * tile_xsize)<SUB>3356</SUB>> ]
+"63440" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>3356</SUB>> ]
+"63441" [label = <(IDENTIFIER,uint32_t,sizeof(uint32_t))<SUB>3356</SUB>> ]
+"63442" [label = <(IDENTIFIER,tile_xsize,sizeof(uint32_t) * tile_xsize)<SUB>3356</SUB>> ]
+"63443" [label = <(RETURN,return (ok);,return (ok);)<SUB>3359</SUB>> ]
+"63444" [label = <(IDENTIFIER,ok,return (ok);)<SUB>3359</SUB>> ]
+"63445" [label = <(METHOD_RETURN,int)<SUB>3261</SUB>> ]
+  "63200" -> "63201" 
+  "63200" -> "63202" 
+  "63200" -> "63203" 
+  "63200" -> "63204" 
+  "63200" -> "63205" 
+  "63200" -> "63206" 
+  "63200" -> "63445" 
+  "63206" -> "63207" 
+  "63206" -> "63208" 
+  "63206" -> "63211" 
+  "63206" -> "63212" 
+  "63206" -> "63213" 
+  "63206" -> "63214" 
+  "63206" -> "63215" 
+  "63206" -> "63216" 
+  "63206" -> "63217" 
+  "63206" -> "63218" 
+  "63206" -> "63230" 
+  "63206" -> "63235" 
+  "63206" -> "63240" 
+  "63206" -> "63260" 
+  "63206" -> "63282" 
+  "63206" -> "63303" 
+  "63206" -> "63324" 
+  "63206" -> "63329" 
+  "63206" -> "63334" 
+  "63206" -> "63342" 
+  "63206" -> "63345" 
+  "63206" -> "63356" 
+  "63206" -> "63415" 
+  "63206" -> "63443" 
+  "63208" -> "63209" 
+  "63208" -> "63210" 
+  "63218" -> "63219" 
+  "63218" -> "63222" 
+  "63219" -> "63220" 
+  "63220" -> "63221" 
+  "63222" -> "63223" 
+  "63222" -> "63228" 
+  "63223" -> "63224" 
+  "63223" -> "63225" 
+  "63223" -> "63227" 
+  "63225" -> "63226" 
+  "63228" -> "63229" 
+  "63230" -> "63231" 
+  "63230" -> "63232" 
+  "63230" -> "63233" 
+  "63233" -> "63234" 
+  "63235" -> "63236" 
+  "63235" -> "63237" 
+  "63235" -> "63238" 
+  "63238" -> "63239" 
+  "63240" -> "63241" 
+  "63240" -> "63252" 
+  "63241" -> "63242" 
+  "63241" -> "63247" 
+  "63242" -> "63243" 
+  "63242" -> "63246" 
+  "63243" -> "63244" 
+  "63243" -> "63245" 
+  "63247" -> "63248" 
+  "63247" -> "63251" 
+  "63248" -> "63249" 
+  "63248" -> "63250" 
+  "63252" -> "63253" 
+  "63252" -> "63258" 
+  "63253" -> "63254" 
+  "63253" -> "63255" 
+  "63253" -> "63257" 
+  "63255" -> "63256" 
+  "63258" -> "63259" 
+  "63260" -> "63261" 
+  "63260" -> "63273" 
+  "63261" -> "63262" 
+  "63261" -> "63266" 
+  "63262" -> "63263" 
+  "63263" -> "63264" 
+  "63263" -> "63265" 
+  "63266" -> "63267" 
+  "63267" -> "63268" 
+  "63267" -> "63270" 
+  "63267" -> "63271" 
+  "63267" -> "63272" 
+  "63268" -> "63269" 
+  "63273" -> "63274" 
+  "63273" -> "63280" 
+  "63274" -> "63275" 
+  "63274" -> "63276" 
+  "63274" -> "63278" 
+  "63274" -> "63279" 
+  "63276" -> "63277" 
+  "63280" -> "63281" 
+  "63282" -> "63283" 
+  "63282" -> "63290" 
+  "63282" -> "63298" 
+  "63283" -> "63284" 
+  "63283" -> "63287" 
+  "63284" -> "63285" 
+  "63284" -> "63286" 
+  "63287" -> "63288" 
+  "63287" -> "63289" 
+  "63290" -> "63291" 
+  "63291" -> "63292" 
+  "63291" -> "63293" 
+  "63293" -> "63294" 
+  "63293" -> "63297" 
+  "63294" -> "63295" 
+  "63294" -> "63296" 
+  "63298" -> "63299" 
+  "63299" -> "63300" 
+  "63300" -> "63301" 
+  "63300" -> "63302" 
+  "63303" -> "63304" 
+  "63303" -> "63311" 
+  "63303" -> "63319" 
+  "63304" -> "63305" 
+  "63304" -> "63308" 
+  "63305" -> "63306" 
+  "63305" -> "63307" 
+  "63308" -> "63309" 
+  "63308" -> "63310" 
+  "63311" -> "63312" 
+  "63312" -> "63313" 
+  "63312" -> "63314" 
+  "63314" -> "63315" 
+  "63314" -> "63318" 
+  "63315" -> "63316" 
+  "63315" -> "63317" 
+  "63319" -> "63320" 
+  "63320" -> "63321" 
+  "63321" -> "63322" 
+  "63321" -> "63323" 
+  "63324" -> "63325" 
+  "63324" -> "63328" 
+  "63325" -> "63326" 
+  "63325" -> "63327" 
+  "63329" -> "63330" 
+  "63329" -> "63333" 
+  "63330" -> "63331" 
+  "63330" -> "63332" 
+  "63334" -> "63335" 
+  "63334" -> "63336" 
+  "63336" -> "63337" 
+  "63336" -> "63339" 
+  "63336" -> "63340" 
+  "63336" -> "63341" 
+  "63337" -> "63338" 
+  "63342" -> "63343" 
+  "63343" -> "63344" 
+  "63345" -> "63346" 
+  "63345" -> "63353" 
+  "63346" -> "63347" 
+  "63346" -> "63350" 
+  "63347" -> "63348" 
+  "63347" -> "63349" 
+  "63350" -> "63351" 
+  "63350" -> "63352" 
+  "63353" -> "63354" 
+  "63354" -> "63355" 
+  "63356" -> "63357" 
+  "63356" -> "63361" 
+  "63356" -> "63364" 
+  "63356" -> "63366" 
+  "63357" -> "63358" 
+  "63358" -> "63359" 
+  "63358" -> "63360" 
+  "63361" -> "63362" 
+  "63361" -> "63363" 
+  "63364" -> "63365" 
+  "63366" -> "63367" 
+  "63366" -> "63394" 
+  "63367" -> "63368" 
+  "63367" -> "63379" 
+  "63367" -> "63390" 
+  "63368" -> "63369" 
+  "63368" -> "63370" 
+  "63370" -> "63371" 
+  "63370" -> "63378" 
+  "63371" -> "63372" 
+  "63371" -> "63373" 
+  "63373" -> "63374" 
+  "63373" -> "63377" 
+  "63374" -> "63375" 
+  "63374" -> "63376" 
+  "63379" -> "63380" 
+  "63379" -> "63381" 
+  "63381" -> "63382" 
+  "63381" -> "63389" 
+  "63382" -> "63383" 
+  "63382" -> "63384" 
+  "63384" -> "63385" 
+  "63384" -> "63388" 
+  "63385" -> "63386" 
+  "63385" -> "63387" 
+  "63390" -> "63391" 
+  "63390" -> "63392" 
+  "63392" -> "63393" 
+  "63394" -> "63395" 
+  "63394" -> "63408" 
+  "63394" -> "63409" 
+  "63395" -> "63396" 
+  "63395" -> "63407" 
+  "63396" -> "63397" 
+  "63396" -> "63398" 
+  "63398" -> "63399" 
+  "63398" -> "63406" 
+  "63399" -> "63400" 
+  "63399" -> "63401" 
+  "63401" -> "63402" 
+  "63401" -> "63405" 
+  "63402" -> "63403" 
+  "63402" -> "63404" 
+  "63409" -> "63410" 
+  "63409" -> "63412" 
+  "63410" -> "63411" 
+  "63412" -> "63413" 
+  "63412" -> "63414" 
+  "63415" -> "63416" 
+  "63415" -> "63420" 
+  "63415" -> "63423" 
+  "63415" -> "63425" 
+  "63416" -> "63417" 
+  "63417" -> "63418" 
+  "63417" -> "63419" 
+  "63420" -> "63421" 
+  "63420" -> "63422" 
+  "63423" -> "63424" 
+  "63425" -> "63426" 
+  "63426" -> "63427" 
+  "63426" -> "63438" 
+  "63426" -> "63439" 
+  "63427" -> "63428" 
+  "63427" -> "63429" 
+  "63429" -> "63430" 
+  "63429" -> "63437" 
+  "63430" -> "63431" 
+  "63430" -> "63432" 
+  "63432" -> "63433" 
+  "63432" -> "63436" 
+  "63433" -> "63434" 
+  "63433" -> "63435" 
+  "63439" -> "63440" 
+  "63439" -> "63442" 
+  "63440" -> "63441" 
+  "63443" -> "63444" 
+}

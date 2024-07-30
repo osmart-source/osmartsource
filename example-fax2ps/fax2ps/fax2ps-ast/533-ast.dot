@@ -1,0 +1,83 @@
+digraph "TIFFGetClientInfo" {  
+"11824" [label = <(METHOD,TIFFGetClientInfo)<SUB>64</SUB>> ]
+"11825" [label = <(PARAM,TIFF *tif)<SUB>64</SUB>> ]
+"11826" [label = <(PARAM,const char *name)<SUB>64</SUB>> ]
+"11827" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>66</SUB>> ]
+"11828" [label = <(LOCAL,TIFFClientInfoLink* psLink: TIFFClientInfoLink)<SUB>67</SUB>> ]
+"11829" [label = <(&lt;operator&gt;.assignment,*psLink = tif-&gt;tif_clientinfo)<SUB>67</SUB>> ]
+"11830" [label = <(IDENTIFIER,psLink,*psLink = tif-&gt;tif_clientinfo)<SUB>67</SUB>> ]
+"11831" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientinfo)<SUB>67</SUB>> ]
+"11832" [label = <(IDENTIFIER,tif,*psLink = tif-&gt;tif_clientinfo)<SUB>67</SUB>> ]
+"11833" [label = <(FIELD_IDENTIFIER,tif_clientinfo,tif_clientinfo)<SUB>67</SUB>> ]
+"11834" [label = <(CONTROL_STRUCTURE,while (psLink != NULL &amp;&amp; strcmp(psLink-&gt;name, name) != 0),while (psLink != NULL &amp;&amp; strcmp(psLink-&gt;name, name) != 0))<SUB>69</SUB>> ]
+"11835" [label = <(&lt;operator&gt;.logicalAnd,psLink != NULL &amp;&amp; strcmp(psLink-&gt;name, name) != 0)<SUB>69</SUB>> ]
+"11836" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>69</SUB>> ]
+"11837" [label = <(IDENTIFIER,psLink,psLink != NULL)<SUB>69</SUB>> ]
+"11838" [label = <(IDENTIFIER,NULL,psLink != NULL)<SUB>69</SUB>> ]
+"11839" [label = <(&lt;operator&gt;.notEquals,strcmp(psLink-&gt;name, name) != 0)<SUB>69</SUB>> ]
+"11840" [label = <(strcmp,strcmp(psLink-&gt;name, name))<SUB>69</SUB>> ]
+"11841" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;name)<SUB>69</SUB>> ]
+"11842" [label = <(IDENTIFIER,psLink,strcmp(psLink-&gt;name, name))<SUB>69</SUB>> ]
+"11843" [label = <(FIELD_IDENTIFIER,name,name)<SUB>69</SUB>> ]
+"11844" [label = <(IDENTIFIER,name,strcmp(psLink-&gt;name, name))<SUB>69</SUB>> ]
+"11845" [label = <(LITERAL,0,strcmp(psLink-&gt;name, name) != 0)<SUB>69</SUB>> ]
+"11846" [label = <(&lt;operator&gt;.assignment,psLink = psLink-&gt;next)<SUB>70</SUB>> ]
+"11847" [label = <(IDENTIFIER,psLink,psLink = psLink-&gt;next)<SUB>70</SUB>> ]
+"11848" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;next)<SUB>70</SUB>> ]
+"11849" [label = <(IDENTIFIER,psLink,psLink = psLink-&gt;next)<SUB>70</SUB>> ]
+"11850" [label = <(FIELD_IDENTIFIER,next,next)<SUB>70</SUB>> ]
+"11851" [label = <(CONTROL_STRUCTURE,if (psLink != NULL),if (psLink != NULL))<SUB>72</SUB>> ]
+"11852" [label = <(&lt;operator&gt;.notEquals,psLink != NULL)<SUB>72</SUB>> ]
+"11853" [label = <(IDENTIFIER,psLink,psLink != NULL)<SUB>72</SUB>> ]
+"11854" [label = <(IDENTIFIER,NULL,psLink != NULL)<SUB>72</SUB>> ]
+"11855" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>73</SUB>> ]
+"11856" [label = <(RETURN,return psLink-&gt;data;,return psLink-&gt;data;)<SUB>73</SUB>> ]
+"11857" [label = <(&lt;operator&gt;.indirectFieldAccess,psLink-&gt;data)<SUB>73</SUB>> ]
+"11858" [label = <(IDENTIFIER,psLink,return psLink-&gt;data;)<SUB>73</SUB>> ]
+"11859" [label = <(FIELD_IDENTIFIER,data,data)<SUB>73</SUB>> ]
+"11860" [label = <(CONTROL_STRUCTURE,else,else)<SUB>75</SUB>> ]
+"11861" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>75</SUB>> ]
+"11862" [label = <(RETURN,return NULL;,return NULL;)<SUB>75</SUB>> ]
+"11863" [label = <(IDENTIFIER,NULL,return NULL;)<SUB>75</SUB>> ]
+"11864" [label = <(METHOD_RETURN,void*)<SUB>64</SUB>> ]
+  "11824" -> "11825" 
+  "11824" -> "11826" 
+  "11824" -> "11827" 
+  "11824" -> "11864" 
+  "11827" -> "11828" 
+  "11827" -> "11829" 
+  "11827" -> "11834" 
+  "11827" -> "11851" 
+  "11829" -> "11830" 
+  "11829" -> "11831" 
+  "11831" -> "11832" 
+  "11831" -> "11833" 
+  "11834" -> "11835" 
+  "11834" -> "11846" 
+  "11835" -> "11836" 
+  "11835" -> "11839" 
+  "11836" -> "11837" 
+  "11836" -> "11838" 
+  "11839" -> "11840" 
+  "11839" -> "11845" 
+  "11840" -> "11841" 
+  "11840" -> "11844" 
+  "11841" -> "11842" 
+  "11841" -> "11843" 
+  "11846" -> "11847" 
+  "11846" -> "11848" 
+  "11848" -> "11849" 
+  "11848" -> "11850" 
+  "11851" -> "11852" 
+  "11851" -> "11855" 
+  "11851" -> "11860" 
+  "11852" -> "11853" 
+  "11852" -> "11854" 
+  "11855" -> "11856" 
+  "11856" -> "11857" 
+  "11857" -> "11858" 
+  "11857" -> "11859" 
+  "11860" -> "11861" 
+  "11861" -> "11862" 
+  "11862" -> "11863" 
+}

@@ -1,0 +1,45 @@
+digraph "_TIFFSwab24BitData" {  
+"77900" [label = <(METHOD,_TIFFSwab24BitData)<SUB>1605</SUB>> ]
+"77901" [label = <(PARAM,TIFF *tif)<SUB>1605</SUB>> ]
+"77902" [label = <(PARAM,uint8_t *buf)<SUB>1605</SUB>> ]
+"77903" [label = <(PARAM,tmsize_t cc)<SUB>1605</SUB>> ]
+"77904" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1606</SUB>> ]
+"77905" [label = <(&lt;operator&gt;.cast,(void)tif)<SUB>1607</SUB>> ]
+"77906" [label = <(UNKNOWN,void,void)<SUB>1607</SUB>> ]
+"77907" [label = <(IDENTIFIER,tif,(void)tif)<SUB>1607</SUB>> ]
+"77908" [label = <(assert,assert((cc % 3) == 0))<SUB>1608</SUB>> ]
+"77909" [label = <(&lt;operator&gt;.equals,(cc % 3) == 0)<SUB>1608</SUB>> ]
+"77910" [label = <(&lt;operator&gt;.modulo,cc % 3)<SUB>1608</SUB>> ]
+"77911" [label = <(IDENTIFIER,cc,cc % 3)<SUB>1608</SUB>> ]
+"77912" [label = <(LITERAL,3,cc % 3)<SUB>1608</SUB>> ]
+"77913" [label = <(LITERAL,0,(cc % 3) == 0)<SUB>1608</SUB>> ]
+"77914" [label = <(TIFFSwabArrayOfTriples,TIFFSwabArrayOfTriples((uint8_t *)buf, cc / 3))<SUB>1609</SUB>> ]
+"77915" [label = <(&lt;operator&gt;.cast,(uint8_t *)buf)<SUB>1609</SUB>> ]
+"77916" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>1609</SUB>> ]
+"77917" [label = <(IDENTIFIER,buf,(uint8_t *)buf)<SUB>1609</SUB>> ]
+"77918" [label = <(&lt;operator&gt;.division,cc / 3)<SUB>1609</SUB>> ]
+"77919" [label = <(IDENTIFIER,cc,cc / 3)<SUB>1609</SUB>> ]
+"77920" [label = <(LITERAL,3,cc / 3)<SUB>1609</SUB>> ]
+"77921" [label = <(METHOD_RETURN,void)<SUB>1605</SUB>> ]
+  "77900" -> "77901" 
+  "77900" -> "77902" 
+  "77900" -> "77903" 
+  "77900" -> "77904" 
+  "77900" -> "77921" 
+  "77904" -> "77905" 
+  "77904" -> "77908" 
+  "77904" -> "77914" 
+  "77905" -> "77906" 
+  "77905" -> "77907" 
+  "77908" -> "77909" 
+  "77909" -> "77910" 
+  "77909" -> "77913" 
+  "77910" -> "77911" 
+  "77910" -> "77912" 
+  "77914" -> "77915" 
+  "77914" -> "77918" 
+  "77915" -> "77916" 
+  "77915" -> "77917" 
+  "77918" -> "77919" 
+  "77918" -> "77920" 
+}

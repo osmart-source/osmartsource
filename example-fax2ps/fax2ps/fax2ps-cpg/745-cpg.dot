@@ -1,0 +1,14 @@
+digraph "fstat" {  
+"33425" [label = <(METHOD,fstat)<SUB>210</SUB>> ]
+"33426" [label = <(PARAM,int __fd)<SUB>210</SUB>> ]
+"33427" [label = <(PARAM,struct stat *__buf)<SUB>210</SUB>> ]
+"33428" [label = <(METHOD_RETURN,int)<SUB>210</SUB>> ]
+  "33425" -> "33426"  [ label = "AST: "] 
+  "33425" -> "33427"  [ label = "AST: "] 
+  "33425" -> "33428"  [ label = "AST: "] 
+  "33425" -> "33428"  [ label = "CFG: "] 
+  "33426" -> "33428"  [ label = "DDG: __fd"] 
+  "33427" -> "33428"  [ label = "DDG: __buf"] 
+  "33425" -> "33426"  [ label = "DDG: "] 
+  "33425" -> "33427"  [ label = "DDG: "] 
+}

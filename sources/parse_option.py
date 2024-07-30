@@ -7,6 +7,7 @@ from ast_utils import *
 from utils import *
 from impactanalysis import inter_spread
 
+# We manually selected the funtions that contain LST structures in order to extract options more fast. We could automatically identify the same information with more time actually.
 parse_func_dict = {
     "ar": ["decode_options"],
     "as": ["parse_args"],

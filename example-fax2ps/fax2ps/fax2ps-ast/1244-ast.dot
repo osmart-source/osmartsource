@@ -1,0 +1,55 @@
+digraph "TIFFReadDirEntryCheckedSlong" {  
+"86734" [label = <(METHOD,TIFFReadDirEntryCheckedSlong)<SUB>3358</SUB>> ]
+"86735" [label = <(PARAM,TIFF *tif)<SUB>3358</SUB>> ]
+"86736" [label = <(PARAM,TIFFDirEntry *direntry)<SUB>3358</SUB>> ]
+"86737" [label = <(PARAM,int32_t *value)<SUB>3359</SUB>> ]
+"86738" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3360</SUB>> ]
+"86739" [label = <(&lt;operator&gt;.assignment,*value = *(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86740" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3361</SUB>> ]
+"86741" [label = <(IDENTIFIER,value,*value = *(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86742" [label = <(&lt;operator&gt;.indirection,*(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86743" [label = <(&lt;operator&gt;.cast,(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86744" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>3361</SUB>> ]
+"86745" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3361</SUB>> ]
+"86746" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3361</SUB>> ]
+"86747" [label = <(IDENTIFIER,direntry,(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86748" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3361</SUB>> ]
+"86749" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>3362</SUB>> ]
+"86750" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3362</SUB>> ]
+"86751" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3362</SUB>> ]
+"86752" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3362</SUB>> ]
+"86753" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3362</SUB>> ]
+"86754" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3362</SUB>> ]
+"86755" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3363</SUB>> ]
+"86756" [label = <(TIFFSwabLong,TIFFSwabLong((uint32_t *)value))<SUB>3363</SUB>> ]
+"86757" [label = <(&lt;operator&gt;.cast,(uint32_t *)value)<SUB>3363</SUB>> ]
+"86758" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3363</SUB>> ]
+"86759" [label = <(IDENTIFIER,value,(uint32_t *)value)<SUB>3363</SUB>> ]
+"86760" [label = <(METHOD_RETURN,void)<SUB>3358</SUB>> ]
+  "86734" -> "86735" 
+  "86734" -> "86736" 
+  "86734" -> "86737" 
+  "86734" -> "86738" 
+  "86734" -> "86760" 
+  "86738" -> "86739" 
+  "86738" -> "86749" 
+  "86739" -> "86740" 
+  "86739" -> "86742" 
+  "86740" -> "86741" 
+  "86742" -> "86743" 
+  "86743" -> "86744" 
+  "86743" -> "86745" 
+  "86745" -> "86746" 
+  "86746" -> "86747" 
+  "86746" -> "86748" 
+  "86749" -> "86750" 
+  "86749" -> "86755" 
+  "86750" -> "86751" 
+  "86750" -> "86754" 
+  "86751" -> "86752" 
+  "86751" -> "86753" 
+  "86755" -> "86756" 
+  "86756" -> "86757" 
+  "86757" -> "86758" 
+  "86757" -> "86759" 
+}

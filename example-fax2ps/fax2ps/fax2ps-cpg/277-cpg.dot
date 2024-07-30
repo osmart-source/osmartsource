@@ -1,0 +1,18 @@
+digraph "strtoumax" {  
+"8043" [label = <(METHOD,strtoumax)<SUB>301</SUB>> ]
+"8044" [label = <(PARAM,const char *__restrict __nptr)<SUB>301</SUB>> ]
+"8045" [label = <(PARAM,char ** __restrict __endptr)<SUB>302</SUB>> ]
+"8046" [label = <(PARAM,int __base)<SUB>302</SUB>> ]
+"8047" [label = <(METHOD_RETURN,uintmax_t)<SUB>301</SUB>> ]
+  "8043" -> "8044"  [ label = "AST: "] 
+  "8043" -> "8045"  [ label = "AST: "] 
+  "8043" -> "8046"  [ label = "AST: "] 
+  "8043" -> "8047"  [ label = "AST: "] 
+  "8043" -> "8047"  [ label = "CFG: "] 
+  "8044" -> "8047"  [ label = "DDG: __nptr"] 
+  "8045" -> "8047"  [ label = "DDG: __endptr"] 
+  "8046" -> "8047"  [ label = "DDG: __base"] 
+  "8043" -> "8044"  [ label = "DDG: "] 
+  "8043" -> "8045"  [ label = "DDG: "] 
+  "8043" -> "8046"  [ label = "DDG: "] 
+}

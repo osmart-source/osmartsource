@@ -1,0 +1,21 @@
+digraph "_TIFFMultiply32" {  
+"20661" [label = <(RETURN,return first * second;,return first * second;)<SUB>44</SUB>> ]
+"20646" [label = <(&lt;operator&gt;.logicalAnd,second &amp;&amp; first &gt; UINT32_MAX / second)<SUB>38</SUB>> ]
+"20662" [label = <(&lt;operator&gt;.multiplication,first * second)<SUB>44</SUB>> ]
+"20648" [label = <(&lt;operator&gt;.greaterThan,first &gt; UINT32_MAX / second)<SUB>38</SUB>> ]
+"20654" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, where, &quot;Integer overflow in %s&quot;, where))<SUB>40</SUB>> ]
+"20659" [label = <(RETURN,return 0;,return 0;)<SUB>41</SUB>> ]
+"20650" [label = <(&lt;operator&gt;.division,UINT32_MAX / second)<SUB>38</SUB>> ]
+"20639" [label = <(METHOD,_TIFFMultiply32)<SUB>35</SUB>> ]
+"20665" [label = <(METHOD_RETURN,uint32_t)<SUB>35</SUB>> ]
+  "20661" -> "20665" 
+  "20646" -> "20654" 
+  "20646" -> "20662" 
+  "20662" -> "20661" 
+  "20648" -> "20646" 
+  "20654" -> "20659" 
+  "20659" -> "20665" 
+  "20650" -> "20648" 
+  "20639" -> "20646" 
+  "20639" -> "20650" 
+}

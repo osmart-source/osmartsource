@@ -1,0 +1,25 @@
+digraph "_TIFFCheckRealloc" {  
+"20796" [label = <(&lt;operator&gt;.assignment,*cp = NULL)<SUB>100</SUB>> ]
+"20800" [label = <(&lt;operator&gt;.assignment,count = _TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20824" [label = <(RETURN,return cp;,return cp;)<SUB>119</SUB>> ]
+"20802" [label = <(_TIFFMultiplySSize,_TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20808" [label = <(&lt;operator&gt;.notEquals,count != 0)<SUB>105</SUB>> ]
+"20819" [label = <(&lt;operator&gt;.equals,cp == NULL)<SUB>110</SUB>> ]
+"20812" [label = <(&lt;operator&gt;.assignment,cp = _TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20823" [label = <(UNKNOWN,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                      &quot;Failed to allocate memory for %s &quot;\012                      &quot;(%&quot; TIFF_SSIZE_FORMAT &quot; elements of %&quot; TIFF_SSIZE_FORMAT\012                      &quot; bytes each)&quot;,\012                      what, nmemb, elem_size);,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                      &quot;Failed to allocate memory for %s &quot;\012                      &quot;(%&quot; TIFF_SSIZE_FORMAT &quot; elements of %&quot; TIFF_SSIZE_FORMAT\012                      &quot; bytes each)&quot;,\012                      what, nmemb, elem_size);)<SUB>112</SUB>> ]
+"20814" [label = <(_TIFFreallocExt,_TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20788" [label = <(METHOD,_TIFFCheckRealloc)<SUB>97</SUB>> ]
+"20826" [label = <(METHOD_RETURN,void*)<SUB>97</SUB>> ]
+  "20796" -> "20802" 
+  "20800" -> "20808" 
+  "20824" -> "20826" 
+  "20802" -> "20800" 
+  "20808" -> "20814" 
+  "20808" -> "20819" 
+  "20819" -> "20823" 
+  "20819" -> "20824" 
+  "20812" -> "20819" 
+  "20823" -> "20824" 
+  "20814" -> "20812" 
+  "20788" -> "20796" 
+}

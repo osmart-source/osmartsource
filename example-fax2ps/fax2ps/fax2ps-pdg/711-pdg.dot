@@ -1,0 +1,17 @@
+digraph "TIFFSetWriteOffset" {  
+"33133" [label = <(METHOD,TIFFSetWriteOffset)<SUB>956</SUB>> ]
+"33147" [label = <(METHOD_RETURN,void)<SUB>956</SUB>> ]
+"33134" [label = <(PARAM,TIFF *tif)<SUB>956</SUB>> ]
+"33135" [label = <(PARAM,toff_t off)<SUB>956</SUB>> ]
+"33137" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curoff = off)<SUB>958</SUB>> ]
+"33142" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_lastvalidoff = 0)<SUB>959</SUB>> ]
+  "33134" -> "33147"  [ label = "DDG: tif"] 
+  "33137" -> "33147"  [ label = "DDG: tif-&gt;tif_curoff"] 
+  "33137" -> "33147"  [ label = "DDG: off"] 
+  "33142" -> "33147"  [ label = "DDG: tif-&gt;tif_lastvalidoff"] 
+  "33133" -> "33134"  [ label = "DDG: "] 
+  "33133" -> "33135"  [ label = "DDG: "] 
+  "33135" -> "33137"  [ label = "DDG: off"] 
+  "33133" -> "33137"  [ label = "DDG: "] 
+  "33133" -> "33142"  [ label = "DDG: "] 
+}

@@ -1,0 +1,411 @@
+digraph "allocChoppedUpStripArrays" {  
+"96861" [label = <(METHOD,allocChoppedUpStripArrays)<SUB>7077</SUB>> ]
+"96862" [label = <(PARAM,TIFF *tif)<SUB>7077</SUB>> ]
+"96863" [label = <(PARAM,uint32_t nstrips)<SUB>7077</SUB>> ]
+"96864" [label = <(PARAM,uint64_t stripbytes)<SUB>7078</SUB>> ]
+"96865" [label = <(PARAM,uint32_t rowsperstrip)<SUB>7079</SUB>> ]
+"96866" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7080</SUB>> ]
+"96867" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>7081</SUB>> ]
+"96868" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96869" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96870" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96871" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96872" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>7081</SUB>> ]
+"96873" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>7081</SUB>> ]
+"96874" [label = <(LOCAL,uint64_t bytecount: uint64_t)<SUB>7082</SUB>> ]
+"96875" [label = <(LOCAL,uint64_t offset: uint64_t)<SUB>7083</SUB>> ]
+"96876" [label = <(LOCAL,uint64_t last_offset: uint64_t)<SUB>7084</SUB>> ]
+"96877" [label = <(LOCAL,uint64_t last_bytecount: uint64_t)<SUB>7085</SUB>> ]
+"96878" [label = <(LOCAL,uint32_t i: uint32_t)<SUB>7086</SUB>> ]
+"96879" [label = <(LOCAL,uint64_t* newcounts: uint64_t)<SUB>7087</SUB>> ]
+"96880" [label = <(LOCAL,uint64_t* newoffsets: uint64_t)<SUB>7088</SUB>> ]
+"96881" [label = <(&lt;operator&gt;.assignment,offset = TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96882" [label = <(IDENTIFIER,offset,offset = TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96883" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96884" [label = <(IDENTIFIER,tif,TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96885" [label = <(LITERAL,0,TIFFGetStrileOffset(tif, 0))<SUB>7090</SUB>> ]
+"96886" [label = <(&lt;operator&gt;.assignment,last_offset = TIFFGetStrileOffset(tif, td-&gt;td_nstrips - 1))<SUB>7091</SUB>> ]
+"96887" [label = <(IDENTIFIER,last_offset,last_offset = TIFFGetStrileOffset(tif, td-&gt;td_nstrips - 1))<SUB>7091</SUB>> ]
+"96888" [label = <(TIFFGetStrileOffset,TIFFGetStrileOffset(tif, td-&gt;td_nstrips - 1))<SUB>7091</SUB>> ]
+"96889" [label = <(IDENTIFIER,tif,TIFFGetStrileOffset(tif, td-&gt;td_nstrips - 1))<SUB>7091</SUB>> ]
+"96890" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_nstrips - 1)<SUB>7091</SUB>> ]
+"96891" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7091</SUB>> ]
+"96892" [label = <(IDENTIFIER,td,td-&gt;td_nstrips - 1)<SUB>7091</SUB>> ]
+"96893" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7091</SUB>> ]
+"96894" [label = <(LITERAL,1,td-&gt;td_nstrips - 1)<SUB>7091</SUB>> ]
+"96895" [label = <(&lt;operator&gt;.assignment,last_bytecount = TIFFGetStrileByteCount(tif, td-&gt;td_nstrips - 1))<SUB>7092</SUB>> ]
+"96896" [label = <(IDENTIFIER,last_bytecount,last_bytecount = TIFFGetStrileByteCount(tif, td-&gt;td_nstrips - 1))<SUB>7092</SUB>> ]
+"96897" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, td-&gt;td_nstrips - 1))<SUB>7092</SUB>> ]
+"96898" [label = <(IDENTIFIER,tif,TIFFGetStrileByteCount(tif, td-&gt;td_nstrips - 1))<SUB>7092</SUB>> ]
+"96899" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_nstrips - 1)<SUB>7092</SUB>> ]
+"96900" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7092</SUB>> ]
+"96901" [label = <(IDENTIFIER,td,td-&gt;td_nstrips - 1)<SUB>7092</SUB>> ]
+"96902" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7092</SUB>> ]
+"96903" [label = <(LITERAL,1,td-&gt;td_nstrips - 1)<SUB>7092</SUB>> ]
+"96904" [label = <(CONTROL_STRUCTURE,if (last_offset &gt; UINT64_MAX - last_bytecount ||\012        last_offset + last_bytecount &lt; offset),if (last_offset &gt; UINT64_MAX - last_bytecount ||\012        last_offset + last_bytecount &lt; offset))<SUB>7093</SUB>> ]
+"96905" [label = <(&lt;operator&gt;.logicalOr,last_offset &gt; UINT64_MAX - last_bytecount ||\012        last_offset + last_bytecount &lt; offset)<SUB>7093</SUB>> ]
+"96906" [label = <(&lt;operator&gt;.greaterThan,last_offset &gt; UINT64_MAX - last_bytecount)<SUB>7093</SUB>> ]
+"96907" [label = <(IDENTIFIER,last_offset,last_offset &gt; UINT64_MAX - last_bytecount)<SUB>7093</SUB>> ]
+"96908" [label = <(UINT64_MAX,UINT64_MAX - last_bytecount)<SUB>7093</SUB>> ]
+"96909" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"96910" [label = <(&lt;operator&gt;.subtraction,(18446744073709551615ULL) - last_bytecount)<SUB>7093</SUB>> ]
+"96911" [label = <(LITERAL,18446744073709551615ULL,(18446744073709551615ULL) - last_bytecount)<SUB>7093</SUB>> ]
+"96912" [label = <(IDENTIFIER,last_bytecount,(18446744073709551615ULL) - last_bytecount)<SUB>7093</SUB>> ]
+"96913" [label = <(&lt;operator&gt;.lessThan,last_offset + last_bytecount &lt; offset)<SUB>7094</SUB>> ]
+"96914" [label = <(&lt;operator&gt;.addition,last_offset + last_bytecount)<SUB>7094</SUB>> ]
+"96915" [label = <(IDENTIFIER,last_offset,last_offset + last_bytecount)<SUB>7094</SUB>> ]
+"96916" [label = <(IDENTIFIER,last_bytecount,last_offset + last_bytecount)<SUB>7094</SUB>> ]
+"96917" [label = <(IDENTIFIER,offset,last_offset + last_bytecount &lt; offset)<SUB>7094</SUB>> ]
+"96918" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7095</SUB>> ]
+"96919" [label = <(RETURN,return;,return;)<SUB>7096</SUB>> ]
+"96920" [label = <(&lt;operator&gt;.assignment,bytecount = last_offset + last_bytecount - offset)<SUB>7098</SUB>> ]
+"96921" [label = <(IDENTIFIER,bytecount,bytecount = last_offset + last_bytecount - offset)<SUB>7098</SUB>> ]
+"96922" [label = <(&lt;operator&gt;.subtraction,last_offset + last_bytecount - offset)<SUB>7098</SUB>> ]
+"96923" [label = <(&lt;operator&gt;.addition,last_offset + last_bytecount)<SUB>7098</SUB>> ]
+"96924" [label = <(IDENTIFIER,last_offset,last_offset + last_bytecount)<SUB>7098</SUB>> ]
+"96925" [label = <(IDENTIFIER,last_bytecount,last_offset + last_bytecount)<SUB>7098</SUB>> ]
+"96926" [label = <(IDENTIFIER,offset,last_offset + last_bytecount - offset)<SUB>7098</SUB>> ]
+"96927" [label = <(&lt;operator&gt;.assignment,newcounts =\012        (uint64_t *)_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7100</SUB>> ]
+"96928" [label = <(IDENTIFIER,newcounts,newcounts =\012        (uint64_t *)_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7100</SUB>> ]
+"96929" [label = <(&lt;operator&gt;.cast,(uint64_t *)_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7101</SUB>> ]
+"96930" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>7101</SUB>> ]
+"96931" [label = <(_TIFFCheckMalloc,_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7101</SUB>> ]
+"96932" [label = <(IDENTIFIER,tif,_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7101</SUB>> ]
+"96933" [label = <(IDENTIFIER,nstrips,_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7101</SUB>> ]
+"96934" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>7101</SUB>> ]
+"96935" [label = <(IDENTIFIER,uint64_t,sizeof(uint64_t))<SUB>7101</SUB>> ]
+"96936" [label = <(LITERAL,&quot;for chopped \&quot;StripByteCounts\&quot; array&quot;,_TIFFCheckMalloc(tif, nstrips, sizeof(uint64_t),\012                                     &quot;for chopped \&quot;StripByteCounts\&quot; array&quot;))<SUB>7102</SUB>> ]
+"96937" [label = <(&lt;operator&gt;.assignment,newoffsets = (uint64_t *)_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"96938" [label = <(IDENTIFIER,newoffsets,newoffsets = (uint64_t *)_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"96939" [label = <(&lt;operator&gt;.cast,(uint64_t *)_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"96940" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>7103</SUB>> ]
+"96941" [label = <(_TIFFCheckMalloc,_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7103</SUB>> ]
+"96942" [label = <(IDENTIFIER,tif,_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7104</SUB>> ]
+"96943" [label = <(IDENTIFIER,nstrips,_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7104</SUB>> ]
+"96944" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>7104</SUB>> ]
+"96945" [label = <(IDENTIFIER,uint64_t,sizeof(uint64_t))<SUB>7104</SUB>> ]
+"96946" [label = <(LITERAL,&quot;for chopped \&quot;StripOffsets\&quot; array&quot;,_TIFFCheckMalloc(\012        tif, nstrips, sizeof(uint64_t), &quot;for chopped \&quot;StripOffsets\&quot; array&quot;))<SUB>7104</SUB>> ]
+"96947" [label = <(CONTROL_STRUCTURE,if (newcounts == NULL || newoffsets == NULL),if (newcounts == NULL || newoffsets == NULL))<SUB>7105</SUB>> ]
+"96948" [label = <(&lt;operator&gt;.logicalOr,newcounts == NULL || newoffsets == NULL)<SUB>7105</SUB>> ]
+"96949" [label = <(&lt;operator&gt;.equals,newcounts == NULL)<SUB>7105</SUB>> ]
+"96950" [label = <(IDENTIFIER,newcounts,newcounts == NULL)<SUB>7105</SUB>> ]
+"96951" [label = <(NULL,NULL)<SUB>7105</SUB>> ]
+"96952" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"96953" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7105</SUB>> ]
+"96954" [label = <(UNKNOWN,void *,void *)<SUB>7105</SUB>> ]
+"96955" [label = <(LITERAL,0,(void *)0)<SUB>7105</SUB>> ]
+"96956" [label = <(&lt;operator&gt;.equals,newoffsets == NULL)<SUB>7105</SUB>> ]
+"96957" [label = <(IDENTIFIER,newoffsets,newoffsets == NULL)<SUB>7105</SUB>> ]
+"96958" [label = <(NULL,NULL)<SUB>7105</SUB>> ]
+"96959" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"96960" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7105</SUB>> ]
+"96961" [label = <(UNKNOWN,void *,void *)<SUB>7105</SUB>> ]
+"96962" [label = <(LITERAL,0,(void *)0)<SUB>7105</SUB>> ]
+"96963" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7106</SUB>> ]
+"96964" [label = <(CONTROL_STRUCTURE,if (newcounts != NULL),if (newcounts != NULL))<SUB>7111</SUB>> ]
+"96965" [label = <(&lt;operator&gt;.notEquals,newcounts != NULL)<SUB>7111</SUB>> ]
+"96966" [label = <(IDENTIFIER,newcounts,newcounts != NULL)<SUB>7111</SUB>> ]
+"96967" [label = <(NULL,NULL)<SUB>7111</SUB>> ]
+"96968" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"96969" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7111</SUB>> ]
+"96970" [label = <(UNKNOWN,void *,void *)<SUB>7111</SUB>> ]
+"96971" [label = <(LITERAL,0,(void *)0)<SUB>7111</SUB>> ]
+"96972" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7112</SUB>> ]
+"96973" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, newcounts))<SUB>7112</SUB>> ]
+"96974" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, newcounts))<SUB>7112</SUB>> ]
+"96975" [label = <(IDENTIFIER,newcounts,_TIFFfreeExt(tif, newcounts))<SUB>7112</SUB>> ]
+"96976" [label = <(CONTROL_STRUCTURE,if (newoffsets != NULL),if (newoffsets != NULL))<SUB>7113</SUB>> ]
+"96977" [label = <(&lt;operator&gt;.notEquals,newoffsets != NULL)<SUB>7113</SUB>> ]
+"96978" [label = <(IDENTIFIER,newoffsets,newoffsets != NULL)<SUB>7113</SUB>> ]
+"96979" [label = <(NULL,NULL)<SUB>7113</SUB>> ]
+"96980" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"96981" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>7113</SUB>> ]
+"96982" [label = <(UNKNOWN,void *,void *)<SUB>7113</SUB>> ]
+"96983" [label = <(LITERAL,0,(void *)0)<SUB>7113</SUB>> ]
+"96984" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7114</SUB>> ]
+"96985" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, newoffsets))<SUB>7114</SUB>> ]
+"96986" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, newoffsets))<SUB>7114</SUB>> ]
+"96987" [label = <(IDENTIFIER,newoffsets,_TIFFfreeExt(tif, newoffsets))<SUB>7114</SUB>> ]
+"96988" [label = <(RETURN,return;,return;)<SUB>7115</SUB>> ]
+"96989" [label = <(CONTROL_STRUCTURE,for (i = 0;i &lt; nstrips;i++),for (i = 0;i &lt; nstrips;i++))<SUB>7122</SUB>> ]
+"96990" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7122</SUB>> ]
+"96991" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>7122</SUB>> ]
+"96992" [label = <(IDENTIFIER,i,i = 0)<SUB>7122</SUB>> ]
+"96993" [label = <(LITERAL,0,i = 0)<SUB>7122</SUB>> ]
+"96994" [label = <(&lt;operator&gt;.lessThan,i &lt; nstrips)<SUB>7122</SUB>> ]
+"96995" [label = <(IDENTIFIER,i,i &lt; nstrips)<SUB>7122</SUB>> ]
+"96996" [label = <(IDENTIFIER,nstrips,i &lt; nstrips)<SUB>7122</SUB>> ]
+"96997" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>7122</SUB>> ]
+"96998" [label = <(IDENTIFIER,i,i++)<SUB>7122</SUB>> ]
+"96999" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7123</SUB>> ]
+"97000" [label = <(CONTROL_STRUCTURE,if (stripbytes &gt; bytecount),if (stripbytes &gt; bytecount))<SUB>7124</SUB>> ]
+"97001" [label = <(&lt;operator&gt;.greaterThan,stripbytes &gt; bytecount)<SUB>7124</SUB>> ]
+"97002" [label = <(IDENTIFIER,stripbytes,stripbytes &gt; bytecount)<SUB>7124</SUB>> ]
+"97003" [label = <(IDENTIFIER,bytecount,stripbytes &gt; bytecount)<SUB>7124</SUB>> ]
+"97004" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>7125</SUB>> ]
+"97005" [label = <(&lt;operator&gt;.assignment,stripbytes = bytecount)<SUB>7125</SUB>> ]
+"97006" [label = <(IDENTIFIER,stripbytes,stripbytes = bytecount)<SUB>7125</SUB>> ]
+"97007" [label = <(IDENTIFIER,bytecount,stripbytes = bytecount)<SUB>7125</SUB>> ]
+"97008" [label = <(&lt;operator&gt;.assignment,newcounts[i] = stripbytes)<SUB>7126</SUB>> ]
+"97009" [label = <(&lt;operator&gt;.indirectIndexAccess,newcounts[i])<SUB>7126</SUB>> ]
+"97010" [label = <(IDENTIFIER,newcounts,newcounts[i] = stripbytes)<SUB>7126</SUB>> ]
+"97011" [label = <(IDENTIFIER,i,newcounts[i] = stripbytes)<SUB>7126</SUB>> ]
+"97012" [label = <(IDENTIFIER,stripbytes,newcounts[i] = stripbytes)<SUB>7126</SUB>> ]
+"97013" [label = <(&lt;operator&gt;.assignment,newoffsets[i] = stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97014" [label = <(&lt;operator&gt;.indirectIndexAccess,newoffsets[i])<SUB>7127</SUB>> ]
+"97015" [label = <(IDENTIFIER,newoffsets,newoffsets[i] = stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97016" [label = <(IDENTIFIER,i,newoffsets[i] = stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97017" [label = <(&lt;operator&gt;.conditional,stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97018" [label = <(IDENTIFIER,stripbytes,stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97019" [label = <(IDENTIFIER,offset,stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97020" [label = <(LITERAL,0,stripbytes ? offset : 0)<SUB>7127</SUB>> ]
+"97021" [label = <(&lt;operator&gt;.assignmentPlus,offset += stripbytes)<SUB>7128</SUB>> ]
+"97022" [label = <(IDENTIFIER,offset,offset += stripbytes)<SUB>7128</SUB>> ]
+"97023" [label = <(IDENTIFIER,stripbytes,offset += stripbytes)<SUB>7128</SUB>> ]
+"97024" [label = <(&lt;operator&gt;.assignmentMinus,bytecount -= stripbytes)<SUB>7129</SUB>> ]
+"97025" [label = <(IDENTIFIER,bytecount,bytecount -= stripbytes)<SUB>7129</SUB>> ]
+"97026" [label = <(IDENTIFIER,stripbytes,bytecount -= stripbytes)<SUB>7129</SUB>> ]
+"97027" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripsperimage = td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97028" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>7135</SUB>> ]
+"97029" [label = <(IDENTIFIER,td,td-&gt;td_stripsperimage = td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97030" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>7135</SUB>> ]
+"97031" [label = <(&lt;operator&gt;.assignment,td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97032" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>7135</SUB>> ]
+"97033" [label = <(IDENTIFIER,td,td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97034" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>7135</SUB>> ]
+"97035" [label = <(IDENTIFIER,nstrips,td-&gt;td_nstrips = nstrips)<SUB>7135</SUB>> ]
+"97036" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_ROWSPERSTRIP, rowsperstrip))<SUB>7136</SUB>> ]
+"97037" [label = <(IDENTIFIER,tif,TIFFSetField(tif, TIFFTAG_ROWSPERSTRIP, rowsperstrip))<SUB>7136</SUB>> ]
+"97038" [label = <(IDENTIFIER,TIFFTAG_ROWSPERSTRIP,TIFFSetField(tif, TIFFTAG_ROWSPERSTRIP, rowsperstrip))<SUB>7136</SUB>> ]
+"97039" [label = <(IDENTIFIER,rowsperstrip,TIFFSetField(tif, TIFFTAG_ROWSPERSTRIP, rowsperstrip))<SUB>7136</SUB>> ]
+"97040" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, td-&gt;td_stripbytecount_p))<SUB>7138</SUB>> ]
+"97041" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, td-&gt;td_stripbytecount_p))<SUB>7138</SUB>> ]
+"97042" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7138</SUB>> ]
+"97043" [label = <(IDENTIFIER,td,_TIFFfreeExt(tif, td-&gt;td_stripbytecount_p))<SUB>7138</SUB>> ]
+"97044" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7138</SUB>> ]
+"97045" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, td-&gt;td_stripoffset_p))<SUB>7139</SUB>> ]
+"97046" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, td-&gt;td_stripoffset_p))<SUB>7139</SUB>> ]
+"97047" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7139</SUB>> ]
+"97048" [label = <(IDENTIFIER,td,_TIFFfreeExt(tif, td-&gt;td_stripoffset_p))<SUB>7139</SUB>> ]
+"97049" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7139</SUB>> ]
+"97050" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripbytecount_p = newcounts)<SUB>7140</SUB>> ]
+"97051" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>7140</SUB>> ]
+"97052" [label = <(IDENTIFIER,td,td-&gt;td_stripbytecount_p = newcounts)<SUB>7140</SUB>> ]
+"97053" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>7140</SUB>> ]
+"97054" [label = <(IDENTIFIER,newcounts,td-&gt;td_stripbytecount_p = newcounts)<SUB>7140</SUB>> ]
+"97055" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripoffset_p = newoffsets)<SUB>7141</SUB>> ]
+"97056" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>7141</SUB>> ]
+"97057" [label = <(IDENTIFIER,td,td-&gt;td_stripoffset_p = newoffsets)<SUB>7141</SUB>> ]
+"97058" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>7141</SUB>> ]
+"97059" [label = <(IDENTIFIER,newoffsets,td-&gt;td_stripoffset_p = newoffsets)<SUB>7141</SUB>> ]
+"97060" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_CHOPPEDUPARRAYS)<SUB>7145</SUB>> ]
+"97061" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>7145</SUB>> ]
+"97062" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags |= TIFF_CHOPPEDUPARRAYS)<SUB>7145</SUB>> ]
+"97063" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>7145</SUB>> ]
+"97064" [label = <(IDENTIFIER,TIFF_CHOPPEDUPARRAYS,tif-&gt;tif_flags |= TIFF_CHOPPEDUPARRAYS)<SUB>7145</SUB>> ]
+"97065" [label = <(METHOD_RETURN,void)<SUB>7077</SUB>> ]
+  "96861" -> "96862" 
+  "96861" -> "96863" 
+  "96861" -> "96864" 
+  "96861" -> "96865" 
+  "96861" -> "96866" 
+  "96861" -> "97065" 
+  "96866" -> "96867" 
+  "96866" -> "96868" 
+  "96866" -> "96874" 
+  "96866" -> "96875" 
+  "96866" -> "96876" 
+  "96866" -> "96877" 
+  "96866" -> "96878" 
+  "96866" -> "96879" 
+  "96866" -> "96880" 
+  "96866" -> "96881" 
+  "96866" -> "96886" 
+  "96866" -> "96895" 
+  "96866" -> "96904" 
+  "96866" -> "96920" 
+  "96866" -> "96927" 
+  "96866" -> "96937" 
+  "96866" -> "96947" 
+  "96866" -> "96989" 
+  "96866" -> "97027" 
+  "96866" -> "97036" 
+  "96866" -> "97040" 
+  "96866" -> "97045" 
+  "96866" -> "97050" 
+  "96866" -> "97055" 
+  "96866" -> "97060" 
+  "96868" -> "96869" 
+  "96868" -> "96870" 
+  "96870" -> "96871" 
+  "96871" -> "96872" 
+  "96871" -> "96873" 
+  "96881" -> "96882" 
+  "96881" -> "96883" 
+  "96883" -> "96884" 
+  "96883" -> "96885" 
+  "96886" -> "96887" 
+  "96886" -> "96888" 
+  "96888" -> "96889" 
+  "96888" -> "96890" 
+  "96890" -> "96891" 
+  "96890" -> "96894" 
+  "96891" -> "96892" 
+  "96891" -> "96893" 
+  "96895" -> "96896" 
+  "96895" -> "96897" 
+  "96897" -> "96898" 
+  "96897" -> "96899" 
+  "96899" -> "96900" 
+  "96899" -> "96903" 
+  "96900" -> "96901" 
+  "96900" -> "96902" 
+  "96904" -> "96905" 
+  "96904" -> "96918" 
+  "96905" -> "96906" 
+  "96905" -> "96913" 
+  "96906" -> "96907" 
+  "96906" -> "96908" 
+  "96908" -> "96909" 
+  "96909" -> "96910" 
+  "96910" -> "96911" 
+  "96910" -> "96912" 
+  "96913" -> "96914" 
+  "96913" -> "96917" 
+  "96914" -> "96915" 
+  "96914" -> "96916" 
+  "96918" -> "96919" 
+  "96920" -> "96921" 
+  "96920" -> "96922" 
+  "96922" -> "96923" 
+  "96922" -> "96926" 
+  "96923" -> "96924" 
+  "96923" -> "96925" 
+  "96927" -> "96928" 
+  "96927" -> "96929" 
+  "96929" -> "96930" 
+  "96929" -> "96931" 
+  "96931" -> "96932" 
+  "96931" -> "96933" 
+  "96931" -> "96934" 
+  "96931" -> "96936" 
+  "96934" -> "96935" 
+  "96937" -> "96938" 
+  "96937" -> "96939" 
+  "96939" -> "96940" 
+  "96939" -> "96941" 
+  "96941" -> "96942" 
+  "96941" -> "96943" 
+  "96941" -> "96944" 
+  "96941" -> "96946" 
+  "96944" -> "96945" 
+  "96947" -> "96948" 
+  "96947" -> "96963" 
+  "96948" -> "96949" 
+  "96948" -> "96956" 
+  "96949" -> "96950" 
+  "96949" -> "96951" 
+  "96951" -> "96952" 
+  "96952" -> "96953" 
+  "96953" -> "96954" 
+  "96953" -> "96955" 
+  "96956" -> "96957" 
+  "96956" -> "96958" 
+  "96958" -> "96959" 
+  "96959" -> "96960" 
+  "96960" -> "96961" 
+  "96960" -> "96962" 
+  "96963" -> "96964" 
+  "96963" -> "96976" 
+  "96963" -> "96988" 
+  "96964" -> "96965" 
+  "96964" -> "96972" 
+  "96965" -> "96966" 
+  "96965" -> "96967" 
+  "96967" -> "96968" 
+  "96968" -> "96969" 
+  "96969" -> "96970" 
+  "96969" -> "96971" 
+  "96972" -> "96973" 
+  "96973" -> "96974" 
+  "96973" -> "96975" 
+  "96976" -> "96977" 
+  "96976" -> "96984" 
+  "96977" -> "96978" 
+  "96977" -> "96979" 
+  "96979" -> "96980" 
+  "96980" -> "96981" 
+  "96981" -> "96982" 
+  "96981" -> "96983" 
+  "96984" -> "96985" 
+  "96985" -> "96986" 
+  "96985" -> "96987" 
+  "96989" -> "96990" 
+  "96989" -> "96994" 
+  "96989" -> "96997" 
+  "96989" -> "96999" 
+  "96990" -> "96991" 
+  "96991" -> "96992" 
+  "96991" -> "96993" 
+  "96994" -> "96995" 
+  "96994" -> "96996" 
+  "96997" -> "96998" 
+  "96999" -> "97000" 
+  "96999" -> "97008" 
+  "96999" -> "97013" 
+  "96999" -> "97021" 
+  "96999" -> "97024" 
+  "97000" -> "97001" 
+  "97000" -> "97004" 
+  "97001" -> "97002" 
+  "97001" -> "97003" 
+  "97004" -> "97005" 
+  "97005" -> "97006" 
+  "97005" -> "97007" 
+  "97008" -> "97009" 
+  "97008" -> "97012" 
+  "97009" -> "97010" 
+  "97009" -> "97011" 
+  "97013" -> "97014" 
+  "97013" -> "97017" 
+  "97014" -> "97015" 
+  "97014" -> "97016" 
+  "97017" -> "97018" 
+  "97017" -> "97019" 
+  "97017" -> "97020" 
+  "97021" -> "97022" 
+  "97021" -> "97023" 
+  "97024" -> "97025" 
+  "97024" -> "97026" 
+  "97027" -> "97028" 
+  "97027" -> "97031" 
+  "97028" -> "97029" 
+  "97028" -> "97030" 
+  "97031" -> "97032" 
+  "97031" -> "97035" 
+  "97032" -> "97033" 
+  "97032" -> "97034" 
+  "97036" -> "97037" 
+  "97036" -> "97038" 
+  "97036" -> "97039" 
+  "97040" -> "97041" 
+  "97040" -> "97042" 
+  "97042" -> "97043" 
+  "97042" -> "97044" 
+  "97045" -> "97046" 
+  "97045" -> "97047" 
+  "97047" -> "97048" 
+  "97047" -> "97049" 
+  "97050" -> "97051" 
+  "97050" -> "97054" 
+  "97051" -> "97052" 
+  "97051" -> "97053" 
+  "97055" -> "97056" 
+  "97055" -> "97059" 
+  "97056" -> "97057" 
+  "97056" -> "97058" 
+  "97060" -> "97061" 
+  "97060" -> "97064" 
+  "97061" -> "97062" 
+  "97061" -> "97063" 
+}

@@ -1,0 +1,210 @@
+digraph "TIFFDefaultTransferFunction" {  
+"20848" [label = <(&lt;operator&gt;.assignment,**tf = td-&gt;td_transferfunction)<SUB>130</SUB>> ]
+"20856" [label = <(&lt;operator&gt;.assignment,tf[0] = tf[1] = tf[2] = 0)<SUB>133</SUB>> ]
+"20883" [label = <(&lt;operator&gt;.assignment,n = ((tmsize_t)1) &lt;&lt; td-&gt;td_bitspersample)<SUB>137</SUB>> ]
+"20892" [label = <(&lt;operator&gt;.assignment,nbytes = n * sizeof(uint16_t))<SUB>138</SUB>> ]
+"20898" [label = <(&lt;operator&gt;.assignment,tf[0] = (uint16_t *)_TIFFmallocExt(tif, nbytes))<SUB>139</SUB>> ]
+"20916" [label = <(&lt;operator&gt;.assignment,tf[0][0] = 0)<SUB>142</SUB>> ]
+"21023" [label = <(RETURN,return 1;,return 1;)<SUB>160</SUB>> ]
+"21056" [label = <(&lt;operator&gt;.assignment,tf[0] = tf[1] = tf[2] = 0)<SUB>169</SUB>> ]
+"21069" [label = <(RETURN,return 0;,return 0;)<SUB>170</SUB>> ]
+"20850" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_transferfunction)<SUB>130</SUB>> ]
+"20857" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>133</SUB>> ]
+"20860" [label = <(&lt;operator&gt;.assignment,tf[1] = tf[2] = 0)<SUB>133</SUB>> ]
+"20870" [label = <(&lt;operator&gt;.greaterEqualsThan,td-&gt;td_bitspersample &gt;= sizeof(tmsize_t) * 8 - 2)<SUB>134</SUB>> ]
+"20885" [label = <(&lt;operator&gt;.shiftLeft,((tmsize_t)1) &lt;&lt; td-&gt;td_bitspersample)<SUB>137</SUB>> ]
+"20894" [label = <(&lt;operator&gt;.multiplication,n * sizeof(uint16_t))<SUB>138</SUB>> ]
+"20899" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>139</SUB>> ]
+"20902" [label = <(&lt;operator&gt;.cast,(uint16_t *)_TIFFmallocExt(tif, nbytes))<SUB>139</SUB>> ]
+"20908" [label = <(&lt;operator&gt;.equals,tf[0] == NULL)<SUB>140</SUB>> ]
+"20917" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0][0])<SUB>142</SUB>> ]
+"20928" [label = <(&lt;operator&gt;.lessThan,i &lt; n)<SUB>143</SUB>> ]
+"20931" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>143</SUB>> ]
+"20963" [label = <(&lt;operator&gt;.greaterThan,td-&gt;td_samplesperpixel - td-&gt;td_extrasamples &gt; 1)<SUB>149</SUB>> ]
+"21027" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>163</SUB>> ]
+"21037" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>165</SUB>> ]
+"21047" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>167</SUB>> ]
+"21057" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>169</SUB>> ]
+"21060" [label = <(&lt;operator&gt;.assignment,tf[1] = tf[2] = 0)<SUB>169</SUB>> ]
+"20852" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>130</SUB>> ]
+"20861" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>133</SUB>> ]
+"20864" [label = <(&lt;operator&gt;.assignment,tf[2] = 0)<SUB>133</SUB>> ]
+"20871" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>134</SUB>> ]
+"20874" [label = <(&lt;operator&gt;.subtraction,sizeof(tmsize_t) * 8 - 2)<SUB>134</SUB>> ]
+"20881" [label = <(RETURN,return 0;,return 0;)<SUB>135</SUB>> ]
+"20886" [label = <(&lt;operator&gt;.cast,(tmsize_t)1)<SUB>137</SUB>> ]
+"20889" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>137</SUB>> ]
+"20896" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>138</SUB>> ]
+"20903" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>139</SUB>> ]
+"20904" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, nbytes))<SUB>139</SUB>> ]
+"20909" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>140</SUB>> ]
+"20914" [label = <(RETURN,return 0;,return 0;)<SUB>141</SUB>> ]
+"20918" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>142</SUB>> ]
+"20925" [label = <(&lt;operator&gt;.assignment,i = 1)<SUB>143</SUB>> ]
+"20935" [label = <(&lt;operator&gt;.assignment,t = (double)i / ((double)n - 1.))<SUB>145</SUB>> ]
+"20946" [label = <(&lt;operator&gt;.assignment,tf[0][i] = (uint16_t)floor(65535. * pow(t, 2.2) + .5))<SUB>146</SUB>> ]
+"20964" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_samplesperpixel - td-&gt;td_extrasamples)<SUB>149</SUB>> ]
+"20973" [label = <(&lt;operator&gt;.assignment,tf[1] = (uint16_t *)_TIFFmallocExt(tif, nbytes))<SUB>151</SUB>> ]
+"20990" [label = <(_TIFFmemcpy,_TIFFmemcpy(tf[1], tf[0], nbytes))<SUB>154</SUB>> ]
+"20998" [label = <(&lt;operator&gt;.assignment,tf[2] = (uint16_t *)_TIFFmallocExt(tif, nbytes))<SUB>155</SUB>> ]
+"21015" [label = <(_TIFFmemcpy,_TIFFmemcpy(tf[2], tf[0], nbytes))<SUB>158</SUB>> ]
+"21031" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tf[0]))<SUB>164</SUB>> ]
+"21041" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tf[1]))<SUB>166</SUB>> ]
+"21051" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tf[2]))<SUB>168</SUB>> ]
+"21061" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>169</SUB>> ]
+"21064" [label = <(&lt;operator&gt;.assignment,tf[2] = 0)<SUB>169</SUB>> ]
+"20865" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>133</SUB>> ]
+"20873" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>134</SUB>> ]
+"20875" [label = <(&lt;operator&gt;.multiplication,sizeof(tmsize_t) * 8)<SUB>134</SUB>> ]
+"20887" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>137</SUB>> ]
+"20891" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>137</SUB>> ]
+"20937" [label = <(&lt;operator&gt;.division,(double)i / ((double)n - 1.))<SUB>145</SUB>> ]
+"20947" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0][i])<SUB>146</SUB>> ]
+"20952" [label = <(&lt;operator&gt;.cast,(uint16_t)floor(65535. * pow(t, 2.2) + .5))<SUB>146</SUB>> ]
+"20965" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>149</SUB>> ]
+"20968" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_extrasamples)<SUB>149</SUB>> ]
+"20974" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>151</SUB>> ]
+"20977" [label = <(&lt;operator&gt;.cast,(uint16_t *)_TIFFmallocExt(tif, nbytes))<SUB>151</SUB>> ]
+"20983" [label = <(&lt;operator&gt;.equals,tf[1] == NULL)<SUB>152</SUB>> ]
+"20991" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>154</SUB>> ]
+"20994" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>154</SUB>> ]
+"20999" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>155</SUB>> ]
+"21002" [label = <(&lt;operator&gt;.cast,(uint16_t *)_TIFFmallocExt(tif, nbytes))<SUB>155</SUB>> ]
+"21008" [label = <(&lt;operator&gt;.equals,tf[2] == NULL)<SUB>156</SUB>> ]
+"21016" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>158</SUB>> ]
+"21019" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>158</SUB>> ]
+"21033" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>164</SUB>> ]
+"21043" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>166</SUB>> ]
+"21053" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>168</SUB>> ]
+"21065" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>169</SUB>> ]
+"20876" [label = <(&lt;operator&gt;.sizeOf,sizeof(tmsize_t))<SUB>134</SUB>> ]
+"20938" [label = <(&lt;operator&gt;.cast,(double)i)<SUB>145</SUB>> ]
+"20941" [label = <(&lt;operator&gt;.subtraction,(double)n - 1.)<SUB>145</SUB>> ]
+"20948" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[0])<SUB>146</SUB>> ]
+"20953" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>146</SUB>> ]
+"20954" [label = <(floor,floor(65535. * pow(t, 2.2) + .5))<SUB>146</SUB>> ]
+"20967" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>149</SUB>> ]
+"20970" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>149</SUB>> ]
+"20978" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>151</SUB>> ]
+"20979" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, nbytes))<SUB>151</SUB>> ]
+"20984" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[1])<SUB>152</SUB>> ]
+"21003" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>155</SUB>> ]
+"21004" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, nbytes))<SUB>155</SUB>> ]
+"21009" [label = <(&lt;operator&gt;.indirectIndexAccess,tf[2])<SUB>156</SUB>> ]
+"20939" [label = <(UNKNOWN,double,double)<SUB>145</SUB>> ]
+"20942" [label = <(&lt;operator&gt;.cast,(double)n)<SUB>145</SUB>> ]
+"20955" [label = <(&lt;operator&gt;.addition,65535. * pow(t, 2.2) + .5)<SUB>146</SUB>> ]
+"20943" [label = <(UNKNOWN,double,double)<SUB>145</SUB>> ]
+"20956" [label = <(&lt;operator&gt;.multiplication,65535. * pow(t, 2.2))<SUB>146</SUB>> ]
+"20958" [label = <(pow,pow(t, 2.2))<SUB>146</SUB>> ]
+"20843" [label = <(METHOD,TIFFDefaultTransferFunction)<SUB>128</SUB>> ]
+"21071" [label = <(METHOD_RETURN,int)<SUB>128</SUB>> ]
+  "20848" -> "20857" 
+  "20856" -> "20873" 
+  "20883" -> "20896" 
+  "20892" -> "20899" 
+  "20898" -> "20909" 
+  "20916" -> "20925" 
+  "21023" -> "21071" 
+  "21056" -> "21069" 
+  "21069" -> "21071" 
+  "20850" -> "20848" 
+  "20857" -> "20861" 
+  "20860" -> "20856" 
+  "20870" -> "20881" 
+  "20870" -> "20887" 
+  "20885" -> "20883" 
+  "20894" -> "20892" 
+  "20899" -> "20903" 
+  "20902" -> "20898" 
+  "20908" -> "20914" 
+  "20908" -> "20918" 
+  "20917" -> "20916" 
+  "20928" -> "20939" 
+  "20928" -> "20967" 
+  "20931" -> "20928" 
+  "20963" -> "20974" 
+  "20963" -> "21023" 
+  "21027" -> "21033" 
+  "21027" -> "21037" 
+  "21037" -> "21043" 
+  "21037" -> "21047" 
+  "21047" -> "21053" 
+  "21047" -> "21057" 
+  "21057" -> "21061" 
+  "21060" -> "21056" 
+  "20852" -> "20850" 
+  "20861" -> "20865" 
+  "20864" -> "20860" 
+  "20871" -> "20876" 
+  "20874" -> "20870" 
+  "20881" -> "21071" 
+  "20886" -> "20891" 
+  "20889" -> "20885" 
+  "20896" -> "20894" 
+  "20903" -> "20904" 
+  "20904" -> "20902" 
+  "20909" -> "20908" 
+  "20914" -> "21071" 
+  "20918" -> "20917" 
+  "20925" -> "20928" 
+  "20935" -> "20948" 
+  "20946" -> "20931" 
+  "20964" -> "20963" 
+  "20973" -> "20984" 
+  "20990" -> "20999" 
+  "20998" -> "21009" 
+  "21015" -> "21023" 
+  "21031" -> "21037" 
+  "21041" -> "21047" 
+  "21051" -> "21057" 
+  "21061" -> "21065" 
+  "21064" -> "21060" 
+  "20865" -> "20864" 
+  "20873" -> "20871" 
+  "20875" -> "20874" 
+  "20887" -> "20886" 
+  "20891" -> "20889" 
+  "20937" -> "20935" 
+  "20947" -> "20953" 
+  "20952" -> "20946" 
+  "20965" -> "20970" 
+  "20968" -> "20964" 
+  "20974" -> "20978" 
+  "20977" -> "20973" 
+  "20983" -> "21027" 
+  "20983" -> "20991" 
+  "20991" -> "20994" 
+  "20994" -> "20990" 
+  "20999" -> "21003" 
+  "21002" -> "20998" 
+  "21008" -> "21027" 
+  "21008" -> "21016" 
+  "21016" -> "21019" 
+  "21019" -> "21015" 
+  "21033" -> "21031" 
+  "21043" -> "21041" 
+  "21053" -> "21051" 
+  "21065" -> "21064" 
+  "20876" -> "20875" 
+  "20938" -> "20943" 
+  "20941" -> "20937" 
+  "20948" -> "20947" 
+  "20953" -> "20958" 
+  "20954" -> "20952" 
+  "20967" -> "20965" 
+  "20970" -> "20968" 
+  "20978" -> "20979" 
+  "20979" -> "20977" 
+  "20984" -> "20983" 
+  "21003" -> "21004" 
+  "21004" -> "21002" 
+  "21009" -> "21008" 
+  "20939" -> "20938" 
+  "20942" -> "20941" 
+  "20955" -> "20954" 
+  "20943" -> "20942" 
+  "20956" -> "20955" 
+  "20958" -> "20956" 
+  "20843" -> "20852" 
+}

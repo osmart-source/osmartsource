@@ -1,0 +1,510 @@
+digraph "_TIFFVGetField" {  
+"42600" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1214</SUB>> ]
+"42607" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1215</SUB>> ]
+"42611" [label = <(&lt;operator&gt;.assignment,standard_tag = tag)<SUB>1216</SUB>> ]
+"42615" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFindField(tif, tag, TIFF_ANY))<SUB>1217</SUB>> ]
+"43151" [label = <(RETURN,return (ret_val);,return (ret_val);)<SUB>1575</SUB>> ]
+"42602" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1214</SUB>> ]
+"42617" [label = <(TIFFFindField,TIFFFindField(tif, tag, TIFF_ANY))<SUB>1217</SUB>> ]
+"42622" [label = <(&lt;operator&gt;.equals,fip == NULL)<SUB>1218</SUB>> ]
+"42629" [label = <(&lt;operator&gt;.equals,fip-&gt;field_bit == FIELD_CUSTOM)<SUB>1227</SUB>> ]
+"42603" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1214</SUB>> ]
+"42626" [label = <(RETURN,return 0;,return 0;)<SUB>1219</SUB>> ]
+"42630" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1227</SUB>> ]
+"42635" [label = <(&lt;operator&gt;.assignment,standard_tag = 0)<SUB>1229</SUB>> ]
+"42643" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_subfiletype;,*va_arg(ap, uint32_t *) = td-&gt;td_subfiletype;)<SUB>1235</SUB>> ]
+"42647" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_imagewidth;,*va_arg(ap, uint32_t *) = td-&gt;td_imagewidth;)<SUB>1238</SUB>> ]
+"42651" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_imagelength;,*va_arg(ap, uint32_t *) = td-&gt;td_imagelength;)<SUB>1241</SUB>> ]
+"42655" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_bitspersample;,*va_arg(ap, uint16_t *) = td-&gt;td_bitspersample;)<SUB>1244</SUB>> ]
+"42659" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_compression;,*va_arg(ap, uint16_t *) = td-&gt;td_compression;)<SUB>1247</SUB>> ]
+"42663" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_photometric;,*va_arg(ap, uint16_t *) = td-&gt;td_photometric;)<SUB>1250</SUB>> ]
+"42667" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_threshholding;,*va_arg(ap, uint16_t *) = td-&gt;td_threshholding;)<SUB>1253</SUB>> ]
+"42671" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_fillorder;,*va_arg(ap, uint16_t *) = td-&gt;td_fillorder;)<SUB>1256</SUB>> ]
+"42675" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_orientation;,*va_arg(ap, uint16_t *) = td-&gt;td_orientation;)<SUB>1259</SUB>> ]
+"42679" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_samplesperpixel;,*va_arg(ap, uint16_t *) = td-&gt;td_samplesperpixel;)<SUB>1262</SUB>> ]
+"42683" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_rowsperstrip;,*va_arg(ap, uint32_t *) = td-&gt;td_rowsperstrip;)<SUB>1265</SUB>> ]
+"42687" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_minsamplevalue;,*va_arg(ap, uint16_t *) = td-&gt;td_minsamplevalue;)<SUB>1268</SUB>> ]
+"42691" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_maxsamplevalue;,*va_arg(ap, uint16_t *) = td-&gt;td_maxsamplevalue;)<SUB>1271</SUB>> ]
+"42695" [label = <(UNKNOWN,if (tif-&gt;tif_flags &amp; TIFF_PERSAMPLE)\012                *va_arg(ap, double **) = td-&gt;td_sminsamplevalue;,if (tif-&gt;tif_flags &amp; TIFF_PERSAMPLE)\012                *va_arg(ap, double **) = td-&gt;td_sminsamplevalue;)<SUB>1274</SUB>> ]
+"42696" [label = <(UNKNOWN,else\012            {\012                /* libtiff historically treats this as a single value. */\012                uint16_t i;\012                double v = td-&gt;td_sminsamplevalue[0];\012                for (i = 1; i &lt; td-&gt;td_samplesperpixel; ++i)\012                    if (td-&gt;td_sminsamplevalue[i] &lt; v)\012                        v = td-&gt;td_sminsamplevalue[i];\012                *va_arg(ap, double *) = v;\012            },else\012            {\012                /* libtiff historically treats this as a single value. */\012                uint16_t i;\012                double v = td-&gt;td_sminsamplevalue[0];\012                for (i = 1; i &lt; td-&gt;td_samplesperpixel; ++i)\012                    if (td-&gt;td_sminsamplevalue[i] &lt; v)\012                        v = td-&gt;td_sminsamplevalue[i];\012                *va_arg(ap, double *) = v;\012            })<SUB>1276</SUB>> ]
+"42700" [label = <(UNKNOWN,if (tif-&gt;tif_flags &amp; TIFF_PERSAMPLE)\012                *va_arg(ap, double **) = td-&gt;td_smaxsamplevalue;,if (tif-&gt;tif_flags &amp; TIFF_PERSAMPLE)\012                *va_arg(ap, double **) = td-&gt;td_smaxsamplevalue;)<SUB>1288</SUB>> ]
+"42701" [label = <(UNKNOWN,else\012            {\012                /* libtiff historically treats this as a single value. */\012                uint16_t i;\012                double v = td-&gt;td_smaxsamplevalue[0];\012                for (i = 1; i &lt; td-&gt;td_samplesperpixel; ++i)\012                    if (td-&gt;td_smaxsamplevalue[i] &gt; v)\012                        v = td-&gt;td_smaxsamplevalue[i];\012                *va_arg(ap, double *) = v;\012            },else\012            {\012                /* libtiff historically treats this as a single value. */\012                uint16_t i;\012                double v = td-&gt;td_smaxsamplevalue[0];\012                for (i = 1; i &lt; td-&gt;td_samplesperpixel; ++i)\012                    if (td-&gt;td_smaxsamplevalue[i] &gt; v)\012                        v = td-&gt;td_smaxsamplevalue[i];\012                *va_arg(ap, double *) = v;\012            })<SUB>1290</SUB>> ]
+"42705" [label = <(UNKNOWN,*va_arg(ap, float *) = td-&gt;td_xresolution;,*va_arg(ap, float *) = td-&gt;td_xresolution;)<SUB>1302</SUB>> ]
+"42709" [label = <(UNKNOWN,*va_arg(ap, float *) = td-&gt;td_yresolution;,*va_arg(ap, float *) = td-&gt;td_yresolution;)<SUB>1305</SUB>> ]
+"42713" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_planarconfig;,*va_arg(ap, uint16_t *) = td-&gt;td_planarconfig;)<SUB>1308</SUB>> ]
+"42717" [label = <(UNKNOWN,*va_arg(ap, float *) = td-&gt;td_xposition;,*va_arg(ap, float *) = td-&gt;td_xposition;)<SUB>1311</SUB>> ]
+"42721" [label = <(UNKNOWN,*va_arg(ap, float *) = td-&gt;td_yposition;,*va_arg(ap, float *) = td-&gt;td_yposition;)<SUB>1314</SUB>> ]
+"42725" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_resolutionunit;,*va_arg(ap, uint16_t *) = td-&gt;td_resolutionunit;)<SUB>1317</SUB>> ]
+"42729" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_pagenumber[0];,*va_arg(ap, uint16_t *) = td-&gt;td_pagenumber[0];)<SUB>1320</SUB>> ]
+"42730" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_pagenumber[1];,*va_arg(ap, uint16_t *) = td-&gt;td_pagenumber[1];)<SUB>1321</SUB>> ]
+"42734" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_halftonehints[0];,*va_arg(ap, uint16_t *) = td-&gt;td_halftonehints[0];)<SUB>1324</SUB>> ]
+"42735" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_halftonehints[1];,*va_arg(ap, uint16_t *) = td-&gt;td_halftonehints[1];)<SUB>1325</SUB>> ]
+"42739" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_colormap[0];,*va_arg(ap, const uint16_t **) = td-&gt;td_colormap[0];)<SUB>1328</SUB>> ]
+"42740" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_colormap[1];,*va_arg(ap, const uint16_t **) = td-&gt;td_colormap[1];)<SUB>1329</SUB>> ]
+"42741" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_colormap[2];,*va_arg(ap, const uint16_t **) = td-&gt;td_colormap[2];)<SUB>1330</SUB>> ]
+"42747" [label = <(_TIFFFillStriles,_TIFFFillStriles(tif))<SUB>1334</SUB>> ]
+"42749" [label = <(UNKNOWN,*va_arg(ap, const uint64_t **) = td-&gt;td_stripoffset_p;,*va_arg(ap, const uint64_t **) = td-&gt;td_stripoffset_p;)<SUB>1335</SUB>> ]
+"42765" [label = <(_TIFFFillStriles,_TIFFFillStriles(tif))<SUB>1341</SUB>> ]
+"42767" [label = <(UNKNOWN,*va_arg(ap, const uint64_t **) = td-&gt;td_stripbytecount_p;,*va_arg(ap, const uint64_t **) = td-&gt;td_stripbytecount_p;)<SUB>1342</SUB>> ]
+"42781" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) =\012                (td-&gt;td_extrasamples == 1 &amp;&amp;\012                 td-&gt;td_sampleinfo[0] == EXTRASAMPLE_ASSOCALPHA);,*va_arg(ap, uint16_t *) =\012                (td-&gt;td_extrasamples == 1 &amp;&amp;\012                 td-&gt;td_sampleinfo[0] == EXTRASAMPLE_ASSOCALPHA);)<SUB>1347</SUB>> ]
+"42785" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_extrasamples;,*va_arg(ap, uint16_t *) = td-&gt;td_extrasamples;)<SUB>1352</SUB>> ]
+"42786" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_sampleinfo;,*va_arg(ap, const uint16_t **) = td-&gt;td_sampleinfo;)<SUB>1353</SUB>> ]
+"42790" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_tilewidth;,*va_arg(ap, uint32_t *) = td-&gt;td_tilewidth;)<SUB>1356</SUB>> ]
+"42794" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_tilelength;,*va_arg(ap, uint32_t *) = td-&gt;td_tilelength;)<SUB>1359</SUB>> ]
+"42798" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_tiledepth;,*va_arg(ap, uint32_t *) = td-&gt;td_tiledepth;)<SUB>1362</SUB>> ]
+"42826" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_sampleformat;,*va_arg(ap, uint16_t *) = td-&gt;td_sampleformat;)<SUB>1382</SUB>> ]
+"42830" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = td-&gt;td_imagedepth;,*va_arg(ap, uint32_t *) = td-&gt;td_imagedepth;)<SUB>1385</SUB>> ]
+"42834" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_nsubifd;,*va_arg(ap, uint16_t *) = td-&gt;td_nsubifd;)<SUB>1388</SUB>> ]
+"42835" [label = <(UNKNOWN,*va_arg(ap, const uint64_t **) = td-&gt;td_subifd;,*va_arg(ap, const uint64_t **) = td-&gt;td_subifd;)<SUB>1389</SUB>> ]
+"42839" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_ycbcrpositioning;,*va_arg(ap, uint16_t *) = td-&gt;td_ycbcrpositioning;)<SUB>1392</SUB>> ]
+"42843" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_ycbcrsubsampling[0];,*va_arg(ap, uint16_t *) = td-&gt;td_ycbcrsubsampling[0];)<SUB>1395</SUB>> ]
+"42844" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_ycbcrsubsampling[1];,*va_arg(ap, uint16_t *) = td-&gt;td_ycbcrsubsampling[1];)<SUB>1396</SUB>> ]
+"42848" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_transferfunction[0];,*va_arg(ap, const uint16_t **) = td-&gt;td_transferfunction[0];)<SUB>1399</SUB>> ]
+"42869" [label = <(UNKNOWN,*va_arg(ap, const float **) = td-&gt;td_refblackwhite;,*va_arg(ap, const float **) = td-&gt;td_refblackwhite;)<SUB>1412</SUB>> ]
+"42873" [label = <(UNKNOWN,*va_arg(ap, const char **) = td-&gt;td_inknames;,*va_arg(ap, const char **) = td-&gt;td_inknames;)<SUB>1415</SUB>> ]
+"42877" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = td-&gt;td_numberofinks;,*va_arg(ap, uint16_t *) = td-&gt;td_numberofinks;)<SUB>1418</SUB>> ]
+"42605" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1214</SUB>> ]
+"42632" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1227</SUB>> ]
+"42751" [label = <(&lt;operator&gt;.equals,td-&gt;td_stripoffset_p == NULL)<SUB>1336</SUB>> ]
+"42769" [label = <(&lt;operator&gt;.equals,td-&gt;td_stripbytecount_p == NULL)<SUB>1343</SUB>> ]
+"42803" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_sampleformat)<SUB>1365</SUB>> ]
+"42850" [label = <(&lt;operator&gt;.greaterThan,td-&gt;td_samplesperpixel - td-&gt;td_extrasamples &gt; 1)<SUB>1400</SUB>> ]
+"42908" [label = <(&lt;operator&gt;.assignment,ret_val = 0)<SUB>1447</SUB>> ]
+"42752" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripoffset_p)<SUB>1336</SUB>> ]
+"42757" [label = <(&lt;operator&gt;.assignment,ret_val = 0)<SUB>1337</SUB>> ]
+"42770" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>1343</SUB>> ]
+"42775" [label = <(&lt;operator&gt;.assignment,ret_val = 0)<SUB>1344</SUB>> ]
+"42805" [label = <(FIELD_IDENTIFIER,td_sampleformat,td_sampleformat)<SUB>1365</SUB>> ]
+"42809" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = DATATYPE_UINT;,*va_arg(ap, uint16_t *) = DATATYPE_UINT;)<SUB>1368</SUB>> ]
+"42813" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = DATATYPE_INT;,*va_arg(ap, uint16_t *) = DATATYPE_INT;)<SUB>1371</SUB>> ]
+"42817" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = DATATYPE_IEEEFP;,*va_arg(ap, uint16_t *) = DATATYPE_IEEEFP;)<SUB>1374</SUB>> ]
+"42821" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = DATATYPE_VOID;,*va_arg(ap, uint16_t *) = DATATYPE_VOID;)<SUB>1377</SUB>> ]
+"42851" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_samplesperpixel - td-&gt;td_extrasamples)<SUB>1400</SUB>> ]
+"42860" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_transferfunction[1];,*va_arg(ap, const uint16_t **) = td-&gt;td_transferfunction[1];)<SUB>1402</SUB>> ]
+"42861" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = td-&gt;td_transferfunction[2];,*va_arg(ap, const uint16_t **) = td-&gt;td_transferfunction[2];)<SUB>1403</SUB>> ]
+"42883" [label = <(&lt;operator&gt;.notEquals,fip-&gt;field_bit != FIELD_CUSTOM)<SUB>1433</SUB>> ]
+"42916" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount)<SUB>1448</SUB>> ]
+"42921" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>1448</SUB>> ]
+"42754" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>1336</SUB>> ]
+"42772" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>1343</SUB>> ]
+"42852" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>1400</SUB>> ]
+"42855" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_extrasamples)<SUB>1400</SUB>> ]
+"42864" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = NULL;,*va_arg(ap, const uint16_t **) = NULL;)<SUB>1407</SUB>> ]
+"42865" [label = <(UNKNOWN,*va_arg(ap, const uint16_t **) = NULL;,*va_arg(ap, const uint16_t **) = NULL;)<SUB>1408</SUB>> ]
+"42884" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1433</SUB>> ]
+"42889" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFVGetField&quot;,\012                              &quot;%s: Invalid %stag \&quot;%s\&quot; &quot;\012                              &quot;(not supported by codec)&quot;,\012                              tif-&gt;tif_name, isPseudoTag(tag) ? &quot;pseudo-&quot; : &quot;&quot;,\012                              fip-&gt;field_name))<SUB>1435</SUB>> ]
+"42904" [label = <(&lt;operator&gt;.assignment,ret_val = 0)<SUB>1440</SUB>> ]
+"42913" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1448</SUB>> ]
+"42918" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1448</SUB>> ]
+"42925" [label = <(&lt;operator&gt;.assignment,*tv = td-&gt;td_customValues + i)<SUB>1450</SUB>> ]
+"42854" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>1400</SUB>> ]
+"42857" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>1400</SUB>> ]
+"42886" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1433</SUB>> ]
+"42893" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>1438</SUB>> ]
+"42896" [label = <(&lt;operator&gt;.conditional,isPseudoTag(tag) ? &quot;pseudo-&quot; : &quot;&quot;)<SUB>1438</SUB>> ]
+"42901" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>1439</SUB>> ]
+"42920" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1448</SUB>> ]
+"42927" [label = <(&lt;operator&gt;.addition,td-&gt;td_customValues + i)<SUB>1450</SUB>> ]
+"42933" [label = <(&lt;operator&gt;.notEquals,tv-&gt;info-&gt;field_tag != tag)<SUB>1452</SUB>> ]
+"42943" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_passcount)<SUB>1455</SUB>> ]
+"42895" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>1438</SUB>> ]
+"42897" [label = <(isPseudoTag,isPseudoTag(tag))<SUB>1438</SUB>> ]
+"42903" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>1439</SUB>> ]
+"42928" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1450</SUB>> ]
+"42934" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;info-&gt;field_tag)<SUB>1452</SUB>> ]
+"42945" [label = <(FIELD_IDENTIFIER,field_passcount,field_passcount)<SUB>1455</SUB>> ]
+"42947" [label = <(UNKNOWN,if (fip-&gt;field_readcount == TIFF_VARIABLE2)\012                        *va_arg(ap, uint32_t *) = (uint32_t)tv-&gt;count;,if (fip-&gt;field_readcount == TIFF_VARIABLE2)\012                        *va_arg(ap, uint32_t *) = (uint32_t)tv-&gt;count;)<SUB>1457</SUB>> ]
+"42948" [label = <(UNKNOWN,else /* Assume TIFF_VARIABLE */\012                        *va_arg(ap, uint16_t *) = (uint16_t)tv-&gt;count;,else /* Assume TIFF_VARIABLE */\012                        *va_arg(ap, uint16_t *) = (uint16_t)tv-&gt;count;)<SUB>1459</SUB>> ]
+"42949" [label = <(UNKNOWN,*va_arg(ap, const void **) = tv-&gt;value;,*va_arg(ap, const void **) = tv-&gt;value;)<SUB>1461</SUB>> ]
+"42950" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1462</SUB>> ]
+"42930" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1450</SUB>> ]
+"42935" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;info)<SUB>1452</SUB>> ]
+"42938" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>1452</SUB>> ]
+"42937" [label = <(FIELD_IDENTIFIER,info,info)<SUB>1452</SUB>> ]
+"42956" [label = <(&lt;operator&gt;.logicalAnd,fip-&gt;field_tag == TIFFTAG_DOTRANGE &amp;&amp;\012                         strcmp(fip-&gt;field_name, &quot;DotRange&quot;) == 0)<SUB>1464</SUB>> ]
+"42957" [label = <(&lt;operator&gt;.equals,fip-&gt;field_tag == TIFFTAG_DOTRANGE)<SUB>1464</SUB>> ]
+"42962" [label = <(&lt;operator&gt;.equals,strcmp(fip-&gt;field_name, &quot;DotRange&quot;) == 0)<SUB>1465</SUB>> ]
+"42970" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = ((uint16_t *)tv-&gt;value)[0];,*va_arg(ap, uint16_t *) = ((uint16_t *)tv-&gt;value)[0];)<SUB>1471</SUB>> ]
+"42971" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = ((uint16_t *)tv-&gt;value)[1];,*va_arg(ap, uint16_t *) = ((uint16_t *)tv-&gt;value)[1];)<SUB>1472</SUB>> ]
+"42972" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1473</SUB>> ]
+"42958" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_tag)<SUB>1464</SUB>> ]
+"42963" [label = <(strcmp,strcmp(fip-&gt;field_name, &quot;DotRange&quot;))<SUB>1465</SUB>> ]
+"42960" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>1464</SUB>> ]
+"42964" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>1465</SUB>> ]
+"42978" [label = <(&lt;operator&gt;.logicalOr,fip-&gt;field_type == TIFF_ASCII ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE2 ||\012                        fip-&gt;field_readcount == TIFF_SPP || tv-&gt;count &gt; 1)<SUB>1477</SUB>> ]
+"42966" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>1465</SUB>> ]
+"42979" [label = <(&lt;operator&gt;.logicalOr,fip-&gt;field_type == TIFF_ASCII ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE2 ||\012                        fip-&gt;field_readcount == TIFF_SPP)<SUB>1477</SUB>> ]
+"43002" [label = <(&lt;operator&gt;.greaterThan,tv-&gt;count &gt; 1)<SUB>1480</SUB>> ]
+"43008" [label = <(UNKNOWN,*va_arg(ap, void **) = tv-&gt;value;,*va_arg(ap, void **) = tv-&gt;value;)<SUB>1482</SUB>> ]
+"43009" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1483</SUB>> ]
+"42980" [label = <(&lt;operator&gt;.logicalOr,fip-&gt;field_type == TIFF_ASCII ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE2)<SUB>1477</SUB>> ]
+"42997" [label = <(&lt;operator&gt;.equals,fip-&gt;field_readcount == TIFF_SPP)<SUB>1480</SUB>> ]
+"43003" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;count)<SUB>1480</SUB>> ]
+"43015" [label = <(&lt;operator&gt;.assignment,*val = (char *)tv-&gt;value)<SUB>1487</SUB>> ]
+"43022" [label = <(assert,assert(tv-&gt;count == 1))<SUB>1488</SUB>> ]
+"42981" [label = <(&lt;operator&gt;.logicalOr,fip-&gt;field_type == TIFF_ASCII ||\012                        fip-&gt;field_readcount == TIFF_VARIABLE)<SUB>1477</SUB>> ]
+"42992" [label = <(&lt;operator&gt;.equals,fip-&gt;field_readcount == TIFF_VARIABLE2)<SUB>1479</SUB>> ]
+"42998" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_readcount)<SUB>1480</SUB>> ]
+"43005" [label = <(FIELD_IDENTIFIER,count,count)<SUB>1480</SUB>> ]
+"43017" [label = <(&lt;operator&gt;.cast,(char *)tv-&gt;value)<SUB>1487</SUB>> ]
+"43023" [label = <(&lt;operator&gt;.equals,tv-&gt;count == 1)<SUB>1488</SUB>> ]
+"43029" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_type)<SUB>1489</SUB>> ]
+"42982" [label = <(&lt;operator&gt;.equals,fip-&gt;field_type == TIFF_ASCII)<SUB>1477</SUB>> ]
+"42987" [label = <(&lt;operator&gt;.equals,fip-&gt;field_readcount == TIFF_VARIABLE)<SUB>1478</SUB>> ]
+"42993" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_readcount)<SUB>1479</SUB>> ]
+"43000" [label = <(FIELD_IDENTIFIER,field_readcount,field_readcount)<SUB>1480</SUB>> ]
+"43018" [label = <(UNKNOWN,char *,char *)<SUB>1487</SUB>> ]
+"43019" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;value)<SUB>1487</SUB>> ]
+"43024" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;count)<SUB>1488</SUB>> ]
+"43031" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>1489</SUB>> ]
+"43037" [label = <(UNKNOWN,*va_arg(ap, uint8_t *) = *(uint8_t *)val;,*va_arg(ap, uint8_t *) = *(uint8_t *)val;)<SUB>1493</SUB>> ]
+"43038" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1494</SUB>> ]
+"43044" [label = <(UNKNOWN,*va_arg(ap, int8_t *) = *(int8_t *)val;,*va_arg(ap, int8_t *) = *(int8_t *)val;)<SUB>1497</SUB>> ]
+"43045" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1498</SUB>> ]
+"43051" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = *(uint16_t *)val;,*va_arg(ap, uint16_t *) = *(uint16_t *)val;)<SUB>1501</SUB>> ]
+"43052" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1502</SUB>> ]
+"43058" [label = <(UNKNOWN,*va_arg(ap, int16_t *) = *(int16_t *)val;,*va_arg(ap, int16_t *) = *(int16_t *)val;)<SUB>1505</SUB>> ]
+"43059" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1506</SUB>> ]
+"43067" [label = <(UNKNOWN,*va_arg(ap, uint32_t *) = *(uint32_t *)val;,*va_arg(ap, uint32_t *) = *(uint32_t *)val;)<SUB>1510</SUB>> ]
+"43068" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1511</SUB>> ]
+"43074" [label = <(UNKNOWN,*va_arg(ap, int32_t *) = *(int32_t *)val;,*va_arg(ap, int32_t *) = *(int32_t *)val;)<SUB>1514</SUB>> ]
+"43075" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1515</SUB>> ]
+"43083" [label = <(UNKNOWN,*va_arg(ap, uint64_t *) = *(uint64_t *)val;,*va_arg(ap, uint64_t *) = *(uint64_t *)val;)<SUB>1519</SUB>> ]
+"43084" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1520</SUB>> ]
+"43090" [label = <(UNKNOWN,*va_arg(ap, int64_t *) = *(int64_t *)val;,*va_arg(ap, int64_t *) = *(int64_t *)val;)<SUB>1523</SUB>> ]
+"43091" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1524</SUB>> ]
+"43133" [label = <(UNKNOWN,*va_arg(ap, float *) = *(float *)val;,*va_arg(ap, float *) = *(float *)val;)<SUB>1558</SUB>> ]
+"43134" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1559</SUB>> ]
+"43140" [label = <(UNKNOWN,*va_arg(ap, double *) = *(double *)val;,*va_arg(ap, double *) = *(double *)val;)<SUB>1562</SUB>> ]
+"43141" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1563</SUB>> ]
+"43146" [label = <(&lt;operator&gt;.assignment,ret_val = 0)<SUB>1566</SUB>> ]
+"42983" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_type)<SUB>1477</SUB>> ]
+"42988" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_readcount)<SUB>1478</SUB>> ]
+"42995" [label = <(FIELD_IDENTIFIER,field_readcount,field_readcount)<SUB>1479</SUB>> ]
+"43021" [label = <(FIELD_IDENTIFIER,value,value)<SUB>1487</SUB>> ]
+"43026" [label = <(FIELD_IDENTIFIER,count,count)<SUB>1488</SUB>> ]
+"43101" [label = <(&lt;operator&gt;.assignment,tv_size = TIFFFieldSetGetSize(fip))<SUB>1532</SUB>> ]
+"42985" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>1477</SUB>> ]
+"42990" [label = <(FIELD_IDENTIFIER,field_readcount,field_readcount)<SUB>1478</SUB>> ]
+"43103" [label = <(TIFFFieldSetGetSize,TIFFFieldSetGetSize(fip))<SUB>1532</SUB>> ]
+"43106" [label = <(&lt;operator&gt;.equals,tv_size == 8)<SUB>1533</SUB>> ]
+"43110" [label = <(UNKNOWN,*va_arg(ap, double *) = *(double *)val;,*va_arg(ap, double *) = *(double *)val;)<SUB>1535</SUB>> ]
+"43111" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1536</SUB>> ]
+"43116" [label = <(UNKNOWN,*va_arg(ap, float *) = *(float *)val;,*va_arg(ap, float *) = *(float *)val;)<SUB>1541</SUB>> ]
+"43117" [label = <(&lt;operator&gt;.assignment,ret_val = 1)<SUB>1542</SUB>> ]
+"43121" [label = <(&lt;operator&gt;.notEquals,tv_size != 4)<SUB>1546</SUB>> ]
+"43125" [label = <(TIFFErrorExtR,TIFFErrorExtR(\012                                            tif, &quot;_TIFFVGetField&quot;,\012                                            &quot;Rational2Double: .set_field_type &quot;\012                                            &quot;in not 4 but %d&quot;,\012                                            tv_size))<SUB>1548</SUB>> ]
+"42594" [label = <(METHOD,_TIFFVGetField)<SUB>1212</SUB>> ]
+"43153" [label = <(METHOD_RETURN,int)<SUB>1212</SUB>> ]
+  "42600" -> "42607" 
+  "42607" -> "42611" 
+  "42611" -> "42617" 
+  "42615" -> "42622" 
+  "43151" -> "43153" 
+  "42602" -> "42600" 
+  "42617" -> "42615" 
+  "42622" -> "42626" 
+  "42622" -> "42632" 
+  "42629" -> "42635" 
+  "42629" -> "42643" 
+  "42629" -> "42647" 
+  "42629" -> "42651" 
+  "42629" -> "42655" 
+  "42629" -> "42659" 
+  "42629" -> "42663" 
+  "42629" -> "42667" 
+  "42629" -> "42671" 
+  "42629" -> "42675" 
+  "42629" -> "42679" 
+  "42629" -> "42683" 
+  "42629" -> "42687" 
+  "42629" -> "42691" 
+  "42629" -> "42695" 
+  "42629" -> "42700" 
+  "42629" -> "42705" 
+  "42629" -> "42709" 
+  "42629" -> "42713" 
+  "42629" -> "42717" 
+  "42629" -> "42721" 
+  "42629" -> "42725" 
+  "42629" -> "42729" 
+  "42629" -> "42734" 
+  "42629" -> "42739" 
+  "42629" -> "42747" 
+  "42629" -> "42765" 
+  "42629" -> "42781" 
+  "42629" -> "42785" 
+  "42629" -> "42790" 
+  "42629" -> "42794" 
+  "42629" -> "42798" 
+  "42629" -> "42805" 
+  "42629" -> "42826" 
+  "42629" -> "42830" 
+  "42629" -> "42834" 
+  "42629" -> "42839" 
+  "42629" -> "42843" 
+  "42629" -> "42848" 
+  "42629" -> "42869" 
+  "42629" -> "42873" 
+  "42629" -> "42877" 
+  "42629" -> "42886" 
+  "42603" -> "42602" 
+  "42626" -> "43153" 
+  "42630" -> "42629" 
+  "42635" -> "42643" 
+  "42635" -> "42647" 
+  "42635" -> "42651" 
+  "42635" -> "42655" 
+  "42635" -> "42659" 
+  "42635" -> "42663" 
+  "42635" -> "42667" 
+  "42635" -> "42671" 
+  "42635" -> "42675" 
+  "42635" -> "42679" 
+  "42635" -> "42683" 
+  "42635" -> "42687" 
+  "42635" -> "42691" 
+  "42635" -> "42695" 
+  "42635" -> "42700" 
+  "42635" -> "42705" 
+  "42635" -> "42709" 
+  "42635" -> "42713" 
+  "42635" -> "42717" 
+  "42635" -> "42721" 
+  "42635" -> "42725" 
+  "42635" -> "42729" 
+  "42635" -> "42734" 
+  "42635" -> "42739" 
+  "42635" -> "42747" 
+  "42635" -> "42765" 
+  "42635" -> "42781" 
+  "42635" -> "42785" 
+  "42635" -> "42790" 
+  "42635" -> "42794" 
+  "42635" -> "42798" 
+  "42635" -> "42805" 
+  "42635" -> "42826" 
+  "42635" -> "42830" 
+  "42635" -> "42834" 
+  "42635" -> "42839" 
+  "42635" -> "42843" 
+  "42635" -> "42848" 
+  "42635" -> "42869" 
+  "42635" -> "42873" 
+  "42635" -> "42877" 
+  "42635" -> "42886" 
+  "42643" -> "43151" 
+  "42647" -> "43151" 
+  "42651" -> "43151" 
+  "42655" -> "43151" 
+  "42659" -> "43151" 
+  "42663" -> "43151" 
+  "42667" -> "43151" 
+  "42671" -> "43151" 
+  "42675" -> "43151" 
+  "42679" -> "43151" 
+  "42683" -> "43151" 
+  "42687" -> "43151" 
+  "42691" -> "43151" 
+  "42695" -> "42696" 
+  "42696" -> "43151" 
+  "42700" -> "42701" 
+  "42701" -> "43151" 
+  "42705" -> "43151" 
+  "42709" -> "43151" 
+  "42713" -> "43151" 
+  "42717" -> "43151" 
+  "42721" -> "43151" 
+  "42725" -> "43151" 
+  "42729" -> "42730" 
+  "42730" -> "43151" 
+  "42734" -> "42735" 
+  "42735" -> "43151" 
+  "42739" -> "42740" 
+  "42740" -> "42741" 
+  "42741" -> "43151" 
+  "42747" -> "42749" 
+  "42749" -> "42754" 
+  "42765" -> "42767" 
+  "42767" -> "42772" 
+  "42781" -> "43151" 
+  "42785" -> "42786" 
+  "42786" -> "43151" 
+  "42790" -> "43151" 
+  "42794" -> "43151" 
+  "42798" -> "43151" 
+  "42826" -> "43151" 
+  "42830" -> "43151" 
+  "42834" -> "42835" 
+  "42835" -> "43151" 
+  "42839" -> "43151" 
+  "42843" -> "42844" 
+  "42844" -> "43151" 
+  "42848" -> "42854" 
+  "42869" -> "43151" 
+  "42873" -> "43151" 
+  "42877" -> "43151" 
+  "42605" -> "42603" 
+  "42632" -> "42630" 
+  "42751" -> "42757" 
+  "42751" -> "43151" 
+  "42769" -> "42775" 
+  "42769" -> "43151" 
+  "42803" -> "42809" 
+  "42803" -> "42813" 
+  "42803" -> "42817" 
+  "42803" -> "42821" 
+  "42803" -> "43151" 
+  "42850" -> "42860" 
+  "42850" -> "42864" 
+  "42908" -> "42913" 
+  "42752" -> "42751" 
+  "42757" -> "43151" 
+  "42770" -> "42769" 
+  "42775" -> "43151" 
+  "42805" -> "42803" 
+  "42809" -> "43151" 
+  "42813" -> "43151" 
+  "42817" -> "43151" 
+  "42821" -> "43151" 
+  "42851" -> "42850" 
+  "42860" -> "42861" 
+  "42861" -> "43151" 
+  "42883" -> "42895" 
+  "42883" -> "42908" 
+  "42916" -> "42930" 
+  "42916" -> "43151" 
+  "42921" -> "42920" 
+  "42754" -> "42752" 
+  "42772" -> "42770" 
+  "42852" -> "42857" 
+  "42855" -> "42851" 
+  "42864" -> "42865" 
+  "42865" -> "43151" 
+  "42884" -> "42883" 
+  "42889" -> "42904" 
+  "42904" -> "43151" 
+  "42913" -> "42920" 
+  "42918" -> "42916" 
+  "42925" -> "42937" 
+  "42854" -> "42852" 
+  "42857" -> "42855" 
+  "42886" -> "42884" 
+  "42893" -> "42897" 
+  "42896" -> "42903" 
+  "42901" -> "42889" 
+  "42920" -> "42918" 
+  "42927" -> "42925" 
+  "42933" -> "42921" 
+  "42933" -> "42945" 
+  "42943" -> "42947" 
+  "42943" -> "42960" 
+  "42895" -> "42893" 
+  "42897" -> "42896" 
+  "42903" -> "42901" 
+  "42928" -> "42927" 
+  "42934" -> "42933" 
+  "42945" -> "42943" 
+  "42947" -> "42948" 
+  "42948" -> "42949" 
+  "42949" -> "42950" 
+  "42950" -> "43151" 
+  "42930" -> "42928" 
+  "42935" -> "42938" 
+  "42938" -> "42934" 
+  "42937" -> "42935" 
+  "42956" -> "42970" 
+  "42956" -> "42985" 
+  "42957" -> "42956" 
+  "42957" -> "42966" 
+  "42962" -> "42956" 
+  "42970" -> "42971" 
+  "42971" -> "42972" 
+  "42972" -> "43151" 
+  "42958" -> "42957" 
+  "42963" -> "42962" 
+  "42960" -> "42958" 
+  "42964" -> "42963" 
+  "42978" -> "43008" 
+  "42978" -> "43018" 
+  "42966" -> "42964" 
+  "42979" -> "42978" 
+  "42979" -> "43005" 
+  "43002" -> "42978" 
+  "43008" -> "43009" 
+  "43009" -> "43151" 
+  "42980" -> "42979" 
+  "42980" -> "43000" 
+  "42997" -> "42979" 
+  "43003" -> "43002" 
+  "43015" -> "43026" 
+  "43022" -> "43031" 
+  "42981" -> "42980" 
+  "42981" -> "42995" 
+  "42992" -> "42980" 
+  "42998" -> "42997" 
+  "43005" -> "43003" 
+  "43017" -> "43015" 
+  "43023" -> "43022" 
+  "43029" -> "43037" 
+  "43029" -> "43044" 
+  "43029" -> "43051" 
+  "43029" -> "43058" 
+  "43029" -> "43067" 
+  "43029" -> "43074" 
+  "43029" -> "43083" 
+  "43029" -> "43090" 
+  "43029" -> "43103" 
+  "43029" -> "43133" 
+  "43029" -> "43140" 
+  "43029" -> "43146" 
+  "42982" -> "42981" 
+  "42982" -> "42990" 
+  "42987" -> "42981" 
+  "42993" -> "42992" 
+  "43000" -> "42998" 
+  "43018" -> "43021" 
+  "43019" -> "43017" 
+  "43024" -> "43023" 
+  "43031" -> "43029" 
+  "43037" -> "43038" 
+  "43038" -> "43151" 
+  "43044" -> "43045" 
+  "43045" -> "43151" 
+  "43051" -> "43052" 
+  "43052" -> "43151" 
+  "43058" -> "43059" 
+  "43059" -> "43151" 
+  "43067" -> "43068" 
+  "43068" -> "43151" 
+  "43074" -> "43075" 
+  "43075" -> "43151" 
+  "43083" -> "43084" 
+  "43084" -> "43151" 
+  "43090" -> "43091" 
+  "43091" -> "43151" 
+  "43133" -> "43134" 
+  "43134" -> "43151" 
+  "43140" -> "43141" 
+  "43141" -> "43151" 
+  "43146" -> "43151" 
+  "42983" -> "42982" 
+  "42988" -> "42987" 
+  "42995" -> "42993" 
+  "43021" -> "43019" 
+  "43026" -> "43024" 
+  "43101" -> "43106" 
+  "42985" -> "42983" 
+  "42990" -> "42988" 
+  "43103" -> "43101" 
+  "43106" -> "43110" 
+  "43106" -> "43116" 
+  "43110" -> "43111" 
+  "43111" -> "43151" 
+  "43116" -> "43117" 
+  "43117" -> "43121" 
+  "43121" -> "43125" 
+  "43121" -> "43151" 
+  "43125" -> "43151" 
+  "42594" -> "42605" 
+}

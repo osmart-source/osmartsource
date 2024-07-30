@@ -1,0 +1,13 @@
+digraph "strncpy" {  
+"98783" [label = <(METHOD,strncpy)<SUB>125</SUB>> ]
+"98787" [label = <(METHOD_RETURN,char*)<SUB>125</SUB>> ]
+"98784" [label = <(PARAM,char *__restrict __dest)<SUB>125</SUB>> ]
+"98785" [label = <(PARAM,const char *__restrict __src)<SUB>126</SUB>> ]
+"98786" [label = <(PARAM,size_t __n)<SUB>126</SUB>> ]
+  "98784" -> "98787"  [ label = "DDG: __dest"] 
+  "98785" -> "98787"  [ label = "DDG: __src"] 
+  "98786" -> "98787"  [ label = "DDG: __n"] 
+  "98783" -> "98784"  [ label = "DDG: "] 
+  "98783" -> "98785"  [ label = "DDG: "] 
+  "98783" -> "98786"  [ label = "DDG: "] 
+}

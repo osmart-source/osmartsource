@@ -1,0 +1,51 @@
+digraph "usage" {  
+"10610" [label = <(METHOD,usage)<SUB>474</SUB>> ]
+"10611" [label = <(PARAM,int code)<SUB>474</SUB>> ]
+"10612" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>475</SUB>> ]
+"10613" [label = <(LOCAL,FILE* out: FILE)<SUB>476</SUB>> ]
+"10614" [label = <(&lt;operator&gt;.assignment,*out = (code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10615" [label = <(IDENTIFIER,out,*out = (code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10616" [label = <(&lt;operator&gt;.conditional,(code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10617" [label = <(&lt;operator&gt;.equals,code == EXIT_SUCCESS)<SUB>476</SUB>> ]
+"10618" [label = <(IDENTIFIER,code,code == EXIT_SUCCESS)<SUB>476</SUB>> ]
+"10619" [label = <(EXIT_SUCCESS,EXIT_SUCCESS)<SUB>476</SUB>> ]
+"10620" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"10621" [label = <(LITERAL,0,&lt;empty&gt;)<SUB>476</SUB>> ]
+"10622" [label = <(IDENTIFIER,stdout,(code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10623" [label = <(IDENTIFIER,stderr,(code == EXIT_SUCCESS) ? stdout : stderr)<SUB>476</SUB>> ]
+"10624" [label = <(fprintf,fprintf(out, &quot;%s\n\n&quot;, TIFFGetVersion()))<SUB>478</SUB>> ]
+"10625" [label = <(IDENTIFIER,out,fprintf(out, &quot;%s\n\n&quot;, TIFFGetVersion()))<SUB>478</SUB>> ]
+"10626" [label = <(LITERAL,&quot;%s\n\n&quot;,fprintf(out, &quot;%s\n\n&quot;, TIFFGetVersion()))<SUB>478</SUB>> ]
+"10627" [label = <(TIFFGetVersion,TIFFGetVersion())<SUB>478</SUB>> ]
+"10628" [label = <(fprintf,fprintf(out, &quot;%s&quot;, usage_info))<SUB>479</SUB>> ]
+"10629" [label = <(IDENTIFIER,out,fprintf(out, &quot;%s&quot;, usage_info))<SUB>479</SUB>> ]
+"10630" [label = <(LITERAL,&quot;%s&quot;,fprintf(out, &quot;%s&quot;, usage_info))<SUB>479</SUB>> ]
+"10631" [label = <(IDENTIFIER,usage_info,fprintf(out, &quot;%s&quot;, usage_info))<SUB>479</SUB>> ]
+"10632" [label = <(exit,exit(code))<SUB>480</SUB>> ]
+"10633" [label = <(IDENTIFIER,code,exit(code))<SUB>480</SUB>> ]
+"10634" [label = <(METHOD_RETURN,void)<SUB>474</SUB>> ]
+  "10610" -> "10611" 
+  "10610" -> "10612" 
+  "10610" -> "10634" 
+  "10612" -> "10613" 
+  "10612" -> "10614" 
+  "10612" -> "10624" 
+  "10612" -> "10628" 
+  "10612" -> "10632" 
+  "10614" -> "10615" 
+  "10614" -> "10616" 
+  "10616" -> "10617" 
+  "10616" -> "10622" 
+  "10616" -> "10623" 
+  "10617" -> "10618" 
+  "10617" -> "10619" 
+  "10619" -> "10620" 
+  "10620" -> "10621" 
+  "10624" -> "10625" 
+  "10624" -> "10626" 
+  "10624" -> "10627" 
+  "10628" -> "10629" 
+  "10628" -> "10630" 
+  "10628" -> "10631" 
+  "10632" -> "10633" 
+}

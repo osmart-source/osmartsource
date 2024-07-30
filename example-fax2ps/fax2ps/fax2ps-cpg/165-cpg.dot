@@ -1,0 +1,14 @@
+digraph "ldiv" {  
+"4854" [label = <(METHOD,ldiv)<SUB>854</SUB>> ]
+"4855" [label = <(PARAM,long int __numer)<SUB>854</SUB>> ]
+"4856" [label = <(PARAM,long int __denom)<SUB>854</SUB>> ]
+"4857" [label = <(METHOD_RETURN,ldiv_t)<SUB>854</SUB>> ]
+  "4854" -> "4855"  [ label = "AST: "] 
+  "4854" -> "4856"  [ label = "AST: "] 
+  "4854" -> "4857"  [ label = "AST: "] 
+  "4854" -> "4857"  [ label = "CFG: "] 
+  "4855" -> "4857"  [ label = "DDG: __numer"] 
+  "4856" -> "4857"  [ label = "DDG: __denom"] 
+  "4854" -> "4855"  [ label = "DDG: "] 
+  "4854" -> "4856"  [ label = "DDG: "] 
+}

@@ -1,0 +1,30 @@
+digraph "TIFFClampDoubleToInt8" {  
+"67397" [label = <(RETURN,return (int8_t)val;,return (int8_t)val;)<SUB>1256</SUB>> ]
+"67378" [label = <(&lt;operator&gt;.greaterThan,val &gt; 127)<SUB>1252</SUB>> ]
+"67385" [label = <(&lt;operator&gt;.logicalOr,val &lt; -128 || val != val)<SUB>1254</SUB>> ]
+"67398" [label = <(&lt;operator&gt;.cast,(int8_t)val)<SUB>1256</SUB>> ]
+"67382" [label = <(RETURN,return 127;,return 127;)<SUB>1253</SUB>> ]
+"67386" [label = <(&lt;operator&gt;.lessThan,val &lt; -128)<SUB>1254</SUB>> ]
+"67390" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1254</SUB>> ]
+"67394" [label = <(RETURN,return -128;,return -128;)<SUB>1255</SUB>> ]
+"67399" [label = <(UNKNOWN,int8_t,int8_t)<SUB>1256</SUB>> ]
+"67388" [label = <(&lt;operator&gt;.minus,-128)<SUB>1254</SUB>> ]
+"67395" [label = <(&lt;operator&gt;.minus,-128)<SUB>1255</SUB>> ]
+"67374" [label = <(METHOD,TIFFClampDoubleToInt8)<SUB>1250</SUB>> ]
+"67401" [label = <(METHOD_RETURN,int8_t)<SUB>1250</SUB>> ]
+  "67397" -> "67401" 
+  "67378" -> "67382" 
+  "67378" -> "67388" 
+  "67385" -> "67399" 
+  "67385" -> "67395" 
+  "67398" -> "67397" 
+  "67382" -> "67401" 
+  "67386" -> "67385" 
+  "67386" -> "67390" 
+  "67390" -> "67385" 
+  "67394" -> "67401" 
+  "67399" -> "67398" 
+  "67388" -> "67386" 
+  "67395" -> "67394" 
+  "67374" -> "67378" 
+}

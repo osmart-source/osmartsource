@@ -1,0 +1,26 @@
+digraph "_TIFFClampDoubleToUInt32" {  
+"21650" [label = <(RETURN,return (uint32_t)val;,return (uint32_t)val;)<SUB>450</SUB>> ]
+"21633" [label = <(&lt;operator&gt;.lessThan,val &lt; 0)<SUB>446</SUB>> ]
+"21640" [label = <(&lt;operator&gt;.logicalOr,val &gt; 0xFFFFFFFFU || val != val)<SUB>448</SUB>> ]
+"21651" [label = <(&lt;operator&gt;.cast,(uint32_t)val)<SUB>450</SUB>> ]
+"21637" [label = <(RETURN,return 0;,return 0;)<SUB>447</SUB>> ]
+"21641" [label = <(&lt;operator&gt;.greaterThan,val &gt; 0xFFFFFFFFU)<SUB>448</SUB>> ]
+"21644" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>448</SUB>> ]
+"21648" [label = <(RETURN,return 0xFFFFFFFFU;,return 0xFFFFFFFFU;)<SUB>449</SUB>> ]
+"21652" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>450</SUB>> ]
+"21629" [label = <(METHOD,_TIFFClampDoubleToUInt32)<SUB>444</SUB>> ]
+"21654" [label = <(METHOD_RETURN,uint32_t)<SUB>444</SUB>> ]
+  "21650" -> "21654" 
+  "21633" -> "21637" 
+  "21633" -> "21641" 
+  "21640" -> "21652" 
+  "21640" -> "21648" 
+  "21651" -> "21650" 
+  "21637" -> "21654" 
+  "21641" -> "21640" 
+  "21641" -> "21644" 
+  "21644" -> "21640" 
+  "21648" -> "21654" 
+  "21652" -> "21651" 
+  "21629" -> "21633" 
+}

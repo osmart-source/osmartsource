@@ -1,0 +1,14 @@
+digraph "nanosleep" {  
+"7964" [label = <(METHOD,nanosleep)<SUB>205</SUB>> ]
+"7965" [label = <(PARAM,const struct timespec *__requested_time)<SUB>205</SUB>> ]
+"7966" [label = <(PARAM,struct timespec *__remaining)<SUB>206</SUB>> ]
+"7967" [label = <(METHOD_RETURN,int)<SUB>205</SUB>> ]
+  "7964" -> "7965"  [ label = "AST: "] 
+  "7964" -> "7966"  [ label = "AST: "] 
+  "7964" -> "7967"  [ label = "AST: "] 
+  "7964" -> "7967"  [ label = "CFG: "] 
+  "7965" -> "7967"  [ label = "DDG: __requested_time"] 
+  "7966" -> "7967"  [ label = "DDG: __remaining"] 
+  "7964" -> "7965"  [ label = "DDG: "] 
+  "7964" -> "7966"  [ label = "DDG: "] 
+}

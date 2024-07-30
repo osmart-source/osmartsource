@@ -1,0 +1,67 @@
+digraph "TIFFStripSize64" {  
+"11317" [label = <(METHOD,TIFFStripSize64)<SUB>184</SUB>> ]
+"11318" [label = <(PARAM,TIFF *tif)<SUB>184</SUB>> ]
+"11319" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>185</SUB>> ]
+"11320" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>186</SUB>> ]
+"11321" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11322" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11323" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11324" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11325" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11326" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>186</SUB>> ]
+"11327" [label = <(LOCAL,uint32_t rps: uint32_t)<SUB>187</SUB>> ]
+"11328" [label = <(&lt;operator&gt;.assignment,rps = td-&gt;td_rowsperstrip)<SUB>187</SUB>> ]
+"11329" [label = <(IDENTIFIER,rps,rps = td-&gt;td_rowsperstrip)<SUB>187</SUB>> ]
+"11330" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>187</SUB>> ]
+"11331" [label = <(IDENTIFIER,td,rps = td-&gt;td_rowsperstrip)<SUB>187</SUB>> ]
+"11332" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>187</SUB>> ]
+"11333" [label = <(CONTROL_STRUCTURE,if (rps &gt; td-&gt;td_imagelength),if (rps &gt; td-&gt;td_imagelength))<SUB>188</SUB>> ]
+"11334" [label = <(&lt;operator&gt;.greaterThan,rps &gt; td-&gt;td_imagelength)<SUB>188</SUB>> ]
+"11335" [label = <(IDENTIFIER,rps,rps &gt; td-&gt;td_imagelength)<SUB>188</SUB>> ]
+"11336" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>188</SUB>> ]
+"11337" [label = <(IDENTIFIER,td,rps &gt; td-&gt;td_imagelength)<SUB>188</SUB>> ]
+"11338" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>188</SUB>> ]
+"11339" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>189</SUB>> ]
+"11340" [label = <(&lt;operator&gt;.assignment,rps = td-&gt;td_imagelength)<SUB>189</SUB>> ]
+"11341" [label = <(IDENTIFIER,rps,rps = td-&gt;td_imagelength)<SUB>189</SUB>> ]
+"11342" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>189</SUB>> ]
+"11343" [label = <(IDENTIFIER,td,rps = td-&gt;td_imagelength)<SUB>189</SUB>> ]
+"11344" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>189</SUB>> ]
+"11345" [label = <(RETURN,return (TIFFVStripSize64(tif, rps));,return (TIFFVStripSize64(tif, rps));)<SUB>190</SUB>> ]
+"11346" [label = <(TIFFVStripSize64,TIFFVStripSize64(tif, rps))<SUB>190</SUB>> ]
+"11347" [label = <(IDENTIFIER,tif,TIFFVStripSize64(tif, rps))<SUB>190</SUB>> ]
+"11348" [label = <(IDENTIFIER,rps,TIFFVStripSize64(tif, rps))<SUB>190</SUB>> ]
+"11349" [label = <(METHOD_RETURN,uint64_t)<SUB>184</SUB>> ]
+  "11317" -> "11318" 
+  "11317" -> "11319" 
+  "11317" -> "11349" 
+  "11319" -> "11320" 
+  "11319" -> "11321" 
+  "11319" -> "11327" 
+  "11319" -> "11328" 
+  "11319" -> "11333" 
+  "11319" -> "11345" 
+  "11321" -> "11322" 
+  "11321" -> "11323" 
+  "11323" -> "11324" 
+  "11324" -> "11325" 
+  "11324" -> "11326" 
+  "11328" -> "11329" 
+  "11328" -> "11330" 
+  "11330" -> "11331" 
+  "11330" -> "11332" 
+  "11333" -> "11334" 
+  "11333" -> "11339" 
+  "11334" -> "11335" 
+  "11334" -> "11336" 
+  "11336" -> "11337" 
+  "11336" -> "11338" 
+  "11339" -> "11340" 
+  "11340" -> "11341" 
+  "11340" -> "11342" 
+  "11342" -> "11343" 
+  "11342" -> "11344" 
+  "11345" -> "11346" 
+  "11346" -> "11347" 
+  "11346" -> "11348" 
+}

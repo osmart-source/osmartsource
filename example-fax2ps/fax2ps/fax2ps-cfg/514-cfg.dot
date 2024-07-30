@@ -1,0 +1,67 @@
+digraph "TIFFComputeStrip" {  
+"10923" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFComputeStrip&quot;)<SUB>37</SUB>> ]
+"10927" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>38</SUB>> ]
+"10934" [label = <(&lt;operator&gt;.assignment,strip = row / td-&gt;td_rowsperstrip)<SUB>41</SUB>> ]
+"10978" [label = <(RETURN,return (strip);,return (strip);)<SUB>53</SUB>> ]
+"10929" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>38</SUB>> ]
+"10936" [label = <(&lt;operator&gt;.division,row / td-&gt;td_rowsperstrip)<SUB>41</SUB>> ]
+"10942" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>42</SUB>> ]
+"10930" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>38</SUB>> ]
+"10938" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>41</SUB>> ]
+"10943" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>42</SUB>> ]
+"10969" [label = <(&lt;operator&gt;.assignmentPlus,strip += (uint32_t)sample * td-&gt;td_stripsperimage)<SUB>51</SUB>> ]
+"10932" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>38</SUB>> ]
+"10940" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>41</SUB>> ]
+"10945" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>42</SUB>> ]
+"10949" [label = <(&lt;operator&gt;.greaterEqualsThan,sample &gt;= td-&gt;td_samplesperpixel)<SUB>44</SUB>> ]
+"10971" [label = <(&lt;operator&gt;.multiplication,(uint32_t)sample * td-&gt;td_stripsperimage)<SUB>51</SUB>> ]
+"10951" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>44</SUB>> ]
+"10955" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;%lu: Sample out of range, max %lu&quot;,\012                          (unsigned long)sample,\012                          (unsigned long)td-&gt;td_samplesperpixel))<SUB>46</SUB>> ]
+"10967" [label = <(RETURN,return (0);,return (0);)<SUB>49</SUB>> ]
+"10972" [label = <(&lt;operator&gt;.cast,(uint32_t)sample)<SUB>51</SUB>> ]
+"10975" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>51</SUB>> ]
+"10953" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>44</SUB>> ]
+"10959" [label = <(&lt;operator&gt;.cast,(unsigned long)sample)<SUB>47</SUB>> ]
+"10962" [label = <(&lt;operator&gt;.cast,(unsigned long)td-&gt;td_samplesperpixel)<SUB>48</SUB>> ]
+"10973" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>51</SUB>> ]
+"10977" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>51</SUB>> ]
+"10960" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>47</SUB>> ]
+"10963" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>48</SUB>> ]
+"10964" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>48</SUB>> ]
+"10966" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>48</SUB>> ]
+"10917" [label = <(METHOD,TIFFComputeStrip)<SUB>35</SUB>> ]
+"10980" [label = <(METHOD_RETURN,uint32_t)<SUB>35</SUB>> ]
+  "10923" -> "10932" 
+  "10927" -> "10940" 
+  "10934" -> "10945" 
+  "10978" -> "10980" 
+  "10929" -> "10927" 
+  "10936" -> "10934" 
+  "10942" -> "10953" 
+  "10942" -> "10978" 
+  "10930" -> "10929" 
+  "10938" -> "10936" 
+  "10943" -> "10942" 
+  "10969" -> "10978" 
+  "10932" -> "10930" 
+  "10940" -> "10938" 
+  "10945" -> "10943" 
+  "10949" -> "10960" 
+  "10949" -> "10973" 
+  "10971" -> "10969" 
+  "10951" -> "10949" 
+  "10955" -> "10967" 
+  "10967" -> "10980" 
+  "10972" -> "10977" 
+  "10975" -> "10971" 
+  "10953" -> "10951" 
+  "10959" -> "10963" 
+  "10962" -> "10955" 
+  "10973" -> "10972" 
+  "10977" -> "10975" 
+  "10960" -> "10959" 
+  "10963" -> "10966" 
+  "10964" -> "10962" 
+  "10966" -> "10964" 
+  "10917" -> "10923" 
+}

@@ -1,0 +1,18 @@
+digraph "_TIFFUnsanitizedAddUInt64AndInt" {  
+"97513" [label = <(METHOD,_TIFFUnsanitizedAddUInt64AndInt)<SUB>7318</SUB>> ]
+"97521" [label = <(METHOD_RETURN,uint64_t)<SUB>7318</SUB>> ]
+"97514" [label = <(PARAM,uint64_t a)<SUB>7318</SUB>> ]
+"97515" [label = <(PARAM,int b)<SUB>7318</SUB>> ]
+"97517" [label = <(RETURN,return a + b;,return a + b;)<SUB>7320</SUB>> ]
+"97518" [label = <(&lt;operator&gt;.addition,a + b)<SUB>7320</SUB>> ]
+  "97517" -> "97521"  [ label = "DDG: &lt;RET&gt;"] 
+  "97518" -> "97521"  [ label = "DDG: a"] 
+  "97518" -> "97521"  [ label = "DDG: b"] 
+  "97518" -> "97521"  [ label = "DDG: a + b"] 
+  "97513" -> "97514"  [ label = "DDG: "] 
+  "97513" -> "97515"  [ label = "DDG: "] 
+  "97518" -> "97517"  [ label = "DDG: a + b"] 
+  "97514" -> "97518"  [ label = "DDG: a"] 
+  "97513" -> "97518"  [ label = "DDG: "] 
+  "97515" -> "97518"  [ label = "DDG: b"] 
+}

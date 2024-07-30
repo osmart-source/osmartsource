@@ -1,0 +1,26 @@
+digraph "TIFFHashSetDestroy" {  
+"5279" [label = <(&lt;operator&gt;.logicalAnd,set &amp;&amp; 1)<SUB>287</SUB>> ]
+"5283" [label = <(TIFFHashSetClearInternal,TIFFHashSetClearInternal(set, true))<SUB>289</SUB>> ]
+"5288" [label = <(free,free(set-&gt;tabList))<SUB>290</SUB>> ]
+"5292" [label = <(TIFFListDestroy,TIFFListDestroy(set-&gt;psRecyclingList))<SUB>291</SUB>> ]
+"5296" [label = <(free,free(set))<SUB>292</SUB>> ]
+"5285" [label = <(true,true)<SUB>289</SUB>> ]
+"5289" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;tabList)<SUB>290</SUB>> ]
+"5293" [label = <(&lt;operator&gt;.indirectFieldAccess,set-&gt;psRecyclingList)<SUB>291</SUB>> ]
+"5291" [label = <(FIELD_IDENTIFIER,tabList,tabList)<SUB>290</SUB>> ]
+"5295" [label = <(FIELD_IDENTIFIER,psRecyclingList,psRecyclingList)<SUB>291</SUB>> ]
+"5275" [label = <(METHOD,TIFFHashSetDestroy)<SUB>285</SUB>> ]
+"5298" [label = <(METHOD_RETURN,void)<SUB>285</SUB>> ]
+  "5279" -> "5298" 
+  "5279" -> "5285" 
+  "5283" -> "5291" 
+  "5288" -> "5295" 
+  "5292" -> "5296" 
+  "5296" -> "5298" 
+  "5285" -> "5283" 
+  "5289" -> "5288" 
+  "5293" -> "5292" 
+  "5291" -> "5289" 
+  "5295" -> "5293" 
+  "5275" -> "5279" 
+}

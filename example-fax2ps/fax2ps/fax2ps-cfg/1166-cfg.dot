@@ -1,0 +1,33 @@
+digraph "TIFFReadTile" {  
+"75953" [label = <(RETURN,return (TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)));,return (TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)));)<SUB>921</SUB>> ]
+"75936" [label = <(&lt;operator&gt;.logicalOr,!TIFFCheckRead(tif, 1) || !TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75954" [label = <(TIFFReadEncodedTile,TIFFReadEncodedTile(tif, TIFFComputeTile(tif, x, y, z, s), buf,\012                                (tmsize_t)(-1)))<SUB>921</SUB>> ]
+"75937" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 1))<SUB>919</SUB>> ]
+"75941" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75949" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>920</SUB>> ]
+"75956" [label = <(TIFFComputeTile,TIFFComputeTile(tif, x, y, z, s))<SUB>921</SUB>> ]
+"75963" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>922</SUB>> ]
+"75938" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 1))<SUB>919</SUB>> ]
+"75942" [label = <(TIFFCheckTile,TIFFCheckTile(tif, x, y, z, s))<SUB>919</SUB>> ]
+"75950" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>920</SUB>> ]
+"75964" [label = <(&lt;operator&gt;.minus,-1)<SUB>922</SUB>> ]
+"75951" [label = <(&lt;operator&gt;.minus,-1)<SUB>920</SUB>> ]
+"75927" [label = <(METHOD,TIFFReadTile)<SUB>916</SUB>> ]
+"75966" [label = <(METHOD_RETURN,tmsize_t)<SUB>916</SUB>> ]
+  "75953" -> "75966" 
+  "75936" -> "75951" 
+  "75936" -> "75956" 
+  "75954" -> "75953" 
+  "75937" -> "75936" 
+  "75937" -> "75942" 
+  "75941" -> "75936" 
+  "75949" -> "75966" 
+  "75956" -> "75964" 
+  "75963" -> "75954" 
+  "75938" -> "75937" 
+  "75942" -> "75941" 
+  "75950" -> "75949" 
+  "75964" -> "75963" 
+  "75951" -> "75950" 
+  "75927" -> "75938" 
+}

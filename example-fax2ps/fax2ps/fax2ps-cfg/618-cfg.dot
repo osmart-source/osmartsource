@@ -1,0 +1,76 @@
+digraph "_TIFFPrintFieldInfo" {  
+"27056" [label = <(fprintf,fprintf(fd, &quot;%s: \n&quot;, tif-&gt;tif_name))<SUB>815</SUB>> ]
+"27059" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_name)<SUB>815</SUB>> ]
+"27067" [label = <(&lt;operator&gt;.lessThan,i &lt; tif-&gt;tif_nfields)<SUB>816</SUB>> ]
+"27072" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>816</SUB>> ]
+"27061" [label = <(FIELD_IDENTIFIER,tif_name,tif_name)<SUB>815</SUB>> ]
+"27064" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>816</SUB>> ]
+"27069" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nfields)<SUB>816</SUB>> ]
+"27076" [label = <(&lt;operator&gt;.assignment,*fip = tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27083" [label = <(fprintf,fprintf(fd, &quot;field[%2d] %5lu, %2d, %2d, %d, %2d, %5s, %5s, %s\n&quot;,\012                (int)i, (unsigned long)fip-&gt;field_tag, fip-&gt;field_readcount,\012                fip-&gt;field_writecount, fip-&gt;field_type, fip-&gt;field_bit,\012                fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;,\012                fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;, fip-&gt;field_name))<SUB>819</SUB>> ]
+"27071" [label = <(FIELD_IDENTIFIER,tif_nfields,tif_nfields)<SUB>816</SUB>> ]
+"27078" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_fields[i])<SUB>818</SUB>> ]
+"27086" [label = <(&lt;operator&gt;.cast,(int)i)<SUB>820</SUB>> ]
+"27089" [label = <(&lt;operator&gt;.cast,(unsigned long)fip-&gt;field_tag)<SUB>820</SUB>> ]
+"27094" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_readcount)<SUB>820</SUB>> ]
+"27097" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_writecount)<SUB>821</SUB>> ]
+"27100" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_type)<SUB>821</SUB>> ]
+"27103" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>821</SUB>> ]
+"27106" [label = <(&lt;operator&gt;.conditional,fip-&gt;field_oktochange ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>822</SUB>> ]
+"27112" [label = <(&lt;operator&gt;.conditional,fip-&gt;field_passcount ? &quot;TRUE&quot; : &quot;FALSE&quot;)<SUB>823</SUB>> ]
+"27118" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>823</SUB>> ]
+"27079" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>818</SUB>> ]
+"27087" [label = <(UNKNOWN,int,int)<SUB>820</SUB>> ]
+"27090" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>820</SUB>> ]
+"27091" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_tag)<SUB>820</SUB>> ]
+"27096" [label = <(FIELD_IDENTIFIER,field_readcount,field_readcount)<SUB>820</SUB>> ]
+"27099" [label = <(FIELD_IDENTIFIER,field_writecount,field_writecount)<SUB>821</SUB>> ]
+"27102" [label = <(FIELD_IDENTIFIER,field_type,field_type)<SUB>821</SUB>> ]
+"27105" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>821</SUB>> ]
+"27107" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_oktochange)<SUB>822</SUB>> ]
+"27113" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_passcount)<SUB>823</SUB>> ]
+"27120" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>823</SUB>> ]
+"27081" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>818</SUB>> ]
+"27093" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>820</SUB>> ]
+"27109" [label = <(FIELD_IDENTIFIER,field_oktochange,field_oktochange)<SUB>822</SUB>> ]
+"27115" [label = <(FIELD_IDENTIFIER,field_passcount,field_passcount)<SUB>823</SUB>> ]
+"27051" [label = <(METHOD,_TIFFPrintFieldInfo)<SUB>811</SUB>> ]
+"27121" [label = <(METHOD_RETURN,void)<SUB>811</SUB>> ]
+  "27056" -> "27064" 
+  "27059" -> "27056" 
+  "27067" -> "27121" 
+  "27067" -> "27081" 
+  "27072" -> "27071" 
+  "27061" -> "27059" 
+  "27064" -> "27071" 
+  "27069" -> "27067" 
+  "27076" -> "27087" 
+  "27083" -> "27072" 
+  "27071" -> "27069" 
+  "27078" -> "27076" 
+  "27086" -> "27090" 
+  "27089" -> "27096" 
+  "27094" -> "27099" 
+  "27097" -> "27102" 
+  "27100" -> "27105" 
+  "27103" -> "27109" 
+  "27106" -> "27115" 
+  "27112" -> "27120" 
+  "27118" -> "27083" 
+  "27079" -> "27078" 
+  "27087" -> "27086" 
+  "27090" -> "27093" 
+  "27091" -> "27089" 
+  "27096" -> "27094" 
+  "27099" -> "27097" 
+  "27102" -> "27100" 
+  "27105" -> "27103" 
+  "27107" -> "27106" 
+  "27113" -> "27112" 
+  "27120" -> "27118" 
+  "27081" -> "27079" 
+  "27093" -> "27091" 
+  "27109" -> "27107" 
+  "27115" -> "27113" 
+  "27051" -> "27061" 
+}

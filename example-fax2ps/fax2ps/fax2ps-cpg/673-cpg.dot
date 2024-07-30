@@ -1,0 +1,18 @@
+digraph "vfscanf" {  
+"30204" [label = <(METHOD,vfscanf)<SUB>432</SUB>> ]
+"30205" [label = <(PARAM,FILE *__restrict __s)<SUB>432</SUB>> ]
+"30206" [label = <(PARAM,const char *__restrict __format)<SUB>432</SUB>> ]
+"30207" [label = <(PARAM,__gnuc_va_list __arg)<SUB>433</SUB>> ]
+"30208" [label = <(METHOD_RETURN,int)<SUB>432</SUB>> ]
+  "30204" -> "30205"  [ label = "AST: "] 
+  "30204" -> "30206"  [ label = "AST: "] 
+  "30204" -> "30207"  [ label = "AST: "] 
+  "30204" -> "30208"  [ label = "AST: "] 
+  "30204" -> "30208"  [ label = "CFG: "] 
+  "30205" -> "30208"  [ label = "DDG: __s"] 
+  "30206" -> "30208"  [ label = "DDG: __format"] 
+  "30207" -> "30208"  [ label = "DDG: __arg"] 
+  "30204" -> "30205"  [ label = "DDG: "] 
+  "30204" -> "30206"  [ label = "DDG: "] 
+  "30204" -> "30207"  [ label = "DDG: "] 
+}

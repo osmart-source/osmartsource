@@ -1,0 +1,56 @@
+digraph "_TIFFErrorEarly" {  
+"10762" [label = <(&lt;operator&gt;.logicalAnd,opts &amp;&amp; opts-&gt;errorhandler)<SUB>84</SUB>> ]
+"10794" [label = <(&lt;operator&gt;.logicalAnd,_TIFFerrorHandler &amp;&amp; 1)<SUB>93</SUB>> ]
+"10810" [label = <(&lt;operator&gt;.logicalAnd,_TIFFerrorHandlerExt &amp;&amp; 1)<SUB>99</SUB>> ]
+"10764" [label = <(&lt;operator&gt;.indirectFieldAccess,opts-&gt;errorhandler)<SUB>84</SUB>> ]
+"10768" [label = <(va_start,va_start(ap, fmt))<SUB>86</SUB>> ]
+"10772" [label = <(&lt;operator&gt;.assignment,stop = opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10785" [label = <(va_end,va_end(ap))<SUB>89</SUB>> ]
+"10798" [label = <(va_start,va_start(ap, fmt))<SUB>95</SUB>> ]
+"10801" [label = <(*_TIFFerrorHandler,(*_TIFFerrorHandler)(module, fmt, ap))<SUB>96</SUB>> ]
+"10807" [label = <(va_end,va_end(ap))<SUB>97</SUB>> ]
+"10814" [label = <(va_start,va_start(ap, fmt))<SUB>101</SUB>> ]
+"10817" [label = <(*_TIFFerrorHandlerExt,(*_TIFFerrorHandlerExt)(clientdata, module, fmt, ap))<SUB>102</SUB>> ]
+"10824" [label = <(va_end,va_end(ap))<SUB>103</SUB>> ]
+"10766" [label = <(FIELD_IDENTIFIER,errorhandler,errorhandler)<SUB>84</SUB>> ]
+"10774" [label = <(opts-&gt;errorhandler,opts-&gt;errorhandler(NULL, opts-&gt;errorhandler_user_data,\012                                      module, fmt, ap))<SUB>87</SUB>> ]
+"10788" [label = <(&lt;operator&gt;.logicalAnd,stop &amp;&amp; 1)<SUB>90</SUB>> ]
+"10802" [label = <(&lt;operator&gt;.indirection,*_TIFFerrorHandler)<SUB>96</SUB>> ]
+"10818" [label = <(&lt;operator&gt;.indirection,*_TIFFerrorHandlerExt)<SUB>102</SUB>> ]
+"10775" [label = <(&lt;operator&gt;.indirectFieldAccess,opts-&gt;errorhandler)<SUB>87</SUB>> ]
+"10779" [label = <(&lt;operator&gt;.indirectFieldAccess,opts-&gt;errorhandler_user_data)<SUB>87</SUB>> ]
+"10792" [label = <(RETURN,return;,return;)<SUB>91</SUB>> ]
+"10777" [label = <(FIELD_IDENTIFIER,errorhandler,errorhandler)<SUB>87</SUB>> ]
+"10781" [label = <(FIELD_IDENTIFIER,errorhandler_user_data,errorhandler_user_data)<SUB>87</SUB>> ]
+"10754" [label = <(METHOD,_TIFFErrorEarly)<SUB>80</SUB>> ]
+"10826" [label = <(METHOD_RETURN,void)<SUB>80</SUB>> ]
+  "10762" -> "10768" 
+  "10762" -> "10794" 
+  "10794" -> "10798" 
+  "10794" -> "10810" 
+  "10810" -> "10826" 
+  "10810" -> "10814" 
+  "10764" -> "10762" 
+  "10768" -> "10777" 
+  "10772" -> "10785" 
+  "10785" -> "10788" 
+  "10798" -> "10802" 
+  "10801" -> "10807" 
+  "10807" -> "10810" 
+  "10814" -> "10818" 
+  "10817" -> "10824" 
+  "10824" -> "10826" 
+  "10766" -> "10764" 
+  "10774" -> "10772" 
+  "10788" -> "10792" 
+  "10788" -> "10794" 
+  "10802" -> "10801" 
+  "10818" -> "10817" 
+  "10775" -> "10781" 
+  "10779" -> "10774" 
+  "10792" -> "10826" 
+  "10777" -> "10775" 
+  "10781" -> "10779" 
+  "10754" -> "10762" 
+  "10754" -> "10766" 
+}

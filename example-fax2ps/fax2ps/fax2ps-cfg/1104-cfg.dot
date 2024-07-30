@@ -1,0 +1,205 @@
+digraph "TIFFWriteDirectoryTagSubifd" {  
+"69655" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagSubifd&quot;)<SUB>2117</SUB>> ]
+"69681" [label = <(&lt;operator&gt;.assignment,m = tif-&gt;tif_dataoff)<SUB>2127</SUB>> ]
+"69814" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_INSUBIFD)<SUB>2174</SUB>> ]
+"69819" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_nsubifd = tif-&gt;tif_dir.td_nsubifd)<SUB>2175</SUB>> ]
+"69849" [label = <(RETURN,return (1);,return (1);)<SUB>2180</SUB>> ]
+"69661" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_nsubifd == 0)<SUB>2120</SUB>> ]
+"69672" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>2122</SUB>> ]
+"69683" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dataoff)<SUB>2127</SUB>> ]
+"69687" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2128</SUB>> ]
+"69809" [label = <(&lt;operator&gt;.logicalNot,!n)<SUB>2164</SUB>> ]
+"69815" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2174</SUB>> ]
+"69820" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nsubifd)<SUB>2175</SUB>> ]
+"69823" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2175</SUB>> ]
+"69829" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_nsubifd == 1)<SUB>2176</SUB>> ]
+"69662" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2120</SUB>> ]
+"69669" [label = <(RETURN,return (1);,return (1);)<SUB>2121</SUB>> ]
+"69676" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>2124</SUB>> ]
+"69679" [label = <(RETURN,return (1);,return (1);)<SUB>2125</SUB>> ]
+"69685" [label = <(FIELD_IDENTIFIER,tif_dataoff,tif_dataoff)<SUB>2127</SUB>> ]
+"69688" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2128</SUB>> ]
+"69698" [label = <(&lt;operator&gt;.assignment,o = _TIFFmallocExt(tif, tif-&gt;tif_dir.td_nsubifd * sizeof(uint32_t)))<SUB>2134</SUB>> ]
+"69721" [label = <(&lt;operator&gt;.assignment,pa = tif-&gt;tif_dir.td_subifd)<SUB>2140</SUB>> ]
+"69728" [label = <(&lt;operator&gt;.assignment,pb = o)<SUB>2141</SUB>> ]
+"69773" [label = <(&lt;operator&gt;.assignment,n = TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, TIFFTAG_SUBIFD,\012                                                 tif-&gt;tif_dir.td_nsubifd, o))<SUB>2156</SUB>> ]
+"69786" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, o))<SUB>2158</SUB>> ]
+"69812" [label = <(RETURN,return (0);,return (0);)<SUB>2165</SUB>> ]
+"69817" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2174</SUB>> ]
+"69822" [label = <(FIELD_IDENTIFIER,tif_nsubifd,tif_nsubifd)<SUB>2175</SUB>> ]
+"69824" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2175</SUB>> ]
+"69827" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2175</SUB>> ]
+"69830" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2176</SUB>> ]
+"69837" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_subifdoff = 0)<SUB>2177</SUB>> ]
+"69663" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2120</SUB>> ]
+"69666" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2120</SUB>> ]
+"69677" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2124</SUB>> ]
+"69689" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2128</SUB>> ]
+"69700" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, tif-&gt;tif_dir.td_nsubifd * sizeof(uint32_t)))<SUB>2134</SUB>> ]
+"69711" [label = <(&lt;operator&gt;.equals,o == NULL)<SUB>2135</SUB>> ]
+"69723" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_subifd)<SUB>2140</SUB>> ]
+"69736" [label = <(&lt;operator&gt;.lessThan,p &lt; tif-&gt;tif_dir.td_nsubifd)<SUB>2142</SUB>> ]
+"69743" [label = <(&lt;operator&gt;.postIncrement,p++)<SUB>2142</SUB>> ]
+"69775" [label = <(TIFFWriteDirectoryTagCheckedIfdArray,TIFFWriteDirectoryTagCheckedIfdArray(tif, ndir, dir, TIFFTAG_SUBIFD,\012                                                 tif-&gt;tif_dir.td_nsubifd, o))<SUB>2156</SUB>> ]
+"69791" [label = <(&lt;operator&gt;.assignment,n = TIFFWriteDirectoryTagCheckedIfd8Array(\012            tif, ndir, dir, TIFFTAG_SUBIFD, tif-&gt;tif_dir.td_nsubifd,\012            tif-&gt;tif_dir.td_subifd))<SUB>2161</SUB>> ]
+"69826" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2175</SUB>> ]
+"69831" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2176</SUB>> ]
+"69834" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2176</SUB>> ]
+"69838" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_subifdoff)<SUB>2177</SUB>> ]
+"69844" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_subifdoff = m)<SUB>2179</SUB>> ]
+"69665" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2120</SUB>> ]
+"69691" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2128</SUB>> ]
+"69702" [label = <(&lt;operator&gt;.multiplication,tif-&gt;tif_dir.td_nsubifd * sizeof(uint32_t))<SUB>2134</SUB>> ]
+"69715" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2137</SUB>> ]
+"69719" [label = <(RETURN,return (0);,return (0);)<SUB>2138</SUB>> ]
+"69724" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2140</SUB>> ]
+"69727" [label = <(FIELD_IDENTIFIER,td_subifd,td_subifd)<SUB>2140</SUB>> ]
+"69733" [label = <(&lt;operator&gt;.assignment,p = 0)<SUB>2142</SUB>> ]
+"69738" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2142</SUB>> ]
+"69746" [label = <(assert,assert(pa != 0))<SUB>2144</SUB>> ]
+"69765" [label = <(&lt;operator&gt;.assignment,*pb++ = (uint32_t)(*pa++))<SUB>2154</SUB>> ]
+"69780" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2157</SUB>> ]
+"69793" [label = <(TIFFWriteDirectoryTagCheckedIfd8Array,TIFFWriteDirectoryTagCheckedIfd8Array(\012            tif, ndir, dir, TIFFTAG_SUBIFD, tif-&gt;tif_dir.td_nsubifd,\012            tif-&gt;tif_dir.td_subifd))<SUB>2161</SUB>> ]
+"69833" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2176</SUB>> ]
+"69840" [label = <(FIELD_IDENTIFIER,tif_subifdoff,tif_subifdoff)<SUB>2177</SUB>> ]
+"69845" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_subifdoff)<SUB>2179</SUB>> ]
+"69703" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2134</SUB>> ]
+"69708" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2134</SUB>> ]
+"69726" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2140</SUB>> ]
+"69739" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2142</SUB>> ]
+"69742" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2142</SUB>> ]
+"69747" [label = <(&lt;operator&gt;.notEquals,pa != 0)<SUB>2144</SUB>> ]
+"69751" [label = <(&lt;operator&gt;.greaterThan,*pa &gt; 0xFFFFFFFFUL)<SUB>2148</SUB>> ]
+"69766" [label = <(&lt;operator&gt;.indirection,*pb++)<SUB>2154</SUB>> ]
+"69769" [label = <(uint32_t,(uint32_t)(*pa++))<SUB>2154</SUB>> ]
+"69781" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2157</SUB>> ]
+"69784" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2157</SUB>> ]
+"69798" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nsubifd)<SUB>2162</SUB>> ]
+"69803" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_subifd)<SUB>2163</SUB>> ]
+"69847" [label = <(FIELD_IDENTIFIER,tif_subifdoff,tif_subifdoff)<SUB>2179</SUB>> ]
+"69704" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2134</SUB>> ]
+"69707" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2134</SUB>> ]
+"69741" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2142</SUB>> ]
+"69752" [label = <(&lt;operator&gt;.indirection,*pa)<SUB>2148</SUB>> ]
+"69756" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Illegal value for SubIFD tag&quot;))<SUB>2150</SUB>> ]
+"69760" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, o))<SUB>2151</SUB>> ]
+"69763" [label = <(RETURN,return (0);,return (0);)<SUB>2152</SUB>> ]
+"69767" [label = <(&lt;operator&gt;.postIncrement,pb++)<SUB>2154</SUB>> ]
+"69770" [label = <(&lt;operator&gt;.indirection,*pa++)<SUB>2154</SUB>> ]
+"69783" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2157</SUB>> ]
+"69799" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2162</SUB>> ]
+"69802" [label = <(FIELD_IDENTIFIER,td_nsubifd,td_nsubifd)<SUB>2162</SUB>> ]
+"69804" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2163</SUB>> ]
+"69807" [label = <(FIELD_IDENTIFIER,td_subifd,td_subifd)<SUB>2163</SUB>> ]
+"69706" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2134</SUB>> ]
+"69771" [label = <(&lt;operator&gt;.postIncrement,pa++)<SUB>2154</SUB>> ]
+"69801" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2162</SUB>> ]
+"69806" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2163</SUB>> ]
+"69649" [label = <(METHOD,TIFFWriteDirectoryTagSubifd)<SUB>2114</SUB>> ]
+"69851" [label = <(METHOD_RETURN,int)<SUB>2114</SUB>> ]
+  "69655" -> "69665" 
+  "69681" -> "69691" 
+  "69814" -> "69822" 
+  "69819" -> "69833" 
+  "69849" -> "69851" 
+  "69661" -> "69669" 
+  "69661" -> "69672" 
+  "69672" -> "69677" 
+  "69672" -> "69685" 
+  "69683" -> "69681" 
+  "69687" -> "69706" 
+  "69687" -> "69801" 
+  "69809" -> "69812" 
+  "69809" -> "69817" 
+  "69815" -> "69814" 
+  "69820" -> "69826" 
+  "69823" -> "69819" 
+  "69829" -> "69840" 
+  "69829" -> "69847" 
+  "69662" -> "69661" 
+  "69669" -> "69851" 
+  "69676" -> "69679" 
+  "69679" -> "69851" 
+  "69685" -> "69683" 
+  "69688" -> "69687" 
+  "69698" -> "69711" 
+  "69721" -> "69728" 
+  "69728" -> "69733" 
+  "69773" -> "69786" 
+  "69786" -> "69809" 
+  "69812" -> "69851" 
+  "69817" -> "69815" 
+  "69822" -> "69820" 
+  "69824" -> "69827" 
+  "69827" -> "69823" 
+  "69830" -> "69829" 
+  "69837" -> "69849" 
+  "69663" -> "69666" 
+  "69666" -> "69662" 
+  "69677" -> "69676" 
+  "69689" -> "69688" 
+  "69700" -> "69698" 
+  "69711" -> "69715" 
+  "69711" -> "69726" 
+  "69723" -> "69721" 
+  "69736" -> "69747" 
+  "69736" -> "69783" 
+  "69743" -> "69741" 
+  "69775" -> "69773" 
+  "69791" -> "69809" 
+  "69826" -> "69824" 
+  "69831" -> "69834" 
+  "69834" -> "69830" 
+  "69838" -> "69837" 
+  "69844" -> "69849" 
+  "69665" -> "69663" 
+  "69691" -> "69689" 
+  "69702" -> "69700" 
+  "69715" -> "69719" 
+  "69719" -> "69851" 
+  "69724" -> "69727" 
+  "69727" -> "69723" 
+  "69733" -> "69741" 
+  "69738" -> "69736" 
+  "69746" -> "69752" 
+  "69765" -> "69743" 
+  "69780" -> "69775" 
+  "69793" -> "69791" 
+  "69833" -> "69831" 
+  "69840" -> "69838" 
+  "69845" -> "69844" 
+  "69703" -> "69708" 
+  "69708" -> "69702" 
+  "69726" -> "69724" 
+  "69739" -> "69742" 
+  "69742" -> "69738" 
+  "69747" -> "69746" 
+  "69751" -> "69756" 
+  "69751" -> "69767" 
+  "69766" -> "69771" 
+  "69769" -> "69765" 
+  "69781" -> "69784" 
+  "69784" -> "69780" 
+  "69798" -> "69806" 
+  "69803" -> "69793" 
+  "69847" -> "69845" 
+  "69704" -> "69707" 
+  "69707" -> "69703" 
+  "69741" -> "69739" 
+  "69752" -> "69751" 
+  "69756" -> "69760" 
+  "69760" -> "69763" 
+  "69763" -> "69851" 
+  "69767" -> "69766" 
+  "69770" -> "69769" 
+  "69783" -> "69781" 
+  "69799" -> "69802" 
+  "69802" -> "69798" 
+  "69804" -> "69807" 
+  "69807" -> "69803" 
+  "69706" -> "69704" 
+  "69771" -> "69770" 
+  "69801" -> "69799" 
+  "69806" -> "69804" 
+  "69649" -> "69655" 
+}

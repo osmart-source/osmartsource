@@ -1,0 +1,47 @@
+digraph "pcompar" {  
+"10258" [label = <(METHOD,pcompar)<SUB>333</SUB>> ]
+"10259" [label = <(PARAM,const void *va)<SUB>333</SUB>> ]
+"10260" [label = <(PARAM,const void *vb)<SUB>333</SUB>> ]
+"10261" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>334</SUB>> ]
+"10262" [label = <(LOCAL,const int* pa: int)<SUB>335</SUB>> ]
+"10263" [label = <(&lt;operator&gt;.assignment,*pa = (const int *)va)<SUB>335</SUB>> ]
+"10264" [label = <(IDENTIFIER,pa,*pa = (const int *)va)<SUB>335</SUB>> ]
+"10265" [label = <(&lt;operator&gt;.cast,(const int *)va)<SUB>335</SUB>> ]
+"10266" [label = <(UNKNOWN,const int *,const int *)<SUB>335</SUB>> ]
+"10267" [label = <(IDENTIFIER,va,(const int *)va)<SUB>335</SUB>> ]
+"10268" [label = <(LOCAL,const int* pb: int)<SUB>336</SUB>> ]
+"10269" [label = <(&lt;operator&gt;.assignment,*pb = (const int *)vb)<SUB>336</SUB>> ]
+"10270" [label = <(IDENTIFIER,pb,*pb = (const int *)vb)<SUB>336</SUB>> ]
+"10271" [label = <(&lt;operator&gt;.cast,(const int *)vb)<SUB>336</SUB>> ]
+"10272" [label = <(UNKNOWN,const int *,const int *)<SUB>336</SUB>> ]
+"10273" [label = <(IDENTIFIER,vb,(const int *)vb)<SUB>336</SUB>> ]
+"10274" [label = <(RETURN,return (*pa - *pb);,return (*pa - *pb);)<SUB>337</SUB>> ]
+"10275" [label = <(&lt;operator&gt;.subtraction,*pa - *pb)<SUB>337</SUB>> ]
+"10276" [label = <(&lt;operator&gt;.indirection,*pa)<SUB>337</SUB>> ]
+"10277" [label = <(IDENTIFIER,pa,*pa - *pb)<SUB>337</SUB>> ]
+"10278" [label = <(&lt;operator&gt;.indirection,*pb)<SUB>337</SUB>> ]
+"10279" [label = <(IDENTIFIER,pb,*pa - *pb)<SUB>337</SUB>> ]
+"10280" [label = <(METHOD_RETURN,int)<SUB>333</SUB>> ]
+  "10258" -> "10259" 
+  "10258" -> "10260" 
+  "10258" -> "10261" 
+  "10258" -> "10280" 
+  "10261" -> "10262" 
+  "10261" -> "10263" 
+  "10261" -> "10268" 
+  "10261" -> "10269" 
+  "10261" -> "10274" 
+  "10263" -> "10264" 
+  "10263" -> "10265" 
+  "10265" -> "10266" 
+  "10265" -> "10267" 
+  "10269" -> "10270" 
+  "10269" -> "10271" 
+  "10271" -> "10272" 
+  "10271" -> "10273" 
+  "10274" -> "10275" 
+  "10275" -> "10276" 
+  "10275" -> "10278" 
+  "10276" -> "10277" 
+  "10278" -> "10279" 
+}

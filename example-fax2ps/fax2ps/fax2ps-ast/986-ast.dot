@@ -1,0 +1,171 @@
+digraph "cvtcmap" {  
+"61183" [label = <(METHOD,cvtcmap)<SUB>2785</SUB>> ]
+"61184" [label = <(PARAM,TIFFRGBAImage *img)<SUB>2785</SUB>> ]
+"61185" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2786</SUB>> ]
+"61186" [label = <(LOCAL,uint16_t* r: uint16_t)<SUB>2787</SUB>> ]
+"61187" [label = <(&lt;operator&gt;.assignment,*r = img-&gt;redcmap)<SUB>2787</SUB>> ]
+"61188" [label = <(IDENTIFIER,r,*r = img-&gt;redcmap)<SUB>2787</SUB>> ]
+"61189" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;redcmap)<SUB>2787</SUB>> ]
+"61190" [label = <(IDENTIFIER,img,*r = img-&gt;redcmap)<SUB>2787</SUB>> ]
+"61191" [label = <(FIELD_IDENTIFIER,redcmap,redcmap)<SUB>2787</SUB>> ]
+"61192" [label = <(LOCAL,uint16_t* g: uint16_t)<SUB>2788</SUB>> ]
+"61193" [label = <(&lt;operator&gt;.assignment,*g = img-&gt;greencmap)<SUB>2788</SUB>> ]
+"61194" [label = <(IDENTIFIER,g,*g = img-&gt;greencmap)<SUB>2788</SUB>> ]
+"61195" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;greencmap)<SUB>2788</SUB>> ]
+"61196" [label = <(IDENTIFIER,img,*g = img-&gt;greencmap)<SUB>2788</SUB>> ]
+"61197" [label = <(FIELD_IDENTIFIER,greencmap,greencmap)<SUB>2788</SUB>> ]
+"61198" [label = <(LOCAL,uint16_t* b: uint16_t)<SUB>2789</SUB>> ]
+"61199" [label = <(&lt;operator&gt;.assignment,*b = img-&gt;bluecmap)<SUB>2789</SUB>> ]
+"61200" [label = <(IDENTIFIER,b,*b = img-&gt;bluecmap)<SUB>2789</SUB>> ]
+"61201" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;bluecmap)<SUB>2789</SUB>> ]
+"61202" [label = <(IDENTIFIER,img,*b = img-&gt;bluecmap)<SUB>2789</SUB>> ]
+"61203" [label = <(FIELD_IDENTIFIER,bluecmap,bluecmap)<SUB>2789</SUB>> ]
+"61204" [label = <(LOCAL,long i: long)<SUB>2790</SUB>> ]
+"61205" [label = <(CONTROL_STRUCTURE,for (i = (1L &lt;&lt; img-&gt;bitspersample) - 1;i &gt;= 0;i--),for (i = (1L &lt;&lt; img-&gt;bitspersample) - 1;i &gt;= 0;i--))<SUB>2792</SUB>> ]
+"61206" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2792</SUB>> ]
+"61207" [label = <(&lt;operator&gt;.assignment,i = (1L &lt;&lt; img-&gt;bitspersample) - 1)<SUB>2792</SUB>> ]
+"61208" [label = <(IDENTIFIER,i,i = (1L &lt;&lt; img-&gt;bitspersample) - 1)<SUB>2792</SUB>> ]
+"61209" [label = <(&lt;operator&gt;.subtraction,(1L &lt;&lt; img-&gt;bitspersample) - 1)<SUB>2792</SUB>> ]
+"61210" [label = <(&lt;operator&gt;.shiftLeft,1L &lt;&lt; img-&gt;bitspersample)<SUB>2792</SUB>> ]
+"61211" [label = <(LITERAL,1L,1L &lt;&lt; img-&gt;bitspersample)<SUB>2792</SUB>> ]
+"61212" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;bitspersample)<SUB>2792</SUB>> ]
+"61213" [label = <(IDENTIFIER,img,1L &lt;&lt; img-&gt;bitspersample)<SUB>2792</SUB>> ]
+"61214" [label = <(FIELD_IDENTIFIER,bitspersample,bitspersample)<SUB>2792</SUB>> ]
+"61215" [label = <(LITERAL,1,(1L &lt;&lt; img-&gt;bitspersample) - 1)<SUB>2792</SUB>> ]
+"61216" [label = <(&lt;operator&gt;.greaterEqualsThan,i &gt;= 0)<SUB>2792</SUB>> ]
+"61217" [label = <(IDENTIFIER,i,i &gt;= 0)<SUB>2792</SUB>> ]
+"61218" [label = <(LITERAL,0,i &gt;= 0)<SUB>2792</SUB>> ]
+"61219" [label = <(&lt;operator&gt;.postDecrement,i--)<SUB>2792</SUB>> ]
+"61220" [label = <(IDENTIFIER,i,i--)<SUB>2792</SUB>> ]
+"61221" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2793</SUB>> ]
+"61222" [label = <(&lt;operator&gt;.assignment,r[i] = CVT(r[i]))<SUB>2795</SUB>> ]
+"61223" [label = <(&lt;operator&gt;.indirectIndexAccess,r[i])<SUB>2795</SUB>> ]
+"61224" [label = <(IDENTIFIER,r,r[i] = CVT(r[i]))<SUB>2795</SUB>> ]
+"61225" [label = <(IDENTIFIER,i,r[i] = CVT(r[i]))<SUB>2795</SUB>> ]
+"61226" [label = <(CVT,CVT(r[i]))<SUB>2795</SUB>> ]
+"61227" [label = <(&lt;operator&gt;.indirectIndexAccess,r[i])<SUB>2795</SUB>> ]
+"61228" [label = <(IDENTIFIER,r,CVT(r[i]))<SUB>2795</SUB>> ]
+"61229" [label = <(IDENTIFIER,i,CVT(r[i]))<SUB>2795</SUB>> ]
+"61230" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"61231" [label = <(uint16_t,(uint16_t)((r[i]) &gt;&gt; 8))<SUB>2795</SUB>> ]
+"61232" [label = <(&lt;operator&gt;.arithmeticShiftRight,(r[i]) &gt;&gt; 8)<SUB>2795</SUB>> ]
+"61233" [label = <(&lt;operator&gt;.indirectIndexAccess,r[i])<SUB>2795</SUB>> ]
+"61234" [label = <(IDENTIFIER,r,(r[i]) &gt;&gt; 8)<SUB>2795</SUB>> ]
+"61235" [label = <(IDENTIFIER,i,(r[i]) &gt;&gt; 8)<SUB>2795</SUB>> ]
+"61236" [label = <(LITERAL,8,(r[i]) &gt;&gt; 8)<SUB>2795</SUB>> ]
+"61237" [label = <(&lt;operator&gt;.assignment,g[i] = CVT(g[i]))<SUB>2796</SUB>> ]
+"61238" [label = <(&lt;operator&gt;.indirectIndexAccess,g[i])<SUB>2796</SUB>> ]
+"61239" [label = <(IDENTIFIER,g,g[i] = CVT(g[i]))<SUB>2796</SUB>> ]
+"61240" [label = <(IDENTIFIER,i,g[i] = CVT(g[i]))<SUB>2796</SUB>> ]
+"61241" [label = <(CVT,CVT(g[i]))<SUB>2796</SUB>> ]
+"61242" [label = <(&lt;operator&gt;.indirectIndexAccess,g[i])<SUB>2796</SUB>> ]
+"61243" [label = <(IDENTIFIER,g,CVT(g[i]))<SUB>2796</SUB>> ]
+"61244" [label = <(IDENTIFIER,i,CVT(g[i]))<SUB>2796</SUB>> ]
+"61245" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"61246" [label = <(uint16_t,(uint16_t)((g[i]) &gt;&gt; 8))<SUB>2796</SUB>> ]
+"61247" [label = <(&lt;operator&gt;.arithmeticShiftRight,(g[i]) &gt;&gt; 8)<SUB>2796</SUB>> ]
+"61248" [label = <(&lt;operator&gt;.indirectIndexAccess,g[i])<SUB>2796</SUB>> ]
+"61249" [label = <(IDENTIFIER,g,(g[i]) &gt;&gt; 8)<SUB>2796</SUB>> ]
+"61250" [label = <(IDENTIFIER,i,(g[i]) &gt;&gt; 8)<SUB>2796</SUB>> ]
+"61251" [label = <(LITERAL,8,(g[i]) &gt;&gt; 8)<SUB>2796</SUB>> ]
+"61252" [label = <(&lt;operator&gt;.assignment,b[i] = CVT(b[i]))<SUB>2797</SUB>> ]
+"61253" [label = <(&lt;operator&gt;.indirectIndexAccess,b[i])<SUB>2797</SUB>> ]
+"61254" [label = <(IDENTIFIER,b,b[i] = CVT(b[i]))<SUB>2797</SUB>> ]
+"61255" [label = <(IDENTIFIER,i,b[i] = CVT(b[i]))<SUB>2797</SUB>> ]
+"61256" [label = <(CVT,CVT(b[i]))<SUB>2797</SUB>> ]
+"61257" [label = <(&lt;operator&gt;.indirectIndexAccess,b[i])<SUB>2797</SUB>> ]
+"61258" [label = <(IDENTIFIER,b,CVT(b[i]))<SUB>2797</SUB>> ]
+"61259" [label = <(IDENTIFIER,i,CVT(b[i]))<SUB>2797</SUB>> ]
+"61260" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"61261" [label = <(uint16_t,(uint16_t)((b[i]) &gt;&gt; 8))<SUB>2797</SUB>> ]
+"61262" [label = <(&lt;operator&gt;.arithmeticShiftRight,(b[i]) &gt;&gt; 8)<SUB>2797</SUB>> ]
+"61263" [label = <(&lt;operator&gt;.indirectIndexAccess,b[i])<SUB>2797</SUB>> ]
+"61264" [label = <(IDENTIFIER,b,(b[i]) &gt;&gt; 8)<SUB>2797</SUB>> ]
+"61265" [label = <(IDENTIFIER,i,(b[i]) &gt;&gt; 8)<SUB>2797</SUB>> ]
+"61266" [label = <(LITERAL,8,(b[i]) &gt;&gt; 8)<SUB>2797</SUB>> ]
+"61267" [label = <(METHOD_RETURN,void)<SUB>2785</SUB>> ]
+  "61183" -> "61184" 
+  "61183" -> "61185" 
+  "61183" -> "61267" 
+  "61185" -> "61186" 
+  "61185" -> "61187" 
+  "61185" -> "61192" 
+  "61185" -> "61193" 
+  "61185" -> "61198" 
+  "61185" -> "61199" 
+  "61185" -> "61204" 
+  "61185" -> "61205" 
+  "61187" -> "61188" 
+  "61187" -> "61189" 
+  "61189" -> "61190" 
+  "61189" -> "61191" 
+  "61193" -> "61194" 
+  "61193" -> "61195" 
+  "61195" -> "61196" 
+  "61195" -> "61197" 
+  "61199" -> "61200" 
+  "61199" -> "61201" 
+  "61201" -> "61202" 
+  "61201" -> "61203" 
+  "61205" -> "61206" 
+  "61205" -> "61216" 
+  "61205" -> "61219" 
+  "61205" -> "61221" 
+  "61206" -> "61207" 
+  "61207" -> "61208" 
+  "61207" -> "61209" 
+  "61209" -> "61210" 
+  "61209" -> "61215" 
+  "61210" -> "61211" 
+  "61210" -> "61212" 
+  "61212" -> "61213" 
+  "61212" -> "61214" 
+  "61216" -> "61217" 
+  "61216" -> "61218" 
+  "61219" -> "61220" 
+  "61221" -> "61222" 
+  "61221" -> "61237" 
+  "61221" -> "61252" 
+  "61222" -> "61223" 
+  "61222" -> "61226" 
+  "61223" -> "61224" 
+  "61223" -> "61225" 
+  "61226" -> "61227" 
+  "61226" -> "61230" 
+  "61227" -> "61228" 
+  "61227" -> "61229" 
+  "61230" -> "61231" 
+  "61231" -> "61232" 
+  "61232" -> "61233" 
+  "61232" -> "61236" 
+  "61233" -> "61234" 
+  "61233" -> "61235" 
+  "61237" -> "61238" 
+  "61237" -> "61241" 
+  "61238" -> "61239" 
+  "61238" -> "61240" 
+  "61241" -> "61242" 
+  "61241" -> "61245" 
+  "61242" -> "61243" 
+  "61242" -> "61244" 
+  "61245" -> "61246" 
+  "61246" -> "61247" 
+  "61247" -> "61248" 
+  "61247" -> "61251" 
+  "61248" -> "61249" 
+  "61248" -> "61250" 
+  "61252" -> "61253" 
+  "61252" -> "61256" 
+  "61253" -> "61254" 
+  "61253" -> "61255" 
+  "61256" -> "61257" 
+  "61256" -> "61260" 
+  "61257" -> "61258" 
+  "61257" -> "61259" 
+  "61260" -> "61261" 
+  "61261" -> "61262" 
+  "61262" -> "61263" 
+  "61262" -> "61266" 
+  "61263" -> "61264" 
+  "61263" -> "61265" 
+}

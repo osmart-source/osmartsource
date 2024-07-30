@@ -1,0 +1,26 @@
+digraph "TIFFClampDoubleToUInt32" {  
+"67540" [label = <(RETURN,return (uint32_t)val;,return (uint32_t)val;)<SUB>1301</SUB>> ]
+"67523" [label = <(&lt;operator&gt;.lessThan,val &lt; 0)<SUB>1297</SUB>> ]
+"67530" [label = <(&lt;operator&gt;.logicalOr,val &gt; 0xFFFFFFFFU || val != val)<SUB>1299</SUB>> ]
+"67541" [label = <(&lt;operator&gt;.cast,(uint32_t)val)<SUB>1301</SUB>> ]
+"67527" [label = <(RETURN,return 0;,return 0;)<SUB>1298</SUB>> ]
+"67531" [label = <(&lt;operator&gt;.greaterThan,val &gt; 0xFFFFFFFFU)<SUB>1299</SUB>> ]
+"67534" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1299</SUB>> ]
+"67538" [label = <(RETURN,return 0xFFFFFFFFU;,return 0xFFFFFFFFU;)<SUB>1300</SUB>> ]
+"67542" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>1301</SUB>> ]
+"67519" [label = <(METHOD,TIFFClampDoubleToUInt32)<SUB>1295</SUB>> ]
+"67544" [label = <(METHOD_RETURN,uint32_t)<SUB>1295</SUB>> ]
+  "67540" -> "67544" 
+  "67523" -> "67527" 
+  "67523" -> "67531" 
+  "67530" -> "67542" 
+  "67530" -> "67538" 
+  "67541" -> "67540" 
+  "67527" -> "67544" 
+  "67531" -> "67530" 
+  "67531" -> "67534" 
+  "67534" -> "67530" 
+  "67538" -> "67544" 
+  "67542" -> "67541" 
+  "67519" -> "67523" 
+}

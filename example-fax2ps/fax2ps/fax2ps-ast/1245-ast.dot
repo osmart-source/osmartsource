@@ -1,0 +1,137 @@
+digraph "TIFFReadDirEntryCheckedLong8" {  
+"86762" [label = <(METHOD,TIFFReadDirEntryCheckedLong8)<SUB>3366</SUB>> ]
+"86763" [label = <(PARAM,TIFF *tif)<SUB>3367</SUB>> ]
+"86764" [label = <(PARAM,TIFFDirEntry *direntry)<SUB>3367</SUB>> ]
+"86765" [label = <(PARAM,uint64_t *value)<SUB>3367</SUB>> ]
+"86766" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3368</SUB>> ]
+"86767" [label = <(CONTROL_STRUCTURE,if (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF)),if (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF)))<SUB>3369</SUB>> ]
+"86768" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>3369</SUB>> ]
+"86769" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>3369</SUB>> ]
+"86770" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3369</SUB>> ]
+"86771" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>3369</SUB>> ]
+"86772" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3369</SUB>> ]
+"86773" [label = <(IDENTIFIER,TIFF_BIGTIFF,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>3369</SUB>> ]
+"86774" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3370</SUB>> ]
+"86775" [label = <(LOCAL,enum TIFFReadDirEntryErr err: TIFFReadDirEntryErr)<SUB>3371</SUB>> ]
+"86776" [label = <(LOCAL,uint32_t offset: uint32_t)<SUB>3372</SUB>> ]
+"86777" [label = <(&lt;operator&gt;.assignment,offset = direntry-&gt;tdir_offset.toff_long)<SUB>3372</SUB>> ]
+"86778" [label = <(IDENTIFIER,offset,offset = direntry-&gt;tdir_offset.toff_long)<SUB>3372</SUB>> ]
+"86779" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long)<SUB>3372</SUB>> ]
+"86780" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3372</SUB>> ]
+"86781" [label = <(IDENTIFIER,direntry,offset = direntry-&gt;tdir_offset.toff_long)<SUB>3372</SUB>> ]
+"86782" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3372</SUB>> ]
+"86783" [label = <(FIELD_IDENTIFIER,toff_long,toff_long)<SUB>3372</SUB>> ]
+"86784" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>3373</SUB>> ]
+"86785" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3373</SUB>> ]
+"86786" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3373</SUB>> ]
+"86787" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3373</SUB>> ]
+"86788" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3373</SUB>> ]
+"86789" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3373</SUB>> ]
+"86790" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3374</SUB>> ]
+"86791" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;offset))<SUB>3374</SUB>> ]
+"86792" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>3374</SUB>> ]
+"86793" [label = <(IDENTIFIER,offset,TIFFSwabLong(&amp;offset))<SUB>3374</SUB>> ]
+"86794" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86795" [label = <(IDENTIFIER,err,err = TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86796" [label = <(TIFFReadDirEntryData,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86797" [label = <(IDENTIFIER,tif,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86798" [label = <(IDENTIFIER,offset,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86799" [label = <(LITERAL,8,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86800" [label = <(IDENTIFIER,value,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86801" [label = <(CONTROL_STRUCTURE,if (err != TIFFReadDirEntryErrOk),if (err != TIFFReadDirEntryErrOk))<SUB>3376</SUB>> ]
+"86802" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>3376</SUB>> ]
+"86803" [label = <(IDENTIFIER,err,err != TIFFReadDirEntryErrOk)<SUB>3376</SUB>> ]
+"86804" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,err != TIFFReadDirEntryErrOk)<SUB>3376</SUB>> ]
+"86805" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3377</SUB>> ]
+"86806" [label = <(RETURN,return (err);,return (err);)<SUB>3377</SUB>> ]
+"86807" [label = <(IDENTIFIER,err,return (err);)<SUB>3377</SUB>> ]
+"86808" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3380</SUB>> ]
+"86809" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3380</SUB>> ]
+"86810" [label = <(&lt;operator&gt;.assignment,*value = direntry-&gt;tdir_offset.toff_long8)<SUB>3380</SUB>> ]
+"86811" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3380</SUB>> ]
+"86812" [label = <(IDENTIFIER,value,*value = direntry-&gt;tdir_offset.toff_long8)<SUB>3380</SUB>> ]
+"86813" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long8)<SUB>3380</SUB>> ]
+"86814" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3380</SUB>> ]
+"86815" [label = <(IDENTIFIER,direntry,*value = direntry-&gt;tdir_offset.toff_long8)<SUB>3380</SUB>> ]
+"86816" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3380</SUB>> ]
+"86817" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>3380</SUB>> ]
+"86818" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_SWAB),if (tif-&gt;tif_flags &amp; TIFF_SWAB))<SUB>3381</SUB>> ]
+"86819" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3381</SUB>> ]
+"86820" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3381</SUB>> ]
+"86821" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3381</SUB>> ]
+"86822" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3381</SUB>> ]
+"86823" [label = <(IDENTIFIER,TIFF_SWAB,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3381</SUB>> ]
+"86824" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3382</SUB>> ]
+"86825" [label = <(TIFFSwabLong8,TIFFSwabLong8(value))<SUB>3382</SUB>> ]
+"86826" [label = <(IDENTIFIER,value,TIFFSwabLong8(value))<SUB>3382</SUB>> ]
+"86827" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3383</SUB>> ]
+"86828" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>3383</SUB>> ]
+"86829" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3366</SUB>> ]
+  "86762" -> "86763" 
+  "86762" -> "86764" 
+  "86762" -> "86765" 
+  "86762" -> "86766" 
+  "86762" -> "86829" 
+  "86766" -> "86767" 
+  "86766" -> "86818" 
+  "86766" -> "86827" 
+  "86767" -> "86768" 
+  "86767" -> "86774" 
+  "86767" -> "86808" 
+  "86768" -> "86769" 
+  "86769" -> "86770" 
+  "86769" -> "86773" 
+  "86770" -> "86771" 
+  "86770" -> "86772" 
+  "86774" -> "86775" 
+  "86774" -> "86776" 
+  "86774" -> "86777" 
+  "86774" -> "86784" 
+  "86774" -> "86794" 
+  "86774" -> "86801" 
+  "86777" -> "86778" 
+  "86777" -> "86779" 
+  "86779" -> "86780" 
+  "86779" -> "86783" 
+  "86780" -> "86781" 
+  "86780" -> "86782" 
+  "86784" -> "86785" 
+  "86784" -> "86790" 
+  "86785" -> "86786" 
+  "86785" -> "86789" 
+  "86786" -> "86787" 
+  "86786" -> "86788" 
+  "86790" -> "86791" 
+  "86791" -> "86792" 
+  "86792" -> "86793" 
+  "86794" -> "86795" 
+  "86794" -> "86796" 
+  "86796" -> "86797" 
+  "86796" -> "86798" 
+  "86796" -> "86799" 
+  "86796" -> "86800" 
+  "86801" -> "86802" 
+  "86801" -> "86805" 
+  "86802" -> "86803" 
+  "86802" -> "86804" 
+  "86805" -> "86806" 
+  "86806" -> "86807" 
+  "86808" -> "86809" 
+  "86809" -> "86810" 
+  "86810" -> "86811" 
+  "86810" -> "86813" 
+  "86811" -> "86812" 
+  "86813" -> "86814" 
+  "86813" -> "86817" 
+  "86814" -> "86815" 
+  "86814" -> "86816" 
+  "86818" -> "86819" 
+  "86818" -> "86824" 
+  "86819" -> "86820" 
+  "86819" -> "86823" 
+  "86820" -> "86821" 
+  "86820" -> "86822" 
+  "86824" -> "86825" 
+  "86825" -> "86826" 
+  "86827" -> "86828" 
+}

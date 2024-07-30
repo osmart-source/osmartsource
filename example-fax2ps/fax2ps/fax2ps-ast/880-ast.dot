@@ -1,0 +1,25 @@
+digraph "TIFFCreateEXIFDirectory" {  
+"43701" [label = <(METHOD,TIFFCreateEXIFDirectory)<SUB>1709</SUB>> ]
+"43702" [label = <(PARAM,TIFF *tif)<SUB>1709</SUB>> ]
+"43703" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1710</SUB>> ]
+"43704" [label = <(LOCAL,const TIFFFieldArray* exifFieldArray: TIFFFieldArray)<SUB>1711</SUB>> ]
+"43705" [label = <(&lt;operator&gt;.assignment,exifFieldArray = _TIFFGetExifFields())<SUB>1712</SUB>> ]
+"43706" [label = <(IDENTIFIER,exifFieldArray,exifFieldArray = _TIFFGetExifFields())<SUB>1712</SUB>> ]
+"43707" [label = <(_TIFFGetExifFields,_TIFFGetExifFields())<SUB>1712</SUB>> ]
+"43708" [label = <(RETURN,return TIFFCreateCustomDirectory(tif, exifFieldArray);,return TIFFCreateCustomDirectory(tif, exifFieldArray);)<SUB>1713</SUB>> ]
+"43709" [label = <(TIFFCreateCustomDirectory,TIFFCreateCustomDirectory(tif, exifFieldArray))<SUB>1713</SUB>> ]
+"43710" [label = <(IDENTIFIER,tif,TIFFCreateCustomDirectory(tif, exifFieldArray))<SUB>1713</SUB>> ]
+"43711" [label = <(IDENTIFIER,exifFieldArray,TIFFCreateCustomDirectory(tif, exifFieldArray))<SUB>1713</SUB>> ]
+"43712" [label = <(METHOD_RETURN,int)<SUB>1709</SUB>> ]
+  "43701" -> "43702" 
+  "43701" -> "43703" 
+  "43701" -> "43712" 
+  "43703" -> "43704" 
+  "43703" -> "43705" 
+  "43703" -> "43708" 
+  "43705" -> "43706" 
+  "43705" -> "43707" 
+  "43708" -> "43709" 
+  "43709" -> "43710" 
+  "43709" -> "43711" 
+}

@@ -1,0 +1,279 @@
+digraph "TIFFWriteDirectoryTagData" {  
+"71679" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagData&quot;)<SUB>2854</SUB>> ]
+"71683" [label = <(&lt;operator&gt;.assignment,m = 0)<SUB>2856</SUB>> ]
+"71739" [label = <(&lt;operator&gt;.assignment,dir[m].tdir_tag = tag)<SUB>2870</SUB>> ]
+"71746" [label = <(&lt;operator&gt;.assignment,dir[m].tdir_type = datatype)<SUB>2871</SUB>> ]
+"71753" [label = <(&lt;operator&gt;.assignment,dir[m].tdir_count = count)<SUB>2872</SUB>> ]
+"71760" [label = <(&lt;operator&gt;.assignment,dir[m].tdir_offset.toff_long8 = 0)<SUB>2873</SUB>> ]
+"71952" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>2928</SUB>> ]
+"71955" [label = <(RETURN,return (1);,return (1);)<SUB>2929</SUB>> ]
+"71687" [label = <(&lt;operator&gt;.lessThan,m &lt; (*ndir))<SUB>2857</SUB>> ]
+"71713" [label = <(&lt;operator&gt;.lessThan,m &lt; (*ndir))<SUB>2864</SUB>> ]
+"71740" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_tag)<SUB>2870</SUB>> ]
+"71747" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_type)<SUB>2871</SUB>> ]
+"71754" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_count)<SUB>2872</SUB>> ]
+"71761" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset.toff_long8)<SUB>2873</SUB>> ]
+"71770" [label = <(&lt;operator&gt;.lessEqualsThan,datalength &lt;= ((tif-&gt;tif_flags &amp; TIFF_BIGTIFF) ? 0x8U : 0x4U))<SUB>2874</SUB>> ]
+"71953" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2928</SUB>> ]
+"71689" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2857</SUB>> ]
+"71692" [label = <(assert,assert(dir[m].tdir_tag != tag))<SUB>2859</SUB>> ]
+"71710" [label = <(&lt;operator&gt;.postIncrement,m++)<SUB>2862</SUB>> ]
+"71715" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2864</SUB>> ]
+"71741" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2870</SUB>> ]
+"71744" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>2870</SUB>> ]
+"71748" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2871</SUB>> ]
+"71751" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>2871</SUB>> ]
+"71755" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2872</SUB>> ]
+"71758" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>2872</SUB>> ]
+"71762" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset)<SUB>2873</SUB>> ]
+"71767" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>2873</SUB>> ]
+"71772" [label = <(&lt;operator&gt;.conditional,(tif-&gt;tif_flags &amp; TIFF_BIGTIFF) ? 0x8U : 0x4U)<SUB>2874</SUB>> ]
+"71693" [label = <(&lt;operator&gt;.notEquals,dir[m].tdir_tag != tag)<SUB>2859</SUB>> ]
+"71701" [label = <(&lt;operator&gt;.greaterThan,dir[m].tdir_tag &gt; tag)<SUB>2860</SUB>> ]
+"71725" [label = <(&lt;operator&gt;.greaterThan,n &gt; m)<SUB>2867</SUB>> ]
+"71728" [label = <(&lt;operator&gt;.postDecrement,n--)<SUB>2867</SUB>> ]
+"71730" [label = <(&lt;operator&gt;.assignment,dir[n] = dir[n - 1])<SUB>2868</SUB>> ]
+"71763" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2873</SUB>> ]
+"71766" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>2873</SUB>> ]
+"71773" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2874</SUB>> ]
+"71782" [label = <(&lt;operator&gt;.logicalAnd,data &amp;&amp; datalength)<SUB>2876</SUB>> ]
+"71799" [label = <(&lt;operator&gt;.assignment,na = tif-&gt;tif_dataoff)<SUB>2884</SUB>> ]
+"71804" [label = <(&lt;operator&gt;.assignment,nb = na + datalength)<SUB>2885</SUB>> ]
+"71875" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dataoff = nb)<SUB>2910</SUB>> ]
+"71694" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_tag)<SUB>2859</SUB>> ]
+"71702" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_tag)<SUB>2860</SUB>> ]
+"71721" [label = <(&lt;operator&gt;.assignment,n = *ndir)<SUB>2867</SUB>> ]
+"71731" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[n])<SUB>2868</SUB>> ]
+"71734" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[n - 1])<SUB>2868</SUB>> ]
+"71774" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2874</SUB>> ]
+"71786" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;dir[m].tdir_offset, data, datalength))<SUB>2878</SUB>> ]
+"71801" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dataoff)<SUB>2884</SUB>> ]
+"71806" [label = <(&lt;operator&gt;.addition,na + datalength)<SUB>2885</SUB>> ]
+"71810" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2886</SUB>> ]
+"71823" [label = <(&lt;operator&gt;.logicalOr,(nb &lt; na) || (nb &lt; datalength))<SUB>2888</SUB>> ]
+"71838" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, na))<SUB>2893</SUB>> ]
+"71850" [label = <(&lt;operator&gt;.greaterEqualsThan,datalength &gt;= 0x80000000UL)<SUB>2898</SUB>> ]
+"71861" [label = <(&lt;operator&gt;.logicalNot,!WriteOK(tif, data, (tmsize_t)datalength))<SUB>2905</SUB>> ]
+"71876" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dataoff)<SUB>2910</SUB>> ]
+"71881" [label = <(&lt;operator&gt;.and,tif-&gt;tif_dataoff &amp; 1)<SUB>2911</SUB>> ]
+"71892" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>2913</SUB>> ]
+"71695" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2859</SUB>> ]
+"71698" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>2859</SUB>> ]
+"71703" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2860</SUB>> ]
+"71706" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>2860</SUB>> ]
+"71723" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2867</SUB>> ]
+"71736" [label = <(&lt;operator&gt;.subtraction,n - 1)<SUB>2868</SUB>> ]
+"71776" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2874</SUB>> ]
+"71787" [label = <(&lt;operator&gt;.addressOf,&amp;dir[m].tdir_offset)<SUB>2878</SUB>> ]
+"71803" [label = <(FIELD_IDENTIFIER,tif_dataoff,tif_dataoff)<SUB>2884</SUB>> ]
+"71811" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2886</SUB>> ]
+"71817" [label = <(&lt;operator&gt;.assignment,nb = (uint32_t)nb)<SUB>2887</SUB>> ]
+"71824" [label = <(&lt;operator&gt;.lessThan,nb &lt; na)<SUB>2888</SUB>> ]
+"71827" [label = <(&lt;operator&gt;.lessThan,nb &lt; datalength)<SUB>2888</SUB>> ]
+"71831" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Maximum TIFF file size exceeded&quot;))<SUB>2890</SUB>> ]
+"71835" [label = <(RETURN,return (0);,return (0);)<SUB>2891</SUB>> ]
+"71839" [label = <(SeekOK,SeekOK(tif, na))<SUB>2893</SUB>> ]
+"71843" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;IO error writing tag data&quot;))<SUB>2895</SUB>> ]
+"71847" [label = <(RETURN,return (0);,return (0);)<SUB>2896</SUB>> ]
+"71854" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                          &quot;libtiff does not allow writing more than 2147483647 &quot;\012                          &quot;bytes in a tag&quot;))<SUB>2900</SUB>> ]
+"71858" [label = <(RETURN,return (0);,return (0);)<SUB>2903</SUB>> ]
+"71862" [label = <(WriteOK,WriteOK(tif, data, (tmsize_t)datalength))<SUB>2905</SUB>> ]
+"71869" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;IO error writing tag data&quot;))<SUB>2907</SUB>> ]
+"71873" [label = <(RETURN,return (0);,return (0);)<SUB>2908</SUB>> ]
+"71878" [label = <(FIELD_IDENTIFIER,tif_dataoff,tif_dataoff)<SUB>2910</SUB>> ]
+"71882" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dataoff)<SUB>2911</SUB>> ]
+"71887" [label = <(&lt;operator&gt;.postIncrement,tif-&gt;tif_dataoff++)<SUB>2912</SUB>> ]
+"71893" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>2913</SUB>> ]
+"71900" [label = <(&lt;operator&gt;.assignment,o = (uint32_t)na)<SUB>2916</SUB>> ]
+"71915" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;dir[m].tdir_offset, &amp;o, 4))<SUB>2919</SUB>> ]
+"71788" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset)<SUB>2878</SUB>> ]
+"71812" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2886</SUB>> ]
+"71819" [label = <(&lt;operator&gt;.cast,(uint32_t)nb)<SUB>2887</SUB>> ]
+"71865" [label = <(&lt;operator&gt;.cast,(tmsize_t)datalength)<SUB>2905</SUB>> ]
+"71884" [label = <(FIELD_IDENTIFIER,tif_dataoff,tif_dataoff)<SUB>2911</SUB>> ]
+"71888" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dataoff)<SUB>2912</SUB>> ]
+"71894" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2913</SUB>> ]
+"71902" [label = <(&lt;operator&gt;.cast,(uint32_t)na)<SUB>2916</SUB>> ]
+"71906" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2917</SUB>> ]
+"71916" [label = <(&lt;operator&gt;.addressOf,&amp;dir[m].tdir_offset)<SUB>2919</SUB>> ]
+"71922" [label = <(&lt;operator&gt;.addressOf,&amp;o)<SUB>2919</SUB>> ]
+"71927" [label = <(&lt;operator&gt;.assignment,dir[m].tdir_offset.toff_long8 = na)<SUB>2923</SUB>> ]
+"71789" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2878</SUB>> ]
+"71792" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>2878</SUB>> ]
+"71814" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2886</SUB>> ]
+"71820" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>2887</SUB>> ]
+"71866" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>2905</SUB>> ]
+"71890" [label = <(FIELD_IDENTIFIER,tif_dataoff,tif_dataoff)<SUB>2912</SUB>> ]
+"71896" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2913</SUB>> ]
+"71903" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>2916</SUB>> ]
+"71907" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2917</SUB>> ]
+"71912" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;o))<SUB>2918</SUB>> ]
+"71917" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset)<SUB>2919</SUB>> ]
+"71928" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset.toff_long8)<SUB>2923</SUB>> ]
+"71937" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2924</SUB>> ]
+"71909" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2917</SUB>> ]
+"71913" [label = <(&lt;operator&gt;.addressOf,&amp;o)<SUB>2918</SUB>> ]
+"71918" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2919</SUB>> ]
+"71921" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>2919</SUB>> ]
+"71929" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset)<SUB>2923</SUB>> ]
+"71934" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>2923</SUB>> ]
+"71938" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2924</SUB>> ]
+"71943" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;dir[m].tdir_offset.toff_long8))<SUB>2925</SUB>> ]
+"71930" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2923</SUB>> ]
+"71933" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>2923</SUB>> ]
+"71940" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2924</SUB>> ]
+"71944" [label = <(&lt;operator&gt;.addressOf,&amp;dir[m].tdir_offset.toff_long8)<SUB>2925</SUB>> ]
+"71945" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset.toff_long8)<SUB>2925</SUB>> ]
+"71946" [label = <(&lt;operator&gt;.fieldAccess,dir[m].tdir_offset)<SUB>2925</SUB>> ]
+"71951" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>2925</SUB>> ]
+"71947" [label = <(&lt;operator&gt;.indirectIndexAccess,dir[m])<SUB>2925</SUB>> ]
+"71950" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>2925</SUB>> ]
+"71668" [label = <(METHOD,TIFFWriteDirectoryTagData)<SUB>2849</SUB>> ]
+"71957" [label = <(METHOD_RETURN,int)<SUB>2849</SUB>> ]
+  "71679" -> "71683" 
+  "71683" -> "71689" 
+  "71739" -> "71748" 
+  "71746" -> "71755" 
+  "71753" -> "71763" 
+  "71760" -> "71776" 
+  "71952" -> "71955" 
+  "71955" -> "71957" 
+  "71687" -> "71695" 
+  "71687" -> "71715" 
+  "71713" -> "71723" 
+  "71713" -> "71741" 
+  "71740" -> "71739" 
+  "71747" -> "71746" 
+  "71754" -> "71753" 
+  "71761" -> "71760" 
+  "71770" -> "71782" 
+  "71770" -> "71803" 
+  "71953" -> "71952" 
+  "71689" -> "71687" 
+  "71692" -> "71703" 
+  "71710" -> "71689" 
+  "71715" -> "71713" 
+  "71741" -> "71744" 
+  "71744" -> "71740" 
+  "71748" -> "71751" 
+  "71751" -> "71747" 
+  "71755" -> "71758" 
+  "71758" -> "71754" 
+  "71762" -> "71767" 
+  "71767" -> "71761" 
+  "71772" -> "71770" 
+  "71693" -> "71692" 
+  "71701" -> "71715" 
+  "71701" -> "71710" 
+  "71725" -> "71731" 
+  "71725" -> "71741" 
+  "71728" -> "71725" 
+  "71730" -> "71728" 
+  "71763" -> "71766" 
+  "71766" -> "71762" 
+  "71773" -> "71772" 
+  "71782" -> "71789" 
+  "71782" -> "71953" 
+  "71799" -> "71806" 
+  "71804" -> "71814" 
+  "71875" -> "71884" 
+  "71694" -> "71693" 
+  "71702" -> "71701" 
+  "71721" -> "71725" 
+  "71731" -> "71736" 
+  "71734" -> "71730" 
+  "71774" -> "71773" 
+  "71786" -> "71953" 
+  "71801" -> "71799" 
+  "71806" -> "71804" 
+  "71810" -> "71820" 
+  "71810" -> "71824" 
+  "71823" -> "71831" 
+  "71823" -> "71839" 
+  "71838" -> "71843" 
+  "71838" -> "71850" 
+  "71850" -> "71854" 
+  "71850" -> "71866" 
+  "71861" -> "71869" 
+  "71861" -> "71878" 
+  "71876" -> "71875" 
+  "71881" -> "71890" 
+  "71881" -> "71896" 
+  "71892" -> "71903" 
+  "71892" -> "71930" 
+  "71695" -> "71698" 
+  "71698" -> "71694" 
+  "71703" -> "71706" 
+  "71706" -> "71702" 
+  "71723" -> "71721" 
+  "71736" -> "71734" 
+  "71776" -> "71774" 
+  "71787" -> "71786" 
+  "71803" -> "71801" 
+  "71811" -> "71810" 
+  "71817" -> "71824" 
+  "71824" -> "71823" 
+  "71824" -> "71827" 
+  "71827" -> "71823" 
+  "71831" -> "71835" 
+  "71835" -> "71957" 
+  "71839" -> "71838" 
+  "71843" -> "71847" 
+  "71847" -> "71957" 
+  "71854" -> "71858" 
+  "71858" -> "71957" 
+  "71862" -> "71861" 
+  "71869" -> "71873" 
+  "71873" -> "71957" 
+  "71878" -> "71876" 
+  "71882" -> "71881" 
+  "71887" -> "71896" 
+  "71893" -> "71892" 
+  "71900" -> "71909" 
+  "71915" -> "71953" 
+  "71788" -> "71787" 
+  "71812" -> "71811" 
+  "71819" -> "71817" 
+  "71865" -> "71862" 
+  "71884" -> "71882" 
+  "71888" -> "71887" 
+  "71894" -> "71893" 
+  "71902" -> "71900" 
+  "71906" -> "71913" 
+  "71906" -> "71918" 
+  "71916" -> "71922" 
+  "71922" -> "71915" 
+  "71927" -> "71940" 
+  "71789" -> "71792" 
+  "71792" -> "71788" 
+  "71814" -> "71812" 
+  "71820" -> "71819" 
+  "71866" -> "71865" 
+  "71890" -> "71888" 
+  "71896" -> "71894" 
+  "71903" -> "71902" 
+  "71907" -> "71906" 
+  "71912" -> "71918" 
+  "71917" -> "71916" 
+  "71928" -> "71927" 
+  "71937" -> "71947" 
+  "71937" -> "71953" 
+  "71909" -> "71907" 
+  "71913" -> "71912" 
+  "71918" -> "71921" 
+  "71921" -> "71917" 
+  "71929" -> "71934" 
+  "71934" -> "71928" 
+  "71938" -> "71937" 
+  "71943" -> "71953" 
+  "71930" -> "71933" 
+  "71933" -> "71929" 
+  "71940" -> "71938" 
+  "71944" -> "71943" 
+  "71945" -> "71944" 
+  "71946" -> "71951" 
+  "71951" -> "71945" 
+  "71947" -> "71950" 
+  "71950" -> "71946" 
+  "71668" -> "71679" 
+}

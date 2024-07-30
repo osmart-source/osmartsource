@@ -1,0 +1,231 @@
+digraph "fpDiff" {  
+"38788" [label = <(&lt;operator&gt;.assignment,stride = PredictorState(tif)-&gt;stride)<SUB>817</SUB>> ]
+"38801" [label = <(&lt;operator&gt;.assignment,bps = tif-&gt;tif_dir.td_bitspersample / 8)<SUB>818</SUB>> ]
+"38811" [label = <(&lt;operator&gt;.assignment,wc = cc / bps)<SUB>819</SUB>> ]
+"38818" [label = <(&lt;operator&gt;.assignment,*cp = (uint8_t *)cp0)<SUB>821</SUB>> ]
+"38840" [label = <(&lt;operator&gt;.assignment,tmp = (uint8_t *)_TIFFmallocExt(tif, cc))<SUB>830</SUB>> ]
+"38853" [label = <(_TIFFmemcpy,_TIFFmemcpy(tmp, cp0, cc))<SUB>834</SUB>> ]
+"38899" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tmp))<SUB>847</SUB>> ]
+"38902" [label = <(&lt;operator&gt;.assignment,cp = (uint8_t *)cp0)<SUB>849</SUB>> ]
+"38907" [label = <(&lt;operator&gt;.assignmentPlus,cp += cc - stride - 1)<SUB>850</SUB>> ]
+"39042" [label = <(RETURN,return 1;,return 1;)<SUB>855</SUB>> ]
+"38790" [label = <(PredictorState,PredictorState(tif)-&gt;stride)<SUB>817</SUB>> ]
+"38803" [label = <(&lt;operator&gt;.division,tif-&gt;tif_dir.td_bitspersample / 8)<SUB>818</SUB>> ]
+"38813" [label = <(&lt;operator&gt;.division,cc / bps)<SUB>819</SUB>> ]
+"38820" [label = <(&lt;operator&gt;.cast,(uint8_t *)cp0)<SUB>821</SUB>> ]
+"38825" [label = <(&lt;operator&gt;.notEquals,(cc % (bps * stride)) != 0)<SUB>824</SUB>> ]
+"38842" [label = <(&lt;operator&gt;.cast,(uint8_t *)_TIFFmallocExt(tif, cc))<SUB>830</SUB>> ]
+"38848" [label = <(&lt;operator&gt;.logicalNot,!tmp)<SUB>831</SUB>> ]
+"38862" [label = <(&lt;operator&gt;.lessThan,count &lt; wc)<SUB>835</SUB>> ]
+"38865" [label = <(&lt;operator&gt;.postIncrement,count++)<SUB>835</SUB>> ]
+"38904" [label = <(&lt;operator&gt;.cast,(uint8_t *)cp0)<SUB>849</SUB>> ]
+"38909" [label = <(&lt;operator&gt;.subtraction,cc - stride - 1)<SUB>850</SUB>> ]
+"38919" [label = <(&lt;operator&gt;.greaterThan,count &gt; stride)<SUB>851</SUB>> ]
+"38922" [label = <(&lt;operator&gt;.assignmentMinus,count -= stride)<SUB>851</SUB>> ]
+"38925" [label = <(REPEAT4,REPEAT4(stride,\012                cp[stride] = (unsigned char)((cp[stride] - cp[0]) &amp; 0xff);\012                cp--))<SUB>852</SUB>> ]
+"38804" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>818</SUB>> ]
+"38821" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>821</SUB>> ]
+"38826" [label = <(&lt;operator&gt;.modulo,cc % (bps * stride))<SUB>824</SUB>> ]
+"38833" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;fpDiff&quot;, &quot;%s&quot;, &quot;(cc%(bps*stride))!=0&quot;))<SUB>826</SUB>> ]
+"38838" [label = <(RETURN,return 0;,return 0;)<SUB>827</SUB>> ]
+"38843" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>830</SUB>> ]
+"38844" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, cc))<SUB>830</SUB>> ]
+"38851" [label = <(RETURN,return 0;,return 0;)<SUB>832</SUB>> ]
+"38859" [label = <(&lt;operator&gt;.assignment,count = 0)<SUB>835</SUB>> ]
+"38905" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>849</SUB>> ]
+"38910" [label = <(&lt;operator&gt;.subtraction,cc - stride)<SUB>850</SUB>> ]
+"38916" [label = <(&lt;operator&gt;.assignment,count = cc)<SUB>851</SUB>> ]
+"38793" [label = <(&lt;operator&gt;.indirectFieldAccess,((TIFFPredictorState *)(tif)-&gt;tif_data)-&gt;stride)<SUB>817</SUB>> ]
+"38805" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>818</SUB>> ]
+"38808" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>818</SUB>> ]
+"38828" [label = <(&lt;operator&gt;.multiplication,bps * stride)<SUB>824</SUB>> ]
+"38874" [label = <(&lt;operator&gt;.lessThan,byte &lt; bps)<SUB>838</SUB>> ]
+"38877" [label = <(&lt;operator&gt;.postIncrement,byte++)<SUB>838</SUB>> ]
+"38794" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>817</SUB>> ]
+"38799" [label = <(FIELD_IDENTIFIER,stride,stride)<SUB>817</SUB>> ]
+"38807" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>818</SUB>> ]
+"38871" [label = <(&lt;operator&gt;.assignment,byte = 0)<SUB>838</SUB>> ]
+"38880" [label = <(&lt;operator&gt;.assignment,cp[(bps - byte - 1) * wc + count] = tmp[bps * count + byte])<SUB>843</SUB>> ]
+"38795" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>817</SUB>> ]
+"38796" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>817</SUB>> ]
+"38881" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[(bps - byte - 1) * wc + count])<SUB>843</SUB>> ]
+"38892" [label = <(&lt;operator&gt;.indirectIndexAccess,tmp[bps * count + byte])<SUB>843</SUB>> ]
+"38966" [label = <(&lt;operator&gt;.assignment,cp[stride] = (unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"38981" [label = <(&lt;operator&gt;.postDecrement,cp--)<SUB>852</SUB>> ]
+"38985" [label = <(&lt;operator&gt;.assignment,cp[stride] = (unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"39000" [label = <(&lt;operator&gt;.postDecrement,cp--)<SUB>852</SUB>> ]
+"39004" [label = <(&lt;operator&gt;.assignment,cp[stride] = (unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"39019" [label = <(&lt;operator&gt;.postDecrement,cp--)<SUB>852</SUB>> ]
+"39023" [label = <(&lt;operator&gt;.assignment,cp[stride] = (unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"39038" [label = <(&lt;operator&gt;.postDecrement,cp--)<SUB>852</SUB>> ]
+"38798" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>817</SUB>> ]
+"38883" [label = <(&lt;operator&gt;.addition,(bps - byte - 1) * wc + count)<SUB>843</SUB>> ]
+"38894" [label = <(&lt;operator&gt;.addition,bps * count + byte)<SUB>843</SUB>> ]
+"38967" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"38970" [label = <(&lt;operator&gt;.cast,(unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"38986" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"38989" [label = <(&lt;operator&gt;.cast,(unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"39005" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"39008" [label = <(&lt;operator&gt;.cast,(unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"39024" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"39027" [label = <(&lt;operator&gt;.cast,(unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"38884" [label = <(&lt;operator&gt;.multiplication,(bps - byte - 1) * wc)<SUB>843</SUB>> ]
+"38895" [label = <(&lt;operator&gt;.multiplication,bps * count)<SUB>843</SUB>> ]
+"38941" [label = <(&lt;operator&gt;.greaterThan,i &gt; 0)<SUB>852</SUB>> ]
+"38944" [label = <(&lt;operator&gt;.postDecrement,i--)<SUB>852</SUB>> ]
+"38971" [label = <(UNKNOWN,unsigned char,unsigned char)<SUB>852</SUB>> ]
+"38972" [label = <(&lt;operator&gt;.and,(cp[stride] - cp[0]) &amp; 0xff)<SUB>852</SUB>> ]
+"38990" [label = <(UNKNOWN,unsigned char,unsigned char)<SUB>852</SUB>> ]
+"38991" [label = <(&lt;operator&gt;.and,(cp[stride] - cp[0]) &amp; 0xff)<SUB>852</SUB>> ]
+"39009" [label = <(UNKNOWN,unsigned char,unsigned char)<SUB>852</SUB>> ]
+"39010" [label = <(&lt;operator&gt;.and,(cp[stride] - cp[0]) &amp; 0xff)<SUB>852</SUB>> ]
+"39028" [label = <(UNKNOWN,unsigned char,unsigned char)<SUB>852</SUB>> ]
+"39029" [label = <(&lt;operator&gt;.and,(cp[stride] - cp[0]) &amp; 0xff)<SUB>852</SUB>> ]
+"38885" [label = <(&lt;operator&gt;.subtraction,bps - byte - 1)<SUB>843</SUB>> ]
+"38936" [label = <(&lt;operator&gt;.assignment,i = stride - 4)<SUB>852</SUB>> ]
+"38947" [label = <(&lt;operator&gt;.assignment,cp[stride] = (unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"38962" [label = <(&lt;operator&gt;.postDecrement,cp--)<SUB>852</SUB>> ]
+"38973" [label = <(&lt;operator&gt;.subtraction,cp[stride] - cp[0])<SUB>852</SUB>> ]
+"38992" [label = <(&lt;operator&gt;.subtraction,cp[stride] - cp[0])<SUB>852</SUB>> ]
+"39011" [label = <(&lt;operator&gt;.subtraction,cp[stride] - cp[0])<SUB>852</SUB>> ]
+"39030" [label = <(&lt;operator&gt;.subtraction,cp[stride] - cp[0])<SUB>852</SUB>> ]
+"38886" [label = <(&lt;operator&gt;.subtraction,bps - byte)<SUB>843</SUB>> ]
+"38938" [label = <(&lt;operator&gt;.subtraction,stride - 4)<SUB>852</SUB>> ]
+"38948" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"38951" [label = <(&lt;operator&gt;.cast,(unsigned char)((cp[stride] - cp[0]) &amp; 0xff))<SUB>852</SUB>> ]
+"38974" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"38977" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>852</SUB>> ]
+"38993" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"38996" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>852</SUB>> ]
+"39012" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"39015" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>852</SUB>> ]
+"39031" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"39034" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>852</SUB>> ]
+"38952" [label = <(UNKNOWN,unsigned char,unsigned char)<SUB>852</SUB>> ]
+"38953" [label = <(&lt;operator&gt;.and,(cp[stride] - cp[0]) &amp; 0xff)<SUB>852</SUB>> ]
+"38954" [label = <(&lt;operator&gt;.subtraction,cp[stride] - cp[0])<SUB>852</SUB>> ]
+"38955" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[stride])<SUB>852</SUB>> ]
+"38958" [label = <(&lt;operator&gt;.indirectIndexAccess,cp[0])<SUB>852</SUB>> ]
+"38782" [label = <(METHOD,fpDiff)<SUB>815</SUB>> ]
+"39044" [label = <(METHOD_RETURN,int)<SUB>815</SUB>> ]
+  "38788" -> "38807" 
+  "38801" -> "38813" 
+  "38811" -> "38821" 
+  "38818" -> "38828" 
+  "38840" -> "38848" 
+  "38853" -> "38859" 
+  "38899" -> "38905" 
+  "38902" -> "38910" 
+  "38907" -> "38916" 
+  "39042" -> "39044" 
+  "38790" -> "38795" 
+  "38790" -> "38788" 
+  "38803" -> "38801" 
+  "38813" -> "38811" 
+  "38820" -> "38818" 
+  "38825" -> "38833" 
+  "38825" -> "38843" 
+  "38842" -> "38840" 
+  "38848" -> "38851" 
+  "38848" -> "38853" 
+  "38862" -> "38871" 
+  "38862" -> "38899" 
+  "38865" -> "38862" 
+  "38904" -> "38902" 
+  "38909" -> "38907" 
+  "38919" -> "38925" 
+  "38919" -> "39042" 
+  "38922" -> "38919" 
+  "38925" -> "38938" 
+  "38925" -> "38967" 
+  "38925" -> "38986" 
+  "38925" -> "39005" 
+  "38925" -> "39024" 
+  "38925" -> "38922" 
+  "38804" -> "38803" 
+  "38821" -> "38820" 
+  "38826" -> "38825" 
+  "38833" -> "38838" 
+  "38838" -> "39044" 
+  "38843" -> "38844" 
+  "38844" -> "38842" 
+  "38851" -> "39044" 
+  "38859" -> "38862" 
+  "38905" -> "38904" 
+  "38910" -> "38909" 
+  "38916" -> "38919" 
+  "38793" -> "38788" 
+  "38805" -> "38808" 
+  "38808" -> "38804" 
+  "38828" -> "38826" 
+  "38874" -> "38886" 
+  "38874" -> "38865" 
+  "38877" -> "38874" 
+  "38794" -> "38799" 
+  "38799" -> "38793" 
+  "38807" -> "38805" 
+  "38871" -> "38874" 
+  "38880" -> "38877" 
+  "38795" -> "38798" 
+  "38796" -> "38794" 
+  "38881" -> "38895" 
+  "38892" -> "38880" 
+  "38966" -> "38981" 
+  "38981" -> "38986" 
+  "38985" -> "39000" 
+  "39000" -> "39005" 
+  "39004" -> "39019" 
+  "39019" -> "39024" 
+  "39023" -> "39038" 
+  "39038" -> "38922" 
+  "38798" -> "38796" 
+  "38883" -> "38881" 
+  "38894" -> "38892" 
+  "38967" -> "38971" 
+  "38970" -> "38966" 
+  "38986" -> "38990" 
+  "38989" -> "38985" 
+  "39005" -> "39009" 
+  "39008" -> "39004" 
+  "39024" -> "39028" 
+  "39027" -> "39023" 
+  "38884" -> "38883" 
+  "38895" -> "38894" 
+  "38941" -> "38948" 
+  "38941" -> "38967" 
+  "38944" -> "38941" 
+  "38971" -> "38974" 
+  "38972" -> "38970" 
+  "38990" -> "38993" 
+  "38991" -> "38989" 
+  "39009" -> "39012" 
+  "39010" -> "39008" 
+  "39028" -> "39031" 
+  "39029" -> "39027" 
+  "38885" -> "38884" 
+  "38936" -> "38941" 
+  "38947" -> "38962" 
+  "38962" -> "38944" 
+  "38973" -> "38972" 
+  "38992" -> "38991" 
+  "39011" -> "39010" 
+  "39030" -> "39029" 
+  "38886" -> "38885" 
+  "38938" -> "38936" 
+  "38948" -> "38952" 
+  "38951" -> "38947" 
+  "38974" -> "38977" 
+  "38977" -> "38973" 
+  "38993" -> "38996" 
+  "38996" -> "38992" 
+  "39012" -> "39015" 
+  "39015" -> "39011" 
+  "39031" -> "39034" 
+  "39034" -> "39030" 
+  "38952" -> "38955" 
+  "38953" -> "38951" 
+  "38954" -> "38953" 
+  "38955" -> "38958" 
+  "38958" -> "38954" 
+  "38782" -> "38790" 
+}

@@ -1,0 +1,148 @@
+digraph "TIFFWriteRawStrip" {  
+"31170" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteRawStrip&quot;)<SUB>330</SUB>> ]
+"31174" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>331</SUB>> ]
+"31280" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = (strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>378</SUB>> ]
+"31293" [label = <(RETURN,return (TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc) ? cc\012                                                               : (tmsize_t)-1);,return (TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc) ? cc\012                                                               : (tmsize_t)-1);)<SUB>379</SUB>> ]
+"31176" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>331</SUB>> ]
+"31181" [label = <(&lt;operator&gt;.logicalNot,!WRITECHECKSTRIPS(tif, module))<SUB>333</SUB>> ]
+"31198" [label = <(&lt;operator&gt;.greaterEqualsThan,strip &gt;= td-&gt;td_nstrips)<SUB>344</SUB>> ]
+"31249" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_curstrip != strip)<SUB>365</SUB>> ]
+"31266" [label = <(&lt;operator&gt;.equals,td-&gt;td_stripsperimage == 0)<SUB>373</SUB>> ]
+"31281" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>378</SUB>> ]
+"31284" [label = <(&lt;operator&gt;.multiplication,(strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>378</SUB>> ]
+"31294" [label = <(&lt;operator&gt;.conditional,TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc) ? cc\012                                                               : (tmsize_t)-1)<SUB>379</SUB>> ]
+"31177" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>331</SUB>> ]
+"31182" [label = <(&lt;operator&gt;.logicalOr,((tif)-&gt;tif_flags &amp; TIFF_BEENWRITING) || TIFFWriteCheck((tif), 0, module))<SUB>333</SUB>> ]
+"31193" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>334</SUB>> ]
+"31200" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>344</SUB>> ]
+"31250" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>365</SUB>> ]
+"31255" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curstrip = strip)<SUB>367</SUB>> ]
+"31260" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curoff = 0)<SUB>370</SUB>> ]
+"31267" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>373</SUB>> ]
+"31272" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Zero strips per image&quot;))<SUB>375</SUB>> ]
+"31276" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>376</SUB>> ]
+"31283" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>378</SUB>> ]
+"31285" [label = <(&lt;operator&gt;.modulo,strip % td-&gt;td_stripsperimage)<SUB>378</SUB>> ]
+"31290" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>378</SUB>> ]
+"31295" [label = <(TIFFAppendToStrip,TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>379</SUB>> ]
+"31303" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>380</SUB>> ]
+"31179" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>331</SUB>> ]
+"31183" [label = <(&lt;operator&gt;.and,(tif)-&gt;tif_flags &amp; TIFF_BEENWRITING)<SUB>333</SUB>> ]
+"31188" [label = <(TIFFWriteCheck,TIFFWriteCheck((tif), 0, module))<SUB>333</SUB>> ]
+"31194" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>334</SUB>> ]
+"31202" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>344</SUB>> ]
+"31205" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>346</SUB>> ]
+"31220" [label = <(&lt;operator&gt;.greaterEqualsThan,strip &gt;= td-&gt;td_stripsperimage)<SUB>358</SUB>> ]
+"31238" [label = <(&lt;operator&gt;.logicalNot,!TIFFGrowStrips(tif, 1, module))<SUB>361</SUB>> ]
+"31252" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>365</SUB>> ]
+"31256" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>367</SUB>> ]
+"31261" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curoff)<SUB>370</SUB>> ]
+"31269" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>373</SUB>> ]
+"31277" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>376</SUB>> ]
+"31287" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>378</SUB>> ]
+"31292" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>378</SUB>> ]
+"31298" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>379</SUB>> ]
+"31184" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_flags)<SUB>333</SUB>> ]
+"31206" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>346</SUB>> ]
+"31211" [label = <(TIFFErrorExtR,TIFFErrorExtR(\012                tif, module,\012                &quot;Can not grow image by strips when using separate planes&quot;))<SUB>348</SUB>> ]
+"31215" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>351</SUB>> ]
+"31222" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>358</SUB>> ]
+"31226" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripsperimage =\012                TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>359</SUB>> ]
+"31239" [label = <(TIFFGrowStrips,TIFFGrowStrips(tif, 1, module))<SUB>361</SUB>> ]
+"31244" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>362</SUB>> ]
+"31258" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>367</SUB>> ]
+"31263" [label = <(FIELD_IDENTIFIER,tif_curoff,tif_curoff)<SUB>370</SUB>> ]
+"31289" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>378</SUB>> ]
+"31299" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>379</SUB>> ]
+"31186" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>333</SUB>> ]
+"31208" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>346</SUB>> ]
+"31216" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>351</SUB>> ]
+"31224" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>358</SUB>> ]
+"31227" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>359</SUB>> ]
+"31230" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>360</SUB>> ]
+"31245" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>362</SUB>> ]
+"31229" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>359</SUB>> ]
+"31231" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>360</SUB>> ]
+"31234" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>360</SUB>> ]
+"31233" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>360</SUB>> ]
+"31236" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>360</SUB>> ]
+"31163" [label = <(METHOD,TIFFWriteRawStrip)<SUB>328</SUB>> ]
+"31306" [label = <(METHOD_RETURN,tmsize_t)<SUB>328</SUB>> ]
+  "31170" -> "31179" 
+  "31174" -> "31186" 
+  "31280" -> "31299" 
+  "31293" -> "31306" 
+  "31176" -> "31174" 
+  "31181" -> "31194" 
+  "31181" -> "31202" 
+  "31198" -> "31208" 
+  "31198" -> "31252" 
+  "31249" -> "31258" 
+  "31249" -> "31269" 
+  "31266" -> "31272" 
+  "31266" -> "31283" 
+  "31281" -> "31289" 
+  "31284" -> "31280" 
+  "31294" -> "31293" 
+  "31177" -> "31176" 
+  "31182" -> "31181" 
+  "31193" -> "31306" 
+  "31200" -> "31198" 
+  "31250" -> "31249" 
+  "31255" -> "31263" 
+  "31260" -> "31269" 
+  "31267" -> "31266" 
+  "31272" -> "31277" 
+  "31276" -> "31306" 
+  "31283" -> "31281" 
+  "31285" -> "31292" 
+  "31290" -> "31284" 
+  "31295" -> "31294" 
+  "31295" -> "31303" 
+  "31303" -> "31294" 
+  "31179" -> "31177" 
+  "31183" -> "31182" 
+  "31183" -> "31188" 
+  "31188" -> "31182" 
+  "31194" -> "31193" 
+  "31202" -> "31200" 
+  "31205" -> "31211" 
+  "31205" -> "31224" 
+  "31220" -> "31229" 
+  "31220" -> "31239" 
+  "31238" -> "31245" 
+  "31238" -> "31252" 
+  "31252" -> "31250" 
+  "31256" -> "31255" 
+  "31261" -> "31260" 
+  "31269" -> "31267" 
+  "31277" -> "31276" 
+  "31287" -> "31285" 
+  "31292" -> "31290" 
+  "31298" -> "31295" 
+  "31184" -> "31183" 
+  "31206" -> "31205" 
+  "31211" -> "31216" 
+  "31215" -> "31306" 
+  "31222" -> "31220" 
+  "31226" -> "31239" 
+  "31239" -> "31238" 
+  "31244" -> "31306" 
+  "31258" -> "31256" 
+  "31263" -> "31261" 
+  "31289" -> "31287" 
+  "31299" -> "31298" 
+  "31186" -> "31184" 
+  "31208" -> "31206" 
+  "31216" -> "31215" 
+  "31224" -> "31222" 
+  "31227" -> "31233" 
+  "31230" -> "31226" 
+  "31245" -> "31244" 
+  "31229" -> "31227" 
+  "31231" -> "31236" 
+  "31234" -> "31230" 
+  "31233" -> "31231" 
+  "31236" -> "31234" 
+  "31163" -> "31170" 
+}

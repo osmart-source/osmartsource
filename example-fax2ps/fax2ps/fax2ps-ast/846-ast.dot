@@ -1,0 +1,133 @@
+digraph "PredictorVSetField" {  
+"39255" [label = <(METHOD,PredictorVSetField)<SUB>929</SUB>> ]
+"39256" [label = <(PARAM,TIFF *tif)<SUB>929</SUB>> ]
+"39257" [label = <(PARAM,uint32_t tag)<SUB>929</SUB>> ]
+"39258" [label = <(PARAM,va_list ap)<SUB>929</SUB>> ]
+"39259" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>930</SUB>> ]
+"39260" [label = <(LOCAL,TIFFPredictorState* sp: TIFFPredictorState)<SUB>931</SUB>> ]
+"39261" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>931</SUB>> ]
+"39262" [label = <(IDENTIFIER,sp,*sp = PredictorState(tif))<SUB>931</SUB>> ]
+"39263" [label = <(PredictorState,PredictorState(tif))<SUB>931</SUB>> ]
+"39264" [label = <(IDENTIFIER,tif,PredictorState(tif))<SUB>931</SUB>> ]
+"39265" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"39266" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>931</SUB>> ]
+"39267" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>931</SUB>> ]
+"39268" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>931</SUB>> ]
+"39269" [label = <(IDENTIFIER,tif,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>931</SUB>> ]
+"39270" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>931</SUB>> ]
+"39271" [label = <(assert,assert(sp != NULL))<SUB>933</SUB>> ]
+"39272" [label = <(&lt;operator&gt;.notEquals,sp != NULL)<SUB>933</SUB>> ]
+"39273" [label = <(IDENTIFIER,sp,sp != NULL)<SUB>933</SUB>> ]
+"39274" [label = <(IDENTIFIER,NULL,sp != NULL)<SUB>933</SUB>> ]
+"39275" [label = <(assert,assert(sp-&gt;vsetparent != NULL))<SUB>934</SUB>> ]
+"39276" [label = <(&lt;operator&gt;.notEquals,sp-&gt;vsetparent != NULL)<SUB>934</SUB>> ]
+"39277" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;vsetparent)<SUB>934</SUB>> ]
+"39278" [label = <(IDENTIFIER,sp,sp-&gt;vsetparent != NULL)<SUB>934</SUB>> ]
+"39279" [label = <(FIELD_IDENTIFIER,vsetparent,vsetparent)<SUB>934</SUB>> ]
+"39280" [label = <(IDENTIFIER,NULL,sp-&gt;vsetparent != NULL)<SUB>934</SUB>> ]
+"39281" [label = <(CONTROL_STRUCTURE,switch(tag),switch(tag))<SUB>936</SUB>> ]
+"39282" [label = <(IDENTIFIER,tag,switch(tag))<SUB>936</SUB>> ]
+"39283" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>937</SUB>> ]
+"39284" [label = <(JUMP_TARGET,case)<SUB>938</SUB>> ]
+"39285" [label = <(IDENTIFIER,TIFFTAG_PREDICTOR,&lt;empty&gt;)<SUB>938</SUB>> ]
+"39286" [label = <(&lt;operator&gt;.assignment,sp-&gt;predictor = (uint16_t)va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39287" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;predictor)<SUB>939</SUB>> ]
+"39288" [label = <(IDENTIFIER,sp,sp-&gt;predictor = (uint16_t)va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39289" [label = <(FIELD_IDENTIFIER,predictor,predictor)<SUB>939</SUB>> ]
+"39290" [label = <(&lt;operator&gt;.cast,(uint16_t)va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39291" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>939</SUB>> ]
+"39292" [label = <(va_arg,va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39293" [label = <(IDENTIFIER,ap,va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39294" [label = <(IDENTIFIER,uint16_vap,va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39295" [label = <(TIFFSetFieldBit,TIFFSetFieldBit(tif, FIELD_PREDICTOR))<SUB>940</SUB>> ]
+"39296" [label = <(IDENTIFIER,tif,TIFFSetFieldBit(tif, FIELD_PREDICTOR))<SUB>940</SUB>> ]
+"39297" [label = <(FIELD_PREDICTOR,FIELD_PREDICTOR)<SUB>940</SUB>> ]
+"39298" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"39299" [label = <(&lt;operator&gt;.addition,FIELD_CODEC + 0)<SUB>940</SUB>> ]
+"39300" [label = <(IDENTIFIER,FIELD_CODEC,FIELD_CODEC + 0)<SUB>940</SUB>> ]
+"39301" [label = <(LITERAL,0,FIELD_CODEC + 0)<SUB>940</SUB>> ]
+"39302" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>941</SUB>> ]
+"39303" [label = <(JUMP_TARGET,default)<SUB>942</SUB>> ]
+"39304" [label = <(RETURN,return (*sp-&gt;vsetparent)(tif, tag, ap);,return (*sp-&gt;vsetparent)(tif, tag, ap);)<SUB>943</SUB>> ]
+"39305" [label = <(*sp-&gt;vsetparent,(*sp-&gt;vsetparent)(tif, tag, ap))<SUB>943</SUB>> ]
+"39306" [label = <(&lt;operator&gt;.indirection,*sp-&gt;vsetparent)<SUB>943</SUB>> ]
+"39307" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;vsetparent)<SUB>943</SUB>> ]
+"39308" [label = <(IDENTIFIER,sp,(*sp-&gt;vsetparent)(tif, tag, ap))<SUB>943</SUB>> ]
+"39309" [label = <(FIELD_IDENTIFIER,vsetparent,vsetparent)<SUB>943</SUB>> ]
+"39310" [label = <(IDENTIFIER,tif,(*sp-&gt;vsetparent)(tif, tag, ap))<SUB>943</SUB>> ]
+"39311" [label = <(IDENTIFIER,tag,(*sp-&gt;vsetparent)(tif, tag, ap))<SUB>943</SUB>> ]
+"39312" [label = <(IDENTIFIER,ap,(*sp-&gt;vsetparent)(tif, tag, ap))<SUB>943</SUB>> ]
+"39313" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>945</SUB>> ]
+"39314" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>945</SUB>> ]
+"39315" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>945</SUB>> ]
+"39316" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>945</SUB>> ]
+"39317" [label = <(IDENTIFIER,TIFF_DIRTYDIRECT,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>945</SUB>> ]
+"39318" [label = <(RETURN,return 1;,return 1;)<SUB>946</SUB>> ]
+"39319" [label = <(LITERAL,1,return 1;)<SUB>946</SUB>> ]
+"39320" [label = <(METHOD_RETURN,int)<SUB>929</SUB>> ]
+  "39255" -> "39256" 
+  "39255" -> "39257" 
+  "39255" -> "39258" 
+  "39255" -> "39259" 
+  "39255" -> "39320" 
+  "39259" -> "39260" 
+  "39259" -> "39261" 
+  "39259" -> "39271" 
+  "39259" -> "39275" 
+  "39259" -> "39281" 
+  "39259" -> "39313" 
+  "39259" -> "39318" 
+  "39261" -> "39262" 
+  "39261" -> "39263" 
+  "39263" -> "39264" 
+  "39263" -> "39265" 
+  "39265" -> "39266" 
+  "39266" -> "39267" 
+  "39266" -> "39268" 
+  "39268" -> "39269" 
+  "39268" -> "39270" 
+  "39271" -> "39272" 
+  "39272" -> "39273" 
+  "39272" -> "39274" 
+  "39275" -> "39276" 
+  "39276" -> "39277" 
+  "39276" -> "39280" 
+  "39277" -> "39278" 
+  "39277" -> "39279" 
+  "39281" -> "39282" 
+  "39281" -> "39283" 
+  "39283" -> "39284" 
+  "39283" -> "39285" 
+  "39283" -> "39286" 
+  "39283" -> "39295" 
+  "39283" -> "39302" 
+  "39283" -> "39303" 
+  "39283" -> "39304" 
+  "39286" -> "39287" 
+  "39286" -> "39290" 
+  "39287" -> "39288" 
+  "39287" -> "39289" 
+  "39290" -> "39291" 
+  "39290" -> "39292" 
+  "39292" -> "39293" 
+  "39292" -> "39294" 
+  "39295" -> "39296" 
+  "39295" -> "39297" 
+  "39297" -> "39298" 
+  "39298" -> "39299" 
+  "39299" -> "39300" 
+  "39299" -> "39301" 
+  "39304" -> "39305" 
+  "39305" -> "39306" 
+  "39305" -> "39310" 
+  "39305" -> "39311" 
+  "39305" -> "39312" 
+  "39306" -> "39307" 
+  "39307" -> "39308" 
+  "39307" -> "39309" 
+  "39313" -> "39314" 
+  "39313" -> "39317" 
+  "39314" -> "39315" 
+  "39314" -> "39316" 
+  "39318" -> "39319" 
+}

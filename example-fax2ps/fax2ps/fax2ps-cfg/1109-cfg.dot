@@ -1,0 +1,30 @@
+digraph "TIFFWriteDirectoryTagCheckedShort" {  
+"69961" [label = <(assert,assert(sizeof(uint16_t) == 2))<SUB>2228</SUB>> ]
+"69966" [label = <(&lt;operator&gt;.assignment,m = value)<SUB>2229</SUB>> ]
+"69979" [label = <(RETURN,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m));,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m));)<SUB>2232</SUB>> ]
+"69962" [label = <(&lt;operator&gt;.equals,sizeof(uint16_t) == 2)<SUB>2228</SUB>> ]
+"69970" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2230</SUB>> ]
+"69980" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SHORT, 1, 2, &amp;m))<SUB>2233</SUB>> ]
+"69963" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2228</SUB>> ]
+"69971" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2230</SUB>> ]
+"69976" [label = <(TIFFSwabShort,TIFFSwabShort(&amp;m))<SUB>2231</SUB>> ]
+"69988" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2233</SUB>> ]
+"69973" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2230</SUB>> ]
+"69977" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2231</SUB>> ]
+"69953" [label = <(METHOD,TIFFWriteDirectoryTagCheckedShort)<SUB>2223</SUB>> ]
+"69990" [label = <(METHOD_RETURN,int)<SUB>2223</SUB>> ]
+  "69961" -> "69966" 
+  "69966" -> "69973" 
+  "69979" -> "69990" 
+  "69962" -> "69961" 
+  "69970" -> "69977" 
+  "69970" -> "69988" 
+  "69980" -> "69979" 
+  "69963" -> "69962" 
+  "69971" -> "69970" 
+  "69976" -> "69988" 
+  "69988" -> "69980" 
+  "69973" -> "69971" 
+  "69977" -> "69976" 
+  "69953" -> "69963" 
+}

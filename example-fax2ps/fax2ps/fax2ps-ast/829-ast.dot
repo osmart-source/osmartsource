@@ -1,0 +1,53 @@
+digraph "swabHorAcc32" {  
+"37003" [label = <(METHOD,swabHorAcc32)<SUB>438</SUB>> ]
+"37004" [label = <(PARAM,TIFF *tif)<SUB>438</SUB>> ]
+"37005" [label = <(PARAM,uint8_t *cp0)<SUB>438</SUB>> ]
+"37006" [label = <(PARAM,tmsize_t cc)<SUB>438</SUB>> ]
+"37007" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>439</SUB>> ]
+"37008" [label = <(LOCAL,uint32_t* wp: uint32_t)<SUB>440</SUB>> ]
+"37009" [label = <(&lt;operator&gt;.assignment,*wp = (uint32_t *)cp0)<SUB>440</SUB>> ]
+"37010" [label = <(IDENTIFIER,wp,*wp = (uint32_t *)cp0)<SUB>440</SUB>> ]
+"37011" [label = <(&lt;operator&gt;.cast,(uint32_t *)cp0)<SUB>440</SUB>> ]
+"37012" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>440</SUB>> ]
+"37013" [label = <(IDENTIFIER,cp0,(uint32_t *)cp0)<SUB>440</SUB>> ]
+"37014" [label = <(LOCAL,tmsize_t wc: tmsize_t)<SUB>441</SUB>> ]
+"37015" [label = <(&lt;operator&gt;.assignment,wc = cc / 4)<SUB>441</SUB>> ]
+"37016" [label = <(IDENTIFIER,wc,wc = cc / 4)<SUB>441</SUB>> ]
+"37017" [label = <(&lt;operator&gt;.division,cc / 4)<SUB>441</SUB>> ]
+"37018" [label = <(IDENTIFIER,cc,cc / 4)<SUB>441</SUB>> ]
+"37019" [label = <(LITERAL,4,cc / 4)<SUB>441</SUB>> ]
+"37020" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(wp, wc))<SUB>443</SUB>> ]
+"37021" [label = <(IDENTIFIER,wp,TIFFSwabArrayOfLong(wp, wc))<SUB>443</SUB>> ]
+"37022" [label = <(IDENTIFIER,wc,TIFFSwabArrayOfLong(wp, wc))<SUB>443</SUB>> ]
+"37023" [label = <(RETURN,return horAcc32(tif, cp0, cc);,return horAcc32(tif, cp0, cc);)<SUB>444</SUB>> ]
+"37024" [label = <(horAcc32,horAcc32(tif, cp0, cc))<SUB>444</SUB>> ]
+"37025" [label = <(IDENTIFIER,tif,horAcc32(tif, cp0, cc))<SUB>444</SUB>> ]
+"37026" [label = <(IDENTIFIER,cp0,horAcc32(tif, cp0, cc))<SUB>444</SUB>> ]
+"37027" [label = <(IDENTIFIER,cc,horAcc32(tif, cp0, cc))<SUB>444</SUB>> ]
+"37028" [label = <(METHOD_RETURN,int)<SUB>438</SUB>> ]
+  "37003" -> "37004" 
+  "37003" -> "37005" 
+  "37003" -> "37006" 
+  "37003" -> "37007" 
+  "37003" -> "37028" 
+  "37007" -> "37008" 
+  "37007" -> "37009" 
+  "37007" -> "37014" 
+  "37007" -> "37015" 
+  "37007" -> "37020" 
+  "37007" -> "37023" 
+  "37009" -> "37010" 
+  "37009" -> "37011" 
+  "37011" -> "37012" 
+  "37011" -> "37013" 
+  "37015" -> "37016" 
+  "37015" -> "37017" 
+  "37017" -> "37018" 
+  "37017" -> "37019" 
+  "37020" -> "37021" 
+  "37020" -> "37022" 
+  "37023" -> "37024" 
+  "37024" -> "37025" 
+  "37024" -> "37026" 
+  "37024" -> "37027" 
+}

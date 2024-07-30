@@ -1,0 +1,101 @@
+digraph "TIFFNumberOfStrips" {  
+"10982" [label = <(METHOD,TIFFNumberOfStrips)<SUB>59</SUB>> ]
+"10983" [label = <(PARAM,TIFF *tif)<SUB>59</SUB>> ]
+"10984" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>60</SUB>> ]
+"10985" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>61</SUB>> ]
+"10986" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>61</SUB>> ]
+"10987" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>61</SUB>> ]
+"10988" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>61</SUB>> ]
+"10989" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>61</SUB>> ]
+"10990" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>61</SUB>> ]
+"10991" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>61</SUB>> ]
+"10992" [label = <(LOCAL,uint32_t nstrips: uint32_t)<SUB>62</SUB>> ]
+"10993" [label = <(&lt;operator&gt;.assignment,nstrips = (td-&gt;td_rowsperstrip == (uint32_t)-1\012                   ? 1\012                   : TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip)))<SUB>64</SUB>> ]
+"10994" [label = <(IDENTIFIER,nstrips,nstrips = (td-&gt;td_rowsperstrip == (uint32_t)-1\012                   ? 1\012                   : TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip)))<SUB>64</SUB>> ]
+"10995" [label = <(&lt;operator&gt;.conditional,td-&gt;td_rowsperstrip == (uint32_t)-1\012                   ? 1\012                   : TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>64</SUB>> ]
+"10996" [label = <(&lt;operator&gt;.equals,td-&gt;td_rowsperstrip == (uint32_t)-1)<SUB>64</SUB>> ]
+"10997" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>64</SUB>> ]
+"10998" [label = <(IDENTIFIER,td,td-&gt;td_rowsperstrip == (uint32_t)-1)<SUB>64</SUB>> ]
+"10999" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>64</SUB>> ]
+"11000" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>64</SUB>> ]
+"11001" [label = <(IDENTIFIER,uint32_t,(uint32_t)-1)<SUB>64</SUB>> ]
+"11002" [label = <(LITERAL,1,(uint32_t)-1)<SUB>64</SUB>> ]
+"11003" [label = <(LITERAL,1,td-&gt;td_rowsperstrip == (uint32_t)-1\012                   ? 1\012                   : TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>65</SUB>> ]
+"11004" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>66</SUB>> ]
+"11005" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>66</SUB>> ]
+"11006" [label = <(IDENTIFIER,td,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>66</SUB>> ]
+"11007" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>66</SUB>> ]
+"11008" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>66</SUB>> ]
+"11009" [label = <(IDENTIFIER,td,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>66</SUB>> ]
+"11010" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>66</SUB>> ]
+"11011" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE),if (td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE))<SUB>67</SUB>> ]
+"11012" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>67</SUB>> ]
+"11013" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>67</SUB>> ]
+"11014" [label = <(IDENTIFIER,td,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>67</SUB>> ]
+"11015" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>67</SUB>> ]
+"11016" [label = <(IDENTIFIER,PLANARCONFIG_SEPARATE,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>67</SUB>> ]
+"11017" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>68</SUB>> ]
+"11018" [label = <(&lt;operator&gt;.assignment,nstrips =\012            _TIFFMultiply32(tif, nstrips, (uint32_t)td-&gt;td_samplesperpixel,\012                            &quot;TIFFNumberOfStrips&quot;))<SUB>68</SUB>> ]
+"11019" [label = <(IDENTIFIER,nstrips,nstrips =\012            _TIFFMultiply32(tif, nstrips, (uint32_t)td-&gt;td_samplesperpixel,\012                            &quot;TIFFNumberOfStrips&quot;))<SUB>68</SUB>> ]
+"11020" [label = <(_TIFFMultiply32,_TIFFMultiply32(tif, nstrips, (uint32_t)td-&gt;td_samplesperpixel,\012                            &quot;TIFFNumberOfStrips&quot;))<SUB>69</SUB>> ]
+"11021" [label = <(IDENTIFIER,tif,_TIFFMultiply32(tif, nstrips, (uint32_t)td-&gt;td_samplesperpixel,\012                            &quot;TIFFNumberOfStrips&quot;))<SUB>69</SUB>> ]
+"11022" [label = <(IDENTIFIER,nstrips,_TIFFMultiply32(tif, nstrips, (uint32_t)td-&gt;td_samplesperpixel,\012                            &quot;TIFFNumberOfStrips&quot;))<SUB>69</SUB>> ]
+"11023" [label = <(&lt;operator&gt;.cast,(uint32_t)td-&gt;td_samplesperpixel)<SUB>69</SUB>> ]
+"11024" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>69</SUB>> ]
+"11025" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>69</SUB>> ]
+"11026" [label = <(IDENTIFIER,td,(uint32_t)td-&gt;td_samplesperpixel)<SUB>69</SUB>> ]
+"11027" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>69</SUB>> ]
+"11028" [label = <(LITERAL,&quot;TIFFNumberOfStrips&quot;,_TIFFMultiply32(tif, nstrips, (uint32_t)td-&gt;td_samplesperpixel,\012                            &quot;TIFFNumberOfStrips&quot;))<SUB>70</SUB>> ]
+"11029" [label = <(RETURN,return (nstrips);,return (nstrips);)<SUB>71</SUB>> ]
+"11030" [label = <(IDENTIFIER,nstrips,return (nstrips);)<SUB>71</SUB>> ]
+"11031" [label = <(METHOD_RETURN,uint32_t)<SUB>59</SUB>> ]
+  "10982" -> "10983" 
+  "10982" -> "10984" 
+  "10982" -> "11031" 
+  "10984" -> "10985" 
+  "10984" -> "10986" 
+  "10984" -> "10992" 
+  "10984" -> "10993" 
+  "10984" -> "11011" 
+  "10984" -> "11029" 
+  "10986" -> "10987" 
+  "10986" -> "10988" 
+  "10988" -> "10989" 
+  "10989" -> "10990" 
+  "10989" -> "10991" 
+  "10993" -> "10994" 
+  "10993" -> "10995" 
+  "10995" -> "10996" 
+  "10995" -> "11003" 
+  "10995" -> "11004" 
+  "10996" -> "10997" 
+  "10996" -> "11000" 
+  "10997" -> "10998" 
+  "10997" -> "10999" 
+  "11000" -> "11001" 
+  "11000" -> "11002" 
+  "11004" -> "11005" 
+  "11004" -> "11008" 
+  "11005" -> "11006" 
+  "11005" -> "11007" 
+  "11008" -> "11009" 
+  "11008" -> "11010" 
+  "11011" -> "11012" 
+  "11011" -> "11017" 
+  "11012" -> "11013" 
+  "11012" -> "11016" 
+  "11013" -> "11014" 
+  "11013" -> "11015" 
+  "11017" -> "11018" 
+  "11018" -> "11019" 
+  "11018" -> "11020" 
+  "11020" -> "11021" 
+  "11020" -> "11022" 
+  "11020" -> "11023" 
+  "11020" -> "11028" 
+  "11023" -> "11024" 
+  "11023" -> "11025" 
+  "11025" -> "11026" 
+  "11025" -> "11027" 
+  "11029" -> "11030" 
+}

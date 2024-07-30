@@ -1,0 +1,34 @@
+digraph "TIFFWriteDirectoryTagCheckedFloatArray" {  
+"71496" [label = <(assert,assert(count &lt; 0x40000000))<SUB>2800</SUB>> ]
+"71500" [label = <(assert,assert(sizeof(float) == 4))<SUB>2801</SUB>> ]
+"71505" [label = <(TIFFCvtNativeToIEEEFloat,TIFFCvtNativeToIEEEFloat(tif, count, &amp;value))<SUB>2802</SUB>> ]
+"71520" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_FLOAT, count,\012                                      count * 4, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_FLOAT, count,\012                                      count * 4, value));)<SUB>2805</SUB>> ]
+"71497" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x40000000)<SUB>2800</SUB>> ]
+"71501" [label = <(&lt;operator&gt;.equals,sizeof(float) == 4)<SUB>2801</SUB>> ]
+"71508" [label = <(&lt;operator&gt;.addressOf,&amp;value)<SUB>2802</SUB>> ]
+"71511" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2803</SUB>> ]
+"71521" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_FLOAT, count,\012                                      count * 4, value))<SUB>2805</SUB>> ]
+"71502" [label = <(&lt;operator&gt;.sizeOf,sizeof(float))<SUB>2801</SUB>> ]
+"71512" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2803</SUB>> ]
+"71517" [label = <(TIFFSwabArrayOfFloat,TIFFSwabArrayOfFloat(value, count))<SUB>2804</SUB>> ]
+"71528" [label = <(&lt;operator&gt;.multiplication,count * 4)<SUB>2806</SUB>> ]
+"71514" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2803</SUB>> ]
+"71488" [label = <(METHOD,TIFFWriteDirectoryTagCheckedFloatArray)<SUB>2795</SUB>> ]
+"71532" [label = <(METHOD_RETURN,int)<SUB>2795</SUB>> ]
+  "71496" -> "71502" 
+  "71500" -> "71508" 
+  "71505" -> "71514" 
+  "71520" -> "71532" 
+  "71497" -> "71496" 
+  "71501" -> "71500" 
+  "71508" -> "71505" 
+  "71511" -> "71517" 
+  "71511" -> "71528" 
+  "71521" -> "71520" 
+  "71502" -> "71501" 
+  "71512" -> "71511" 
+  "71517" -> "71528" 
+  "71528" -> "71521" 
+  "71514" -> "71512" 
+  "71488" -> "71497" 
+}

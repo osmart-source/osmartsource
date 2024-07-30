@@ -1,0 +1,417 @@
+digraph "TIFFScanlineSize64" {  
+"11443" [label = <(METHOD,TIFFScanlineSize64)<SUB>245</SUB>> ]
+"11444" [label = <(PARAM,TIFF *tif)<SUB>245</SUB>> ]
+"11445" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>246</SUB>> ]
+"11446" [label = <(LOCAL,constchar[] module: char[])<SUB>247</SUB>> ]
+"11447" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFScanlineSize64&quot;)<SUB>247</SUB>> ]
+"11448" [label = <(IDENTIFIER,module,module[] = &quot;TIFFScanlineSize64&quot;)<SUB>247</SUB>> ]
+"11449" [label = <(LITERAL,&quot;TIFFScanlineSize64&quot;,module[] = &quot;TIFFScanlineSize64&quot;)<SUB>247</SUB>> ]
+"11450" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>248</SUB>> ]
+"11451" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>248</SUB>> ]
+"11452" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>248</SUB>> ]
+"11453" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>248</SUB>> ]
+"11454" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>248</SUB>> ]
+"11455" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>248</SUB>> ]
+"11456" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>248</SUB>> ]
+"11457" [label = <(LOCAL,uint64_t scanline_size: uint64_t)<SUB>249</SUB>> ]
+"11458" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG),if (td-&gt;td_planarconfig == PLANARCONFIG_CONTIG))<SUB>250</SUB>> ]
+"11459" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>250</SUB>> ]
+"11460" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>250</SUB>> ]
+"11461" [label = <(IDENTIFIER,td,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>250</SUB>> ]
+"11462" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>250</SUB>> ]
+"11463" [label = <(IDENTIFIER,PLANARCONFIG_CONTIG,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>250</SUB>> ]
+"11464" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>251</SUB>> ]
+"11465" [label = <(CONTROL_STRUCTURE,if ((td-&gt;td_photometric == PHOTOMETRIC_YCBCR) &amp;&amp;\012            (td-&gt;td_samplesperpixel == 3) &amp;&amp; (!isUpSampled(tif))),if ((td-&gt;td_photometric == PHOTOMETRIC_YCBCR) &amp;&amp;\012            (td-&gt;td_samplesperpixel == 3) &amp;&amp; (!isUpSampled(tif))))<SUB>252</SUB>> ]
+"11466" [label = <(&lt;operator&gt;.logicalAnd,(td-&gt;td_photometric == PHOTOMETRIC_YCBCR) &amp;&amp;\012            (td-&gt;td_samplesperpixel == 3) &amp;&amp; (!isUpSampled(tif)))<SUB>252</SUB>> ]
+"11467" [label = <(&lt;operator&gt;.logicalAnd,(td-&gt;td_photometric == PHOTOMETRIC_YCBCR) &amp;&amp;\012            (td-&gt;td_samplesperpixel == 3))<SUB>252</SUB>> ]
+"11468" [label = <(&lt;operator&gt;.equals,td-&gt;td_photometric == PHOTOMETRIC_YCBCR)<SUB>252</SUB>> ]
+"11469" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_photometric)<SUB>252</SUB>> ]
+"11470" [label = <(IDENTIFIER,td,td-&gt;td_photometric == PHOTOMETRIC_YCBCR)<SUB>252</SUB>> ]
+"11471" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>252</SUB>> ]
+"11472" [label = <(IDENTIFIER,PHOTOMETRIC_YCBCR,td-&gt;td_photometric == PHOTOMETRIC_YCBCR)<SUB>252</SUB>> ]
+"11473" [label = <(&lt;operator&gt;.equals,td-&gt;td_samplesperpixel == 3)<SUB>253</SUB>> ]
+"11474" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>253</SUB>> ]
+"11475" [label = <(IDENTIFIER,td,td-&gt;td_samplesperpixel == 3)<SUB>253</SUB>> ]
+"11476" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>253</SUB>> ]
+"11477" [label = <(LITERAL,3,td-&gt;td_samplesperpixel == 3)<SUB>253</SUB>> ]
+"11478" [label = <(&lt;operator&gt;.logicalNot,!isUpSampled(tif))<SUB>253</SUB>> ]
+"11479" [label = <(isUpSampled,isUpSampled(tif))<SUB>253</SUB>> ]
+"11480" [label = <(IDENTIFIER,tif,isUpSampled(tif))<SUB>253</SUB>> ]
+"11481" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>254</SUB>> ]
+"11482" [label = <(LOCAL,uint16_t[2] ycbcrsubsampling: uint16_t[2])<SUB>255</SUB>> ]
+"11483" [label = <(LOCAL,uint16_t samplingblock_samples: uint16_t)<SUB>256</SUB>> ]
+"11484" [label = <(LOCAL,uint32_t samplingblocks_hor: uint32_t)<SUB>257</SUB>> ]
+"11485" [label = <(LOCAL,uint64_t samplingrow_samples: uint64_t)<SUB>258</SUB>> ]
+"11486" [label = <(LOCAL,uint64_t samplingrow_size: uint64_t)<SUB>259</SUB>> ]
+"11487" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_samplesperpixel != 3),if (td-&gt;td_samplesperpixel != 3))<SUB>260</SUB>> ]
+"11488" [label = <(&lt;operator&gt;.notEquals,td-&gt;td_samplesperpixel != 3)<SUB>260</SUB>> ]
+"11489" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>260</SUB>> ]
+"11490" [label = <(IDENTIFIER,td,td-&gt;td_samplesperpixel != 3)<SUB>260</SUB>> ]
+"11491" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>260</SUB>> ]
+"11492" [label = <(LITERAL,3,td-&gt;td_samplesperpixel != 3)<SUB>260</SUB>> ]
+"11493" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>261</SUB>> ]
+"11494" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Invalid td_samplesperpixel value&quot;))<SUB>262</SUB>> ]
+"11495" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Invalid td_samplesperpixel value&quot;))<SUB>262</SUB>> ]
+"11496" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Invalid td_samplesperpixel value&quot;))<SUB>262</SUB>> ]
+"11497" [label = <(LITERAL,&quot;Invalid td_samplesperpixel value&quot;,TIFFErrorExtR(tif, module, &quot;Invalid td_samplesperpixel value&quot;))<SUB>262</SUB>> ]
+"11498" [label = <(RETURN,return 0;,return 0;)<SUB>263</SUB>> ]
+"11499" [label = <(LITERAL,0,return 0;)<SUB>263</SUB>> ]
+"11500" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,\012                                  ycbcrsubsampling + 0, ycbcrsubsampling + 1))<SUB>265</SUB>> ]
+"11501" [label = <(IDENTIFIER,tif,TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,\012                                  ycbcrsubsampling + 0, ycbcrsubsampling + 1))<SUB>265</SUB>> ]
+"11502" [label = <(IDENTIFIER,TIFFTAG_YCBCRSUBSAMPLING,TIFFGetFieldDefaulted(tif, TIFFTAG_YCBCRSUBSAMPLING,\012                                  ycbcrsubsampling + 0, ycbcrsubsampling + 1))<SUB>265</SUB>> ]
+"11503" [label = <(&lt;operator&gt;.addition,ycbcrsubsampling + 0)<SUB>266</SUB>> ]
+"11504" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling + 0)<SUB>266</SUB>> ]
+"11505" [label = <(LITERAL,0,ycbcrsubsampling + 0)<SUB>266</SUB>> ]
+"11506" [label = <(&lt;operator&gt;.addition,ycbcrsubsampling + 1)<SUB>266</SUB>> ]
+"11507" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling + 1)<SUB>266</SUB>> ]
+"11508" [label = <(LITERAL,1,ycbcrsubsampling + 1)<SUB>266</SUB>> ]
+"11509" [label = <(CONTROL_STRUCTURE,if (((ycbcrsubsampling[0] != 1) &amp;&amp; (ycbcrsubsampling[0] != 2) &amp;&amp;\012                 (ycbcrsubsampling[0] != 4)) ||\012                ((ycbcrsubsampling[1] != 1) &amp;&amp; (ycbcrsubsampling[1] != 2) &amp;&amp;\012                 (ycbcrsubsampling[1] != 4))),if (((ycbcrsubsampling[0] != 1) &amp;&amp; (ycbcrsubsampling[0] != 2) &amp;&amp;\012                 (ycbcrsubsampling[0] != 4)) ||\012                ((ycbcrsubsampling[1] != 1) &amp;&amp; (ycbcrsubsampling[1] != 2) &amp;&amp;\012                 (ycbcrsubsampling[1] != 4))))<SUB>267</SUB>> ]
+"11510" [label = <(&lt;operator&gt;.logicalOr,((ycbcrsubsampling[0] != 1) &amp;&amp; (ycbcrsubsampling[0] != 2) &amp;&amp;\012                 (ycbcrsubsampling[0] != 4)) ||\012                ((ycbcrsubsampling[1] != 1) &amp;&amp; (ycbcrsubsampling[1] != 2) &amp;&amp;\012                 (ycbcrsubsampling[1] != 4)))<SUB>267</SUB>> ]
+"11511" [label = <(&lt;operator&gt;.logicalAnd,(ycbcrsubsampling[0] != 1) &amp;&amp; (ycbcrsubsampling[0] != 2) &amp;&amp;\012                 (ycbcrsubsampling[0] != 4))<SUB>267</SUB>> ]
+"11512" [label = <(&lt;operator&gt;.logicalAnd,(ycbcrsubsampling[0] != 1) &amp;&amp; (ycbcrsubsampling[0] != 2))<SUB>267</SUB>> ]
+"11513" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[0] != 1)<SUB>267</SUB>> ]
+"11514" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>267</SUB>> ]
+"11515" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[0] != 1)<SUB>267</SUB>> ]
+"11516" [label = <(LITERAL,0,ycbcrsubsampling[0] != 1)<SUB>267</SUB>> ]
+"11517" [label = <(LITERAL,1,ycbcrsubsampling[0] != 1)<SUB>267</SUB>> ]
+"11518" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[0] != 2)<SUB>267</SUB>> ]
+"11519" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>267</SUB>> ]
+"11520" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[0] != 2)<SUB>267</SUB>> ]
+"11521" [label = <(LITERAL,0,ycbcrsubsampling[0] != 2)<SUB>267</SUB>> ]
+"11522" [label = <(LITERAL,2,ycbcrsubsampling[0] != 2)<SUB>267</SUB>> ]
+"11523" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[0] != 4)<SUB>268</SUB>> ]
+"11524" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>268</SUB>> ]
+"11525" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[0] != 4)<SUB>268</SUB>> ]
+"11526" [label = <(LITERAL,0,ycbcrsubsampling[0] != 4)<SUB>268</SUB>> ]
+"11527" [label = <(LITERAL,4,ycbcrsubsampling[0] != 4)<SUB>268</SUB>> ]
+"11528" [label = <(&lt;operator&gt;.logicalAnd,(ycbcrsubsampling[1] != 1) &amp;&amp; (ycbcrsubsampling[1] != 2) &amp;&amp;\012                 (ycbcrsubsampling[1] != 4))<SUB>269</SUB>> ]
+"11529" [label = <(&lt;operator&gt;.logicalAnd,(ycbcrsubsampling[1] != 1) &amp;&amp; (ycbcrsubsampling[1] != 2))<SUB>269</SUB>> ]
+"11530" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[1] != 1)<SUB>269</SUB>> ]
+"11531" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>269</SUB>> ]
+"11532" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[1] != 1)<SUB>269</SUB>> ]
+"11533" [label = <(LITERAL,1,ycbcrsubsampling[1] != 1)<SUB>269</SUB>> ]
+"11534" [label = <(LITERAL,1,ycbcrsubsampling[1] != 1)<SUB>269</SUB>> ]
+"11535" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[1] != 2)<SUB>269</SUB>> ]
+"11536" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>269</SUB>> ]
+"11537" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[1] != 2)<SUB>269</SUB>> ]
+"11538" [label = <(LITERAL,1,ycbcrsubsampling[1] != 2)<SUB>269</SUB>> ]
+"11539" [label = <(LITERAL,2,ycbcrsubsampling[1] != 2)<SUB>269</SUB>> ]
+"11540" [label = <(&lt;operator&gt;.notEquals,ycbcrsubsampling[1] != 4)<SUB>270</SUB>> ]
+"11541" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>270</SUB>> ]
+"11542" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[1] != 4)<SUB>270</SUB>> ]
+"11543" [label = <(LITERAL,1,ycbcrsubsampling[1] != 4)<SUB>270</SUB>> ]
+"11544" [label = <(LITERAL,4,ycbcrsubsampling[1] != 4)<SUB>270</SUB>> ]
+"11545" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>271</SUB>> ]
+"11546" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Invalid YCbCr subsampling&quot;))<SUB>272</SUB>> ]
+"11547" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Invalid YCbCr subsampling&quot;))<SUB>272</SUB>> ]
+"11548" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Invalid YCbCr subsampling&quot;))<SUB>272</SUB>> ]
+"11549" [label = <(LITERAL,&quot;Invalid YCbCr subsampling&quot;,TIFFErrorExtR(tif, module, &quot;Invalid YCbCr subsampling&quot;))<SUB>272</SUB>> ]
+"11550" [label = <(RETURN,return 0;,return 0;)<SUB>273</SUB>> ]
+"11551" [label = <(LITERAL,0,return 0;)<SUB>273</SUB>> ]
+"11552" [label = <(&lt;operator&gt;.assignment,samplingblock_samples =\012                ycbcrsubsampling[0] * ycbcrsubsampling[1] + 2)<SUB>275</SUB>> ]
+"11553" [label = <(IDENTIFIER,samplingblock_samples,samplingblock_samples =\012                ycbcrsubsampling[0] * ycbcrsubsampling[1] + 2)<SUB>275</SUB>> ]
+"11554" [label = <(&lt;operator&gt;.addition,ycbcrsubsampling[0] * ycbcrsubsampling[1] + 2)<SUB>276</SUB>> ]
+"11555" [label = <(&lt;operator&gt;.multiplication,ycbcrsubsampling[0] * ycbcrsubsampling[1])<SUB>276</SUB>> ]
+"11556" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>276</SUB>> ]
+"11557" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[0] * ycbcrsubsampling[1])<SUB>276</SUB>> ]
+"11558" [label = <(LITERAL,0,ycbcrsubsampling[0] * ycbcrsubsampling[1])<SUB>276</SUB>> ]
+"11559" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>276</SUB>> ]
+"11560" [label = <(IDENTIFIER,ycbcrsubsampling,ycbcrsubsampling[0] * ycbcrsubsampling[1])<SUB>276</SUB>> ]
+"11561" [label = <(LITERAL,1,ycbcrsubsampling[0] * ycbcrsubsampling[1])<SUB>276</SUB>> ]
+"11562" [label = <(LITERAL,2,ycbcrsubsampling[0] * ycbcrsubsampling[1] + 2)<SUB>276</SUB>> ]
+"11563" [label = <(&lt;operator&gt;.assignment,samplingblocks_hor =\012                TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>277</SUB>> ]
+"11564" [label = <(IDENTIFIER,samplingblocks_hor,samplingblocks_hor =\012                TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>277</SUB>> ]
+"11565" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>278</SUB>> ]
+"11566" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>278</SUB>> ]
+"11567" [label = <(IDENTIFIER,td,TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>278</SUB>> ]
+"11568" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>278</SUB>> ]
+"11569" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[0])<SUB>278</SUB>> ]
+"11570" [label = <(IDENTIFIER,ycbcrsubsampling,TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>278</SUB>> ]
+"11571" [label = <(LITERAL,0,TIFFhowmany_32(td-&gt;td_imagewidth, ycbcrsubsampling[0]))<SUB>278</SUB>> ]
+"11572" [label = <(&lt;operator&gt;.assignment,samplingrow_samples = _TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>279</SUB>> ]
+"11573" [label = <(IDENTIFIER,samplingrow_samples,samplingrow_samples = _TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>279</SUB>> ]
+"11574" [label = <(_TIFFMultiply64,_TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>279</SUB>> ]
+"11575" [label = <(IDENTIFIER,tif,_TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>280</SUB>> ]
+"11576" [label = <(IDENTIFIER,samplingblocks_hor,_TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>280</SUB>> ]
+"11577" [label = <(IDENTIFIER,samplingblock_samples,_TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>280</SUB>> ]
+"11578" [label = <(IDENTIFIER,module,_TIFFMultiply64(\012                tif, samplingblocks_hor, samplingblock_samples, module))<SUB>280</SUB>> ]
+"11579" [label = <(&lt;operator&gt;.assignment,samplingrow_size =\012                TIFFhowmany_64(_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>281</SUB>> ]
+"11580" [label = <(IDENTIFIER,samplingrow_size,samplingrow_size =\012                TIFFhowmany_64(_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>281</SUB>> ]
+"11581" [label = <(TIFFhowmany_64,TIFFhowmany_64(_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>282</SUB>> ]
+"11582" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>282</SUB>> ]
+"11583" [label = <(IDENTIFIER,tif,_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>282</SUB>> ]
+"11584" [label = <(IDENTIFIER,samplingrow_samples,_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>282</SUB>> ]
+"11585" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>283</SUB>> ]
+"11586" [label = <(IDENTIFIER,td,_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>283</SUB>> ]
+"11587" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>283</SUB>> ]
+"11588" [label = <(IDENTIFIER,module,_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>283</SUB>> ]
+"11589" [label = <(LITERAL,8,TIFFhowmany_64(_TIFFMultiply64(tif, samplingrow_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>284</SUB>> ]
+"11590" [label = <(&lt;operator&gt;.assignment,scanline_size = (samplingrow_size / ycbcrsubsampling[1]))<SUB>285</SUB>> ]
+"11591" [label = <(IDENTIFIER,scanline_size,scanline_size = (samplingrow_size / ycbcrsubsampling[1]))<SUB>285</SUB>> ]
+"11592" [label = <(&lt;operator&gt;.division,samplingrow_size / ycbcrsubsampling[1])<SUB>285</SUB>> ]
+"11593" [label = <(IDENTIFIER,samplingrow_size,samplingrow_size / ycbcrsubsampling[1])<SUB>285</SUB>> ]
+"11594" [label = <(&lt;operator&gt;.indirectIndexAccess,ycbcrsubsampling[1])<SUB>285</SUB>> ]
+"11595" [label = <(IDENTIFIER,ycbcrsubsampling,samplingrow_size / ycbcrsubsampling[1])<SUB>285</SUB>> ]
+"11596" [label = <(LITERAL,1,samplingrow_size / ycbcrsubsampling[1])<SUB>285</SUB>> ]
+"11597" [label = <(CONTROL_STRUCTURE,else,else)<SUB>288</SUB>> ]
+"11598" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>288</SUB>> ]
+"11599" [label = <(LOCAL,uint64_t scanline_samples: uint64_t)<SUB>289</SUB>> ]
+"11600" [label = <(&lt;operator&gt;.assignment,scanline_samples = _TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>290</SUB>> ]
+"11601" [label = <(IDENTIFIER,scanline_samples,scanline_samples = _TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>290</SUB>> ]
+"11602" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>290</SUB>> ]
+"11603" [label = <(IDENTIFIER,tif,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>290</SUB>> ]
+"11604" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>290</SUB>> ]
+"11605" [label = <(IDENTIFIER,td,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>290</SUB>> ]
+"11606" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>290</SUB>> ]
+"11607" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>291</SUB>> ]
+"11608" [label = <(IDENTIFIER,td,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>291</SUB>> ]
+"11609" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>291</SUB>> ]
+"11610" [label = <(IDENTIFIER,module,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                               td-&gt;td_samplesperpixel, module))<SUB>291</SUB>> ]
+"11611" [label = <(&lt;operator&gt;.assignment,scanline_size =\012                TIFFhowmany_64(_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>292</SUB>> ]
+"11612" [label = <(IDENTIFIER,scanline_size,scanline_size =\012                TIFFhowmany_64(_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>292</SUB>> ]
+"11613" [label = <(TIFFhowmany_64,TIFFhowmany_64(_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>293</SUB>> ]
+"11614" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>293</SUB>> ]
+"11615" [label = <(IDENTIFIER,tif,_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>293</SUB>> ]
+"11616" [label = <(IDENTIFIER,scanline_samples,_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>293</SUB>> ]
+"11617" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>294</SUB>> ]
+"11618" [label = <(IDENTIFIER,td,_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>294</SUB>> ]
+"11619" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>294</SUB>> ]
+"11620" [label = <(IDENTIFIER,module,_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module))<SUB>294</SUB>> ]
+"11621" [label = <(LITERAL,8,TIFFhowmany_64(_TIFFMultiply64(tif, scanline_samples,\012                                               td-&gt;td_bitspersample, module),\012                               8))<SUB>295</SUB>> ]
+"11622" [label = <(CONTROL_STRUCTURE,else,else)<SUB>299</SUB>> ]
+"11623" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>299</SUB>> ]
+"11624" [label = <(&lt;operator&gt;.assignment,scanline_size =\012            TIFFhowmany_64(_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module),\012                           8))<SUB>300</SUB>> ]
+"11625" [label = <(IDENTIFIER,scanline_size,scanline_size =\012            TIFFhowmany_64(_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module),\012                           8))<SUB>300</SUB>> ]
+"11626" [label = <(TIFFhowmany_64,TIFFhowmany_64(_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module),\012                           8))<SUB>301</SUB>> ]
+"11627" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module))<SUB>301</SUB>> ]
+"11628" [label = <(IDENTIFIER,tif,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module))<SUB>301</SUB>> ]
+"11629" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>301</SUB>> ]
+"11630" [label = <(IDENTIFIER,td,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module))<SUB>301</SUB>> ]
+"11631" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>301</SUB>> ]
+"11632" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>302</SUB>> ]
+"11633" [label = <(IDENTIFIER,td,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module))<SUB>302</SUB>> ]
+"11634" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>302</SUB>> ]
+"11635" [label = <(IDENTIFIER,module,_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module))<SUB>302</SUB>> ]
+"11636" [label = <(LITERAL,8,TIFFhowmany_64(_TIFFMultiply64(tif, td-&gt;td_imagewidth,\012                                           td-&gt;td_bitspersample, module),\012                           8))<SUB>303</SUB>> ]
+"11637" [label = <(CONTROL_STRUCTURE,if (scanline_size == 0),if (scanline_size == 0))<SUB>305</SUB>> ]
+"11638" [label = <(&lt;operator&gt;.equals,scanline_size == 0)<SUB>305</SUB>> ]
+"11639" [label = <(IDENTIFIER,scanline_size,scanline_size == 0)<SUB>305</SUB>> ]
+"11640" [label = <(LITERAL,0,scanline_size == 0)<SUB>305</SUB>> ]
+"11641" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>306</SUB>> ]
+"11642" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Computed scanline size is zero&quot;))<SUB>307</SUB>> ]
+"11643" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Computed scanline size is zero&quot;))<SUB>307</SUB>> ]
+"11644" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Computed scanline size is zero&quot;))<SUB>307</SUB>> ]
+"11645" [label = <(LITERAL,&quot;Computed scanline size is zero&quot;,TIFFErrorExtR(tif, module, &quot;Computed scanline size is zero&quot;))<SUB>307</SUB>> ]
+"11646" [label = <(RETURN,return 0;,return 0;)<SUB>308</SUB>> ]
+"11647" [label = <(LITERAL,0,return 0;)<SUB>308</SUB>> ]
+"11648" [label = <(RETURN,return (scanline_size);,return (scanline_size);)<SUB>310</SUB>> ]
+"11649" [label = <(IDENTIFIER,scanline_size,return (scanline_size);)<SUB>310</SUB>> ]
+"11650" [label = <(METHOD_RETURN,uint64_t)<SUB>245</SUB>> ]
+  "11443" -> "11444" 
+  "11443" -> "11445" 
+  "11443" -> "11650" 
+  "11445" -> "11446" 
+  "11445" -> "11447" 
+  "11445" -> "11450" 
+  "11445" -> "11451" 
+  "11445" -> "11457" 
+  "11445" -> "11458" 
+  "11445" -> "11637" 
+  "11445" -> "11648" 
+  "11447" -> "11448" 
+  "11447" -> "11449" 
+  "11451" -> "11452" 
+  "11451" -> "11453" 
+  "11453" -> "11454" 
+  "11454" -> "11455" 
+  "11454" -> "11456" 
+  "11458" -> "11459" 
+  "11458" -> "11464" 
+  "11458" -> "11622" 
+  "11459" -> "11460" 
+  "11459" -> "11463" 
+  "11460" -> "11461" 
+  "11460" -> "11462" 
+  "11464" -> "11465" 
+  "11465" -> "11466" 
+  "11465" -> "11481" 
+  "11465" -> "11597" 
+  "11466" -> "11467" 
+  "11466" -> "11478" 
+  "11467" -> "11468" 
+  "11467" -> "11473" 
+  "11468" -> "11469" 
+  "11468" -> "11472" 
+  "11469" -> "11470" 
+  "11469" -> "11471" 
+  "11473" -> "11474" 
+  "11473" -> "11477" 
+  "11474" -> "11475" 
+  "11474" -> "11476" 
+  "11478" -> "11479" 
+  "11479" -> "11480" 
+  "11481" -> "11482" 
+  "11481" -> "11483" 
+  "11481" -> "11484" 
+  "11481" -> "11485" 
+  "11481" -> "11486" 
+  "11481" -> "11487" 
+  "11481" -> "11500" 
+  "11481" -> "11509" 
+  "11481" -> "11552" 
+  "11481" -> "11563" 
+  "11481" -> "11572" 
+  "11481" -> "11579" 
+  "11481" -> "11590" 
+  "11487" -> "11488" 
+  "11487" -> "11493" 
+  "11488" -> "11489" 
+  "11488" -> "11492" 
+  "11489" -> "11490" 
+  "11489" -> "11491" 
+  "11493" -> "11494" 
+  "11493" -> "11498" 
+  "11494" -> "11495" 
+  "11494" -> "11496" 
+  "11494" -> "11497" 
+  "11498" -> "11499" 
+  "11500" -> "11501" 
+  "11500" -> "11502" 
+  "11500" -> "11503" 
+  "11500" -> "11506" 
+  "11503" -> "11504" 
+  "11503" -> "11505" 
+  "11506" -> "11507" 
+  "11506" -> "11508" 
+  "11509" -> "11510" 
+  "11509" -> "11545" 
+  "11510" -> "11511" 
+  "11510" -> "11528" 
+  "11511" -> "11512" 
+  "11511" -> "11523" 
+  "11512" -> "11513" 
+  "11512" -> "11518" 
+  "11513" -> "11514" 
+  "11513" -> "11517" 
+  "11514" -> "11515" 
+  "11514" -> "11516" 
+  "11518" -> "11519" 
+  "11518" -> "11522" 
+  "11519" -> "11520" 
+  "11519" -> "11521" 
+  "11523" -> "11524" 
+  "11523" -> "11527" 
+  "11524" -> "11525" 
+  "11524" -> "11526" 
+  "11528" -> "11529" 
+  "11528" -> "11540" 
+  "11529" -> "11530" 
+  "11529" -> "11535" 
+  "11530" -> "11531" 
+  "11530" -> "11534" 
+  "11531" -> "11532" 
+  "11531" -> "11533" 
+  "11535" -> "11536" 
+  "11535" -> "11539" 
+  "11536" -> "11537" 
+  "11536" -> "11538" 
+  "11540" -> "11541" 
+  "11540" -> "11544" 
+  "11541" -> "11542" 
+  "11541" -> "11543" 
+  "11545" -> "11546" 
+  "11545" -> "11550" 
+  "11546" -> "11547" 
+  "11546" -> "11548" 
+  "11546" -> "11549" 
+  "11550" -> "11551" 
+  "11552" -> "11553" 
+  "11552" -> "11554" 
+  "11554" -> "11555" 
+  "11554" -> "11562" 
+  "11555" -> "11556" 
+  "11555" -> "11559" 
+  "11556" -> "11557" 
+  "11556" -> "11558" 
+  "11559" -> "11560" 
+  "11559" -> "11561" 
+  "11563" -> "11564" 
+  "11563" -> "11565" 
+  "11565" -> "11566" 
+  "11565" -> "11569" 
+  "11566" -> "11567" 
+  "11566" -> "11568" 
+  "11569" -> "11570" 
+  "11569" -> "11571" 
+  "11572" -> "11573" 
+  "11572" -> "11574" 
+  "11574" -> "11575" 
+  "11574" -> "11576" 
+  "11574" -> "11577" 
+  "11574" -> "11578" 
+  "11579" -> "11580" 
+  "11579" -> "11581" 
+  "11581" -> "11582" 
+  "11581" -> "11589" 
+  "11582" -> "11583" 
+  "11582" -> "11584" 
+  "11582" -> "11585" 
+  "11582" -> "11588" 
+  "11585" -> "11586" 
+  "11585" -> "11587" 
+  "11590" -> "11591" 
+  "11590" -> "11592" 
+  "11592" -> "11593" 
+  "11592" -> "11594" 
+  "11594" -> "11595" 
+  "11594" -> "11596" 
+  "11597" -> "11598" 
+  "11598" -> "11599" 
+  "11598" -> "11600" 
+  "11598" -> "11611" 
+  "11600" -> "11601" 
+  "11600" -> "11602" 
+  "11602" -> "11603" 
+  "11602" -> "11604" 
+  "11602" -> "11607" 
+  "11602" -> "11610" 
+  "11604" -> "11605" 
+  "11604" -> "11606" 
+  "11607" -> "11608" 
+  "11607" -> "11609" 
+  "11611" -> "11612" 
+  "11611" -> "11613" 
+  "11613" -> "11614" 
+  "11613" -> "11621" 
+  "11614" -> "11615" 
+  "11614" -> "11616" 
+  "11614" -> "11617" 
+  "11614" -> "11620" 
+  "11617" -> "11618" 
+  "11617" -> "11619" 
+  "11622" -> "11623" 
+  "11623" -> "11624" 
+  "11624" -> "11625" 
+  "11624" -> "11626" 
+  "11626" -> "11627" 
+  "11626" -> "11636" 
+  "11627" -> "11628" 
+  "11627" -> "11629" 
+  "11627" -> "11632" 
+  "11627" -> "11635" 
+  "11629" -> "11630" 
+  "11629" -> "11631" 
+  "11632" -> "11633" 
+  "11632" -> "11634" 
+  "11637" -> "11638" 
+  "11637" -> "11641" 
+  "11638" -> "11639" 
+  "11638" -> "11640" 
+  "11641" -> "11642" 
+  "11641" -> "11646" 
+  "11642" -> "11643" 
+  "11642" -> "11644" 
+  "11642" -> "11645" 
+  "11646" -> "11647" 
+  "11648" -> "11649" 
+}

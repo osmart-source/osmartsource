@@ -1,0 +1,87 @@
+digraph "TIFFReadDirEntryData" {  
+"88003" [label = <(assert,assert(size &gt; 0))<SUB>3863</SUB>> ]
+"88082" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3884</SUB>> ]
+"88004" [label = <(&lt;operator&gt;.greaterThan,size &gt; 0)<SUB>3863</SUB>> ]
+"88008" [label = <(&lt;operator&gt;.logicalNot,!isMapped(tif))<SUB>3864</SUB>> ]
+"88009" [label = <(isMapped,isMapped(tif))<SUB>3864</SUB>> ]
+"88013" [label = <(&lt;operator&gt;.logicalNot,!SeekOK(tif, offset))<SUB>3866</SUB>> ]
+"88021" [label = <(&lt;operator&gt;.logicalNot,!ReadOK(tif, dest, size))<SUB>3868</SUB>> ]
+"88033" [label = <(&lt;operator&gt;.assignment,ma = (size_t)offset)<SUB>3874</SUB>> ]
+"88058" [label = <(&lt;operator&gt;.assignment,mb = ma + size)<SUB>3879</SUB>> ]
+"88074" [label = <(_TIFFmemcpy,_TIFFmemcpy(dest, tif-&gt;tif_base + ma, size))<SUB>3882</SUB>> ]
+"88014" [label = <(SeekOK,SeekOK(tif, offset))<SUB>3866</SUB>> ]
+"88018" [label = <(RETURN,return (TIFFReadDirEntryErrIo);,return (TIFFReadDirEntryErrIo);)<SUB>3867</SUB>> ]
+"88022" [label = <(ReadOK,ReadOK(tif, dest, size))<SUB>3868</SUB>> ]
+"88027" [label = <(RETURN,return (TIFFReadDirEntryErrIo);,return (TIFFReadDirEntryErrIo);)<SUB>3869</SUB>> ]
+"88035" [label = <(&lt;operator&gt;.cast,(size_t)offset)<SUB>3874</SUB>> ]
+"88039" [label = <(&lt;operator&gt;.logicalOr,(uint64_t)ma != offset || ma &gt; (~(size_t)0) - (size_t)size)<SUB>3875</SUB>> ]
+"88060" [label = <(&lt;operator&gt;.addition,ma + size)<SUB>3879</SUB>> ]
+"88064" [label = <(&lt;operator&gt;.greaterThan,mb &gt; (uint64_t)tif-&gt;tif_size)<SUB>3880</SUB>> ]
+"88076" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_base + ma)<SUB>3882</SUB>> ]
+"88036" [label = <(UNKNOWN,size_t,size_t)<SUB>3874</SUB>> ]
+"88040" [label = <(&lt;operator&gt;.notEquals,(uint64_t)ma != offset)<SUB>3875</SUB>> ]
+"88045" [label = <(&lt;operator&gt;.greaterThan,ma &gt; (~(size_t)0) - (size_t)size)<SUB>3875</SUB>> ]
+"88056" [label = <(RETURN,return TIFFReadDirEntryErrIo;,return TIFFReadDirEntryErrIo;)<SUB>3877</SUB>> ]
+"88066" [label = <(&lt;operator&gt;.cast,(uint64_t)tif-&gt;tif_size)<SUB>3880</SUB>> ]
+"88072" [label = <(RETURN,return (TIFFReadDirEntryErrIo);,return (TIFFReadDirEntryErrIo);)<SUB>3881</SUB>> ]
+"88077" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_base)<SUB>3882</SUB>> ]
+"88041" [label = <(&lt;operator&gt;.cast,(uint64_t)ma)<SUB>3875</SUB>> ]
+"88047" [label = <(&lt;operator&gt;.subtraction,(~(size_t)0) - (size_t)size)<SUB>3875</SUB>> ]
+"88067" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>3880</SUB>> ]
+"88068" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>3880</SUB>> ]
+"88079" [label = <(FIELD_IDENTIFIER,tif_base,tif_base)<SUB>3882</SUB>> ]
+"88042" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>3875</SUB>> ]
+"88048" [label = <(&lt;operator&gt;.not,~(size_t)0)<SUB>3875</SUB>> ]
+"88052" [label = <(&lt;operator&gt;.cast,(size_t)size)<SUB>3875</SUB>> ]
+"88070" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>3880</SUB>> ]
+"88049" [label = <(&lt;operator&gt;.cast,(size_t)0)<SUB>3875</SUB>> ]
+"88053" [label = <(UNKNOWN,size_t,size_t)<SUB>3875</SUB>> ]
+"88050" [label = <(UNKNOWN,size_t,size_t)<SUB>3875</SUB>> ]
+"87997" [label = <(METHOD,TIFFReadDirEntryData)<SUB>3860</SUB>> ]
+"88084" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3860</SUB>> ]
+  "88003" -> "88009" 
+  "88082" -> "88084" 
+  "88004" -> "88003" 
+  "88008" -> "88014" 
+  "88008" -> "88036" 
+  "88009" -> "88008" 
+  "88013" -> "88018" 
+  "88013" -> "88022" 
+  "88021" -> "88027" 
+  "88021" -> "88082" 
+  "88033" -> "88042" 
+  "88058" -> "88067" 
+  "88074" -> "88082" 
+  "88014" -> "88013" 
+  "88018" -> "88084" 
+  "88022" -> "88021" 
+  "88027" -> "88084" 
+  "88035" -> "88033" 
+  "88039" -> "88056" 
+  "88039" -> "88060" 
+  "88060" -> "88058" 
+  "88064" -> "88072" 
+  "88064" -> "88079" 
+  "88076" -> "88074" 
+  "88036" -> "88035" 
+  "88040" -> "88039" 
+  "88040" -> "88050" 
+  "88045" -> "88039" 
+  "88056" -> "88084" 
+  "88066" -> "88064" 
+  "88072" -> "88084" 
+  "88077" -> "88076" 
+  "88041" -> "88040" 
+  "88047" -> "88045" 
+  "88067" -> "88070" 
+  "88068" -> "88066" 
+  "88079" -> "88077" 
+  "88042" -> "88041" 
+  "88048" -> "88053" 
+  "88052" -> "88047" 
+  "88070" -> "88068" 
+  "88049" -> "88048" 
+  "88053" -> "88052" 
+  "88050" -> "88049" 
+  "87997" -> "88004" 
+}

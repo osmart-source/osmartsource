@@ -1,0 +1,2313 @@
+digraph "TIFFReadDirectory" {  
+"88384" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadDirectory&quot;)<SUB>4057</SUB>> ]
+"88393" [label = <(&lt;operator&gt;.assignment,fii = FAILED_FII)<SUB>4063</SUB>> ]
+"88403" [label = <(&lt;operator&gt;.assignment,bitspersample_read = FALSE)<SUB>4065</SUB>> ]
+"88423" [label = <(&lt;operator&gt;.assignment,nextdiroff = tif-&gt;tif_nextdiroff)<SUB>4075</SUB>> ]
+"88448" [label = <(&lt;operator&gt;.assignment,dircount = TIFFFetchDirectory(tif, nextdiroff, &amp;dir, &amp;tif-&gt;tif_nextdiroff))<SUB>4089</SUB>> ]
+"88488" [label = <(*tif-&gt;tif_cleanup,(*tif-&gt;tif_cleanup)(tif))<SUB>4104</SUB>> ]
+"88494" [label = <(TIFFReadDirectoryCheckOrder,TIFFReadDirectoryCheckOrder(tif, dir, dircount))<SUB>4106</SUB>> ]
+"88557" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_BEENWRITING)<SUB>4129</SUB>> ]
+"88563" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_BUF4WRITE)<SUB>4130</SUB>> ]
+"88569" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_CHOPPEDUPARRAYS)<SUB>4131</SUB>> ]
+"88575" [label = <(TIFFFreeDirectory,TIFFFreeDirectory(tif))<SUB>4134</SUB>> ]
+"88577" [label = <(TIFFDefaultDirectory,TIFFDefaultDirectory(tif))<SUB>4135</SUB>> ]
+"88579" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG))<SUB>4144</SUB>> ]
+"88583" [label = <(&lt;operator&gt;.assignment,dp =\012        TIFFReadDirectoryFindEntry(tif, dir, dircount, TIFFTAG_SAMPLESPERPIXEL))<SUB>4162</SUB>> ]
+"88608" [label = <(&lt;operator&gt;.assignment,dp = TIFFReadDirectoryFindEntry(tif, dir, dircount, TIFFTAG_COMPRESSION))<SUB>4170</SUB>> ]
+"89755" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_stripsperimage = tif-&gt;tif_dir.td_nstrips)<SUB>4630</SUB>> ]
+"89998" [label = <(&lt;operator&gt;.assignment,color_channels = _TIFFGetMaxColorChannels(tif-&gt;tif_dir.td_photometric))<SUB>4696</SUB>> ]
+"90401" [label = <(*tif-&gt;tif_fixuptags,(*tif-&gt;tif_fixuptags)(tif))<SUB>4867</SUB>> ]
+"90478" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_DIRTYDIRECT)<SUB>4900</SUB>> ]
+"90484" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_DIRTYSTRIP)<SUB>4901</SUB>> ]
+"90490" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = (uint32_t)-1)<SUB>4906</SUB>> ]
+"90498" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curstrip = (uint32_t)-1)<SUB>4907</SUB>> ]
+"90506" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_col = (uint32_t)-1)<SUB>4908</SUB>> ]
+"90514" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curtile = (uint32_t)-1)<SUB>4909</SUB>> ]
+"90522" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_tilesize = (tmsize_t)-1)<SUB>4910</SUB>> ]
+"90529" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_scanlinesize = TIFFScanlineSize(tif))<SUB>4912</SUB>> ]
+"90582" [label = <(RETURN,return (1);,return (1);)<SUB>4936</SUB>> ]
+"90593" [label = <(RETURN,return (0);,return (0);)<SUB>4940</SUB>> ]
+"88395" [label = <(FAILED_FII,FAILED_FII)<SUB>4063</SUB>> ]
+"88408" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_nextdiroff == 0)<SUB>4068</SUB>> ]
+"88425" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>4075</SUB>> ]
+"88429" [label = <(&lt;operator&gt;.logicalNot,!_TIFFCheckDirNumberAndOffset(tif,\012                                      tif-&gt;tif_curdir ==\012                                              TIFF_NON_EXISTENT_DIR_NUMBER\012                                          ? 0\012                                          : tif-&gt;tif_curdir + 1,\012                                      nextdiroff))<SUB>4079</SUB>> ]
+"88450" [label = <(TIFFFetchDirectory,TIFFFetchDirectory(tif, nextdiroff, &amp;dir, &amp;tif-&gt;tif_nextdiroff))<SUB>4089</SUB>> ]
+"88460" [label = <(&lt;operator&gt;.logicalNot,!dircount)<SUB>4090</SUB>> ]
+"88471" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_curdir == TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>4100</SUB>> ]
+"88489" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_cleanup)<SUB>4104</SUB>> ]
+"88558" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4129</SUB>> ]
+"88561" [label = <(&lt;operator&gt;.not,~TIFF_BEENWRITING)<SUB>4129</SUB>> ]
+"88564" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4130</SUB>> ]
+"88567" [label = <(&lt;operator&gt;.not,~TIFF_BUF4WRITE)<SUB>4130</SUB>> ]
+"88570" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4131</SUB>> ]
+"88573" [label = <(&lt;operator&gt;.not,~TIFF_CHOPPEDUPARRAYS)<SUB>4131</SUB>> ]
+"88585" [label = <(TIFFReadDirectoryFindEntry,TIFFReadDirectoryFindEntry(tif, dir, dircount, TIFFTAG_SAMPLESPERPIXEL))<SUB>4163</SUB>> ]
+"88591" [label = <(&lt;operator&gt;.logicalAnd,dp &amp;&amp; 1)<SUB>4164</SUB>> ]
+"88610" [label = <(TIFFReadDirectoryFindEntry,TIFFReadDirectoryFindEntry(tif, dir, dircount, TIFFTAG_COMPRESSION))<SUB>4170</SUB>> ]
+"88616" [label = <(&lt;operator&gt;.logicalAnd,dp &amp;&amp; 1)<SUB>4171</SUB>> ]
+"88685" [label = <(&lt;operator&gt;.lessThan,di &lt; dircount)<SUB>4201</SUB>> ]
+"88870" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_dir.td_compression == COMPRESSION_OJPEG) &amp;&amp;\012        (tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_SEPARATE))<SUB>4278</SUB>> ]
+"88940" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_IMAGEDIMENSIONS))<SUB>4301</SUB>> ]
+"88958" [label = <(&lt;operator&gt;.lessThan,di &lt; dircount)<SUB>4310</SUB>> ]
+"89528" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_compression == COMPRESSION_OJPEG)<SUB>4550</SUB>> ]
+"89670" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_TILEDIMENSIONS))<SUB>4611</SUB>> ]
+"89738" [label = <(&lt;operator&gt;.logicalNot,!tif-&gt;tif_dir.td_nstrips)<SUB>4624</SUB>> ]
+"89756" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripsperimage)<SUB>4630</SUB>> ]
+"89761" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4630</SUB>> ]
+"89767" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>4631</SUB>> ]
+"89787" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_STRIPOFFSETS))<SUB>4633</SUB>> ]
+"89828" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8 == 0)<SUB>4657</SUB>> ]
+"90000" [label = <(_TIFFGetMaxColorChannels,_TIFFGetMaxColorChannels(tif-&gt;tif_dir.td_photometric))<SUB>4696</SUB>> ]
+"90007" [label = <(&lt;operator&gt;.logicalAnd,color_channels &amp;&amp;\012        tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples &gt;\012            color_channels)<SUB>4697</SUB>> ]
+"90112" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_PALETTE &amp;&amp;\012        !TIFFFieldSet(tif, FIELD_COLORMAP))<SUB>4739</SUB>> ]
+"90174" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_compression != COMPRESSION_OJPEG)<SUB>4758</SUB>> ]
+"90346" [label = <(&lt;operator&gt;.logicalAnd,dir &amp;&amp; 1)<SUB>4827</SUB>> ]
+"90361" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_MAXSAMPLEVALUE))<SUB>4832</SUB>> ]
+"90402" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_fixuptags)<SUB>4867</SUB>> ]
+"90408" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG) &amp;&amp;\012        (tif-&gt;tif_dir.td_nstrips == 1) &amp;&amp;\012        (tif-&gt;tif_dir.td_compression == COMPRESSION_NONE) &amp;&amp;\012        ((tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED)) == TIFF_STRIPCHOP))<SUB>4878</SUB>> ]
+"90445" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012        tif-&gt;tif_dir.td_compression == COMPRESSION_NONE &amp;&amp;\012        (tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED)) == TIFF_STRIPCHOP &amp;&amp;\012        TIFFStripSize64(tif) &gt; 0x7FFFFFFFUL)<SUB>4889</SUB>> ]
+"90479" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4900</SUB>> ]
+"90482" [label = <(&lt;operator&gt;.not,~TIFF_DIRTYDIRECT)<SUB>4900</SUB>> ]
+"90485" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4901</SUB>> ]
+"90488" [label = <(&lt;operator&gt;.not,~TIFF_DIRTYSTRIP)<SUB>4901</SUB>> ]
+"90491" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>4906</SUB>> ]
+"90494" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4906</SUB>> ]
+"90499" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>4907</SUB>> ]
+"90502" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4907</SUB>> ]
+"90507" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_col)<SUB>4908</SUB>> ]
+"90510" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4908</SUB>> ]
+"90515" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curtile)<SUB>4909</SUB>> ]
+"90518" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4909</SUB>> ]
+"90523" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_tilesize)<SUB>4910</SUB>> ]
+"90526" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>4910</SUB>> ]
+"90530" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>4912</SUB>> ]
+"90533" [label = <(TIFFScanlineSize,TIFFScanlineSize(tif))<SUB>4912</SUB>> ]
+"90536" [label = <(&lt;operator&gt;.logicalNot,!tif-&gt;tif_scanlinesize)<SUB>4913</SUB>> ]
+"90548" [label = <(isTiled,isTiled(tif))<SUB>4919</SUB>> ]
+"90586" [label = <(&lt;operator&gt;.logicalAnd,dir &amp;&amp; 1)<SUB>4938</SUB>> ]
+"88409" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>4068</SUB>> ]
+"88414" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_diroff = tif-&gt;tif_nextdiroff)<SUB>4071</SUB>> ]
+"88421" [label = <(RETURN,return 0;,return 0;)<SUB>4072</SUB>> ]
+"88427" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>4075</SUB>> ]
+"88430" [label = <(_TIFFCheckDirNumberAndOffset,_TIFFCheckDirNumberAndOffset(tif,\012                                      tif-&gt;tif_curdir ==\012                                              TIFF_NON_EXISTENT_DIR_NUMBER\012                                          ? 0\012                                          : tif-&gt;tif_curdir + 1,\012                                      nextdiroff))<SUB>4079</SUB>> ]
+"88446" [label = <(RETURN,return 0;,return 0;)<SUB>4086</SUB>> ]
+"88453" [label = <(&lt;operator&gt;.addressOf,&amp;dir)<SUB>4089</SUB>> ]
+"88455" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_nextdiroff)<SUB>4089</SUB>> ]
+"88463" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Failed to read directory at offset %&quot; PRIu64,\012                      nextdiroff))<SUB>4092</SUB>> ]
+"88468" [label = <(RETURN,return 0;,return 0;)<SUB>4095</SUB>> ]
+"88472" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>4100</SUB>> ]
+"88477" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curdir = 0)<SUB>4101</SUB>> ]
+"88490" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_cleanup)<SUB>4104</SUB>> ]
+"88510" [label = <(&lt;operator&gt;.lessThan,mb &lt; dircount)<SUB>4115</SUB>> ]
+"88560" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4129</SUB>> ]
+"88566" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4130</SUB>> ]
+"88572" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4131</SUB>> ]
+"88603" [label = <(&lt;operator&gt;.assignment,dp-&gt;tdir_ignore = TRUE)<SUB>4168</SUB>> ]
+"88622" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryShort(tif, dp, &amp;value))<SUB>4181</SUB>> ]
+"88661" [label = <(&lt;operator&gt;.assignment,dp-&gt;tdir_ignore = TRUE)<SUB>4191</SUB>> ]
+"88689" [label = <(&lt;operator&gt;.postIncrement,di++)<SUB>4201</SUB>> ]
+"88691" [label = <(&lt;operator&gt;.postIncrement,dp++)<SUB>4201</SUB>> ]
+"88871" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_compression == COMPRESSION_OJPEG)<SUB>4278</SUB>> ]
+"88878" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>4279</SUB>> ]
+"88892" [label = <(&lt;operator&gt;.assignment,dp = TIFFReadDirectoryFindEntry(tif, dir, dircount,\012                                        TIFFTAG_STRIPOFFSETS))<SUB>4283</SUB>> ]
+"88941" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_IMAGEDIMENSIONS))<SUB>4301</SUB>> ]
+"88945" [label = <(MissingRequired,MissingRequired(tif, &quot;ImageLength&quot;))<SUB>4303</SUB>> ]
+"88962" [label = <(&lt;operator&gt;.postIncrement,di++)<SUB>4310</SUB>> ]
+"88964" [label = <(&lt;operator&gt;.postIncrement,dp++)<SUB>4310</SUB>> ]
+"89529" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4550</SUB>> ]
+"89671" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_TILEDIMENSIONS))<SUB>4611</SUB>> ]
+"89675" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_nstrips = TIFFNumberOfStrips(tif))<SUB>4613</SUB>> ]
+"89683" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_tilewidth = tif-&gt;tif_dir.td_imagewidth)<SUB>4614</SUB>> ]
+"89694" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_tilelength = tif-&gt;tif_dir.td_rowsperstrip)<SUB>4615</SUB>> ]
+"89705" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_tiledepth = tif-&gt;tif_dir.td_imagedepth)<SUB>4616</SUB>> ]
+"89716" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_ISTILED)<SUB>4617</SUB>> ]
+"89739" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4624</SUB>> ]
+"89745" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Cannot handle zero number of %s&quot;,\012                      isTiled(tif) ? &quot;tiles&quot; : &quot;strips&quot;))<SUB>4626</SUB>> ]
+"89757" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4630</SUB>> ]
+"89760" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>4630</SUB>> ]
+"89762" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4630</SUB>> ]
+"89765" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4630</SUB>> ]
+"89768" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4631</SUB>> ]
+"89775" [label = <(&lt;operator&gt;.assignmentDivision,tif-&gt;tif_dir.td_stripsperimage /= tif-&gt;tif_dir.td_samplesperpixel)<SUB>4632</SUB>> ]
+"89788" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_STRIPOFFSETS))<SUB>4633</SUB>> ]
+"89829" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0)<SUB>4657</SUB>> ]
+"89906" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8 == 0)<SUB>4665</SUB>> ]
+"89918" [label = <(TIFFSetupStrips,TIFFSetupStrips(tif))<SUB>4668</SUB>> ]
+"90001" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4696</SUB>> ]
+"90009" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples &gt;\012            color_channels)<SUB>4698</SUB>> ]
+"90025" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012            tif, module,\012            &quot;Sum of Photometric type-related &quot;\012            &quot;color channels and ExtraSamples doesn't match SamplesPerPixel. &quot;\012            &quot;Defining non-color channels as ExtraSamples.&quot;))<SUB>4704</SUB>> ]
+"90029" [label = <(&lt;operator&gt;.assignment,old_extrasamples = tif-&gt;tif_dir.td_extrasamples)<SUB>4710</SUB>> ]
+"90036" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_extrasamples =\012            (uint16_t)(tif-&gt;tif_dir.td_samplesperpixel - color_channels))<SUB>4711</SUB>> ]
+"90051" [label = <(&lt;operator&gt;.assignment,new_sampleinfo = (uint16_t *)_TIFFcallocExt(\012            tif, tif-&gt;tif_dir.td_extrasamples, sizeof(uint16_t)))<SUB>4716</SUB>> ]
+"90094" [label = <(_TIFFsetShortArrayExt,_TIFFsetShortArrayExt(tif, &amp;tif-&gt;tif_dir.td_sampleinfo, new_sampleinfo,\012                              tif-&gt;tif_dir.td_extrasamples))<SUB>4731</SUB>> ]
+"90108" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, new_sampleinfo))<SUB>4733</SUB>> ]
+"90113" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_PALETTE)<SUB>4739</SUB>> ]
+"90120" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_COLORMAP))<SUB>4740</SUB>> ]
+"90175" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4758</SUB>> ]
+"90350" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, dir))<SUB>4829</SUB>> ]
+"90353" [label = <(&lt;operator&gt;.assignment,dir = NULL)<SUB>4830</SUB>> ]
+"90362" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_MAXSAMPLEVALUE))<SUB>4832</SUB>> ]
+"90403" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fixuptags)<SUB>4867</SUB>> ]
+"90409" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG) &amp;&amp;\012        (tif-&gt;tif_dir.td_nstrips == 1) &amp;&amp;\012        (tif-&gt;tif_dir.td_compression == COMPRESSION_NONE))<SUB>4878</SUB>> ]
+"90432" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED)) == TIFF_STRIPCHOP)<SUB>4881</SUB>> ]
+"90442" [label = <(ChopUpSingleUncompressedStrip,ChopUpSingleUncompressedStrip(tif))<SUB>4883</SUB>> ]
+"90446" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012        tif-&gt;tif_dir.td_compression == COMPRESSION_NONE &amp;&amp;\012        (tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED)) == TIFF_STRIPCHOP)<SUB>4889</SUB>> ]
+"90471" [label = <(&lt;operator&gt;.greaterThan,TIFFStripSize64(tif) &gt; 0x7FFFFFFFUL)<SUB>4892</SUB>> ]
+"90476" [label = <(TryChopUpUncompressedBigTiff,TryChopUpUncompressedBigTiff(tif))<SUB>4894</SUB>> ]
+"90481" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4900</SUB>> ]
+"90487" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4901</SUB>> ]
+"90493" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>4906</SUB>> ]
+"90495" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4906</SUB>> ]
+"90496" [label = <(&lt;operator&gt;.minus,-1)<SUB>4906</SUB>> ]
+"90501" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>4907</SUB>> ]
+"90503" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4907</SUB>> ]
+"90504" [label = <(&lt;operator&gt;.minus,-1)<SUB>4907</SUB>> ]
+"90509" [label = <(FIELD_IDENTIFIER,tif_col,tif_col)<SUB>4908</SUB>> ]
+"90511" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4908</SUB>> ]
+"90512" [label = <(&lt;operator&gt;.minus,-1)<SUB>4908</SUB>> ]
+"90517" [label = <(FIELD_IDENTIFIER,tif_curtile,tif_curtile)<SUB>4909</SUB>> ]
+"90519" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4909</SUB>> ]
+"90520" [label = <(&lt;operator&gt;.minus,-1)<SUB>4909</SUB>> ]
+"90525" [label = <(FIELD_IDENTIFIER,tif_tilesize,tif_tilesize)<SUB>4910</SUB>> ]
+"90532" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>4912</SUB>> ]
+"90537" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_scanlinesize)<SUB>4913</SUB>> ]
+"90541" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Cannot handle zero scanline size&quot;))<SUB>4915</SUB>> ]
+"90545" [label = <(RETURN,return (0);,return (0);)<SUB>4916</SUB>> ]
+"90551" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_tilesize = TIFFTileSize(tif))<SUB>4921</SUB>> ]
+"90590" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, dir))<SUB>4939</SUB>> ]
+"88397" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4063</SUB>> ]
+"88411" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>4068</SUB>> ]
+"88415" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_diroff)<SUB>4071</SUB>> ]
+"88418" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>4071</SUB>> ]
+"88432" [label = <(&lt;operator&gt;.conditional,tif-&gt;tif_curdir ==\012                                              TIFF_NON_EXISTENT_DIR_NUMBER\012                                          ? 0\012                                          : tif-&gt;tif_curdir + 1)<SUB>4080</SUB>> ]
+"88456" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_nextdiroff)<SUB>4089</SUB>> ]
+"88474" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>4100</SUB>> ]
+"88478" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>4101</SUB>> ]
+"88484" [label = <(&lt;operator&gt;.postIncrement,tif-&gt;tif_curdir++)<SUB>4103</SUB>> ]
+"88492" [label = <(FIELD_IDENTIFIER,tif_cleanup,tif_cleanup)<SUB>4104</SUB>> ]
+"88514" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>4115</SUB>> ]
+"88516" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>4115</SUB>> ]
+"88596" [label = <(&lt;operator&gt;.logicalNot,!TIFFFetchNormalTag(tif, dp, 0))<SUB>4166</SUB>> ]
+"88604" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4168</SUB>> ]
+"88624" [label = <(TIFFReadDirEntryShort,TIFFReadDirEntryShort(tif, dp, &amp;value))<SUB>4181</SUB>> ]
+"88630" [label = <(&lt;operator&gt;.equals,err == TIFFReadDirEntryErrCount)<SUB>4182</SUB>> ]
+"88642" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>4184</SUB>> ]
+"88654" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_COMPRESSION, value))<SUB>4189</SUB>> ]
+"88662" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4191</SUB>> ]
+"88679" [label = <(&lt;operator&gt;.assignment,di = 0)<SUB>4201</SUB>> ]
+"88682" [label = <(&lt;operator&gt;.assignment,dp = dir)<SUB>4201</SUB>> ]
+"88695" [label = <(&lt;operator&gt;.logicalNot,!dp-&gt;tdir_ignore)<SUB>4203</SUB>> ]
+"88777" [label = <(&lt;operator&gt;.logicalNot,!dp-&gt;tdir_ignore)<SUB>4234</SUB>> ]
+"88872" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4278</SUB>> ]
+"88879" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4279</SUB>> ]
+"88887" [label = <(&lt;operator&gt;.logicalNot,!_TIFFFillStriles(tif))<SUB>4281</SUB>> ]
+"88894" [label = <(TIFFReadDirectoryFindEntry,TIFFReadDirectoryFindEntry(tif, dir, dircount,\012                                        TIFFTAG_STRIPOFFSETS))<SUB>4283</SUB>> ]
+"88900" [label = <(&lt;operator&gt;.logicalAnd,(dp != 0) &amp;&amp; (dp-&gt;tdir_count == 1))<SUB>4285</SUB>> ]
+"88952" [label = <(&lt;operator&gt;.assignment,di = 0)<SUB>4310</SUB>> ]
+"88955" [label = <(&lt;operator&gt;.assignment,dp = dir)<SUB>4310</SUB>> ]
+"88968" [label = <(&lt;operator&gt;.logicalNot,!dp-&gt;tdir_ignore)<SUB>4312</SUB>> ]
+"89530" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4550</SUB>> ]
+"89533" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4550</SUB>> ]
+"89537" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_PHOTOMETRIC))<SUB>4552</SUB>> ]
+"89577" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_BITSPERSAMPLE))<SUB>4567</SUB>> ]
+"89595" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_SAMPLESPERPIXEL))<SUB>4575</SUB>> ]
+"89676" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4613</SUB>> ]
+"89681" [label = <(TIFFNumberOfStrips,TIFFNumberOfStrips(tif))<SUB>4613</SUB>> ]
+"89684" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_tilewidth)<SUB>4614</SUB>> ]
+"89689" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_imagewidth)<SUB>4614</SUB>> ]
+"89695" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_tilelength)<SUB>4615</SUB>> ]
+"89700" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_rowsperstrip)<SUB>4615</SUB>> ]
+"89706" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_tiledepth)<SUB>4616</SUB>> ]
+"89711" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_imagedepth)<SUB>4616</SUB>> ]
+"89717" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4617</SUB>> ]
+"89720" [label = <(&lt;operator&gt;.not,~TIFF_ISTILED)<SUB>4617</SUB>> ]
+"89724" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_nstrips = TIFFNumberOfTiles(tif))<SUB>4621</SUB>> ]
+"89732" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_ISTILED)<SUB>4622</SUB>> ]
+"89740" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4624</SUB>> ]
+"89743" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4624</SUB>> ]
+"89749" [label = <(&lt;operator&gt;.conditional,isTiled(tif) ? &quot;tiles&quot; : &quot;strips&quot;)<SUB>4627</SUB>> ]
+"89759" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4630</SUB>> ]
+"89764" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4630</SUB>> ]
+"89769" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4631</SUB>> ]
+"89772" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4631</SUB>> ]
+"89776" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripsperimage)<SUB>4632</SUB>> ]
+"89781" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>4632</SUB>> ]
+"89793" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_dir.td_compression == COMPRESSION_OJPEG) &amp;&amp;\012            (isTiled(tif) == 0) &amp;&amp; (tif-&gt;tif_dir.td_nstrips == 1))<SUB>4636</SUB>> ]
+"89830" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0)<SUB>4657</SUB>> ]
+"89897" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type == 0)<SUB>4664</SUB>> ]
+"89907" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset.toff_long8)<SUB>4665</SUB>> ]
+"90002" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4696</SUB>> ]
+"90005" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4696</SUB>> ]
+"90010" [label = <(&lt;operator&gt;.subtraction,tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples)<SUB>4698</SUB>> ]
+"90031" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>4710</SUB>> ]
+"90037" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>4711</SUB>> ]
+"90042" [label = <(&lt;operator&gt;.cast,(uint16_t)(tif-&gt;tif_dir.td_samplesperpixel - color_channels))<SUB>4712</SUB>> ]
+"90053" [label = <(&lt;operator&gt;.cast,(uint16_t *)_TIFFcallocExt(\012            tif, tif-&gt;tif_dir.td_extrasamples, sizeof(uint16_t)))<SUB>4716</SUB>> ]
+"90065" [label = <(&lt;operator&gt;.logicalNot,!new_sampleinfo)<SUB>4718</SUB>> ]
+"90079" [label = <(&lt;operator&gt;.greaterThan,old_extrasamples &gt; 0)<SUB>4728</SUB>> ]
+"90096" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir.td_sampleinfo)<SUB>4731</SUB>> ]
+"90103" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>4732</SUB>> ]
+"90114" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4739</SUB>> ]
+"90121" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_COLORMAP))<SUB>4740</SUB>> ]
+"90126" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_bitspersample &gt;= 8 &amp;&amp;\012            tif-&gt;tif_dir.td_samplesperpixel == 3)<SUB>4742</SUB>> ]
+"90176" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4758</SUB>> ]
+"90179" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4758</SUB>> ]
+"90183" [label = <(&lt;operator&gt;.logicalNot,!TIFFFieldSet(tif, FIELD_STRIPBYTECOUNTS))<SUB>4763</SUB>> ]
+"90355" [label = <(NULL,NULL)<SUB>4830</SUB>> ]
+"90367" [label = <(&lt;operator&gt;.greaterEqualsThan,tif-&gt;tif_dir.td_bitspersample &gt;= 16)<SUB>4834</SUB>> ]
+"90405" [label = <(FIELD_IDENTIFIER,tif_fixuptags,tif_fixuptags)<SUB>4867</SUB>> ]
+"90410" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG) &amp;&amp;\012        (tif-&gt;tif_dir.td_nstrips == 1))<SUB>4878</SUB>> ]
+"90425" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_compression == COMPRESSION_NONE)<SUB>4880</SUB>> ]
+"90433" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED))<SUB>4881</SUB>> ]
+"90447" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012        tif-&gt;tif_dir.td_compression == COMPRESSION_NONE)<SUB>4889</SUB>> ]
+"90462" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED)) == TIFF_STRIPCHOP)<SUB>4891</SUB>> ]
+"90472" [label = <(TIFFStripSize64,TIFFStripSize64(tif))<SUB>4892</SUB>> ]
+"90539" [label = <(FIELD_IDENTIFIER,tif_scanlinesize,tif_scanlinesize)<SUB>4913</SUB>> ]
+"90552" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_tilesize)<SUB>4921</SUB>> ]
+"90555" [label = <(TIFFTileSize,TIFFTileSize(tif))<SUB>4921</SUB>> ]
+"90558" [label = <(&lt;operator&gt;.logicalNot,!tif-&gt;tif_tilesize)<SUB>4922</SUB>> ]
+"88398" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4063</SUB>> ]
+"88399" [label = <(&lt;operator&gt;.minus,-1)<SUB>4063</SUB>> ]
+"88417" [label = <(FIELD_IDENTIFIER,tif_diroff,tif_diroff)<SUB>4071</SUB>> ]
+"88420" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>4071</SUB>> ]
+"88433" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_curdir ==\012                                              TIFF_NON_EXISTENT_DIR_NUMBER)<SUB>4080</SUB>> ]
+"88439" [label = <(&lt;operator&gt;.addition,tif-&gt;tif_curdir + 1)<SUB>4083</SUB>> ]
+"88458" [label = <(FIELD_IDENTIFIER,tif_nextdiroff,tif_nextdiroff)<SUB>4089</SUB>> ]
+"88480" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>4101</SUB>> ]
+"88485" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>4103</SUB>> ]
+"88504" [label = <(&lt;operator&gt;.assignment,ma = dir)<SUB>4115</SUB>> ]
+"88507" [label = <(&lt;operator&gt;.assignment,mb = 0)<SUB>4115</SUB>> ]
+"88534" [label = <(&lt;operator&gt;.lessThan,nb &lt; dircount)<SUB>4119</SUB>> ]
+"88597" [label = <(TIFFFetchNormalTag,TIFFFetchNormalTag(tif, dp, 0))<SUB>4166</SUB>> ]
+"88606" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4168</SUB>> ]
+"88627" [label = <(&lt;operator&gt;.addressOf,&amp;value)<SUB>4181</SUB>> ]
+"88634" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryPersampleShort(tif, dp, &amp;value))<SUB>4183</SUB>> ]
+"88646" [label = <(TIFFReadDirEntryOutputErr,TIFFReadDirEntryOutputErr(tif, err, module, &quot;Compression&quot;, 0))<SUB>4186</SUB>> ]
+"88655" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_COMPRESSION, value))<SUB>4189</SUB>> ]
+"88664" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4191</SUB>> ]
+"88669" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_COMPRESSION, COMPRESSION_NONE))<SUB>4195</SUB>> ]
+"88696" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4203</SUB>> ]
+"88700" [label = <(TIFFReadDirectoryFindFieldInfo,TIFFReadDirectoryFindFieldInfo(tif, dp-&gt;tdir_tag, &amp;fii))<SUB>4205</SUB>> ]
+"88778" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4234</SUB>> ]
+"88782" [label = <(&lt;operator&gt;.assignment,fip = tif-&gt;tif_fields[fii])<SUB>4236</SUB>> ]
+"88873" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4278</SUB>> ]
+"88876" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4278</SUB>> ]
+"88880" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4279</SUB>> ]
+"88883" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4279</SUB>> ]
+"88888" [label = <(_TIFFFillStriles,_TIFFFillStriles(tif))<SUB>4281</SUB>> ]
+"88901" [label = <(&lt;operator&gt;.notEquals,dp != 0)<SUB>4285</SUB>> ]
+"88904" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_count == 1)<SUB>4285</SUB>> ]
+"88910" [label = <(&lt;operator&gt;.assignment,dp = TIFFReadDirectoryFindEntry(tif, dir, dircount,\012                                            TIFFTAG_STRIPBYTECOUNTS))<SUB>4287</SUB>> ]
+"88969" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4312</SUB>> ]
+"89532" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4550</SUB>> ]
+"89538" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_PHOTOMETRIC))<SUB>4552</SUB>> ]
+"89542" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                tif, module,\012                &quot;Photometric tag is missing, assuming data is YCbCr&quot;))<SUB>4554</SUB>> ]
+"89578" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_BITSPERSAMPLE))<SUB>4567</SUB>> ]
+"89582" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                tif, module,\012                &quot;BitsPerSample tag is missing, assuming 8 bits per sample&quot;))<SUB>4569</SUB>> ]
+"89596" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_SAMPLESPERPIXEL))<SUB>4575</SUB>> ]
+"89677" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4613</SUB>> ]
+"89680" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4613</SUB>> ]
+"89685" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4614</SUB>> ]
+"89688" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>4614</SUB>> ]
+"89690" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4614</SUB>> ]
+"89693" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>4614</SUB>> ]
+"89696" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4615</SUB>> ]
+"89699" [label = <(FIELD_IDENTIFIER,td_tilelength,td_tilelength)<SUB>4615</SUB>> ]
+"89701" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4615</SUB>> ]
+"89704" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>4615</SUB>> ]
+"89707" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4616</SUB>> ]
+"89710" [label = <(FIELD_IDENTIFIER,td_tiledepth,td_tiledepth)<SUB>4616</SUB>> ]
+"89712" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4616</SUB>> ]
+"89715" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>4616</SUB>> ]
+"89719" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4617</SUB>> ]
+"89725" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4621</SUB>> ]
+"89730" [label = <(TIFFNumberOfTiles,TIFFNumberOfTiles(tif))<SUB>4621</SUB>> ]
+"89733" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4622</SUB>> ]
+"89742" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4624</SUB>> ]
+"89750" [label = <(isTiled,isTiled(tif))<SUB>4627</SUB>> ]
+"89771" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4631</SUB>> ]
+"89777" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4632</SUB>> ]
+"89780" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>4632</SUB>> ]
+"89782" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4632</SUB>> ]
+"89785" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>4632</SUB>> ]
+"89794" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_dir.td_compression == COMPRESSION_OJPEG) &amp;&amp;\012            (isTiled(tif) == 0))<SUB>4636</SUB>> ]
+"89806" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_nstrips == 1)<SUB>4637</SUB>> ]
+"89814" [label = <(TIFFSetFieldBit,TIFFSetFieldBit(tif, FIELD_STRIPOFFSETS))<SUB>4647</SUB>> ]
+"89831" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0)<SUB>4657</SUB>> ]
+"89888" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count == 0)<SUB>4663</SUB>> ]
+"89898" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_type)<SUB>4664</SUB>> ]
+"89908" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_offset)<SUB>4665</SUB>> ]
+"89915" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>4665</SUB>> ]
+"89923" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD))<SUB>4670</SUB>> ]
+"90004" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4696</SUB>> ]
+"90011" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>4698</SUB>> ]
+"90016" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>4698</SUB>> ]
+"90032" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4710</SUB>> ]
+"90035" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>4710</SUB>> ]
+"90038" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4711</SUB>> ]
+"90041" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>4711</SUB>> ]
+"90043" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>4712</SUB>> ]
+"90044" [label = <(&lt;operator&gt;.subtraction,tif-&gt;tif_dir.td_samplesperpixel - color_channels)<SUB>4712</SUB>> ]
+"90054" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>4716</SUB>> ]
+"90055" [label = <(_TIFFcallocExt,_TIFFcallocExt(\012            tif, tif-&gt;tif_dir.td_extrasamples, sizeof(uint16_t)))<SUB>4716</SUB>> ]
+"90068" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                          &quot;Failed to allocate memory for &quot;\012                          &quot;temporary new sampleinfo array &quot;\012                          &quot;(%&quot; PRIu16 &quot; 16 bit elements)&quot;,\012                          tif-&gt;tif_dir.td_extrasamples))<SUB>4720</SUB>> ]
+"90083" [label = <(memcpy,memcpy(new_sampleinfo, tif-&gt;tif_dir.td_sampleinfo,\012                   old_extrasamples * sizeof(uint16_t)))<SUB>4729</SUB>> ]
+"90097" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_sampleinfo)<SUB>4731</SUB>> ]
+"90104" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4732</SUB>> ]
+"90107" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>4732</SUB>> ]
+"90115" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4739</SUB>> ]
+"90118" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4739</SUB>> ]
+"90127" [label = <(&lt;operator&gt;.greaterEqualsThan,tif-&gt;tif_dir.td_bitspersample &gt;= 8)<SUB>4742</SUB>> ]
+"90134" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_samplesperpixel == 3)<SUB>4743</SUB>> ]
+"90142" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_photometric = PHOTOMETRIC_RGB)<SUB>4744</SUB>> ]
+"90178" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4758</SUB>> ]
+"90184" [label = <(TIFFFieldSet,TIFFFieldSet(tif, FIELD_STRIPBYTECOUNTS))<SUB>4763</SUB>> ]
+"90231" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                tif, module,\012                &quot;TIFF directory is missing required &quot;\012                &quot;\&quot;StripByteCounts\&quot; field, calculating from imagelength&quot;))<SUB>4779</SUB>> ]
+"90368" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4834</SUB>> ]
+"90375" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_maxsamplevalue = 0xFFFF)<SUB>4835</SUB>> ]
+"90411" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG)<SUB>4878</SUB>> ]
+"90418" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_nstrips == 1)<SUB>4879</SUB>> ]
+"90426" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4880</SUB>> ]
+"90434" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4881</SUB>> ]
+"90437" [label = <(&lt;operator&gt;.or,TIFF_STRIPCHOP | TIFF_ISTILED)<SUB>4881</SUB>> ]
+"90448" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG)<SUB>4889</SUB>> ]
+"90455" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_compression == COMPRESSION_NONE)<SUB>4890</SUB>> ]
+"90463" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; (TIFF_STRIPCHOP | TIFF_ISTILED))<SUB>4891</SUB>> ]
+"90554" [label = <(FIELD_IDENTIFIER,tif_tilesize,tif_tilesize)<SUB>4921</SUB>> ]
+"90559" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_tilesize)<SUB>4922</SUB>> ]
+"90563" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Cannot handle zero tile size&quot;))<SUB>4924</SUB>> ]
+"90567" [label = <(RETURN,return (0);,return (0);)<SUB>4925</SUB>> ]
+"90572" [label = <(&lt;operator&gt;.logicalNot,!TIFFStripSize(tif))<SUB>4930</SUB>> ]
+"88434" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>4080</SUB>> ]
+"88440" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curdir)<SUB>4083</SUB>> ]
+"88487" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>4103</SUB>> ]
+"88538" [label = <(&lt;operator&gt;.postIncrement,na++)<SUB>4119</SUB>> ]
+"88540" [label = <(&lt;operator&gt;.postIncrement,nb++)<SUB>4119</SUB>> ]
+"88636" [label = <(TIFFReadDirEntryPersampleShort,TIFFReadDirEntryPersampleShort(tif, dp, &amp;value))<SUB>4183</SUB>> ]
+"88670" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_COMPRESSION, COMPRESSION_NONE))<SUB>4195</SUB>> ]
+"88698" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4203</SUB>> ]
+"88702" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4205</SUB>> ]
+"88705" [label = <(&lt;operator&gt;.addressOf,&amp;fii)<SUB>4205</SUB>> ]
+"88708" [label = <(&lt;operator&gt;.equals,fii == FAILED_FII)<SUB>4206</SUB>> ]
+"88780" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4234</SUB>> ]
+"88784" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_fields[fii])<SUB>4236</SUB>> ]
+"88790" [label = <(&lt;operator&gt;.equals,fip-&gt;field_bit == FIELD_IGNORE)<SUB>4237</SUB>> ]
+"88875" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4278</SUB>> ]
+"88882" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4279</SUB>> ]
+"88905" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4285</SUB>> ]
+"88912" [label = <(TIFFReadDirectoryFindEntry,TIFFReadDirectoryFindEntry(tif, dir, dircount,\012                                            TIFFTAG_STRIPBYTECOUNTS))<SUB>4287</SUB>> ]
+"88918" [label = <(&lt;operator&gt;.logicalAnd,(dp != 0) &amp;&amp; (dp-&gt;tdir_count == 1))<SUB>4289</SUB>> ]
+"88971" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4312</SUB>> ]
+"88974" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4314</SUB>> ]
+"89547" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_YCBCR))<SUB>4557</SUB>> ]
+"89587" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_BITSPERSAMPLE, 8))<SUB>4572</SUB>> ]
+"89601" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_RGB)<SUB>4577</SUB>> ]
+"89622" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_YCBCR)<SUB>4585</SUB>> ]
+"89679" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4613</SUB>> ]
+"89687" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4614</SUB>> ]
+"89692" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4614</SUB>> ]
+"89698" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4615</SUB>> ]
+"89703" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4615</SUB>> ]
+"89709" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4616</SUB>> ]
+"89714" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4616</SUB>> ]
+"89726" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4621</SUB>> ]
+"89729" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4621</SUB>> ]
+"89735" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4622</SUB>> ]
+"89779" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4632</SUB>> ]
+"89784" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4632</SUB>> ]
+"89795" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_compression == COMPRESSION_OJPEG)<SUB>4636</SUB>> ]
+"89802" [label = <(&lt;operator&gt;.equals,isTiled(tif) == 0)<SUB>4637</SUB>> ]
+"89807" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4637</SUB>> ]
+"89819" [label = <(MissingRequired,MissingRequired(tif, isTiled(tif) ? &quot;TileOffsets&quot; : &quot;StripOffsets&quot;))<SUB>4652</SUB>> ]
+"89832" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0)<SUB>4657</SUB>> ]
+"89879" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0)<SUB>4662</SUB>> ]
+"89889" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_count)<SUB>4663</SUB>> ]
+"89899" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4664</SUB>> ]
+"89904" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4664</SUB>> ]
+"89909" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4665</SUB>> ]
+"89914" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>4665</SUB>> ]
+"89924" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>4670</SUB>> ]
+"90012" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4698</SUB>> ]
+"90015" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>4698</SUB>> ]
+"90017" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4698</SUB>> ]
+"90020" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>4698</SUB>> ]
+"90034" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4710</SUB>> ]
+"90040" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4711</SUB>> ]
+"90045" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>4712</SUB>> ]
+"90057" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>4717</SUB>> ]
+"90062" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>4717</SUB>> ]
+"90072" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>4724</SUB>> ]
+"90085" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_sampleinfo)<SUB>4729</SUB>> ]
+"90090" [label = <(&lt;operator&gt;.multiplication,old_extrasamples * sizeof(uint16_t))<SUB>4730</SUB>> ]
+"90098" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4731</SUB>> ]
+"90101" [label = <(FIELD_IDENTIFIER,td_sampleinfo,td_sampleinfo)<SUB>4731</SUB>> ]
+"90106" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4732</SUB>> ]
+"90117" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4739</SUB>> ]
+"90128" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4742</SUB>> ]
+"90135" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>4743</SUB>> ]
+"90143" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4744</SUB>> ]
+"90189" [label = <(&lt;operator&gt;.logicalOr,(tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 1) ||\012                (tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_SEPARATE &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips !=\012                     (uint32_t)tif-&gt;tif_dir.td_samplesperpixel))<SUB>4770</SUB>> ]
+"90236" [label = <(&lt;operator&gt;.lessThan,EstimateStripByteCounts(tif, dir, dircount) &lt; 0)<SUB>4783</SUB>> ]
+"90357" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>4830</SUB>> ]
+"90369" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4834</SUB>> ]
+"90372" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4834</SUB>> ]
+"90376" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_maxsamplevalue)<SUB>4835</SUB>> ]
+"90384" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_maxsamplevalue =\012                (uint16_t)((1L &lt;&lt; tif-&gt;tif_dir.td_bitspersample) - 1))<SUB>4837</SUB>> ]
+"90412" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4878</SUB>> ]
+"90419" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4879</SUB>> ]
+"90427" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4880</SUB>> ]
+"90430" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4880</SUB>> ]
+"90436" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4881</SUB>> ]
+"90449" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4889</SUB>> ]
+"90456" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4890</SUB>> ]
+"90464" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4891</SUB>> ]
+"90467" [label = <(&lt;operator&gt;.or,TIFF_STRIPCHOP | TIFF_ISTILED)<SUB>4891</SUB>> ]
+"90561" [label = <(FIELD_IDENTIFIER,tif_tilesize,tif_tilesize)<SUB>4922</SUB>> ]
+"90573" [label = <(TIFFStripSize,TIFFStripSize(tif))<SUB>4930</SUB>> ]
+"90576" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Cannot handle zero strip size&quot;))<SUB>4932</SUB>> ]
+"90580" [label = <(RETURN,return (0);,return (0);)<SUB>4933</SUB>> ]
+"88436" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>4080</SUB>> ]
+"88442" [label = <(FIELD_IDENTIFIER,tif_curdir,tif_curdir)<SUB>4083</SUB>> ]
+"88524" [label = <(&lt;operator&gt;.assignment,na = ma + 1)<SUB>4119</SUB>> ]
+"88529" [label = <(&lt;operator&gt;.assignment,nb = mb + 1)<SUB>4119</SUB>> ]
+"88544" [label = <(&lt;operator&gt;.equals,ma-&gt;tdir_tag == na-&gt;tdir_tag)<SUB>4121</SUB>> ]
+"88639" [label = <(&lt;operator&gt;.addressOf,&amp;value)<SUB>4183</SUB>> ]
+"88704" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4205</SUB>> ]
+"88710" [label = <(FAILED_FII,FAILED_FII)<SUB>4206</SUB>> ]
+"88717" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                                &quot;Unknown field with tag %&quot; PRIu16 &quot; (0x%&quot; PRIx16\012                                &quot;) encountered&quot;,\012                                dp-&gt;tdir_tag, dp-&gt;tdir_tag))<SUB>4208</SUB>> ]
+"88785" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fields)<SUB>4236</SUB>> ]
+"88791" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>4237</SUB>> ]
+"88796" [label = <(&lt;operator&gt;.assignment,dp-&gt;tdir_ignore = TRUE)<SUB>4238</SUB>> ]
+"88907" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4285</SUB>> ]
+"88919" [label = <(&lt;operator&gt;.notEquals,dp != 0)<SUB>4289</SUB>> ]
+"88922" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_count == 1)<SUB>4289</SUB>> ]
+"88928" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_planarconfig = PLANARCONFIG_CONTIG)<SUB>4291</SUB>> ]
+"88935" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                                &quot;Planarconfig tag value assumed incorrect, &quot;\012                                &quot;assuming data is contig instead of chunky&quot;))<SUB>4292</SUB>> ]
+"88976" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4314</SUB>> ]
+"89215" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;(tif-&gt;tif_dir.td_stripoffset_entry), dp,\012                                sizeof(TIFFDirEntry)))<SUB>4404</SUB>> ]
+"89289" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;(tif-&gt;tif_dir.td_stripbytecount_entry), dp,\012                                sizeof(TIFFDirEntry)))<SUB>4429</SUB>> ]
+"89520" [label = <(&lt;operator&gt;.cast,(void)TIFFFetchNormalTag(tif, dp, TRUE))<SUB>4528</SUB>> ]
+"89548" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_YCBCR))<SUB>4557</SUB>> ]
+"89557" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_RGB)<SUB>4560</SUB>> ]
+"89588" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_BITSPERSAMPLE, 8))<SUB>4572</SUB>> ]
+"89602" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4577</SUB>> ]
+"89609" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                                &quot;SamplesPerPixel tag is missing, &quot;\012                                &quot;assuming correct SamplesPerPixel value is 3&quot;))<SUB>4579</SUB>> ]
+"89623" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4585</SUB>> ]
+"89630" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                                &quot;SamplesPerPixel tag is missing, &quot;\012                                &quot;applying correct SamplesPerPixel value of 3&quot;))<SUB>4587</SUB>> ]
+"89728" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4621</SUB>> ]
+"89796" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4636</SUB>> ]
+"89803" [label = <(isTiled,isTiled(tif))<SUB>4637</SUB>> ]
+"89808" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4637</SUB>> ]
+"89811" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4637</SUB>> ]
+"89821" [label = <(&lt;operator&gt;.conditional,isTiled(tif) ? &quot;TileOffsets&quot; : &quot;StripOffsets&quot;)<SUB>4652</SUB>> ]
+"89833" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0)<SUB>4657</SUB>> ]
+"89868" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8 == 0)<SUB>4661</SUB>> ]
+"89880" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag)<SUB>4662</SUB>> ]
+"89890" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4663</SUB>> ]
+"89895" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4663</SUB>> ]
+"89900" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4664</SUB>> ]
+"89903" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4664</SUB>> ]
+"89910" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4665</SUB>> ]
+"89913" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4665</SUB>> ]
+"89925" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4670</SUB>> ]
+"89931" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0)<SUB>4672</SUB>> ]
+"89965" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag != 0)<SUB>4681</SUB>> ]
+"90014" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4698</SUB>> ]
+"90019" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4698</SUB>> ]
+"90046" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4712</SUB>> ]
+"90049" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>4712</SUB>> ]
+"90058" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4717</SUB>> ]
+"90061" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>4717</SUB>> ]
+"90073" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4724</SUB>> ]
+"90076" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>4724</SUB>> ]
+"90086" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4729</SUB>> ]
+"90089" [label = <(FIELD_IDENTIFIER,td_sampleinfo,td_sampleinfo)<SUB>4729</SUB>> ]
+"90092" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>4730</SUB>> ]
+"90100" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4731</SUB>> ]
+"90129" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4742</SUB>> ]
+"90132" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4742</SUB>> ]
+"90136" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4743</SUB>> ]
+"90139" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>4743</SUB>> ]
+"90144" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4744</SUB>> ]
+"90147" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4744</SUB>> ]
+"90152" [label = <(&lt;operator&gt;.greaterEqualsThan,tif-&gt;tif_dir.td_bitspersample &gt;= 8)<SUB>4745</SUB>> ]
+"90190" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 1)<SUB>4770</SUB>> ]
+"90205" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_SEPARATE &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips !=\012                     (uint32_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>4772</SUB>> ]
+"90227" [label = <(MissingRequired,MissingRequired(tif, &quot;StripByteCounts&quot;))<SUB>4776</SUB>> ]
+"90237" [label = <(EstimateStripByteCounts,EstimateStripByteCounts(tif, dir, dircount))<SUB>4783</SUB>> ]
+"90247" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_nstrips == 1 &amp;&amp;\012                 !(tif-&gt;tif_flags &amp; TIFF_ISTILED) &amp;&amp; ByteCountLooksBad(tif))<SUB>4786</SUB>> ]
+"90358" [label = <(UNKNOWN,void *,void *)<SUB>4830</SUB>> ]
+"90371" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4834</SUB>> ]
+"90377" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4835</SUB>> ]
+"90380" [label = <(FIELD_IDENTIFIER,td_maxsamplevalue,td_maxsamplevalue)<SUB>4835</SUB>> ]
+"90385" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_maxsamplevalue)<SUB>4837</SUB>> ]
+"90390" [label = <(&lt;operator&gt;.cast,(uint16_t)((1L &lt;&lt; tif-&gt;tif_dir.td_bitspersample) - 1))<SUB>4838</SUB>> ]
+"90413" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4878</SUB>> ]
+"90416" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4878</SUB>> ]
+"90420" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4879</SUB>> ]
+"90423" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4879</SUB>> ]
+"90429" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4880</SUB>> ]
+"90450" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4889</SUB>> ]
+"90453" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4889</SUB>> ]
+"90457" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4890</SUB>> ]
+"90460" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4890</SUB>> ]
+"90466" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4891</SUB>> ]
+"88526" [label = <(&lt;operator&gt;.addition,ma + 1)<SUB>4119</SUB>> ]
+"88531" [label = <(&lt;operator&gt;.addition,mb + 1)<SUB>4119</SUB>> ]
+"88545" [label = <(&lt;operator&gt;.indirectFieldAccess,ma-&gt;tdir_tag)<SUB>4121</SUB>> ]
+"88548" [label = <(&lt;operator&gt;.indirectFieldAccess,na-&gt;tdir_tag)<SUB>4121</SUB>> ]
+"88552" [label = <(&lt;operator&gt;.assignment,na-&gt;tdir_ignore = TRUE)<SUB>4123</SUB>> ]
+"88721" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4211</SUB>> ]
+"88724" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4211</SUB>> ]
+"88728" [label = <(&lt;operator&gt;.logicalNot,!_TIFFMergeFields(\012                        tif,\012                        _TIFFCreateAnonField(tif, dp-&gt;tdir_tag,\012                                             (TIFFDataType)dp-&gt;tdir_type),\012                        1))<SUB>4214</SUB>> ]
+"88787" [label = <(FIELD_IDENTIFIER,tif_fields,tif_fields)<SUB>4236</SUB>> ]
+"88793" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>4237</SUB>> ]
+"88797" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4238</SUB>> ]
+"88923" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4289</SUB>> ]
+"88929" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4291</SUB>> ]
+"88991" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryShort(tif, dp, &amp;value))<SUB>4334</SUB>> ]
+"89061" [label = <(&lt;operator&gt;.assignment,*data = NULL)<SUB>4356</SUB>> ]
+"89120" [label = <(&lt;operator&gt;.assignment,saved_flags = tif-&gt;tif_flags)<SUB>4373</SUB>> ]
+"89125" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_PERSAMPLE)<SUB>4374</SUB>> ]
+"89130" [label = <(&lt;operator&gt;.assignment,m = TIFFSetField(tif, dp-&gt;tdir_tag, data))<SUB>4375</SUB>> ]
+"89138" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_flags = saved_flags)<SUB>4376</SUB>> ]
+"89143" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, data))<SUB>4377</SUB>> ]
+"89157" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_type)<SUB>4384</SUB>> ]
+"89216" [label = <(&lt;operator&gt;.addressOf,&amp;(tif-&gt;tif_dir.td_stripoffset_entry))<SUB>4404</SUB>> ]
+"89223" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFDirEntry))<SUB>4405</SUB>> ]
+"89231" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_type)<SUB>4409</SUB>> ]
+"89290" [label = <(&lt;operator&gt;.addressOf,&amp;(tif-&gt;tif_dir.td_stripbytecount_entry))<SUB>4429</SUB>> ]
+"89297" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFDirEntry))<SUB>4430</SUB>> ]
+"89310" [label = <(&lt;operator&gt;.assignment,*value = NULL)<SUB>4439</SUB>> ]
+"89371" [label = <(&lt;operator&gt;.assignment,countpersample = (1U &lt;&lt; tif-&gt;tif_dir.td_bitspersample))<SUB>4469</SUB>> ]
+"89521" [label = <(UNKNOWN,void,void)<SUB>4528</SUB>> ]
+"89522" [label = <(TIFFFetchNormalTag,TIFFFetchNormalTag(tif, dp, TRUE))<SUB>4528</SUB>> ]
+"89558" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4560</SUB>> ]
+"89565" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_photometric = PHOTOMETRIC_YCBCR)<SUB>4562</SUB>> ]
+"89572" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                            &quot;Photometric tag value assumed incorrect, &quot;\012                            &quot;assuming data is YCbCr instead of RGB&quot;))<SUB>4563</SUB>> ]
+"89603" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4577</SUB>> ]
+"89606" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4577</SUB>> ]
+"89614" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 3))<SUB>4582</SUB>> ]
+"89624" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4585</SUB>> ]
+"89627" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4585</SUB>> ]
+"89635" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 3))<SUB>4590</SUB>> ]
+"89797" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4636</SUB>> ]
+"89800" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4636</SUB>> ]
+"89810" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4637</SUB>> ]
+"89822" [label = <(isTiled,isTiled(tif))<SUB>4652</SUB>> ]
+"89834" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0 &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0)<SUB>4657</SUB>> ]
+"89859" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_type == 0)<SUB>4660</SUB>> ]
+"89869" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset.toff_long8)<SUB>4661</SUB>> ]
+"89881" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4662</SUB>> ]
+"89886" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4662</SUB>> ]
+"89891" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4663</SUB>> ]
+"89894" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4663</SUB>> ]
+"89902" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4664</SUB>> ]
+"89912" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4665</SUB>> ]
+"89927" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4670</SUB>> ]
+"89932" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag)<SUB>4672</SUB>> ]
+"89966" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry.tdir_tag)<SUB>4681</SUB>> ]
+"90048" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4712</SUB>> ]
+"90060" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4717</SUB>> ]
+"90075" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4724</SUB>> ]
+"90088" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4729</SUB>> ]
+"90131" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4742</SUB>> ]
+"90138" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4743</SUB>> ]
+"90146" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4744</SUB>> ]
+"90153" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4745</SUB>> ]
+"90160" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_dir.td_photometric = PHOTOMETRIC_MINISBLACK)<SUB>4746</SUB>> ]
+"90191" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG)<SUB>4770</SUB>> ]
+"90198" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_dir.td_nstrips &gt; 1)<SUB>4771</SUB>> ]
+"90206" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>4772</SUB>> ]
+"90213" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_nstrips !=\012                     (uint32_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>4773</SUB>> ]
+"90248" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_dir.td_nstrips == 1 &amp;&amp;\012                 !(tif-&gt;tif_flags &amp; TIFF_ISTILED))<SUB>4786</SUB>> ]
+"90262" [label = <(ByteCountLooksBad,ByteCountLooksBad(tif))<SUB>4787</SUB>> ]
+"90265" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                            &quot;Bogus \&quot;StripByteCounts\&quot; field, ignoring and &quot;\012                            &quot;calculating from imagelength&quot;))<SUB>4795</SUB>> ]
+"90379" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4835</SUB>> ]
+"90386" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4837</SUB>> ]
+"90389" [label = <(FIELD_IDENTIFIER,td_maxsamplevalue,td_maxsamplevalue)<SUB>4837</SUB>> ]
+"90391" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>4838</SUB>> ]
+"90392" [label = <(&lt;operator&gt;.subtraction,(1L &lt;&lt; tif-&gt;tif_dir.td_bitspersample) - 1)<SUB>4838</SUB>> ]
+"90415" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4878</SUB>> ]
+"90422" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4879</SUB>> ]
+"90452" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4889</SUB>> ]
+"90459" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4890</SUB>> ]
+"88547" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4121</SUB>> ]
+"88550" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4121</SUB>> ]
+"88553" [label = <(&lt;operator&gt;.indirectFieldAccess,na-&gt;tdir_ignore)<SUB>4123</SUB>> ]
+"88712" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4206</SUB>> ]
+"88723" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4211</SUB>> ]
+"88726" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4211</SUB>> ]
+"88729" [label = <(_TIFFMergeFields,_TIFFMergeFields(\012                        tif,\012                        _TIFFCreateAnonField(tif, dp-&gt;tdir_tag,\012                                             (TIFFDataType)dp-&gt;tdir_type),\012                        1))<SUB>4214</SUB>> ]
+"88743" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                        tif, module,\012                        &quot;Registering anonymous field with tag %&quot; PRIu16\012                        &quot; (0x%&quot; PRIx16 &quot;) failed&quot;,\012                        dp-&gt;tdir_tag, dp-&gt;tdir_tag))<SUB>4220</SUB>> ]
+"88753" [label = <(&lt;operator&gt;.assignment,dp-&gt;tdir_ignore = TRUE)<SUB>4225</SUB>> ]
+"88799" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4238</SUB>> ]
+"88804" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4241</SUB>> ]
+"88925" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4289</SUB>> ]
+"88930" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4291</SUB>> ]
+"88933" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4291</SUB>> ]
+"88993" [label = <(TIFFReadDirEntryShort,TIFFReadDirEntryShort(tif, dp, &amp;value))<SUB>4334</SUB>> ]
+"88999" [label = <(&lt;operator&gt;.equals,err == TIFFReadDirEntryErrCount)<SUB>4335</SUB>> ]
+"89011" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>4338</SUB>> ]
+"89035" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, dp-&gt;tdir_tag, value))<SUB>4346</SUB>> ]
+"89045" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_tag == TIFFTAG_BITSPERSAMPLE)<SUB>4348</SUB>> ]
+"89063" [label = <(NULL,NULL)<SUB>4356</SUB>> ]
+"89072" [label = <(&lt;operator&gt;.notEquals,dp-&gt;tdir_count !=\012                        (uint64_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>4360</SUB>> ]
+"89097" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>4365</SUB>> ]
+"89122" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4373</SUB>> ]
+"89126" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4374</SUB>> ]
+"89132" [label = <(TIFFSetField,TIFFSetField(tif, dp-&gt;tdir_tag, data))<SUB>4375</SUB>> ]
+"89139" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4376</SUB>> ]
+"89147" [label = <(&lt;operator&gt;.logicalNot,!m)<SUB>4378</SUB>> ]
+"89159" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4384</SUB>> ]
+"89217" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4404</SUB>> ]
+"89233" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4409</SUB>> ]
+"89291" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4429</SUB>> ]
+"89312" [label = <(NULL,NULL)<SUB>4439</SUB>> ]
+"89318" [label = <(&lt;operator&gt;.logicalNot,!bitspersample_read)<SUB>4447</SUB>> ]
+"89340" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_dir.td_bitspersample &gt; 24)<SUB>4459</SUB>> ]
+"89373" [label = <(&lt;operator&gt;.shiftLeft,1U &lt;&lt; tif-&gt;tif_dir.td_bitspersample)<SUB>4469</SUB>> ]
+"89381" [label = <(&lt;operator&gt;.logicalAnd,(dp-&gt;tdir_tag == TIFFTAG_TRANSFERFUNCTION) &amp;&amp;\012                        (dp-&gt;tdir_count == (uint64_t)countpersample))<SUB>4470</SUB>> ]
+"89412" [label = <(&lt;operator&gt;.notEquals,dp-&gt;tdir_count != (uint64_t)countrequired)<SUB>4481</SUB>> ]
+"89433" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>4485</SUB>> ]
+"89481" [label = <(&lt;operator&gt;.equals,TIFFReadDirEntryShort(tif, dp, &amp;valueo) ==\012                        TIFFReadDirEntryErrOk)<SUB>4506</SUB>> ]
+"89559" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4560</SUB>> ]
+"89562" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4560</SUB>> ]
+"89566" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4562</SUB>> ]
+"89605" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4577</SUB>> ]
+"89615" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 3))<SUB>4582</SUB>> ]
+"89626" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4585</SUB>> ]
+"89636" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 3))<SUB>4590</SUB>> ]
+"89645" [label = <(&lt;operator&gt;.logicalOr,(tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_MINISWHITE) ||\012                     (tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_MINISBLACK))<SUB>4593</SUB>> ]
+"89799" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4636</SUB>> ]
+"89835" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012        tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0)<SUB>4657</SUB>> ]
+"89850" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_count == 0)<SUB>4659</SUB>> ]
+"89860" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_type)<SUB>4660</SUB>> ]
+"89870" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_offset)<SUB>4661</SUB>> ]
+"89877" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>4661</SUB>> ]
+"89882" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4662</SUB>> ]
+"89885" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4662</SUB>> ]
+"89893" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4663</SUB>> ]
+"89933" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4672</SUB>> ]
+"89938" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4672</SUB>> ]
+"89942" [label = <(&lt;operator&gt;.logicalNot,!TIFFFetchStripThing(tif, &amp;(tif-&gt;tif_dir.td_stripoffset_entry),\012                                     tif-&gt;tif_dir.td_nstrips,\012                                     &amp;tif-&gt;tif_dir.td_stripoffset_p))<SUB>4674</SUB>> ]
+"89967" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4681</SUB>> ]
+"89972" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4681</SUB>> ]
+"89976" [label = <(&lt;operator&gt;.logicalNot,!TIFFFetchStripThing(\012                    tif, &amp;(tif-&gt;tif_dir.td_stripbytecount_entry),\012                    tif-&gt;tif_dir.td_nstrips, &amp;tif-&gt;tif_dir.td_stripbytecount_p))<SUB>4683</SUB>> ]
+"90154" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4745</SUB>> ]
+"90157" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4745</SUB>> ]
+"90161" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4746</SUB>> ]
+"90169" [label = <(MissingRequired,MissingRequired(tif, &quot;Colormap&quot;))<SUB>4749</SUB>> ]
+"90192" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4770</SUB>> ]
+"90199" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4771</SUB>> ]
+"90207" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4772</SUB>> ]
+"90214" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4773</SUB>> ]
+"90219" [label = <(&lt;operator&gt;.cast,(uint32_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>4774</SUB>> ]
+"90249" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_nstrips == 1)<SUB>4786</SUB>> ]
+"90256" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_ISTILED))<SUB>4787</SUB>> ]
+"90270" [label = <(&lt;operator&gt;.lessThan,EstimateStripByteCounts(tif, dir, dircount) &lt; 0)<SUB>4798</SUB>> ]
+"90388" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4837</SUB>> ]
+"90393" [label = <(&lt;operator&gt;.shiftLeft,1L &lt;&lt; tif-&gt;tif_dir.td_bitspersample)<SUB>4838</SUB>> ]
+"88555" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4123</SUB>> ]
+"88713" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4206</SUB>> ]
+"88714" [label = <(&lt;operator&gt;.minus,-1)<SUB>4206</SUB>> ]
+"88731" [label = <(_TIFFCreateAnonField,_TIFFCreateAnonField(tif, dp-&gt;tdir_tag,\012                                             (TIFFDataType)dp-&gt;tdir_type))<SUB>4216</SUB>> ]
+"88747" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4224</SUB>> ]
+"88750" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4224</SUB>> ]
+"88754" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4225</SUB>> ]
+"88760" [label = <(TIFFReadDirectoryFindFieldInfo,TIFFReadDirectoryFindFieldInfo(tif, dp-&gt;tdir_tag, &amp;fii))<SUB>4229</SUB>> ]
+"88767" [label = <(assert,assert(fii != FAILED_FII))<SUB>4230</SUB>> ]
+"88806" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4241</SUB>> ]
+"88816" [label = <(TIFFSetFieldBit,TIFFSetFieldBit(tif, fip-&gt;field_bit))<SUB>4247</SUB>> ]
+"88848" [label = <(&lt;operator&gt;.assignment,dp-&gt;tdir_ignore = TRUE)<SUB>4260</SUB>> ]
+"88932" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4291</SUB>> ]
+"88996" [label = <(&lt;operator&gt;.addressOf,&amp;value)<SUB>4334</SUB>> ]
+"89003" [label = <(&lt;operator&gt;.assignment,err =\012                                TIFFReadDirEntryPersampleShort(tif, dp, &amp;value))<SUB>4336</SUB>> ]
+"89015" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4340</SUB>> ]
+"89022" [label = <(TIFFReadDirEntryOutputErr,TIFFReadDirEntryOutputErr(\012                                tif, err, module,\012                                fip ? fip-&gt;field_name : &quot;unknown tagname&quot;, 0))<SUB>4341</SUB>> ]
+"89036" [label = <(TIFFSetField,TIFFSetField(tif, dp-&gt;tdir_tag, value))<SUB>4346</SUB>> ]
+"89046" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4348</SUB>> ]
+"89051" [label = <(&lt;operator&gt;.assignment,bitspersample_read = TRUE)<SUB>4349</SUB>> ]
+"89073" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4360</SUB>> ]
+"89076" [label = <(&lt;operator&gt;.cast,(uint64_t)tif-&gt;tif_dir.td_samplesperpixel)<SUB>4361</SUB>> ]
+"89084" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryErrCount)<SUB>4362</SUB>> ]
+"89101" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4367</SUB>> ]
+"89108" [label = <(TIFFReadDirEntryOutputErr,TIFFReadDirEntryOutputErr(\012                            tif, err, module,\012                            fip ? fip-&gt;field_name : &quot;unknown tagname&quot;, 0))<SUB>4368</SUB>> ]
+"89124" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4373</SUB>> ]
+"89128" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4374</SUB>> ]
+"89134" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4375</SUB>> ]
+"89141" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4376</SUB>> ]
+"89170" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0 &amp;&amp; dp-&gt;tdir_type == 0 &amp;&amp;\012                                  dp-&gt;tdir_offset.toff_long8 == 0))<SUB>4393</SUB>> ]
+"89218" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4404</SUB>> ]
+"89221" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4404</SUB>> ]
+"89244" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0 &amp;&amp; dp-&gt;tdir_type == 0 &amp;&amp;\012                                  dp-&gt;tdir_offset.toff_long8 == 0))<SUB>4418</SUB>> ]
+"89292" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4429</SUB>> ]
+"89295" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4429</SUB>> ]
+"89321" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4449</SUB>> ]
+"89328" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                            tif, module,\012                            &quot;Ignoring %s since BitsPerSample tag not found&quot;,\012                            fip ? fip-&gt;field_name : &quot;unknown tagname&quot;))<SUB>4450</SUB>> ]
+"89341" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4459</SUB>> ]
+"89348" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4461</SUB>> ]
+"89355" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                            tif, module,\012                            &quot;Ignoring %s because BitsPerSample=%&quot; PRIu16 &quot;&gt;24&quot;,\012                            fip ? fip-&gt;field_name : &quot;unknown tagname&quot;,\012                            tif-&gt;tif_dir.td_bitspersample))<SUB>4462</SUB>> ]
+"89375" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4469</SUB>> ]
+"89382" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_tag == TIFFTAG_TRANSFERFUNCTION)<SUB>4470</SUB>> ]
+"89387" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_count == (uint64_t)countpersample)<SUB>4471</SUB>> ]
+"89395" [label = <(&lt;operator&gt;.assignment,countrequired = countpersample)<SUB>4473</SUB>> ]
+"89398" [label = <(&lt;operator&gt;.assignment,incrementpersample = 0)<SUB>4474</SUB>> ]
+"89413" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4481</SUB>> ]
+"89416" [label = <(&lt;operator&gt;.cast,(uint64_t)countrequired)<SUB>4481</SUB>> ]
+"89420" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryErrCount)<SUB>4482</SUB>> ]
+"89437" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4487</SUB>> ]
+"89444" [label = <(TIFFReadDirEntryOutputErr,TIFFReadDirEntryOutputErr(\012                            tif, err, module,\012                            fip ? fip-&gt;field_name : &quot;unknown tagname&quot;, 1))<SUB>4488</SUB>> ]
+"89482" [label = <(TIFFReadDirEntryShort,TIFFReadDirEntryShort(tif, dp, &amp;valueo))<SUB>4506</SUB>> ]
+"89561" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4560</SUB>> ]
+"89567" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4562</SUB>> ]
+"89570" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4562</SUB>> ]
+"89646" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_MINISWHITE)<SUB>4593</SUB>> ]
+"89653" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_photometric == PHOTOMETRIC_MINISBLACK)<SUB>4594</SUB>> ]
+"89836" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDWR)<SUB>4657</SUB>> ]
+"89841" [label = <(&lt;operator&gt;.notEquals,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag != 0)<SUB>4658</SUB>> ]
+"89851" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_count)<SUB>4659</SUB>> ]
+"89861" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4660</SUB>> ]
+"89866" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4660</SUB>> ]
+"89871" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4661</SUB>> ]
+"89876" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>4661</SUB>> ]
+"89884" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4662</SUB>> ]
+"89934" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4672</SUB>> ]
+"89937" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4672</SUB>> ]
+"89943" [label = <(TIFFFetchStripThing,TIFFFetchStripThing(tif, &amp;(tif-&gt;tif_dir.td_stripoffset_entry),\012                                     tif-&gt;tif_dir.td_nstrips,\012                                     &amp;tif-&gt;tif_dir.td_stripoffset_p))<SUB>4674</SUB>> ]
+"89968" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4681</SUB>> ]
+"89971" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4681</SUB>> ]
+"89977" [label = <(TIFFFetchStripThing,TIFFFetchStripThing(\012                    tif, &amp;(tif-&gt;tif_dir.td_stripbytecount_entry),\012                    tif-&gt;tif_dir.td_nstrips, &amp;tif-&gt;tif_dir.td_stripbytecount_p))<SUB>4683</SUB>> ]
+"90156" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4745</SUB>> ]
+"90162" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4746</SUB>> ]
+"90165" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4746</SUB>> ]
+"90193" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4770</SUB>> ]
+"90196" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4770</SUB>> ]
+"90200" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4771</SUB>> ]
+"90203" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4771</SUB>> ]
+"90208" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4772</SUB>> ]
+"90211" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4772</SUB>> ]
+"90215" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4773</SUB>> ]
+"90218" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4773</SUB>> ]
+"90220" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4774</SUB>> ]
+"90221" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>4774</SUB>> ]
+"90250" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4786</SUB>> ]
+"90257" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_ISTILED)<SUB>4787</SUB>> ]
+"90271" [label = <(EstimateStripByteCounts,EstimateStripByteCounts(tif, dir, dircount))<SUB>4798</SUB>> ]
+"90281" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012                 tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 2 &amp;&amp;\012                 tif-&gt;tif_dir.td_compression == COMPRESSION_NONE &amp;&amp;\012                 TIFFGetStrileByteCount(tif, 0) !=\012                     TIFFGetStrileByteCount(tif, 1) &amp;&amp;\012                 TIFFGetStrileByteCount(tif, 0) != 0 &amp;&amp;\012                 TIFFGetStrileByteCount(tif, 1) != 0)<SUB>4801</SUB>> ]
+"90395" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4838</SUB>> ]
+"88733" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4216</SUB>> ]
+"88736" [label = <(&lt;operator&gt;.cast,(TIFFDataType)dp-&gt;tdir_type)<SUB>4217</SUB>> ]
+"88749" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4224</SUB>> ]
+"88752" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4224</SUB>> ]
+"88756" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4225</SUB>> ]
+"88762" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4229</SUB>> ]
+"88765" [label = <(&lt;operator&gt;.addressOf,&amp;fii)<SUB>4229</SUB>> ]
+"88768" [label = <(&lt;operator&gt;.notEquals,fii != FAILED_FII)<SUB>4230</SUB>> ]
+"88818" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>4247</SUB>> ]
+"88841" [label = <(&lt;operator&gt;.logicalNot,!TIFFFetchNormalTag(tif, dp, 0))<SUB>4258</SUB>> ]
+"88849" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4260</SUB>> ]
+"88856" [label = <(&lt;operator&gt;.logicalNot,!_TIFFCheckFieldIsValidForCodec(tif, dp-&gt;tdir_tag))<SUB>4263</SUB>> ]
+"89005" [label = <(TIFFReadDirEntryPersampleShort,TIFFReadDirEntryPersampleShort(tif, dp, &amp;value))<SUB>4337</SUB>> ]
+"89017" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4340</SUB>> ]
+"89026" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4343</SUB>> ]
+"89038" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4346</SUB>> ]
+"89048" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4348</SUB>> ]
+"89065" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>4356</SUB>> ]
+"89075" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4360</SUB>> ]
+"89077" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>4361</SUB>> ]
+"89078" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>4361</SUB>> ]
+"89089" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryDoubleArray(tif, dp, &amp;data))<SUB>4364</SUB>> ]
+"89103" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4367</SUB>> ]
+"89112" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4370</SUB>> ]
+"89136" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4375</SUB>> ]
+"89171" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0 &amp;&amp; dp-&gt;tdir_type == 0 &amp;&amp;\012                                  dp-&gt;tdir_offset.toff_long8 == 0)<SUB>4393</SUB>> ]
+"89197" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4397</SUB>> ]
+"89204" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                                    tif, module, &quot;Invalid data type for tag %s&quot;,\012                                    fip ? fip-&gt;field_name : &quot;unknown tagname&quot;))<SUB>4398</SUB>> ]
+"89220" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4404</SUB>> ]
+"89245" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0 &amp;&amp; dp-&gt;tdir_type == 0 &amp;&amp;\012                                  dp-&gt;tdir_offset.toff_long8 == 0)<SUB>4418</SUB>> ]
+"89271" [label = <(&lt;operator&gt;.assignment,fip = TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4422</SUB>> ]
+"89278" [label = <(TIFFWarningExtR,TIFFWarningExtR(\012                                    tif, module, &quot;Invalid data type for tag %s&quot;,\012                                    fip ? fip-&gt;field_name : &quot;unknown tagname&quot;))<SUB>4423</SUB>> ]
+"89294" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4429</SUB>> ]
+"89314" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>4439</SUB>> ]
+"89323" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4449</SUB>> ]
+"89332" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4453</SUB>> ]
+"89342" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4459</SUB>> ]
+"89345" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4459</SUB>> ]
+"89350" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4461</SUB>> ]
+"89359" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4465</SUB>> ]
+"89365" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>4466</SUB>> ]
+"89376" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4469</SUB>> ]
+"89379" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4469</SUB>> ]
+"89383" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4470</SUB>> ]
+"89388" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4471</SUB>> ]
+"89391" [label = <(&lt;operator&gt;.cast,(uint64_t)countpersample)<SUB>4471</SUB>> ]
+"89403" [label = <(&lt;operator&gt;.assignment,countrequired = 3 * countpersample)<SUB>4478</SUB>> ]
+"89408" [label = <(&lt;operator&gt;.assignment,incrementpersample = countpersample)<SUB>4479</SUB>> ]
+"89415" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4481</SUB>> ]
+"89417" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>4481</SUB>> ]
+"89425" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryShortArray(tif, dp, &amp;value))<SUB>4484</SUB>> ]
+"89439" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4487</SUB>> ]
+"89448" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4490</SUB>> ]
+"89457" [label = <(TIFFSetField,TIFFSetField(tif, dp-&gt;tdir_tag, value,\012                                     value + incrementpersample,\012                                     value + 2 * incrementpersample))<SUB>4494</SUB>> ]
+"89471" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, value))<SUB>4497</SUB>> ]
+"89485" [label = <(&lt;operator&gt;.addressOf,&amp;valueo)<SUB>4506</SUB>> ]
+"89510" [label = <(&lt;operator&gt;.notEquals,value != 0)<SUB>4521</SUB>> ]
+"89569" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4562</SUB>> ]
+"89647" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4593</SUB>> ]
+"89654" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_photometric)<SUB>4594</SUB>> ]
+"89662" [label = <(&lt;operator&gt;.logicalNot,!TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 1))<SUB>4600</SUB>> ]
+"89837" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>4657</SUB>> ]
+"89842" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry.tdir_tag)<SUB>4658</SUB>> ]
+"89852" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4659</SUB>> ]
+"89857" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4659</SUB>> ]
+"89862" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4660</SUB>> ]
+"89865" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4660</SUB>> ]
+"89872" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4661</SUB>> ]
+"89875" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4661</SUB>> ]
+"89936" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4672</SUB>> ]
+"89945" [label = <(&lt;operator&gt;.addressOf,&amp;(tif-&gt;tif_dir.td_stripoffset_entry))<SUB>4674</SUB>> ]
+"89951" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4675</SUB>> ]
+"89956" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir.td_stripoffset_p)<SUB>4676</SUB>> ]
+"89970" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4681</SUB>> ]
+"89979" [label = <(&lt;operator&gt;.addressOf,&amp;(tif-&gt;tif_dir.td_stripbytecount_entry))<SUB>4684</SUB>> ]
+"89985" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4685</SUB>> ]
+"89990" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir.td_stripbytecount_p)<SUB>4685</SUB>> ]
+"90164" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4746</SUB>> ]
+"90195" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4770</SUB>> ]
+"90202" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4771</SUB>> ]
+"90210" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4772</SUB>> ]
+"90217" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4773</SUB>> ]
+"90222" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4774</SUB>> ]
+"90225" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>4774</SUB>> ]
+"90251" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4786</SUB>> ]
+"90254" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4786</SUB>> ]
+"90258" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4787</SUB>> ]
+"90282" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012                 tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 2 &amp;&amp;\012                 tif-&gt;tif_dir.td_compression == COMPRESSION_NONE &amp;&amp;\012                 TIFFGetStrileByteCount(tif, 0) !=\012                     TIFFGetStrileByteCount(tif, 1) &amp;&amp;\012                 TIFFGetStrileByteCount(tif, 0) != 0)<SUB>4801</SUB>> ]
+"90326" [label = <(&lt;operator&gt;.notEquals,TIFFGetStrileByteCount(tif, 1) != 0)<SUB>4808</SUB>> ]
+"90332" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                            &quot;Wrong \&quot;StripByteCounts\&quot; field, ignoring and &quot;\012                            &quot;calculating from imagelength&quot;))<SUB>4820</SUB>> ]
+"90396" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4838</SUB>> ]
+"90399" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4838</SUB>> ]
+"88735" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4216</SUB>> ]
+"88737" [label = <(UNKNOWN,TIFFDataType,TIFFDataType)<SUB>4217</SUB>> ]
+"88738" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_type)<SUB>4217</SUB>> ]
+"88764" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4229</SUB>> ]
+"88770" [label = <(FAILED_FII,FAILED_FII)<SUB>4230</SUB>> ]
+"88820" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>4247</SUB>> ]
+"88842" [label = <(TIFFFetchNormalTag,TIFFFetchNormalTag(tif, dp, 0))<SUB>4258</SUB>> ]
+"88851" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4260</SUB>> ]
+"88857" [label = <(_TIFFCheckFieldIsValidForCodec,_TIFFCheckFieldIsValidForCodec(tif, dp-&gt;tdir_tag))<SUB>4263</SUB>> ]
+"88863" [label = <(&lt;operator&gt;.assignment,dp-&gt;tdir_ignore = TRUE)<SUB>4264</SUB>> ]
+"89008" [label = <(&lt;operator&gt;.addressOf,&amp;value)<SUB>4337</SUB>> ]
+"89019" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4340</SUB>> ]
+"89028" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4343</SUB>> ]
+"89040" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4346</SUB>> ]
+"89066" [label = <(UNKNOWN,void *,void *)<SUB>4356</SUB>> ]
+"89079" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4361</SUB>> ]
+"89082" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>4361</SUB>> ]
+"89091" [label = <(TIFFReadDirEntryDoubleArray,TIFFReadDirEntryDoubleArray(tif, dp, &amp;data))<SUB>4364</SUB>> ]
+"89105" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4367</SUB>> ]
+"89114" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4370</SUB>> ]
+"89172" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0 &amp;&amp; dp-&gt;tdir_type == 0)<SUB>4393</SUB>> ]
+"89189" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_offset.toff_long8 == 0)<SUB>4395</SUB>> ]
+"89199" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4397</SUB>> ]
+"89208" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4400</SUB>> ]
+"89246" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0 &amp;&amp; dp-&gt;tdir_type == 0)<SUB>4418</SUB>> ]
+"89263" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_offset.toff_long8 == 0)<SUB>4420</SUB>> ]
+"89273" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, dp-&gt;tdir_tag))<SUB>4422</SUB>> ]
+"89282" [label = <(&lt;operator&gt;.conditional,fip ? fip-&gt;field_name : &quot;unknown tagname&quot;)<SUB>4425</SUB>> ]
+"89315" [label = <(UNKNOWN,void *,void *)<SUB>4439</SUB>> ]
+"89325" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4449</SUB>> ]
+"89334" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4453</SUB>> ]
+"89344" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4459</SUB>> ]
+"89352" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4461</SUB>> ]
+"89361" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4465</SUB>> ]
+"89366" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4466</SUB>> ]
+"89369" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>4466</SUB>> ]
+"89378" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4469</SUB>> ]
+"89385" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4470</SUB>> ]
+"89390" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4471</SUB>> ]
+"89392" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>4471</SUB>> ]
+"89405" [label = <(&lt;operator&gt;.multiplication,3 * countpersample)<SUB>4478</SUB>> ]
+"89427" [label = <(TIFFReadDirEntryShortArray,TIFFReadDirEntryShortArray(tif, dp, &amp;value))<SUB>4484</SUB>> ]
+"89441" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4487</SUB>> ]
+"89450" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4490</SUB>> ]
+"89459" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4494</SUB>> ]
+"89463" [label = <(&lt;operator&gt;.addition,value + incrementpersample)<SUB>4495</SUB>> ]
+"89466" [label = <(&lt;operator&gt;.addition,value + 2 * incrementpersample)<SUB>4496</SUB>> ]
+"89494" [label = <(&lt;operator&gt;.assignment,value = FILETYPE_REDUCEDIMAGE)<SUB>4512</SUB>> ]
+"89500" [label = <(&lt;operator&gt;.assignment,value = FILETYPE_PAGE)<SUB>4515</SUB>> ]
+"89505" [label = <(&lt;operator&gt;.assignment,value = 0)<SUB>4518</SUB>> ]
+"89514" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_SUBFILETYPE, value))<SUB>4522</SUB>> ]
+"89648" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4593</SUB>> ]
+"89651" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4593</SUB>> ]
+"89655" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4594</SUB>> ]
+"89658" [label = <(FIELD_IDENTIFIER,td_photometric,td_photometric)<SUB>4594</SUB>> ]
+"89663" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 1))<SUB>4600</SUB>> ]
+"89839" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>4657</SUB>> ]
+"89843" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4658</SUB>> ]
+"89848" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4658</SUB>> ]
+"89853" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4659</SUB>> ]
+"89856" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4659</SUB>> ]
+"89864" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4660</SUB>> ]
+"89874" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4661</SUB>> ]
+"89946" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_entry)<SUB>4674</SUB>> ]
+"89952" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4675</SUB>> ]
+"89955" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4675</SUB>> ]
+"89957" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_p)<SUB>4676</SUB>> ]
+"89980" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_entry)<SUB>4684</SUB>> ]
+"89986" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4685</SUB>> ]
+"89989" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4685</SUB>> ]
+"89991" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripbytecount_p)<SUB>4685</SUB>> ]
+"90224" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4774</SUB>> ]
+"90253" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4786</SUB>> ]
+"90260" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4787</SUB>> ]
+"90283" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012                 tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 2 &amp;&amp;\012                 tif-&gt;tif_dir.td_compression == COMPRESSION_NONE &amp;&amp;\012                 TIFFGetStrileByteCount(tif, 0) !=\012                     TIFFGetStrileByteCount(tif, 1))<SUB>4801</SUB>> ]
+"90321" [label = <(&lt;operator&gt;.notEquals,TIFFGetStrileByteCount(tif, 0) != 0)<SUB>4807</SUB>> ]
+"90327" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 1))<SUB>4808</SUB>> ]
+"90337" [label = <(&lt;operator&gt;.lessThan,EstimateStripByteCounts(tif, dir, dircount) &lt; 0)<SUB>4823</SUB>> ]
+"90398" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4838</SUB>> ]
+"88740" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4217</SUB>> ]
+"88859" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4263</SUB>> ]
+"88864" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_ignore)<SUB>4264</SUB>> ]
+"89021" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4340</SUB>> ]
+"89030" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4343</SUB>> ]
+"89081" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4361</SUB>> ]
+"89094" [label = <(&lt;operator&gt;.addressOf,&amp;data)<SUB>4364</SUB>> ]
+"89107" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4367</SUB>> ]
+"89116" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4370</SUB>> ]
+"89173" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0)<SUB>4393</SUB>> ]
+"89184" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_type == 0)<SUB>4394</SUB>> ]
+"89190" [label = <(&lt;operator&gt;.fieldAccess,dp-&gt;tdir_offset.toff_long8)<SUB>4395</SUB>> ]
+"89201" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4397</SUB>> ]
+"89210" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4400</SUB>> ]
+"89247" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_mode == O_RDWR &amp;&amp;\012                                  dp-&gt;tdir_count == 0)<SUB>4418</SUB>> ]
+"89258" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_type == 0)<SUB>4419</SUB>> ]
+"89264" [label = <(&lt;operator&gt;.fieldAccess,dp-&gt;tdir_offset.toff_long8)<SUB>4420</SUB>> ]
+"89275" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_tag)<SUB>4422</SUB>> ]
+"89284" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_name)<SUB>4425</SUB>> ]
+"89327" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4449</SUB>> ]
+"89336" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4453</SUB>> ]
+"89354" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4461</SUB>> ]
+"89363" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4465</SUB>> ]
+"89368" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4466</SUB>> ]
+"89430" [label = <(&lt;operator&gt;.addressOf,&amp;value)<SUB>4484</SUB>> ]
+"89443" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4487</SUB>> ]
+"89452" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4490</SUB>> ]
+"89461" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4494</SUB>> ]
+"89468" [label = <(&lt;operator&gt;.multiplication,2 * incrementpersample)<SUB>4496</SUB>> ]
+"89650" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4593</SUB>> ]
+"89657" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4594</SUB>> ]
+"89844" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4658</SUB>> ]
+"89847" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4658</SUB>> ]
+"89855" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4659</SUB>> ]
+"89947" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4674</SUB>> ]
+"89950" [label = <(FIELD_IDENTIFIER,td_stripoffset_entry,td_stripoffset_entry)<SUB>4674</SUB>> ]
+"89954" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4675</SUB>> ]
+"89958" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4676</SUB>> ]
+"89961" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>4676</SUB>> ]
+"89981" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4684</SUB>> ]
+"89984" [label = <(FIELD_IDENTIFIER,td_stripbytecount_entry,td_stripbytecount_entry)<SUB>4684</SUB>> ]
+"89988" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4685</SUB>> ]
+"89992" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4685</SUB>> ]
+"89995" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>4685</SUB>> ]
+"90284" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012                 tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 2 &amp;&amp;\012                 tif-&gt;tif_dir.td_compression == COMPRESSION_NONE)<SUB>4801</SUB>> ]
+"90314" [label = <(&lt;operator&gt;.notEquals,TIFFGetStrileByteCount(tif, 0) !=\012                     TIFFGetStrileByteCount(tif, 1))<SUB>4805</SUB>> ]
+"90322" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 0))<SUB>4807</SUB>> ]
+"90338" [label = <(EstimateStripByteCounts,EstimateStripByteCounts(tif, dir, dircount))<SUB>4823</SUB>> ]
+"88772" [label = <(&lt;operator&gt;.cast,(uint32_t)-1)<SUB>4230</SUB>> ]
+"88861" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4263</SUB>> ]
+"88866" [label = <(FIELD_IDENTIFIER,tdir_ignore,tdir_ignore)<SUB>4264</SUB>> ]
+"89174" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDWR)<SUB>4393</SUB>> ]
+"89179" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_count == 0)<SUB>4394</SUB>> ]
+"89185" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_type)<SUB>4394</SUB>> ]
+"89191" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_offset)<SUB>4395</SUB>> ]
+"89194" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>4395</SUB>> ]
+"89203" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4397</SUB>> ]
+"89212" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4400</SUB>> ]
+"89248" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDWR)<SUB>4418</SUB>> ]
+"89253" [label = <(&lt;operator&gt;.equals,dp-&gt;tdir_count == 0)<SUB>4419</SUB>> ]
+"89259" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_type)<SUB>4419</SUB>> ]
+"89265" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_offset)<SUB>4420</SUB>> ]
+"89268" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>4420</SUB>> ]
+"89277" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4422</SUB>> ]
+"89286" [label = <(FIELD_IDENTIFIER,field_name,field_name)<SUB>4425</SUB>> ]
+"89846" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4658</SUB>> ]
+"89949" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4674</SUB>> ]
+"89960" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4676</SUB>> ]
+"89983" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4684</SUB>> ]
+"89994" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4685</SUB>> ]
+"90285" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012                 tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG &amp;&amp;\012                 tif-&gt;tif_dir.td_nstrips &gt; 2)<SUB>4801</SUB>> ]
+"90307" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_compression == COMPRESSION_NONE)<SUB>4804</SUB>> ]
+"90315" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 0))<SUB>4805</SUB>> ]
+"90318" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, 1))<SUB>4806</SUB>> ]
+"88773" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>4230</SUB>> ]
+"88774" [label = <(&lt;operator&gt;.minus,-1)<SUB>4230</SUB>> ]
+"89175" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>4393</SUB>> ]
+"89180" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4394</SUB>> ]
+"89187" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4394</SUB>> ]
+"89193" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>4395</SUB>> ]
+"89249" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>4418</SUB>> ]
+"89254" [label = <(&lt;operator&gt;.indirectFieldAccess,dp-&gt;tdir_count)<SUB>4419</SUB>> ]
+"89261" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>4419</SUB>> ]
+"89267" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>4420</SUB>> ]
+"90286" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD) &amp;&amp;\012                 tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG)<SUB>4801</SUB>> ]
+"90300" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_dir.td_nstrips &gt; 2)<SUB>4803</SUB>> ]
+"90308" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_compression)<SUB>4804</SUB>> ]
+"89177" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>4393</SUB>> ]
+"89182" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4394</SUB>> ]
+"89251" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>4418</SUB>> ]
+"89256" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>4419</SUB>> ]
+"90287" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD))<SUB>4801</SUB>> ]
+"90293" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_planarconfig == PLANARCONFIG_CONTIG)<SUB>4802</SUB>> ]
+"90301" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>4803</SUB>> ]
+"90309" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4804</SUB>> ]
+"90312" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>4804</SUB>> ]
+"90288" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DEFERSTRILELOAD)<SUB>4801</SUB>> ]
+"90294" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_planarconfig)<SUB>4802</SUB>> ]
+"90302" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4803</SUB>> ]
+"90305" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>4803</SUB>> ]
+"90311" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4804</SUB>> ]
+"90289" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>4801</SUB>> ]
+"90295" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>4802</SUB>> ]
+"90298" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>4802</SUB>> ]
+"90304" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4803</SUB>> ]
+"90291" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>4801</SUB>> ]
+"90297" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>4802</SUB>> ]
+"88380" [label = <(METHOD,TIFFReadDirectory)<SUB>4055</SUB>> ]
+"90595" [label = <(METHOD_RETURN,int)<SUB>4055</SUB>> ]
+  "88384" -> "88395" 
+  "88393" -> "88403" 
+  "88403" -> "88411" 
+  "88423" -> "88436" 
+  "88448" -> "88460" 
+  "88488" -> "88494" 
+  "88494" -> "88504" 
+  "88557" -> "88566" 
+  "88563" -> "88572" 
+  "88569" -> "88575" 
+  "88575" -> "88577" 
+  "88577" -> "88579" 
+  "88579" -> "88585" 
+  "88583" -> "88591" 
+  "88608" -> "88616" 
+  "89755" -> "89771" 
+  "89998" -> "90007" 
+  "89998" -> "90014" 
+  "90401" -> "90415" 
+  "90478" -> "90487" 
+  "90484" -> "90493" 
+  "90490" -> "90501" 
+  "90498" -> "90509" 
+  "90506" -> "90517" 
+  "90514" -> "90525" 
+  "90522" -> "90532" 
+  "90529" -> "90539" 
+  "90582" -> "90595" 
+  "90593" -> "90595" 
+  "88395" -> "88398" 
+  "88395" -> "88393" 
+  "88408" -> "88417" 
+  "88408" -> "88427" 
+  "88425" -> "88423" 
+  "88429" -> "88446" 
+  "88429" -> "88453" 
+  "88450" -> "88448" 
+  "88460" -> "88463" 
+  "88460" -> "88474" 
+  "88471" -> "88480" 
+  "88471" -> "88487" 
+  "88489" -> "88488" 
+  "88558" -> "88561" 
+  "88561" -> "88557" 
+  "88564" -> "88567" 
+  "88567" -> "88563" 
+  "88570" -> "88573" 
+  "88573" -> "88569" 
+  "88585" -> "88583" 
+  "88591" -> "88597" 
+  "88591" -> "88610" 
+  "88610" -> "88608" 
+  "88616" -> "88627" 
+  "88616" -> "88670" 
+  "88685" -> "88698" 
+  "88685" -> "88875" 
+  "88870" -> "88888" 
+  "88870" -> "88941" 
+  "88940" -> "88945" 
+  "88940" -> "88952" 
+  "88958" -> "88971" 
+  "88958" -> "89532" 
+  "89528" -> "89538" 
+  "89528" -> "89671" 
+  "89670" -> "89679" 
+  "89670" -> "89728" 
+  "89738" -> "89750" 
+  "89738" -> "89759" 
+  "89756" -> "89764" 
+  "89761" -> "89755" 
+  "89767" -> "89779" 
+  "89767" -> "89788" 
+  "89787" -> "89799" 
+  "89787" -> "89839" 
+  "89828" -> "89918" 
+  "89828" -> "89927" 
+  "90000" -> "89998" 
+  "90007" -> "90025" 
+  "90007" -> "90117" 
+  "90112" -> "90131" 
+  "90112" -> "90178" 
+  "90174" -> "90184" 
+  "90174" -> "90346" 
+  "90346" -> "90350" 
+  "90346" -> "90362" 
+  "90361" -> "90371" 
+  "90361" -> "90405" 
+  "90402" -> "90401" 
+  "90408" -> "90442" 
+  "90408" -> "90452" 
+  "90445" -> "90476" 
+  "90445" -> "90481" 
+  "90479" -> "90482" 
+  "90482" -> "90478" 
+  "90485" -> "90488" 
+  "90488" -> "90484" 
+  "90491" -> "90495" 
+  "90494" -> "90490" 
+  "90499" -> "90503" 
+  "90502" -> "90498" 
+  "90507" -> "90511" 
+  "90510" -> "90506" 
+  "90515" -> "90519" 
+  "90518" -> "90514" 
+  "90523" -> "90526" 
+  "90526" -> "90522" 
+  "90530" -> "90533" 
+  "90533" -> "90529" 
+  "90536" -> "90541" 
+  "90536" -> "90548" 
+  "90548" -> "90554" 
+  "90548" -> "90573" 
+  "90586" -> "90590" 
+  "90586" -> "90593" 
+  "88409" -> "88408" 
+  "88414" -> "88421" 
+  "88421" -> "90595" 
+  "88427" -> "88425" 
+  "88430" -> "88429" 
+  "88446" -> "90595" 
+  "88453" -> "88458" 
+  "88455" -> "88450" 
+  "88463" -> "88468" 
+  "88468" -> "90595" 
+  "88472" -> "88471" 
+  "88477" -> "88492" 
+  "88490" -> "88489" 
+  "88510" -> "88526" 
+  "88510" -> "88560" 
+  "88560" -> "88558" 
+  "88566" -> "88564" 
+  "88572" -> "88570" 
+  "88603" -> "88610" 
+  "88622" -> "88630" 
+  "88661" -> "88679" 
+  "88689" -> "88691" 
+  "88691" -> "88685" 
+  "88871" -> "88870" 
+  "88871" -> "88882" 
+  "88878" -> "88870" 
+  "88892" -> "88901" 
+  "88941" -> "88940" 
+  "88945" -> "90586" 
+  "88962" -> "88964" 
+  "88964" -> "88958" 
+  "89529" -> "89528" 
+  "89671" -> "89670" 
+  "89675" -> "89687" 
+  "89683" -> "89698" 
+  "89694" -> "89709" 
+  "89705" -> "89719" 
+  "89716" -> "89742" 
+  "89739" -> "89738" 
+  "89745" -> "90586" 
+  "89757" -> "89760" 
+  "89760" -> "89756" 
+  "89762" -> "89765" 
+  "89765" -> "89761" 
+  "89768" -> "89767" 
+  "89775" -> "89788" 
+  "89788" -> "89787" 
+  "89829" -> "89828" 
+  "89829" -> "89912" 
+  "89906" -> "89828" 
+  "89918" -> "90004" 
+  "90001" -> "90000" 
+  "90009" -> "90007" 
+  "90025" -> "90034" 
+  "90029" -> "90040" 
+  "90036" -> "90054" 
+  "90051" -> "90065" 
+  "90094" -> "90108" 
+  "90108" -> "90117" 
+  "90113" -> "90112" 
+  "90113" -> "90121" 
+  "90120" -> "90112" 
+  "90175" -> "90174" 
+  "90350" -> "90355" 
+  "90353" -> "90362" 
+  "90362" -> "90361" 
+  "90403" -> "90402" 
+  "90409" -> "90408" 
+  "90409" -> "90436" 
+  "90432" -> "90408" 
+  "90442" -> "90452" 
+  "90446" -> "90445" 
+  "90446" -> "90472" 
+  "90471" -> "90445" 
+  "90476" -> "90481" 
+  "90481" -> "90479" 
+  "90487" -> "90485" 
+  "90493" -> "90491" 
+  "90495" -> "90496" 
+  "90496" -> "90494" 
+  "90501" -> "90499" 
+  "90503" -> "90504" 
+  "90504" -> "90502" 
+  "90509" -> "90507" 
+  "90511" -> "90512" 
+  "90512" -> "90510" 
+  "90517" -> "90515" 
+  "90519" -> "90520" 
+  "90520" -> "90518" 
+  "90525" -> "90523" 
+  "90532" -> "90530" 
+  "90537" -> "90536" 
+  "90541" -> "90545" 
+  "90545" -> "90595" 
+  "90551" -> "90561" 
+  "90590" -> "90593" 
+  "88397" -> "88393" 
+  "88411" -> "88409" 
+  "88415" -> "88420" 
+  "88418" -> "88414" 
+  "88432" -> "88430" 
+  "88456" -> "88455" 
+  "88474" -> "88472" 
+  "88478" -> "88477" 
+  "88484" -> "88492" 
+  "88492" -> "88490" 
+  "88514" -> "88516" 
+  "88516" -> "88510" 
+  "88596" -> "90586" 
+  "88596" -> "88606" 
+  "88604" -> "88603" 
+  "88624" -> "88622" 
+  "88630" -> "88639" 
+  "88630" -> "88642" 
+  "88642" -> "88646" 
+  "88642" -> "88655" 
+  "88654" -> "90586" 
+  "88654" -> "88664" 
+  "88662" -> "88661" 
+  "88679" -> "88682" 
+  "88682" -> "88685" 
+  "88695" -> "88704" 
+  "88695" -> "88780" 
+  "88777" -> "88787" 
+  "88777" -> "88689" 
+  "88872" -> "88871" 
+  "88879" -> "88878" 
+  "88887" -> "90586" 
+  "88887" -> "88894" 
+  "88894" -> "88892" 
+  "88900" -> "88912" 
+  "88900" -> "88941" 
+  "88952" -> "88955" 
+  "88955" -> "88958" 
+  "88968" -> "88976" 
+  "88968" -> "88962" 
+  "89530" -> "89533" 
+  "89533" -> "89529" 
+  "89537" -> "89542" 
+  "89537" -> "89561" 
+  "89577" -> "89582" 
+  "89577" -> "89596" 
+  "89595" -> "89605" 
+  "89595" -> "89671" 
+  "89676" -> "89681" 
+  "89681" -> "89675" 
+  "89684" -> "89692" 
+  "89689" -> "89683" 
+  "89695" -> "89703" 
+  "89700" -> "89694" 
+  "89706" -> "89714" 
+  "89711" -> "89705" 
+  "89717" -> "89720" 
+  "89720" -> "89716" 
+  "89724" -> "89735" 
+  "89732" -> "89742" 
+  "89740" -> "89743" 
+  "89743" -> "89739" 
+  "89749" -> "89745" 
+  "89759" -> "89757" 
+  "89764" -> "89762" 
+  "89769" -> "89772" 
+  "89772" -> "89768" 
+  "89776" -> "89784" 
+  "89781" -> "89775" 
+  "89793" -> "89814" 
+  "89793" -> "89822" 
+  "89830" -> "89829" 
+  "89830" -> "89902" 
+  "89897" -> "89829" 
+  "89907" -> "89906" 
+  "90002" -> "90005" 
+  "90005" -> "90001" 
+  "90010" -> "90009" 
+  "90031" -> "90029" 
+  "90037" -> "90043" 
+  "90042" -> "90036" 
+  "90053" -> "90051" 
+  "90065" -> "90075" 
+  "90065" -> "90079" 
+  "90079" -> "90088" 
+  "90079" -> "90100" 
+  "90096" -> "90106" 
+  "90103" -> "90094" 
+  "90114" -> "90113" 
+  "90121" -> "90120" 
+  "90126" -> "90146" 
+  "90126" -> "90156" 
+  "90176" -> "90179" 
+  "90179" -> "90175" 
+  "90183" -> "90195" 
+  "90183" -> "90253" 
+  "90355" -> "90358" 
+  "90355" -> "90353" 
+  "90367" -> "90379" 
+  "90367" -> "90388" 
+  "90405" -> "90403" 
+  "90410" -> "90409" 
+  "90410" -> "90429" 
+  "90425" -> "90409" 
+  "90433" -> "90432" 
+  "90447" -> "90446" 
+  "90447" -> "90466" 
+  "90462" -> "90446" 
+  "90472" -> "90471" 
+  "90539" -> "90537" 
+  "90552" -> "90555" 
+  "90555" -> "90551" 
+  "90558" -> "90563" 
+  "90558" -> "90582" 
+  "88398" -> "88399" 
+  "88399" -> "88397" 
+  "88417" -> "88415" 
+  "88420" -> "88418" 
+  "88433" -> "88432" 
+  "88433" -> "88442" 
+  "88439" -> "88432" 
+  "88458" -> "88456" 
+  "88480" -> "88478" 
+  "88485" -> "88484" 
+  "88504" -> "88507" 
+  "88507" -> "88510" 
+  "88534" -> "88547" 
+  "88534" -> "88514" 
+  "88597" -> "88596" 
+  "88606" -> "88604" 
+  "88627" -> "88624" 
+  "88634" -> "88642" 
+  "88646" -> "90586" 
+  "88655" -> "88654" 
+  "88664" -> "88662" 
+  "88669" -> "90586" 
+  "88669" -> "88679" 
+  "88696" -> "88695" 
+  "88700" -> "88710" 
+  "88778" -> "88777" 
+  "88782" -> "88793" 
+  "88873" -> "88876" 
+  "88876" -> "88872" 
+  "88880" -> "88883" 
+  "88883" -> "88879" 
+  "88888" -> "88887" 
+  "88901" -> "88900" 
+  "88901" -> "88907" 
+  "88904" -> "88900" 
+  "88910" -> "88919" 
+  "88969" -> "88968" 
+  "89532" -> "89530" 
+  "89538" -> "89537" 
+  "89542" -> "89548" 
+  "89578" -> "89577" 
+  "89582" -> "89588" 
+  "89596" -> "89595" 
+  "89677" -> "89680" 
+  "89680" -> "89676" 
+  "89685" -> "89688" 
+  "89688" -> "89684" 
+  "89690" -> "89693" 
+  "89693" -> "89689" 
+  "89696" -> "89699" 
+  "89699" -> "89695" 
+  "89701" -> "89704" 
+  "89704" -> "89700" 
+  "89707" -> "89710" 
+  "89710" -> "89706" 
+  "89712" -> "89715" 
+  "89715" -> "89711" 
+  "89719" -> "89717" 
+  "89725" -> "89730" 
+  "89730" -> "89724" 
+  "89733" -> "89732" 
+  "89742" -> "89740" 
+  "89750" -> "89749" 
+  "89771" -> "89769" 
+  "89777" -> "89780" 
+  "89780" -> "89776" 
+  "89782" -> "89785" 
+  "89785" -> "89781" 
+  "89794" -> "89793" 
+  "89794" -> "89810" 
+  "89806" -> "89793" 
+  "89814" -> "89839" 
+  "89831" -> "89830" 
+  "89831" -> "89893" 
+  "89888" -> "89830" 
+  "89898" -> "89897" 
+  "89908" -> "89915" 
+  "89915" -> "89907" 
+  "89923" -> "89936" 
+  "89923" -> "90004" 
+  "90004" -> "90002" 
+  "90011" -> "90019" 
+  "90016" -> "90010" 
+  "90032" -> "90035" 
+  "90035" -> "90031" 
+  "90038" -> "90041" 
+  "90041" -> "90037" 
+  "90043" -> "90048" 
+  "90044" -> "90042" 
+  "90054" -> "90060" 
+  "90055" -> "90053" 
+  "90068" -> "90586" 
+  "90083" -> "90100" 
+  "90097" -> "90096" 
+  "90104" -> "90107" 
+  "90107" -> "90103" 
+  "90115" -> "90118" 
+  "90118" -> "90114" 
+  "90127" -> "90126" 
+  "90127" -> "90138" 
+  "90134" -> "90126" 
+  "90142" -> "90178" 
+  "90178" -> "90176" 
+  "90184" -> "90183" 
+  "90231" -> "90237" 
+  "90368" -> "90367" 
+  "90375" -> "90405" 
+  "90411" -> "90410" 
+  "90411" -> "90422" 
+  "90418" -> "90410" 
+  "90426" -> "90425" 
+  "90434" -> "90437" 
+  "90437" -> "90433" 
+  "90448" -> "90447" 
+  "90448" -> "90459" 
+  "90455" -> "90447" 
+  "90463" -> "90462" 
+  "90554" -> "90552" 
+  "90559" -> "90558" 
+  "90563" -> "90567" 
+  "90567" -> "90595" 
+  "90572" -> "90576" 
+  "90572" -> "90582" 
+  "88434" -> "88433" 
+  "88440" -> "88439" 
+  "88487" -> "88485" 
+  "88538" -> "88540" 
+  "88540" -> "88534" 
+  "88636" -> "88634" 
+  "88670" -> "88669" 
+  "88698" -> "88696" 
+  "88702" -> "88705" 
+  "88705" -> "88700" 
+  "88708" -> "88723" 
+  "88708" -> "88780" 
+  "88780" -> "88778" 
+  "88784" -> "88782" 
+  "88790" -> "88799" 
+  "88790" -> "88806" 
+  "88875" -> "88873" 
+  "88882" -> "88880" 
+  "88905" -> "88904" 
+  "88912" -> "88910" 
+  "88918" -> "88932" 
+  "88918" -> "88941" 
+  "88971" -> "88969" 
+  "88974" -> "88996" 
+  "88974" -> "89063" 
+  "88974" -> "89159" 
+  "88974" -> "89233" 
+  "88974" -> "89312" 
+  "88974" -> "89485" 
+  "88974" -> "89521" 
+  "89547" -> "90586" 
+  "89547" -> "89578" 
+  "89587" -> "90586" 
+  "89587" -> "89596" 
+  "89601" -> "89609" 
+  "89601" -> "89626" 
+  "89622" -> "89630" 
+  "89622" -> "89650" 
+  "89679" -> "89677" 
+  "89687" -> "89685" 
+  "89692" -> "89690" 
+  "89698" -> "89696" 
+  "89703" -> "89701" 
+  "89709" -> "89707" 
+  "89714" -> "89712" 
+  "89726" -> "89729" 
+  "89729" -> "89725" 
+  "89735" -> "89733" 
+  "89779" -> "89777" 
+  "89784" -> "89782" 
+  "89795" -> "89794" 
+  "89795" -> "89803" 
+  "89802" -> "89794" 
+  "89807" -> "89806" 
+  "89819" -> "90586" 
+  "89832" -> "89831" 
+  "89832" -> "89884" 
+  "89879" -> "89831" 
+  "89889" -> "89888" 
+  "89899" -> "89904" 
+  "89904" -> "89898" 
+  "89909" -> "89914" 
+  "89914" -> "89908" 
+  "89924" -> "89923" 
+  "90012" -> "90015" 
+  "90015" -> "90011" 
+  "90017" -> "90020" 
+  "90020" -> "90016" 
+  "90034" -> "90032" 
+  "90040" -> "90038" 
+  "90045" -> "90044" 
+  "90057" -> "90062" 
+  "90062" -> "90055" 
+  "90072" -> "90068" 
+  "90085" -> "90092" 
+  "90090" -> "90083" 
+  "90098" -> "90101" 
+  "90101" -> "90097" 
+  "90106" -> "90104" 
+  "90117" -> "90115" 
+  "90128" -> "90127" 
+  "90135" -> "90134" 
+  "90143" -> "90142" 
+  "90189" -> "90227" 
+  "90189" -> "90231" 
+  "90236" -> "90586" 
+  "90236" -> "90346" 
+  "90357" -> "90353" 
+  "90369" -> "90372" 
+  "90372" -> "90368" 
+  "90376" -> "90375" 
+  "90384" -> "90405" 
+  "90412" -> "90411" 
+  "90419" -> "90418" 
+  "90427" -> "90430" 
+  "90430" -> "90426" 
+  "90436" -> "90434" 
+  "90449" -> "90448" 
+  "90456" -> "90455" 
+  "90464" -> "90467" 
+  "90467" -> "90463" 
+  "90561" -> "90559" 
+  "90573" -> "90572" 
+  "90576" -> "90580" 
+  "90580" -> "90595" 
+  "88436" -> "88434" 
+  "88442" -> "88440" 
+  "88524" -> "88531" 
+  "88529" -> "88534" 
+  "88544" -> "88555" 
+  "88544" -> "88538" 
+  "88639" -> "88636" 
+  "88704" -> "88702" 
+  "88710" -> "88713" 
+  "88710" -> "88708" 
+  "88717" -> "88735" 
+  "88785" -> "88784" 
+  "88791" -> "88790" 
+  "88796" -> "88689" 
+  "88907" -> "88905" 
+  "88919" -> "88918" 
+  "88919" -> "88925" 
+  "88922" -> "88918" 
+  "88928" -> "88935" 
+  "88935" -> "88941" 
+  "88976" -> "88974" 
+  "89215" -> "88962" 
+  "89289" -> "88962" 
+  "89520" -> "88962" 
+  "89548" -> "89547" 
+  "89557" -> "89569" 
+  "89557" -> "89578" 
+  "89588" -> "89587" 
+  "89602" -> "89601" 
+  "89609" -> "89615" 
+  "89623" -> "89622" 
+  "89630" -> "89636" 
+  "89728" -> "89726" 
+  "89796" -> "89795" 
+  "89803" -> "89802" 
+  "89808" -> "89811" 
+  "89811" -> "89807" 
+  "89821" -> "89819" 
+  "89833" -> "89832" 
+  "89833" -> "89874" 
+  "89868" -> "89832" 
+  "89880" -> "89879" 
+  "89890" -> "89895" 
+  "89895" -> "89889" 
+  "89900" -> "89903" 
+  "89903" -> "89899" 
+  "89910" -> "89913" 
+  "89913" -> "89909" 
+  "89925" -> "89924" 
+  "89931" -> "89949" 
+  "89931" -> "89970" 
+  "89965" -> "89983" 
+  "89965" -> "90004" 
+  "90014" -> "90012" 
+  "90019" -> "90017" 
+  "90046" -> "90049" 
+  "90049" -> "90045" 
+  "90058" -> "90061" 
+  "90061" -> "90057" 
+  "90073" -> "90076" 
+  "90076" -> "90072" 
+  "90086" -> "90089" 
+  "90089" -> "90085" 
+  "90092" -> "90090" 
+  "90100" -> "90098" 
+  "90129" -> "90132" 
+  "90132" -> "90128" 
+  "90136" -> "90139" 
+  "90139" -> "90135" 
+  "90144" -> "90147" 
+  "90147" -> "90143" 
+  "90152" -> "90164" 
+  "90152" -> "90169" 
+  "90190" -> "90189" 
+  "90190" -> "90210" 
+  "90205" -> "90189" 
+  "90227" -> "90586" 
+  "90237" -> "90236" 
+  "90247" -> "90265" 
+  "90247" -> "90291" 
+  "90358" -> "90357" 
+  "90371" -> "90369" 
+  "90377" -> "90380" 
+  "90380" -> "90376" 
+  "90385" -> "90391" 
+  "90390" -> "90384" 
+  "90413" -> "90416" 
+  "90416" -> "90412" 
+  "90420" -> "90423" 
+  "90423" -> "90419" 
+  "90429" -> "90427" 
+  "90450" -> "90453" 
+  "90453" -> "90449" 
+  "90457" -> "90460" 
+  "90460" -> "90456" 
+  "90466" -> "90464" 
+  "88526" -> "88524" 
+  "88531" -> "88529" 
+  "88545" -> "88550" 
+  "88548" -> "88544" 
+  "88552" -> "88538" 
+  "88721" -> "88726" 
+  "88724" -> "88717" 
+  "88728" -> "88749" 
+  "88728" -> "88764" 
+  "88787" -> "88785" 
+  "88793" -> "88791" 
+  "88797" -> "88796" 
+  "88923" -> "88922" 
+  "88929" -> "88928" 
+  "88991" -> "88999" 
+  "89061" -> "89075" 
+  "89120" -> "89128" 
+  "89125" -> "89136" 
+  "89130" -> "89141" 
+  "89138" -> "89143" 
+  "89143" -> "89147" 
+  "89157" -> "89220" 
+  "89157" -> "89177" 
+  "89216" -> "89223" 
+  "89223" -> "89215" 
+  "89231" -> "89294" 
+  "89231" -> "89251" 
+  "89290" -> "89297" 
+  "89297" -> "89289" 
+  "89310" -> "89318" 
+  "89371" -> "89385" 
+  "89521" -> "89522" 
+  "89522" -> "89520" 
+  "89558" -> "89557" 
+  "89565" -> "89572" 
+  "89572" -> "89578" 
+  "89603" -> "89606" 
+  "89606" -> "89602" 
+  "89614" -> "90586" 
+  "89614" -> "89626" 
+  "89624" -> "89627" 
+  "89627" -> "89623" 
+  "89635" -> "90586" 
+  "89635" -> "89671" 
+  "89797" -> "89800" 
+  "89800" -> "89796" 
+  "89810" -> "89808" 
+  "89822" -> "89821" 
+  "89834" -> "89833" 
+  "89834" -> "89864" 
+  "89859" -> "89833" 
+  "89869" -> "89868" 
+  "89881" -> "89886" 
+  "89886" -> "89880" 
+  "89891" -> "89894" 
+  "89894" -> "89890" 
+  "89902" -> "89900" 
+  "89912" -> "89910" 
+  "89927" -> "89925" 
+  "89932" -> "89931" 
+  "89966" -> "89965" 
+  "90048" -> "90046" 
+  "90060" -> "90058" 
+  "90075" -> "90073" 
+  "90088" -> "90086" 
+  "90131" -> "90129" 
+  "90138" -> "90136" 
+  "90146" -> "90144" 
+  "90153" -> "90152" 
+  "90160" -> "90178" 
+  "90191" -> "90190" 
+  "90191" -> "90202" 
+  "90198" -> "90190" 
+  "90206" -> "90205" 
+  "90206" -> "90217" 
+  "90213" -> "90205" 
+  "90248" -> "90247" 
+  "90248" -> "90262" 
+  "90262" -> "90247" 
+  "90265" -> "90271" 
+  "90379" -> "90377" 
+  "90386" -> "90389" 
+  "90389" -> "90385" 
+  "90391" -> "90398" 
+  "90392" -> "90390" 
+  "90415" -> "90413" 
+  "90422" -> "90420" 
+  "90452" -> "90450" 
+  "90459" -> "90457" 
+  "88547" -> "88545" 
+  "88550" -> "88548" 
+  "88553" -> "88552" 
+  "88712" -> "88708" 
+  "88723" -> "88721" 
+  "88726" -> "88724" 
+  "88729" -> "88728" 
+  "88743" -> "88756" 
+  "88753" -> "88780" 
+  "88799" -> "88797" 
+  "88804" -> "88820" 
+  "88804" -> "88842" 
+  "88804" -> "88861" 
+  "88925" -> "88923" 
+  "88930" -> "88933" 
+  "88933" -> "88929" 
+  "88993" -> "88991" 
+  "88999" -> "89008" 
+  "88999" -> "89011" 
+  "89011" -> "89021" 
+  "89011" -> "89040" 
+  "89035" -> "90586" 
+  "89035" -> "89048" 
+  "89045" -> "89051" 
+  "89045" -> "88962" 
+  "89063" -> "89066" 
+  "89063" -> "89061" 
+  "89072" -> "89084" 
+  "89072" -> "89094" 
+  "89097" -> "89107" 
+  "89097" -> "89124" 
+  "89122" -> "89120" 
+  "89126" -> "89125" 
+  "89132" -> "89130" 
+  "89139" -> "89138" 
+  "89147" -> "90586" 
+  "89147" -> "88962" 
+  "89159" -> "89157" 
+  "89217" -> "89216" 
+  "89233" -> "89231" 
+  "89291" -> "89290" 
+  "89312" -> "89315" 
+  "89312" -> "89310" 
+  "89318" -> "89327" 
+  "89318" -> "89344" 
+  "89340" -> "89354" 
+  "89340" -> "89378" 
+  "89373" -> "89371" 
+  "89381" -> "89395" 
+  "89381" -> "89405" 
+  "89412" -> "89420" 
+  "89412" -> "89430" 
+  "89433" -> "89443" 
+  "89433" -> "89461" 
+  "89481" -> "89494" 
+  "89481" -> "89500" 
+  "89481" -> "89505" 
+  "89481" -> "88962" 
+  "89559" -> "89562" 
+  "89562" -> "89558" 
+  "89566" -> "89565" 
+  "89605" -> "89603" 
+  "89615" -> "89614" 
+  "89626" -> "89624" 
+  "89636" -> "89635" 
+  "89645" -> "89663" 
+  "89645" -> "89671" 
+  "89799" -> "89797" 
+  "89835" -> "89834" 
+  "89835" -> "89855" 
+  "89850" -> "89834" 
+  "89860" -> "89859" 
+  "89870" -> "89877" 
+  "89877" -> "89869" 
+  "89882" -> "89885" 
+  "89885" -> "89881" 
+  "89893" -> "89891" 
+  "89933" -> "89938" 
+  "89938" -> "89932" 
+  "89942" -> "90586" 
+  "89942" -> "89970" 
+  "89967" -> "89972" 
+  "89972" -> "89966" 
+  "89976" -> "90586" 
+  "89976" -> "90004" 
+  "90154" -> "90157" 
+  "90157" -> "90153" 
+  "90161" -> "90160" 
+  "90169" -> "90586" 
+  "90192" -> "90191" 
+  "90199" -> "90198" 
+  "90207" -> "90206" 
+  "90214" -> "90220" 
+  "90219" -> "90213" 
+  "90249" -> "90248" 
+  "90249" -> "90260" 
+  "90256" -> "90248" 
+  "90270" -> "90586" 
+  "90270" -> "90346" 
+  "90388" -> "90386" 
+  "90393" -> "90392" 
+  "88555" -> "88553" 
+  "88713" -> "88714" 
+  "88714" -> "88712" 
+  "88731" -> "88729" 
+  "88747" -> "88752" 
+  "88750" -> "88743" 
+  "88754" -> "88753" 
+  "88760" -> "88770" 
+  "88767" -> "88780" 
+  "88806" -> "88804" 
+  "88816" -> "88689" 
+  "88848" -> "88689" 
+  "88932" -> "88930" 
+  "88996" -> "88993" 
+  "89003" -> "89011" 
+  "89015" -> "89030" 
+  "89015" -> "89026" 
+  "89022" -> "90586" 
+  "89036" -> "89035" 
+  "89046" -> "89045" 
+  "89051" -> "88962" 
+  "89073" -> "89077" 
+  "89076" -> "89072" 
+  "89084" -> "89097" 
+  "89101" -> "89116" 
+  "89101" -> "89112" 
+  "89108" -> "90586" 
+  "89124" -> "89122" 
+  "89128" -> "89126" 
+  "89134" -> "89132" 
+  "89141" -> "89139" 
+  "89170" -> "89203" 
+  "89170" -> "89220" 
+  "89218" -> "89221" 
+  "89221" -> "89217" 
+  "89244" -> "89277" 
+  "89244" -> "89294" 
+  "89292" -> "89295" 
+  "89295" -> "89291" 
+  "89321" -> "89336" 
+  "89321" -> "89332" 
+  "89341" -> "89340" 
+  "89348" -> "89363" 
+  "89348" -> "89359" 
+  "89375" -> "89373" 
+  "89382" -> "89381" 
+  "89382" -> "89390" 
+  "89387" -> "89381" 
+  "89395" -> "89398" 
+  "89398" -> "89415" 
+  "89413" -> "89417" 
+  "89416" -> "89412" 
+  "89420" -> "89433" 
+  "89437" -> "89452" 
+  "89437" -> "89448" 
+  "89444" -> "88962" 
+  "89482" -> "89481" 
+  "89561" -> "89559" 
+  "89567" -> "89570" 
+  "89570" -> "89566" 
+  "89646" -> "89645" 
+  "89646" -> "89657" 
+  "89653" -> "89645" 
+  "89836" -> "89835" 
+  "89836" -> "89846" 
+  "89841" -> "89835" 
+  "89851" -> "89850" 
+  "89861" -> "89866" 
+  "89866" -> "89860" 
+  "89871" -> "89876" 
+  "89876" -> "89870" 
+  "89884" -> "89882" 
+  "89934" -> "89937" 
+  "89937" -> "89933" 
+  "89943" -> "89942" 
+  "89968" -> "89971" 
+  "89971" -> "89967" 
+  "89977" -> "89976" 
+  "90156" -> "90154" 
+  "90162" -> "90165" 
+  "90165" -> "90161" 
+  "90193" -> "90196" 
+  "90196" -> "90192" 
+  "90200" -> "90203" 
+  "90203" -> "90199" 
+  "90208" -> "90211" 
+  "90211" -> "90207" 
+  "90215" -> "90218" 
+  "90218" -> "90214" 
+  "90220" -> "90224" 
+  "90221" -> "90219" 
+  "90250" -> "90249" 
+  "90257" -> "90256" 
+  "90271" -> "90270" 
+  "90281" -> "90332" 
+  "90281" -> "90346" 
+  "90395" -> "90393" 
+  "88733" -> "88737" 
+  "88736" -> "88731" 
+  "88749" -> "88747" 
+  "88752" -> "88750" 
+  "88756" -> "88754" 
+  "88762" -> "88765" 
+  "88765" -> "88760" 
+  "88768" -> "88767" 
+  "88818" -> "88816" 
+  "88841" -> "90586" 
+  "88841" -> "88851" 
+  "88849" -> "88848" 
+  "88856" -> "88866" 
+  "88856" -> "88689" 
+  "89005" -> "89003" 
+  "89017" -> "89015" 
+  "89026" -> "89022" 
+  "89038" -> "89036" 
+  "89048" -> "89046" 
+  "89065" -> "89061" 
+  "89075" -> "89073" 
+  "89077" -> "89081" 
+  "89078" -> "89076" 
+  "89089" -> "89097" 
+  "89103" -> "89101" 
+  "89112" -> "89108" 
+  "89136" -> "89134" 
+  "89171" -> "89170" 
+  "89197" -> "89212" 
+  "89197" -> "89208" 
+  "89204" -> "89220" 
+  "89220" -> "89218" 
+  "89245" -> "89244" 
+  "89271" -> "89286" 
+  "89271" -> "89282" 
+  "89278" -> "89294" 
+  "89294" -> "89292" 
+  "89314" -> "89310" 
+  "89323" -> "89321" 
+  "89332" -> "89328" 
+  "89342" -> "89345" 
+  "89345" -> "89341" 
+  "89350" -> "89348" 
+  "89359" -> "89368" 
+  "89365" -> "89355" 
+  "89376" -> "89379" 
+  "89379" -> "89375" 
+  "89383" -> "89382" 
+  "89388" -> "89392" 
+  "89391" -> "89387" 
+  "89403" -> "89408" 
+  "89408" -> "89415" 
+  "89415" -> "89413" 
+  "89417" -> "89416" 
+  "89425" -> "89433" 
+  "89439" -> "89437" 
+  "89448" -> "89444" 
+  "89457" -> "89471" 
+  "89471" -> "88962" 
+  "89485" -> "89482" 
+  "89510" -> "89514" 
+  "89510" -> "88962" 
+  "89569" -> "89567" 
+  "89647" -> "89646" 
+  "89654" -> "89653" 
+  "89662" -> "90586" 
+  "89662" -> "89671" 
+  "89837" -> "89836" 
+  "89842" -> "89841" 
+  "89852" -> "89857" 
+  "89857" -> "89851" 
+  "89862" -> "89865" 
+  "89865" -> "89861" 
+  "89872" -> "89875" 
+  "89875" -> "89871" 
+  "89936" -> "89934" 
+  "89945" -> "89954" 
+  "89951" -> "89960" 
+  "89956" -> "89943" 
+  "89970" -> "89968" 
+  "89979" -> "89988" 
+  "89985" -> "89994" 
+  "89990" -> "89977" 
+  "90164" -> "90162" 
+  "90195" -> "90193" 
+  "90202" -> "90200" 
+  "90210" -> "90208" 
+  "90217" -> "90215" 
+  "90222" -> "90225" 
+  "90225" -> "90221" 
+  "90251" -> "90254" 
+  "90254" -> "90250" 
+  "90258" -> "90257" 
+  "90282" -> "90281" 
+  "90282" -> "90327" 
+  "90326" -> "90281" 
+  "90332" -> "90338" 
+  "90396" -> "90399" 
+  "90399" -> "90395" 
+  "88735" -> "88733" 
+  "88737" -> "88740" 
+  "88738" -> "88736" 
+  "88764" -> "88762" 
+  "88770" -> "88773" 
+  "88770" -> "88768" 
+  "88820" -> "88818" 
+  "88842" -> "88841" 
+  "88851" -> "88849" 
+  "88857" -> "88856" 
+  "88863" -> "88689" 
+  "89008" -> "89005" 
+  "89019" -> "89017" 
+  "89028" -> "89026" 
+  "89040" -> "89038" 
+  "89066" -> "89065" 
+  "89079" -> "89082" 
+  "89082" -> "89078" 
+  "89091" -> "89089" 
+  "89105" -> "89103" 
+  "89114" -> "89112" 
+  "89172" -> "89171" 
+  "89172" -> "89193" 
+  "89189" -> "89171" 
+  "89199" -> "89197" 
+  "89208" -> "89204" 
+  "89246" -> "89245" 
+  "89246" -> "89267" 
+  "89263" -> "89245" 
+  "89273" -> "89271" 
+  "89282" -> "89278" 
+  "89315" -> "89314" 
+  "89325" -> "89323" 
+  "89334" -> "89332" 
+  "89344" -> "89342" 
+  "89352" -> "89350" 
+  "89361" -> "89359" 
+  "89366" -> "89369" 
+  "89369" -> "89365" 
+  "89378" -> "89376" 
+  "89385" -> "89383" 
+  "89390" -> "89388" 
+  "89392" -> "89391" 
+  "89405" -> "89403" 
+  "89427" -> "89425" 
+  "89441" -> "89439" 
+  "89450" -> "89448" 
+  "89459" -> "89463" 
+  "89463" -> "89468" 
+  "89466" -> "89457" 
+  "89494" -> "89510" 
+  "89500" -> "89510" 
+  "89505" -> "89510" 
+  "89514" -> "88962" 
+  "89648" -> "89651" 
+  "89651" -> "89647" 
+  "89655" -> "89658" 
+  "89658" -> "89654" 
+  "89663" -> "89662" 
+  "89839" -> "89837" 
+  "89843" -> "89848" 
+  "89848" -> "89842" 
+  "89853" -> "89856" 
+  "89856" -> "89852" 
+  "89864" -> "89862" 
+  "89874" -> "89872" 
+  "89946" -> "89945" 
+  "89952" -> "89955" 
+  "89955" -> "89951" 
+  "89957" -> "89956" 
+  "89980" -> "89979" 
+  "89986" -> "89989" 
+  "89989" -> "89985" 
+  "89991" -> "89990" 
+  "90224" -> "90222" 
+  "90253" -> "90251" 
+  "90260" -> "90258" 
+  "90283" -> "90282" 
+  "90283" -> "90322" 
+  "90321" -> "90282" 
+  "90327" -> "90326" 
+  "90337" -> "90586" 
+  "90337" -> "90346" 
+  "90398" -> "90396" 
+  "88740" -> "88738" 
+  "88859" -> "88857" 
+  "88864" -> "88863" 
+  "89021" -> "89019" 
+  "89030" -> "89028" 
+  "89081" -> "89079" 
+  "89094" -> "89091" 
+  "89107" -> "89105" 
+  "89116" -> "89114" 
+  "89173" -> "89172" 
+  "89173" -> "89187" 
+  "89184" -> "89172" 
+  "89190" -> "89189" 
+  "89201" -> "89199" 
+  "89210" -> "89208" 
+  "89247" -> "89246" 
+  "89247" -> "89261" 
+  "89258" -> "89246" 
+  "89264" -> "89263" 
+  "89275" -> "89273" 
+  "89284" -> "89282" 
+  "89327" -> "89325" 
+  "89336" -> "89334" 
+  "89354" -> "89352" 
+  "89363" -> "89361" 
+  "89368" -> "89366" 
+  "89430" -> "89427" 
+  "89443" -> "89441" 
+  "89452" -> "89450" 
+  "89461" -> "89459" 
+  "89468" -> "89466" 
+  "89650" -> "89648" 
+  "89657" -> "89655" 
+  "89844" -> "89847" 
+  "89847" -> "89843" 
+  "89855" -> "89853" 
+  "89947" -> "89950" 
+  "89950" -> "89946" 
+  "89954" -> "89952" 
+  "89958" -> "89961" 
+  "89961" -> "89957" 
+  "89981" -> "89984" 
+  "89984" -> "89980" 
+  "89988" -> "89986" 
+  "89992" -> "89995" 
+  "89995" -> "89991" 
+  "90284" -> "90283" 
+  "90284" -> "90315" 
+  "90314" -> "90283" 
+  "90322" -> "90321" 
+  "90338" -> "90337" 
+  "88772" -> "88768" 
+  "88861" -> "88859" 
+  "88866" -> "88864" 
+  "89174" -> "89173" 
+  "89174" -> "89182" 
+  "89179" -> "89173" 
+  "89185" -> "89184" 
+  "89191" -> "89194" 
+  "89194" -> "89190" 
+  "89203" -> "89201" 
+  "89212" -> "89210" 
+  "89248" -> "89247" 
+  "89248" -> "89256" 
+  "89253" -> "89247" 
+  "89259" -> "89258" 
+  "89265" -> "89268" 
+  "89268" -> "89264" 
+  "89277" -> "89275" 
+  "89286" -> "89284" 
+  "89846" -> "89844" 
+  "89949" -> "89947" 
+  "89960" -> "89958" 
+  "89983" -> "89981" 
+  "89994" -> "89992" 
+  "90285" -> "90284" 
+  "90285" -> "90311" 
+  "90307" -> "90284" 
+  "90315" -> "90318" 
+  "90318" -> "90314" 
+  "88773" -> "88774" 
+  "88774" -> "88772" 
+  "89175" -> "89174" 
+  "89180" -> "89179" 
+  "89187" -> "89185" 
+  "89193" -> "89191" 
+  "89249" -> "89248" 
+  "89254" -> "89253" 
+  "89261" -> "89259" 
+  "89267" -> "89265" 
+  "90286" -> "90285" 
+  "90286" -> "90304" 
+  "90300" -> "90285" 
+  "90308" -> "90307" 
+  "89177" -> "89175" 
+  "89182" -> "89180" 
+  "89251" -> "89249" 
+  "89256" -> "89254" 
+  "90287" -> "90286" 
+  "90287" -> "90297" 
+  "90293" -> "90286" 
+  "90301" -> "90300" 
+  "90309" -> "90312" 
+  "90312" -> "90308" 
+  "90288" -> "90287" 
+  "90294" -> "90293" 
+  "90302" -> "90305" 
+  "90305" -> "90301" 
+  "90311" -> "90309" 
+  "90289" -> "90288" 
+  "90295" -> "90298" 
+  "90298" -> "90294" 
+  "90304" -> "90302" 
+  "90291" -> "90289" 
+  "90297" -> "90295" 
+  "88380" -> "88384" 
+}

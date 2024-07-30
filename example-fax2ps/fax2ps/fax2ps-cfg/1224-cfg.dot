@@ -1,0 +1,351 @@
+digraph "TIFFReadDirEntryArrayWithLimit" {  
+"80810" [label = <(&lt;operator&gt;.assignment,typesize = TIFFDataWidth(direntry-&gt;tdir_type))<SUB>1274</SUB>> ]
+"80816" [label = <(&lt;operator&gt;.assignment,target_count64 =\012        (direntry-&gt;tdir_count &gt; maxcount) ? maxcount : direntry-&gt;tdir_count)<SUB>1276</SUB>> ]
+"80843" [label = <(&lt;operator&gt;.cast,(void)desttypesize)<SUB>1284</SUB>> ]
+"80846" [label = <(&lt;operator&gt;.assignment,original_datasize_clamped =\012        ((direntry-&gt;tdir_count &gt; 10) ? 10 : (int)direntry-&gt;tdir_count) *\012        typesize)<SUB>1289</SUB>> ]
+"80888" [label = <(&lt;operator&gt;.assignment,*count = (uint32_t)target_count64)<SUB>1303</SUB>> ]
+"80894" [label = <(&lt;operator&gt;.assignment,datasize = (*count) * typesize)<SUB>1304</SUB>> ]
+"80900" [label = <(assert,assert((tmsize_t)datasize &gt; 0))<SUB>1305</SUB>> ]
+"81132" [label = <(&lt;operator&gt;.assignment,*value = data)<SUB>1370</SUB>> ]
+"81136" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>1371</SUB>> ]
+"80812" [label = <(TIFFDataWidth,TIFFDataWidth(direntry-&gt;tdir_type))<SUB>1274</SUB>> ]
+"80818" [label = <(&lt;operator&gt;.conditional,(direntry-&gt;tdir_count &gt; maxcount) ? maxcount : direntry-&gt;tdir_count)<SUB>1277</SUB>> ]
+"80829" [label = <(&lt;operator&gt;.logicalOr,(target_count64 == 0) || (typesize == 0))<SUB>1279</SUB>> ]
+"80844" [label = <(UNKNOWN,void,void)<SUB>1284</SUB>> ]
+"80848" [label = <(&lt;operator&gt;.multiplication,((direntry-&gt;tdir_count &gt; 10) ? 10 : (int)direntry-&gt;tdir_count) *\012        typesize)<SUB>1290</SUB>> ]
+"80863" [label = <(&lt;operator&gt;.lessThan,(uint64_t)(MAX_SIZE_TAG_DATA / typesize) &lt; target_count64)<SUB>1298</SUB>> ]
+"80876" [label = <(&lt;operator&gt;.lessThan,(uint64_t)(MAX_SIZE_TAG_DATA / desttypesize) &lt; target_count64)<SUB>1300</SUB>> ]
+"80889" [label = <(&lt;operator&gt;.indirection,*count)<SUB>1303</SUB>> ]
+"80891" [label = <(&lt;operator&gt;.cast,(uint32_t)target_count64)<SUB>1303</SUB>> ]
+"80896" [label = <(&lt;operator&gt;.multiplication,(*count) * typesize)<SUB>1304</SUB>> ]
+"80901" [label = <(&lt;operator&gt;.greaterThan,(tmsize_t)datasize &gt; 0)<SUB>1305</SUB>> ]
+"80907" [label = <(&lt;operator&gt;.logicalAnd,isMapped(tif) &amp;&amp; datasize &gt; (uint64_t)tif-&gt;tif_size)<SUB>1307</SUB>> ]
+"80921" [label = <(&lt;operator&gt;.logicalAnd,!isMapped(tif) &amp;&amp; (((tif-&gt;tif_flags &amp; TIFF_BIGTIFF) &amp;&amp; datasize &gt; 8) ||\012                           (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF) &amp;&amp; datasize &gt; 4)))<SUB>1310</SUB>> ]
+"80971" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>1321</SUB>> ]
+"81133" [label = <(&lt;operator&gt;.indirection,*value)<SUB>1370</SUB>> ]
+"80813" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>1274</SUB>> ]
+"80819" [label = <(&lt;operator&gt;.greaterThan,direntry-&gt;tdir_count &gt; maxcount)<SUB>1277</SUB>> ]
+"80825" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>1277</SUB>> ]
+"80830" [label = <(&lt;operator&gt;.equals,target_count64 == 0)<SUB>1279</SUB>> ]
+"80833" [label = <(&lt;operator&gt;.equals,typesize == 0)<SUB>1279</SUB>> ]
+"80837" [label = <(&lt;operator&gt;.assignment,*value = 0)<SUB>1281</SUB>> ]
+"80841" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>1282</SUB>> ]
+"80849" [label = <(&lt;operator&gt;.conditional,(direntry-&gt;tdir_count &gt; 10) ? 10 : (int)direntry-&gt;tdir_count)<SUB>1290</SUB>> ]
+"80864" [label = <(&lt;operator&gt;.cast,(uint64_t)(MAX_SIZE_TAG_DATA / typesize))<SUB>1298</SUB>> ]
+"80873" [label = <(RETURN,return (TIFFReadDirEntryErrSizesan);,return (TIFFReadDirEntryErrSizesan);)<SUB>1299</SUB>> ]
+"80877" [label = <(&lt;operator&gt;.cast,(uint64_t)(MAX_SIZE_TAG_DATA / desttypesize))<SUB>1300</SUB>> ]
+"80886" [label = <(RETURN,return (TIFFReadDirEntryErrSizesan);,return (TIFFReadDirEntryErrSizesan);)<SUB>1301</SUB>> ]
+"80892" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>1303</SUB>> ]
+"80897" [label = <(&lt;operator&gt;.indirection,*count)<SUB>1304</SUB>> ]
+"80902" [label = <(&lt;operator&gt;.cast,(tmsize_t)datasize)<SUB>1305</SUB>> ]
+"80908" [label = <(isMapped,isMapped(tif))<SUB>1307</SUB>> ]
+"80910" [label = <(&lt;operator&gt;.greaterThan,datasize &gt; (uint64_t)tif-&gt;tif_size)<SUB>1307</SUB>> ]
+"80918" [label = <(RETURN,return TIFFReadDirEntryErrIo;,return TIFFReadDirEntryErrIo;)<SUB>1308</SUB>> ]
+"80922" [label = <(&lt;operator&gt;.logicalNot,!isMapped(tif))<SUB>1310</SUB>> ]
+"80925" [label = <(&lt;operator&gt;.logicalOr,((tif-&gt;tif_flags &amp; TIFF_BIGTIFF) &amp;&amp; datasize &gt; 8) ||\012                           (!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF) &amp;&amp; datasize &gt; 4))<SUB>1310</SUB>> ]
+"80946" [label = <(&lt;operator&gt;.assignment,data = NULL)<SUB>1313</SUB>> ]
+"80972" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1321</SUB>> ]
+"80815" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>1274</SUB>> ]
+"80820" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>1277</SUB>> ]
+"80827" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>1277</SUB>> ]
+"80838" [label = <(&lt;operator&gt;.indirection,*value)<SUB>1281</SUB>> ]
+"80850" [label = <(&lt;operator&gt;.greaterThan,direntry-&gt;tdir_count &gt; 10)<SUB>1290</SUB>> ]
+"80856" [label = <(&lt;operator&gt;.cast,(int)direntry-&gt;tdir_count)<SUB>1290</SUB>> ]
+"80865" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1298</SUB>> ]
+"80866" [label = <(MAX_SIZE_TAG_DATA,MAX_SIZE_TAG_DATA / typesize)<SUB>1298</SUB>> ]
+"80878" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1300</SUB>> ]
+"80879" [label = <(MAX_SIZE_TAG_DATA,MAX_SIZE_TAG_DATA / desttypesize)<SUB>1300</SUB>> ]
+"80903" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1305</SUB>> ]
+"80912" [label = <(&lt;operator&gt;.cast,(uint64_t)tif-&gt;tif_size)<SUB>1307</SUB>> ]
+"80923" [label = <(isMapped,isMapped(tif))<SUB>1310</SUB>> ]
+"80926" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_BIGTIFF) &amp;&amp; datasize &gt; 8)<SUB>1310</SUB>> ]
+"80935" [label = <(&lt;operator&gt;.logicalAnd,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF) &amp;&amp; datasize &gt; 4)<SUB>1311</SUB>> ]
+"80948" [label = <(NULL,NULL)<SUB>1313</SUB>> ]
+"80955" [label = <(&lt;operator&gt;.assignment,data = _TIFFCheckMalloc(tif, *count, typesize, &quot;ReadDirEntryArray&quot;))<SUB>1317</SUB>> ]
+"80973" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1321</SUB>> ]
+"80979" [label = <(&lt;operator&gt;.logicalAnd,original_datasize_clamped &lt;= 4 &amp;&amp; datasize &lt;= 4)<SUB>1325</SUB>> ]
+"80822" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>1277</SUB>> ]
+"80851" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>1290</SUB>> ]
+"80857" [label = <(UNKNOWN,int,int)<SUB>1290</SUB>> ]
+"80858" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_count)<SUB>1290</SUB>> ]
+"80913" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1307</SUB>> ]
+"80914" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_size)<SUB>1307</SUB>> ]
+"80927" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1310</SUB>> ]
+"80932" [label = <(&lt;operator&gt;.greaterThan,datasize &gt; 8)<SUB>1310</SUB>> ]
+"80936" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>1311</SUB>> ]
+"80942" [label = <(&lt;operator&gt;.greaterThan,datasize &gt; 4)<SUB>1311</SUB>> ]
+"80957" [label = <(_TIFFCheckMalloc,_TIFFCheckMalloc(tif, *count, typesize, &quot;ReadDirEntryArray&quot;))<SUB>1317</SUB>> ]
+"80964" [label = <(&lt;operator&gt;.equals,data == 0)<SUB>1318</SUB>> ]
+"80975" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1321</SUB>> ]
+"80980" [label = <(&lt;operator&gt;.lessEqualsThan,original_datasize_clamped &lt;= 4)<SUB>1325</SUB>> ]
+"80983" [label = <(&lt;operator&gt;.lessEqualsThan,datasize &lt;= 4)<SUB>1325</SUB>> ]
+"80987" [label = <(_TIFFmemcpy,_TIFFmemcpy(data, &amp;direntry-&gt;tdir_offset, datasize))<SUB>1326</SUB>> ]
+"81057" [label = <(&lt;operator&gt;.logicalAnd,original_datasize_clamped &lt;= 8 &amp;&amp; datasize &lt;= 8)<SUB>1349</SUB>> ]
+"80853" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>1290</SUB>> ]
+"80860" [label = <(FIELD_IDENTIFIER,tdir_count,tdir_count)<SUB>1290</SUB>> ]
+"80868" [label = <(&lt;operator&gt;.division,2147483647U / typesize)<SUB>1298</SUB>> ]
+"80881" [label = <(&lt;operator&gt;.division,2147483647U / desttypesize)<SUB>1300</SUB>> ]
+"80916" [label = <(FIELD_IDENTIFIER,tif_size,tif_size)<SUB>1307</SUB>> ]
+"80928" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1310</SUB>> ]
+"80937" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>1311</SUB>> ]
+"80950" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>1313</SUB>> ]
+"80959" [label = <(&lt;operator&gt;.indirection,*count)<SUB>1317</SUB>> ]
+"80968" [label = <(RETURN,return (TIFFReadDirEntryErrAlloc);,return (TIFFReadDirEntryErrAlloc);)<SUB>1319</SUB>> ]
+"80989" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>1326</SUB>> ]
+"80998" [label = <(&lt;operator&gt;.assignment,offset = direntry-&gt;tdir_offset.toff_long)<SUB>1330</SUB>> ]
+"81058" [label = <(&lt;operator&gt;.lessEqualsThan,original_datasize_clamped &lt;= 8)<SUB>1349</SUB>> ]
+"81061" [label = <(&lt;operator&gt;.lessEqualsThan,datasize &lt;= 8)<SUB>1349</SUB>> ]
+"81065" [label = <(_TIFFmemcpy,_TIFFmemcpy(data, &amp;direntry-&gt;tdir_offset, datasize))<SUB>1350</SUB>> ]
+"80930" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1310</SUB>> ]
+"80938" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1311</SUB>> ]
+"80951" [label = <(UNKNOWN,void *,void *)<SUB>1313</SUB>> ]
+"80990" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>1326</SUB>> ]
+"81000" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long)<SUB>1330</SUB>> ]
+"81006" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1331</SUB>> ]
+"81016" [label = <(isMapped,isMapped(tif))<SUB>1333</SUB>> ]
+"81045" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>1339</SUB>> ]
+"81067" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>1350</SUB>> ]
+"81076" [label = <(&lt;operator&gt;.assignment,offset = direntry-&gt;tdir_offset.toff_long8)<SUB>1354</SUB>> ]
+"80940" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1311</SUB>> ]
+"80992" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>1326</SUB>> ]
+"81001" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>1330</SUB>> ]
+"81004" [label = <(FIELD_IDENTIFIER,toff_long,toff_long)<SUB>1330</SUB>> ]
+"81007" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1331</SUB>> ]
+"81012" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;offset))<SUB>1332</SUB>> ]
+"81019" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryData(tif, (uint64_t)offset,\012                                           (tmsize_t)datasize, data))<SUB>1334</SUB>> ]
+"81049" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, data))<SUB>1341</SUB>> ]
+"81052" [label = <(RETURN,return (err);,return (err);)<SUB>1342</SUB>> ]
+"81068" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>1350</SUB>> ]
+"81078" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long8)<SUB>1354</SUB>> ]
+"81084" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>1355</SUB>> ]
+"81094" [label = <(isMapped,isMapped(tif))<SUB>1357</SUB>> ]
+"81123" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>1363</SUB>> ]
+"81003" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>1330</SUB>> ]
+"81009" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1331</SUB>> ]
+"81013" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>1332</SUB>> ]
+"81021" [label = <(TIFFReadDirEntryData,TIFFReadDirEntryData(tif, (uint64_t)offset,\012                                           (tmsize_t)datasize, data))<SUB>1334</SUB>> ]
+"81032" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryDataAndRealloc(tif, (uint64_t)offset,\012                                                     (tmsize_t)datasize, &amp;data))<SUB>1337</SUB>> ]
+"81070" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>1350</SUB>> ]
+"81079" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>1354</SUB>> ]
+"81082" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>1354</SUB>> ]
+"81085" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1355</SUB>> ]
+"81090" [label = <(TIFFSwabLong8,TIFFSwabLong8(&amp;offset))<SUB>1356</SUB>> ]
+"81097" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryData(tif, (uint64_t)offset,\012                                           (tmsize_t)datasize, data))<SUB>1358</SUB>> ]
+"81127" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, data))<SUB>1365</SUB>> ]
+"81130" [label = <(RETURN,return (err);,return (err);)<SUB>1366</SUB>> ]
+"81023" [label = <(&lt;operator&gt;.cast,(uint64_t)offset)<SUB>1334</SUB>> ]
+"81026" [label = <(&lt;operator&gt;.cast,(tmsize_t)datasize)<SUB>1335</SUB>> ]
+"81034" [label = <(TIFFReadDirEntryDataAndRealloc,TIFFReadDirEntryDataAndRealloc(tif, (uint64_t)offset,\012                                                     (tmsize_t)datasize, &amp;data))<SUB>1337</SUB>> ]
+"81081" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>1354</SUB>> ]
+"81087" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1355</SUB>> ]
+"81091" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>1356</SUB>> ]
+"81099" [label = <(TIFFReadDirEntryData,TIFFReadDirEntryData(tif, (uint64_t)offset,\012                                           (tmsize_t)datasize, data))<SUB>1358</SUB>> ]
+"81110" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryDataAndRealloc(tif, (uint64_t)offset,\012                                                     (tmsize_t)datasize, &amp;data))<SUB>1361</SUB>> ]
+"81024" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1334</SUB>> ]
+"81027" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1335</SUB>> ]
+"81036" [label = <(&lt;operator&gt;.cast,(uint64_t)offset)<SUB>1337</SUB>> ]
+"81039" [label = <(&lt;operator&gt;.cast,(tmsize_t)datasize)<SUB>1338</SUB>> ]
+"81042" [label = <(&lt;operator&gt;.addressOf,&amp;data)<SUB>1338</SUB>> ]
+"81101" [label = <(&lt;operator&gt;.cast,(uint64_t)offset)<SUB>1358</SUB>> ]
+"81104" [label = <(&lt;operator&gt;.cast,(tmsize_t)datasize)<SUB>1359</SUB>> ]
+"81112" [label = <(TIFFReadDirEntryDataAndRealloc,TIFFReadDirEntryDataAndRealloc(tif, (uint64_t)offset,\012                                                     (tmsize_t)datasize, &amp;data))<SUB>1361</SUB>> ]
+"81037" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1337</SUB>> ]
+"81040" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1338</SUB>> ]
+"81102" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1358</SUB>> ]
+"81105" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1359</SUB>> ]
+"81114" [label = <(&lt;operator&gt;.cast,(uint64_t)offset)<SUB>1361</SUB>> ]
+"81117" [label = <(&lt;operator&gt;.cast,(tmsize_t)datasize)<SUB>1362</SUB>> ]
+"81120" [label = <(&lt;operator&gt;.addressOf,&amp;data)<SUB>1362</SUB>> ]
+"81115" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1361</SUB>> ]
+"81118" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>1362</SUB>> ]
+"80797" [label = <(METHOD,TIFFReadDirEntryArrayWithLimit)<SUB>1264</SUB>> ]
+"81138" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>1264</SUB>> ]
+  "80810" -> "80822" 
+  "80816" -> "80830" 
+  "80843" -> "80853" 
+  "80846" -> "80865" 
+  "80888" -> "80897" 
+  "80894" -> "80903" 
+  "80900" -> "80908" 
+  "81132" -> "81136" 
+  "81136" -> "81138" 
+  "80812" -> "80810" 
+  "80818" -> "80816" 
+  "80829" -> "80844" 
+  "80829" -> "80838" 
+  "80844" -> "80843" 
+  "80848" -> "80846" 
+  "80863" -> "80878" 
+  "80863" -> "80873" 
+  "80876" -> "80886" 
+  "80876" -> "80889" 
+  "80889" -> "80892" 
+  "80891" -> "80888" 
+  "80896" -> "80894" 
+  "80901" -> "80900" 
+  "80907" -> "80918" 
+  "80907" -> "80923" 
+  "80921" -> "80948" 
+  "80921" -> "80959" 
+  "80971" -> "80980" 
+  "80971" -> "81058" 
+  "81133" -> "81132" 
+  "80813" -> "80812" 
+  "80819" -> "80818" 
+  "80819" -> "80827" 
+  "80825" -> "80818" 
+  "80830" -> "80829" 
+  "80830" -> "80833" 
+  "80833" -> "80829" 
+  "80837" -> "80841" 
+  "80841" -> "81138" 
+  "80849" -> "80848" 
+  "80864" -> "80863" 
+  "80873" -> "81138" 
+  "80877" -> "80876" 
+  "80886" -> "81138" 
+  "80892" -> "80891" 
+  "80897" -> "80896" 
+  "80902" -> "80901" 
+  "80908" -> "80907" 
+  "80908" -> "80913" 
+  "80910" -> "80907" 
+  "80918" -> "81138" 
+  "80922" -> "80921" 
+  "80922" -> "80930" 
+  "80925" -> "80921" 
+  "80946" -> "80975" 
+  "80972" -> "80971" 
+  "80815" -> "80813" 
+  "80820" -> "80819" 
+  "80827" -> "80825" 
+  "80838" -> "80837" 
+  "80850" -> "80857" 
+  "80850" -> "80849" 
+  "80856" -> "80849" 
+  "80865" -> "80866" 
+  "80866" -> "80864" 
+  "80866" -> "80868" 
+  "80878" -> "80879" 
+  "80879" -> "80877" 
+  "80879" -> "80881" 
+  "80903" -> "80902" 
+  "80912" -> "80910" 
+  "80923" -> "80922" 
+  "80926" -> "80925" 
+  "80926" -> "80940" 
+  "80935" -> "80925" 
+  "80948" -> "80951" 
+  "80948" -> "80946" 
+  "80955" -> "80964" 
+  "80973" -> "80972" 
+  "80979" -> "80992" 
+  "80979" -> "81003" 
+  "80822" -> "80820" 
+  "80851" -> "80850" 
+  "80857" -> "80860" 
+  "80858" -> "80856" 
+  "80913" -> "80916" 
+  "80914" -> "80912" 
+  "80927" -> "80926" 
+  "80927" -> "80932" 
+  "80932" -> "80926" 
+  "80936" -> "80935" 
+  "80936" -> "80942" 
+  "80942" -> "80935" 
+  "80957" -> "80955" 
+  "80964" -> "80968" 
+  "80964" -> "80975" 
+  "80975" -> "80973" 
+  "80980" -> "80979" 
+  "80980" -> "80983" 
+  "80983" -> "80979" 
+  "80987" -> "81133" 
+  "81057" -> "81070" 
+  "81057" -> "81081" 
+  "80853" -> "80851" 
+  "80860" -> "80858" 
+  "80868" -> "80864" 
+  "80881" -> "80877" 
+  "80916" -> "80914" 
+  "80928" -> "80927" 
+  "80937" -> "80936" 
+  "80950" -> "80946" 
+  "80959" -> "80957" 
+  "80968" -> "81138" 
+  "80989" -> "80987" 
+  "80998" -> "81009" 
+  "81058" -> "81057" 
+  "81058" -> "81061" 
+  "81061" -> "81057" 
+  "81065" -> "81133" 
+  "80930" -> "80928" 
+  "80938" -> "80937" 
+  "80951" -> "80950" 
+  "80990" -> "80989" 
+  "81000" -> "80998" 
+  "81006" -> "81013" 
+  "81006" -> "81016" 
+  "81016" -> "81024" 
+  "81016" -> "81037" 
+  "81045" -> "81049" 
+  "81045" -> "81133" 
+  "81067" -> "81065" 
+  "81076" -> "81087" 
+  "80940" -> "80938" 
+  "80992" -> "80990" 
+  "81001" -> "81004" 
+  "81004" -> "81000" 
+  "81007" -> "81006" 
+  "81012" -> "81016" 
+  "81019" -> "81045" 
+  "81049" -> "81052" 
+  "81052" -> "81138" 
+  "81068" -> "81067" 
+  "81078" -> "81076" 
+  "81084" -> "81091" 
+  "81084" -> "81094" 
+  "81094" -> "81102" 
+  "81094" -> "81115" 
+  "81123" -> "81127" 
+  "81123" -> "81133" 
+  "81003" -> "81001" 
+  "81009" -> "81007" 
+  "81013" -> "81012" 
+  "81021" -> "81019" 
+  "81032" -> "81045" 
+  "81070" -> "81068" 
+  "81079" -> "81082" 
+  "81082" -> "81078" 
+  "81085" -> "81084" 
+  "81090" -> "81094" 
+  "81097" -> "81123" 
+  "81127" -> "81130" 
+  "81130" -> "81138" 
+  "81023" -> "81027" 
+  "81026" -> "81021" 
+  "81034" -> "81032" 
+  "81081" -> "81079" 
+  "81087" -> "81085" 
+  "81091" -> "81090" 
+  "81099" -> "81097" 
+  "81110" -> "81123" 
+  "81024" -> "81023" 
+  "81027" -> "81026" 
+  "81036" -> "81040" 
+  "81039" -> "81042" 
+  "81042" -> "81034" 
+  "81101" -> "81105" 
+  "81104" -> "81099" 
+  "81112" -> "81110" 
+  "81037" -> "81036" 
+  "81040" -> "81039" 
+  "81102" -> "81101" 
+  "81105" -> "81104" 
+  "81114" -> "81118" 
+  "81117" -> "81120" 
+  "81120" -> "81112" 
+  "81115" -> "81114" 
+  "81118" -> "81117" 
+  "80797" -> "80815" 
+}

@@ -1,0 +1,34 @@
+digraph "TIFFReadDirEntryCheckedSlong" {  
+"86739" [label = <(&lt;operator&gt;.assignment,*value = *(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86740" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3361</SUB>> ]
+"86742" [label = <(&lt;operator&gt;.indirection,*(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86750" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3362</SUB>> ]
+"86743" [label = <(&lt;operator&gt;.cast,(int32_t *)(&amp;direntry-&gt;tdir_offset))<SUB>3361</SUB>> ]
+"86751" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3362</SUB>> ]
+"86756" [label = <(TIFFSwabLong,TIFFSwabLong((uint32_t *)value))<SUB>3363</SUB>> ]
+"86744" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>3361</SUB>> ]
+"86745" [label = <(&lt;operator&gt;.addressOf,&amp;direntry-&gt;tdir_offset)<SUB>3361</SUB>> ]
+"86753" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3362</SUB>> ]
+"86757" [label = <(&lt;operator&gt;.cast,(uint32_t *)value)<SUB>3363</SUB>> ]
+"86746" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3361</SUB>> ]
+"86758" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3363</SUB>> ]
+"86748" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3361</SUB>> ]
+"86734" [label = <(METHOD,TIFFReadDirEntryCheckedSlong)<SUB>3358</SUB>> ]
+"86760" [label = <(METHOD_RETURN,void)<SUB>3358</SUB>> ]
+  "86739" -> "86753" 
+  "86740" -> "86744" 
+  "86742" -> "86739" 
+  "86750" -> "86758" 
+  "86750" -> "86760" 
+  "86743" -> "86742" 
+  "86751" -> "86750" 
+  "86756" -> "86760" 
+  "86744" -> "86748" 
+  "86745" -> "86743" 
+  "86753" -> "86751" 
+  "86757" -> "86756" 
+  "86746" -> "86745" 
+  "86758" -> "86757" 
+  "86748" -> "86746" 
+  "86734" -> "86740" 
+}

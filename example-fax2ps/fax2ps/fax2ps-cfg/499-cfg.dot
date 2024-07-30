@@ -1,0 +1,69 @@
+digraph "findPage" {  
+"10117" [label = <(&lt;operator&gt;.assignment,pn = (uint16_t)-1)<SUB>291</SUB>> ]
+"10124" [label = <(&lt;operator&gt;.assignment,ptotal = (uint16_t)-1)<SUB>292</SUB>> ]
+"10119" [label = <(&lt;operator&gt;.cast,(uint16_t)-1)<SUB>291</SUB>> ]
+"10126" [label = <(&lt;operator&gt;.cast,(uint16_t)-1)<SUB>292</SUB>> ]
+"10131" [label = <(GetPageNumber,GetPageNumber(tif))<SUB>293</SUB>> ]
+"10120" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>291</SUB>> ]
+"10121" [label = <(&lt;operator&gt;.minus,-1)<SUB>291</SUB>> ]
+"10127" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>292</SUB>> ]
+"10128" [label = <(&lt;operator&gt;.minus,-1)<SUB>292</SUB>> ]
+"10162" [label = <(RETURN,return (pn == (pageNumber - 1));,return (pn == (pageNumber - 1));)<SUB>298</SUB>> ]
+"10134" [label = <(TIFFGetField,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>293</SUB>> ]
+"10143" [label = <(&lt;operator&gt;.logicalAnd,pn != (pageNumber - 1) &amp;&amp; TIFFReadDirectory(tif) &amp;&amp;\012               GetPageNumber(tif))<SUB>295</SUB>> ]
+"10163" [label = <(&lt;operator&gt;.equals,pn == (pageNumber - 1))<SUB>298</SUB>> ]
+"10170" [label = <(RETURN,return (TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)));,return (TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)));)<SUB>301</SUB>> ]
+"10137" [label = <(&lt;operator&gt;.addressOf,&amp;pn)<SUB>293</SUB>> ]
+"10139" [label = <(&lt;operator&gt;.addressOf,&amp;ptotal)<SUB>293</SUB>> ]
+"10144" [label = <(&lt;operator&gt;.logicalAnd,pn != (pageNumber - 1) &amp;&amp; TIFFReadDirectory(tif))<SUB>295</SUB>> ]
+"10152" [label = <(GetPageNumber,GetPageNumber(tif))<SUB>296</SUB>> ]
+"10165" [label = <(&lt;operator&gt;.subtraction,pageNumber - 1)<SUB>298</SUB>> ]
+"10171" [label = <(TIFFSetDirectory,TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)))<SUB>301</SUB>> ]
+"10145" [label = <(&lt;operator&gt;.notEquals,pn != (pageNumber - 1))<SUB>295</SUB>> ]
+"10150" [label = <(TIFFReadDirectory,TIFFReadDirectory(tif))<SUB>295</SUB>> ]
+"10173" [label = <(&lt;operator&gt;.cast,(tdir_t)(pageNumber - 1))<SUB>301</SUB>> ]
+"10147" [label = <(&lt;operator&gt;.subtraction,pageNumber - 1)<SUB>295</SUB>> ]
+"10155" [label = <(TIFFGetField,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>296</SUB>> ]
+"10174" [label = <(UNKNOWN,tdir_t,tdir_t)<SUB>301</SUB>> ]
+"10175" [label = <(&lt;operator&gt;.subtraction,pageNumber - 1)<SUB>301</SUB>> ]
+"10158" [label = <(&lt;operator&gt;.addressOf,&amp;pn)<SUB>296</SUB>> ]
+"10160" [label = <(&lt;operator&gt;.addressOf,&amp;ptotal)<SUB>296</SUB>> ]
+"10112" [label = <(METHOD,findPage)<SUB>289</SUB>> ]
+"10178" [label = <(METHOD_RETURN,int)<SUB>289</SUB>> ]
+  "10117" -> "10127" 
+  "10124" -> "10131" 
+  "10119" -> "10117" 
+  "10126" -> "10124" 
+  "10131" -> "10147" 
+  "10131" -> "10174" 
+  "10131" -> "10137" 
+  "10120" -> "10121" 
+  "10121" -> "10119" 
+  "10127" -> "10128" 
+  "10128" -> "10126" 
+  "10162" -> "10178" 
+  "10134" -> "10147" 
+  "10134" -> "10174" 
+  "10143" -> "10165" 
+  "10163" -> "10162" 
+  "10170" -> "10178" 
+  "10137" -> "10139" 
+  "10139" -> "10134" 
+  "10144" -> "10143" 
+  "10144" -> "10152" 
+  "10152" -> "10143" 
+  "10152" -> "10158" 
+  "10165" -> "10163" 
+  "10171" -> "10170" 
+  "10145" -> "10144" 
+  "10145" -> "10150" 
+  "10150" -> "10144" 
+  "10173" -> "10171" 
+  "10147" -> "10145" 
+  "10155" -> "10143" 
+  "10174" -> "10175" 
+  "10175" -> "10173" 
+  "10158" -> "10160" 
+  "10160" -> "10155" 
+  "10112" -> "10120" 
+}

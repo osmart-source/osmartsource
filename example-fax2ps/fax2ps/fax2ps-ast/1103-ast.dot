@@ -1,0 +1,479 @@
+digraph "TIFFWriteDirectoryTagTransferfunction" {  
+"69409" [label = <(METHOD,TIFFWriteDirectoryTagTransferfunction)<SUB>2053</SUB>> ]
+"69410" [label = <(PARAM,TIFF *tif)<SUB>2053</SUB>> ]
+"69411" [label = <(PARAM,uint32_t *ndir)<SUB>2053</SUB>> ]
+"69412" [label = <(PARAM,TIFFDirEntry *dir)<SUB>2054</SUB>> ]
+"69413" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2055</SUB>> ]
+"69414" [label = <(LOCAL,constchar[] module: char[])<SUB>2056</SUB>> ]
+"69415" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagTransferfunction&quot;)<SUB>2056</SUB>> ]
+"69416" [label = <(IDENTIFIER,module,module[] = &quot;TIFFWriteDirectoryTagTransferfunction&quot;)<SUB>2056</SUB>> ]
+"69417" [label = <(LITERAL,&quot;TIFFWriteDirectoryTagTransferfunction&quot;,module[] = &quot;TIFFWriteDirectoryTagTransferfunction&quot;)<SUB>2056</SUB>> ]
+"69418" [label = <(LOCAL,uint32_t m: uint32_t)<SUB>2057</SUB>> ]
+"69419" [label = <(LOCAL,uint16_t n: uint16_t)<SUB>2058</SUB>> ]
+"69420" [label = <(LOCAL,uint16_t* o: uint16_t)<SUB>2059</SUB>> ]
+"69421" [label = <(LOCAL,int p: int)<SUB>2060</SUB>> ]
+"69422" [label = <(CONTROL_STRUCTURE,if (dir == NULL),if (dir == NULL))<SUB>2061</SUB>> ]
+"69423" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>2061</SUB>> ]
+"69424" [label = <(IDENTIFIER,dir,dir == NULL)<SUB>2061</SUB>> ]
+"69425" [label = <(IDENTIFIER,NULL,dir == NULL)<SUB>2061</SUB>> ]
+"69426" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2062</SUB>> ]
+"69427" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>2063</SUB>> ]
+"69428" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2063</SUB>> ]
+"69429" [label = <(IDENTIFIER,ndir,(*ndir)++)<SUB>2063</SUB>> ]
+"69430" [label = <(RETURN,return (1);,return (1);)<SUB>2064</SUB>> ]
+"69431" [label = <(LITERAL,1,return (1);)<SUB>2064</SUB>> ]
+"69432" [label = <(&lt;operator&gt;.assignment,m = (1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample))<SUB>2066</SUB>> ]
+"69433" [label = <(IDENTIFIER,m,m = (1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample))<SUB>2066</SUB>> ]
+"69434" [label = <(&lt;operator&gt;.shiftLeft,1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample)<SUB>2066</SUB>> ]
+"69435" [label = <(LITERAL,1,1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample)<SUB>2066</SUB>> ]
+"69436" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>2066</SUB>> ]
+"69437" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2066</SUB>> ]
+"69438" [label = <(IDENTIFIER,tif,1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample)<SUB>2066</SUB>> ]
+"69439" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2066</SUB>> ]
+"69440" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>2066</SUB>> ]
+"69441" [label = <(&lt;operator&gt;.assignment,n = tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples)<SUB>2067</SUB>> ]
+"69442" [label = <(IDENTIFIER,n,n = tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples)<SUB>2067</SUB>> ]
+"69443" [label = <(&lt;operator&gt;.subtraction,tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples)<SUB>2067</SUB>> ]
+"69444" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_samplesperpixel)<SUB>2067</SUB>> ]
+"69445" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2067</SUB>> ]
+"69446" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples)<SUB>2067</SUB>> ]
+"69447" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2067</SUB>> ]
+"69448" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>2067</SUB>> ]
+"69449" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_extrasamples)<SUB>2067</SUB>> ]
+"69450" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2067</SUB>> ]
+"69451" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_samplesperpixel - tif-&gt;tif_dir.td_extrasamples)<SUB>2067</SUB>> ]
+"69452" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2067</SUB>> ]
+"69453" [label = <(FIELD_IDENTIFIER,td_extrasamples,td_extrasamples)<SUB>2067</SUB>> ]
+"69454" [label = <(CONTROL_STRUCTURE,if (n &gt; 3),if (n &gt; 3))<SUB>2074</SUB>> ]
+"69455" [label = <(&lt;operator&gt;.greaterThan,n &gt; 3)<SUB>2074</SUB>> ]
+"69456" [label = <(IDENTIFIER,n,n &gt; 3)<SUB>2074</SUB>> ]
+"69457" [label = <(LITERAL,3,n &gt; 3)<SUB>2074</SUB>> ]
+"69458" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2075</SUB>> ]
+"69459" [label = <(&lt;operator&gt;.assignment,n = 3)<SUB>2075</SUB>> ]
+"69460" [label = <(IDENTIFIER,n,n = 3)<SUB>2075</SUB>> ]
+"69461" [label = <(LITERAL,3,n = 3)<SUB>2075</SUB>> ]
+"69462" [label = <(CONTROL_STRUCTURE,if (n == 3),if (n == 3))<SUB>2076</SUB>> ]
+"69463" [label = <(&lt;operator&gt;.equals,n == 3)<SUB>2076</SUB>> ]
+"69464" [label = <(IDENTIFIER,n,n == 3)<SUB>2076</SUB>> ]
+"69465" [label = <(LITERAL,3,n == 3)<SUB>2076</SUB>> ]
+"69466" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2077</SUB>> ]
+"69467" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_dir.td_transferfunction[2] == NULL ||\012            !_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t))),if (tif-&gt;tif_dir.td_transferfunction[2] == NULL ||\012            !_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t))))<SUB>2078</SUB>> ]
+"69468" [label = <(&lt;operator&gt;.logicalOr,tif-&gt;tif_dir.td_transferfunction[2] == NULL ||\012            !_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2078</SUB>> ]
+"69469" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_transferfunction[2] == NULL)<SUB>2078</SUB>> ]
+"69470" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[2])<SUB>2078</SUB>> ]
+"69471" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2078</SUB>> ]
+"69472" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2078</SUB>> ]
+"69473" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_transferfunction[2] == NULL)<SUB>2078</SUB>> ]
+"69474" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2078</SUB>> ]
+"69475" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2078</SUB>> ]
+"69476" [label = <(LITERAL,2,tif-&gt;tif_dir.td_transferfunction[2] == NULL)<SUB>2078</SUB>> ]
+"69477" [label = <(IDENTIFIER,NULL,tif-&gt;tif_dir.td_transferfunction[2] == NULL)<SUB>2078</SUB>> ]
+"69478" [label = <(&lt;operator&gt;.logicalNot,!_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2079</SUB>> ]
+"69479" [label = <(_TIFFmemcmp,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2079</SUB>> ]
+"69480" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[0])<SUB>2079</SUB>> ]
+"69481" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2079</SUB>> ]
+"69482" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2079</SUB>> ]
+"69483" [label = <(IDENTIFIER,tif,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2079</SUB>> ]
+"69484" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2079</SUB>> ]
+"69485" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2079</SUB>> ]
+"69486" [label = <(LITERAL,0,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2079</SUB>> ]
+"69487" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[2])<SUB>2080</SUB>> ]
+"69488" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2080</SUB>> ]
+"69489" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2080</SUB>> ]
+"69490" [label = <(IDENTIFIER,tif,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2080</SUB>> ]
+"69491" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2080</SUB>> ]
+"69492" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2080</SUB>> ]
+"69493" [label = <(LITERAL,2,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[2],\012                         m * sizeof(uint16_t)))<SUB>2080</SUB>> ]
+"69494" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2081</SUB>> ]
+"69495" [label = <(IDENTIFIER,m,m * sizeof(uint16_t))<SUB>2081</SUB>> ]
+"69496" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2081</SUB>> ]
+"69497" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2081</SUB>> ]
+"69498" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2082</SUB>> ]
+"69499" [label = <(&lt;operator&gt;.assignment,n = 2)<SUB>2082</SUB>> ]
+"69500" [label = <(IDENTIFIER,n,n = 2)<SUB>2082</SUB>> ]
+"69501" [label = <(LITERAL,2,n = 2)<SUB>2082</SUB>> ]
+"69502" [label = <(CONTROL_STRUCTURE,if (n == 2),if (n == 2))<SUB>2084</SUB>> ]
+"69503" [label = <(&lt;operator&gt;.equals,n == 2)<SUB>2084</SUB>> ]
+"69504" [label = <(IDENTIFIER,n,n == 2)<SUB>2084</SUB>> ]
+"69505" [label = <(LITERAL,2,n == 2)<SUB>2084</SUB>> ]
+"69506" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2085</SUB>> ]
+"69507" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_dir.td_transferfunction[1] == NULL ||\012            !_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t))),if (tif-&gt;tif_dir.td_transferfunction[1] == NULL ||\012            !_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t))))<SUB>2086</SUB>> ]
+"69508" [label = <(&lt;operator&gt;.logicalOr,tif-&gt;tif_dir.td_transferfunction[1] == NULL ||\012            !_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2086</SUB>> ]
+"69509" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_transferfunction[1] == NULL)<SUB>2086</SUB>> ]
+"69510" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[1])<SUB>2086</SUB>> ]
+"69511" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2086</SUB>> ]
+"69512" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2086</SUB>> ]
+"69513" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_transferfunction[1] == NULL)<SUB>2086</SUB>> ]
+"69514" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2086</SUB>> ]
+"69515" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2086</SUB>> ]
+"69516" [label = <(LITERAL,1,tif-&gt;tif_dir.td_transferfunction[1] == NULL)<SUB>2086</SUB>> ]
+"69517" [label = <(IDENTIFIER,NULL,tif-&gt;tif_dir.td_transferfunction[1] == NULL)<SUB>2086</SUB>> ]
+"69518" [label = <(&lt;operator&gt;.logicalNot,!_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2087</SUB>> ]
+"69519" [label = <(_TIFFmemcmp,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2087</SUB>> ]
+"69520" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[0])<SUB>2087</SUB>> ]
+"69521" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2087</SUB>> ]
+"69522" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2087</SUB>> ]
+"69523" [label = <(IDENTIFIER,tif,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2087</SUB>> ]
+"69524" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2087</SUB>> ]
+"69525" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2087</SUB>> ]
+"69526" [label = <(LITERAL,0,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2087</SUB>> ]
+"69527" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[1])<SUB>2088</SUB>> ]
+"69528" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2088</SUB>> ]
+"69529" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2088</SUB>> ]
+"69530" [label = <(IDENTIFIER,tif,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2088</SUB>> ]
+"69531" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2088</SUB>> ]
+"69532" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2088</SUB>> ]
+"69533" [label = <(LITERAL,1,_TIFFmemcmp(tif-&gt;tif_dir.td_transferfunction[0],\012                         tif-&gt;tif_dir.td_transferfunction[1],\012                         m * sizeof(uint16_t)))<SUB>2088</SUB>> ]
+"69534" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2089</SUB>> ]
+"69535" [label = <(IDENTIFIER,m,m * sizeof(uint16_t))<SUB>2089</SUB>> ]
+"69536" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2089</SUB>> ]
+"69537" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2089</SUB>> ]
+"69538" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2090</SUB>> ]
+"69539" [label = <(&lt;operator&gt;.assignment,n = 1)<SUB>2090</SUB>> ]
+"69540" [label = <(IDENTIFIER,n,n = 1)<SUB>2090</SUB>> ]
+"69541" [label = <(LITERAL,1,n = 1)<SUB>2090</SUB>> ]
+"69542" [label = <(CONTROL_STRUCTURE,if (n == 0),if (n == 0))<SUB>2092</SUB>> ]
+"69543" [label = <(&lt;operator&gt;.equals,n == 0)<SUB>2092</SUB>> ]
+"69544" [label = <(IDENTIFIER,n,n == 0)<SUB>2092</SUB>> ]
+"69545" [label = <(LITERAL,0,n == 0)<SUB>2092</SUB>> ]
+"69546" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2093</SUB>> ]
+"69547" [label = <(&lt;operator&gt;.assignment,n = 1)<SUB>2093</SUB>> ]
+"69548" [label = <(IDENTIFIER,n,n = 1)<SUB>2093</SUB>> ]
+"69549" [label = <(LITERAL,1,n = 1)<SUB>2093</SUB>> ]
+"69550" [label = <(&lt;operator&gt;.assignment,o = _TIFFmallocExt(tif, n * m * sizeof(uint16_t)))<SUB>2094</SUB>> ]
+"69551" [label = <(IDENTIFIER,o,o = _TIFFmallocExt(tif, n * m * sizeof(uint16_t)))<SUB>2094</SUB>> ]
+"69552" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, n * m * sizeof(uint16_t)))<SUB>2094</SUB>> ]
+"69553" [label = <(IDENTIFIER,tif,_TIFFmallocExt(tif, n * m * sizeof(uint16_t)))<SUB>2094</SUB>> ]
+"69554" [label = <(&lt;operator&gt;.multiplication,n * m * sizeof(uint16_t))<SUB>2094</SUB>> ]
+"69555" [label = <(&lt;operator&gt;.multiplication,n * m)<SUB>2094</SUB>> ]
+"69556" [label = <(IDENTIFIER,n,n * m)<SUB>2094</SUB>> ]
+"69557" [label = <(IDENTIFIER,m,n * m)<SUB>2094</SUB>> ]
+"69558" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2094</SUB>> ]
+"69559" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2094</SUB>> ]
+"69560" [label = <(CONTROL_STRUCTURE,if (o == NULL),if (o == NULL))<SUB>2095</SUB>> ]
+"69561" [label = <(&lt;operator&gt;.equals,o == NULL)<SUB>2095</SUB>> ]
+"69562" [label = <(IDENTIFIER,o,o == NULL)<SUB>2095</SUB>> ]
+"69563" [label = <(IDENTIFIER,NULL,o == NULL)<SUB>2095</SUB>> ]
+"69564" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2096</SUB>> ]
+"69565" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2097</SUB>> ]
+"69566" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2097</SUB>> ]
+"69567" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2097</SUB>> ]
+"69568" [label = <(LITERAL,&quot;Out of memory&quot;,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2097</SUB>> ]
+"69569" [label = <(RETURN,return (0);,return (0);)<SUB>2098</SUB>> ]
+"69570" [label = <(LITERAL,0,return (0);)<SUB>2098</SUB>> ]
+"69571" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;o[0], tif-&gt;tif_dir.td_transferfunction[0],\012                m * sizeof(uint16_t)))<SUB>2100</SUB>> ]
+"69572" [label = <(&lt;operator&gt;.addressOf,&amp;o[0])<SUB>2100</SUB>> ]
+"69573" [label = <(&lt;operator&gt;.indirectIndexAccess,o[0])<SUB>2100</SUB>> ]
+"69574" [label = <(IDENTIFIER,o,_TIFFmemcpy(&amp;o[0], tif-&gt;tif_dir.td_transferfunction[0],\012                m * sizeof(uint16_t)))<SUB>2100</SUB>> ]
+"69575" [label = <(LITERAL,0,_TIFFmemcpy(&amp;o[0], tif-&gt;tif_dir.td_transferfunction[0],\012                m * sizeof(uint16_t)))<SUB>2100</SUB>> ]
+"69576" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[0])<SUB>2100</SUB>> ]
+"69577" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2100</SUB>> ]
+"69578" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2100</SUB>> ]
+"69579" [label = <(IDENTIFIER,tif,_TIFFmemcpy(&amp;o[0], tif-&gt;tif_dir.td_transferfunction[0],\012                m * sizeof(uint16_t)))<SUB>2100</SUB>> ]
+"69580" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2100</SUB>> ]
+"69581" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2100</SUB>> ]
+"69582" [label = <(LITERAL,0,_TIFFmemcpy(&amp;o[0], tif-&gt;tif_dir.td_transferfunction[0],\012                m * sizeof(uint16_t)))<SUB>2100</SUB>> ]
+"69583" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2101</SUB>> ]
+"69584" [label = <(IDENTIFIER,m,m * sizeof(uint16_t))<SUB>2101</SUB>> ]
+"69585" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2101</SUB>> ]
+"69586" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2101</SUB>> ]
+"69587" [label = <(CONTROL_STRUCTURE,if (n &gt; 1),if (n &gt; 1))<SUB>2102</SUB>> ]
+"69588" [label = <(&lt;operator&gt;.greaterThan,n &gt; 1)<SUB>2102</SUB>> ]
+"69589" [label = <(IDENTIFIER,n,n &gt; 1)<SUB>2102</SUB>> ]
+"69590" [label = <(LITERAL,1,n &gt; 1)<SUB>2102</SUB>> ]
+"69591" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2103</SUB>> ]
+"69592" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;o[m], tif-&gt;tif_dir.td_transferfunction[1],\012                    m * sizeof(uint16_t)))<SUB>2103</SUB>> ]
+"69593" [label = <(&lt;operator&gt;.addressOf,&amp;o[m])<SUB>2103</SUB>> ]
+"69594" [label = <(&lt;operator&gt;.indirectIndexAccess,o[m])<SUB>2103</SUB>> ]
+"69595" [label = <(IDENTIFIER,o,_TIFFmemcpy(&amp;o[m], tif-&gt;tif_dir.td_transferfunction[1],\012                    m * sizeof(uint16_t)))<SUB>2103</SUB>> ]
+"69596" [label = <(IDENTIFIER,m,_TIFFmemcpy(&amp;o[m], tif-&gt;tif_dir.td_transferfunction[1],\012                    m * sizeof(uint16_t)))<SUB>2103</SUB>> ]
+"69597" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[1])<SUB>2103</SUB>> ]
+"69598" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2103</SUB>> ]
+"69599" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2103</SUB>> ]
+"69600" [label = <(IDENTIFIER,tif,_TIFFmemcpy(&amp;o[m], tif-&gt;tif_dir.td_transferfunction[1],\012                    m * sizeof(uint16_t)))<SUB>2103</SUB>> ]
+"69601" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2103</SUB>> ]
+"69602" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2103</SUB>> ]
+"69603" [label = <(LITERAL,1,_TIFFmemcpy(&amp;o[m], tif-&gt;tif_dir.td_transferfunction[1],\012                    m * sizeof(uint16_t)))<SUB>2103</SUB>> ]
+"69604" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2104</SUB>> ]
+"69605" [label = <(IDENTIFIER,m,m * sizeof(uint16_t))<SUB>2104</SUB>> ]
+"69606" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2104</SUB>> ]
+"69607" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2104</SUB>> ]
+"69608" [label = <(CONTROL_STRUCTURE,if (n &gt; 2),if (n &gt; 2))<SUB>2105</SUB>> ]
+"69609" [label = <(&lt;operator&gt;.greaterThan,n &gt; 2)<SUB>2105</SUB>> ]
+"69610" [label = <(IDENTIFIER,n,n &gt; 2)<SUB>2105</SUB>> ]
+"69611" [label = <(LITERAL,2,n &gt; 2)<SUB>2105</SUB>> ]
+"69612" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>2106</SUB>> ]
+"69613" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;o[2 * m], tif-&gt;tif_dir.td_transferfunction[2],\012                    m * sizeof(uint16_t)))<SUB>2106</SUB>> ]
+"69614" [label = <(&lt;operator&gt;.addressOf,&amp;o[2 * m])<SUB>2106</SUB>> ]
+"69615" [label = <(&lt;operator&gt;.indirectIndexAccess,o[2 * m])<SUB>2106</SUB>> ]
+"69616" [label = <(IDENTIFIER,o,_TIFFmemcpy(&amp;o[2 * m], tif-&gt;tif_dir.td_transferfunction[2],\012                    m * sizeof(uint16_t)))<SUB>2106</SUB>> ]
+"69617" [label = <(&lt;operator&gt;.multiplication,2 * m)<SUB>2106</SUB>> ]
+"69618" [label = <(LITERAL,2,2 * m)<SUB>2106</SUB>> ]
+"69619" [label = <(IDENTIFIER,m,2 * m)<SUB>2106</SUB>> ]
+"69620" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_transferfunction[2])<SUB>2106</SUB>> ]
+"69621" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_transferfunction)<SUB>2106</SUB>> ]
+"69622" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2106</SUB>> ]
+"69623" [label = <(IDENTIFIER,tif,_TIFFmemcpy(&amp;o[2 * m], tif-&gt;tif_dir.td_transferfunction[2],\012                    m * sizeof(uint16_t)))<SUB>2106</SUB>> ]
+"69624" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2106</SUB>> ]
+"69625" [label = <(FIELD_IDENTIFIER,td_transferfunction,td_transferfunction)<SUB>2106</SUB>> ]
+"69626" [label = <(LITERAL,2,_TIFFmemcpy(&amp;o[2 * m], tif-&gt;tif_dir.td_transferfunction[2],\012                    m * sizeof(uint16_t)))<SUB>2106</SUB>> ]
+"69627" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2107</SUB>> ]
+"69628" [label = <(IDENTIFIER,m,m * sizeof(uint16_t))<SUB>2107</SUB>> ]
+"69629" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2107</SUB>> ]
+"69630" [label = <(IDENTIFIER,uint16_t,sizeof(uint16_t))<SUB>2107</SUB>> ]
+"69631" [label = <(&lt;operator&gt;.assignment,p = TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2108</SUB>> ]
+"69632" [label = <(IDENTIFIER,p,p = TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2108</SUB>> ]
+"69633" [label = <(TIFFWriteDirectoryTagCheckedShortArray,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2108</SUB>> ]
+"69634" [label = <(IDENTIFIER,tif,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2109</SUB>> ]
+"69635" [label = <(IDENTIFIER,ndir,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2109</SUB>> ]
+"69636" [label = <(IDENTIFIER,dir,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2109</SUB>> ]
+"69637" [label = <(IDENTIFIER,TIFFTAG_TRANSFERFUNCTION,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2109</SUB>> ]
+"69638" [label = <(&lt;operator&gt;.multiplication,n * m)<SUB>2109</SUB>> ]
+"69639" [label = <(IDENTIFIER,n,n * m)<SUB>2109</SUB>> ]
+"69640" [label = <(IDENTIFIER,m,n * m)<SUB>2109</SUB>> ]
+"69641" [label = <(IDENTIFIER,o,TIFFWriteDirectoryTagCheckedShortArray(\012        tif, ndir, dir, TIFFTAG_TRANSFERFUNCTION, n * m, o))<SUB>2109</SUB>> ]
+"69642" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, o))<SUB>2110</SUB>> ]
+"69643" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, o))<SUB>2110</SUB>> ]
+"69644" [label = <(IDENTIFIER,o,_TIFFfreeExt(tif, o))<SUB>2110</SUB>> ]
+"69645" [label = <(RETURN,return (p);,return (p);)<SUB>2111</SUB>> ]
+"69646" [label = <(IDENTIFIER,p,return (p);)<SUB>2111</SUB>> ]
+"69647" [label = <(METHOD_RETURN,int)<SUB>2053</SUB>> ]
+  "69409" -> "69410" 
+  "69409" -> "69411" 
+  "69409" -> "69412" 
+  "69409" -> "69413" 
+  "69409" -> "69647" 
+  "69413" -> "69414" 
+  "69413" -> "69415" 
+  "69413" -> "69418" 
+  "69413" -> "69419" 
+  "69413" -> "69420" 
+  "69413" -> "69421" 
+  "69413" -> "69422" 
+  "69413" -> "69432" 
+  "69413" -> "69441" 
+  "69413" -> "69454" 
+  "69413" -> "69462" 
+  "69413" -> "69502" 
+  "69413" -> "69542" 
+  "69413" -> "69550" 
+  "69413" -> "69560" 
+  "69413" -> "69571" 
+  "69413" -> "69587" 
+  "69413" -> "69608" 
+  "69413" -> "69631" 
+  "69413" -> "69642" 
+  "69413" -> "69645" 
+  "69415" -> "69416" 
+  "69415" -> "69417" 
+  "69422" -> "69423" 
+  "69422" -> "69426" 
+  "69423" -> "69424" 
+  "69423" -> "69425" 
+  "69426" -> "69427" 
+  "69426" -> "69430" 
+  "69427" -> "69428" 
+  "69428" -> "69429" 
+  "69430" -> "69431" 
+  "69432" -> "69433" 
+  "69432" -> "69434" 
+  "69434" -> "69435" 
+  "69434" -> "69436" 
+  "69436" -> "69437" 
+  "69436" -> "69440" 
+  "69437" -> "69438" 
+  "69437" -> "69439" 
+  "69441" -> "69442" 
+  "69441" -> "69443" 
+  "69443" -> "69444" 
+  "69443" -> "69449" 
+  "69444" -> "69445" 
+  "69444" -> "69448" 
+  "69445" -> "69446" 
+  "69445" -> "69447" 
+  "69449" -> "69450" 
+  "69449" -> "69453" 
+  "69450" -> "69451" 
+  "69450" -> "69452" 
+  "69454" -> "69455" 
+  "69454" -> "69458" 
+  "69455" -> "69456" 
+  "69455" -> "69457" 
+  "69458" -> "69459" 
+  "69459" -> "69460" 
+  "69459" -> "69461" 
+  "69462" -> "69463" 
+  "69462" -> "69466" 
+  "69463" -> "69464" 
+  "69463" -> "69465" 
+  "69466" -> "69467" 
+  "69467" -> "69468" 
+  "69467" -> "69498" 
+  "69468" -> "69469" 
+  "69468" -> "69478" 
+  "69469" -> "69470" 
+  "69469" -> "69477" 
+  "69470" -> "69471" 
+  "69470" -> "69476" 
+  "69471" -> "69472" 
+  "69471" -> "69475" 
+  "69472" -> "69473" 
+  "69472" -> "69474" 
+  "69478" -> "69479" 
+  "69479" -> "69480" 
+  "69479" -> "69487" 
+  "69479" -> "69494" 
+  "69480" -> "69481" 
+  "69480" -> "69486" 
+  "69481" -> "69482" 
+  "69481" -> "69485" 
+  "69482" -> "69483" 
+  "69482" -> "69484" 
+  "69487" -> "69488" 
+  "69487" -> "69493" 
+  "69488" -> "69489" 
+  "69488" -> "69492" 
+  "69489" -> "69490" 
+  "69489" -> "69491" 
+  "69494" -> "69495" 
+  "69494" -> "69496" 
+  "69496" -> "69497" 
+  "69498" -> "69499" 
+  "69499" -> "69500" 
+  "69499" -> "69501" 
+  "69502" -> "69503" 
+  "69502" -> "69506" 
+  "69503" -> "69504" 
+  "69503" -> "69505" 
+  "69506" -> "69507" 
+  "69507" -> "69508" 
+  "69507" -> "69538" 
+  "69508" -> "69509" 
+  "69508" -> "69518" 
+  "69509" -> "69510" 
+  "69509" -> "69517" 
+  "69510" -> "69511" 
+  "69510" -> "69516" 
+  "69511" -> "69512" 
+  "69511" -> "69515" 
+  "69512" -> "69513" 
+  "69512" -> "69514" 
+  "69518" -> "69519" 
+  "69519" -> "69520" 
+  "69519" -> "69527" 
+  "69519" -> "69534" 
+  "69520" -> "69521" 
+  "69520" -> "69526" 
+  "69521" -> "69522" 
+  "69521" -> "69525" 
+  "69522" -> "69523" 
+  "69522" -> "69524" 
+  "69527" -> "69528" 
+  "69527" -> "69533" 
+  "69528" -> "69529" 
+  "69528" -> "69532" 
+  "69529" -> "69530" 
+  "69529" -> "69531" 
+  "69534" -> "69535" 
+  "69534" -> "69536" 
+  "69536" -> "69537" 
+  "69538" -> "69539" 
+  "69539" -> "69540" 
+  "69539" -> "69541" 
+  "69542" -> "69543" 
+  "69542" -> "69546" 
+  "69543" -> "69544" 
+  "69543" -> "69545" 
+  "69546" -> "69547" 
+  "69547" -> "69548" 
+  "69547" -> "69549" 
+  "69550" -> "69551" 
+  "69550" -> "69552" 
+  "69552" -> "69553" 
+  "69552" -> "69554" 
+  "69554" -> "69555" 
+  "69554" -> "69558" 
+  "69555" -> "69556" 
+  "69555" -> "69557" 
+  "69558" -> "69559" 
+  "69560" -> "69561" 
+  "69560" -> "69564" 
+  "69561" -> "69562" 
+  "69561" -> "69563" 
+  "69564" -> "69565" 
+  "69564" -> "69569" 
+  "69565" -> "69566" 
+  "69565" -> "69567" 
+  "69565" -> "69568" 
+  "69569" -> "69570" 
+  "69571" -> "69572" 
+  "69571" -> "69576" 
+  "69571" -> "69583" 
+  "69572" -> "69573" 
+  "69573" -> "69574" 
+  "69573" -> "69575" 
+  "69576" -> "69577" 
+  "69576" -> "69582" 
+  "69577" -> "69578" 
+  "69577" -> "69581" 
+  "69578" -> "69579" 
+  "69578" -> "69580" 
+  "69583" -> "69584" 
+  "69583" -> "69585" 
+  "69585" -> "69586" 
+  "69587" -> "69588" 
+  "69587" -> "69591" 
+  "69588" -> "69589" 
+  "69588" -> "69590" 
+  "69591" -> "69592" 
+  "69592" -> "69593" 
+  "69592" -> "69597" 
+  "69592" -> "69604" 
+  "69593" -> "69594" 
+  "69594" -> "69595" 
+  "69594" -> "69596" 
+  "69597" -> "69598" 
+  "69597" -> "69603" 
+  "69598" -> "69599" 
+  "69598" -> "69602" 
+  "69599" -> "69600" 
+  "69599" -> "69601" 
+  "69604" -> "69605" 
+  "69604" -> "69606" 
+  "69606" -> "69607" 
+  "69608" -> "69609" 
+  "69608" -> "69612" 
+  "69609" -> "69610" 
+  "69609" -> "69611" 
+  "69612" -> "69613" 
+  "69613" -> "69614" 
+  "69613" -> "69620" 
+  "69613" -> "69627" 
+  "69614" -> "69615" 
+  "69615" -> "69616" 
+  "69615" -> "69617" 
+  "69617" -> "69618" 
+  "69617" -> "69619" 
+  "69620" -> "69621" 
+  "69620" -> "69626" 
+  "69621" -> "69622" 
+  "69621" -> "69625" 
+  "69622" -> "69623" 
+  "69622" -> "69624" 
+  "69627" -> "69628" 
+  "69627" -> "69629" 
+  "69629" -> "69630" 
+  "69631" -> "69632" 
+  "69631" -> "69633" 
+  "69633" -> "69634" 
+  "69633" -> "69635" 
+  "69633" -> "69636" 
+  "69633" -> "69637" 
+  "69633" -> "69638" 
+  "69633" -> "69641" 
+  "69638" -> "69639" 
+  "69638" -> "69640" 
+  "69642" -> "69643" 
+  "69642" -> "69644" 
+  "69645" -> "69646" 
+}

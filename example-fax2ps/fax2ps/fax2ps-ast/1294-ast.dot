@@ -1,0 +1,107 @@
+digraph "TIFFReadDirectoryCheckOrder" {  
+"90597" [label = <(METHOD,TIFFReadDirectoryCheckOrder)<SUB>4943</SUB>> ]
+"90598" [label = <(PARAM,TIFF *tif)<SUB>4943</SUB>> ]
+"90599" [label = <(PARAM,TIFFDirEntry *dir)<SUB>4943</SUB>> ]
+"90600" [label = <(PARAM,uint16_t dircount)<SUB>4944</SUB>> ]
+"90601" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4945</SUB>> ]
+"90602" [label = <(LOCAL,constchar[] module: char[])<SUB>4946</SUB>> ]
+"90603" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadDirectoryCheckOrder&quot;)<SUB>4946</SUB>> ]
+"90604" [label = <(IDENTIFIER,module,module[] = &quot;TIFFReadDirectoryCheckOrder&quot;)<SUB>4946</SUB>> ]
+"90605" [label = <(LITERAL,&quot;TIFFReadDirectoryCheckOrder&quot;,module[] = &quot;TIFFReadDirectoryCheckOrder&quot;)<SUB>4946</SUB>> ]
+"90606" [label = <(LOCAL,uint16_t m: uint16_t)<SUB>4947</SUB>> ]
+"90607" [label = <(LOCAL,uint16_t n: uint16_t)<SUB>4948</SUB>> ]
+"90608" [label = <(LOCAL,TIFFDirEntry* o: TIFFDirEntry)<SUB>4949</SUB>> ]
+"90609" [label = <(&lt;operator&gt;.assignment,m = 0)<SUB>4950</SUB>> ]
+"90610" [label = <(IDENTIFIER,m,m = 0)<SUB>4950</SUB>> ]
+"90611" [label = <(LITERAL,0,m = 0)<SUB>4950</SUB>> ]
+"90612" [label = <(CONTROL_STRUCTURE,for (n = 0, o = dir;n &lt; dircount;n++, o++),for (n = 0, o = dir;n &lt; dircount;n++, o++))<SUB>4951</SUB>> ]
+"90613" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4951</SUB>> ]
+"90614" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4951</SUB>> ]
+"90615" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>4951</SUB>> ]
+"90616" [label = <(IDENTIFIER,n,n = 0)<SUB>4951</SUB>> ]
+"90617" [label = <(LITERAL,0,n = 0)<SUB>4951</SUB>> ]
+"90618" [label = <(&lt;operator&gt;.assignment,o = dir)<SUB>4951</SUB>> ]
+"90619" [label = <(IDENTIFIER,o,o = dir)<SUB>4951</SUB>> ]
+"90620" [label = <(IDENTIFIER,dir,o = dir)<SUB>4951</SUB>> ]
+"90621" [label = <(&lt;operator&gt;.lessThan,n &lt; dircount)<SUB>4951</SUB>> ]
+"90622" [label = <(IDENTIFIER,n,n &lt; dircount)<SUB>4951</SUB>> ]
+"90623" [label = <(IDENTIFIER,dircount,n &lt; dircount)<SUB>4951</SUB>> ]
+"90624" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4951</SUB>> ]
+"90625" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>4951</SUB>> ]
+"90626" [label = <(IDENTIFIER,n,n++)<SUB>4951</SUB>> ]
+"90627" [label = <(&lt;operator&gt;.postIncrement,o++)<SUB>4951</SUB>> ]
+"90628" [label = <(IDENTIFIER,o,o++)<SUB>4951</SUB>> ]
+"90629" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4952</SUB>> ]
+"90630" [label = <(CONTROL_STRUCTURE,if (o-&gt;tdir_tag &lt; m),if (o-&gt;tdir_tag &lt; m))<SUB>4953</SUB>> ]
+"90631" [label = <(&lt;operator&gt;.lessThan,o-&gt;tdir_tag &lt; m)<SUB>4953</SUB>> ]
+"90632" [label = <(&lt;operator&gt;.indirectFieldAccess,o-&gt;tdir_tag)<SUB>4953</SUB>> ]
+"90633" [label = <(IDENTIFIER,o,o-&gt;tdir_tag &lt; m)<SUB>4953</SUB>> ]
+"90634" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4953</SUB>> ]
+"90635" [label = <(IDENTIFIER,m,o-&gt;tdir_tag &lt; m)<SUB>4953</SUB>> ]
+"90636" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>4954</SUB>> ]
+"90637" [label = <(TIFFWarningExtR,TIFFWarningExtR(tif, module,\012                            &quot;Invalid TIFF directory; tags are not sorted in &quot;\012                            &quot;ascending order&quot;))<SUB>4955</SUB>> ]
+"90638" [label = <(IDENTIFIER,tif,TIFFWarningExtR(tif, module,\012                            &quot;Invalid TIFF directory; tags are not sorted in &quot;\012                            &quot;ascending order&quot;))<SUB>4955</SUB>> ]
+"90639" [label = <(IDENTIFIER,module,TIFFWarningExtR(tif, module,\012                            &quot;Invalid TIFF directory; tags are not sorted in &quot;\012                            &quot;ascending order&quot;))<SUB>4955</SUB>> ]
+"90640" [label = <(LITERAL,&quot;Invalid TIFF directory; tags are not sorted in &quot;\012                            &quot;ascending order&quot;,TIFFWarningExtR(tif, module,\012                            &quot;Invalid TIFF directory; tags are not sorted in &quot;\012                            &quot;ascending order&quot;))<SUB>4956</SUB>> ]
+"90641" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>4958</SUB>> ]
+"90642" [label = <(&lt;operator&gt;.assignment,m = o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90643" [label = <(IDENTIFIER,m,m = o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90644" [label = <(&lt;operator&gt;.addition,o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90645" [label = <(&lt;operator&gt;.indirectFieldAccess,o-&gt;tdir_tag)<SUB>4960</SUB>> ]
+"90646" [label = <(IDENTIFIER,o,o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90647" [label = <(FIELD_IDENTIFIER,tdir_tag,tdir_tag)<SUB>4960</SUB>> ]
+"90648" [label = <(LITERAL,1,o-&gt;tdir_tag + 1)<SUB>4960</SUB>> ]
+"90649" [label = <(METHOD_RETURN,void)<SUB>4943</SUB>> ]
+  "90597" -> "90598" 
+  "90597" -> "90599" 
+  "90597" -> "90600" 
+  "90597" -> "90601" 
+  "90597" -> "90649" 
+  "90601" -> "90602" 
+  "90601" -> "90603" 
+  "90601" -> "90606" 
+  "90601" -> "90607" 
+  "90601" -> "90608" 
+  "90601" -> "90609" 
+  "90601" -> "90612" 
+  "90603" -> "90604" 
+  "90603" -> "90605" 
+  "90609" -> "90610" 
+  "90609" -> "90611" 
+  "90612" -> "90613" 
+  "90612" -> "90621" 
+  "90612" -> "90624" 
+  "90612" -> "90629" 
+  "90613" -> "90614" 
+  "90614" -> "90615" 
+  "90614" -> "90618" 
+  "90615" -> "90616" 
+  "90615" -> "90617" 
+  "90618" -> "90619" 
+  "90618" -> "90620" 
+  "90621" -> "90622" 
+  "90621" -> "90623" 
+  "90624" -> "90625" 
+  "90624" -> "90627" 
+  "90625" -> "90626" 
+  "90627" -> "90628" 
+  "90629" -> "90630" 
+  "90629" -> "90642" 
+  "90630" -> "90631" 
+  "90630" -> "90636" 
+  "90631" -> "90632" 
+  "90631" -> "90635" 
+  "90632" -> "90633" 
+  "90632" -> "90634" 
+  "90636" -> "90637" 
+  "90636" -> "90641" 
+  "90637" -> "90638" 
+  "90637" -> "90639" 
+  "90637" -> "90640" 
+  "90642" -> "90643" 
+  "90642" -> "90644" 
+  "90644" -> "90645" 
+  "90644" -> "90648" 
+  "90645" -> "90646" 
+  "90645" -> "90647" 
+}

@@ -1,0 +1,21 @@
+digraph "_TIFFMultiply64" {  
+"20689" [label = <(RETURN,return first * second;,return first * second;)<SUB>56</SUB>> ]
+"20674" [label = <(&lt;operator&gt;.logicalAnd,second &amp;&amp; first &gt; UINT64_MAX / second)<SUB>50</SUB>> ]
+"20690" [label = <(&lt;operator&gt;.multiplication,first * second)<SUB>56</SUB>> ]
+"20676" [label = <(&lt;operator&gt;.greaterThan,first &gt; UINT64_MAX / second)<SUB>50</SUB>> ]
+"20682" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, where, &quot;Integer overflow in %s&quot;, where))<SUB>52</SUB>> ]
+"20687" [label = <(RETURN,return 0;,return 0;)<SUB>53</SUB>> ]
+"20678" [label = <(&lt;operator&gt;.division,UINT64_MAX / second)<SUB>50</SUB>> ]
+"20667" [label = <(METHOD,_TIFFMultiply64)<SUB>47</SUB>> ]
+"20693" [label = <(METHOD_RETURN,uint64_t)<SUB>47</SUB>> ]
+  "20689" -> "20693" 
+  "20674" -> "20682" 
+  "20674" -> "20690" 
+  "20690" -> "20689" 
+  "20676" -> "20674" 
+  "20682" -> "20687" 
+  "20687" -> "20693" 
+  "20678" -> "20676" 
+  "20667" -> "20674" 
+  "20667" -> "20678" 
+}

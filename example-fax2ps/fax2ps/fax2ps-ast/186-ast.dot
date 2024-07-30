@@ -1,0 +1,127 @@
+digraph "TIFFFlush" {  
+"5886" [label = <(METHOD,TIFFFlush)<SUB>30</SUB>> ]
+"5887" [label = <(PARAM,TIFF *tif)<SUB>30</SUB>> ]
+"5888" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>31</SUB>> ]
+"5889" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_mode == O_RDONLY),if (tif-&gt;tif_mode == O_RDONLY))<SUB>32</SUB>> ]
+"5890" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDONLY)<SUB>32</SUB>> ]
+"5891" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>32</SUB>> ]
+"5892" [label = <(IDENTIFIER,tif,tif-&gt;tif_mode == O_RDONLY)<SUB>32</SUB>> ]
+"5893" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>32</SUB>> ]
+"5894" [label = <(IDENTIFIER,O_RDONLY,tif-&gt;tif_mode == O_RDONLY)<SUB>32</SUB>> ]
+"5895" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>33</SUB>> ]
+"5896" [label = <(RETURN,return 1;,return 1;)<SUB>33</SUB>> ]
+"5897" [label = <(LITERAL,1,return 1;)<SUB>33</SUB>> ]
+"5898" [label = <(CONTROL_STRUCTURE,if (!TIFFFlushData(tif)),if (!TIFFFlushData(tif)))<SUB>35</SUB>> ]
+"5899" [label = <(&lt;operator&gt;.logicalNot,!TIFFFlushData(tif))<SUB>35</SUB>> ]
+"5900" [label = <(TIFFFlushData,TIFFFlushData(tif))<SUB>35</SUB>> ]
+"5901" [label = <(IDENTIFIER,tif,TIFFFlushData(tif))<SUB>35</SUB>> ]
+"5902" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>36</SUB>> ]
+"5903" [label = <(RETURN,return (0);,return (0);)<SUB>36</SUB>> ]
+"5904" [label = <(LITERAL,0,return (0);)<SUB>36</SUB>> ]
+"5905" [label = <(CONTROL_STRUCTURE,if ((tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT) &amp;&amp; tif-&gt;tif_mode == O_RDWR),if ((tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT) &amp;&amp; tif-&gt;tif_mode == O_RDWR))<SUB>43</SUB>> ]
+"5906" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT) &amp;&amp; tif-&gt;tif_mode == O_RDWR)<SUB>43</SUB>> ]
+"5907" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP) &amp;&amp;\012        !(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT))<SUB>43</SUB>> ]
+"5908" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP)<SUB>43</SUB>> ]
+"5909" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>43</SUB>> ]
+"5910" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP)<SUB>43</SUB>> ]
+"5911" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>43</SUB>> ]
+"5912" [label = <(IDENTIFIER,TIFF_DIRTYSTRIP,tif-&gt;tif_flags &amp; TIFF_DIRTYSTRIP)<SUB>43</SUB>> ]
+"5913" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT))<SUB>44</SUB>> ]
+"5914" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT)<SUB>44</SUB>> ]
+"5915" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>44</SUB>> ]
+"5916" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT)<SUB>44</SUB>> ]
+"5917" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>44</SUB>> ]
+"5918" [label = <(IDENTIFIER,TIFF_DIRTYDIRECT,tif-&gt;tif_flags &amp; TIFF_DIRTYDIRECT)<SUB>44</SUB>> ]
+"5919" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_mode == O_RDWR)<SUB>44</SUB>> ]
+"5920" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>44</SUB>> ]
+"5921" [label = <(IDENTIFIER,tif,tif-&gt;tif_mode == O_RDWR)<SUB>44</SUB>> ]
+"5922" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>44</SUB>> ]
+"5923" [label = <(IDENTIFIER,O_RDWR,tif-&gt;tif_mode == O_RDWR)<SUB>44</SUB>> ]
+"5924" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>45</SUB>> ]
+"5925" [label = <(CONTROL_STRUCTURE,if (TIFFForceStrileArrayWriting(tif)),if (TIFFForceStrileArrayWriting(tif)))<SUB>46</SUB>> ]
+"5926" [label = <(TIFFForceStrileArrayWriting,TIFFForceStrileArrayWriting(tif))<SUB>46</SUB>> ]
+"5927" [label = <(IDENTIFIER,tif,TIFFForceStrileArrayWriting(tif))<SUB>46</SUB>> ]
+"5928" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>47</SUB>> ]
+"5929" [label = <(RETURN,return 1;,return 1;)<SUB>47</SUB>> ]
+"5930" [label = <(LITERAL,1,return 1;)<SUB>47</SUB>> ]
+"5931" [label = <(CONTROL_STRUCTURE,if ((tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)) &amp;&amp;\012        !TIFFRewriteDirectory(tif)),if ((tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)) &amp;&amp;\012        !TIFFRewriteDirectory(tif)))<SUB>50</SUB>> ]
+"5932" [label = <(&lt;operator&gt;.logicalAnd,(tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)) &amp;&amp;\012        !TIFFRewriteDirectory(tif))<SUB>50</SUB>> ]
+"5933" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP))<SUB>50</SUB>> ]
+"5934" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>50</SUB>> ]
+"5935" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; (TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP))<SUB>50</SUB>> ]
+"5936" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>50</SUB>> ]
+"5937" [label = <(&lt;operator&gt;.or,TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)<SUB>50</SUB>> ]
+"5938" [label = <(IDENTIFIER,TIFF_DIRTYDIRECT,TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)<SUB>50</SUB>> ]
+"5939" [label = <(IDENTIFIER,TIFF_DIRTYSTRIP,TIFF_DIRTYDIRECT | TIFF_DIRTYSTRIP)<SUB>50</SUB>> ]
+"5940" [label = <(&lt;operator&gt;.logicalNot,!TIFFRewriteDirectory(tif))<SUB>51</SUB>> ]
+"5941" [label = <(TIFFRewriteDirectory,TIFFRewriteDirectory(tif))<SUB>51</SUB>> ]
+"5942" [label = <(IDENTIFIER,tif,TIFFRewriteDirectory(tif))<SUB>51</SUB>> ]
+"5943" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>52</SUB>> ]
+"5944" [label = <(RETURN,return (0);,return (0);)<SUB>52</SUB>> ]
+"5945" [label = <(LITERAL,0,return (0);)<SUB>52</SUB>> ]
+"5946" [label = <(RETURN,return (1);,return (1);)<SUB>54</SUB>> ]
+"5947" [label = <(LITERAL,1,return (1);)<SUB>54</SUB>> ]
+"5948" [label = <(METHOD_RETURN,int)<SUB>30</SUB>> ]
+  "5886" -> "5887" 
+  "5886" -> "5888" 
+  "5886" -> "5948" 
+  "5888" -> "5889" 
+  "5888" -> "5898" 
+  "5888" -> "5905" 
+  "5888" -> "5931" 
+  "5888" -> "5946" 
+  "5889" -> "5890" 
+  "5889" -> "5895" 
+  "5890" -> "5891" 
+  "5890" -> "5894" 
+  "5891" -> "5892" 
+  "5891" -> "5893" 
+  "5895" -> "5896" 
+  "5896" -> "5897" 
+  "5898" -> "5899" 
+  "5898" -> "5902" 
+  "5899" -> "5900" 
+  "5900" -> "5901" 
+  "5902" -> "5903" 
+  "5903" -> "5904" 
+  "5905" -> "5906" 
+  "5905" -> "5924" 
+  "5906" -> "5907" 
+  "5906" -> "5919" 
+  "5907" -> "5908" 
+  "5907" -> "5913" 
+  "5908" -> "5909" 
+  "5908" -> "5912" 
+  "5909" -> "5910" 
+  "5909" -> "5911" 
+  "5913" -> "5914" 
+  "5914" -> "5915" 
+  "5914" -> "5918" 
+  "5915" -> "5916" 
+  "5915" -> "5917" 
+  "5919" -> "5920" 
+  "5919" -> "5923" 
+  "5920" -> "5921" 
+  "5920" -> "5922" 
+  "5924" -> "5925" 
+  "5925" -> "5926" 
+  "5925" -> "5928" 
+  "5926" -> "5927" 
+  "5928" -> "5929" 
+  "5929" -> "5930" 
+  "5931" -> "5932" 
+  "5931" -> "5943" 
+  "5932" -> "5933" 
+  "5932" -> "5940" 
+  "5933" -> "5934" 
+  "5933" -> "5937" 
+  "5934" -> "5935" 
+  "5934" -> "5936" 
+  "5937" -> "5938" 
+  "5937" -> "5939" 
+  "5940" -> "5941" 
+  "5941" -> "5942" 
+  "5943" -> "5944" 
+  "5944" -> "5945" 
+  "5946" -> "5947" 
+}

@@ -1,0 +1,135 @@
+digraph "findPage" {  
+"10112" [label = <(METHOD,findPage)<SUB>289</SUB>> ]
+"10113" [label = <(PARAM,TIFF *tif)<SUB>289</SUB>> ]
+"10114" [label = <(PARAM,uint16_t pageNumber)<SUB>289</SUB>> ]
+"10115" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>290</SUB>> ]
+"10116" [label = <(LOCAL,uint16_t pn: uint16_t)<SUB>291</SUB>> ]
+"10117" [label = <(&lt;operator&gt;.assignment,pn = (uint16_t)-1)<SUB>291</SUB>> ]
+"10118" [label = <(IDENTIFIER,pn,pn = (uint16_t)-1)<SUB>291</SUB>> ]
+"10119" [label = <(&lt;operator&gt;.cast,(uint16_t)-1)<SUB>291</SUB>> ]
+"10120" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>291</SUB>> ]
+"10121" [label = <(&lt;operator&gt;.minus,-1)<SUB>291</SUB>> ]
+"10122" [label = <(LITERAL,1,-1)<SUB>291</SUB>> ]
+"10123" [label = <(LOCAL,uint16_t ptotal: uint16_t)<SUB>292</SUB>> ]
+"10124" [label = <(&lt;operator&gt;.assignment,ptotal = (uint16_t)-1)<SUB>292</SUB>> ]
+"10125" [label = <(IDENTIFIER,ptotal,ptotal = (uint16_t)-1)<SUB>292</SUB>> ]
+"10126" [label = <(&lt;operator&gt;.cast,(uint16_t)-1)<SUB>292</SUB>> ]
+"10127" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>292</SUB>> ]
+"10128" [label = <(&lt;operator&gt;.minus,-1)<SUB>292</SUB>> ]
+"10129" [label = <(LITERAL,1,-1)<SUB>292</SUB>> ]
+"10130" [label = <(CONTROL_STRUCTURE,if (TIFFGetField(tif, 297, &amp;pn, &amp;ptotal)),if (TIFFGetField(tif, 297, &amp;pn, &amp;ptotal)))<SUB>293</SUB>> ]
+"10131" [label = <(GetPageNumber,GetPageNumber(tif))<SUB>293</SUB>> ]
+"10132" [label = <(IDENTIFIER,tif,GetPageNumber(tif))<SUB>293</SUB>> ]
+"10133" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"10134" [label = <(TIFFGetField,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>293</SUB>> ]
+"10135" [label = <(IDENTIFIER,tif,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>293</SUB>> ]
+"10136" [label = <(LITERAL,297,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>293</SUB>> ]
+"10137" [label = <(&lt;operator&gt;.addressOf,&amp;pn)<SUB>293</SUB>> ]
+"10138" [label = <(IDENTIFIER,pn,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>293</SUB>> ]
+"10139" [label = <(&lt;operator&gt;.addressOf,&amp;ptotal)<SUB>293</SUB>> ]
+"10140" [label = <(IDENTIFIER,ptotal,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>293</SUB>> ]
+"10141" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>294</SUB>> ]
+"10142" [label = <(CONTROL_STRUCTURE,while (pn != (pageNumber - 1) &amp;&amp; TIFFReadDirectory(tif) &amp;&amp;\012               GetPageNumber(tif)),while (pn != (pageNumber - 1) &amp;&amp; TIFFReadDirectory(tif) &amp;&amp;\012               GetPageNumber(tif)))<SUB>295</SUB>> ]
+"10143" [label = <(&lt;operator&gt;.logicalAnd,pn != (pageNumber - 1) &amp;&amp; TIFFReadDirectory(tif) &amp;&amp;\012               GetPageNumber(tif))<SUB>295</SUB>> ]
+"10144" [label = <(&lt;operator&gt;.logicalAnd,pn != (pageNumber - 1) &amp;&amp; TIFFReadDirectory(tif))<SUB>295</SUB>> ]
+"10145" [label = <(&lt;operator&gt;.notEquals,pn != (pageNumber - 1))<SUB>295</SUB>> ]
+"10146" [label = <(IDENTIFIER,pn,pn != (pageNumber - 1))<SUB>295</SUB>> ]
+"10147" [label = <(&lt;operator&gt;.subtraction,pageNumber - 1)<SUB>295</SUB>> ]
+"10148" [label = <(IDENTIFIER,pageNumber,pageNumber - 1)<SUB>295</SUB>> ]
+"10149" [label = <(LITERAL,1,pageNumber - 1)<SUB>295</SUB>> ]
+"10150" [label = <(TIFFReadDirectory,TIFFReadDirectory(tif))<SUB>295</SUB>> ]
+"10151" [label = <(IDENTIFIER,tif,TIFFReadDirectory(tif))<SUB>295</SUB>> ]
+"10152" [label = <(GetPageNumber,GetPageNumber(tif))<SUB>296</SUB>> ]
+"10153" [label = <(IDENTIFIER,tif,GetPageNumber(tif))<SUB>296</SUB>> ]
+"10154" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"10155" [label = <(TIFFGetField,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>296</SUB>> ]
+"10156" [label = <(IDENTIFIER,tif,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>296</SUB>> ]
+"10157" [label = <(LITERAL,297,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>296</SUB>> ]
+"10158" [label = <(&lt;operator&gt;.addressOf,&amp;pn)<SUB>296</SUB>> ]
+"10159" [label = <(IDENTIFIER,pn,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>296</SUB>> ]
+"10160" [label = <(&lt;operator&gt;.addressOf,&amp;ptotal)<SUB>296</SUB>> ]
+"10161" [label = <(IDENTIFIER,ptotal,TIFFGetField(tif, 297, &amp;pn, &amp;ptotal))<SUB>296</SUB>> ]
+"10162" [label = <(RETURN,return (pn == (pageNumber - 1));,return (pn == (pageNumber - 1));)<SUB>298</SUB>> ]
+"10163" [label = <(&lt;operator&gt;.equals,pn == (pageNumber - 1))<SUB>298</SUB>> ]
+"10164" [label = <(IDENTIFIER,pn,pn == (pageNumber - 1))<SUB>298</SUB>> ]
+"10165" [label = <(&lt;operator&gt;.subtraction,pageNumber - 1)<SUB>298</SUB>> ]
+"10166" [label = <(IDENTIFIER,pageNumber,pageNumber - 1)<SUB>298</SUB>> ]
+"10167" [label = <(LITERAL,1,pageNumber - 1)<SUB>298</SUB>> ]
+"10168" [label = <(CONTROL_STRUCTURE,else,else)<SUB>301</SUB>> ]
+"10169" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>301</SUB>> ]
+"10170" [label = <(RETURN,return (TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)));,return (TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)));)<SUB>301</SUB>> ]
+"10171" [label = <(TIFFSetDirectory,TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)))<SUB>301</SUB>> ]
+"10172" [label = <(IDENTIFIER,tif,TIFFSetDirectory(tif, (tdir_t)(pageNumber - 1)))<SUB>301</SUB>> ]
+"10173" [label = <(&lt;operator&gt;.cast,(tdir_t)(pageNumber - 1))<SUB>301</SUB>> ]
+"10174" [label = <(UNKNOWN,tdir_t,tdir_t)<SUB>301</SUB>> ]
+"10175" [label = <(&lt;operator&gt;.subtraction,pageNumber - 1)<SUB>301</SUB>> ]
+"10176" [label = <(IDENTIFIER,pageNumber,pageNumber - 1)<SUB>301</SUB>> ]
+"10177" [label = <(LITERAL,1,pageNumber - 1)<SUB>301</SUB>> ]
+"10178" [label = <(METHOD_RETURN,int)<SUB>289</SUB>> ]
+  "10112" -> "10113" 
+  "10112" -> "10114" 
+  "10112" -> "10115" 
+  "10112" -> "10178" 
+  "10115" -> "10116" 
+  "10115" -> "10117" 
+  "10115" -> "10123" 
+  "10115" -> "10124" 
+  "10115" -> "10130" 
+  "10117" -> "10118" 
+  "10117" -> "10119" 
+  "10119" -> "10120" 
+  "10119" -> "10121" 
+  "10121" -> "10122" 
+  "10124" -> "10125" 
+  "10124" -> "10126" 
+  "10126" -> "10127" 
+  "10126" -> "10128" 
+  "10128" -> "10129" 
+  "10130" -> "10131" 
+  "10130" -> "10141" 
+  "10130" -> "10168" 
+  "10131" -> "10132" 
+  "10131" -> "10133" 
+  "10133" -> "10134" 
+  "10134" -> "10135" 
+  "10134" -> "10136" 
+  "10134" -> "10137" 
+  "10134" -> "10139" 
+  "10137" -> "10138" 
+  "10139" -> "10140" 
+  "10141" -> "10142" 
+  "10141" -> "10162" 
+  "10142" -> "10143" 
+  "10143" -> "10144" 
+  "10143" -> "10152" 
+  "10144" -> "10145" 
+  "10144" -> "10150" 
+  "10145" -> "10146" 
+  "10145" -> "10147" 
+  "10147" -> "10148" 
+  "10147" -> "10149" 
+  "10150" -> "10151" 
+  "10152" -> "10153" 
+  "10152" -> "10154" 
+  "10154" -> "10155" 
+  "10155" -> "10156" 
+  "10155" -> "10157" 
+  "10155" -> "10158" 
+  "10155" -> "10160" 
+  "10158" -> "10159" 
+  "10160" -> "10161" 
+  "10162" -> "10163" 
+  "10163" -> "10164" 
+  "10163" -> "10165" 
+  "10165" -> "10166" 
+  "10165" -> "10167" 
+  "10168" -> "10169" 
+  "10169" -> "10170" 
+  "10170" -> "10171" 
+  "10171" -> "10172" 
+  "10171" -> "10173" 
+  "10173" -> "10174" 
+  "10173" -> "10175" 
+  "10175" -> "10176" 
+  "10175" -> "10177" 
+}

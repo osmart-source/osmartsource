@@ -1,0 +1,33 @@
+digraph "_TIFFReadTileAndAllocBuffer" {  
+"76174" [label = <(RETURN,return (_TIFFReadEncodedTileAndAllocBuffer(\012        tif, TIFFComputeTile(tif, x, y, z, s), buf, bufsizetoalloc,\012        (tmsize_t)(-1)));,return (_TIFFReadEncodedTileAndAllocBuffer(\012        tif, TIFFComputeTile(tif, x, y, z, s), buf, bufsizetoalloc,\012        (tmsize_t)(-1)));)<SUB>988</SUB>> ]
+"76157" [label = <(&lt;operator&gt;.logicalOr,!TIFFCheckRead(tif, 1) || !TIFFCheckTile(tif, x, y, z, s))<SUB>986</SUB>> ]
+"76175" [label = <(_TIFFReadEncodedTileAndAllocBuffer,_TIFFReadEncodedTileAndAllocBuffer(\012        tif, TIFFComputeTile(tif, x, y, z, s), buf, bufsizetoalloc,\012        (tmsize_t)(-1)))<SUB>988</SUB>> ]
+"76158" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 1))<SUB>986</SUB>> ]
+"76162" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckTile(tif, x, y, z, s))<SUB>986</SUB>> ]
+"76170" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>987</SUB>> ]
+"76177" [label = <(TIFFComputeTile,TIFFComputeTile(tif, x, y, z, s))<SUB>989</SUB>> ]
+"76185" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>990</SUB>> ]
+"76159" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 1))<SUB>986</SUB>> ]
+"76163" [label = <(TIFFCheckTile,TIFFCheckTile(tif, x, y, z, s))<SUB>986</SUB>> ]
+"76171" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>987</SUB>> ]
+"76186" [label = <(&lt;operator&gt;.minus,-1)<SUB>990</SUB>> ]
+"76172" [label = <(&lt;operator&gt;.minus,-1)<SUB>987</SUB>> ]
+"76147" [label = <(METHOD,_TIFFReadTileAndAllocBuffer)<SUB>982</SUB>> ]
+"76188" [label = <(METHOD_RETURN,tmsize_t)<SUB>982</SUB>> ]
+  "76174" -> "76188" 
+  "76157" -> "76172" 
+  "76157" -> "76177" 
+  "76175" -> "76174" 
+  "76158" -> "76157" 
+  "76158" -> "76163" 
+  "76162" -> "76157" 
+  "76170" -> "76188" 
+  "76177" -> "76186" 
+  "76185" -> "76175" 
+  "76159" -> "76158" 
+  "76163" -> "76162" 
+  "76171" -> "76170" 
+  "76186" -> "76185" 
+  "76172" -> "76171" 
+  "76147" -> "76159" 
+}

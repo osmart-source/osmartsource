@@ -1,0 +1,117 @@
+digraph "countInkNamesString" {  
+"40094" [label = <(METHOD,countInkNamesString)<SUB>192</SUB>> ]
+"40095" [label = <(PARAM,TIFF *tif)<SUB>192</SUB>> ]
+"40096" [label = <(PARAM,uint32_t slen)<SUB>192</SUB>> ]
+"40097" [label = <(PARAM,const char *s)<SUB>192</SUB>> ]
+"40098" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>193</SUB>> ]
+"40099" [label = <(LOCAL,uint16_t i: uint16_t)<SUB>194</SUB>> ]
+"40100" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>194</SUB>> ]
+"40101" [label = <(IDENTIFIER,i,i = 0)<SUB>194</SUB>> ]
+"40102" [label = <(LITERAL,0,i = 0)<SUB>194</SUB>> ]
+"40103" [label = <(LOCAL,const char* ep: char)<SUB>195</SUB>> ]
+"40104" [label = <(&lt;operator&gt;.assignment,*ep = s + slen)<SUB>195</SUB>> ]
+"40105" [label = <(IDENTIFIER,ep,*ep = s + slen)<SUB>195</SUB>> ]
+"40106" [label = <(&lt;operator&gt;.addition,s + slen)<SUB>195</SUB>> ]
+"40107" [label = <(IDENTIFIER,s,s + slen)<SUB>195</SUB>> ]
+"40108" [label = <(IDENTIFIER,slen,s + slen)<SUB>195</SUB>> ]
+"40109" [label = <(LOCAL,const char* cp: char)<SUB>196</SUB>> ]
+"40110" [label = <(&lt;operator&gt;.assignment,*cp = s)<SUB>196</SUB>> ]
+"40111" [label = <(IDENTIFIER,cp,*cp = s)<SUB>196</SUB>> ]
+"40112" [label = <(IDENTIFIER,s,*cp = s)<SUB>196</SUB>> ]
+"40113" [label = <(CONTROL_STRUCTURE,if (slen &gt; 0),if (slen &gt; 0))<SUB>198</SUB>> ]
+"40114" [label = <(&lt;operator&gt;.greaterThan,slen &gt; 0)<SUB>198</SUB>> ]
+"40115" [label = <(IDENTIFIER,slen,slen &gt; 0)<SUB>198</SUB>> ]
+"40116" [label = <(LITERAL,0,slen &gt; 0)<SUB>198</SUB>> ]
+"40117" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>199</SUB>> ]
+"40118" [label = <(CONTROL_STRUCTURE,do\012        {\012            for (; cp &lt; ep &amp;&amp; *cp != '\0'; cp++)\012            {\012            }\012            if (cp &gt;= ep)\012                goto bad;\012            cp++; /* skip \0 */\012            i++;\012        } while (cp &lt; ep);,do\012        {\012            for (; cp &lt; ep &amp;&amp; *cp != '\0'; cp++)\012            {\012            }\012            if (cp &gt;= ep)\012                goto bad;\012            cp++; /* skip \0 */\012            i++;\012        } while (cp &lt; ep);)<SUB>200</SUB>> ]
+"40119" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>201</SUB>> ]
+"40120" [label = <(CONTROL_STRUCTURE,for (;cp &lt; ep &amp;&amp; *cp != '\0';cp++),for (;cp &lt; ep &amp;&amp; *cp != '\0';cp++))<SUB>202</SUB>> ]
+"40121" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>202</SUB>> ]
+"40122" [label = <(&lt;operator&gt;.logicalAnd,cp &lt; ep &amp;&amp; *cp != '\0')<SUB>202</SUB>> ]
+"40123" [label = <(&lt;operator&gt;.lessThan,cp &lt; ep)<SUB>202</SUB>> ]
+"40124" [label = <(IDENTIFIER,cp,cp &lt; ep)<SUB>202</SUB>> ]
+"40125" [label = <(IDENTIFIER,ep,cp &lt; ep)<SUB>202</SUB>> ]
+"40126" [label = <(&lt;operator&gt;.notEquals,*cp != '\0')<SUB>202</SUB>> ]
+"40127" [label = <(&lt;operator&gt;.indirection,*cp)<SUB>202</SUB>> ]
+"40128" [label = <(IDENTIFIER,cp,*cp != '\0')<SUB>202</SUB>> ]
+"40129" [label = <(LITERAL,'\0',*cp != '\0')<SUB>202</SUB>> ]
+"40130" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>202</SUB>> ]
+"40131" [label = <(IDENTIFIER,cp,cp++)<SUB>202</SUB>> ]
+"40132" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>203</SUB>> ]
+"40133" [label = <(CONTROL_STRUCTURE,if (cp &gt;= ep),if (cp &gt;= ep))<SUB>205</SUB>> ]
+"40134" [label = <(&lt;operator&gt;.greaterEqualsThan,cp &gt;= ep)<SUB>205</SUB>> ]
+"40135" [label = <(IDENTIFIER,cp,cp &gt;= ep)<SUB>205</SUB>> ]
+"40136" [label = <(IDENTIFIER,ep,cp &gt;= ep)<SUB>205</SUB>> ]
+"40137" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>206</SUB>> ]
+"40138" [label = <(CONTROL_STRUCTURE,goto bad;,goto bad;)<SUB>206</SUB>> ]
+"40139" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>207</SUB>> ]
+"40140" [label = <(IDENTIFIER,cp,cp++)<SUB>207</SUB>> ]
+"40141" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>208</SUB>> ]
+"40142" [label = <(IDENTIFIER,i,i++)<SUB>208</SUB>> ]
+"40143" [label = <(&lt;operator&gt;.lessThan,cp &lt; ep)<SUB>209</SUB>> ]
+"40144" [label = <(IDENTIFIER,cp,cp &lt; ep)<SUB>209</SUB>> ]
+"40145" [label = <(IDENTIFIER,ep,cp &lt; ep)<SUB>209</SUB>> ]
+"40146" [label = <(RETURN,return (i);,return (i);)<SUB>210</SUB>> ]
+"40147" [label = <(IDENTIFIER,i,return (i);)<SUB>210</SUB>> ]
+"40148" [label = <(UNKNOWN,bad:\012    TIFFErrorExtR(tif, &quot;TIFFSetField&quot;,\012                  &quot;%s: Invalid InkNames value; no NUL at given buffer end &quot;\012                  &quot;location %&quot; PRIu32 &quot;, after %&quot; PRIu16 &quot; ink&quot;,\012                  tif-&gt;tif_name, slen, i);,bad:\012    TIFFErrorExtR(tif, &quot;TIFFSetField&quot;,\012                  &quot;%s: Invalid InkNames value; no NUL at given buffer end &quot;\012                  &quot;location %&quot; PRIu32 &quot;, after %&quot; PRIu16 &quot; ink&quot;,\012                  tif-&gt;tif_name, slen, i);)<SUB>212</SUB>> ]
+"40149" [label = <(RETURN,return (0);,return (0);)<SUB>217</SUB>> ]
+"40150" [label = <(LITERAL,0,return (0);)<SUB>217</SUB>> ]
+"40151" [label = <(METHOD_RETURN,uint16_t)<SUB>192</SUB>> ]
+  "40094" -> "40095" 
+  "40094" -> "40096" 
+  "40094" -> "40097" 
+  "40094" -> "40098" 
+  "40094" -> "40151" 
+  "40098" -> "40099" 
+  "40098" -> "40100" 
+  "40098" -> "40103" 
+  "40098" -> "40104" 
+  "40098" -> "40109" 
+  "40098" -> "40110" 
+  "40098" -> "40113" 
+  "40098" -> "40148" 
+  "40098" -> "40149" 
+  "40100" -> "40101" 
+  "40100" -> "40102" 
+  "40104" -> "40105" 
+  "40104" -> "40106" 
+  "40106" -> "40107" 
+  "40106" -> "40108" 
+  "40110" -> "40111" 
+  "40110" -> "40112" 
+  "40113" -> "40114" 
+  "40113" -> "40117" 
+  "40114" -> "40115" 
+  "40114" -> "40116" 
+  "40117" -> "40118" 
+  "40117" -> "40146" 
+  "40118" -> "40119" 
+  "40118" -> "40143" 
+  "40119" -> "40120" 
+  "40119" -> "40133" 
+  "40119" -> "40139" 
+  "40119" -> "40141" 
+  "40120" -> "40121" 
+  "40120" -> "40122" 
+  "40120" -> "40130" 
+  "40120" -> "40132" 
+  "40122" -> "40123" 
+  "40122" -> "40126" 
+  "40123" -> "40124" 
+  "40123" -> "40125" 
+  "40126" -> "40127" 
+  "40126" -> "40129" 
+  "40127" -> "40128" 
+  "40130" -> "40131" 
+  "40133" -> "40134" 
+  "40133" -> "40137" 
+  "40134" -> "40135" 
+  "40134" -> "40136" 
+  "40137" -> "40138" 
+  "40139" -> "40140" 
+  "40141" -> "40142" 
+  "40143" -> "40144" 
+  "40143" -> "40145" 
+  "40146" -> "40147" 
+  "40149" -> "40150" 
+}

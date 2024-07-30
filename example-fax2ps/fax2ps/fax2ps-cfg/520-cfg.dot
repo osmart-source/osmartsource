@@ -1,0 +1,36 @@
+digraph "TIFFStripSize64" {  
+"11321" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11328" [label = <(&lt;operator&gt;.assignment,rps = td-&gt;td_rowsperstrip)<SUB>187</SUB>> ]
+"11345" [label = <(RETURN,return (TIFFVStripSize64(tif, rps));,return (TIFFVStripSize64(tif, rps));)<SUB>190</SUB>> ]
+"11323" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11330" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>187</SUB>> ]
+"11334" [label = <(&lt;operator&gt;.greaterThan,rps &gt; td-&gt;td_imagelength)<SUB>188</SUB>> ]
+"11346" [label = <(TIFFVStripSize64,TIFFVStripSize64(tif, rps))<SUB>190</SUB>> ]
+"11324" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>186</SUB>> ]
+"11332" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>187</SUB>> ]
+"11336" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>188</SUB>> ]
+"11340" [label = <(&lt;operator&gt;.assignment,rps = td-&gt;td_imagelength)<SUB>189</SUB>> ]
+"11326" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>186</SUB>> ]
+"11338" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>188</SUB>> ]
+"11342" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>189</SUB>> ]
+"11344" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>189</SUB>> ]
+"11317" [label = <(METHOD,TIFFStripSize64)<SUB>184</SUB>> ]
+"11349" [label = <(METHOD_RETURN,uint64_t)<SUB>184</SUB>> ]
+  "11321" -> "11332" 
+  "11328" -> "11338" 
+  "11345" -> "11349" 
+  "11323" -> "11321" 
+  "11330" -> "11328" 
+  "11334" -> "11344" 
+  "11334" -> "11346" 
+  "11346" -> "11345" 
+  "11324" -> "11323" 
+  "11332" -> "11330" 
+  "11336" -> "11334" 
+  "11340" -> "11346" 
+  "11326" -> "11324" 
+  "11338" -> "11336" 
+  "11342" -> "11340" 
+  "11344" -> "11342" 
+  "11317" -> "11326" 
+}

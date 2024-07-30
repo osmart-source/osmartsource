@@ -1,0 +1,183 @@
+digraph "initCIELabConversion" {  
+"60189" [label = <(&lt;operator&gt;.assignment,module[] = &quot;initCIELabConversion&quot;)<SUB>2612</SUB>> ]
+"60194" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_WHITEPOINT, &amp;whitePoint))<SUB>2617</SUB>> ]
+"60256" [label = <(&lt;operator&gt;.assignment,refWhite[1] = 100.0F)<SUB>2636</SUB>> ]
+"60261" [label = <(&lt;operator&gt;.assignment,refWhite[0] = whitePoint[0] / whitePoint[1] * refWhite[1])<SUB>2637</SUB>> ]
+"60276" [label = <(&lt;operator&gt;.assignment,refWhite[2] =\012        (1.0F - whitePoint[0] - whitePoint[1]) / whitePoint[1] * refWhite[1])<SUB>2638</SUB>> ]
+"60347" [label = <(RETURN,return NULL;,return NULL;)<SUB>2652</SUB>> ]
+"60195" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2617</SUB>> ]
+"60199" [label = <(&lt;operator&gt;.addressOf,&amp;whitePoint)<SUB>2617</SUB>> ]
+"60202" [label = <(&lt;operator&gt;.equals,whitePoint[1] == 0.0f)<SUB>2618</SUB>> ]
+"60221" [label = <(&lt;operator&gt;.logicalNot,!img-&gt;cielab)<SUB>2624</SUB>> ]
+"60257" [label = <(&lt;operator&gt;.indirectIndexAccess,refWhite[1])<SUB>2636</SUB>> ]
+"60262" [label = <(&lt;operator&gt;.indirectIndexAccess,refWhite[0])<SUB>2637</SUB>> ]
+"60265" [label = <(&lt;operator&gt;.multiplication,whitePoint[0] / whitePoint[1] * refWhite[1])<SUB>2637</SUB>> ]
+"60277" [label = <(&lt;operator&gt;.indirectIndexAccess,refWhite[2])<SUB>2638</SUB>> ]
+"60280" [label = <(&lt;operator&gt;.multiplication,(1.0F - whitePoint[0] - whitePoint[1]) / whitePoint[1] * refWhite[1])<SUB>2639</SUB>> ]
+"60298" [label = <(&lt;operator&gt;.lessThan,TIFFCIELabToRGBInit(img-&gt;cielab, &amp;display_sRGB, refWhite) &lt; 0)<SUB>2640</SUB>> ]
+"60328" [label = <(&lt;operator&gt;.equals,img-&gt;bitspersample == 8)<SUB>2648</SUB>> ]
+"60348" [label = <(NULL,NULL)<SUB>2652</SUB>> ]
+"60197" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2617</SUB>> ]
+"60203" [label = <(&lt;operator&gt;.indirectIndexAccess,whitePoint[1])<SUB>2618</SUB>> ]
+"60208" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module, &quot;Invalid value for WhitePoint tag.&quot;))<SUB>2620</SUB>> ]
+"60214" [label = <(RETURN,return NULL;,return NULL;)<SUB>2621</SUB>> ]
+"60222" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;cielab)<SUB>2624</SUB>> ]
+"60226" [label = <(&lt;operator&gt;.assignment,img-&gt;cielab = (TIFFCIELabToRGB *)_TIFFmallocExt(\012            img-&gt;tif, sizeof(TIFFCIELabToRGB)))<SUB>2626</SUB>> ]
+"60266" [label = <(&lt;operator&gt;.division,whitePoint[0] / whitePoint[1])<SUB>2637</SUB>> ]
+"60273" [label = <(&lt;operator&gt;.indirectIndexAccess,refWhite[1])<SUB>2637</SUB>> ]
+"60281" [label = <(&lt;operator&gt;.division,(1.0F - whitePoint[0] - whitePoint[1]) / whitePoint[1])<SUB>2639</SUB>> ]
+"60294" [label = <(&lt;operator&gt;.indirectIndexAccess,refWhite[1])<SUB>2639</SUB>> ]
+"60299" [label = <(TIFFCIELabToRGBInit,TIFFCIELabToRGBInit(img-&gt;cielab, &amp;display_sRGB, refWhite))<SUB>2640</SUB>> ]
+"60308" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Failed to initialize CIE L*a*b*-&gt;RGB conversion state.&quot;))<SUB>2642</SUB>> ]
+"60314" [label = <(_TIFFfreeExt,_TIFFfreeExt(img-&gt;tif, img-&gt;cielab))<SUB>2644</SUB>> ]
+"60321" [label = <(RETURN,return NULL;,return NULL;)<SUB>2645</SUB>> ]
+"60329" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;bitspersample)<SUB>2648</SUB>> ]
+"60334" [label = <(RETURN,return putcontig8bitCIELab8;,return putcontig8bitCIELab8;)<SUB>2649</SUB>> ]
+"60209" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2620</SUB>> ]
+"60215" [label = <(NULL,NULL)<SUB>2621</SUB>> ]
+"60224" [label = <(FIELD_IDENTIFIER,cielab,cielab)<SUB>2624</SUB>> ]
+"60227" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;cielab)<SUB>2626</SUB>> ]
+"60230" [label = <(&lt;operator&gt;.cast,(TIFFCIELabToRGB *)_TIFFmallocExt(\012            img-&gt;tif, sizeof(TIFFCIELabToRGB)))<SUB>2626</SUB>> ]
+"60239" [label = <(&lt;operator&gt;.logicalNot,!img-&gt;cielab)<SUB>2628</SUB>> ]
+"60267" [label = <(&lt;operator&gt;.indirectIndexAccess,whitePoint[0])<SUB>2637</SUB>> ]
+"60270" [label = <(&lt;operator&gt;.indirectIndexAccess,whitePoint[1])<SUB>2637</SUB>> ]
+"60282" [label = <(&lt;operator&gt;.subtraction,1.0F - whitePoint[0] - whitePoint[1])<SUB>2639</SUB>> ]
+"60291" [label = <(&lt;operator&gt;.indirectIndexAccess,whitePoint[1])<SUB>2639</SUB>> ]
+"60300" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;cielab)<SUB>2640</SUB>> ]
+"60303" [label = <(&lt;operator&gt;.addressOf,&amp;display_sRGB)<SUB>2640</SUB>> ]
+"60309" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2642</SUB>> ]
+"60315" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2644</SUB>> ]
+"60318" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;cielab)<SUB>2644</SUB>> ]
+"60322" [label = <(NULL,NULL)<SUB>2645</SUB>> ]
+"60331" [label = <(FIELD_IDENTIFIER,bitspersample,bitspersample)<SUB>2648</SUB>> ]
+"60350" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2652</SUB>> ]
+"60211" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2620</SUB>> ]
+"60229" [label = <(FIELD_IDENTIFIER,cielab,cielab)<SUB>2626</SUB>> ]
+"60231" [label = <(UNKNOWN,TIFFCIELabToRGB *,TIFFCIELabToRGB *)<SUB>2626</SUB>> ]
+"60232" [label = <(_TIFFmallocExt,_TIFFmallocExt(\012            img-&gt;tif, sizeof(TIFFCIELabToRGB)))<SUB>2626</SUB>> ]
+"60240" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;cielab)<SUB>2628</SUB>> ]
+"60244" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                          &quot;No space for CIE L*a*b*-&gt;RGB conversion state.&quot;))<SUB>2630</SUB>> ]
+"60250" [label = <(RETURN,return NULL;,return NULL;)<SUB>2632</SUB>> ]
+"60283" [label = <(&lt;operator&gt;.subtraction,1.0F - whitePoint[0])<SUB>2639</SUB>> ]
+"60288" [label = <(&lt;operator&gt;.indirectIndexAccess,whitePoint[1])<SUB>2639</SUB>> ]
+"60302" [label = <(FIELD_IDENTIFIER,cielab,cielab)<SUB>2640</SUB>> ]
+"60311" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2642</SUB>> ]
+"60317" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2644</SUB>> ]
+"60320" [label = <(FIELD_IDENTIFIER,cielab,cielab)<SUB>2644</SUB>> ]
+"60339" [label = <(&lt;operator&gt;.equals,img-&gt;bitspersample == 16)<SUB>2650</SUB>> ]
+"60351" [label = <(UNKNOWN,void *,void *)<SUB>2652</SUB>> ]
+"60217" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2621</SUB>> ]
+"60233" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2627</SUB>> ]
+"60236" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFCIELabToRGB))<SUB>2627</SUB>> ]
+"60242" [label = <(FIELD_IDENTIFIER,cielab,cielab)<SUB>2628</SUB>> ]
+"60245" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2630</SUB>> ]
+"60251" [label = <(NULL,NULL)<SUB>2632</SUB>> ]
+"60285" [label = <(&lt;operator&gt;.indirectIndexAccess,whitePoint[0])<SUB>2639</SUB>> ]
+"60324" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2645</SUB>> ]
+"60340" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;bitspersample)<SUB>2650</SUB>> ]
+"60345" [label = <(RETURN,return putcontig8bitCIELab16;,return putcontig8bitCIELab16;)<SUB>2651</SUB>> ]
+"60218" [label = <(UNKNOWN,void *,void *)<SUB>2621</SUB>> ]
+"60235" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2627</SUB>> ]
+"60247" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2630</SUB>> ]
+"60325" [label = <(UNKNOWN,void *,void *)<SUB>2645</SUB>> ]
+"60342" [label = <(FIELD_IDENTIFIER,bitspersample,bitspersample)<SUB>2650</SUB>> ]
+"60253" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2632</SUB>> ]
+"60254" [label = <(UNKNOWN,void *,void *)<SUB>2632</SUB>> ]
+"60185" [label = <(METHOD,initCIELabConversion)<SUB>2610</SUB>> ]
+"60353" [label = <(METHOD_RETURN,tileContigRoutine)<SUB>2610</SUB>> ]
+  "60189" -> "60197" 
+  "60194" -> "60203" 
+  "60256" -> "60262" 
+  "60261" -> "60277" 
+  "60276" -> "60302" 
+  "60347" -> "60353" 
+  "60195" -> "60199" 
+  "60199" -> "60194" 
+  "60202" -> "60211" 
+  "60202" -> "60224" 
+  "60221" -> "60229" 
+  "60221" -> "60257" 
+  "60257" -> "60256" 
+  "60262" -> "60267" 
+  "60265" -> "60261" 
+  "60277" -> "60285" 
+  "60280" -> "60276" 
+  "60298" -> "60311" 
+  "60298" -> "60331" 
+  "60328" -> "60334" 
+  "60328" -> "60342" 
+  "60348" -> "60351" 
+  "60348" -> "60347" 
+  "60197" -> "60195" 
+  "60203" -> "60202" 
+  "60208" -> "60215" 
+  "60214" -> "60353" 
+  "60222" -> "60221" 
+  "60226" -> "60242" 
+  "60266" -> "60273" 
+  "60273" -> "60265" 
+  "60281" -> "60294" 
+  "60294" -> "60280" 
+  "60299" -> "60298" 
+  "60308" -> "60317" 
+  "60314" -> "60322" 
+  "60321" -> "60353" 
+  "60329" -> "60328" 
+  "60334" -> "60353" 
+  "60209" -> "60208" 
+  "60215" -> "60218" 
+  "60215" -> "60214" 
+  "60224" -> "60222" 
+  "60227" -> "60231" 
+  "60230" -> "60226" 
+  "60239" -> "60247" 
+  "60239" -> "60257" 
+  "60267" -> "60270" 
+  "60270" -> "60266" 
+  "60282" -> "60291" 
+  "60291" -> "60281" 
+  "60300" -> "60303" 
+  "60303" -> "60299" 
+  "60309" -> "60308" 
+  "60315" -> "60320" 
+  "60318" -> "60314" 
+  "60322" -> "60325" 
+  "60322" -> "60321" 
+  "60331" -> "60329" 
+  "60350" -> "60347" 
+  "60211" -> "60209" 
+  "60229" -> "60227" 
+  "60231" -> "60235" 
+  "60232" -> "60230" 
+  "60240" -> "60239" 
+  "60244" -> "60251" 
+  "60250" -> "60353" 
+  "60283" -> "60288" 
+  "60288" -> "60282" 
+  "60302" -> "60300" 
+  "60311" -> "60309" 
+  "60317" -> "60315" 
+  "60320" -> "60318" 
+  "60339" -> "60348" 
+  "60339" -> "60345" 
+  "60351" -> "60350" 
+  "60217" -> "60214" 
+  "60233" -> "60236" 
+  "60236" -> "60232" 
+  "60242" -> "60240" 
+  "60245" -> "60244" 
+  "60251" -> "60254" 
+  "60251" -> "60250" 
+  "60285" -> "60283" 
+  "60324" -> "60321" 
+  "60340" -> "60339" 
+  "60345" -> "60353" 
+  "60218" -> "60217" 
+  "60235" -> "60233" 
+  "60247" -> "60245" 
+  "60325" -> "60324" 
+  "60342" -> "60340" 
+  "60253" -> "60250" 
+  "60254" -> "60253" 
+  "60185" -> "60189" 
+}

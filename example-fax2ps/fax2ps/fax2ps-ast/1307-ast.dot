@@ -1,0 +1,205 @@
+digraph "_TIFFGetDirNumberFromOffset" {  
+"92093" [label = <(METHOD,_TIFFGetDirNumberFromOffset)<SUB>5496</SUB>> ]
+"92094" [label = <(PARAM,TIFF *tif)<SUB>5496</SUB>> ]
+"92095" [label = <(PARAM,uint64_t diroff)<SUB>5496</SUB>> ]
+"92096" [label = <(PARAM,tdir_t *dirn)<SUB>5496</SUB>> ]
+"92097" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5497</SUB>> ]
+"92098" [label = <(CONTROL_STRUCTURE,if (diroff == 0),if (diroff == 0))<SUB>5498</SUB>> ]
+"92099" [label = <(&lt;operator&gt;.equals,diroff == 0)<SUB>5498</SUB>> ]
+"92100" [label = <(IDENTIFIER,diroff,diroff == 0)<SUB>5498</SUB>> ]
+"92101" [label = <(LITERAL,0,diroff == 0)<SUB>5498</SUB>> ]
+"92102" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5499</SUB>> ]
+"92103" [label = <(RETURN,return 0;,return 0;)<SUB>5499</SUB>> ]
+"92104" [label = <(LITERAL,0,return 0;)<SUB>5499</SUB>> ]
+"92105" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_dirnumber &gt;= TIFF_MAX_DIR_COUNT),if (tif-&gt;tif_dirnumber &gt;= TIFF_MAX_DIR_COUNT))<SUB>5500</SUB>> ]
+"92106" [label = <(&lt;operator&gt;.greaterEqualsThan,tif-&gt;tif_dirnumber &gt;= TIFF_MAX_DIR_COUNT)<SUB>5500</SUB>> ]
+"92107" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dirnumber)<SUB>5500</SUB>> ]
+"92108" [label = <(IDENTIFIER,tif,tif-&gt;tif_dirnumber &gt;= TIFF_MAX_DIR_COUNT)<SUB>5500</SUB>> ]
+"92109" [label = <(FIELD_IDENTIFIER,tif_dirnumber,tif_dirnumber)<SUB>5500</SUB>> ]
+"92110" [label = <(IDENTIFIER,TIFF_MAX_DIR_COUNT,tif-&gt;tif_dirnumber &gt;= TIFF_MAX_DIR_COUNT)<SUB>5500</SUB>> ]
+"92111" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5501</SUB>> ]
+"92112" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;_TIFFGetDirNumberFromOffset&quot;,\012                      &quot;Cannot handle more than %u TIFF directories&quot;,\012                      TIFF_MAX_DIR_COUNT))<SUB>5502</SUB>> ]
+"92113" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, &quot;_TIFFGetDirNumberFromOffset&quot;,\012                      &quot;Cannot handle more than %u TIFF directories&quot;,\012                      TIFF_MAX_DIR_COUNT))<SUB>5502</SUB>> ]
+"92114" [label = <(LITERAL,&quot;_TIFFGetDirNumberFromOffset&quot;,TIFFErrorExtR(tif, &quot;_TIFFGetDirNumberFromOffset&quot;,\012                      &quot;Cannot handle more than %u TIFF directories&quot;,\012                      TIFF_MAX_DIR_COUNT))<SUB>5502</SUB>> ]
+"92115" [label = <(LITERAL,&quot;Cannot handle more than %u TIFF directories&quot;,TIFFErrorExtR(tif, &quot;_TIFFGetDirNumberFromOffset&quot;,\012                      &quot;Cannot handle more than %u TIFF directories&quot;,\012                      TIFF_MAX_DIR_COUNT))<SUB>5503</SUB>> ]
+"92116" [label = <(IDENTIFIER,TIFF_MAX_DIR_COUNT,TIFFErrorExtR(tif, &quot;_TIFFGetDirNumberFromOffset&quot;,\012                      &quot;Cannot handle more than %u TIFF directories&quot;,\012                      TIFF_MAX_DIR_COUNT))<SUB>5504</SUB>> ]
+"92117" [label = <(RETURN,return 0;,return 0;)<SUB>5505</SUB>> ]
+"92118" [label = <(LITERAL,0,return 0;)<SUB>5505</SUB>> ]
+"92119" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_map_dir_offset_to_number == NULL),if (tif-&gt;tif_map_dir_offset_to_number == NULL))<SUB>5512</SUB>> ]
+"92120" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_map_dir_offset_to_number == NULL)<SUB>5512</SUB>> ]
+"92121" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5512</SUB>> ]
+"92122" [label = <(IDENTIFIER,tif,tif-&gt;tif_map_dir_offset_to_number == NULL)<SUB>5512</SUB>> ]
+"92123" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5512</SUB>> ]
+"92124" [label = <(NULL,NULL)<SUB>5512</SUB>> ]
+"92125" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"92126" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>5512</SUB>> ]
+"92127" [label = <(UNKNOWN,void *,void *)<SUB>5512</SUB>> ]
+"92128" [label = <(LITERAL,0,(void *)0)<SUB>5512</SUB>> ]
+"92129" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5513</SUB>> ]
+"92130" [label = <(RETURN,return 0;,return 0;)<SUB>5513</SUB>> ]
+"92131" [label = <(LITERAL,0,return 0;)<SUB>5513</SUB>> ]
+"92132" [label = <(LOCAL,TIFFOffsetAndDirNumber entry: TIFFOffsetAndDirNumber)<SUB>5514</SUB>> ]
+"92133" [label = <(&lt;operator&gt;.assignment,entry.offset = diroff)<SUB>5515</SUB>> ]
+"92134" [label = <(&lt;operator&gt;.fieldAccess,entry.offset)<SUB>5515</SUB>> ]
+"92135" [label = <(IDENTIFIER,entry,entry.offset = diroff)<SUB>5515</SUB>> ]
+"92136" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5515</SUB>> ]
+"92137" [label = <(IDENTIFIER,diroff,entry.offset = diroff)<SUB>5515</SUB>> ]
+"92138" [label = <(&lt;operator&gt;.assignment,entry.dirNumber = 0)<SUB>5516</SUB>> ]
+"92139" [label = <(&lt;operator&gt;.fieldAccess,entry.dirNumber)<SUB>5516</SUB>> ]
+"92140" [label = <(IDENTIFIER,entry,entry.dirNumber = 0)<SUB>5516</SUB>> ]
+"92141" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5516</SUB>> ]
+"92142" [label = <(LITERAL,0,entry.dirNumber = 0)<SUB>5516</SUB>> ]
+"92143" [label = <(LOCAL,TIFFOffsetAndDirNumber* foundEntry: TIFFOffsetAndDirNumber)<SUB>5518</SUB>> ]
+"92144" [label = <(&lt;operator&gt;.assignment,*foundEntry =\012        (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5518</SUB>> ]
+"92145" [label = <(IDENTIFIER,foundEntry,*foundEntry =\012        (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5518</SUB>> ]
+"92146" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5519</SUB>> ]
+"92147" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5519</SUB>> ]
+"92148" [label = <(TIFFHashSetLookup,TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5519</SUB>> ]
+"92149" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5520</SUB>> ]
+"92150" [label = <(IDENTIFIER,tif,TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5520</SUB>> ]
+"92151" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5520</SUB>> ]
+"92152" [label = <(&lt;operator&gt;.addressOf,&amp;entry)<SUB>5520</SUB>> ]
+"92153" [label = <(IDENTIFIER,entry,TIFFHashSetLookup(\012            tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5520</SUB>> ]
+"92154" [label = <(CONTROL_STRUCTURE,if (foundEntry &amp;&amp; 1),if (foundEntry &amp;&amp; 1))<SUB>5521</SUB>> ]
+"92155" [label = <(&lt;operator&gt;.logicalAnd,foundEntry &amp;&amp; 1)<SUB>5521</SUB>> ]
+"92156" [label = <(IDENTIFIER,foundEntry,foundEntry &amp;&amp; 1)<SUB>5521</SUB>> ]
+"92157" [label = <(LITERAL,1,foundEntry &amp;&amp; 1)<SUB>5521</SUB>> ]
+"92158" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5522</SUB>> ]
+"92159" [label = <(&lt;operator&gt;.assignment,*dirn = foundEntry-&gt;dirNumber)<SUB>5523</SUB>> ]
+"92160" [label = <(&lt;operator&gt;.indirection,*dirn)<SUB>5523</SUB>> ]
+"92161" [label = <(IDENTIFIER,dirn,*dirn = foundEntry-&gt;dirNumber)<SUB>5523</SUB>> ]
+"92162" [label = <(&lt;operator&gt;.indirectFieldAccess,foundEntry-&gt;dirNumber)<SUB>5523</SUB>> ]
+"92163" [label = <(IDENTIFIER,foundEntry,*dirn = foundEntry-&gt;dirNumber)<SUB>5523</SUB>> ]
+"92164" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5523</SUB>> ]
+"92165" [label = <(RETURN,return 1;,return 1;)<SUB>5524</SUB>> ]
+"92166" [label = <(LITERAL,1,return 1;)<SUB>5524</SUB>> ]
+"92167" [label = <(TIFFNumberOfDirectories,TIFFNumberOfDirectories(tif))<SUB>5527</SUB>> ]
+"92168" [label = <(IDENTIFIER,tif,TIFFNumberOfDirectories(tif))<SUB>5527</SUB>> ]
+"92169" [label = <(&lt;operator&gt;.assignment,foundEntry = (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5529</SUB>> ]
+"92170" [label = <(IDENTIFIER,foundEntry,foundEntry = (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5529</SUB>> ]
+"92171" [label = <(&lt;operator&gt;.cast,(TIFFOffsetAndDirNumber *)TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5529</SUB>> ]
+"92172" [label = <(UNKNOWN,TIFFOffsetAndDirNumber *,TIFFOffsetAndDirNumber *)<SUB>5529</SUB>> ]
+"92173" [label = <(TIFFHashSetLookup,TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5529</SUB>> ]
+"92174" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_map_dir_offset_to_number)<SUB>5530</SUB>> ]
+"92175" [label = <(IDENTIFIER,tif,TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5530</SUB>> ]
+"92176" [label = <(FIELD_IDENTIFIER,tif_map_dir_offset_to_number,tif_map_dir_offset_to_number)<SUB>5530</SUB>> ]
+"92177" [label = <(&lt;operator&gt;.addressOf,&amp;entry)<SUB>5530</SUB>> ]
+"92178" [label = <(IDENTIFIER,entry,TIFFHashSetLookup(\012        tif-&gt;tif_map_dir_offset_to_number, &amp;entry))<SUB>5530</SUB>> ]
+"92179" [label = <(CONTROL_STRUCTURE,if (foundEntry &amp;&amp; 1),if (foundEntry &amp;&amp; 1))<SUB>5531</SUB>> ]
+"92180" [label = <(&lt;operator&gt;.logicalAnd,foundEntry &amp;&amp; 1)<SUB>5531</SUB>> ]
+"92181" [label = <(IDENTIFIER,foundEntry,foundEntry &amp;&amp; 1)<SUB>5531</SUB>> ]
+"92182" [label = <(LITERAL,1,foundEntry &amp;&amp; 1)<SUB>5531</SUB>> ]
+"92183" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5532</SUB>> ]
+"92184" [label = <(&lt;operator&gt;.assignment,*dirn = foundEntry-&gt;dirNumber)<SUB>5533</SUB>> ]
+"92185" [label = <(&lt;operator&gt;.indirection,*dirn)<SUB>5533</SUB>> ]
+"92186" [label = <(IDENTIFIER,dirn,*dirn = foundEntry-&gt;dirNumber)<SUB>5533</SUB>> ]
+"92187" [label = <(&lt;operator&gt;.indirectFieldAccess,foundEntry-&gt;dirNumber)<SUB>5533</SUB>> ]
+"92188" [label = <(IDENTIFIER,foundEntry,*dirn = foundEntry-&gt;dirNumber)<SUB>5533</SUB>> ]
+"92189" [label = <(FIELD_IDENTIFIER,dirNumber,dirNumber)<SUB>5533</SUB>> ]
+"92190" [label = <(RETURN,return 1;,return 1;)<SUB>5534</SUB>> ]
+"92191" [label = <(LITERAL,1,return 1;)<SUB>5534</SUB>> ]
+"92192" [label = <(RETURN,return 0;,return 0;)<SUB>5537</SUB>> ]
+"92193" [label = <(LITERAL,0,return 0;)<SUB>5537</SUB>> ]
+"92194" [label = <(METHOD_RETURN,int)<SUB>5496</SUB>> ]
+  "92093" -> "92094" 
+  "92093" -> "92095" 
+  "92093" -> "92096" 
+  "92093" -> "92097" 
+  "92093" -> "92194" 
+  "92097" -> "92098" 
+  "92097" -> "92105" 
+  "92097" -> "92119" 
+  "92097" -> "92132" 
+  "92097" -> "92133" 
+  "92097" -> "92138" 
+  "92097" -> "92143" 
+  "92097" -> "92144" 
+  "92097" -> "92154" 
+  "92097" -> "92167" 
+  "92097" -> "92169" 
+  "92097" -> "92179" 
+  "92097" -> "92192" 
+  "92098" -> "92099" 
+  "92098" -> "92102" 
+  "92099" -> "92100" 
+  "92099" -> "92101" 
+  "92102" -> "92103" 
+  "92103" -> "92104" 
+  "92105" -> "92106" 
+  "92105" -> "92111" 
+  "92106" -> "92107" 
+  "92106" -> "92110" 
+  "92107" -> "92108" 
+  "92107" -> "92109" 
+  "92111" -> "92112" 
+  "92111" -> "92117" 
+  "92112" -> "92113" 
+  "92112" -> "92114" 
+  "92112" -> "92115" 
+  "92112" -> "92116" 
+  "92117" -> "92118" 
+  "92119" -> "92120" 
+  "92119" -> "92129" 
+  "92120" -> "92121" 
+  "92120" -> "92124" 
+  "92121" -> "92122" 
+  "92121" -> "92123" 
+  "92124" -> "92125" 
+  "92125" -> "92126" 
+  "92126" -> "92127" 
+  "92126" -> "92128" 
+  "92129" -> "92130" 
+  "92130" -> "92131" 
+  "92133" -> "92134" 
+  "92133" -> "92137" 
+  "92134" -> "92135" 
+  "92134" -> "92136" 
+  "92138" -> "92139" 
+  "92138" -> "92142" 
+  "92139" -> "92140" 
+  "92139" -> "92141" 
+  "92144" -> "92145" 
+  "92144" -> "92146" 
+  "92146" -> "92147" 
+  "92146" -> "92148" 
+  "92148" -> "92149" 
+  "92148" -> "92152" 
+  "92149" -> "92150" 
+  "92149" -> "92151" 
+  "92152" -> "92153" 
+  "92154" -> "92155" 
+  "92154" -> "92158" 
+  "92155" -> "92156" 
+  "92155" -> "92157" 
+  "92158" -> "92159" 
+  "92158" -> "92165" 
+  "92159" -> "92160" 
+  "92159" -> "92162" 
+  "92160" -> "92161" 
+  "92162" -> "92163" 
+  "92162" -> "92164" 
+  "92165" -> "92166" 
+  "92167" -> "92168" 
+  "92169" -> "92170" 
+  "92169" -> "92171" 
+  "92171" -> "92172" 
+  "92171" -> "92173" 
+  "92173" -> "92174" 
+  "92173" -> "92177" 
+  "92174" -> "92175" 
+  "92174" -> "92176" 
+  "92177" -> "92178" 
+  "92179" -> "92180" 
+  "92179" -> "92183" 
+  "92180" -> "92181" 
+  "92180" -> "92182" 
+  "92183" -> "92184" 
+  "92183" -> "92190" 
+  "92184" -> "92185" 
+  "92184" -> "92187" 
+  "92185" -> "92186" 
+  "92187" -> "92188" 
+  "92187" -> "92189" 
+  "92190" -> "92191" 
+  "92192" -> "92193" 
+}

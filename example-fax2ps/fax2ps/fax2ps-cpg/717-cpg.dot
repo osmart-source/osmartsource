@@ -1,0 +1,18 @@
+digraph "strtoq" {  
+"33188" [label = <(METHOD,strtoq)<SUB>187</SUB>> ]
+"33189" [label = <(PARAM,const char *__restrict __nptr)<SUB>187</SUB>> ]
+"33190" [label = <(PARAM,char **__restrict __endptr)<SUB>188</SUB>> ]
+"33191" [label = <(PARAM,int __base)<SUB>188</SUB>> ]
+"33192" [label = <(METHOD_RETURN,long long int)<SUB>187</SUB>> ]
+  "33188" -> "33189"  [ label = "AST: "] 
+  "33188" -> "33190"  [ label = "AST: "] 
+  "33188" -> "33191"  [ label = "AST: "] 
+  "33188" -> "33192"  [ label = "AST: "] 
+  "33188" -> "33192"  [ label = "CFG: "] 
+  "33189" -> "33192"  [ label = "DDG: __nptr"] 
+  "33190" -> "33192"  [ label = "DDG: __endptr"] 
+  "33191" -> "33192"  [ label = "DDG: __base"] 
+  "33188" -> "33189"  [ label = "DDG: "] 
+  "33188" -> "33190"  [ label = "DDG: "] 
+  "33188" -> "33191"  [ label = "DDG: "] 
+}

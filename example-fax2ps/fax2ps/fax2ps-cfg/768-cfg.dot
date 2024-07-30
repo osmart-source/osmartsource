@@ -1,0 +1,96 @@
+digraph "_tiffReadProc" {  
+"33570" [label = <(&lt;operator&gt;.assignment,bytes_total = (size_t)size)<SUB>67</SUB>> ]
+"33577" [label = <(&lt;operator&gt;.assignment,count = -1)<SUB>69</SUB>> ]
+"33598" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>75</SUB>> ]
+"33666" [label = <(RETURN,return (tmsize_t)bytes_read;,return (tmsize_t)bytes_read;)<SUB>88</SUB>> ]
+"33572" [label = <(&lt;operator&gt;.cast,(size_t)size)<SUB>67</SUB>> ]
+"33579" [label = <(&lt;operator&gt;.minus,-1)<SUB>69</SUB>> ]
+"33582" [label = <(&lt;operator&gt;.notEquals,(tmsize_t)bytes_total != size)<SUB>70</SUB>> ]
+"33599" [label = <(&lt;operator&gt;.fieldAccess,fdh.h)<SUB>75</SUB>> ]
+"33608" [label = <(&lt;operator&gt;.lessThan,bytes_read &lt; bytes_total)<SUB>76</SUB>> ]
+"33611" [label = <(&lt;operator&gt;.assignmentPlus,bytes_read += count)<SUB>76</SUB>> ]
+"33658" [label = <(&lt;operator&gt;.lessThan,count &lt; 0)<SUB>86</SUB>> ]
+"33667" [label = <(&lt;operator&gt;.cast,(tmsize_t)bytes_read)<SUB>88</SUB>> ]
+"33573" [label = <(UNKNOWN,size_t,size_t)<SUB>67</SUB>> ]
+"33583" [label = <(&lt;operator&gt;.cast,(tmsize_t)bytes_total)<SUB>70</SUB>> ]
+"33588" [label = <(&lt;operator&gt;.assignment,(*__errno_location()) = 22)<SUB>72</SUB>> ]
+"33594" [label = <(RETURN,return (tmsize_t)-1;,return (tmsize_t)-1;)<SUB>73</SUB>> ]
+"33601" [label = <(FIELD_IDENTIFIER,h,h)<SUB>75</SUB>> ]
+"33605" [label = <(&lt;operator&gt;.assignment,bytes_read = 0)<SUB>76</SUB>> ]
+"33616" [label = <(&lt;operator&gt;.assignment,*buf_offset = (char *)buf + bytes_read)<SUB>78</SUB>> ]
+"33624" [label = <(&lt;operator&gt;.assignment,io_size = bytes_total - bytes_read)<SUB>79</SUB>> ]
+"33641" [label = <(&lt;operator&gt;.assignment,count = read(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>82</SUB>> ]
+"33662" [label = <(RETURN,return (tmsize_t)-1;,return (tmsize_t)-1;)<SUB>87</SUB>> ]
+"33668" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>88</SUB>> ]
+"33584" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>70</SUB>> ]
+"33589" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>72</SUB>> ]
+"33591" [label = <(EINVAL,EINVAL)<SUB>72</SUB>> ]
+"33595" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>73</SUB>> ]
+"33618" [label = <(&lt;operator&gt;.addition,(char *)buf + bytes_read)<SUB>78</SUB>> ]
+"33626" [label = <(&lt;operator&gt;.subtraction,bytes_total - bytes_read)<SUB>79</SUB>> ]
+"33630" [label = <(&lt;operator&gt;.greaterThan,io_size &gt; TIFF_IO_MAX)<SUB>80</SUB>> ]
+"33643" [label = <(read,read(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>82</SUB>> ]
+"33652" [label = <(&lt;operator&gt;.lessEqualsThan,count &lt;= 0)<SUB>83</SUB>> ]
+"33663" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>87</SUB>> ]
+"33590" [label = <(__errno_location,__errno_location())<SUB>72</SUB>> ]
+"33619" [label = <(&lt;operator&gt;.cast,(char *)buf)<SUB>78</SUB>> ]
+"33632" [label = <(TIFF_IO_MAX,TIFF_IO_MAX)<SUB>80</SUB>> ]
+"33636" [label = <(&lt;operator&gt;.assignment,io_size = TIFF_IO_MAX)<SUB>81</SUB>> ]
+"33644" [label = <(&lt;operator&gt;.fieldAccess,fdh.fd)<SUB>82</SUB>> ]
+"33648" [label = <(&lt;operator&gt;.cast,(TIFFIOSize_t)io_size)<SUB>82</SUB>> ]
+"33620" [label = <(UNKNOWN,char *,char *)<SUB>78</SUB>> ]
+"33638" [label = <(TIFF_IO_MAX,TIFF_IO_MAX)<SUB>81</SUB>> ]
+"33646" [label = <(FIELD_IDENTIFIER,fd,fd)<SUB>82</SUB>> ]
+"33649" [label = <(UNKNOWN,TIFFIOSize_t,TIFFIOSize_t)<SUB>82</SUB>> ]
+"33563" [label = <(METHOD,_tiffReadProc)<SUB>64</SUB>> ]
+"33670" [label = <(METHOD_RETURN,tmsize_t)<SUB>64</SUB>> ]
+  "33570" -> "33579" 
+  "33577" -> "33584" 
+  "33598" -> "33605" 
+  "33666" -> "33670" 
+  "33572" -> "33570" 
+  "33579" -> "33577" 
+  "33582" -> "33590" 
+  "33582" -> "33601" 
+  "33599" -> "33598" 
+  "33608" -> "33620" 
+  "33608" -> "33658" 
+  "33611" -> "33608" 
+  "33658" -> "33668" 
+  "33658" -> "33663" 
+  "33667" -> "33666" 
+  "33573" -> "33572" 
+  "33583" -> "33582" 
+  "33588" -> "33595" 
+  "33594" -> "33670" 
+  "33601" -> "33599" 
+  "33605" -> "33608" 
+  "33616" -> "33626" 
+  "33624" -> "33632" 
+  "33641" -> "33652" 
+  "33662" -> "33670" 
+  "33668" -> "33667" 
+  "33584" -> "33583" 
+  "33589" -> "33591" 
+  "33591" -> "33588" 
+  "33595" -> "33594" 
+  "33618" -> "33616" 
+  "33626" -> "33624" 
+  "33630" -> "33638" 
+  "33630" -> "33646" 
+  "33643" -> "33641" 
+  "33652" -> "33658" 
+  "33652" -> "33611" 
+  "33663" -> "33662" 
+  "33590" -> "33589" 
+  "33619" -> "33618" 
+  "33632" -> "33630" 
+  "33636" -> "33646" 
+  "33644" -> "33649" 
+  "33648" -> "33643" 
+  "33620" -> "33619" 
+  "33638" -> "33636" 
+  "33646" -> "33644" 
+  "33649" -> "33648" 
+  "33563" -> "33573" 
+}

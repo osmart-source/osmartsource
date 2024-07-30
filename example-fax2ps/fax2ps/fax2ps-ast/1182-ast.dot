@@ -1,0 +1,45 @@
+digraph "_TIFFSwab64BitData" {  
+"77946" [label = <(METHOD,_TIFFSwab64BitData)<SUB>1619</SUB>> ]
+"77947" [label = <(PARAM,TIFF *tif)<SUB>1619</SUB>> ]
+"77948" [label = <(PARAM,uint8_t *buf)<SUB>1619</SUB>> ]
+"77949" [label = <(PARAM,tmsize_t cc)<SUB>1619</SUB>> ]
+"77950" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1620</SUB>> ]
+"77951" [label = <(&lt;operator&gt;.cast,(void)tif)<SUB>1621</SUB>> ]
+"77952" [label = <(UNKNOWN,void,void)<SUB>1621</SUB>> ]
+"77953" [label = <(IDENTIFIER,tif,(void)tif)<SUB>1621</SUB>> ]
+"77954" [label = <(assert,assert((cc &amp; 7) == 0))<SUB>1622</SUB>> ]
+"77955" [label = <(&lt;operator&gt;.equals,(cc &amp; 7) == 0)<SUB>1622</SUB>> ]
+"77956" [label = <(&lt;operator&gt;.and,cc &amp; 7)<SUB>1622</SUB>> ]
+"77957" [label = <(IDENTIFIER,cc,cc &amp; 7)<SUB>1622</SUB>> ]
+"77958" [label = <(LITERAL,7,cc &amp; 7)<SUB>1622</SUB>> ]
+"77959" [label = <(LITERAL,0,(cc &amp; 7) == 0)<SUB>1622</SUB>> ]
+"77960" [label = <(TIFFSwabArrayOfDouble,TIFFSwabArrayOfDouble((double *)buf, cc / 8))<SUB>1623</SUB>> ]
+"77961" [label = <(&lt;operator&gt;.cast,(double *)buf)<SUB>1623</SUB>> ]
+"77962" [label = <(UNKNOWN,double *,double *)<SUB>1623</SUB>> ]
+"77963" [label = <(IDENTIFIER,buf,(double *)buf)<SUB>1623</SUB>> ]
+"77964" [label = <(&lt;operator&gt;.division,cc / 8)<SUB>1623</SUB>> ]
+"77965" [label = <(IDENTIFIER,cc,cc / 8)<SUB>1623</SUB>> ]
+"77966" [label = <(LITERAL,8,cc / 8)<SUB>1623</SUB>> ]
+"77967" [label = <(METHOD_RETURN,void)<SUB>1619</SUB>> ]
+  "77946" -> "77947" 
+  "77946" -> "77948" 
+  "77946" -> "77949" 
+  "77946" -> "77950" 
+  "77946" -> "77967" 
+  "77950" -> "77951" 
+  "77950" -> "77954" 
+  "77950" -> "77960" 
+  "77951" -> "77952" 
+  "77951" -> "77953" 
+  "77954" -> "77955" 
+  "77955" -> "77956" 
+  "77955" -> "77959" 
+  "77956" -> "77957" 
+  "77956" -> "77958" 
+  "77960" -> "77961" 
+  "77960" -> "77964" 
+  "77961" -> "77962" 
+  "77961" -> "77963" 
+  "77964" -> "77965" 
+  "77964" -> "77966" 
+}

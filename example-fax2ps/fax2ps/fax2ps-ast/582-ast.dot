@@ -1,0 +1,53 @@
+digraph "_TIFFClampDoubleToUInt32" {  
+"21629" [label = <(METHOD,_TIFFClampDoubleToUInt32)<SUB>444</SUB>> ]
+"21630" [label = <(PARAM,double val)<SUB>444</SUB>> ]
+"21631" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>445</SUB>> ]
+"21632" [label = <(CONTROL_STRUCTURE,if (val &lt; 0),if (val &lt; 0))<SUB>446</SUB>> ]
+"21633" [label = <(&lt;operator&gt;.lessThan,val &lt; 0)<SUB>446</SUB>> ]
+"21634" [label = <(IDENTIFIER,val,val &lt; 0)<SUB>446</SUB>> ]
+"21635" [label = <(LITERAL,0,val &lt; 0)<SUB>446</SUB>> ]
+"21636" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>447</SUB>> ]
+"21637" [label = <(RETURN,return 0;,return 0;)<SUB>447</SUB>> ]
+"21638" [label = <(LITERAL,0,return 0;)<SUB>447</SUB>> ]
+"21639" [label = <(CONTROL_STRUCTURE,if (val &gt; 0xFFFFFFFFU || val != val),if (val &gt; 0xFFFFFFFFU || val != val))<SUB>448</SUB>> ]
+"21640" [label = <(&lt;operator&gt;.logicalOr,val &gt; 0xFFFFFFFFU || val != val)<SUB>448</SUB>> ]
+"21641" [label = <(&lt;operator&gt;.greaterThan,val &gt; 0xFFFFFFFFU)<SUB>448</SUB>> ]
+"21642" [label = <(IDENTIFIER,val,val &gt; 0xFFFFFFFFU)<SUB>448</SUB>> ]
+"21643" [label = <(LITERAL,0xFFFFFFFFU,val &gt; 0xFFFFFFFFU)<SUB>448</SUB>> ]
+"21644" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>448</SUB>> ]
+"21645" [label = <(IDENTIFIER,val,val != val)<SUB>448</SUB>> ]
+"21646" [label = <(IDENTIFIER,val,val != val)<SUB>448</SUB>> ]
+"21647" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>449</SUB>> ]
+"21648" [label = <(RETURN,return 0xFFFFFFFFU;,return 0xFFFFFFFFU;)<SUB>449</SUB>> ]
+"21649" [label = <(LITERAL,0xFFFFFFFFU,return 0xFFFFFFFFU;)<SUB>449</SUB>> ]
+"21650" [label = <(RETURN,return (uint32_t)val;,return (uint32_t)val;)<SUB>450</SUB>> ]
+"21651" [label = <(&lt;operator&gt;.cast,(uint32_t)val)<SUB>450</SUB>> ]
+"21652" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>450</SUB>> ]
+"21653" [label = <(IDENTIFIER,val,(uint32_t)val)<SUB>450</SUB>> ]
+"21654" [label = <(METHOD_RETURN,uint32_t)<SUB>444</SUB>> ]
+  "21629" -> "21630" 
+  "21629" -> "21631" 
+  "21629" -> "21654" 
+  "21631" -> "21632" 
+  "21631" -> "21639" 
+  "21631" -> "21650" 
+  "21632" -> "21633" 
+  "21632" -> "21636" 
+  "21633" -> "21634" 
+  "21633" -> "21635" 
+  "21636" -> "21637" 
+  "21637" -> "21638" 
+  "21639" -> "21640" 
+  "21639" -> "21647" 
+  "21640" -> "21641" 
+  "21640" -> "21644" 
+  "21641" -> "21642" 
+  "21641" -> "21643" 
+  "21644" -> "21645" 
+  "21644" -> "21646" 
+  "21647" -> "21648" 
+  "21648" -> "21649" 
+  "21650" -> "21651" 
+  "21651" -> "21652" 
+  "21651" -> "21653" 
+}

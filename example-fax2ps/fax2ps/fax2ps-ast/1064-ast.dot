@@ -1,0 +1,71 @@
+digraph "TIFFCheckpointDirectory" {  
+"64445" [label = <(METHOD,TIFFCheckpointDirectory)<SUB>289</SUB>> ]
+"64446" [label = <(PARAM,TIFF *tif)<SUB>289</SUB>> ]
+"64447" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>290</SUB>> ]
+"64448" [label = <(LOCAL,int rc: int)<SUB>291</SUB>> ]
+"64449" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_dir.td_stripoffset_p == NULL),if (tif-&gt;tif_dir.td_stripoffset_p == NULL))<SUB>293</SUB>> ]
+"64450" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_dir.td_stripoffset_p == NULL)<SUB>293</SUB>> ]
+"64451" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_stripoffset_p)<SUB>293</SUB>> ]
+"64452" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>293</SUB>> ]
+"64453" [label = <(IDENTIFIER,tif,tif-&gt;tif_dir.td_stripoffset_p == NULL)<SUB>293</SUB>> ]
+"64454" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>293</SUB>> ]
+"64455" [label = <(FIELD_IDENTIFIER,td_stripoffset_p,td_stripoffset_p)<SUB>293</SUB>> ]
+"64456" [label = <(IDENTIFIER,NULL,tif-&gt;tif_dir.td_stripoffset_p == NULL)<SUB>293</SUB>> ]
+"64457" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>294</SUB>> ]
+"64458" [label = <(&lt;operator&gt;.cast,(void)TIFFSetupStrips(tif))<SUB>294</SUB>> ]
+"64459" [label = <(UNKNOWN,void,void)<SUB>294</SUB>> ]
+"64460" [label = <(TIFFSetupStrips,TIFFSetupStrips(tif))<SUB>294</SUB>> ]
+"64461" [label = <(IDENTIFIER,tif,TIFFSetupStrips(tif))<SUB>294</SUB>> ]
+"64462" [label = <(&lt;operator&gt;.assignment,rc = TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64463" [label = <(IDENTIFIER,rc,rc = TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64464" [label = <(TIFFWriteDirectorySec,TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64465" [label = <(IDENTIFIER,tif,TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64466" [label = <(IDENTIFIER,TRUE,TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64467" [label = <(IDENTIFIER,FALSE,TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64468" [label = <(IDENTIFIER,NULL,TIFFWriteDirectorySec(tif, TRUE, FALSE, NULL))<SUB>295</SUB>> ]
+"64469" [label = <(&lt;operator&gt;.cast,(void)TIFFSetWriteOffset(tif, TIFFSeekFile(tif, 0, SEEK_END)))<SUB>296</SUB>> ]
+"64470" [label = <(UNKNOWN,void,void)<SUB>296</SUB>> ]
+"64471" [label = <(TIFFSetWriteOffset,TIFFSetWriteOffset(tif, TIFFSeekFile(tif, 0, SEEK_END)))<SUB>296</SUB>> ]
+"64472" [label = <(IDENTIFIER,tif,TIFFSetWriteOffset(tif, TIFFSeekFile(tif, 0, SEEK_END)))<SUB>296</SUB>> ]
+"64473" [label = <(TIFFSeekFile,TIFFSeekFile(tif, 0, SEEK_END))<SUB>296</SUB>> ]
+"64474" [label = <(IDENTIFIER,tif,TIFFSeekFile(tif, 0, SEEK_END))<SUB>296</SUB>> ]
+"64475" [label = <(LITERAL,0,TIFFSeekFile(tif, 0, SEEK_END))<SUB>296</SUB>> ]
+"64476" [label = <(IDENTIFIER,SEEK_END,TIFFSeekFile(tif, 0, SEEK_END))<SUB>296</SUB>> ]
+"64477" [label = <(RETURN,return rc;,return rc;)<SUB>297</SUB>> ]
+"64478" [label = <(IDENTIFIER,rc,return rc;)<SUB>297</SUB>> ]
+"64479" [label = <(METHOD_RETURN,int)<SUB>289</SUB>> ]
+  "64445" -> "64446" 
+  "64445" -> "64447" 
+  "64445" -> "64479" 
+  "64447" -> "64448" 
+  "64447" -> "64449" 
+  "64447" -> "64462" 
+  "64447" -> "64469" 
+  "64447" -> "64477" 
+  "64449" -> "64450" 
+  "64449" -> "64457" 
+  "64450" -> "64451" 
+  "64450" -> "64456" 
+  "64451" -> "64452" 
+  "64451" -> "64455" 
+  "64452" -> "64453" 
+  "64452" -> "64454" 
+  "64457" -> "64458" 
+  "64458" -> "64459" 
+  "64458" -> "64460" 
+  "64460" -> "64461" 
+  "64462" -> "64463" 
+  "64462" -> "64464" 
+  "64464" -> "64465" 
+  "64464" -> "64466" 
+  "64464" -> "64467" 
+  "64464" -> "64468" 
+  "64469" -> "64470" 
+  "64469" -> "64471" 
+  "64471" -> "64472" 
+  "64471" -> "64473" 
+  "64473" -> "64474" 
+  "64473" -> "64475" 
+  "64473" -> "64476" 
+  "64477" -> "64478" 
+}

@@ -1,0 +1,111 @@
+digraph "TIFFFindCODEC" {  
+"2084" [label = <(METHOD,TIFFFindCODEC)<SUB>192</SUB>> ]
+"2085" [label = <(PARAM,uint16_t scheme)<SUB>192</SUB>> ]
+"2086" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>193</SUB>> ]
+"2087" [label = <(LOCAL,const TIFFCodec* c: TIFFCodec)<SUB>194</SUB>> ]
+"2088" [label = <(LOCAL,codec_t* cd: codec_t)<SUB>195</SUB>> ]
+"2089" [label = <(CONTROL_STRUCTURE,for (cd = registeredCODECS;cd;cd = cd-&gt;next),for (cd = registeredCODECS;cd;cd = cd-&gt;next))<SUB>197</SUB>> ]
+"2090" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>197</SUB>> ]
+"2091" [label = <(&lt;operator&gt;.assignment,cd = registeredCODECS)<SUB>197</SUB>> ]
+"2092" [label = <(IDENTIFIER,cd,cd = registeredCODECS)<SUB>197</SUB>> ]
+"2093" [label = <(IDENTIFIER,registeredCODECS,cd = registeredCODECS)<SUB>197</SUB>> ]
+"2094" [label = <(IDENTIFIER,cd,for (cd = registeredCODECS;cd;cd = cd-&gt;next))<SUB>197</SUB>> ]
+"2095" [label = <(&lt;operator&gt;.assignment,cd = cd-&gt;next)<SUB>197</SUB>> ]
+"2096" [label = <(IDENTIFIER,cd,cd = cd-&gt;next)<SUB>197</SUB>> ]
+"2097" [label = <(&lt;operator&gt;.indirectFieldAccess,cd-&gt;next)<SUB>197</SUB>> ]
+"2098" [label = <(IDENTIFIER,cd,cd = cd-&gt;next)<SUB>197</SUB>> ]
+"2099" [label = <(FIELD_IDENTIFIER,next,next)<SUB>197</SUB>> ]
+"2100" [label = <(CONTROL_STRUCTURE,if (cd-&gt;info-&gt;scheme == scheme),if (cd-&gt;info-&gt;scheme == scheme))<SUB>198</SUB>> ]
+"2101" [label = <(&lt;operator&gt;.equals,cd-&gt;info-&gt;scheme == scheme)<SUB>198</SUB>> ]
+"2102" [label = <(&lt;operator&gt;.indirectFieldAccess,cd-&gt;info-&gt;scheme)<SUB>198</SUB>> ]
+"2103" [label = <(&lt;operator&gt;.indirectFieldAccess,cd-&gt;info)<SUB>198</SUB>> ]
+"2104" [label = <(IDENTIFIER,cd,cd-&gt;info-&gt;scheme == scheme)<SUB>198</SUB>> ]
+"2105" [label = <(FIELD_IDENTIFIER,info,info)<SUB>198</SUB>> ]
+"2106" [label = <(FIELD_IDENTIFIER,scheme,scheme)<SUB>198</SUB>> ]
+"2107" [label = <(IDENTIFIER,scheme,cd-&gt;info-&gt;scheme == scheme)<SUB>198</SUB>> ]
+"2108" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>199</SUB>> ]
+"2109" [label = <(RETURN,return ((const TIFFCodec *)cd-&gt;info);,return ((const TIFFCodec *)cd-&gt;info);)<SUB>199</SUB>> ]
+"2110" [label = <(&lt;operator&gt;.cast,(const TIFFCodec *)cd-&gt;info)<SUB>199</SUB>> ]
+"2111" [label = <(UNKNOWN,const TIFFCodec *,const TIFFCodec *)<SUB>199</SUB>> ]
+"2112" [label = <(&lt;operator&gt;.indirectFieldAccess,cd-&gt;info)<SUB>199</SUB>> ]
+"2113" [label = <(IDENTIFIER,cd,(const TIFFCodec *)cd-&gt;info)<SUB>199</SUB>> ]
+"2114" [label = <(FIELD_IDENTIFIER,info,info)<SUB>199</SUB>> ]
+"2115" [label = <(CONTROL_STRUCTURE,for (c = _TIFFBuiltinCODECS;c-&gt;name;c++),for (c = _TIFFBuiltinCODECS;c-&gt;name;c++))<SUB>200</SUB>> ]
+"2116" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>200</SUB>> ]
+"2117" [label = <(&lt;operator&gt;.assignment,c = _TIFFBuiltinCODECS)<SUB>200</SUB>> ]
+"2118" [label = <(IDENTIFIER,c,c = _TIFFBuiltinCODECS)<SUB>200</SUB>> ]
+"2119" [label = <(IDENTIFIER,_TIFFBuiltinCODECS,c = _TIFFBuiltinCODECS)<SUB>200</SUB>> ]
+"2120" [label = <(&lt;operator&gt;.indirectFieldAccess,c-&gt;name)<SUB>200</SUB>> ]
+"2121" [label = <(IDENTIFIER,c,for (c = _TIFFBuiltinCODECS;c-&gt;name;c++))<SUB>200</SUB>> ]
+"2122" [label = <(FIELD_IDENTIFIER,name,name)<SUB>200</SUB>> ]
+"2123" [label = <(&lt;operator&gt;.postIncrement,c++)<SUB>200</SUB>> ]
+"2124" [label = <(IDENTIFIER,c,c++)<SUB>200</SUB>> ]
+"2125" [label = <(CONTROL_STRUCTURE,if (c-&gt;scheme == scheme),if (c-&gt;scheme == scheme))<SUB>201</SUB>> ]
+"2126" [label = <(&lt;operator&gt;.equals,c-&gt;scheme == scheme)<SUB>201</SUB>> ]
+"2127" [label = <(&lt;operator&gt;.indirectFieldAccess,c-&gt;scheme)<SUB>201</SUB>> ]
+"2128" [label = <(IDENTIFIER,c,c-&gt;scheme == scheme)<SUB>201</SUB>> ]
+"2129" [label = <(FIELD_IDENTIFIER,scheme,scheme)<SUB>201</SUB>> ]
+"2130" [label = <(IDENTIFIER,scheme,c-&gt;scheme == scheme)<SUB>201</SUB>> ]
+"2131" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>202</SUB>> ]
+"2132" [label = <(RETURN,return (c);,return (c);)<SUB>202</SUB>> ]
+"2133" [label = <(IDENTIFIER,c,return (c);)<SUB>202</SUB>> ]
+"2134" [label = <(RETURN,return ((const TIFFCodec *)0);,return ((const TIFFCodec *)0);)<SUB>203</SUB>> ]
+"2135" [label = <(&lt;operator&gt;.cast,(const TIFFCodec *)0)<SUB>203</SUB>> ]
+"2136" [label = <(UNKNOWN,const TIFFCodec *,const TIFFCodec *)<SUB>203</SUB>> ]
+"2137" [label = <(LITERAL,0,(const TIFFCodec *)0)<SUB>203</SUB>> ]
+"2138" [label = <(METHOD_RETURN,TIFFCodec)<SUB>192</SUB>> ]
+  "2084" -> "2085" 
+  "2084" -> "2086" 
+  "2084" -> "2138" 
+  "2086" -> "2087" 
+  "2086" -> "2088" 
+  "2086" -> "2089" 
+  "2086" -> "2115" 
+  "2086" -> "2134" 
+  "2089" -> "2090" 
+  "2089" -> "2094" 
+  "2089" -> "2095" 
+  "2089" -> "2100" 
+  "2090" -> "2091" 
+  "2091" -> "2092" 
+  "2091" -> "2093" 
+  "2095" -> "2096" 
+  "2095" -> "2097" 
+  "2097" -> "2098" 
+  "2097" -> "2099" 
+  "2100" -> "2101" 
+  "2100" -> "2108" 
+  "2101" -> "2102" 
+  "2101" -> "2107" 
+  "2102" -> "2103" 
+  "2102" -> "2106" 
+  "2103" -> "2104" 
+  "2103" -> "2105" 
+  "2108" -> "2109" 
+  "2109" -> "2110" 
+  "2110" -> "2111" 
+  "2110" -> "2112" 
+  "2112" -> "2113" 
+  "2112" -> "2114" 
+  "2115" -> "2116" 
+  "2115" -> "2120" 
+  "2115" -> "2123" 
+  "2115" -> "2125" 
+  "2116" -> "2117" 
+  "2117" -> "2118" 
+  "2117" -> "2119" 
+  "2120" -> "2121" 
+  "2120" -> "2122" 
+  "2123" -> "2124" 
+  "2125" -> "2126" 
+  "2125" -> "2131" 
+  "2126" -> "2127" 
+  "2126" -> "2130" 
+  "2127" -> "2128" 
+  "2127" -> "2129" 
+  "2131" -> "2132" 
+  "2132" -> "2133" 
+  "2134" -> "2135" 
+  "2135" -> "2136" 
+  "2135" -> "2137" 
+}

@@ -1,0 +1,14 @@
+digraph "getloadavg" {  
+"21870" [label = <(METHOD,getloadavg)<SUB>1003</SUB>> ]
+"21871" [label = <(PARAM,double __loadavg[])<SUB>1003</SUB>> ]
+"21872" [label = <(PARAM,int __nelem)<SUB>1003</SUB>> ]
+"21873" [label = <(METHOD_RETURN,int)<SUB>1003</SUB>> ]
+  "21870" -> "21871"  [ label = "AST: "] 
+  "21870" -> "21872"  [ label = "AST: "] 
+  "21870" -> "21873"  [ label = "AST: "] 
+  "21870" -> "21873"  [ label = "CFG: "] 
+  "21871" -> "21873"  [ label = "DDG: __loadavg"] 
+  "21872" -> "21873"  [ label = "DDG: __nelem"] 
+  "21870" -> "21871"  [ label = "DDG: "] 
+  "21870" -> "21872"  [ label = "DDG: "] 
+}

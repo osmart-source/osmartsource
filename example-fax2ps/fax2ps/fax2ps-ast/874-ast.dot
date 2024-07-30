@@ -1,0 +1,41 @@
+digraph "TIFFGetField" {  
+"43155" [label = <(METHOD,TIFFGetField)<SUB>1582</SUB>> ]
+"43156" [label = <(PARAM,TIFF *tif)<SUB>1582</SUB>> ]
+"43157" [label = <(PARAM,uint32_t tag...)<SUB>1582</SUB>> ]
+"43158" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1583</SUB>> ]
+"43159" [label = <(LOCAL,int status: int)<SUB>1584</SUB>> ]
+"43160" [label = <(LOCAL,va_list ap: va_list)<SUB>1585</SUB>> ]
+"43161" [label = <(va_start,va_start(ap, tag))<SUB>1587</SUB>> ]
+"43162" [label = <(IDENTIFIER,ap,va_start(ap, tag))<SUB>1587</SUB>> ]
+"43163" [label = <(IDENTIFIER,tag,va_start(ap, tag))<SUB>1587</SUB>> ]
+"43164" [label = <(&lt;operator&gt;.assignment,status = TIFFVGetField(tif, tag, ap))<SUB>1588</SUB>> ]
+"43165" [label = <(IDENTIFIER,status,status = TIFFVGetField(tif, tag, ap))<SUB>1588</SUB>> ]
+"43166" [label = <(TIFFVGetField,TIFFVGetField(tif, tag, ap))<SUB>1588</SUB>> ]
+"43167" [label = <(IDENTIFIER,tif,TIFFVGetField(tif, tag, ap))<SUB>1588</SUB>> ]
+"43168" [label = <(IDENTIFIER,tag,TIFFVGetField(tif, tag, ap))<SUB>1588</SUB>> ]
+"43169" [label = <(IDENTIFIER,ap,TIFFVGetField(tif, tag, ap))<SUB>1588</SUB>> ]
+"43170" [label = <(va_end,va_end(ap))<SUB>1589</SUB>> ]
+"43171" [label = <(IDENTIFIER,ap,va_end(ap))<SUB>1589</SUB>> ]
+"43172" [label = <(RETURN,return (status);,return (status);)<SUB>1590</SUB>> ]
+"43173" [label = <(IDENTIFIER,status,return (status);)<SUB>1590</SUB>> ]
+"43174" [label = <(METHOD_RETURN,int)<SUB>1582</SUB>> ]
+  "43155" -> "43156" 
+  "43155" -> "43157" 
+  "43155" -> "43158" 
+  "43155" -> "43174" 
+  "43158" -> "43159" 
+  "43158" -> "43160" 
+  "43158" -> "43161" 
+  "43158" -> "43164" 
+  "43158" -> "43170" 
+  "43158" -> "43172" 
+  "43161" -> "43162" 
+  "43161" -> "43163" 
+  "43164" -> "43165" 
+  "43164" -> "43166" 
+  "43166" -> "43167" 
+  "43166" -> "43168" 
+  "43166" -> "43169" 
+  "43170" -> "43171" 
+  "43172" -> "43173" 
+}

@@ -1,0 +1,21 @@
+digraph "swabHorAcc32" {  
+"37009" [label = <(&lt;operator&gt;.assignment,*wp = (uint32_t *)cp0)<SUB>440</SUB>> ]
+"37015" [label = <(&lt;operator&gt;.assignment,wc = cc / 4)<SUB>441</SUB>> ]
+"37020" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(wp, wc))<SUB>443</SUB>> ]
+"37023" [label = <(RETURN,return horAcc32(tif, cp0, cc);,return horAcc32(tif, cp0, cc);)<SUB>444</SUB>> ]
+"37011" [label = <(&lt;operator&gt;.cast,(uint32_t *)cp0)<SUB>440</SUB>> ]
+"37017" [label = <(&lt;operator&gt;.division,cc / 4)<SUB>441</SUB>> ]
+"37024" [label = <(horAcc32,horAcc32(tif, cp0, cc))<SUB>444</SUB>> ]
+"37012" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>440</SUB>> ]
+"37003" [label = <(METHOD,swabHorAcc32)<SUB>438</SUB>> ]
+"37028" [label = <(METHOD_RETURN,int)<SUB>438</SUB>> ]
+  "37009" -> "37017" 
+  "37015" -> "37020" 
+  "37020" -> "37024" 
+  "37023" -> "37028" 
+  "37011" -> "37009" 
+  "37017" -> "37015" 
+  "37024" -> "37023" 
+  "37012" -> "37011" 
+  "37003" -> "37012" 
+}

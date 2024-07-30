@@ -1,0 +1,14 @@
+digraph "realpath" {  
+"33346" [label = <(METHOD,realpath)<SUB>800</SUB>> ]
+"33347" [label = <(PARAM,const char *__restrict __name)<SUB>800</SUB>> ]
+"33348" [label = <(PARAM,char *__restrict __resolved)<SUB>801</SUB>> ]
+"33349" [label = <(METHOD_RETURN,char*)<SUB>800</SUB>> ]
+  "33346" -> "33347"  [ label = "AST: "] 
+  "33346" -> "33348"  [ label = "AST: "] 
+  "33346" -> "33349"  [ label = "AST: "] 
+  "33346" -> "33349"  [ label = "CFG: "] 
+  "33347" -> "33349"  [ label = "DDG: __name"] 
+  "33348" -> "33349"  [ label = "DDG: __resolved"] 
+  "33346" -> "33347"  [ label = "DDG: "] 
+  "33346" -> "33348"  [ label = "DDG: "] 
+}

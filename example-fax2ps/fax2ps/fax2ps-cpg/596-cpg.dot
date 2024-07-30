@@ -1,0 +1,18 @@
+digraph "reallocarray" {  
+"21802" [label = <(METHOD,reallocarray)<SUB>559</SUB>> ]
+"21803" [label = <(PARAM,void *__ptr)<SUB>559</SUB>> ]
+"21804" [label = <(PARAM,size_t __nmemb)<SUB>559</SUB>> ]
+"21805" [label = <(PARAM,size_t __size)<SUB>559</SUB>> ]
+"21806" [label = <(METHOD_RETURN,void*)<SUB>559</SUB>> ]
+  "21802" -> "21803"  [ label = "AST: "] 
+  "21802" -> "21804"  [ label = "AST: "] 
+  "21802" -> "21805"  [ label = "AST: "] 
+  "21802" -> "21806"  [ label = "AST: "] 
+  "21802" -> "21806"  [ label = "CFG: "] 
+  "21803" -> "21806"  [ label = "DDG: __ptr"] 
+  "21804" -> "21806"  [ label = "DDG: __nmemb"] 
+  "21805" -> "21806"  [ label = "DDG: __size"] 
+  "21802" -> "21803"  [ label = "DDG: "] 
+  "21802" -> "21804"  [ label = "DDG: "] 
+  "21802" -> "21805"  [ label = "DDG: "] 
+}

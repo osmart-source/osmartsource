@@ -1,0 +1,112 @@
+digraph "TIFFOpenExt" {  
+"33989" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFOpen&quot;)<SUB>227</SUB>> ]
+"33995" [label = <(&lt;operator&gt;.assignment,m = _TIFFgetMode(opts, NULL, mode, module))<SUB>231</SUB>> ]
+"34016" [label = <(&lt;operator&gt;.assignment,fd = open(name, m, 0666))<SUB>240</SUB>> ]
+"34076" [label = <(&lt;operator&gt;.assignment,tif = TIFFFdOpenExt((int)fd, name, mode, opts))<SUB>255</SUB>> ]
+"34091" [label = <(RETURN,return tif;,return tif;)<SUB>258</SUB>> ]
+"33997" [label = <(_TIFFgetMode,_TIFFgetMode(opts, NULL, mode, module))<SUB>231</SUB>> ]
+"34007" [label = <(&lt;operator&gt;.equals,m == -1)<SUB>232</SUB>> ]
+"34018" [label = <(open,open(name, m, 0666))<SUB>240</SUB>> ]
+"34023" [label = <(&lt;operator&gt;.lessThan,fd &lt; 0)<SUB>241</SUB>> ]
+"34078" [label = <(TIFFFdOpenExt,TIFFFdOpenExt((int)fd, name, mode, opts))<SUB>255</SUB>> ]
+"34086" [label = <(&lt;operator&gt;.logicalNot,!tif)<SUB>256</SUB>> ]
+"33999" [label = <(NULL,NULL)<SUB>231</SUB>> ]
+"34009" [label = <(&lt;operator&gt;.minus,-1)<SUB>232</SUB>> ]
+"34012" [label = <(RETURN,return ((TIFF *)0);,return ((TIFF *)0);)<SUB>233</SUB>> ]
+"34072" [label = <(RETURN,return ((TIFF *)0);,return ((TIFF *)0);)<SUB>252</SUB>> ]
+"34079" [label = <(&lt;operator&gt;.cast,(int)fd)<SUB>255</SUB>> ]
+"34089" [label = <(close,close(fd))<SUB>257</SUB>> ]
+"34013" [label = <(&lt;operator&gt;.cast,(TIFF *)0)<SUB>233</SUB>> ]
+"34028" [label = <(&lt;operator&gt;.logicalAnd,(*__errno_location()) &gt; 0 &amp;&amp; strerror((*__errno_location())) != ((void *)0))<SUB>243</SUB>> ]
+"34073" [label = <(&lt;operator&gt;.cast,(TIFF *)0)<SUB>252</SUB>> ]
+"34080" [label = <(UNKNOWN,int,int)<SUB>255</SUB>> ]
+"34001" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>231</SUB>> ]
+"34014" [label = <(UNKNOWN,TIFF *,TIFF *)<SUB>233</SUB>> ]
+"34029" [label = <(&lt;operator&gt;.greaterThan,(*__errno_location()) &gt; 0)<SUB>243</SUB>> ]
+"34033" [label = <(&lt;operator&gt;.notEquals,strerror(errno) != NULL)<SUB>243</SUB>> ]
+"34045" [label = <(_TIFFErrorEarly,_TIFFErrorEarly(opts, NULL, module, &quot;%s: %s&quot;, name,\012                            strerror(errno)))<SUB>245</SUB>> ]
+"34074" [label = <(UNKNOWN,TIFF *,TIFF *)<SUB>252</SUB>> ]
+"34002" [label = <(UNKNOWN,void *,void *)<SUB>231</SUB>> ]
+"34030" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>243</SUB>> ]
+"34034" [label = <(strerror,strerror(errno))<SUB>243</SUB>> ]
+"34039" [label = <(NULL,NULL)<SUB>243</SUB>> ]
+"34047" [label = <(NULL,NULL)<SUB>245</SUB>> ]
+"34055" [label = <(strerror,strerror(errno))<SUB>246</SUB>> ]
+"34062" [label = <(_TIFFErrorEarly,_TIFFErrorEarly(opts, NULL, module, &quot;%s: Cannot open&quot;, name))<SUB>250</SUB>> ]
+"34031" [label = <(__errno_location,__errno_location())<SUB>243</SUB>> ]
+"34035" [label = <(errno,errno)<SUB>243</SUB>> ]
+"34056" [label = <(errno,errno)<SUB>246</SUB>> ]
+"34064" [label = <(NULL,NULL)<SUB>250</SUB>> ]
+"34041" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>243</SUB>> ]
+"34049" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>245</SUB>> ]
+"34037" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>243</SUB>> ]
+"34042" [label = <(UNKNOWN,void *,void *)<SUB>243</SUB>> ]
+"34050" [label = <(UNKNOWN,void *,void *)<SUB>245</SUB>> ]
+"34058" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>246</SUB>> ]
+"34066" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>250</SUB>> ]
+"34038" [label = <(__errno_location,__errno_location())<SUB>243</SUB>> ]
+"34059" [label = <(__errno_location,__errno_location())<SUB>246</SUB>> ]
+"34067" [label = <(UNKNOWN,void *,void *)<SUB>250</SUB>> ]
+"33983" [label = <(METHOD,TIFFOpenExt)<SUB>225</SUB>> ]
+"34093" [label = <(METHOD_RETURN,TIFF)<SUB>225</SUB>> ]
+  "33989" -> "33999" 
+  "33995" -> "34009" 
+  "34016" -> "34023" 
+  "34076" -> "34086" 
+  "34091" -> "34093" 
+  "33997" -> "33995" 
+  "34007" -> "34014" 
+  "34007" -> "34018" 
+  "34018" -> "34016" 
+  "34023" -> "34031" 
+  "34023" -> "34080" 
+  "34078" -> "34076" 
+  "34086" -> "34089" 
+  "34086" -> "34091" 
+  "33999" -> "34002" 
+  "33999" -> "33997" 
+  "34009" -> "34007" 
+  "34012" -> "34093" 
+  "34072" -> "34093" 
+  "34079" -> "34078" 
+  "34089" -> "34091" 
+  "34013" -> "34012" 
+  "34028" -> "34047" 
+  "34028" -> "34064" 
+  "34073" -> "34072" 
+  "34080" -> "34079" 
+  "34001" -> "33997" 
+  "34014" -> "34013" 
+  "34029" -> "34035" 
+  "34029" -> "34028" 
+  "34033" -> "34028" 
+  "34045" -> "34074" 
+  "34074" -> "34073" 
+  "34002" -> "34001" 
+  "34030" -> "34029" 
+  "34034" -> "34039" 
+  "34039" -> "34042" 
+  "34039" -> "34033" 
+  "34047" -> "34050" 
+  "34047" -> "34056" 
+  "34055" -> "34045" 
+  "34062" -> "34074" 
+  "34031" -> "34030" 
+  "34035" -> "34038" 
+  "34035" -> "34034" 
+  "34056" -> "34059" 
+  "34056" -> "34055" 
+  "34064" -> "34067" 
+  "34064" -> "34062" 
+  "34041" -> "34033" 
+  "34049" -> "34056" 
+  "34037" -> "34034" 
+  "34042" -> "34041" 
+  "34050" -> "34049" 
+  "34058" -> "34055" 
+  "34066" -> "34062" 
+  "34038" -> "34037" 
+  "34059" -> "34058" 
+  "34067" -> "34066" 
+  "33983" -> "33989" 
+}

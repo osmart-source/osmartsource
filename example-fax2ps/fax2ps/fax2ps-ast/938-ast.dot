@@ -1,0 +1,137 @@
+digraph "TIFFReadRGBAImageOriented" {  
+"46853" [label = <(METHOD,TIFFReadRGBAImageOriented)<SUB>610</SUB>> ]
+"46854" [label = <(PARAM,TIFF *tif)<SUB>610</SUB>> ]
+"46855" [label = <(PARAM,uint32_t rwidth)<SUB>610</SUB>> ]
+"46856" [label = <(PARAM,uint32_t rheight)<SUB>610</SUB>> ]
+"46857" [label = <(PARAM,uint32_t *raster)<SUB>611</SUB>> ]
+"46858" [label = <(PARAM,int orientation)<SUB>611</SUB>> ]
+"46859" [label = <(PARAM,int stop)<SUB>611</SUB>> ]
+"46860" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>612</SUB>> ]
+"46861" [label = <(LOCAL,char[1024] emsg: char[1024])<SUB>613</SUB>> ]
+"46862" [label = <(&lt;operator&gt;.assignment,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>613</SUB>> ]
+"46863" [label = <(IDENTIFIER,emsg,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>613</SUB>> ]
+"46864" [label = <(LITERAL,&quot;&quot;,emsg[EMSG_BUF_SIZE] = &quot;&quot;)<SUB>613</SUB>> ]
+"46865" [label = <(LOCAL,TIFFRGBAImage img: TIFFRGBAImage)<SUB>614</SUB>> ]
+"46866" [label = <(LOCAL,int ok: int)<SUB>615</SUB>> ]
+"46867" [label = <(CONTROL_STRUCTURE,if (TIFFRGBAImageOK(tif, emsg) &amp;&amp; TIFFRGBAImageBegin(&amp;img, tif, stop, emsg)),if (TIFFRGBAImageOK(tif, emsg) &amp;&amp; TIFFRGBAImageBegin(&amp;img, tif, stop, emsg)))<SUB>617</SUB>> ]
+"46868" [label = <(&lt;operator&gt;.logicalAnd,TIFFRGBAImageOK(tif, emsg) &amp;&amp; TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46869" [label = <(TIFFRGBAImageOK,TIFFRGBAImageOK(tif, emsg))<SUB>617</SUB>> ]
+"46870" [label = <(IDENTIFIER,tif,TIFFRGBAImageOK(tif, emsg))<SUB>617</SUB>> ]
+"46871" [label = <(IDENTIFIER,emsg,TIFFRGBAImageOK(tif, emsg))<SUB>617</SUB>> ]
+"46872" [label = <(TIFFRGBAImageBegin,TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46873" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>617</SUB>> ]
+"46874" [label = <(IDENTIFIER,img,TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46875" [label = <(IDENTIFIER,tif,TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46876" [label = <(IDENTIFIER,stop,TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46877" [label = <(IDENTIFIER,emsg,TIFFRGBAImageBegin(&amp;img, tif, stop, emsg))<SUB>617</SUB>> ]
+"46878" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>618</SUB>> ]
+"46879" [label = <(&lt;operator&gt;.assignment,img.req_orientation = (uint16_t)orientation)<SUB>619</SUB>> ]
+"46880" [label = <(&lt;operator&gt;.fieldAccess,img.req_orientation)<SUB>619</SUB>> ]
+"46881" [label = <(IDENTIFIER,img,img.req_orientation = (uint16_t)orientation)<SUB>619</SUB>> ]
+"46882" [label = <(FIELD_IDENTIFIER,req_orientation,req_orientation)<SUB>619</SUB>> ]
+"46883" [label = <(&lt;operator&gt;.cast,(uint16_t)orientation)<SUB>619</SUB>> ]
+"46884" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>619</SUB>> ]
+"46885" [label = <(IDENTIFIER,orientation,(uint16_t)orientation)<SUB>619</SUB>> ]
+"46886" [label = <(&lt;operator&gt;.assignment,ok = TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>621</SUB>> ]
+"46887" [label = <(IDENTIFIER,ok,ok = TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>621</SUB>> ]
+"46888" [label = <(TIFFRGBAImageGet,TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>621</SUB>> ]
+"46889" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>621</SUB>> ]
+"46890" [label = <(IDENTIFIER,img,TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>621</SUB>> ]
+"46891" [label = <(&lt;operator&gt;.addition,raster + (rheight - img.height) * rwidth)<SUB>621</SUB>> ]
+"46892" [label = <(IDENTIFIER,raster,raster + (rheight - img.height) * rwidth)<SUB>621</SUB>> ]
+"46893" [label = <(&lt;operator&gt;.multiplication,(rheight - img.height) * rwidth)<SUB>621</SUB>> ]
+"46894" [label = <(&lt;operator&gt;.subtraction,rheight - img.height)<SUB>621</SUB>> ]
+"46895" [label = <(IDENTIFIER,rheight,rheight - img.height)<SUB>621</SUB>> ]
+"46896" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>621</SUB>> ]
+"46897" [label = <(IDENTIFIER,img,rheight - img.height)<SUB>621</SUB>> ]
+"46898" [label = <(FIELD_IDENTIFIER,height,height)<SUB>621</SUB>> ]
+"46899" [label = <(IDENTIFIER,rwidth,(rheight - img.height) * rwidth)<SUB>621</SUB>> ]
+"46900" [label = <(IDENTIFIER,rwidth,TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>622</SUB>> ]
+"46901" [label = <(&lt;operator&gt;.fieldAccess,img.height)<SUB>622</SUB>> ]
+"46902" [label = <(IDENTIFIER,img,TIFFRGBAImageGet(&amp;img, raster + (rheight - img.height) * rwidth,\012                              rwidth, img.height))<SUB>622</SUB>> ]
+"46903" [label = <(FIELD_IDENTIFIER,height,height)<SUB>622</SUB>> ]
+"46904" [label = <(TIFFRGBAImageEnd,TIFFRGBAImageEnd(&amp;img))<SUB>623</SUB>> ]
+"46905" [label = <(&lt;operator&gt;.addressOf,&amp;img)<SUB>623</SUB>> ]
+"46906" [label = <(IDENTIFIER,img,TIFFRGBAImageEnd(&amp;img))<SUB>623</SUB>> ]
+"46907" [label = <(CONTROL_STRUCTURE,else,else)<SUB>626</SUB>> ]
+"46908" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>626</SUB>> ]
+"46909" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>627</SUB>> ]
+"46910" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>627</SUB>> ]
+"46911" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>627</SUB>> ]
+"46912" [label = <(IDENTIFIER,tif,TIFFFileName(tif))<SUB>627</SUB>> ]
+"46913" [label = <(LITERAL,&quot;%s&quot;,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>627</SUB>> ]
+"46914" [label = <(IDENTIFIER,emsg,TIFFErrorExtR(tif, TIFFFileName(tif), &quot;%s&quot;, emsg))<SUB>627</SUB>> ]
+"46915" [label = <(&lt;operator&gt;.assignment,ok = 0)<SUB>628</SUB>> ]
+"46916" [label = <(IDENTIFIER,ok,ok = 0)<SUB>628</SUB>> ]
+"46917" [label = <(LITERAL,0,ok = 0)<SUB>628</SUB>> ]
+"46918" [label = <(RETURN,return (ok);,return (ok);)<SUB>630</SUB>> ]
+"46919" [label = <(IDENTIFIER,ok,return (ok);)<SUB>630</SUB>> ]
+"46920" [label = <(METHOD_RETURN,int)<SUB>610</SUB>> ]
+  "46853" -> "46854" 
+  "46853" -> "46855" 
+  "46853" -> "46856" 
+  "46853" -> "46857" 
+  "46853" -> "46858" 
+  "46853" -> "46859" 
+  "46853" -> "46860" 
+  "46853" -> "46920" 
+  "46860" -> "46861" 
+  "46860" -> "46862" 
+  "46860" -> "46865" 
+  "46860" -> "46866" 
+  "46860" -> "46867" 
+  "46860" -> "46918" 
+  "46862" -> "46863" 
+  "46862" -> "46864" 
+  "46867" -> "46868" 
+  "46867" -> "46878" 
+  "46867" -> "46907" 
+  "46868" -> "46869" 
+  "46868" -> "46872" 
+  "46869" -> "46870" 
+  "46869" -> "46871" 
+  "46872" -> "46873" 
+  "46872" -> "46875" 
+  "46872" -> "46876" 
+  "46872" -> "46877" 
+  "46873" -> "46874" 
+  "46878" -> "46879" 
+  "46878" -> "46886" 
+  "46878" -> "46904" 
+  "46879" -> "46880" 
+  "46879" -> "46883" 
+  "46880" -> "46881" 
+  "46880" -> "46882" 
+  "46883" -> "46884" 
+  "46883" -> "46885" 
+  "46886" -> "46887" 
+  "46886" -> "46888" 
+  "46888" -> "46889" 
+  "46888" -> "46891" 
+  "46888" -> "46900" 
+  "46888" -> "46901" 
+  "46889" -> "46890" 
+  "46891" -> "46892" 
+  "46891" -> "46893" 
+  "46893" -> "46894" 
+  "46893" -> "46899" 
+  "46894" -> "46895" 
+  "46894" -> "46896" 
+  "46896" -> "46897" 
+  "46896" -> "46898" 
+  "46901" -> "46902" 
+  "46901" -> "46903" 
+  "46904" -> "46905" 
+  "46905" -> "46906" 
+  "46907" -> "46908" 
+  "46908" -> "46909" 
+  "46908" -> "46915" 
+  "46909" -> "46910" 
+  "46909" -> "46911" 
+  "46909" -> "46913" 
+  "46909" -> "46914" 
+  "46911" -> "46912" 
+  "46915" -> "46916" 
+  "46915" -> "46917" 
+  "46918" -> "46919" 
+}

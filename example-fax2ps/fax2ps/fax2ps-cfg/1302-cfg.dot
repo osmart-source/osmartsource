@@ -1,0 +1,37 @@
+digraph "hashFuncOffsetToNumber" {  
+"91651" [label = <(&lt;operator&gt;.assignment,*offsetAndDirNumber =\012        (const TIFFOffsetAndDirNumber *)elt)<SUB>5290</SUB>> ]
+"91657" [label = <(&lt;operator&gt;.assignment,hash = (uint32_t)(offsetAndDirNumber-&gt;offset &gt;&gt; 32) ^\012                          ((uint32_t)offsetAndDirNumber-&gt;offset &amp; 0xFFFFFFFFU))<SUB>5292</SUB>> ]
+"91674" [label = <(RETURN,return hash;,return hash;)<SUB>5294</SUB>> ]
+"91653" [label = <(&lt;operator&gt;.cast,(const TIFFOffsetAndDirNumber *)elt)<SUB>5291</SUB>> ]
+"91659" [label = <(&lt;operator&gt;.xor,(uint32_t)(offsetAndDirNumber-&gt;offset &gt;&gt; 32) ^\012                          ((uint32_t)offsetAndDirNumber-&gt;offset &amp; 0xFFFFFFFFU))<SUB>5292</SUB>> ]
+"91654" [label = <(UNKNOWN,const TIFFOffsetAndDirNumber *,const TIFFOffsetAndDirNumber *)<SUB>5291</SUB>> ]
+"91660" [label = <(&lt;operator&gt;.cast,(uint32_t)(offsetAndDirNumber-&gt;offset &gt;&gt; 32))<SUB>5292</SUB>> ]
+"91667" [label = <(&lt;operator&gt;.and,(uint32_t)offsetAndDirNumber-&gt;offset &amp; 0xFFFFFFFFU)<SUB>5293</SUB>> ]
+"91661" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>5292</SUB>> ]
+"91662" [label = <(&lt;operator&gt;.arithmeticShiftRight,offsetAndDirNumber-&gt;offset &gt;&gt; 32)<SUB>5292</SUB>> ]
+"91668" [label = <(&lt;operator&gt;.cast,(uint32_t)offsetAndDirNumber-&gt;offset)<SUB>5293</SUB>> ]
+"91663" [label = <(&lt;operator&gt;.indirectFieldAccess,offsetAndDirNumber-&gt;offset)<SUB>5292</SUB>> ]
+"91669" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>5293</SUB>> ]
+"91670" [label = <(&lt;operator&gt;.indirectFieldAccess,offsetAndDirNumber-&gt;offset)<SUB>5293</SUB>> ]
+"91665" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5292</SUB>> ]
+"91672" [label = <(FIELD_IDENTIFIER,offset,offset)<SUB>5293</SUB>> ]
+"91647" [label = <(METHOD,hashFuncOffsetToNumber)<SUB>5288</SUB>> ]
+"91676" [label = <(METHOD_RETURN,unsigned long)<SUB>5288</SUB>> ]
+  "91651" -> "91661" 
+  "91657" -> "91674" 
+  "91674" -> "91676" 
+  "91653" -> "91651" 
+  "91659" -> "91657" 
+  "91654" -> "91653" 
+  "91660" -> "91669" 
+  "91667" -> "91659" 
+  "91661" -> "91665" 
+  "91662" -> "91660" 
+  "91668" -> "91667" 
+  "91663" -> "91662" 
+  "91669" -> "91672" 
+  "91670" -> "91668" 
+  "91665" -> "91663" 
+  "91672" -> "91670" 
+  "91647" -> "91654" 
+}

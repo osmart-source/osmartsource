@@ -1,0 +1,218 @@
+digraph "initYCbCrConversion" {  
+"60000" [label = <(&lt;operator&gt;.assignment,module[] = &quot;initYCbCrConversion&quot;)<SUB>2561</SUB>> ]
+"60071" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_YCBCRCOEFFICIENTS, &amp;luma))<SUB>2579</SUB>> ]
+"60078" [label = <(TIFFGetFieldDefaulted,TIFFGetFieldDefaulted(img-&gt;tif, TIFFTAG_REFERENCEBLACKWHITE,\012                          &amp;refBlackWhite))<SUB>2580</SUB>> ]
+"60181" [label = <(RETURN,return (1);,return (1);)<SUB>2607</SUB>> ]
+"60006" [label = <(&lt;operator&gt;.equals,img-&gt;ycbcr == NULL)<SUB>2565</SUB>> ]
+"60072" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2579</SUB>> ]
+"60076" [label = <(&lt;operator&gt;.addressOf,&amp;luma)<SUB>2579</SUB>> ]
+"60079" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2580</SUB>> ]
+"60083" [label = <(&lt;operator&gt;.addressOf,&amp;refBlackWhite)<SUB>2581</SUB>> ]
+"60086" [label = <(&lt;operator&gt;.logicalOr,luma[0] != luma[0] || luma[1] != luma[1] || luma[1] == 0.0 ||\012        luma[2] != luma[2])<SUB>2585</SUB>> ]
+"60125" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[4]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2593</SUB>> ]
+"60170" [label = <(&lt;operator&gt;.lessThan,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite) &lt; 0)<SUB>2605</SUB>> ]
+"60007" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2565</SUB>> ]
+"60010" [label = <(NULL,NULL)<SUB>2565</SUB>> ]
+"60016" [label = <(&lt;operator&gt;.assignment,img-&gt;ycbcr = (TIFFYCbCrToRGB *)_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60074" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2579</SUB>> ]
+"60081" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2580</SUB>> ]
+"60087" [label = <(&lt;operator&gt;.logicalOr,luma[0] != luma[0] || luma[1] != luma[1] || luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60108" [label = <(&lt;operator&gt;.notEquals,luma[2] != luma[2])<SUB>2586</SUB>> ]
+"60116" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for YCbCrCoefficients tag&quot;))<SUB>2588</SUB>> ]
+"60122" [label = <(RETURN,return (0);,return (0);)<SUB>2590</SUB>> ]
+"60126" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2593</SUB>> ]
+"60155" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2598</SUB>> ]
+"60161" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                      &quot;Invalid values for ReferenceBlackWhite tag&quot;))<SUB>2600</SUB>> ]
+"60167" [label = <(RETURN,return (0);,return (0);)<SUB>2602</SUB>> ]
+"60171" [label = <(TIFFYCbCrToRGBInit,TIFFYCbCrToRGBInit(img-&gt;ycbcr, luma, refBlackWhite))<SUB>2605</SUB>> ]
+"60179" [label = <(RETURN,return (0);,return (0);)<SUB>2606</SUB>> ]
+"60009" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2565</SUB>> ]
+"60017" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2567</SUB>> ]
+"60020" [label = <(&lt;operator&gt;.cast,(TIFFYCbCrToRGB *)_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60053" [label = <(&lt;operator&gt;.equals,img-&gt;ycbcr == NULL)<SUB>2571</SUB>> ]
+"60088" [label = <(&lt;operator&gt;.logicalOr,luma[0] != luma[0] || luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60103" [label = <(&lt;operator&gt;.equals,luma[1] == 0.0)<SUB>2585</SUB>> ]
+"60109" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[2])<SUB>2586</SUB>> ]
+"60112" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[2])<SUB>2586</SUB>> ]
+"60117" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2588</SUB>> ]
+"60127" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2593</SUB>> ]
+"60150" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2597</SUB>> ]
+"60156" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[5]))<SUB>2598</SUB>> ]
+"60162" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2600</SUB>> ]
+"60172" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2605</SUB>> ]
+"60012" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2565</SUB>> ]
+"60019" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2567</SUB>> ]
+"60021" [label = <(UNKNOWN,TIFFYCbCrToRGB *,TIFFYCbCrToRGB *)<SUB>2567</SUB>> ]
+"60022" [label = <(_TIFFmallocExt,_TIFFmallocExt(\012            img-&gt;tif, TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t)))<SUB>2567</SUB>> ]
+"60054" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2571</SUB>> ]
+"60057" [label = <(NULL,NULL)<SUB>2571</SUB>> ]
+"60063" [label = <(TIFFErrorExtR,TIFFErrorExtR(img-&gt;tif, module,\012                          &quot;No space for YCbCr-&gt;RGB conversion state&quot;))<SUB>2573</SUB>> ]
+"60069" [label = <(RETURN,return (0);,return (0);)<SUB>2575</SUB>> ]
+"60089" [label = <(&lt;operator&gt;.notEquals,luma[0] != luma[0])<SUB>2585</SUB>> ]
+"60096" [label = <(&lt;operator&gt;.notEquals,luma[1] != luma[1])<SUB>2585</SUB>> ]
+"60104" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[1])<SUB>2585</SUB>> ]
+"60119" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2588</SUB>> ]
+"60128" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2593</SUB>> ]
+"60145" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2596</SUB>> ]
+"60151" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[4]))<SUB>2597</SUB>> ]
+"60157" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[5])<SUB>2598</SUB>> ]
+"60164" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2600</SUB>> ]
+"60174" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2605</SUB>> ]
+"60013" [label = <(UNKNOWN,void *,void *)<SUB>2565</SUB>> ]
+"60023" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2568</SUB>> ]
+"60026" [label = <(&lt;operator&gt;.addition,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int) + 3 * 256 * sizeof(int32_t))<SUB>2568</SUB>> ]
+"60056" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2571</SUB>> ]
+"60064" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;tif)<SUB>2573</SUB>> ]
+"60090" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[0])<SUB>2585</SUB>> ]
+"60093" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[0])<SUB>2585</SUB>> ]
+"60097" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[1])<SUB>2585</SUB>> ]
+"60100" [label = <(&lt;operator&gt;.indirectIndexAccess,luma[1])<SUB>2585</SUB>> ]
+"60129" [label = <(&lt;operator&gt;.logicalOr,!isInRefBlackWhiteRange(refBlackWhite[0]) ||\012        !isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2593</SUB>> ]
+"60140" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2595</SUB>> ]
+"60146" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[3]))<SUB>2596</SUB>> ]
+"60152" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[4])<SUB>2597</SUB>> ]
+"60025" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2568</SUB>> ]
+"60027" [label = <(&lt;operator&gt;.addition,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue) +\012                          2 * 256 * sizeof(int))<SUB>2568</SUB>> ]
+"60046" [label = <(&lt;operator&gt;.multiplication,3 * 256 * sizeof(int32_t))<SUB>2570</SUB>> ]
+"60059" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>2571</SUB>> ]
+"60066" [label = <(FIELD_IDENTIFIER,tif,tif)<SUB>2573</SUB>> ]
+"60130" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[0]))<SUB>2593</SUB>> ]
+"60135" [label = <(&lt;operator&gt;.logicalNot,!isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2594</SUB>> ]
+"60141" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[2]))<SUB>2595</SUB>> ]
+"60147" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[3])<SUB>2596</SUB>> ]
+"60028" [label = <(&lt;operator&gt;.addition,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)) +\012                          4 * 256 * sizeof(TIFFRGBValue))<SUB>2568</SUB>> ]
+"60040" [label = <(&lt;operator&gt;.multiplication,2 * 256 * sizeof(int))<SUB>2570</SUB>> ]
+"60047" [label = <(&lt;operator&gt;.multiplication,3 * 256)<SUB>2570</SUB>> ]
+"60050" [label = <(&lt;operator&gt;.sizeOf,sizeof(int32_t))<SUB>2570</SUB>> ]
+"60060" [label = <(UNKNOWN,void *,void *)<SUB>2571</SUB>> ]
+"60131" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[0]))<SUB>2593</SUB>> ]
+"60136" [label = <(isInRefBlackWhiteRange,isInRefBlackWhiteRange(refBlackWhite[1]))<SUB>2594</SUB>> ]
+"60142" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[2])<SUB>2595</SUB>> ]
+"60029" [label = <(TIFFroundup_32,TIFFroundup_32(sizeof(TIFFYCbCrToRGB), sizeof(long)))<SUB>2568</SUB>> ]
+"60034" [label = <(&lt;operator&gt;.multiplication,4 * 256 * sizeof(TIFFRGBValue))<SUB>2569</SUB>> ]
+"60041" [label = <(&lt;operator&gt;.multiplication,2 * 256)<SUB>2570</SUB>> ]
+"60044" [label = <(&lt;operator&gt;.sizeOf,sizeof(int))<SUB>2570</SUB>> ]
+"60132" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[0])<SUB>2593</SUB>> ]
+"60137" [label = <(&lt;operator&gt;.indirectIndexAccess,refBlackWhite[1])<SUB>2594</SUB>> ]
+"60030" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFYCbCrToRGB))<SUB>2568</SUB>> ]
+"60032" [label = <(&lt;operator&gt;.sizeOf,sizeof(long))<SUB>2568</SUB>> ]
+"60035" [label = <(&lt;operator&gt;.multiplication,4 * 256)<SUB>2569</SUB>> ]
+"60038" [label = <(&lt;operator&gt;.sizeOf,sizeof(TIFFRGBValue))<SUB>2569</SUB>> ]
+"59996" [label = <(METHOD,initYCbCrConversion)<SUB>2559</SUB>> ]
+"60183" [label = <(METHOD_RETURN,int)<SUB>2559</SUB>> ]
+  "60000" -> "60009" 
+  "60071" -> "60081" 
+  "60078" -> "60090" 
+  "60181" -> "60183" 
+  "60006" -> "60019" 
+  "60006" -> "60074" 
+  "60072" -> "60076" 
+  "60076" -> "60071" 
+  "60079" -> "60083" 
+  "60083" -> "60078" 
+  "60086" -> "60119" 
+  "60086" -> "60132" 
+  "60125" -> "60164" 
+  "60125" -> "60174" 
+  "60170" -> "60179" 
+  "60170" -> "60181" 
+  "60007" -> "60010" 
+  "60010" -> "60013" 
+  "60010" -> "60006" 
+  "60016" -> "60056" 
+  "60074" -> "60072" 
+  "60081" -> "60079" 
+  "60087" -> "60086" 
+  "60087" -> "60109" 
+  "60108" -> "60086" 
+  "60116" -> "60122" 
+  "60122" -> "60183" 
+  "60126" -> "60125" 
+  "60126" -> "60157" 
+  "60155" -> "60125" 
+  "60161" -> "60167" 
+  "60167" -> "60183" 
+  "60171" -> "60170" 
+  "60179" -> "60183" 
+  "60009" -> "60007" 
+  "60017" -> "60021" 
+  "60020" -> "60016" 
+  "60053" -> "60066" 
+  "60053" -> "60074" 
+  "60088" -> "60087" 
+  "60088" -> "60104" 
+  "60103" -> "60087" 
+  "60109" -> "60112" 
+  "60112" -> "60108" 
+  "60117" -> "60116" 
+  "60127" -> "60126" 
+  "60127" -> "60152" 
+  "60150" -> "60126" 
+  "60156" -> "60155" 
+  "60162" -> "60161" 
+  "60172" -> "60171" 
+  "60012" -> "60006" 
+  "60019" -> "60017" 
+  "60021" -> "60025" 
+  "60022" -> "60020" 
+  "60054" -> "60057" 
+  "60057" -> "60060" 
+  "60057" -> "60053" 
+  "60063" -> "60069" 
+  "60069" -> "60183" 
+  "60089" -> "60088" 
+  "60089" -> "60097" 
+  "60096" -> "60088" 
+  "60104" -> "60103" 
+  "60119" -> "60117" 
+  "60128" -> "60127" 
+  "60128" -> "60147" 
+  "60145" -> "60127" 
+  "60151" -> "60150" 
+  "60157" -> "60156" 
+  "60164" -> "60162" 
+  "60174" -> "60172" 
+  "60013" -> "60012" 
+  "60023" -> "60030" 
+  "60026" -> "60022" 
+  "60056" -> "60054" 
+  "60064" -> "60063" 
+  "60090" -> "60093" 
+  "60093" -> "60089" 
+  "60097" -> "60100" 
+  "60100" -> "60096" 
+  "60129" -> "60128" 
+  "60129" -> "60142" 
+  "60140" -> "60128" 
+  "60146" -> "60145" 
+  "60152" -> "60151" 
+  "60025" -> "60023" 
+  "60027" -> "60047" 
+  "60046" -> "60026" 
+  "60059" -> "60053" 
+  "60066" -> "60064" 
+  "60130" -> "60129" 
+  "60130" -> "60137" 
+  "60135" -> "60129" 
+  "60141" -> "60140" 
+  "60147" -> "60146" 
+  "60028" -> "60041" 
+  "60040" -> "60027" 
+  "60047" -> "60050" 
+  "60050" -> "60046" 
+  "60060" -> "60059" 
+  "60131" -> "60130" 
+  "60136" -> "60135" 
+  "60142" -> "60141" 
+  "60029" -> "60035" 
+  "60034" -> "60028" 
+  "60041" -> "60044" 
+  "60044" -> "60040" 
+  "60132" -> "60131" 
+  "60137" -> "60136" 
+  "60030" -> "60032" 
+  "60032" -> "60029" 
+  "60035" -> "60038" 
+  "60038" -> "60034" 
+  "59996" -> "60000" 
+}

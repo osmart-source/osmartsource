@@ -1,0 +1,282 @@
+digraph "printTIF" {  
+"9814" [label = <(&lt;operator&gt;.assignment,scale = 1.0)<SUB>214</SUB>> ]
+"9820" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_IMAGELENGTH, &amp;h))<SUB>218</SUB>> ]
+"9827" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_IMAGEWIDTH, &amp;w))<SUB>219</SUB>> ]
+"9940" [label = <(printf,printf(&quot;%%!PS-Adobe-3.0\n&quot;))<SUB>247</SUB>> ]
+"9942" [label = <(printf,printf(&quot;%%%%Creator: fax2ps\n&quot;))<SUB>248</SUB>> ]
+"9944" [label = <(&lt;operator&gt;.assignment,creation_time = time(0))<SUB>252</SUB>> ]
+"9948" [label = <(printf,printf(&quot;%%%%CreationDate: %s&quot;, ctime(&amp;creation_time)))<SUB>253</SUB>> ]
+"9953" [label = <(printf,printf(&quot;%%%%Origin: 0 0\n&quot;))<SUB>254</SUB>> ]
+"9955" [label = <(printf,printf(&quot;%%%%BoundingBox: 0 0 %u %u\n&quot;, (int)(pageWidth * points),\012           (int)(pageHeight * points)))<SUB>255</SUB>> ]
+"9967" [label = <(printf,printf(&quot;%%%%Pages: (atend)\n&quot;))<SUB>257</SUB>> ]
+"9969" [label = <(printf,printf(&quot;%%%%EndComments\n&quot;))<SUB>258</SUB>> ]
+"9971" [label = <(printf,printf(&quot;%%%%BeginProlog\n&quot;))<SUB>259</SUB>> ]
+"9973" [label = <(emitFont,emitFont(stdout))<SUB>260</SUB>> ]
+"9975" [label = <(printf,printf(&quot;/d{bind def}def\n&quot;))<SUB>261</SUB>> ]
+"9977" [label = <(printf,printf(&quot;/m{0 exch moveto}d\n&quot;))<SUB>262</SUB>> ]
+"9979" [label = <(printf,printf(&quot;/s{show}d\n&quot;))<SUB>263</SUB>> ]
+"9981" [label = <(printf,printf(&quot;/p{showpage}d \n&quot;))<SUB>264</SUB>> ]
+"9983" [label = <(printf,printf(&quot;%%%%EndProlog\n&quot;))<SUB>265</SUB>> ]
+"9985" [label = <(printf,printf(&quot;%%%%Page: \&quot;%u\&quot; %u\n&quot;, pageNumber, pageNumber))<SUB>266</SUB>> ]
+"9989" [label = <(printf,printf(&quot;/$pageTop save def gsave\n&quot;))<SUB>267</SUB>> ]
+"10020" [label = <(printf,printf(&quot;%g %g translate\n&quot;, points * (pageWidth - scale * w / xres) * half,\012           points *\012               (scale * h / yres + (pageHeight - scale * h / yres) * half)))<SUB>272</SUB>> ]
+"10050" [label = <(printf,printf(&quot;%g %g scale\n&quot;, points / xres * scale, -points / yres * scale))<SUB>275</SUB>> ]
+"10063" [label = <(printf,printf(&quot;0 setgray\n&quot;))<SUB>276</SUB>> ]
+"10065" [label = <(TIFFSetField,TIFFSetField(tif, TIFFTAG_FAXFILLFUNC, printruns))<SUB>277</SUB>> ]
+"10071" [label = <(&lt;operator&gt;.assignment,ns = TIFFNumberOfStrips(tif))<SUB>278</SUB>> ]
+"10075" [label = <(&lt;operator&gt;.assignment,row = 0)<SUB>279</SUB>> ]
+"10104" [label = <(printf,printf(&quot;p\n&quot;))<SUB>282</SUB>> ]
+"10106" [label = <(printf,printf(&quot;grestore $pageTop restore\n&quot;))<SUB>283</SUB>> ]
+"10108" [label = <(&lt;operator&gt;.postIncrement,totalPages++)<SUB>284</SUB>> ]
+"9822" [label = <(TIFFTAG_IMAGELENGTH,TIFFTAG_IMAGELENGTH)<SUB>218</SUB>> ]
+"9825" [label = <(&lt;operator&gt;.addressOf,&amp;h)<SUB>218</SUB>> ]
+"9829" [label = <(TIFFTAG_IMAGEWIDTH,TIFFTAG_IMAGEWIDTH)<SUB>219</SUB>> ]
+"9832" [label = <(&lt;operator&gt;.addressOf,&amp;w)<SUB>219</SUB>> ]
+"9835" [label = <(&lt;operator&gt;.logicalOr,!TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compression) ||\012        compression &lt; COMPRESSION_CCITTRLE ||\012        compression &gt; COMPRESSION_CCITT_T6)<SUB>220</SUB>> ]
+"9858" [label = <(&lt;operator&gt;.logicalOr,!TIFFGetField(tif, TIFFTAG_XRESOLUTION, &amp;xres) || !xres)<SUB>224</SUB>> ]
+"9879" [label = <(&lt;operator&gt;.logicalOr,!TIFFGetField(tif, TIFFTAG_YRESOLUTION, &amp;yres) || !yres)<SUB>230</SUB>> ]
+"9900" [label = <(&lt;operator&gt;.logicalAnd,TIFFGetField(tif, TIFFTAG_RESOLUTIONUNIT, &amp;unit) &amp;&amp;\012        unit == RESUNIT_CENTIMETER)<SUB>236</SUB>> ]
+"9921" [label = <(&lt;operator&gt;.equals,pageWidth == 0)<SUB>242</SUB>> ]
+"9931" [label = <(&lt;operator&gt;.equals,pageHeight == 0)<SUB>244</SUB>> ]
+"9946" [label = <(time,time(0))<SUB>252</SUB>> ]
+"9950" [label = <(ctime,ctime(&amp;creation_time))<SUB>253</SUB>> ]
+"9957" [label = <(&lt;operator&gt;.cast,(int)(pageWidth * points))<SUB>255</SUB>> ]
+"9962" [label = <(&lt;operator&gt;.cast,(int)(pageHeight * points))<SUB>256</SUB>> ]
+"9992" [label = <(&lt;operator&gt;.logicalAnd,scaleToPage &amp;&amp; 1)<SUB>268</SUB>> ]
+"10022" [label = <(&lt;operator&gt;.multiplication,points * (pageWidth - scale * w / xres) * half)<SUB>272</SUB>> ]
+"10033" [label = <(&lt;operator&gt;.multiplication,points *\012               (scale * h / yres + (pageHeight - scale * h / yres) * half))<SUB>273</SUB>> ]
+"10052" [label = <(&lt;operator&gt;.multiplication,points / xres * scale)<SUB>275</SUB>> ]
+"10057" [label = <(&lt;operator&gt;.multiplication,-points / yres * scale)<SUB>275</SUB>> ]
+"10067" [label = <(TIFFTAG_FAXFILLFUNC,TIFFTAG_FAXFILLFUNC)<SUB>277</SUB>> ]
+"10073" [label = <(TIFFNumberOfStrips,TIFFNumberOfStrips(tif))<SUB>278</SUB>> ]
+"10083" [label = <(&lt;operator&gt;.lessThan,s &lt; ns)<SUB>280</SUB>> ]
+"10086" [label = <(&lt;operator&gt;.postIncrement,s++)<SUB>280</SUB>> ]
+"10088" [label = <(&lt;operator&gt;.cast,(void)TIFFReadEncodedStrip(tif, s, (tdata_t)NULL, (tsize_t)-1))<SUB>281</SUB>> ]
+"9836" [label = <(&lt;operator&gt;.logicalOr,!TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compression) ||\012        compression &lt; COMPRESSION_CCITTRLE)<SUB>220</SUB>> ]
+"9850" [label = <(&lt;operator&gt;.greaterThan,compression &gt; COMPRESSION_CCITT_T6)<SUB>222</SUB>> ]
+"9856" [label = <(RETURN,return;,return;)<SUB>223</SUB>> ]
+"9859" [label = <(&lt;operator&gt;.logicalNot,!TIFFGetField(tif, TIFFTAG_XRESOLUTION, &amp;xres))<SUB>224</SUB>> ]
+"9867" [label = <(&lt;operator&gt;.logicalNot,!xres)<SUB>224</SUB>> ]
+"9870" [label = <(TIFFWarning,TIFFWarning(TIFFFileName(tif), &quot;No x-resolution, assuming %g dpi&quot;,\012                    defxres))<SUB>226</SUB>> ]
+"9875" [label = <(&lt;operator&gt;.assignment,xres = defxres)<SUB>228</SUB>> ]
+"9880" [label = <(&lt;operator&gt;.logicalNot,!TIFFGetField(tif, TIFFTAG_YRESOLUTION, &amp;yres))<SUB>230</SUB>> ]
+"9888" [label = <(&lt;operator&gt;.logicalNot,!yres)<SUB>230</SUB>> ]
+"9891" [label = <(TIFFWarning,TIFFWarning(TIFFFileName(tif), &quot;No y-resolution, assuming %g lpi&quot;,\012                    defyres))<SUB>232</SUB>> ]
+"9896" [label = <(&lt;operator&gt;.assignment,yres = defyres)<SUB>234</SUB>> ]
+"9901" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_RESOLUTIONUNIT, &amp;unit))<SUB>236</SUB>> ]
+"9908" [label = <(&lt;operator&gt;.equals,unit == RESUNIT_CENTIMETER)<SUB>237</SUB>> ]
+"9914" [label = <(&lt;operator&gt;.assignmentMultiplication,xres *= 2.54F)<SUB>239</SUB>> ]
+"9917" [label = <(&lt;operator&gt;.assignmentMultiplication,yres *= 2.54F)<SUB>240</SUB>> ]
+"9925" [label = <(&lt;operator&gt;.assignment,pageWidth = w / xres)<SUB>243</SUB>> ]
+"9935" [label = <(&lt;operator&gt;.assignment,pageHeight = h / yres)<SUB>245</SUB>> ]
+"9951" [label = <(&lt;operator&gt;.addressOf,&amp;creation_time)<SUB>253</SUB>> ]
+"9958" [label = <(UNKNOWN,int,int)<SUB>255</SUB>> ]
+"9959" [label = <(&lt;operator&gt;.multiplication,pageWidth * points)<SUB>255</SUB>> ]
+"9963" [label = <(UNKNOWN,int,int)<SUB>256</SUB>> ]
+"9964" [label = <(&lt;operator&gt;.multiplication,pageHeight * points)<SUB>256</SUB>> ]
+"9996" [label = <(&lt;operator&gt;.assignment,scale = pageHeight / (h / yres) &lt; pageWidth / (w / xres)\012                    ? pageHeight / (h / yres)\012                    : pageWidth / (w / xres))<SUB>269</SUB>> ]
+"10023" [label = <(&lt;operator&gt;.multiplication,points * (pageWidth - scale * w / xres))<SUB>272</SUB>> ]
+"10035" [label = <(&lt;operator&gt;.addition,scale * h / yres + (pageHeight - scale * h / yres) * half)<SUB>274</SUB>> ]
+"10053" [label = <(&lt;operator&gt;.division,points / xres)<SUB>275</SUB>> ]
+"10058" [label = <(&lt;operator&gt;.division,-points / yres)<SUB>275</SUB>> ]
+"10080" [label = <(&lt;operator&gt;.assignment,s = 0)<SUB>280</SUB>> ]
+"10089" [label = <(UNKNOWN,void,void)<SUB>281</SUB>> ]
+"10090" [label = <(TIFFReadEncodedStrip,TIFFReadEncodedStrip(tif, s, (tdata_t)NULL, (tsize_t)-1))<SUB>281</SUB>> ]
+"9837" [label = <(&lt;operator&gt;.logicalNot,!TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compression))<SUB>220</SUB>> ]
+"9845" [label = <(&lt;operator&gt;.lessThan,compression &lt; COMPRESSION_CCITTRLE)<SUB>221</SUB>> ]
+"9852" [label = <(COMPRESSION_CCITT_T6,COMPRESSION_CCITT_T6)<SUB>222</SUB>> ]
+"9860" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_XRESOLUTION, &amp;xres))<SUB>224</SUB>> ]
+"9871" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>226</SUB>> ]
+"9881" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_YRESOLUTION, &amp;yres))<SUB>230</SUB>> ]
+"9892" [label = <(TIFFFileName,TIFFFileName(tif))<SUB>232</SUB>> ]
+"9903" [label = <(TIFFTAG_RESOLUTIONUNIT,TIFFTAG_RESOLUTIONUNIT)<SUB>236</SUB>> ]
+"9906" [label = <(&lt;operator&gt;.addressOf,&amp;unit)<SUB>236</SUB>> ]
+"9910" [label = <(RESUNIT_CENTIMETER,RESUNIT_CENTIMETER)<SUB>237</SUB>> ]
+"9927" [label = <(&lt;operator&gt;.division,w / xres)<SUB>243</SUB>> ]
+"9937" [label = <(&lt;operator&gt;.division,h / yres)<SUB>245</SUB>> ]
+"9998" [label = <(&lt;operator&gt;.conditional,pageHeight / (h / yres) &lt; pageWidth / (w / xres)\012                    ? pageHeight / (h / yres)\012                    : pageWidth / (w / xres))<SUB>269</SUB>> ]
+"10025" [label = <(&lt;operator&gt;.subtraction,pageWidth - scale * w / xres)<SUB>272</SUB>> ]
+"10036" [label = <(&lt;operator&gt;.division,scale * h / yres)<SUB>274</SUB>> ]
+"10041" [label = <(&lt;operator&gt;.multiplication,(pageHeight - scale * h / yres) * half)<SUB>274</SUB>> ]
+"10059" [label = <(&lt;operator&gt;.minus,-points)<SUB>275</SUB>> ]
+"10093" [label = <(&lt;operator&gt;.cast,(tdata_t)NULL)<SUB>281</SUB>> ]
+"10100" [label = <(&lt;operator&gt;.cast,(tsize_t)-1)<SUB>281</SUB>> ]
+"9838" [label = <(TIFFGetField,TIFFGetField(tif, TIFFTAG_COMPRESSION, &amp;compression))<SUB>220</SUB>> ]
+"9847" [label = <(COMPRESSION_CCITTRLE,COMPRESSION_CCITTRLE)<SUB>221</SUB>> ]
+"9862" [label = <(TIFFTAG_XRESOLUTION,TIFFTAG_XRESOLUTION)<SUB>224</SUB>> ]
+"9865" [label = <(&lt;operator&gt;.addressOf,&amp;xres)<SUB>224</SUB>> ]
+"9883" [label = <(TIFFTAG_YRESOLUTION,TIFFTAG_YRESOLUTION)<SUB>230</SUB>> ]
+"9886" [label = <(&lt;operator&gt;.addressOf,&amp;yres)<SUB>230</SUB>> ]
+"9999" [label = <(&lt;operator&gt;.lessThan,pageHeight / (h / yres) &lt; pageWidth / (w / xres))<SUB>269</SUB>> ]
+"10010" [label = <(&lt;operator&gt;.division,pageHeight / (h / yres))<SUB>270</SUB>> ]
+"10015" [label = <(&lt;operator&gt;.division,pageWidth / (w / xres))<SUB>271</SUB>> ]
+"10027" [label = <(&lt;operator&gt;.division,scale * w / xres)<SUB>272</SUB>> ]
+"10037" [label = <(&lt;operator&gt;.multiplication,scale * h)<SUB>274</SUB>> ]
+"10042" [label = <(&lt;operator&gt;.subtraction,pageHeight - scale * h / yres)<SUB>274</SUB>> ]
+"10094" [label = <(UNKNOWN,tdata_t,tdata_t)<SUB>281</SUB>> ]
+"10095" [label = <(NULL,NULL)<SUB>281</SUB>> ]
+"10101" [label = <(UNKNOWN,tsize_t,tsize_t)<SUB>281</SUB>> ]
+"10102" [label = <(&lt;operator&gt;.minus,-1)<SUB>281</SUB>> ]
+"9840" [label = <(TIFFTAG_COMPRESSION,TIFFTAG_COMPRESSION)<SUB>220</SUB>> ]
+"9843" [label = <(&lt;operator&gt;.addressOf,&amp;compression)<SUB>220</SUB>> ]
+"10000" [label = <(&lt;operator&gt;.division,pageHeight / (h / yres))<SUB>269</SUB>> ]
+"10005" [label = <(&lt;operator&gt;.division,pageWidth / (w / xres))<SUB>269</SUB>> ]
+"10012" [label = <(&lt;operator&gt;.division,h / yres)<SUB>270</SUB>> ]
+"10017" [label = <(&lt;operator&gt;.division,w / xres)<SUB>271</SUB>> ]
+"10028" [label = <(&lt;operator&gt;.multiplication,scale * w)<SUB>272</SUB>> ]
+"10044" [label = <(&lt;operator&gt;.division,scale * h / yres)<SUB>274</SUB>> ]
+"10002" [label = <(&lt;operator&gt;.division,h / yres)<SUB>269</SUB>> ]
+"10007" [label = <(&lt;operator&gt;.division,w / xres)<SUB>269</SUB>> ]
+"10045" [label = <(&lt;operator&gt;.multiplication,scale * h)<SUB>274</SUB>> ]
+"10097" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>281</SUB>> ]
+"10098" [label = <(UNKNOWN,void *,void *)<SUB>281</SUB>> ]
+"9803" [label = <(METHOD,printTIF)<SUB>210</SUB>> ]
+"10110" [label = <(METHOD_RETURN,void)<SUB>210</SUB>> ]
+  "9814" -> "9822" 
+  "9820" -> "9829" 
+  "9827" -> "9840" 
+  "9940" -> "9942" 
+  "9942" -> "9946" 
+  "9944" -> "9951" 
+  "9948" -> "9953" 
+  "9953" -> "9958" 
+  "9955" -> "9967" 
+  "9967" -> "9969" 
+  "9969" -> "9971" 
+  "9971" -> "9973" 
+  "9973" -> "9975" 
+  "9975" -> "9977" 
+  "9977" -> "9979" 
+  "9979" -> "9981" 
+  "9981" -> "9983" 
+  "9983" -> "9985" 
+  "9985" -> "9989" 
+  "9989" -> "9992" 
+  "10020" -> "10053" 
+  "10050" -> "10063" 
+  "10063" -> "10067" 
+  "10065" -> "10073" 
+  "10071" -> "10075" 
+  "10075" -> "10080" 
+  "10104" -> "10106" 
+  "10106" -> "10108" 
+  "10108" -> "10110" 
+  "9822" -> "9825" 
+  "9825" -> "9820" 
+  "9829" -> "9832" 
+  "9832" -> "9827" 
+  "9835" -> "9856" 
+  "9835" -> "9862" 
+  "9858" -> "9871" 
+  "9858" -> "9883" 
+  "9879" -> "9892" 
+  "9879" -> "9903" 
+  "9900" -> "9914" 
+  "9900" -> "9921" 
+  "9921" -> "9927" 
+  "9921" -> "9931" 
+  "9931" -> "9937" 
+  "9931" -> "9940" 
+  "9946" -> "9944" 
+  "9950" -> "9948" 
+  "9957" -> "9963" 
+  "9962" -> "9955" 
+  "9992" -> "10002" 
+  "9992" -> "10028" 
+  "10022" -> "10037" 
+  "10033" -> "10020" 
+  "10052" -> "10059" 
+  "10057" -> "10050" 
+  "10067" -> "10065" 
+  "10073" -> "10071" 
+  "10083" -> "10089" 
+  "10083" -> "10104" 
+  "10086" -> "10083" 
+  "10088" -> "10086" 
+  "9836" -> "9835" 
+  "9836" -> "9852" 
+  "9850" -> "9835" 
+  "9856" -> "10110" 
+  "9859" -> "9858" 
+  "9859" -> "9867" 
+  "9867" -> "9858" 
+  "9870" -> "9875" 
+  "9875" -> "9883" 
+  "9880" -> "9879" 
+  "9880" -> "9888" 
+  "9888" -> "9879" 
+  "9891" -> "9896" 
+  "9896" -> "9903" 
+  "9901" -> "9900" 
+  "9901" -> "9910" 
+  "9908" -> "9900" 
+  "9914" -> "9917" 
+  "9917" -> "9921" 
+  "9925" -> "9931" 
+  "9935" -> "9940" 
+  "9951" -> "9950" 
+  "9958" -> "9959" 
+  "9959" -> "9957" 
+  "9963" -> "9964" 
+  "9964" -> "9962" 
+  "9996" -> "10028" 
+  "10023" -> "10022" 
+  "10035" -> "10033" 
+  "10053" -> "10052" 
+  "10058" -> "10057" 
+  "10080" -> "10083" 
+  "10089" -> "10094" 
+  "10090" -> "10088" 
+  "9837" -> "9836" 
+  "9837" -> "9847" 
+  "9845" -> "9836" 
+  "9852" -> "9850" 
+  "9860" -> "9859" 
+  "9871" -> "9870" 
+  "9881" -> "9880" 
+  "9892" -> "9891" 
+  "9903" -> "9906" 
+  "9906" -> "9901" 
+  "9910" -> "9908" 
+  "9927" -> "9925" 
+  "9937" -> "9935" 
+  "9998" -> "9996" 
+  "10025" -> "10023" 
+  "10036" -> "10045" 
+  "10041" -> "10035" 
+  "10059" -> "10058" 
+  "10093" -> "10101" 
+  "10100" -> "10090" 
+  "9838" -> "9837" 
+  "9847" -> "9845" 
+  "9862" -> "9865" 
+  "9865" -> "9860" 
+  "9883" -> "9886" 
+  "9886" -> "9881" 
+  "9999" -> "10012" 
+  "9999" -> "10017" 
+  "10010" -> "9998" 
+  "10015" -> "9998" 
+  "10027" -> "10025" 
+  "10037" -> "10036" 
+  "10042" -> "10041" 
+  "10094" -> "10095" 
+  "10095" -> "10098" 
+  "10095" -> "10093" 
+  "10101" -> "10102" 
+  "10102" -> "10100" 
+  "9840" -> "9843" 
+  "9843" -> "9838" 
+  "10000" -> "10007" 
+  "10005" -> "9999" 
+  "10012" -> "10010" 
+  "10017" -> "10015" 
+  "10028" -> "10027" 
+  "10044" -> "10042" 
+  "10002" -> "10000" 
+  "10007" -> "10005" 
+  "10045" -> "10044" 
+  "10097" -> "10093" 
+  "10098" -> "10097" 
+  "9803" -> "9814" 
+}

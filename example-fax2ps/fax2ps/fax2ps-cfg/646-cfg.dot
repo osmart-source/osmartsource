@@ -1,0 +1,120 @@
+digraph "TIFFNumberOfTiles" {  
+"29482" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>110</SUB>> ]
+"29489" [label = <(&lt;operator&gt;.assignment,dx = td-&gt;td_tilewidth)<SUB>111</SUB>> ]
+"29495" [label = <(&lt;operator&gt;.assignment,dy = td-&gt;td_tilelength)<SUB>112</SUB>> ]
+"29501" [label = <(&lt;operator&gt;.assignment,dz = td-&gt;td_tiledepth)<SUB>113</SUB>> ]
+"29543" [label = <(&lt;operator&gt;.assignment,ntiles =\012        (dx == 0 || dy == 0 || dz == 0)\012            ? 0\012            : _TIFFMultiply32(\012                  tif,\012                  _TIFFMultiply32(tif, TIFFhowmany_32(td-&gt;td_imagewidth, dx),\012                                  TIFFhowmany_32(td-&gt;td_imagelength, dy),\012                                  &quot;TIFFNumberOfTiles&quot;),\012                  TIFFhowmany_32(td-&gt;td_imagedepth, dz), &quot;TIFFNumberOfTiles&quot;))<SUB>122</SUB>> ]
+"29595" [label = <(RETURN,return (ntiles);,return (ntiles);)<SUB>134</SUB>> ]
+"29484" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>110</SUB>> ]
+"29491" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilewidth)<SUB>111</SUB>> ]
+"29497" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilelength)<SUB>112</SUB>> ]
+"29503" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tiledepth)<SUB>113</SUB>> ]
+"29508" [label = <(&lt;operator&gt;.equals,dx == (uint32_t)-1)<SUB>116</SUB>> ]
+"29520" [label = <(&lt;operator&gt;.equals,dy == (uint32_t)-1)<SUB>118</SUB>> ]
+"29532" [label = <(&lt;operator&gt;.equals,dz == (uint32_t)-1)<SUB>120</SUB>> ]
+"29545" [label = <(&lt;operator&gt;.conditional,(dx == 0 || dy == 0 || dz == 0)\012            ? 0\012            : _TIFFMultiply32(\012                  tif,\012                  _TIFFMultiply32(tif, TIFFhowmany_32(td-&gt;td_imagewidth, dx),\012                                  TIFFhowmany_32(td-&gt;td_imagelength, dy),\012                                  &quot;TIFFNumberOfTiles&quot;),\012                  TIFFhowmany_32(td-&gt;td_imagedepth, dz), &quot;TIFFNumberOfTiles&quot;))<SUB>123</SUB>> ]
+"29580" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>131</SUB>> ]
+"29485" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>110</SUB>> ]
+"29493" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>111</SUB>> ]
+"29499" [label = <(FIELD_IDENTIFIER,td_tilelength,td_tilelength)<SUB>112</SUB>> ]
+"29505" [label = <(FIELD_IDENTIFIER,td_tiledepth,td_tiledepth)<SUB>113</SUB>> ]
+"29510" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>116</SUB>> ]
+"29514" [label = <(&lt;operator&gt;.assignment,dx = td-&gt;td_imagewidth)<SUB>117</SUB>> ]
+"29522" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>118</SUB>> ]
+"29526" [label = <(&lt;operator&gt;.assignment,dy = td-&gt;td_imagelength)<SUB>119</SUB>> ]
+"29534" [label = <(&lt;operator&gt;.subtraction,(uint32_t)-1)<SUB>120</SUB>> ]
+"29538" [label = <(&lt;operator&gt;.assignment,dz = td-&gt;td_imagedepth)<SUB>121</SUB>> ]
+"29546" [label = <(&lt;operator&gt;.logicalOr,dx == 0 || dy == 0 || dz == 0)<SUB>123</SUB>> ]
+"29558" [label = <(_TIFFMultiply32,_TIFFMultiply32(\012                  tif,\012                  _TIFFMultiply32(tif, TIFFhowmany_32(td-&gt;td_imagewidth, dx),\012                                  TIFFhowmany_32(td-&gt;td_imagelength, dy),\012                                  &quot;TIFFNumberOfTiles&quot;),\012                  TIFFhowmany_32(td-&gt;td_imagedepth, dz), &quot;TIFFNumberOfTiles&quot;))<SUB>125</SUB>> ]
+"29581" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>131</SUB>> ]
+"29586" [label = <(&lt;operator&gt;.assignment,ntiles = _TIFFMultiply32(tif, ntiles, td-&gt;td_samplesperpixel,\012                                 &quot;TIFFNumberOfTiles&quot;))<SUB>132</SUB>> ]
+"29487" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>110</SUB>> ]
+"29516" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>117</SUB>> ]
+"29528" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>119</SUB>> ]
+"29540" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>121</SUB>> ]
+"29547" [label = <(&lt;operator&gt;.logicalOr,dx == 0 || dy == 0)<SUB>123</SUB>> ]
+"29554" [label = <(&lt;operator&gt;.equals,dz == 0)<SUB>123</SUB>> ]
+"29560" [label = <(_TIFFMultiply32,_TIFFMultiply32(tif, TIFFhowmany_32(td-&gt;td_imagewidth, dx),\012                                  TIFFhowmany_32(td-&gt;td_imagelength, dy),\012                                  &quot;TIFFNumberOfTiles&quot;))<SUB>127</SUB>> ]
+"29573" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagedepth, dz))<SUB>130</SUB>> ]
+"29583" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>131</SUB>> ]
+"29588" [label = <(_TIFFMultiply32,_TIFFMultiply32(tif, ntiles, td-&gt;td_samplesperpixel,\012                                 &quot;TIFFNumberOfTiles&quot;))<SUB>132</SUB>> ]
+"29518" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>117</SUB>> ]
+"29530" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>119</SUB>> ]
+"29542" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>121</SUB>> ]
+"29548" [label = <(&lt;operator&gt;.equals,dx == 0)<SUB>123</SUB>> ]
+"29551" [label = <(&lt;operator&gt;.equals,dy == 0)<SUB>123</SUB>> ]
+"29562" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagewidth, dx))<SUB>127</SUB>> ]
+"29567" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, dy))<SUB>128</SUB>> ]
+"29574" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagedepth)<SUB>130</SUB>> ]
+"29591" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>132</SUB>> ]
+"29563" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagewidth)<SUB>127</SUB>> ]
+"29568" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>128</SUB>> ]
+"29576" [label = <(FIELD_IDENTIFIER,td_imagedepth,td_imagedepth)<SUB>130</SUB>> ]
+"29593" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>132</SUB>> ]
+"29565" [label = <(FIELD_IDENTIFIER,td_imagewidth,td_imagewidth)<SUB>127</SUB>> ]
+"29570" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>128</SUB>> ]
+"29478" [label = <(METHOD,TIFFNumberOfTiles)<SUB>108</SUB>> ]
+"29597" [label = <(METHOD_RETURN,uint32_t)<SUB>108</SUB>> ]
+  "29482" -> "29493" 
+  "29489" -> "29499" 
+  "29495" -> "29505" 
+  "29501" -> "29510" 
+  "29543" -> "29583" 
+  "29595" -> "29597" 
+  "29484" -> "29482" 
+  "29491" -> "29489" 
+  "29497" -> "29495" 
+  "29503" -> "29501" 
+  "29508" -> "29518" 
+  "29508" -> "29522" 
+  "29520" -> "29530" 
+  "29520" -> "29534" 
+  "29532" -> "29542" 
+  "29532" -> "29548" 
+  "29545" -> "29543" 
+  "29580" -> "29593" 
+  "29580" -> "29595" 
+  "29485" -> "29484" 
+  "29493" -> "29491" 
+  "29499" -> "29497" 
+  "29505" -> "29503" 
+  "29510" -> "29508" 
+  "29514" -> "29522" 
+  "29522" -> "29520" 
+  "29526" -> "29534" 
+  "29534" -> "29532" 
+  "29538" -> "29548" 
+  "29546" -> "29545" 
+  "29546" -> "29565" 
+  "29558" -> "29545" 
+  "29581" -> "29580" 
+  "29586" -> "29595" 
+  "29487" -> "29485" 
+  "29516" -> "29514" 
+  "29528" -> "29526" 
+  "29540" -> "29538" 
+  "29547" -> "29546" 
+  "29547" -> "29554" 
+  "29554" -> "29546" 
+  "29560" -> "29576" 
+  "29573" -> "29558" 
+  "29583" -> "29581" 
+  "29588" -> "29586" 
+  "29518" -> "29516" 
+  "29530" -> "29528" 
+  "29542" -> "29540" 
+  "29548" -> "29547" 
+  "29548" -> "29551" 
+  "29551" -> "29547" 
+  "29562" -> "29570" 
+  "29567" -> "29560" 
+  "29574" -> "29573" 
+  "29591" -> "29588" 
+  "29563" -> "29562" 
+  "29568" -> "29567" 
+  "29576" -> "29574" 
+  "29593" -> "29591" 
+  "29565" -> "29563" 
+  "29570" -> "29568" 
+  "29478" -> "29487" 
+}

@@ -1,0 +1,92 @@
+digraph "putcontig8bitYCbCr11tile" {  
+"59774" [label = <(&lt;operator&gt;.cast,(void)y)<SUB>2511</SUB>> ]
+"59777" [label = <(&lt;operator&gt;.assignment,fromskew = (fromskew / 1) * (1 * 1 + 2))<SUB>2512</SUB>> ]
+"59775" [label = <(UNKNOWN,void,void)<SUB>2511</SUB>> ]
+"59779" [label = <(&lt;operator&gt;.multiplication,(fromskew / 1) * (1 * 1 + 2))<SUB>2512</SUB>> ]
+"59867" [label = <(&lt;operator&gt;.preDecrement,--h)<SUB>2527</SUB>> ]
+"59780" [label = <(&lt;operator&gt;.division,fromskew / 1)<SUB>2512</SUB>> ]
+"59783" [label = <(&lt;operator&gt;.addition,1 * 1 + 2)<SUB>2512</SUB>> ]
+"59790" [label = <(&lt;operator&gt;.assignment,x = w)<SUB>2515</SUB>> ]
+"59861" [label = <(&lt;operator&gt;.assignmentPlus,cp += toskew)<SUB>2525</SUB>> ]
+"59864" [label = <(&lt;operator&gt;.assignmentPlus,pp += fromskew)<SUB>2526</SUB>> ]
+"59784" [label = <(&lt;operator&gt;.multiplication,1 * 1)<SUB>2512</SUB>> ]
+"59859" [label = <(&lt;operator&gt;.preDecrement,--x)<SUB>2524</SUB>> ]
+"59796" [label = <(&lt;operator&gt;.assignment,Cb = pp[1])<SUB>2518</SUB>> ]
+"59802" [label = <(&lt;operator&gt;.assignment,Cr = pp[2])<SUB>2519</SUB>> ]
+"59807" [label = <(YCbCrtoRGB,YCbCrtoRGB(*cp++, pp[0]))<SUB>2521</SUB>> ]
+"59856" [label = <(&lt;operator&gt;.assignmentPlus,pp += 3)<SUB>2523</SUB>> ]
+"59798" [label = <(&lt;operator&gt;.indirectIndexAccess,pp[1])<SUB>2518</SUB>> ]
+"59804" [label = <(&lt;operator&gt;.indirectIndexAccess,pp[2])<SUB>2519</SUB>> ]
+"59808" [label = <(&lt;operator&gt;.indirection,*cp++)<SUB>2521</SUB>> ]
+"59811" [label = <(&lt;operator&gt;.indirectIndexAccess,pp[0])<SUB>2521</SUB>> ]
+"59809" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>2521</SUB>> ]
+"59819" [label = <(TIFFYCbCrtoRGB,TIFFYCbCrtoRGB(img-&gt;ycbcr, (pp[0]), Cb, Cr, &amp;r, &amp;g, &amp;b))<SUB>2521</SUB>> ]
+"59834" [label = <(&lt;operator&gt;.assignment,*cp++ = ((uint32_t)(r) | ((uint32_t)(g) &lt;&lt; 8) | ((uint32_t)(b) &lt;&lt; 16) | (((uint32_t)0xffL) &lt;&lt; 24)))<SUB>2521</SUB>> ]
+"59820" [label = <(&lt;operator&gt;.indirectFieldAccess,img-&gt;ycbcr)<SUB>2521</SUB>> ]
+"59823" [label = <(&lt;operator&gt;.indirectIndexAccess,pp[0])<SUB>2521</SUB>> ]
+"59828" [label = <(&lt;operator&gt;.addressOf,&amp;r)<SUB>2521</SUB>> ]
+"59830" [label = <(&lt;operator&gt;.addressOf,&amp;g)<SUB>2521</SUB>> ]
+"59832" [label = <(&lt;operator&gt;.addressOf,&amp;b)<SUB>2521</SUB>> ]
+"59835" [label = <(&lt;operator&gt;.indirection,*cp++)<SUB>2521</SUB>> ]
+"59838" [label = <(&lt;operator&gt;.or,(uint32_t)(r) | ((uint32_t)(g) &lt;&lt; 8) | ((uint32_t)(b) &lt;&lt; 16) | (((uint32_t)0xffL) &lt;&lt; 24))<SUB>2521</SUB>> ]
+"59822" [label = <(FIELD_IDENTIFIER,ycbcr,ycbcr)<SUB>2521</SUB>> ]
+"59836" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>2521</SUB>> ]
+"59839" [label = <(&lt;operator&gt;.or,(uint32_t)(r) | ((uint32_t)(g) &lt;&lt; 8) | ((uint32_t)(b) &lt;&lt; 16))<SUB>2521</SUB>> ]
+"59851" [label = <(&lt;operator&gt;.shiftLeft,((uint32_t)0xffL) &lt;&lt; 24)<SUB>2521</SUB>> ]
+"59840" [label = <(&lt;operator&gt;.or,(uint32_t)(r) | ((uint32_t)(g) &lt;&lt; 8))<SUB>2521</SUB>> ]
+"59847" [label = <(&lt;operator&gt;.shiftLeft,(uint32_t)(b) &lt;&lt; 16)<SUB>2521</SUB>> ]
+"59852" [label = <(&lt;operator&gt;.cast,(uint32_t)0xffL)<SUB>2521</SUB>> ]
+"59841" [label = <(uint32_t,(uint32_t)(r))<SUB>2521</SUB>> ]
+"59843" [label = <(&lt;operator&gt;.shiftLeft,(uint32_t)(g) &lt;&lt; 8)<SUB>2521</SUB>> ]
+"59848" [label = <(uint32_t,(uint32_t)(b))<SUB>2521</SUB>> ]
+"59853" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>2521</SUB>> ]
+"59844" [label = <(uint32_t,(uint32_t)(g))<SUB>2521</SUB>> ]
+"59763" [label = <(METHOD,putcontig8bitYCbCr11tile)<SUB>2509</SUB>> ]
+"59869" [label = <(METHOD_RETURN,void)<SUB>2509</SUB>> ]
+  "59774" -> "59780" 
+  "59777" -> "59790" 
+  "59775" -> "59774" 
+  "59779" -> "59777" 
+  "59867" -> "59869" 
+  "59867" -> "59790" 
+  "59780" -> "59784" 
+  "59783" -> "59779" 
+  "59790" -> "59798" 
+  "59861" -> "59864" 
+  "59864" -> "59867" 
+  "59784" -> "59783" 
+  "59859" -> "59798" 
+  "59859" -> "59861" 
+  "59796" -> "59804" 
+  "59802" -> "59809" 
+  "59807" -> "59822" 
+  "59807" -> "59856" 
+  "59856" -> "59859" 
+  "59798" -> "59796" 
+  "59804" -> "59802" 
+  "59808" -> "59811" 
+  "59811" -> "59807" 
+  "59809" -> "59808" 
+  "59819" -> "59836" 
+  "59834" -> "59856" 
+  "59820" -> "59823" 
+  "59823" -> "59828" 
+  "59828" -> "59830" 
+  "59830" -> "59832" 
+  "59832" -> "59819" 
+  "59835" -> "59841" 
+  "59838" -> "59834" 
+  "59822" -> "59820" 
+  "59836" -> "59835" 
+  "59839" -> "59853" 
+  "59851" -> "59838" 
+  "59840" -> "59848" 
+  "59847" -> "59839" 
+  "59852" -> "59851" 
+  "59841" -> "59844" 
+  "59843" -> "59840" 
+  "59848" -> "59847" 
+  "59853" -> "59852" 
+  "59844" -> "59843" 
+  "59763" -> "59775" 
+}

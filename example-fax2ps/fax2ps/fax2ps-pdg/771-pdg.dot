@@ -1,0 +1,17 @@
+digraph "_tiffCloseProc" {  
+"33826" [label = <(METHOD,_tiffCloseProc)<SUB>132</SUB>> ]
+"33840" [label = <(METHOD_RETURN,int)<SUB>132</SUB>> ]
+"33827" [label = <(PARAM,thandle_t fd)<SUB>132</SUB>> ]
+"33830" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>135</SUB>> ]
+"33835" [label = <(RETURN,return (close(fdh.fd));,return (close(fdh.fd));)<SUB>136</SUB>> ]
+"33836" [label = <(close,close(fdh.fd))<SUB>136</SUB>> ]
+  "33835" -> "33840"  [ label = "DDG: &lt;RET&gt;"] 
+  "33830" -> "33840"  [ label = "DDG: fdh.h"] 
+  "33830" -> "33840"  [ label = "DDG: fd"] 
+  "33836" -> "33840"  [ label = "DDG: fdh.fd"] 
+  "33836" -> "33840"  [ label = "DDG: close(fdh.fd)"] 
+  "33826" -> "33827"  [ label = "DDG: "] 
+  "33827" -> "33830"  [ label = "DDG: fd"] 
+  "33826" -> "33830"  [ label = "DDG: "] 
+  "33836" -> "33835"  [ label = "DDG: close(fdh.fd)"] 
+}

@@ -1,0 +1,65 @@
+digraph "_TIFFCastUInt64ToSSize" {  
+"20755" [label = <(METHOD,_TIFFCastUInt64ToSSize)<SUB>84</SUB>> ]
+"20756" [label = <(PARAM,TIFF *tif)<SUB>84</SUB>> ]
+"20757" [label = <(PARAM,uint64_t val)<SUB>84</SUB>> ]
+"20758" [label = <(PARAM,const char *module)<SUB>84</SUB>> ]
+"20759" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>85</SUB>> ]
+"20760" [label = <(CONTROL_STRUCTURE,if (val &gt; (uint64_t)TIFF_TMSIZE_T_MAX),if (val &gt; (uint64_t)TIFF_TMSIZE_T_MAX))<SUB>86</SUB>> ]
+"20761" [label = <(&lt;operator&gt;.greaterThan,val &gt; (uint64_t)TIFF_TMSIZE_T_MAX)<SUB>86</SUB>> ]
+"20762" [label = <(IDENTIFIER,val,val &gt; (uint64_t)TIFF_TMSIZE_T_MAX)<SUB>86</SUB>> ]
+"20763" [label = <(&lt;operator&gt;.cast,(uint64_t)TIFF_TMSIZE_T_MAX)<SUB>86</SUB>> ]
+"20764" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>86</SUB>> ]
+"20765" [label = <(IDENTIFIER,TIFF_TMSIZE_T_MAX,(uint64_t)TIFF_TMSIZE_T_MAX)<SUB>86</SUB>> ]
+"20766" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>87</SUB>> ]
+"20767" [label = <(CONTROL_STRUCTURE,if (tif != NULL &amp;&amp; module != NULL),if (tif != NULL &amp;&amp; module != NULL))<SUB>88</SUB>> ]
+"20768" [label = <(&lt;operator&gt;.logicalAnd,tif != NULL &amp;&amp; module != NULL)<SUB>88</SUB>> ]
+"20769" [label = <(&lt;operator&gt;.notEquals,tif != NULL)<SUB>88</SUB>> ]
+"20770" [label = <(IDENTIFIER,tif,tif != NULL)<SUB>88</SUB>> ]
+"20771" [label = <(IDENTIFIER,NULL,tif != NULL)<SUB>88</SUB>> ]
+"20772" [label = <(&lt;operator&gt;.notEquals,module != NULL)<SUB>88</SUB>> ]
+"20773" [label = <(IDENTIFIER,module,module != NULL)<SUB>88</SUB>> ]
+"20774" [label = <(IDENTIFIER,NULL,module != NULL)<SUB>88</SUB>> ]
+"20775" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>89</SUB>> ]
+"20776" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Integer overflow&quot;))<SUB>90</SUB>> ]
+"20777" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Integer overflow&quot;))<SUB>90</SUB>> ]
+"20778" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Integer overflow&quot;))<SUB>90</SUB>> ]
+"20779" [label = <(LITERAL,&quot;Integer overflow&quot;,TIFFErrorExtR(tif, module, &quot;Integer overflow&quot;))<SUB>90</SUB>> ]
+"20780" [label = <(RETURN,return 0;,return 0;)<SUB>92</SUB>> ]
+"20781" [label = <(LITERAL,0,return 0;)<SUB>92</SUB>> ]
+"20782" [label = <(RETURN,return (tmsize_t)val;,return (tmsize_t)val;)<SUB>94</SUB>> ]
+"20783" [label = <(&lt;operator&gt;.cast,(tmsize_t)val)<SUB>94</SUB>> ]
+"20784" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>94</SUB>> ]
+"20785" [label = <(IDENTIFIER,val,(tmsize_t)val)<SUB>94</SUB>> ]
+"20786" [label = <(METHOD_RETURN,tmsize_t)<SUB>84</SUB>> ]
+  "20755" -> "20756" 
+  "20755" -> "20757" 
+  "20755" -> "20758" 
+  "20755" -> "20759" 
+  "20755" -> "20786" 
+  "20759" -> "20760" 
+  "20759" -> "20782" 
+  "20760" -> "20761" 
+  "20760" -> "20766" 
+  "20761" -> "20762" 
+  "20761" -> "20763" 
+  "20763" -> "20764" 
+  "20763" -> "20765" 
+  "20766" -> "20767" 
+  "20766" -> "20780" 
+  "20767" -> "20768" 
+  "20767" -> "20775" 
+  "20768" -> "20769" 
+  "20768" -> "20772" 
+  "20769" -> "20770" 
+  "20769" -> "20771" 
+  "20772" -> "20773" 
+  "20772" -> "20774" 
+  "20775" -> "20776" 
+  "20776" -> "20777" 
+  "20776" -> "20778" 
+  "20776" -> "20779" 
+  "20780" -> "20781" 
+  "20782" -> "20783" 
+  "20783" -> "20784" 
+  "20783" -> "20785" 
+}

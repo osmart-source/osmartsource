@@ -1,0 +1,79 @@
+digraph "_TIFFCheckRealloc" {  
+"20788" [label = <(METHOD,_TIFFCheckRealloc)<SUB>97</SUB>> ]
+"20789" [label = <(PARAM,TIFF *tif)<SUB>97</SUB>> ]
+"20790" [label = <(PARAM,void *buffer)<SUB>97</SUB>> ]
+"20791" [label = <(PARAM,tmsize_t nmemb)<SUB>97</SUB>> ]
+"20792" [label = <(PARAM,tmsize_t elem_size)<SUB>98</SUB>> ]
+"20793" [label = <(PARAM,const char *what)<SUB>98</SUB>> ]
+"20794" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>99</SUB>> ]
+"20795" [label = <(LOCAL,void* cp: void)<SUB>100</SUB>> ]
+"20796" [label = <(&lt;operator&gt;.assignment,*cp = NULL)<SUB>100</SUB>> ]
+"20797" [label = <(IDENTIFIER,cp,*cp = NULL)<SUB>100</SUB>> ]
+"20798" [label = <(IDENTIFIER,NULL,*cp = NULL)<SUB>100</SUB>> ]
+"20799" [label = <(LOCAL,tmsize_t count: tmsize_t)<SUB>101</SUB>> ]
+"20800" [label = <(&lt;operator&gt;.assignment,count = _TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20801" [label = <(IDENTIFIER,count,count = _TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20802" [label = <(_TIFFMultiplySSize,_TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20803" [label = <(IDENTIFIER,tif,_TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20804" [label = <(IDENTIFIER,nmemb,_TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20805" [label = <(IDENTIFIER,elem_size,_TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20806" [label = <(IDENTIFIER,NULL,_TIFFMultiplySSize(tif, nmemb, elem_size, NULL))<SUB>101</SUB>> ]
+"20807" [label = <(CONTROL_STRUCTURE,if (count != 0),if (count != 0))<SUB>105</SUB>> ]
+"20808" [label = <(&lt;operator&gt;.notEquals,count != 0)<SUB>105</SUB>> ]
+"20809" [label = <(IDENTIFIER,count,count != 0)<SUB>105</SUB>> ]
+"20810" [label = <(LITERAL,0,count != 0)<SUB>105</SUB>> ]
+"20811" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>106</SUB>> ]
+"20812" [label = <(&lt;operator&gt;.assignment,cp = _TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20813" [label = <(IDENTIFIER,cp,cp = _TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20814" [label = <(_TIFFreallocExt,_TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20815" [label = <(IDENTIFIER,tif,_TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20816" [label = <(IDENTIFIER,buffer,_TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20817" [label = <(IDENTIFIER,count,_TIFFreallocExt(tif, buffer, count))<SUB>107</SUB>> ]
+"20818" [label = <(CONTROL_STRUCTURE,if (cp == NULL),if (cp == NULL))<SUB>110</SUB>> ]
+"20819" [label = <(&lt;operator&gt;.equals,cp == NULL)<SUB>110</SUB>> ]
+"20820" [label = <(IDENTIFIER,cp,cp == NULL)<SUB>110</SUB>> ]
+"20821" [label = <(IDENTIFIER,NULL,cp == NULL)<SUB>110</SUB>> ]
+"20822" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>111</SUB>> ]
+"20823" [label = <(UNKNOWN,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                      &quot;Failed to allocate memory for %s &quot;\012                      &quot;(%&quot; TIFF_SSIZE_FORMAT &quot; elements of %&quot; TIFF_SSIZE_FORMAT\012                      &quot; bytes each)&quot;,\012                      what, nmemb, elem_size);,TIFFErrorExtR(tif, tif-&gt;tif_name,\012                      &quot;Failed to allocate memory for %s &quot;\012                      &quot;(%&quot; TIFF_SSIZE_FORMAT &quot; elements of %&quot; TIFF_SSIZE_FORMAT\012                      &quot; bytes each)&quot;,\012                      what, nmemb, elem_size);)<SUB>112</SUB>> ]
+"20824" [label = <(RETURN,return cp;,return cp;)<SUB>119</SUB>> ]
+"20825" [label = <(IDENTIFIER,cp,return cp;)<SUB>119</SUB>> ]
+"20826" [label = <(METHOD_RETURN,void*)<SUB>97</SUB>> ]
+  "20788" -> "20789" 
+  "20788" -> "20790" 
+  "20788" -> "20791" 
+  "20788" -> "20792" 
+  "20788" -> "20793" 
+  "20788" -> "20794" 
+  "20788" -> "20826" 
+  "20794" -> "20795" 
+  "20794" -> "20796" 
+  "20794" -> "20799" 
+  "20794" -> "20800" 
+  "20794" -> "20807" 
+  "20794" -> "20818" 
+  "20794" -> "20824" 
+  "20796" -> "20797" 
+  "20796" -> "20798" 
+  "20800" -> "20801" 
+  "20800" -> "20802" 
+  "20802" -> "20803" 
+  "20802" -> "20804" 
+  "20802" -> "20805" 
+  "20802" -> "20806" 
+  "20807" -> "20808" 
+  "20807" -> "20811" 
+  "20808" -> "20809" 
+  "20808" -> "20810" 
+  "20811" -> "20812" 
+  "20812" -> "20813" 
+  "20812" -> "20814" 
+  "20814" -> "20815" 
+  "20814" -> "20816" 
+  "20814" -> "20817" 
+  "20818" -> "20819" 
+  "20818" -> "20822" 
+  "20819" -> "20820" 
+  "20819" -> "20821" 
+  "20822" -> "20823" 
+  "20824" -> "20825" 
+}

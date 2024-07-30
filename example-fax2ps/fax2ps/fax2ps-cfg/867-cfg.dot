@@ -1,0 +1,43 @@
+digraph "countInkNamesString" {  
+"40100" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>194</SUB>> ]
+"40104" [label = <(&lt;operator&gt;.assignment,*ep = s + slen)<SUB>195</SUB>> ]
+"40110" [label = <(&lt;operator&gt;.assignment,*cp = s)<SUB>196</SUB>> ]
+"40148" [label = <(UNKNOWN,bad:\012    TIFFErrorExtR(tif, &quot;TIFFSetField&quot;,\012                  &quot;%s: Invalid InkNames value; no NUL at given buffer end &quot;\012                  &quot;location %&quot; PRIu32 &quot;, after %&quot; PRIu16 &quot; ink&quot;,\012                  tif-&gt;tif_name, slen, i);,bad:\012    TIFFErrorExtR(tif, &quot;TIFFSetField&quot;,\012                  &quot;%s: Invalid InkNames value; no NUL at given buffer end &quot;\012                  &quot;location %&quot; PRIu32 &quot;, after %&quot; PRIu16 &quot; ink&quot;,\012                  tif-&gt;tif_name, slen, i);)<SUB>212</SUB>> ]
+"40149" [label = <(RETURN,return (0);,return (0);)<SUB>217</SUB>> ]
+"40106" [label = <(&lt;operator&gt;.addition,s + slen)<SUB>195</SUB>> ]
+"40114" [label = <(&lt;operator&gt;.greaterThan,slen &gt; 0)<SUB>198</SUB>> ]
+"40146" [label = <(RETURN,return (i);,return (i);)<SUB>210</SUB>> ]
+"40143" [label = <(&lt;operator&gt;.lessThan,cp &lt; ep)<SUB>209</SUB>> ]
+"40139" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>207</SUB>> ]
+"40141" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>208</SUB>> ]
+"40122" [label = <(&lt;operator&gt;.logicalAnd,cp &lt; ep &amp;&amp; *cp != '\0')<SUB>202</SUB>> ]
+"40130" [label = <(&lt;operator&gt;.postIncrement,cp++)<SUB>202</SUB>> ]
+"40134" [label = <(&lt;operator&gt;.greaterEqualsThan,cp &gt;= ep)<SUB>205</SUB>> ]
+"40123" [label = <(&lt;operator&gt;.lessThan,cp &lt; ep)<SUB>202</SUB>> ]
+"40126" [label = <(&lt;operator&gt;.notEquals,*cp != '\0')<SUB>202</SUB>> ]
+"40127" [label = <(&lt;operator&gt;.indirection,*cp)<SUB>202</SUB>> ]
+"40094" [label = <(METHOD,countInkNamesString)<SUB>192</SUB>> ]
+"40151" [label = <(METHOD_RETURN,uint16_t)<SUB>192</SUB>> ]
+  "40100" -> "40106" 
+  "40104" -> "40110" 
+  "40110" -> "40114" 
+  "40148" -> "40149" 
+  "40149" -> "40151" 
+  "40106" -> "40104" 
+  "40114" -> "40148" 
+  "40114" -> "40123" 
+  "40146" -> "40151" 
+  "40143" -> "40123" 
+  "40143" -> "40146" 
+  "40139" -> "40141" 
+  "40141" -> "40143" 
+  "40122" -> "40130" 
+  "40122" -> "40134" 
+  "40130" -> "40123" 
+  "40134" -> "40139" 
+  "40123" -> "40122" 
+  "40123" -> "40127" 
+  "40126" -> "40122" 
+  "40127" -> "40126" 
+  "40094" -> "40100" 
+}

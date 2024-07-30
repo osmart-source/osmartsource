@@ -1,0 +1,18 @@
+digraph "TIFFHashSetEqualPointer" {  
+"4949" [label = <(METHOD,TIFFHashSetEqualPointer)<SUB>106</SUB>> ]
+"4957" [label = <(METHOD_RETURN,bool)<SUB>106</SUB>> ]
+"4950" [label = <(PARAM,const void *elt1)<SUB>106</SUB>> ]
+"4951" [label = <(PARAM,const void *elt2)<SUB>106</SUB>> ]
+"4953" [label = <(RETURN,return elt1 == elt2;,return elt1 == elt2;)<SUB>108</SUB>> ]
+"4954" [label = <(&lt;operator&gt;.equals,elt1 == elt2)<SUB>108</SUB>> ]
+  "4953" -> "4957"  [ label = "DDG: &lt;RET&gt;"] 
+  "4954" -> "4957"  [ label = "DDG: elt1"] 
+  "4954" -> "4957"  [ label = "DDG: elt2"] 
+  "4954" -> "4957"  [ label = "DDG: elt1 == elt2"] 
+  "4949" -> "4950"  [ label = "DDG: "] 
+  "4949" -> "4951"  [ label = "DDG: "] 
+  "4954" -> "4953"  [ label = "DDG: elt1 == elt2"] 
+  "4950" -> "4954"  [ label = "DDG: elt1"] 
+  "4949" -> "4954"  [ label = "DDG: "] 
+  "4951" -> "4954"  [ label = "DDG: elt2"] 
+}

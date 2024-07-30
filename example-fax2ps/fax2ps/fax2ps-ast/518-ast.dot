@@ -1,0 +1,57 @@
+digraph "TIFFRawStripSize64" {  
+"11236" [label = <(METHOD,TIFFRawStripSize64)<SUB>141</SUB>> ]
+"11237" [label = <(PARAM,TIFF *tif)<SUB>141</SUB>> ]
+"11238" [label = <(PARAM,uint32_t strip)<SUB>141</SUB>> ]
+"11239" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>142</SUB>> ]
+"11240" [label = <(LOCAL,constchar[] module: char[])<SUB>143</SUB>> ]
+"11241" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFRawStripSize64&quot;)<SUB>143</SUB>> ]
+"11242" [label = <(IDENTIFIER,module,module[] = &quot;TIFFRawStripSize64&quot;)<SUB>143</SUB>> ]
+"11243" [label = <(LITERAL,&quot;TIFFRawStripSize64&quot;,module[] = &quot;TIFFRawStripSize64&quot;)<SUB>143</SUB>> ]
+"11244" [label = <(LOCAL,uint64_t bytecount: uint64_t)<SUB>144</SUB>> ]
+"11245" [label = <(&lt;operator&gt;.assignment,bytecount = TIFFGetStrileByteCount(tif, strip))<SUB>144</SUB>> ]
+"11246" [label = <(IDENTIFIER,bytecount,bytecount = TIFFGetStrileByteCount(tif, strip))<SUB>144</SUB>> ]
+"11247" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, strip))<SUB>144</SUB>> ]
+"11248" [label = <(IDENTIFIER,tif,TIFFGetStrileByteCount(tif, strip))<SUB>144</SUB>> ]
+"11249" [label = <(IDENTIFIER,strip,TIFFGetStrileByteCount(tif, strip))<SUB>144</SUB>> ]
+"11250" [label = <(CONTROL_STRUCTURE,if (bytecount == 0),if (bytecount == 0))<SUB>146</SUB>> ]
+"11251" [label = <(&lt;operator&gt;.equals,bytecount == 0)<SUB>146</SUB>> ]
+"11252" [label = <(IDENTIFIER,bytecount,bytecount == 0)<SUB>146</SUB>> ]
+"11253" [label = <(LITERAL,0,bytecount == 0)<SUB>146</SUB>> ]
+"11254" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>147</SUB>> ]
+"11255" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu64 &quot;: Invalid strip byte count, strip %lu&quot;,\012                      (uint64_t)bytecount, (unsigned long)strip);,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu64 &quot;: Invalid strip byte count, strip %lu&quot;,\012                      (uint64_t)bytecount, (unsigned long)strip);)<SUB>148</SUB>> ]
+"11256" [label = <(&lt;operator&gt;.assignment,bytecount = (uint64_t)-1)<SUB>151</SUB>> ]
+"11257" [label = <(IDENTIFIER,bytecount,bytecount = (uint64_t)-1)<SUB>151</SUB>> ]
+"11258" [label = <(&lt;operator&gt;.subtraction,(uint64_t)-1)<SUB>151</SUB>> ]
+"11259" [label = <(IDENTIFIER,uint64_t,(uint64_t)-1)<SUB>151</SUB>> ]
+"11260" [label = <(LITERAL,1,(uint64_t)-1)<SUB>151</SUB>> ]
+"11261" [label = <(RETURN,return bytecount;,return bytecount;)<SUB>154</SUB>> ]
+"11262" [label = <(IDENTIFIER,bytecount,return bytecount;)<SUB>154</SUB>> ]
+"11263" [label = <(METHOD_RETURN,uint64_t)<SUB>141</SUB>> ]
+  "11236" -> "11237" 
+  "11236" -> "11238" 
+  "11236" -> "11239" 
+  "11236" -> "11263" 
+  "11239" -> "11240" 
+  "11239" -> "11241" 
+  "11239" -> "11244" 
+  "11239" -> "11245" 
+  "11239" -> "11250" 
+  "11239" -> "11261" 
+  "11241" -> "11242" 
+  "11241" -> "11243" 
+  "11245" -> "11246" 
+  "11245" -> "11247" 
+  "11247" -> "11248" 
+  "11247" -> "11249" 
+  "11250" -> "11251" 
+  "11250" -> "11254" 
+  "11251" -> "11252" 
+  "11251" -> "11253" 
+  "11254" -> "11255" 
+  "11254" -> "11256" 
+  "11256" -> "11257" 
+  "11256" -> "11258" 
+  "11258" -> "11259" 
+  "11258" -> "11260" 
+  "11261" -> "11262" 
+}

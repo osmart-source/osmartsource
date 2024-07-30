@@ -1,0 +1,18 @@
+digraph "fmemopen" {  
+"2521" [label = <(METHOD,fmemopen)<SUB>292</SUB>> ]
+"2522" [label = <(PARAM,void *__s)<SUB>292</SUB>> ]
+"2523" [label = <(PARAM,size_t __len)<SUB>292</SUB>> ]
+"2524" [label = <(PARAM,const char *__modes)<SUB>292</SUB>> ]
+"2525" [label = <(METHOD_RETURN,FILE*)<SUB>292</SUB>> ]
+  "2521" -> "2522"  [ label = "AST: "] 
+  "2521" -> "2523"  [ label = "AST: "] 
+  "2521" -> "2524"  [ label = "AST: "] 
+  "2521" -> "2525"  [ label = "AST: "] 
+  "2521" -> "2525"  [ label = "CFG: "] 
+  "2522" -> "2525"  [ label = "DDG: __s"] 
+  "2523" -> "2525"  [ label = "DDG: __len"] 
+  "2524" -> "2525"  [ label = "DDG: __modes"] 
+  "2521" -> "2522"  [ label = "DDG: "] 
+  "2521" -> "2523"  [ label = "DDG: "] 
+  "2521" -> "2524"  [ label = "DDG: "] 
+}

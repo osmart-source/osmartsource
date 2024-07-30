@@ -1,0 +1,30 @@
+digraph "TIFFWriteDirectoryTagCheckedLong" {  
+"70084" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>2267</SUB>> ]
+"70089" [label = <(&lt;operator&gt;.assignment,m = value)<SUB>2268</SUB>> ]
+"70102" [label = <(RETURN,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m));,return (\012        TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m));)<SUB>2271</SUB>> ]
+"70085" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>2267</SUB>> ]
+"70093" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2269</SUB>> ]
+"70103" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_LONG, 1, 4, &amp;m))<SUB>2272</SUB>> ]
+"70086" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2267</SUB>> ]
+"70094" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2269</SUB>> ]
+"70099" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;m))<SUB>2270</SUB>> ]
+"70111" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2272</SUB>> ]
+"70096" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2269</SUB>> ]
+"70100" [label = <(&lt;operator&gt;.addressOf,&amp;m)<SUB>2270</SUB>> ]
+"70076" [label = <(METHOD,TIFFWriteDirectoryTagCheckedLong)<SUB>2262</SUB>> ]
+"70113" [label = <(METHOD_RETURN,int)<SUB>2262</SUB>> ]
+  "70084" -> "70089" 
+  "70089" -> "70096" 
+  "70102" -> "70113" 
+  "70085" -> "70084" 
+  "70093" -> "70100" 
+  "70093" -> "70111" 
+  "70103" -> "70102" 
+  "70086" -> "70085" 
+  "70094" -> "70093" 
+  "70099" -> "70111" 
+  "70111" -> "70103" 
+  "70096" -> "70094" 
+  "70100" -> "70099" 
+  "70076" -> "70086" 
+}

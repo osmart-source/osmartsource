@@ -1,0 +1,159 @@
+digraph "TIFFReadDirEntryCheckedSrational" {  
+"87042" [label = <(assert,assert(sizeof(double) == 8))<SUB>3444</SUB>> ]
+"87047" [label = <(assert,assert(sizeof(uint64_t) == 8))<SUB>3445</SUB>> ]
+"87052" [label = <(assert,assert(sizeof(int32_t) == 4))<SUB>3446</SUB>> ]
+"87057" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>3447</SUB>> ]
+"87173" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3469</SUB>> ]
+"87043" [label = <(&lt;operator&gt;.equals,sizeof(double) == 8)<SUB>3444</SUB>> ]
+"87048" [label = <(&lt;operator&gt;.equals,sizeof(uint64_t) == 8)<SUB>3445</SUB>> ]
+"87053" [label = <(&lt;operator&gt;.equals,sizeof(int32_t) == 4)<SUB>3446</SUB>> ]
+"87058" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>3447</SUB>> ]
+"87063" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>3448</SUB>> ]
+"87117" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3460</SUB>> ]
+"87129" [label = <(&lt;operator&gt;.logicalOr,(int32_t)m.i[0] == 0 || m.i[1] == 0)<SUB>3465</SUB>> ]
+"87044" [label = <(&lt;operator&gt;.sizeOf,sizeof(double))<SUB>3444</SUB>> ]
+"87049" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint64_t))<SUB>3445</SUB>> ]
+"87054" [label = <(&lt;operator&gt;.sizeOf,sizeof(int32_t))<SUB>3446</SUB>> ]
+"87059" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>3447</SUB>> ]
+"87064" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>3448</SUB>> ]
+"87072" [label = <(&lt;operator&gt;.assignment,offset = direntry-&gt;tdir_offset.toff_long)<SUB>3451</SUB>> ]
+"87089" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryData(tif, offset, 8, m.i))<SUB>3454</SUB>> ]
+"87118" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3460</SUB>> ]
+"87123" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(m.i, 2))<SUB>3461</SUB>> ]
+"87130" [label = <(&lt;operator&gt;.equals,(int32_t)m.i[0] == 0)<SUB>3465</SUB>> ]
+"87139" [label = <(&lt;operator&gt;.equals,m.i[1] == 0)<SUB>3465</SUB>> ]
+"87147" [label = <(&lt;operator&gt;.assignment,*value = 0.0)<SUB>3466</SUB>> ]
+"87065" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3448</SUB>> ]
+"87074" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long)<SUB>3451</SUB>> ]
+"87080" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3452</SUB>> ]
+"87091" [label = <(TIFFReadDirEntryData,TIFFReadDirEntryData(tif, offset, 8, m.i))<SUB>3454</SUB>> ]
+"87099" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>3455</SUB>> ]
+"87107" [label = <(&lt;operator&gt;.assignment,m.l = direntry-&gt;tdir_offset.toff_long8)<SUB>3459</SUB>> ]
+"87120" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3460</SUB>> ]
+"87124" [label = <(&lt;operator&gt;.fieldAccess,m.i)<SUB>3461</SUB>> ]
+"87131" [label = <(&lt;operator&gt;.cast,(int32_t)m.i[0])<SUB>3465</SUB>> ]
+"87140" [label = <(&lt;operator&gt;.indirectIndexAccess,m.i[1])<SUB>3465</SUB>> ]
+"87148" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3466</SUB>> ]
+"87153" [label = <(&lt;operator&gt;.assignment,*value = (double)((int32_t)m.i[0]) / (double)m.i[1])<SUB>3468</SUB>> ]
+"87067" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3448</SUB>> ]
+"87075" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3451</SUB>> ]
+"87078" [label = <(FIELD_IDENTIFIER,toff_long,toff_long)<SUB>3451</SUB>> ]
+"87081" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3452</SUB>> ]
+"87086" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;offset))<SUB>3453</SUB>> ]
+"87095" [label = <(&lt;operator&gt;.fieldAccess,m.i)<SUB>3454</SUB>> ]
+"87103" [label = <(RETURN,return (err);,return (err);)<SUB>3456</SUB>> ]
+"87108" [label = <(&lt;operator&gt;.fieldAccess,m.l)<SUB>3459</SUB>> ]
+"87111" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long8)<SUB>3459</SUB>> ]
+"87126" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3461</SUB>> ]
+"87132" [label = <(UNKNOWN,int32_t,int32_t)<SUB>3465</SUB>> ]
+"87133" [label = <(&lt;operator&gt;.indirectIndexAccess,m.i[0])<SUB>3465</SUB>> ]
+"87141" [label = <(&lt;operator&gt;.fieldAccess,m.i)<SUB>3465</SUB>> ]
+"87154" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3468</SUB>> ]
+"87156" [label = <(&lt;operator&gt;.division,(double)((int32_t)m.i[0]) / (double)m.i[1])<SUB>3468</SUB>> ]
+"87077" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3451</SUB>> ]
+"87083" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3452</SUB>> ]
+"87087" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>3453</SUB>> ]
+"87097" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3454</SUB>> ]
+"87110" [label = <(FIELD_IDENTIFIER,l,l)<SUB>3459</SUB>> ]
+"87112" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3459</SUB>> ]
+"87115" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>3459</SUB>> ]
+"87134" [label = <(&lt;operator&gt;.fieldAccess,m.i)<SUB>3465</SUB>> ]
+"87143" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3465</SUB>> ]
+"87157" [label = <(&lt;operator&gt;.cast,(double)((int32_t)m.i[0]))<SUB>3468</SUB>> ]
+"87166" [label = <(&lt;operator&gt;.cast,(double)m.i[1])<SUB>3468</SUB>> ]
+"87114" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3459</SUB>> ]
+"87136" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3465</SUB>> ]
+"87158" [label = <(UNKNOWN,double,double)<SUB>3468</SUB>> ]
+"87159" [label = <(&lt;operator&gt;.cast,(int32_t)m.i[0])<SUB>3468</SUB>> ]
+"87167" [label = <(UNKNOWN,double,double)<SUB>3468</SUB>> ]
+"87168" [label = <(&lt;operator&gt;.indirectIndexAccess,m.i[1])<SUB>3468</SUB>> ]
+"87160" [label = <(UNKNOWN,int32_t,int32_t)<SUB>3468</SUB>> ]
+"87161" [label = <(&lt;operator&gt;.indirectIndexAccess,m.i[0])<SUB>3468</SUB>> ]
+"87169" [label = <(&lt;operator&gt;.fieldAccess,m.i)<SUB>3468</SUB>> ]
+"87162" [label = <(&lt;operator&gt;.fieldAccess,m.i)<SUB>3468</SUB>> ]
+"87171" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3468</SUB>> ]
+"87164" [label = <(FIELD_IDENTIFIER,i,i)<SUB>3468</SUB>> ]
+"87036" [label = <(METHOD,TIFFReadDirEntryCheckedSrational)<SUB>3439</SUB>> ]
+"87175" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3439</SUB>> ]
+  "87042" -> "87049" 
+  "87047" -> "87054" 
+  "87052" -> "87059" 
+  "87057" -> "87067" 
+  "87173" -> "87175" 
+  "87043" -> "87042" 
+  "87048" -> "87047" 
+  "87053" -> "87052" 
+  "87058" -> "87057" 
+  "87063" -> "87077" 
+  "87063" -> "87110" 
+  "87117" -> "87132" 
+  "87117" -> "87126" 
+  "87129" -> "87148" 
+  "87129" -> "87154" 
+  "87044" -> "87043" 
+  "87049" -> "87048" 
+  "87054" -> "87053" 
+  "87059" -> "87058" 
+  "87064" -> "87063" 
+  "87072" -> "87083" 
+  "87089" -> "87099" 
+  "87118" -> "87117" 
+  "87123" -> "87132" 
+  "87130" -> "87129" 
+  "87130" -> "87143" 
+  "87139" -> "87129" 
+  "87147" -> "87173" 
+  "87065" -> "87064" 
+  "87074" -> "87072" 
+  "87080" -> "87087" 
+  "87080" -> "87097" 
+  "87091" -> "87089" 
+  "87099" -> "87103" 
+  "87099" -> "87120" 
+  "87107" -> "87120" 
+  "87120" -> "87118" 
+  "87124" -> "87123" 
+  "87131" -> "87130" 
+  "87140" -> "87139" 
+  "87148" -> "87147" 
+  "87153" -> "87173" 
+  "87067" -> "87065" 
+  "87075" -> "87078" 
+  "87078" -> "87074" 
+  "87081" -> "87080" 
+  "87086" -> "87097" 
+  "87095" -> "87091" 
+  "87103" -> "87175" 
+  "87108" -> "87114" 
+  "87111" -> "87107" 
+  "87126" -> "87124" 
+  "87132" -> "87136" 
+  "87133" -> "87131" 
+  "87141" -> "87140" 
+  "87154" -> "87158" 
+  "87156" -> "87153" 
+  "87077" -> "87075" 
+  "87083" -> "87081" 
+  "87087" -> "87086" 
+  "87097" -> "87095" 
+  "87110" -> "87108" 
+  "87112" -> "87115" 
+  "87115" -> "87111" 
+  "87134" -> "87133" 
+  "87143" -> "87141" 
+  "87157" -> "87167" 
+  "87166" -> "87156" 
+  "87114" -> "87112" 
+  "87136" -> "87134" 
+  "87158" -> "87160" 
+  "87159" -> "87157" 
+  "87167" -> "87171" 
+  "87168" -> "87166" 
+  "87160" -> "87164" 
+  "87161" -> "87159" 
+  "87169" -> "87168" 
+  "87162" -> "87161" 
+  "87171" -> "87169" 
+  "87164" -> "87162" 
+  "87036" -> "87044" 
+}

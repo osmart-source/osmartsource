@@ -1,0 +1,38 @@
+digraph "setDoubleArrayOneValue" {  
+"39910" [label = <(&lt;operator&gt;.assignment,*vpp = _TIFFmallocExt(tif, nmemb * sizeof(double)))<SUB>124</SUB>> ]
+"39903" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>122</SUB>> ]
+"39911" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>124</SUB>> ]
+"39913" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, nmemb * sizeof(double)))<SUB>124</SUB>> ]
+"39920" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>125</SUB>> ]
+"39906" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, *vpp))<SUB>123</SUB>> ]
+"39915" [label = <(&lt;operator&gt;.multiplication,nmemb * sizeof(double))<SUB>124</SUB>> ]
+"39908" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>123</SUB>> ]
+"39917" [label = <(&lt;operator&gt;.sizeOf,sizeof(double))<SUB>124</SUB>> ]
+"39924" [label = <(&lt;operator&gt;.postDecrement,nmemb--)<SUB>127</SUB>> ]
+"39926" [label = <(&lt;operator&gt;.assignment,((double *)*vpp)[nmemb] = value)<SUB>128</SUB>> ]
+"39927" [label = <(&lt;operator&gt;.indirectIndexAccess,((double *)*vpp)[nmemb])<SUB>128</SUB>> ]
+"39928" [label = <(&lt;operator&gt;.cast,(double *)*vpp)<SUB>128</SUB>> ]
+"39929" [label = <(UNKNOWN,double *,double *)<SUB>128</SUB>> ]
+"39930" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>128</SUB>> ]
+"39896" [label = <(METHOD,setDoubleArrayOneValue)<SUB>119</SUB>> ]
+"39934" [label = <(METHOD_RETURN,void)<SUB>119</SUB>> ]
+  "39910" -> "39920" 
+  "39903" -> "39908" 
+  "39903" -> "39911" 
+  "39911" -> "39917" 
+  "39913" -> "39910" 
+  "39920" -> "39934" 
+  "39920" -> "39924" 
+  "39906" -> "39911" 
+  "39915" -> "39913" 
+  "39908" -> "39906" 
+  "39917" -> "39915" 
+  "39924" -> "39929" 
+  "39924" -> "39934" 
+  "39926" -> "39924" 
+  "39927" -> "39926" 
+  "39928" -> "39927" 
+  "39929" -> "39930" 
+  "39930" -> "39928" 
+  "39896" -> "39903" 
+}

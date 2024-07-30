@@ -1,0 +1,68 @@
+digraph "PredictorVSetField" {  
+"39261" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>931</SUB>> ]
+"39271" [label = <(assert,assert(sp != NULL))<SUB>933</SUB>> ]
+"39275" [label = <(assert,assert(sp-&gt;vsetparent != NULL))<SUB>934</SUB>> ]
+"39313" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>945</SUB>> ]
+"39318" [label = <(RETURN,return 1;,return 1;)<SUB>946</SUB>> ]
+"39263" [label = <(PredictorState,PredictorState(tif))<SUB>931</SUB>> ]
+"39272" [label = <(&lt;operator&gt;.notEquals,sp != NULL)<SUB>933</SUB>> ]
+"39276" [label = <(&lt;operator&gt;.notEquals,sp-&gt;vsetparent != NULL)<SUB>934</SUB>> ]
+"39314" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>945</SUB>> ]
+"39277" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;vsetparent)<SUB>934</SUB>> ]
+"39286" [label = <(&lt;operator&gt;.assignment,sp-&gt;predictor = (uint16_t)va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39295" [label = <(TIFFSetFieldBit,TIFFSetFieldBit(tif, FIELD_PREDICTOR))<SUB>940</SUB>> ]
+"39304" [label = <(RETURN,return (*sp-&gt;vsetparent)(tif, tag, ap);,return (*sp-&gt;vsetparent)(tif, tag, ap);)<SUB>943</SUB>> ]
+"39316" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>945</SUB>> ]
+"39266" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>931</SUB>> ]
+"39279" [label = <(FIELD_IDENTIFIER,vsetparent,vsetparent)<SUB>934</SUB>> ]
+"39287" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;predictor)<SUB>939</SUB>> ]
+"39290" [label = <(&lt;operator&gt;.cast,(uint16_t)va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39297" [label = <(FIELD_PREDICTOR,FIELD_PREDICTOR)<SUB>940</SUB>> ]
+"39305" [label = <(*sp-&gt;vsetparent,(*sp-&gt;vsetparent)(tif, tag, ap))<SUB>943</SUB>> ]
+"39267" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>931</SUB>> ]
+"39268" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>931</SUB>> ]
+"39289" [label = <(FIELD_IDENTIFIER,predictor,predictor)<SUB>939</SUB>> ]
+"39291" [label = <(UNKNOWN,uint16_t,uint16_t)<SUB>939</SUB>> ]
+"39292" [label = <(va_arg,va_arg(ap, uint16_vap))<SUB>939</SUB>> ]
+"39306" [label = <(&lt;operator&gt;.indirection,*sp-&gt;vsetparent)<SUB>943</SUB>> ]
+"39270" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>931</SUB>> ]
+"39299" [label = <(&lt;operator&gt;.addition,FIELD_CODEC + 0)<SUB>940</SUB>> ]
+"39307" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;vsetparent)<SUB>943</SUB>> ]
+"39309" [label = <(FIELD_IDENTIFIER,vsetparent,vsetparent)<SUB>943</SUB>> ]
+"39255" [label = <(METHOD,PredictorVSetField)<SUB>929</SUB>> ]
+"39320" [label = <(METHOD_RETURN,int)<SUB>929</SUB>> ]
+  "39261" -> "39272" 
+  "39271" -> "39279" 
+  "39275" -> "39289" 
+  "39275" -> "39309" 
+  "39313" -> "39318" 
+  "39318" -> "39320" 
+  "39263" -> "39267" 
+  "39263" -> "39261" 
+  "39272" -> "39271" 
+  "39276" -> "39275" 
+  "39314" -> "39313" 
+  "39277" -> "39276" 
+  "39286" -> "39297" 
+  "39295" -> "39316" 
+  "39304" -> "39320" 
+  "39316" -> "39314" 
+  "39266" -> "39261" 
+  "39279" -> "39277" 
+  "39287" -> "39291" 
+  "39290" -> "39286" 
+  "39297" -> "39295" 
+  "39297" -> "39299" 
+  "39305" -> "39304" 
+  "39267" -> "39270" 
+  "39268" -> "39266" 
+  "39289" -> "39287" 
+  "39291" -> "39292" 
+  "39292" -> "39290" 
+  "39306" -> "39305" 
+  "39270" -> "39268" 
+  "39299" -> "39295" 
+  "39307" -> "39306" 
+  "39309" -> "39307" 
+  "39255" -> "39263" 
+}

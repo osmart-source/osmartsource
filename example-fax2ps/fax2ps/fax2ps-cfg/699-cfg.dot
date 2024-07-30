@@ -1,0 +1,69 @@
+digraph "_TIFFReserveLargeEnoughWriteBuffer" {  
+"30723" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>191</SUB>> ]
+"30777" [label = <(RETURN,return 1;,return 1;)<SUB>206</SUB>> ]
+"30725" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>191</SUB>> ]
+"30730" [label = <(&lt;operator&gt;.greaterThan,td-&gt;td_stripbytecount_p[strip_or_tile] &gt; 0)<SUB>192</SUB>> ]
+"30726" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>191</SUB>> ]
+"30731" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_stripbytecount_p[strip_or_tile])<SUB>192</SUB>> ]
+"30739" [label = <(&lt;operator&gt;.assignment,safe_buffer_size =\012            (uint64_t)(td-&gt;td_stripbytecount_p[strip_or_tile] + 1 + 4))<SUB>196</SUB>> ]
+"30728" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>191</SUB>> ]
+"30732" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>192</SUB>> ]
+"30741" [label = <(uint64_t,(uint64_t)(td-&gt;td_stripbytecount_p[strip_or_tile] + 1 + 4))<SUB>197</SUB>> ]
+"30752" [label = <(&lt;operator&gt;.lessEqualsThan,tif-&gt;tif_rawdatasize &lt;= (tmsize_t)safe_buffer_size)<SUB>198</SUB>> ]
+"30734" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>192</SUB>> ]
+"30742" [label = <(&lt;operator&gt;.addition,td-&gt;td_stripbytecount_p[strip_or_tile] + 1 + 4)<SUB>197</SUB>> ]
+"30753" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdatasize)<SUB>198</SUB>> ]
+"30756" [label = <(&lt;operator&gt;.cast,(tmsize_t)safe_buffer_size)<SUB>198</SUB>> ]
+"30743" [label = <(&lt;operator&gt;.addition,td-&gt;td_stripbytecount_p[strip_or_tile] + 1)<SUB>197</SUB>> ]
+"30755" [label = <(FIELD_IDENTIFIER,tif_rawdatasize,tif_rawdatasize)<SUB>198</SUB>> ]
+"30757" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>198</SUB>> ]
+"30761" [label = <(&lt;operator&gt;.logicalNot,!(TIFFWriteBufferSetup(\012                    tif, NULL,\012                    (tmsize_t)TIFFroundup_64(safe_buffer_size, 1024))))<SUB>200</SUB>> ]
+"30744" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_stripbytecount_p[strip_or_tile])<SUB>197</SUB>> ]
+"30762" [label = <(TIFFWriteBufferSetup,TIFFWriteBufferSetup(\012                    tif, NULL,\012                    (tmsize_t)TIFFroundup_64(safe_buffer_size, 1024)))<SUB>200</SUB>> ]
+"30775" [label = <(RETURN,return 0;,return 0;)<SUB>203</SUB>> ]
+"30745" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripbytecount_p)<SUB>197</SUB>> ]
+"30764" [label = <(NULL,NULL)<SUB>201</SUB>> ]
+"30769" [label = <(&lt;operator&gt;.cast,(tmsize_t)TIFFroundup_64(safe_buffer_size, 1024))<SUB>202</SUB>> ]
+"30747" [label = <(FIELD_IDENTIFIER,td_stripbytecount_p,td_stripbytecount_p)<SUB>197</SUB>> ]
+"30770" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>202</SUB>> ]
+"30771" [label = <(TIFFroundup_64,TIFFroundup_64(safe_buffer_size, 1024))<SUB>202</SUB>> ]
+"30766" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>201</SUB>> ]
+"30767" [label = <(UNKNOWN,void *,void *)<SUB>201</SUB>> ]
+"30718" [label = <(METHOD,_TIFFReserveLargeEnoughWriteBuffer)<SUB>189</SUB>> ]
+"30779" [label = <(METHOD_RETURN,int)<SUB>189</SUB>> ]
+  "30723" -> "30734" 
+  "30777" -> "30779" 
+  "30725" -> "30723" 
+  "30730" -> "30747" 
+  "30730" -> "30777" 
+  "30726" -> "30725" 
+  "30731" -> "30730" 
+  "30739" -> "30755" 
+  "30728" -> "30726" 
+  "30732" -> "30731" 
+  "30741" -> "30739" 
+  "30752" -> "30764" 
+  "30752" -> "30777" 
+  "30734" -> "30732" 
+  "30742" -> "30741" 
+  "30753" -> "30757" 
+  "30756" -> "30752" 
+  "30743" -> "30742" 
+  "30755" -> "30753" 
+  "30757" -> "30756" 
+  "30761" -> "30775" 
+  "30761" -> "30777" 
+  "30744" -> "30743" 
+  "30762" -> "30761" 
+  "30775" -> "30779" 
+  "30745" -> "30744" 
+  "30764" -> "30767" 
+  "30764" -> "30770" 
+  "30769" -> "30762" 
+  "30747" -> "30745" 
+  "30770" -> "30771" 
+  "30771" -> "30769" 
+  "30766" -> "30770" 
+  "30767" -> "30766" 
+  "30718" -> "30728" 
+}

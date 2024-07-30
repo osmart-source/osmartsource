@@ -1,0 +1,111 @@
+digraph "setByteArray" {  
+"39648" [label = <(METHOD,setByteArray)<SUB>43</SUB>> ]
+"39649" [label = <(PARAM,TIFF *tif)<SUB>43</SUB>> ]
+"39650" [label = <(PARAM,void **vpp)<SUB>43</SUB>> ]
+"39651" [label = <(PARAM,const void *vp)<SUB>43</SUB>> ]
+"39652" [label = <(PARAM,size_t nmemb)<SUB>43</SUB>> ]
+"39653" [label = <(PARAM,size_t elem_size)<SUB>44</SUB>> ]
+"39654" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>45</SUB>> ]
+"39655" [label = <(CONTROL_STRUCTURE,if (*vpp),if (*vpp))<SUB>46</SUB>> ]
+"39656" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>46</SUB>> ]
+"39657" [label = <(IDENTIFIER,vpp,if (*vpp))<SUB>46</SUB>> ]
+"39658" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>47</SUB>> ]
+"39659" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, *vpp))<SUB>48</SUB>> ]
+"39660" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, *vpp))<SUB>48</SUB>> ]
+"39661" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>48</SUB>> ]
+"39662" [label = <(IDENTIFIER,vpp,_TIFFfreeExt(tif, *vpp))<SUB>48</SUB>> ]
+"39663" [label = <(&lt;operator&gt;.assignment,*vpp = 0)<SUB>49</SUB>> ]
+"39664" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>49</SUB>> ]
+"39665" [label = <(IDENTIFIER,vpp,*vpp = 0)<SUB>49</SUB>> ]
+"39666" [label = <(LITERAL,0,*vpp = 0)<SUB>49</SUB>> ]
+"39667" [label = <(CONTROL_STRUCTURE,if (vp &amp;&amp; 1),if (vp &amp;&amp; 1))<SUB>51</SUB>> ]
+"39668" [label = <(&lt;operator&gt;.logicalAnd,vp &amp;&amp; 1)<SUB>51</SUB>> ]
+"39669" [label = <(IDENTIFIER,vp,vp &amp;&amp; 1)<SUB>51</SUB>> ]
+"39670" [label = <(LITERAL,1,vp &amp;&amp; 1)<SUB>51</SUB>> ]
+"39671" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>52</SUB>> ]
+"39672" [label = <(LOCAL,tmsize_t bytes: tmsize_t)<SUB>53</SUB>> ]
+"39673" [label = <(&lt;operator&gt;.assignment,bytes = _TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39674" [label = <(IDENTIFIER,bytes,bytes = _TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39675" [label = <(_TIFFMultiplySSize,_TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39676" [label = <(IDENTIFIER,NULL,_TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39677" [label = <(IDENTIFIER,nmemb,_TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39678" [label = <(IDENTIFIER,elem_size,_TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39679" [label = <(IDENTIFIER,NULL,_TIFFMultiplySSize(NULL, nmemb, elem_size, NULL))<SUB>53</SUB>> ]
+"39680" [label = <(CONTROL_STRUCTURE,if (bytes &amp;&amp; 1),if (bytes &amp;&amp; 1))<SUB>54</SUB>> ]
+"39681" [label = <(&lt;operator&gt;.logicalAnd,bytes &amp;&amp; 1)<SUB>54</SUB>> ]
+"39682" [label = <(IDENTIFIER,bytes,bytes &amp;&amp; 1)<SUB>54</SUB>> ]
+"39683" [label = <(LITERAL,1,bytes &amp;&amp; 1)<SUB>54</SUB>> ]
+"39684" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>55</SUB>> ]
+"39685" [label = <(&lt;operator&gt;.assignment,*vpp = (void *)_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39686" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>55</SUB>> ]
+"39687" [label = <(IDENTIFIER,vpp,*vpp = (void *)_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39688" [label = <(&lt;operator&gt;.cast,(void *)_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39689" [label = <(UNKNOWN,void *,void *)<SUB>55</SUB>> ]
+"39690" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39691" [label = <(IDENTIFIER,tif,_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39692" [label = <(IDENTIFIER,bytes,_TIFFmallocExt(tif, bytes))<SUB>55</SUB>> ]
+"39693" [label = <(CONTROL_STRUCTURE,if (*vpp),if (*vpp))<SUB>56</SUB>> ]
+"39694" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>56</SUB>> ]
+"39695" [label = <(IDENTIFIER,vpp,if (*vpp))<SUB>56</SUB>> ]
+"39696" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>57</SUB>> ]
+"39697" [label = <(_TIFFmemcpy,_TIFFmemcpy(*vpp, vp, bytes))<SUB>57</SUB>> ]
+"39698" [label = <(&lt;operator&gt;.indirection,*vpp)<SUB>57</SUB>> ]
+"39699" [label = <(IDENTIFIER,vpp,_TIFFmemcpy(*vpp, vp, bytes))<SUB>57</SUB>> ]
+"39700" [label = <(IDENTIFIER,vp,_TIFFmemcpy(*vpp, vp, bytes))<SUB>57</SUB>> ]
+"39701" [label = <(IDENTIFIER,bytes,_TIFFmemcpy(*vpp, vp, bytes))<SUB>57</SUB>> ]
+"39702" [label = <(METHOD_RETURN,void)<SUB>43</SUB>> ]
+  "39648" -> "39649" 
+  "39648" -> "39650" 
+  "39648" -> "39651" 
+  "39648" -> "39652" 
+  "39648" -> "39653" 
+  "39648" -> "39654" 
+  "39648" -> "39702" 
+  "39654" -> "39655" 
+  "39654" -> "39667" 
+  "39655" -> "39656" 
+  "39655" -> "39658" 
+  "39656" -> "39657" 
+  "39658" -> "39659" 
+  "39658" -> "39663" 
+  "39659" -> "39660" 
+  "39659" -> "39661" 
+  "39661" -> "39662" 
+  "39663" -> "39664" 
+  "39663" -> "39666" 
+  "39664" -> "39665" 
+  "39667" -> "39668" 
+  "39667" -> "39671" 
+  "39668" -> "39669" 
+  "39668" -> "39670" 
+  "39671" -> "39672" 
+  "39671" -> "39673" 
+  "39671" -> "39680" 
+  "39671" -> "39693" 
+  "39673" -> "39674" 
+  "39673" -> "39675" 
+  "39675" -> "39676" 
+  "39675" -> "39677" 
+  "39675" -> "39678" 
+  "39675" -> "39679" 
+  "39680" -> "39681" 
+  "39680" -> "39684" 
+  "39681" -> "39682" 
+  "39681" -> "39683" 
+  "39684" -> "39685" 
+  "39685" -> "39686" 
+  "39685" -> "39688" 
+  "39686" -> "39687" 
+  "39688" -> "39689" 
+  "39688" -> "39690" 
+  "39690" -> "39691" 
+  "39690" -> "39692" 
+  "39693" -> "39694" 
+  "39693" -> "39696" 
+  "39694" -> "39695" 
+  "39696" -> "39697" 
+  "39697" -> "39698" 
+  "39697" -> "39700" 
+  "39697" -> "39701" 
+  "39698" -> "39699" 
+}

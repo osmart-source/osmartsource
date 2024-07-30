@@ -1,0 +1,303 @@
+digraph "horDiff64" {  
+"38595" [label = <(METHOD,horDiff64)<SUB>773</SUB>> ]
+"38596" [label = <(PARAM,TIFF *tif)<SUB>773</SUB>> ]
+"38597" [label = <(PARAM,uint8_t *cp0)<SUB>773</SUB>> ]
+"38598" [label = <(PARAM,tmsize_t cc)<SUB>773</SUB>> ]
+"38599" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>774</SUB>> ]
+"38600" [label = <(LOCAL,TIFFPredictorState* sp: TIFFPredictorState)<SUB>775</SUB>> ]
+"38601" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>775</SUB>> ]
+"38602" [label = <(IDENTIFIER,sp,*sp = PredictorState(tif))<SUB>775</SUB>> ]
+"38603" [label = <(PredictorState,PredictorState(tif))<SUB>775</SUB>> ]
+"38604" [label = <(IDENTIFIER,tif,PredictorState(tif))<SUB>775</SUB>> ]
+"38605" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"38606" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>775</SUB>> ]
+"38607" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>775</SUB>> ]
+"38608" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>775</SUB>> ]
+"38609" [label = <(IDENTIFIER,tif,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>775</SUB>> ]
+"38610" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>775</SUB>> ]
+"38611" [label = <(LOCAL,tmsize_t stride: tmsize_t)<SUB>776</SUB>> ]
+"38612" [label = <(&lt;operator&gt;.assignment,stride = sp-&gt;stride)<SUB>776</SUB>> ]
+"38613" [label = <(IDENTIFIER,stride,stride = sp-&gt;stride)<SUB>776</SUB>> ]
+"38614" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;stride)<SUB>776</SUB>> ]
+"38615" [label = <(IDENTIFIER,sp,stride = sp-&gt;stride)<SUB>776</SUB>> ]
+"38616" [label = <(FIELD_IDENTIFIER,stride,stride)<SUB>776</SUB>> ]
+"38617" [label = <(LOCAL,uint64_t* wp: uint64_t)<SUB>777</SUB>> ]
+"38618" [label = <(&lt;operator&gt;.assignment,*wp = (uint64_t *)cp0)<SUB>777</SUB>> ]
+"38619" [label = <(IDENTIFIER,wp,*wp = (uint64_t *)cp0)<SUB>777</SUB>> ]
+"38620" [label = <(&lt;operator&gt;.cast,(uint64_t *)cp0)<SUB>777</SUB>> ]
+"38621" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>777</SUB>> ]
+"38622" [label = <(IDENTIFIER,cp0,(uint64_t *)cp0)<SUB>777</SUB>> ]
+"38623" [label = <(LOCAL,tmsize_t wc: tmsize_t)<SUB>778</SUB>> ]
+"38624" [label = <(&lt;operator&gt;.assignment,wc = cc / 8)<SUB>778</SUB>> ]
+"38625" [label = <(IDENTIFIER,wc,wc = cc / 8)<SUB>778</SUB>> ]
+"38626" [label = <(&lt;operator&gt;.division,cc / 8)<SUB>778</SUB>> ]
+"38627" [label = <(IDENTIFIER,cc,cc / 8)<SUB>778</SUB>> ]
+"38628" [label = <(LITERAL,8,cc / 8)<SUB>778</SUB>> ]
+"38629" [label = <(CONTROL_STRUCTURE,if ((cc % (8 * stride)) != 0),if ((cc % (8 * stride)) != 0))<SUB>780</SUB>> ]
+"38630" [label = <(&lt;operator&gt;.notEquals,(cc % (8 * stride)) != 0)<SUB>780</SUB>> ]
+"38631" [label = <(&lt;operator&gt;.modulo,cc % (8 * stride))<SUB>780</SUB>> ]
+"38632" [label = <(IDENTIFIER,cc,cc % (8 * stride))<SUB>780</SUB>> ]
+"38633" [label = <(&lt;operator&gt;.multiplication,8 * stride)<SUB>780</SUB>> ]
+"38634" [label = <(LITERAL,8,8 * stride)<SUB>780</SUB>> ]
+"38635" [label = <(IDENTIFIER,stride,8 * stride)<SUB>780</SUB>> ]
+"38636" [label = <(LITERAL,0,(cc % (8 * stride)) != 0)<SUB>780</SUB>> ]
+"38637" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>781</SUB>> ]
+"38638" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;horDiff64&quot;, &quot;%s&quot;, &quot;(cc%(8*stride))!=0&quot;))<SUB>782</SUB>> ]
+"38639" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, &quot;horDiff64&quot;, &quot;%s&quot;, &quot;(cc%(8*stride))!=0&quot;))<SUB>782</SUB>> ]
+"38640" [label = <(LITERAL,&quot;horDiff64&quot;,TIFFErrorExtR(tif, &quot;horDiff64&quot;, &quot;%s&quot;, &quot;(cc%(8*stride))!=0&quot;))<SUB>782</SUB>> ]
+"38641" [label = <(LITERAL,&quot;%s&quot;,TIFFErrorExtR(tif, &quot;horDiff64&quot;, &quot;%s&quot;, &quot;(cc%(8*stride))!=0&quot;))<SUB>782</SUB>> ]
+"38642" [label = <(LITERAL,&quot;(cc%(8*stride))!=0&quot;,TIFFErrorExtR(tif, &quot;horDiff64&quot;, &quot;%s&quot;, &quot;(cc%(8*stride))!=0&quot;))<SUB>782</SUB>> ]
+"38643" [label = <(RETURN,return 0;,return 0;)<SUB>783</SUB>> ]
+"38644" [label = <(LITERAL,0,return 0;)<SUB>783</SUB>> ]
+"38645" [label = <(CONTROL_STRUCTURE,if (wc &gt; stride),if (wc &gt; stride))<SUB>786</SUB>> ]
+"38646" [label = <(&lt;operator&gt;.greaterThan,wc &gt; stride)<SUB>786</SUB>> ]
+"38647" [label = <(IDENTIFIER,wc,wc &gt; stride)<SUB>786</SUB>> ]
+"38648" [label = <(IDENTIFIER,stride,wc &gt; stride)<SUB>786</SUB>> ]
+"38649" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>787</SUB>> ]
+"38650" [label = <(&lt;operator&gt;.assignmentMinus,wc -= stride)<SUB>788</SUB>> ]
+"38651" [label = <(IDENTIFIER,wc,wc -= stride)<SUB>788</SUB>> ]
+"38652" [label = <(IDENTIFIER,stride,wc -= stride)<SUB>788</SUB>> ]
+"38653" [label = <(&lt;operator&gt;.assignmentPlus,wp += wc - 1)<SUB>789</SUB>> ]
+"38654" [label = <(IDENTIFIER,wp,wp += wc - 1)<SUB>789</SUB>> ]
+"38655" [label = <(&lt;operator&gt;.subtraction,wc - 1)<SUB>789</SUB>> ]
+"38656" [label = <(IDENTIFIER,wc,wc - 1)<SUB>789</SUB>> ]
+"38657" [label = <(LITERAL,1,wc - 1)<SUB>789</SUB>> ]
+"38658" [label = <(CONTROL_STRUCTURE,do\012        {\012            REPEAT4(stride, wp[stride] -= wp[0]; wp--)\012            wc -= stride;\012        } while (wc &gt; 0);,do\012        {\012            REPEAT4(stride, wp[stride] -= wp[0]; wp--)\012            wc -= stride;\012        } while (wc &gt; 0);)<SUB>790</SUB>> ]
+"38659" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>791</SUB>> ]
+"38660" [label = <(REPEAT4,REPEAT4(stride, wp[stride] -= wp[0]; wp--))<SUB>792</SUB>> ]
+"38661" [label = <(IDENTIFIER,stride,REPEAT4(stride, wp[stride] -= wp[0]; wp--))<SUB>792</SUB>> ]
+"38662" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"38663" [label = <(CONTROL_STRUCTURE,switch(stride),switch(stride))<SUB>792</SUB>> ]
+"38664" [label = <(IDENTIFIER,stride,switch(stride))<SUB>792</SUB>> ]
+"38665" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38666" [label = <(JUMP_TARGET,default)<SUB>792</SUB>> ]
+"38667" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38668" [label = <(LOCAL,tmsize_t i: tmsize_t)<SUB>792</SUB>> ]
+"38669" [label = <(CONTROL_STRUCTURE,for (REPEAT4(stride, wp[stride] -= wp[0]; wp--)i &gt; 0;i--),for (REPEAT4(stride, wp[stride] -= wp[0]; wp--)i &gt; 0;i--))<SUB>792</SUB>> ]
+"38670" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38671" [label = <(&lt;operator&gt;.assignment,i = stride - 4)<SUB>792</SUB>> ]
+"38672" [label = <(IDENTIFIER,i,i = stride - 4)<SUB>792</SUB>> ]
+"38673" [label = <(&lt;operator&gt;.subtraction,stride - 4)<SUB>792</SUB>> ]
+"38674" [label = <(IDENTIFIER,stride,stride - 4)<SUB>792</SUB>> ]
+"38675" [label = <(LITERAL,4,stride - 4)<SUB>792</SUB>> ]
+"38676" [label = <(&lt;operator&gt;.greaterThan,i &gt; 0)<SUB>792</SUB>> ]
+"38677" [label = <(IDENTIFIER,i,i &gt; 0)<SUB>792</SUB>> ]
+"38678" [label = <(LITERAL,0,i &gt; 0)<SUB>792</SUB>> ]
+"38679" [label = <(&lt;operator&gt;.postDecrement,i--)<SUB>792</SUB>> ]
+"38680" [label = <(IDENTIFIER,i,i--)<SUB>792</SUB>> ]
+"38681" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38682" [label = <(&lt;operator&gt;.assignmentMinus,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38683" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[stride])<SUB>792</SUB>> ]
+"38684" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38685" [label = <(IDENTIFIER,stride,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38686" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[0])<SUB>792</SUB>> ]
+"38687" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38688" [label = <(LITERAL,0,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38689" [label = <(&lt;operator&gt;.postDecrement,wp--)<SUB>792</SUB>> ]
+"38690" [label = <(IDENTIFIER,wp,wp--)<SUB>792</SUB>> ]
+"38691" [label = <(JUMP_TARGET,default)<SUB>792</SUB>> ]
+"38692" [label = <(LITERAL,4,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38693" [label = <(&lt;operator&gt;.assignmentMinus,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38694" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[stride])<SUB>792</SUB>> ]
+"38695" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38696" [label = <(IDENTIFIER,stride,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38697" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[0])<SUB>792</SUB>> ]
+"38698" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38699" [label = <(LITERAL,0,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38700" [label = <(&lt;operator&gt;.postDecrement,wp--)<SUB>792</SUB>> ]
+"38701" [label = <(IDENTIFIER,wp,wp--)<SUB>792</SUB>> ]
+"38702" [label = <(JUMP_TARGET,default)<SUB>792</SUB>> ]
+"38703" [label = <(LITERAL,3,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38704" [label = <(&lt;operator&gt;.assignmentMinus,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38705" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[stride])<SUB>792</SUB>> ]
+"38706" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38707" [label = <(IDENTIFIER,stride,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38708" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[0])<SUB>792</SUB>> ]
+"38709" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38710" [label = <(LITERAL,0,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38711" [label = <(&lt;operator&gt;.postDecrement,wp--)<SUB>792</SUB>> ]
+"38712" [label = <(IDENTIFIER,wp,wp--)<SUB>792</SUB>> ]
+"38713" [label = <(JUMP_TARGET,default)<SUB>792</SUB>> ]
+"38714" [label = <(LITERAL,2,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38715" [label = <(&lt;operator&gt;.assignmentMinus,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38716" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[stride])<SUB>792</SUB>> ]
+"38717" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38718" [label = <(IDENTIFIER,stride,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38719" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[0])<SUB>792</SUB>> ]
+"38720" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38721" [label = <(LITERAL,0,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38722" [label = <(&lt;operator&gt;.postDecrement,wp--)<SUB>792</SUB>> ]
+"38723" [label = <(IDENTIFIER,wp,wp--)<SUB>792</SUB>> ]
+"38724" [label = <(JUMP_TARGET,default)<SUB>792</SUB>> ]
+"38725" [label = <(LITERAL,1,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38726" [label = <(&lt;operator&gt;.assignmentMinus,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38727" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[stride])<SUB>792</SUB>> ]
+"38728" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38729" [label = <(IDENTIFIER,stride,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38730" [label = <(&lt;operator&gt;.indirectIndexAccess,wp[0])<SUB>792</SUB>> ]
+"38731" [label = <(IDENTIFIER,wp,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38732" [label = <(LITERAL,0,wp[stride] -= wp[0])<SUB>792</SUB>> ]
+"38733" [label = <(&lt;operator&gt;.postDecrement,wp--)<SUB>792</SUB>> ]
+"38734" [label = <(IDENTIFIER,wp,wp--)<SUB>792</SUB>> ]
+"38735" [label = <(JUMP_TARGET,default)<SUB>792</SUB>> ]
+"38736" [label = <(LITERAL,0,&lt;empty&gt;)<SUB>792</SUB>> ]
+"38737" [label = <(&lt;operator&gt;.assignmentMinus,wc -= stride)<SUB>793</SUB>> ]
+"38738" [label = <(IDENTIFIER,wc,wc -= stride)<SUB>793</SUB>> ]
+"38739" [label = <(IDENTIFIER,stride,wc -= stride)<SUB>793</SUB>> ]
+"38740" [label = <(&lt;operator&gt;.greaterThan,wc &gt; 0)<SUB>794</SUB>> ]
+"38741" [label = <(IDENTIFIER,wc,wc &gt; 0)<SUB>794</SUB>> ]
+"38742" [label = <(LITERAL,0,wc &gt; 0)<SUB>794</SUB>> ]
+"38743" [label = <(RETURN,return 1;,return 1;)<SUB>796</SUB>> ]
+"38744" [label = <(LITERAL,1,return 1;)<SUB>796</SUB>> ]
+"38745" [label = <(METHOD_RETURN,int)<SUB>773</SUB>> ]
+  "38595" -> "38596" 
+  "38595" -> "38597" 
+  "38595" -> "38598" 
+  "38595" -> "38599" 
+  "38595" -> "38745" 
+  "38599" -> "38600" 
+  "38599" -> "38601" 
+  "38599" -> "38611" 
+  "38599" -> "38612" 
+  "38599" -> "38617" 
+  "38599" -> "38618" 
+  "38599" -> "38623" 
+  "38599" -> "38624" 
+  "38599" -> "38629" 
+  "38599" -> "38645" 
+  "38599" -> "38743" 
+  "38601" -> "38602" 
+  "38601" -> "38603" 
+  "38603" -> "38604" 
+  "38603" -> "38605" 
+  "38605" -> "38606" 
+  "38606" -> "38607" 
+  "38606" -> "38608" 
+  "38608" -> "38609" 
+  "38608" -> "38610" 
+  "38612" -> "38613" 
+  "38612" -> "38614" 
+  "38614" -> "38615" 
+  "38614" -> "38616" 
+  "38618" -> "38619" 
+  "38618" -> "38620" 
+  "38620" -> "38621" 
+  "38620" -> "38622" 
+  "38624" -> "38625" 
+  "38624" -> "38626" 
+  "38626" -> "38627" 
+  "38626" -> "38628" 
+  "38629" -> "38630" 
+  "38629" -> "38637" 
+  "38630" -> "38631" 
+  "38630" -> "38636" 
+  "38631" -> "38632" 
+  "38631" -> "38633" 
+  "38633" -> "38634" 
+  "38633" -> "38635" 
+  "38637" -> "38638" 
+  "38637" -> "38643" 
+  "38638" -> "38639" 
+  "38638" -> "38640" 
+  "38638" -> "38641" 
+  "38638" -> "38642" 
+  "38643" -> "38644" 
+  "38645" -> "38646" 
+  "38645" -> "38649" 
+  "38646" -> "38647" 
+  "38646" -> "38648" 
+  "38649" -> "38650" 
+  "38649" -> "38653" 
+  "38649" -> "38658" 
+  "38650" -> "38651" 
+  "38650" -> "38652" 
+  "38653" -> "38654" 
+  "38653" -> "38655" 
+  "38655" -> "38656" 
+  "38655" -> "38657" 
+  "38658" -> "38659" 
+  "38658" -> "38740" 
+  "38659" -> "38660" 
+  "38659" -> "38737" 
+  "38660" -> "38661" 
+  "38660" -> "38662" 
+  "38662" -> "38663" 
+  "38663" -> "38664" 
+  "38663" -> "38665" 
+  "38665" -> "38666" 
+  "38665" -> "38667" 
+  "38665" -> "38691" 
+  "38665" -> "38692" 
+  "38665" -> "38693" 
+  "38665" -> "38700" 
+  "38665" -> "38702" 
+  "38665" -> "38703" 
+  "38665" -> "38704" 
+  "38665" -> "38711" 
+  "38665" -> "38713" 
+  "38665" -> "38714" 
+  "38665" -> "38715" 
+  "38665" -> "38722" 
+  "38665" -> "38724" 
+  "38665" -> "38725" 
+  "38665" -> "38726" 
+  "38665" -> "38733" 
+  "38665" -> "38735" 
+  "38665" -> "38736" 
+  "38667" -> "38668" 
+  "38667" -> "38669" 
+  "38669" -> "38670" 
+  "38669" -> "38676" 
+  "38669" -> "38679" 
+  "38669" -> "38681" 
+  "38670" -> "38671" 
+  "38671" -> "38672" 
+  "38671" -> "38673" 
+  "38673" -> "38674" 
+  "38673" -> "38675" 
+  "38676" -> "38677" 
+  "38676" -> "38678" 
+  "38679" -> "38680" 
+  "38681" -> "38682" 
+  "38681" -> "38689" 
+  "38682" -> "38683" 
+  "38682" -> "38686" 
+  "38683" -> "38684" 
+  "38683" -> "38685" 
+  "38686" -> "38687" 
+  "38686" -> "38688" 
+  "38689" -> "38690" 
+  "38693" -> "38694" 
+  "38693" -> "38697" 
+  "38694" -> "38695" 
+  "38694" -> "38696" 
+  "38697" -> "38698" 
+  "38697" -> "38699" 
+  "38700" -> "38701" 
+  "38704" -> "38705" 
+  "38704" -> "38708" 
+  "38705" -> "38706" 
+  "38705" -> "38707" 
+  "38708" -> "38709" 
+  "38708" -> "38710" 
+  "38711" -> "38712" 
+  "38715" -> "38716" 
+  "38715" -> "38719" 
+  "38716" -> "38717" 
+  "38716" -> "38718" 
+  "38719" -> "38720" 
+  "38719" -> "38721" 
+  "38722" -> "38723" 
+  "38726" -> "38727" 
+  "38726" -> "38730" 
+  "38727" -> "38728" 
+  "38727" -> "38729" 
+  "38730" -> "38731" 
+  "38730" -> "38732" 
+  "38733" -> "38734" 
+  "38737" -> "38738" 
+  "38737" -> "38739" 
+  "38740" -> "38741" 
+  "38740" -> "38742" 
+  "38743" -> "38744" 
+}

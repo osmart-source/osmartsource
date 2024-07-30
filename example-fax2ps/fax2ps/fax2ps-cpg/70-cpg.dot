@@ -1,0 +1,14 @@
+digraph "fprintf" {  
+"2538" [label = <(METHOD,fprintf)<SUB>326</SUB>> ]
+"2539" [label = <(PARAM,FILE *__restrict __stream)<SUB>326</SUB>> ]
+"2540" [label = <(PARAM,const char *__restrict __format...)<SUB>327</SUB>> ]
+"2541" [label = <(METHOD_RETURN,int)<SUB>326</SUB>> ]
+  "2538" -> "2539"  [ label = "AST: "] 
+  "2538" -> "2540"  [ label = "AST: "] 
+  "2538" -> "2541"  [ label = "AST: "] 
+  "2538" -> "2541"  [ label = "CFG: "] 
+  "2539" -> "2541"  [ label = "DDG: __stream"] 
+  "2540" -> "2541"  [ label = "DDG: __format"] 
+  "2538" -> "2539"  [ label = "DDG: "] 
+  "2538" -> "2540"  [ label = "DDG: "] 
+}

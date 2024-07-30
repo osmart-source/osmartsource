@@ -1,0 +1,88 @@
+digraph "TIFFTileRowSize64" {  
+"29603" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFTileRowSize64&quot;)<SUB>142</SUB>> ]
+"29607" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>143</SUB>> ]
+"29641" [label = <(&lt;operator&gt;.assignment,rowsize = _TIFFMultiply64(tif, td-&gt;td_bitspersample, td-&gt;td_tilewidth,\012                              &quot;TIFFTileRowSize&quot;))<SUB>157</SUB>> ]
+"29681" [label = <(&lt;operator&gt;.assignment,tilerowsize = TIFFhowmany8_64(rowsize))<SUB>169</SUB>> ]
+"29696" [label = <(RETURN,return (tilerowsize);,return (tilerowsize);)<SUB>175</SUB>> ]
+"29609" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>143</SUB>> ]
+"29616" [label = <(&lt;operator&gt;.equals,td-&gt;td_tilelength == 0)<SUB>147</SUB>> ]
+"29629" [label = <(&lt;operator&gt;.equals,td-&gt;td_tilewidth == 0)<SUB>152</SUB>> ]
+"29643" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, td-&gt;td_bitspersample, td-&gt;td_tilewidth,\012                              &quot;TIFFTileRowSize&quot;))<SUB>157</SUB>> ]
+"29653" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_CONTIG)<SUB>159</SUB>> ]
+"29683" [label = <(TIFFhowmany8_64,TIFFhowmany8_64(rowsize))<SUB>169</SUB>> ]
+"29686" [label = <(&lt;operator&gt;.equals,tilerowsize == 0)<SUB>170</SUB>> ]
+"29610" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>143</SUB>> ]
+"29617" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilelength)<SUB>147</SUB>> ]
+"29622" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Tile length is zero&quot;))<SUB>149</SUB>> ]
+"29626" [label = <(RETURN,return 0;,return 0;)<SUB>150</SUB>> ]
+"29630" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilewidth)<SUB>152</SUB>> ]
+"29635" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Tile width is zero&quot;))<SUB>154</SUB>> ]
+"29639" [label = <(RETURN,return (0);,return (0);)<SUB>155</SUB>> ]
+"29645" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_bitspersample)<SUB>157</SUB>> ]
+"29648" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_tilewidth)<SUB>157</SUB>> ]
+"29654" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>159</SUB>> ]
+"29672" [label = <(&lt;operator&gt;.assignment,rowsize = _TIFFMultiply64(tif, rowsize, td-&gt;td_samplesperpixel,\012                                  &quot;TIFFTileRowSize&quot;))<SUB>166</SUB>> ]
+"29690" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Computed tile row size is zero&quot;))<SUB>172</SUB>> ]
+"29694" [label = <(RETURN,return 0;,return 0;)<SUB>173</SUB>> ]
+"29612" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>143</SUB>> ]
+"29619" [label = <(FIELD_IDENTIFIER,td_tilelength,td_tilelength)<SUB>147</SUB>> ]
+"29632" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>152</SUB>> ]
+"29647" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>157</SUB>> ]
+"29650" [label = <(FIELD_IDENTIFIER,td_tilewidth,td_tilewidth)<SUB>157</SUB>> ]
+"29656" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>159</SUB>> ]
+"29660" [label = <(&lt;operator&gt;.equals,td-&gt;td_samplesperpixel == 0)<SUB>161</SUB>> ]
+"29674" [label = <(_TIFFMultiply64,_TIFFMultiply64(tif, rowsize, td-&gt;td_samplesperpixel,\012                                  &quot;TIFFTileRowSize&quot;))<SUB>166</SUB>> ]
+"29661" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>161</SUB>> ]
+"29666" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Samples per pixel is zero&quot;))<SUB>163</SUB>> ]
+"29670" [label = <(RETURN,return 0;,return 0;)<SUB>164</SUB>> ]
+"29677" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_samplesperpixel)<SUB>166</SUB>> ]
+"29663" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>161</SUB>> ]
+"29679" [label = <(FIELD_IDENTIFIER,td_samplesperpixel,td_samplesperpixel)<SUB>166</SUB>> ]
+"29599" [label = <(METHOD,TIFFTileRowSize64)<SUB>140</SUB>> ]
+"29698" [label = <(METHOD_RETURN,uint64_t)<SUB>140</SUB>> ]
+  "29603" -> "29612" 
+  "29607" -> "29619" 
+  "29641" -> "29656" 
+  "29681" -> "29686" 
+  "29696" -> "29698" 
+  "29609" -> "29607" 
+  "29616" -> "29622" 
+  "29616" -> "29632" 
+  "29629" -> "29635" 
+  "29629" -> "29647" 
+  "29643" -> "29641" 
+  "29653" -> "29663" 
+  "29653" -> "29683" 
+  "29683" -> "29681" 
+  "29686" -> "29690" 
+  "29686" -> "29696" 
+  "29610" -> "29609" 
+  "29617" -> "29616" 
+  "29622" -> "29626" 
+  "29626" -> "29698" 
+  "29630" -> "29629" 
+  "29635" -> "29639" 
+  "29639" -> "29698" 
+  "29645" -> "29650" 
+  "29648" -> "29643" 
+  "29654" -> "29653" 
+  "29672" -> "29683" 
+  "29690" -> "29694" 
+  "29694" -> "29698" 
+  "29612" -> "29610" 
+  "29619" -> "29617" 
+  "29632" -> "29630" 
+  "29647" -> "29645" 
+  "29650" -> "29648" 
+  "29656" -> "29654" 
+  "29660" -> "29666" 
+  "29660" -> "29679" 
+  "29674" -> "29672" 
+  "29661" -> "29660" 
+  "29666" -> "29670" 
+  "29670" -> "29698" 
+  "29677" -> "29674" 
+  "29663" -> "29661" 
+  "29679" -> "29677" 
+  "29599" -> "29603" 
+}

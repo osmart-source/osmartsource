@@ -1,0 +1,37 @@
+digraph "TIFFSetMode" {  
+"1511" [label = <(METHOD,TIFFSetMode)<SUB>704</SUB>> ]
+"1512" [label = <(PARAM,TIFF *tif)<SUB>704</SUB>> ]
+"1513" [label = <(PARAM,int mode)<SUB>704</SUB>> ]
+"1514" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>705</SUB>> ]
+"1515" [label = <(LOCAL,int old_mode: int)<SUB>706</SUB>> ]
+"1516" [label = <(&lt;operator&gt;.assignment,old_mode = tif-&gt;tif_mode)<SUB>706</SUB>> ]
+"1517" [label = <(IDENTIFIER,old_mode,old_mode = tif-&gt;tif_mode)<SUB>706</SUB>> ]
+"1518" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>706</SUB>> ]
+"1519" [label = <(IDENTIFIER,tif,old_mode = tif-&gt;tif_mode)<SUB>706</SUB>> ]
+"1520" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>706</SUB>> ]
+"1521" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_mode = mode)<SUB>707</SUB>> ]
+"1522" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_mode)<SUB>707</SUB>> ]
+"1523" [label = <(IDENTIFIER,tif,tif-&gt;tif_mode = mode)<SUB>707</SUB>> ]
+"1524" [label = <(FIELD_IDENTIFIER,tif_mode,tif_mode)<SUB>707</SUB>> ]
+"1525" [label = <(IDENTIFIER,mode,tif-&gt;tif_mode = mode)<SUB>707</SUB>> ]
+"1526" [label = <(RETURN,return (old_mode);,return (old_mode);)<SUB>708</SUB>> ]
+"1527" [label = <(IDENTIFIER,old_mode,return (old_mode);)<SUB>708</SUB>> ]
+"1528" [label = <(METHOD_RETURN,int)<SUB>704</SUB>> ]
+  "1511" -> "1512" 
+  "1511" -> "1513" 
+  "1511" -> "1514" 
+  "1511" -> "1528" 
+  "1514" -> "1515" 
+  "1514" -> "1516" 
+  "1514" -> "1521" 
+  "1514" -> "1526" 
+  "1516" -> "1517" 
+  "1516" -> "1518" 
+  "1518" -> "1519" 
+  "1518" -> "1520" 
+  "1521" -> "1522" 
+  "1521" -> "1525" 
+  "1522" -> "1523" 
+  "1522" -> "1524" 
+  "1526" -> "1527" 
+}

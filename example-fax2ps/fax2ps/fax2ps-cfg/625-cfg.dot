@@ -1,0 +1,16 @@
+digraph "TIFFFieldWithName" {  
+"27660" [label = <(&lt;operator&gt;.assignment,*fip = _TIFFFindFieldByName(tif, field_name, TIFF_ANY))<SUB>1050</SUB>> ]
+"27675" [label = <(RETURN,return (fip);,return (fip);)<SUB>1056</SUB>> ]
+"27662" [label = <(_TIFFFindFieldByName,_TIFFFindFieldByName(tif, field_name, TIFF_ANY))<SUB>1050</SUB>> ]
+"27667" [label = <(&lt;operator&gt;.logicalNot,!fip)<SUB>1051</SUB>> ]
+"27670" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, &quot;TIFFFieldWithName&quot;,\012                      &quot;Internal error, unknown tag %s&quot;, field_name))<SUB>1053</SUB>> ]
+"27655" [label = <(METHOD,TIFFFieldWithName)<SUB>1048</SUB>> ]
+"27677" [label = <(METHOD_RETURN,TIFFField)<SUB>1048</SUB>> ]
+  "27660" -> "27667" 
+  "27675" -> "27677" 
+  "27662" -> "27660" 
+  "27667" -> "27670" 
+  "27667" -> "27675" 
+  "27670" -> "27675" 
+  "27655" -> "27662" 
+}

@@ -1,0 +1,41 @@
+digraph "TIFFReadDirEntryCheckRangeSshortSlong8" {  
+"87746" [label = <(METHOD,TIFFReadDirEntryCheckRangeSshortSlong8)<SUB>3732</SUB>> ]
+"87747" [label = <(PARAM,int64_t value)<SUB>3733</SUB>> ]
+"87748" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3734</SUB>> ]
+"87749" [label = <(CONTROL_STRUCTURE,if ((value &lt; -0x8000) || (value &gt; 0x7FFF)),if ((value &lt; -0x8000) || (value &gt; 0x7FFF)))<SUB>3735</SUB>> ]
+"87750" [label = <(&lt;operator&gt;.logicalOr,(value &lt; -0x8000) || (value &gt; 0x7FFF))<SUB>3735</SUB>> ]
+"87751" [label = <(&lt;operator&gt;.lessThan,value &lt; -0x8000)<SUB>3735</SUB>> ]
+"87752" [label = <(IDENTIFIER,value,value &lt; -0x8000)<SUB>3735</SUB>> ]
+"87753" [label = <(&lt;operator&gt;.minus,-0x8000)<SUB>3735</SUB>> ]
+"87754" [label = <(LITERAL,0x8000,-0x8000)<SUB>3735</SUB>> ]
+"87755" [label = <(&lt;operator&gt;.greaterThan,value &gt; 0x7FFF)<SUB>3735</SUB>> ]
+"87756" [label = <(IDENTIFIER,value,value &gt; 0x7FFF)<SUB>3735</SUB>> ]
+"87757" [label = <(LITERAL,0x7FFF,value &gt; 0x7FFF)<SUB>3735</SUB>> ]
+"87758" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3736</SUB>> ]
+"87759" [label = <(RETURN,return (TIFFReadDirEntryErrRange);,return (TIFFReadDirEntryErrRange);)<SUB>3736</SUB>> ]
+"87760" [label = <(IDENTIFIER,TIFFReadDirEntryErrRange,return (TIFFReadDirEntryErrRange);)<SUB>3736</SUB>> ]
+"87761" [label = <(CONTROL_STRUCTURE,else,else)<SUB>3738</SUB>> ]
+"87762" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>3738</SUB>> ]
+"87763" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3738</SUB>> ]
+"87764" [label = <(IDENTIFIER,TIFFReadDirEntryErrOk,return (TIFFReadDirEntryErrOk);)<SUB>3738</SUB>> ]
+"87765" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3732</SUB>> ]
+  "87746" -> "87747" 
+  "87746" -> "87748" 
+  "87746" -> "87765" 
+  "87748" -> "87749" 
+  "87749" -> "87750" 
+  "87749" -> "87758" 
+  "87749" -> "87761" 
+  "87750" -> "87751" 
+  "87750" -> "87755" 
+  "87751" -> "87752" 
+  "87751" -> "87753" 
+  "87753" -> "87754" 
+  "87755" -> "87756" 
+  "87755" -> "87757" 
+  "87758" -> "87759" 
+  "87759" -> "87760" 
+  "87761" -> "87762" 
+  "87762" -> "87763" 
+  "87763" -> "87764" 
+}

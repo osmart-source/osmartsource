@@ -1,0 +1,64 @@
+digraph "TIFFWriteDirectoryTagCheckedRational" {  
+"70319" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagCheckedRational&quot;)<SUB>2343</SUB>> ]
+"70323" [label = <(assert,assert(sizeof(uint32_t) == 4))<SUB>2345</SUB>> ]
+"70381" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_RATIONAL, 1, 8,\012                                      &amp;m[0]));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_RATIONAL, 1, 8,\012                                      &amp;m[0]));)<SUB>2371</SUB>> ]
+"70324" [label = <(&lt;operator&gt;.equals,sizeof(uint32_t) == 4)<SUB>2345</SUB>> ]
+"70329" [label = <(&lt;operator&gt;.lessThan,value &lt; 0)<SUB>2346</SUB>> ]
+"70365" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2366</SUB>> ]
+"70382" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_RATIONAL, 1, 8,\012                                      &amp;m[0]))<SUB>2371</SUB>> ]
+"70325" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint32_t))<SUB>2345</SUB>> ]
+"70333" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Negative value is illegal&quot;))<SUB>2348</SUB>> ]
+"70337" [label = <(RETURN,return 0;,return 0;)<SUB>2349</SUB>> ]
+"70366" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2366</SUB>> ]
+"70371" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;m[0]))<SUB>2368</SUB>> ]
+"70376" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;m[1]))<SUB>2369</SUB>> ]
+"70390" [label = <(&lt;operator&gt;.addressOf,&amp;m[0])<SUB>2372</SUB>> ]
+"70368" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2366</SUB>> ]
+"70372" [label = <(&lt;operator&gt;.addressOf,&amp;m[0])<SUB>2368</SUB>> ]
+"70377" [label = <(&lt;operator&gt;.addressOf,&amp;m[1])<SUB>2369</SUB>> ]
+"70391" [label = <(&lt;operator&gt;.indirectIndexAccess,m[0])<SUB>2372</SUB>> ]
+"70342" [label = <(&lt;operator&gt;.notEquals,value != value)<SUB>2351</SUB>> ]
+"70373" [label = <(&lt;operator&gt;.indirectIndexAccess,m[0])<SUB>2368</SUB>> ]
+"70378" [label = <(&lt;operator&gt;.indirectIndexAccess,m[1])<SUB>2369</SUB>> ]
+"70346" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Not-a-number value is illegal&quot;))<SUB>2353</SUB>> ]
+"70350" [label = <(RETURN,return 0;,return 0;)<SUB>2354</SUB>> ]
+"70354" [label = <(DoubleToRational,DoubleToRational(value, &amp;m[0], &amp;m[1]))<SUB>2363</SUB>> ]
+"70356" [label = <(&lt;operator&gt;.addressOf,&amp;m[0])<SUB>2363</SUB>> ]
+"70360" [label = <(&lt;operator&gt;.addressOf,&amp;m[1])<SUB>2363</SUB>> ]
+"70357" [label = <(&lt;operator&gt;.indirectIndexAccess,m[0])<SUB>2363</SUB>> ]
+"70361" [label = <(&lt;operator&gt;.indirectIndexAccess,m[1])<SUB>2363</SUB>> ]
+"70311" [label = <(METHOD,TIFFWriteDirectoryTagCheckedRational)<SUB>2339</SUB>> ]
+"70394" [label = <(METHOD_RETURN,int)<SUB>2339</SUB>> ]
+  "70319" -> "70325" 
+  "70323" -> "70329" 
+  "70381" -> "70394" 
+  "70324" -> "70323" 
+  "70329" -> "70333" 
+  "70329" -> "70342" 
+  "70365" -> "70373" 
+  "70365" -> "70391" 
+  "70382" -> "70381" 
+  "70325" -> "70324" 
+  "70333" -> "70337" 
+  "70337" -> "70394" 
+  "70366" -> "70365" 
+  "70371" -> "70378" 
+  "70376" -> "70391" 
+  "70390" -> "70382" 
+  "70368" -> "70366" 
+  "70372" -> "70371" 
+  "70377" -> "70376" 
+  "70391" -> "70390" 
+  "70342" -> "70346" 
+  "70342" -> "70357" 
+  "70373" -> "70372" 
+  "70378" -> "70377" 
+  "70346" -> "70350" 
+  "70350" -> "70394" 
+  "70354" -> "70368" 
+  "70356" -> "70361" 
+  "70360" -> "70354" 
+  "70357" -> "70356" 
+  "70361" -> "70360" 
+  "70311" -> "70319" 
+}

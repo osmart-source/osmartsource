@@ -1,0 +1,45 @@
+digraph "PredictorVGetField" {  
+"39328" [label = <(&lt;operator&gt;.assignment,*sp = PredictorState(tif))<SUB>951</SUB>> ]
+"39338" [label = <(assert,assert(sp != NULL))<SUB>953</SUB>> ]
+"39342" [label = <(assert,assert(sp-&gt;vgetparent != NULL))<SUB>954</SUB>> ]
+"39365" [label = <(RETURN,return 1;,return 1;)<SUB>964</SUB>> ]
+"39330" [label = <(PredictorState,PredictorState(tif))<SUB>951</SUB>> ]
+"39339" [label = <(&lt;operator&gt;.notEquals,sp != NULL)<SUB>953</SUB>> ]
+"39343" [label = <(&lt;operator&gt;.notEquals,sp-&gt;vgetparent != NULL)<SUB>954</SUB>> ]
+"39344" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;vgetparent)<SUB>954</SUB>> ]
+"39353" [label = <(UNKNOWN,*va_arg(ap, uint16_t *) = (uint16_t)sp-&gt;predictor;,*va_arg(ap, uint16_t *) = (uint16_t)sp-&gt;predictor;)<SUB>959</SUB>> ]
+"39356" [label = <(RETURN,return (*sp-&gt;vgetparent)(tif, tag, ap);,return (*sp-&gt;vgetparent)(tif, tag, ap);)<SUB>962</SUB>> ]
+"39333" [label = <(&lt;operator&gt;.cast,(TIFFPredictorState *)(tif)-&gt;tif_data)<SUB>951</SUB>> ]
+"39346" [label = <(FIELD_IDENTIFIER,vgetparent,vgetparent)<SUB>954</SUB>> ]
+"39357" [label = <(*sp-&gt;vgetparent,(*sp-&gt;vgetparent)(tif, tag, ap))<SUB>962</SUB>> ]
+"39334" [label = <(UNKNOWN,TIFFPredictorState *,TIFFPredictorState *)<SUB>951</SUB>> ]
+"39335" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_data)<SUB>951</SUB>> ]
+"39358" [label = <(&lt;operator&gt;.indirection,*sp-&gt;vgetparent)<SUB>962</SUB>> ]
+"39337" [label = <(FIELD_IDENTIFIER,tif_data,tif_data)<SUB>951</SUB>> ]
+"39359" [label = <(&lt;operator&gt;.indirectFieldAccess,sp-&gt;vgetparent)<SUB>962</SUB>> ]
+"39361" [label = <(FIELD_IDENTIFIER,vgetparent,vgetparent)<SUB>962</SUB>> ]
+"39322" [label = <(METHOD,PredictorVGetField)<SUB>949</SUB>> ]
+"39367" [label = <(METHOD_RETURN,int)<SUB>949</SUB>> ]
+  "39328" -> "39339" 
+  "39338" -> "39346" 
+  "39342" -> "39353" 
+  "39342" -> "39361" 
+  "39365" -> "39367" 
+  "39330" -> "39334" 
+  "39330" -> "39328" 
+  "39339" -> "39338" 
+  "39343" -> "39342" 
+  "39344" -> "39343" 
+  "39353" -> "39365" 
+  "39356" -> "39367" 
+  "39333" -> "39328" 
+  "39346" -> "39344" 
+  "39357" -> "39356" 
+  "39334" -> "39337" 
+  "39335" -> "39333" 
+  "39358" -> "39357" 
+  "39337" -> "39335" 
+  "39359" -> "39358" 
+  "39361" -> "39359" 
+  "39322" -> "39330" 
+}

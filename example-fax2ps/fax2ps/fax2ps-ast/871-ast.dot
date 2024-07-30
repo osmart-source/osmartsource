@@ -1,0 +1,243 @@
+digraph "TIFFUnsetField" {  
+"42449" [label = <(METHOD,TIFFUnsetField)<SUB>1160</SUB>> ]
+"42450" [label = <(PARAM,TIFF *tif)<SUB>1160</SUB>> ]
+"42451" [label = <(PARAM,uint32_t tag)<SUB>1160</SUB>> ]
+"42452" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1161</SUB>> ]
+"42453" [label = <(LOCAL,const TIFFField* fip: TIFFField)<SUB>1162</SUB>> ]
+"42454" [label = <(&lt;operator&gt;.assignment,*fip = TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42455" [label = <(IDENTIFIER,fip,*fip = TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42456" [label = <(TIFFFieldWithTag,TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42457" [label = <(IDENTIFIER,tif,TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42458" [label = <(IDENTIFIER,tag,TIFFFieldWithTag(tif, tag))<SUB>1162</SUB>> ]
+"42459" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>1163</SUB>> ]
+"42460" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42461" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42462" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42463" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42464" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>1163</SUB>> ]
+"42465" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1163</SUB>> ]
+"42466" [label = <(CONTROL_STRUCTURE,if (!fip),if (!fip))<SUB>1165</SUB>> ]
+"42467" [label = <(&lt;operator&gt;.logicalNot,!fip)<SUB>1165</SUB>> ]
+"42468" [label = <(IDENTIFIER,fip,!fip)<SUB>1165</SUB>> ]
+"42469" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1166</SUB>> ]
+"42470" [label = <(RETURN,return 0;,return 0;)<SUB>1166</SUB>> ]
+"42471" [label = <(LITERAL,0,return 0;)<SUB>1166</SUB>> ]
+"42472" [label = <(CONTROL_STRUCTURE,if (fip-&gt;field_bit != FIELD_CUSTOM),if (fip-&gt;field_bit != FIELD_CUSTOM))<SUB>1168</SUB>> ]
+"42473" [label = <(&lt;operator&gt;.notEquals,fip-&gt;field_bit != FIELD_CUSTOM)<SUB>1168</SUB>> ]
+"42474" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1168</SUB>> ]
+"42475" [label = <(IDENTIFIER,fip,fip-&gt;field_bit != FIELD_CUSTOM)<SUB>1168</SUB>> ]
+"42476" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1168</SUB>> ]
+"42477" [label = <(IDENTIFIER,FIELD_CUSTOM,fip-&gt;field_bit != FIELD_CUSTOM)<SUB>1168</SUB>> ]
+"42478" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1169</SUB>> ]
+"42479" [label = <(TIFFClrFieldBit,TIFFClrFieldBit(tif, fip-&gt;field_bit))<SUB>1169</SUB>> ]
+"42480" [label = <(IDENTIFIER,tif,TIFFClrFieldBit(tif, fip-&gt;field_bit))<SUB>1169</SUB>> ]
+"42481" [label = <(&lt;operator&gt;.indirectFieldAccess,fip-&gt;field_bit)<SUB>1169</SUB>> ]
+"42482" [label = <(IDENTIFIER,fip,TIFFClrFieldBit(tif, fip-&gt;field_bit))<SUB>1169</SUB>> ]
+"42483" [label = <(FIELD_IDENTIFIER,field_bit,field_bit)<SUB>1169</SUB>> ]
+"42484" [label = <(CONTROL_STRUCTURE,else,else)<SUB>1171</SUB>> ]
+"42485" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1171</SUB>> ]
+"42486" [label = <(LOCAL,TIFFTagValue* tv: TIFFTagValue)<SUB>1172</SUB>> ]
+"42487" [label = <(&lt;operator&gt;.assignment,*tv = NULL)<SUB>1172</SUB>> ]
+"42488" [label = <(IDENTIFIER,tv,*tv = NULL)<SUB>1172</SUB>> ]
+"42489" [label = <(IDENTIFIER,NULL,*tv = NULL)<SUB>1172</SUB>> ]
+"42490" [label = <(LOCAL,int i: int)<SUB>1173</SUB>> ]
+"42491" [label = <(CONTROL_STRUCTURE,for (i = 0;i &lt; td-&gt;td_customValueCount;i++),for (i = 0;i &lt; td-&gt;td_customValueCount;i++))<SUB>1175</SUB>> ]
+"42492" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1175</SUB>> ]
+"42493" [label = <(&lt;operator&gt;.assignment,i = 0)<SUB>1175</SUB>> ]
+"42494" [label = <(IDENTIFIER,i,i = 0)<SUB>1175</SUB>> ]
+"42495" [label = <(LITERAL,0,i = 0)<SUB>1175</SUB>> ]
+"42496" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount)<SUB>1175</SUB>> ]
+"42497" [label = <(IDENTIFIER,i,i &lt; td-&gt;td_customValueCount)<SUB>1175</SUB>> ]
+"42498" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1175</SUB>> ]
+"42499" [label = <(IDENTIFIER,td,i &lt; td-&gt;td_customValueCount)<SUB>1175</SUB>> ]
+"42500" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1175</SUB>> ]
+"42501" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>1175</SUB>> ]
+"42502" [label = <(IDENTIFIER,i,i++)<SUB>1175</SUB>> ]
+"42503" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1176</SUB>> ]
+"42504" [label = <(&lt;operator&gt;.assignment,tv = td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42505" [label = <(IDENTIFIER,tv,tv = td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42506" [label = <(&lt;operator&gt;.addition,td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42507" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1178</SUB>> ]
+"42508" [label = <(IDENTIFIER,td,td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42509" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1178</SUB>> ]
+"42510" [label = <(IDENTIFIER,i,td-&gt;td_customValues + i)<SUB>1178</SUB>> ]
+"42511" [label = <(CONTROL_STRUCTURE,if (tv-&gt;info-&gt;field_tag == tag),if (tv-&gt;info-&gt;field_tag == tag))<SUB>1179</SUB>> ]
+"42512" [label = <(&lt;operator&gt;.equals,tv-&gt;info-&gt;field_tag == tag)<SUB>1179</SUB>> ]
+"42513" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;info-&gt;field_tag)<SUB>1179</SUB>> ]
+"42514" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;info)<SUB>1179</SUB>> ]
+"42515" [label = <(IDENTIFIER,tv,tv-&gt;info-&gt;field_tag == tag)<SUB>1179</SUB>> ]
+"42516" [label = <(FIELD_IDENTIFIER,info,info)<SUB>1179</SUB>> ]
+"42517" [label = <(FIELD_IDENTIFIER,field_tag,field_tag)<SUB>1179</SUB>> ]
+"42518" [label = <(IDENTIFIER,tag,tv-&gt;info-&gt;field_tag == tag)<SUB>1179</SUB>> ]
+"42519" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1180</SUB>> ]
+"42520" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>1180</SUB>> ]
+"42521" [label = <(CONTROL_STRUCTURE,if (i &lt; td-&gt;td_customValueCount),if (i &lt; td-&gt;td_customValueCount))<SUB>1183</SUB>> ]
+"42522" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount)<SUB>1183</SUB>> ]
+"42523" [label = <(IDENTIFIER,i,i &lt; td-&gt;td_customValueCount)<SUB>1183</SUB>> ]
+"42524" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1183</SUB>> ]
+"42525" [label = <(IDENTIFIER,td,i &lt; td-&gt;td_customValueCount)<SUB>1183</SUB>> ]
+"42526" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1183</SUB>> ]
+"42527" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1184</SUB>> ]
+"42528" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, tv-&gt;value))<SUB>1185</SUB>> ]
+"42529" [label = <(IDENTIFIER,tif,_TIFFfreeExt(tif, tv-&gt;value))<SUB>1185</SUB>> ]
+"42530" [label = <(&lt;operator&gt;.indirectFieldAccess,tv-&gt;value)<SUB>1185</SUB>> ]
+"42531" [label = <(IDENTIFIER,tv,_TIFFfreeExt(tif, tv-&gt;value))<SUB>1185</SUB>> ]
+"42532" [label = <(FIELD_IDENTIFIER,value,value)<SUB>1185</SUB>> ]
+"42533" [label = <(CONTROL_STRUCTURE,for (;i &lt; td-&gt;td_customValueCount - 1;i++),for (;i &lt; td-&gt;td_customValueCount - 1;i++))<SUB>1186</SUB>> ]
+"42534" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1186</SUB>> ]
+"42535" [label = <(&lt;operator&gt;.lessThan,i &lt; td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42536" [label = <(IDENTIFIER,i,i &lt; td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42537" [label = <(&lt;operator&gt;.subtraction,td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42538" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1186</SUB>> ]
+"42539" [label = <(IDENTIFIER,td,td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42540" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1186</SUB>> ]
+"42541" [label = <(LITERAL,1,td-&gt;td_customValueCount - 1)<SUB>1186</SUB>> ]
+"42542" [label = <(&lt;operator&gt;.postIncrement,i++)<SUB>1186</SUB>> ]
+"42543" [label = <(IDENTIFIER,i,i++)<SUB>1186</SUB>> ]
+"42544" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1187</SUB>> ]
+"42545" [label = <(&lt;operator&gt;.assignment,td-&gt;td_customValues[i] = td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42546" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_customValues[i])<SUB>1188</SUB>> ]
+"42547" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1188</SUB>> ]
+"42548" [label = <(IDENTIFIER,td,td-&gt;td_customValues[i] = td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42549" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1188</SUB>> ]
+"42550" [label = <(IDENTIFIER,i,td-&gt;td_customValues[i] = td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42551" [label = <(&lt;operator&gt;.indirectIndexAccess,td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42552" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValues)<SUB>1188</SUB>> ]
+"42553" [label = <(IDENTIFIER,td,td-&gt;td_customValues[i] = td-&gt;td_customValues[i + 1])<SUB>1188</SUB>> ]
+"42554" [label = <(FIELD_IDENTIFIER,td_customValues,td_customValues)<SUB>1188</SUB>> ]
+"42555" [label = <(&lt;operator&gt;.addition,i + 1)<SUB>1188</SUB>> ]
+"42556" [label = <(IDENTIFIER,i,i + 1)<SUB>1188</SUB>> ]
+"42557" [label = <(LITERAL,1,i + 1)<SUB>1188</SUB>> ]
+"42558" [label = <(&lt;operator&gt;.postDecrement,td-&gt;td_customValueCount--)<SUB>1190</SUB>> ]
+"42559" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_customValueCount)<SUB>1190</SUB>> ]
+"42560" [label = <(IDENTIFIER,td,td-&gt;td_customValueCount--)<SUB>1190</SUB>> ]
+"42561" [label = <(FIELD_IDENTIFIER,td_customValueCount,td_customValueCount)<SUB>1190</SUB>> ]
+"42562" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>1194</SUB>> ]
+"42563" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1194</SUB>> ]
+"42564" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>1194</SUB>> ]
+"42565" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1194</SUB>> ]
+"42566" [label = <(IDENTIFIER,TIFF_DIRTYDIRECT,tif-&gt;tif_flags |= TIFF_DIRTYDIRECT)<SUB>1194</SUB>> ]
+"42567" [label = <(RETURN,return (1);,return (1);)<SUB>1196</SUB>> ]
+"42568" [label = <(LITERAL,1,return (1);)<SUB>1196</SUB>> ]
+"42569" [label = <(METHOD_RETURN,int)<SUB>1160</SUB>> ]
+  "42449" -> "42450" 
+  "42449" -> "42451" 
+  "42449" -> "42452" 
+  "42449" -> "42569" 
+  "42452" -> "42453" 
+  "42452" -> "42454" 
+  "42452" -> "42459" 
+  "42452" -> "42460" 
+  "42452" -> "42466" 
+  "42452" -> "42472" 
+  "42452" -> "42562" 
+  "42452" -> "42567" 
+  "42454" -> "42455" 
+  "42454" -> "42456" 
+  "42456" -> "42457" 
+  "42456" -> "42458" 
+  "42460" -> "42461" 
+  "42460" -> "42462" 
+  "42462" -> "42463" 
+  "42463" -> "42464" 
+  "42463" -> "42465" 
+  "42466" -> "42467" 
+  "42466" -> "42469" 
+  "42467" -> "42468" 
+  "42469" -> "42470" 
+  "42470" -> "42471" 
+  "42472" -> "42473" 
+  "42472" -> "42478" 
+  "42472" -> "42484" 
+  "42473" -> "42474" 
+  "42473" -> "42477" 
+  "42474" -> "42475" 
+  "42474" -> "42476" 
+  "42478" -> "42479" 
+  "42479" -> "42480" 
+  "42479" -> "42481" 
+  "42481" -> "42482" 
+  "42481" -> "42483" 
+  "42484" -> "42485" 
+  "42485" -> "42486" 
+  "42485" -> "42487" 
+  "42485" -> "42490" 
+  "42485" -> "42491" 
+  "42485" -> "42521" 
+  "42487" -> "42488" 
+  "42487" -> "42489" 
+  "42491" -> "42492" 
+  "42491" -> "42496" 
+  "42491" -> "42501" 
+  "42491" -> "42503" 
+  "42492" -> "42493" 
+  "42493" -> "42494" 
+  "42493" -> "42495" 
+  "42496" -> "42497" 
+  "42496" -> "42498" 
+  "42498" -> "42499" 
+  "42498" -> "42500" 
+  "42501" -> "42502" 
+  "42503" -> "42504" 
+  "42503" -> "42511" 
+  "42504" -> "42505" 
+  "42504" -> "42506" 
+  "42506" -> "42507" 
+  "42506" -> "42510" 
+  "42507" -> "42508" 
+  "42507" -> "42509" 
+  "42511" -> "42512" 
+  "42511" -> "42519" 
+  "42512" -> "42513" 
+  "42512" -> "42518" 
+  "42513" -> "42514" 
+  "42513" -> "42517" 
+  "42514" -> "42515" 
+  "42514" -> "42516" 
+  "42519" -> "42520" 
+  "42521" -> "42522" 
+  "42521" -> "42527" 
+  "42522" -> "42523" 
+  "42522" -> "42524" 
+  "42524" -> "42525" 
+  "42524" -> "42526" 
+  "42527" -> "42528" 
+  "42527" -> "42533" 
+  "42527" -> "42558" 
+  "42528" -> "42529" 
+  "42528" -> "42530" 
+  "42530" -> "42531" 
+  "42530" -> "42532" 
+  "42533" -> "42534" 
+  "42533" -> "42535" 
+  "42533" -> "42542" 
+  "42533" -> "42544" 
+  "42535" -> "42536" 
+  "42535" -> "42537" 
+  "42537" -> "42538" 
+  "42537" -> "42541" 
+  "42538" -> "42539" 
+  "42538" -> "42540" 
+  "42542" -> "42543" 
+  "42544" -> "42545" 
+  "42545" -> "42546" 
+  "42545" -> "42551" 
+  "42546" -> "42547" 
+  "42546" -> "42550" 
+  "42547" -> "42548" 
+  "42547" -> "42549" 
+  "42551" -> "42552" 
+  "42551" -> "42555" 
+  "42552" -> "42553" 
+  "42552" -> "42554" 
+  "42555" -> "42556" 
+  "42555" -> "42557" 
+  "42558" -> "42559" 
+  "42559" -> "42560" 
+  "42559" -> "42561" 
+  "42562" -> "42563" 
+  "42562" -> "42566" 
+  "42563" -> "42564" 
+  "42563" -> "42565" 
+  "42567" -> "42568" 
+}

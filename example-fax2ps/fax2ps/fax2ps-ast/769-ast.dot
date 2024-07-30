@@ -1,0 +1,217 @@
+digraph "_tiffWriteProc" {  
+"33672" [label = <(METHOD,_tiffWriteProc)<SUB>91</SUB>> ]
+"33673" [label = <(PARAM,thandle_t fd)<SUB>91</SUB>> ]
+"33674" [label = <(PARAM,void *buf)<SUB>91</SUB>> ]
+"33675" [label = <(PARAM,tmsize_t size)<SUB>91</SUB>> ]
+"33676" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>92</SUB>> ]
+"33677" [label = <(LOCAL,fd_as_handle_union_t fdh: fd_as_handle_union_t)<SUB>93</SUB>> ]
+"33678" [label = <(LOCAL,const size_t bytes_total: size_t)<SUB>94</SUB>> ]
+"33679" [label = <(&lt;operator&gt;.assignment,bytes_total = (size_t)size)<SUB>94</SUB>> ]
+"33680" [label = <(IDENTIFIER,bytes_total,bytes_total = (size_t)size)<SUB>94</SUB>> ]
+"33681" [label = <(&lt;operator&gt;.cast,(size_t)size)<SUB>94</SUB>> ]
+"33682" [label = <(UNKNOWN,size_t,size_t)<SUB>94</SUB>> ]
+"33683" [label = <(IDENTIFIER,size,(size_t)size)<SUB>94</SUB>> ]
+"33684" [label = <(LOCAL,size_t bytes_written: size_t)<SUB>95</SUB>> ]
+"33685" [label = <(LOCAL,tmsize_t count: tmsize_t)<SUB>96</SUB>> ]
+"33686" [label = <(&lt;operator&gt;.assignment,count = -1)<SUB>96</SUB>> ]
+"33687" [label = <(IDENTIFIER,count,count = -1)<SUB>96</SUB>> ]
+"33688" [label = <(&lt;operator&gt;.minus,-1)<SUB>96</SUB>> ]
+"33689" [label = <(LITERAL,1,-1)<SUB>96</SUB>> ]
+"33690" [label = <(CONTROL_STRUCTURE,if ((tmsize_t)bytes_total != size),if ((tmsize_t)bytes_total != size))<SUB>97</SUB>> ]
+"33691" [label = <(&lt;operator&gt;.notEquals,(tmsize_t)bytes_total != size)<SUB>97</SUB>> ]
+"33692" [label = <(&lt;operator&gt;.cast,(tmsize_t)bytes_total)<SUB>97</SUB>> ]
+"33693" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>97</SUB>> ]
+"33694" [label = <(IDENTIFIER,bytes_total,(tmsize_t)bytes_total)<SUB>97</SUB>> ]
+"33695" [label = <(IDENTIFIER,size,(tmsize_t)bytes_total != size)<SUB>97</SUB>> ]
+"33696" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>98</SUB>> ]
+"33697" [label = <(&lt;operator&gt;.assignment,(*__errno_location()) = 22)<SUB>99</SUB>> ]
+"33698" [label = <(&lt;operator&gt;.indirection,*__errno_location())<SUB>99</SUB>> ]
+"33699" [label = <(__errno_location,__errno_location())<SUB>99</SUB>> ]
+"33700" [label = <(EINVAL,EINVAL)<SUB>99</SUB>> ]
+"33701" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"33702" [label = <(LITERAL,22,&lt;empty&gt;)<SUB>99</SUB>> ]
+"33703" [label = <(RETURN,return (tmsize_t)-1;,return (tmsize_t)-1;)<SUB>100</SUB>> ]
+"33704" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>100</SUB>> ]
+"33705" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>100</SUB>> ]
+"33706" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>100</SUB>> ]
+"33707" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>102</SUB>> ]
+"33708" [label = <(&lt;operator&gt;.fieldAccess,fdh.h)<SUB>102</SUB>> ]
+"33709" [label = <(IDENTIFIER,fdh,fdh.h = fd)<SUB>102</SUB>> ]
+"33710" [label = <(FIELD_IDENTIFIER,h,h)<SUB>102</SUB>> ]
+"33711" [label = <(IDENTIFIER,fd,fdh.h = fd)<SUB>102</SUB>> ]
+"33712" [label = <(CONTROL_STRUCTURE,for (bytes_written = 0;bytes_written &lt; bytes_total;bytes_written += count),for (bytes_written = 0;bytes_written &lt; bytes_total;bytes_written += count))<SUB>103</SUB>> ]
+"33713" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>103</SUB>> ]
+"33714" [label = <(&lt;operator&gt;.assignment,bytes_written = 0)<SUB>103</SUB>> ]
+"33715" [label = <(IDENTIFIER,bytes_written,bytes_written = 0)<SUB>103</SUB>> ]
+"33716" [label = <(LITERAL,0,bytes_written = 0)<SUB>103</SUB>> ]
+"33717" [label = <(&lt;operator&gt;.lessThan,bytes_written &lt; bytes_total)<SUB>103</SUB>> ]
+"33718" [label = <(IDENTIFIER,bytes_written,bytes_written &lt; bytes_total)<SUB>103</SUB>> ]
+"33719" [label = <(IDENTIFIER,bytes_total,bytes_written &lt; bytes_total)<SUB>103</SUB>> ]
+"33720" [label = <(&lt;operator&gt;.assignmentPlus,bytes_written += count)<SUB>103</SUB>> ]
+"33721" [label = <(IDENTIFIER,bytes_written,bytes_written += count)<SUB>103</SUB>> ]
+"33722" [label = <(IDENTIFIER,count,bytes_written += count)<SUB>103</SUB>> ]
+"33723" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>104</SUB>> ]
+"33724" [label = <(LOCAL,const char* buf_offset: char)<SUB>105</SUB>> ]
+"33725" [label = <(&lt;operator&gt;.assignment,*buf_offset = (char *)buf + bytes_written)<SUB>105</SUB>> ]
+"33726" [label = <(IDENTIFIER,buf_offset,*buf_offset = (char *)buf + bytes_written)<SUB>105</SUB>> ]
+"33727" [label = <(&lt;operator&gt;.addition,(char *)buf + bytes_written)<SUB>105</SUB>> ]
+"33728" [label = <(&lt;operator&gt;.cast,(char *)buf)<SUB>105</SUB>> ]
+"33729" [label = <(UNKNOWN,char *,char *)<SUB>105</SUB>> ]
+"33730" [label = <(IDENTIFIER,buf,(char *)buf)<SUB>105</SUB>> ]
+"33731" [label = <(IDENTIFIER,bytes_written,(char *)buf + bytes_written)<SUB>105</SUB>> ]
+"33732" [label = <(LOCAL,size_t io_size: size_t)<SUB>106</SUB>> ]
+"33733" [label = <(&lt;operator&gt;.assignment,io_size = bytes_total - bytes_written)<SUB>106</SUB>> ]
+"33734" [label = <(IDENTIFIER,io_size,io_size = bytes_total - bytes_written)<SUB>106</SUB>> ]
+"33735" [label = <(&lt;operator&gt;.subtraction,bytes_total - bytes_written)<SUB>106</SUB>> ]
+"33736" [label = <(IDENTIFIER,bytes_total,bytes_total - bytes_written)<SUB>106</SUB>> ]
+"33737" [label = <(IDENTIFIER,bytes_written,bytes_total - bytes_written)<SUB>106</SUB>> ]
+"33738" [label = <(CONTROL_STRUCTURE,if (io_size &gt; TIFF_IO_MAX),if (io_size &gt; TIFF_IO_MAX))<SUB>107</SUB>> ]
+"33739" [label = <(&lt;operator&gt;.greaterThan,io_size &gt; TIFF_IO_MAX)<SUB>107</SUB>> ]
+"33740" [label = <(IDENTIFIER,io_size,io_size &gt; TIFF_IO_MAX)<SUB>107</SUB>> ]
+"33741" [label = <(TIFF_IO_MAX,TIFF_IO_MAX)<SUB>107</SUB>> ]
+"33742" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"33743" [label = <(LITERAL,2147483647U,&lt;empty&gt;)<SUB>107</SUB>> ]
+"33744" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>108</SUB>> ]
+"33745" [label = <(&lt;operator&gt;.assignment,io_size = TIFF_IO_MAX)<SUB>108</SUB>> ]
+"33746" [label = <(IDENTIFIER,io_size,io_size = TIFF_IO_MAX)<SUB>108</SUB>> ]
+"33747" [label = <(TIFF_IO_MAX,TIFF_IO_MAX)<SUB>108</SUB>> ]
+"33748" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)> ]
+"33749" [label = <(LITERAL,2147483647U,&lt;empty&gt;)<SUB>108</SUB>> ]
+"33750" [label = <(&lt;operator&gt;.assignment,count = write(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>109</SUB>> ]
+"33751" [label = <(IDENTIFIER,count,count = write(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>109</SUB>> ]
+"33752" [label = <(write,write(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>109</SUB>> ]
+"33753" [label = <(&lt;operator&gt;.fieldAccess,fdh.fd)<SUB>109</SUB>> ]
+"33754" [label = <(IDENTIFIER,fdh,write(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>109</SUB>> ]
+"33755" [label = <(FIELD_IDENTIFIER,fd,fd)<SUB>109</SUB>> ]
+"33756" [label = <(IDENTIFIER,buf_offset,write(fdh.fd, buf_offset, (TIFFIOSize_t)io_size))<SUB>109</SUB>> ]
+"33757" [label = <(&lt;operator&gt;.cast,(TIFFIOSize_t)io_size)<SUB>109</SUB>> ]
+"33758" [label = <(UNKNOWN,TIFFIOSize_t,TIFFIOSize_t)<SUB>109</SUB>> ]
+"33759" [label = <(IDENTIFIER,io_size,(TIFFIOSize_t)io_size)<SUB>109</SUB>> ]
+"33760" [label = <(CONTROL_STRUCTURE,if (count &lt;= 0),if (count &lt;= 0))<SUB>110</SUB>> ]
+"33761" [label = <(&lt;operator&gt;.lessEqualsThan,count &lt;= 0)<SUB>110</SUB>> ]
+"33762" [label = <(IDENTIFIER,count,count &lt;= 0)<SUB>110</SUB>> ]
+"33763" [label = <(LITERAL,0,count &lt;= 0)<SUB>110</SUB>> ]
+"33764" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>111</SUB>> ]
+"33765" [label = <(CONTROL_STRUCTURE,break;,break;)<SUB>111</SUB>> ]
+"33766" [label = <(CONTROL_STRUCTURE,if (count &lt; 0),if (count &lt; 0))<SUB>113</SUB>> ]
+"33767" [label = <(&lt;operator&gt;.lessThan,count &lt; 0)<SUB>113</SUB>> ]
+"33768" [label = <(IDENTIFIER,count,count &lt; 0)<SUB>113</SUB>> ]
+"33769" [label = <(LITERAL,0,count &lt; 0)<SUB>113</SUB>> ]
+"33770" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>114</SUB>> ]
+"33771" [label = <(RETURN,return (tmsize_t)-1;,return (tmsize_t)-1;)<SUB>114</SUB>> ]
+"33772" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>114</SUB>> ]
+"33773" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>114</SUB>> ]
+"33774" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>114</SUB>> ]
+"33775" [label = <(RETURN,return (tmsize_t)bytes_written;,return (tmsize_t)bytes_written;)<SUB>115</SUB>> ]
+"33776" [label = <(&lt;operator&gt;.cast,(tmsize_t)bytes_written)<SUB>115</SUB>> ]
+"33777" [label = <(UNKNOWN,tmsize_t,tmsize_t)<SUB>115</SUB>> ]
+"33778" [label = <(IDENTIFIER,bytes_written,(tmsize_t)bytes_written)<SUB>115</SUB>> ]
+"33779" [label = <(METHOD_RETURN,tmsize_t)<SUB>91</SUB>> ]
+  "33672" -> "33673" 
+  "33672" -> "33674" 
+  "33672" -> "33675" 
+  "33672" -> "33676" 
+  "33672" -> "33779" 
+  "33676" -> "33677" 
+  "33676" -> "33678" 
+  "33676" -> "33679" 
+  "33676" -> "33684" 
+  "33676" -> "33685" 
+  "33676" -> "33686" 
+  "33676" -> "33690" 
+  "33676" -> "33707" 
+  "33676" -> "33712" 
+  "33676" -> "33766" 
+  "33676" -> "33775" 
+  "33679" -> "33680" 
+  "33679" -> "33681" 
+  "33681" -> "33682" 
+  "33681" -> "33683" 
+  "33686" -> "33687" 
+  "33686" -> "33688" 
+  "33688" -> "33689" 
+  "33690" -> "33691" 
+  "33690" -> "33696" 
+  "33691" -> "33692" 
+  "33691" -> "33695" 
+  "33692" -> "33693" 
+  "33692" -> "33694" 
+  "33696" -> "33697" 
+  "33696" -> "33703" 
+  "33697" -> "33698" 
+  "33697" -> "33700" 
+  "33698" -> "33699" 
+  "33700" -> "33701" 
+  "33701" -> "33702" 
+  "33703" -> "33704" 
+  "33704" -> "33705" 
+  "33704" -> "33706" 
+  "33707" -> "33708" 
+  "33707" -> "33711" 
+  "33708" -> "33709" 
+  "33708" -> "33710" 
+  "33712" -> "33713" 
+  "33712" -> "33717" 
+  "33712" -> "33720" 
+  "33712" -> "33723" 
+  "33713" -> "33714" 
+  "33714" -> "33715" 
+  "33714" -> "33716" 
+  "33717" -> "33718" 
+  "33717" -> "33719" 
+  "33720" -> "33721" 
+  "33720" -> "33722" 
+  "33723" -> "33724" 
+  "33723" -> "33725" 
+  "33723" -> "33732" 
+  "33723" -> "33733" 
+  "33723" -> "33738" 
+  "33723" -> "33750" 
+  "33723" -> "33760" 
+  "33725" -> "33726" 
+  "33725" -> "33727" 
+  "33727" -> "33728" 
+  "33727" -> "33731" 
+  "33728" -> "33729" 
+  "33728" -> "33730" 
+  "33733" -> "33734" 
+  "33733" -> "33735" 
+  "33735" -> "33736" 
+  "33735" -> "33737" 
+  "33738" -> "33739" 
+  "33738" -> "33744" 
+  "33739" -> "33740" 
+  "33739" -> "33741" 
+  "33741" -> "33742" 
+  "33742" -> "33743" 
+  "33744" -> "33745" 
+  "33745" -> "33746" 
+  "33745" -> "33747" 
+  "33747" -> "33748" 
+  "33748" -> "33749" 
+  "33750" -> "33751" 
+  "33750" -> "33752" 
+  "33752" -> "33753" 
+  "33752" -> "33756" 
+  "33752" -> "33757" 
+  "33753" -> "33754" 
+  "33753" -> "33755" 
+  "33757" -> "33758" 
+  "33757" -> "33759" 
+  "33760" -> "33761" 
+  "33760" -> "33764" 
+  "33761" -> "33762" 
+  "33761" -> "33763" 
+  "33764" -> "33765" 
+  "33766" -> "33767" 
+  "33766" -> "33770" 
+  "33767" -> "33768" 
+  "33767" -> "33769" 
+  "33770" -> "33771" 
+  "33771" -> "33772" 
+  "33772" -> "33773" 
+  "33772" -> "33774" 
+  "33775" -> "33776" 
+  "33776" -> "33777" 
+  "33776" -> "33778" 
+}

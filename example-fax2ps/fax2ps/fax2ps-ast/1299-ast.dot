@@ -1,0 +1,29 @@
+digraph "TIFFReadGPSDirectory" {  
+"91178" [label = <(METHOD,TIFFReadGPSDirectory)<SUB>5153</SUB>> ]
+"91179" [label = <(PARAM,TIFF *tif)<SUB>5153</SUB>> ]
+"91180" [label = <(PARAM,toff_t diroff)<SUB>5153</SUB>> ]
+"91181" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>5154</SUB>> ]
+"91182" [label = <(LOCAL,const TIFFFieldArray* gpsFieldArray: TIFFFieldArray)<SUB>5155</SUB>> ]
+"91183" [label = <(&lt;operator&gt;.assignment,gpsFieldArray = _TIFFGetGpsFields())<SUB>5156</SUB>> ]
+"91184" [label = <(IDENTIFIER,gpsFieldArray,gpsFieldArray = _TIFFGetGpsFields())<SUB>5156</SUB>> ]
+"91185" [label = <(_TIFFGetGpsFields,_TIFFGetGpsFields())<SUB>5156</SUB>> ]
+"91186" [label = <(RETURN,return TIFFReadCustomDirectory(tif, diroff, gpsFieldArray);,return TIFFReadCustomDirectory(tif, diroff, gpsFieldArray);)<SUB>5157</SUB>> ]
+"91187" [label = <(TIFFReadCustomDirectory,TIFFReadCustomDirectory(tif, diroff, gpsFieldArray))<SUB>5157</SUB>> ]
+"91188" [label = <(IDENTIFIER,tif,TIFFReadCustomDirectory(tif, diroff, gpsFieldArray))<SUB>5157</SUB>> ]
+"91189" [label = <(IDENTIFIER,diroff,TIFFReadCustomDirectory(tif, diroff, gpsFieldArray))<SUB>5157</SUB>> ]
+"91190" [label = <(IDENTIFIER,gpsFieldArray,TIFFReadCustomDirectory(tif, diroff, gpsFieldArray))<SUB>5157</SUB>> ]
+"91191" [label = <(METHOD_RETURN,int)<SUB>5153</SUB>> ]
+  "91178" -> "91179" 
+  "91178" -> "91180" 
+  "91178" -> "91181" 
+  "91178" -> "91191" 
+  "91181" -> "91182" 
+  "91181" -> "91183" 
+  "91181" -> "91186" 
+  "91183" -> "91184" 
+  "91183" -> "91185" 
+  "91186" -> "91187" 
+  "91187" -> "91188" 
+  "91187" -> "91189" 
+  "91187" -> "91190" 
+}

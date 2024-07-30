@@ -1,0 +1,57 @@
+digraph "TIFFClampDoubleToInt16" {  
+"67403" [label = <(METHOD,TIFFClampDoubleToInt16)<SUB>1259</SUB>> ]
+"67404" [label = <(PARAM,double val)<SUB>1259</SUB>> ]
+"67405" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1260</SUB>> ]
+"67406" [label = <(CONTROL_STRUCTURE,if (val &gt; 32767),if (val &gt; 32767))<SUB>1261</SUB>> ]
+"67407" [label = <(&lt;operator&gt;.greaterThan,val &gt; 32767)<SUB>1261</SUB>> ]
+"67408" [label = <(IDENTIFIER,val,val &gt; 32767)<SUB>1261</SUB>> ]
+"67409" [label = <(LITERAL,32767,val &gt; 32767)<SUB>1261</SUB>> ]
+"67410" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1262</SUB>> ]
+"67411" [label = <(RETURN,return 32767;,return 32767;)<SUB>1262</SUB>> ]
+"67412" [label = <(LITERAL,32767,return 32767;)<SUB>1262</SUB>> ]
+"67413" [label = <(CONTROL_STRUCTURE,if (val &lt; -32768 || val != val),if (val &lt; -32768 || val != val))<SUB>1263</SUB>> ]
+"67414" [label = <(&lt;operator&gt;.logicalOr,val &lt; -32768 || val != val)<SUB>1263</SUB>> ]
+"67415" [label = <(&lt;operator&gt;.lessThan,val &lt; -32768)<SUB>1263</SUB>> ]
+"67416" [label = <(IDENTIFIER,val,val &lt; -32768)<SUB>1263</SUB>> ]
+"67417" [label = <(&lt;operator&gt;.minus,-32768)<SUB>1263</SUB>> ]
+"67418" [label = <(LITERAL,32768,-32768)<SUB>1263</SUB>> ]
+"67419" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1263</SUB>> ]
+"67420" [label = <(IDENTIFIER,val,val != val)<SUB>1263</SUB>> ]
+"67421" [label = <(IDENTIFIER,val,val != val)<SUB>1263</SUB>> ]
+"67422" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1264</SUB>> ]
+"67423" [label = <(RETURN,return -32768;,return -32768;)<SUB>1264</SUB>> ]
+"67424" [label = <(&lt;operator&gt;.minus,-32768)<SUB>1264</SUB>> ]
+"67425" [label = <(LITERAL,32768,-32768)<SUB>1264</SUB>> ]
+"67426" [label = <(RETURN,return (int16_t)val;,return (int16_t)val;)<SUB>1265</SUB>> ]
+"67427" [label = <(&lt;operator&gt;.cast,(int16_t)val)<SUB>1265</SUB>> ]
+"67428" [label = <(UNKNOWN,int16_t,int16_t)<SUB>1265</SUB>> ]
+"67429" [label = <(IDENTIFIER,val,(int16_t)val)<SUB>1265</SUB>> ]
+"67430" [label = <(METHOD_RETURN,int16_t)<SUB>1259</SUB>> ]
+  "67403" -> "67404" 
+  "67403" -> "67405" 
+  "67403" -> "67430" 
+  "67405" -> "67406" 
+  "67405" -> "67413" 
+  "67405" -> "67426" 
+  "67406" -> "67407" 
+  "67406" -> "67410" 
+  "67407" -> "67408" 
+  "67407" -> "67409" 
+  "67410" -> "67411" 
+  "67411" -> "67412" 
+  "67413" -> "67414" 
+  "67413" -> "67422" 
+  "67414" -> "67415" 
+  "67414" -> "67419" 
+  "67415" -> "67416" 
+  "67415" -> "67417" 
+  "67417" -> "67418" 
+  "67419" -> "67420" 
+  "67419" -> "67421" 
+  "67422" -> "67423" 
+  "67423" -> "67424" 
+  "67424" -> "67425" 
+  "67426" -> "67427" 
+  "67427" -> "67428" 
+  "67427" -> "67429" 
+}

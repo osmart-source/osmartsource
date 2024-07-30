@@ -1,0 +1,23 @@
+digraph "unixWarningHandler" {  
+"34226" [label = <(fprintf,fprintf(stderr, &quot;Warning, &quot;))<SUB>357</SUB>> ]
+"34229" [label = <(vfprintf,vfprintf(stderr, fmt, ap))<SUB>358</SUB>> ]
+"34233" [label = <(fprintf,fprintf(stderr, &quot;.\n&quot;))<SUB>359</SUB>> ]
+"34214" [label = <(&lt;operator&gt;.notEquals,module != NULL)<SUB>355</SUB>> ]
+"34216" [label = <(NULL,NULL)<SUB>355</SUB>> ]
+"34222" [label = <(fprintf,fprintf(stderr, &quot;%s: &quot;, module))<SUB>356</SUB>> ]
+"34218" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>355</SUB>> ]
+"34219" [label = <(UNKNOWN,void *,void *)<SUB>355</SUB>> ]
+"34208" [label = <(METHOD,unixWarningHandler)<SUB>353</SUB>> ]
+"34236" [label = <(METHOD_RETURN,void)<SUB>353</SUB>> ]
+  "34226" -> "34229" 
+  "34229" -> "34233" 
+  "34233" -> "34236" 
+  "34214" -> "34222" 
+  "34214" -> "34226" 
+  "34216" -> "34219" 
+  "34216" -> "34214" 
+  "34222" -> "34226" 
+  "34218" -> "34214" 
+  "34219" -> "34218" 
+  "34208" -> "34216" 
+}

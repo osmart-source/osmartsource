@@ -1,0 +1,19 @@
+digraph "TIFFListDestroy" {  
+"5256" [label = <(&lt;operator&gt;.assignment,*psCurrent = psList)<SUB>262</SUB>> ]
+"5263" [label = <(&lt;operator&gt;.assignment,*const psNext = psCurrent-&gt;psNext)<SUB>266</SUB>> ]
+"5268" [label = <(free,free(psCurrent))<SUB>267</SUB>> ]
+"5270" [label = <(&lt;operator&gt;.assignment,psCurrent = psNext)<SUB>268</SUB>> ]
+"5265" [label = <(&lt;operator&gt;.indirectFieldAccess,psCurrent-&gt;psNext)<SUB>266</SUB>> ]
+"5267" [label = <(FIELD_IDENTIFIER,psNext,psNext)<SUB>266</SUB>> ]
+"5252" [label = <(METHOD,TIFFListDestroy)<SUB>260</SUB>> ]
+"5273" [label = <(METHOD_RETURN,void)<SUB>260</SUB>> ]
+  "5256" -> "5273" 
+  "5256" -> "5267" 
+  "5263" -> "5268" 
+  "5268" -> "5270" 
+  "5270" -> "5273" 
+  "5270" -> "5267" 
+  "5265" -> "5263" 
+  "5267" -> "5265" 
+  "5252" -> "5256" 
+}

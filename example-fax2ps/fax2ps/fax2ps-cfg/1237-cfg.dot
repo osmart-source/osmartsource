@@ -1,0 +1,128 @@
+digraph "TIFFReadDirEntryIfd8Array" {  
+"86392" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryArray(tif, direntry, &amp;count, 8, &amp;origdata))<SUB>3244</SUB>> ]
+"86445" [label = <(&lt;operator&gt;.assignment,data = (uint64_t *)_TIFFmallocExt(tif, count * 8))<SUB>3259</SUB>> ]
+"86515" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, origdata))<SUB>3284</SUB>> ]
+"86518" [label = <(&lt;operator&gt;.assignment,*value = data)<SUB>3285</SUB>> ]
+"86522" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3286</SUB>> ]
+"86376" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>3234</SUB>> ]
+"86394" [label = <(TIFFReadDirEntryArray,TIFFReadDirEntryArray(tif, direntry, &amp;count, 8, &amp;origdata))<SUB>3244</SUB>> ]
+"86403" [label = <(&lt;operator&gt;.logicalOr,(err != TIFFReadDirEntryErrOk) || (origdata == 0))<SUB>3245</SUB>> ]
+"86418" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>3250</SUB>> ]
+"86447" [label = <(&lt;operator&gt;.cast,(uint64_t *)_TIFFmallocExt(tif, count * 8))<SUB>3259</SUB>> ]
+"86455" [label = <(&lt;operator&gt;.equals,data == 0)<SUB>3260</SUB>> ]
+"86465" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_type)<SUB>3265</SUB>> ]
+"86519" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3285</SUB>> ]
+"86378" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>3234</SUB>> ]
+"86390" [label = <(RETURN,return (TIFFReadDirEntryErrType);,return (TIFFReadDirEntryErrType);)<SUB>3242</SUB>> ]
+"86397" [label = <(&lt;operator&gt;.addressOf,&amp;count)<SUB>3244</SUB>> ]
+"86400" [label = <(&lt;operator&gt;.addressOf,&amp;origdata)<SUB>3244</SUB>> ]
+"86404" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>3245</SUB>> ]
+"86407" [label = <(&lt;operator&gt;.equals,origdata == 0)<SUB>3245</SUB>> ]
+"86411" [label = <(&lt;operator&gt;.assignment,*value = 0)<SUB>3247</SUB>> ]
+"86415" [label = <(RETURN,return (err);,return (err);)<SUB>3248</SUB>> ]
+"86420" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>3250</SUB>> ]
+"86426" [label = <(&lt;operator&gt;.assignment,*value = (uint64_t *)origdata)<SUB>3254</SUB>> ]
+"86443" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3257</SUB>> ]
+"86448" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>3259</SUB>> ]
+"86449" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, count * 8))<SUB>3259</SUB>> ]
+"86459" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, origdata))<SUB>3262</SUB>> ]
+"86462" [label = <(RETURN,return (TIFFReadDirEntryErrAlloc);,return (TIFFReadDirEntryErrAlloc);)<SUB>3263</SUB>> ]
+"86467" [label = <(FIELD_IDENTIFIER,tdir_type,tdir_type)<SUB>3265</SUB>> ]
+"86412" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3247</SUB>> ]
+"86427" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3254</SUB>> ]
+"86429" [label = <(&lt;operator&gt;.cast,(uint64_t *)origdata)<SUB>3254</SUB>> ]
+"86433" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3255</SUB>> ]
+"86451" [label = <(&lt;operator&gt;.multiplication,count * 8)<SUB>3259</SUB>> ]
+"86477" [label = <(&lt;operator&gt;.assignment,ma = (uint32_t *)origdata)<SUB>3273</SUB>> ]
+"86482" [label = <(&lt;operator&gt;.assignment,mb = data)<SUB>3274</SUB>> ]
+"86430" [label = <(UNKNOWN,uint64_t *,uint64_t *)<SUB>3254</SUB>> ]
+"86434" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3255</SUB>> ]
+"86439" [label = <(TIFFSwabArrayOfLong8,TIFFSwabArrayOfLong8(*value, count))<SUB>3256</SUB>> ]
+"86479" [label = <(&lt;operator&gt;.cast,(uint32_t *)origdata)<SUB>3273</SUB>> ]
+"86490" [label = <(&lt;operator&gt;.lessThan,n &lt; count)<SUB>3275</SUB>> ]
+"86493" [label = <(&lt;operator&gt;.postIncrement,n++)<SUB>3275</SUB>> ]
+"86436" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3255</SUB>> ]
+"86440" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3256</SUB>> ]
+"86480" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>3273</SUB>> ]
+"86487" [label = <(&lt;operator&gt;.assignment,n = 0)<SUB>3275</SUB>> ]
+"86505" [label = <(&lt;operator&gt;.assignment,*mb++ = (uint64_t)(*ma++))<SUB>3279</SUB>> ]
+"86497" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3277</SUB>> ]
+"86506" [label = <(&lt;operator&gt;.indirection,*mb++)<SUB>3279</SUB>> ]
+"86509" [label = <(&lt;operator&gt;.cast,(uint64_t)(*ma++))<SUB>3279</SUB>> ]
+"86498" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3277</SUB>> ]
+"86503" [label = <(TIFFSwabLong,TIFFSwabLong(ma))<SUB>3278</SUB>> ]
+"86507" [label = <(&lt;operator&gt;.postIncrement,mb++)<SUB>3279</SUB>> ]
+"86510" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>3279</SUB>> ]
+"86511" [label = <(&lt;operator&gt;.indirection,*ma++)<SUB>3279</SUB>> ]
+"86500" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3277</SUB>> ]
+"86512" [label = <(&lt;operator&gt;.postIncrement,ma++)<SUB>3279</SUB>> ]
+"86366" [label = <(METHOD,TIFFReadDirEntryIfd8Array)<SUB>3227</SUB>> ]
+"86524" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3227</SUB>> ]
+  "86392" -> "86404" 
+  "86445" -> "86455" 
+  "86515" -> "86519" 
+  "86518" -> "86522" 
+  "86522" -> "86524" 
+  "86376" -> "86397" 
+  "86376" -> "86390" 
+  "86394" -> "86392" 
+  "86403" -> "86412" 
+  "86403" -> "86420" 
+  "86418" -> "86427" 
+  "86418" -> "86448" 
+  "86447" -> "86445" 
+  "86455" -> "86459" 
+  "86455" -> "86467" 
+  "86465" -> "86480" 
+  "86465" -> "86515" 
+  "86519" -> "86518" 
+  "86378" -> "86376" 
+  "86390" -> "86524" 
+  "86397" -> "86400" 
+  "86400" -> "86394" 
+  "86404" -> "86403" 
+  "86404" -> "86407" 
+  "86407" -> "86403" 
+  "86411" -> "86415" 
+  "86415" -> "86524" 
+  "86420" -> "86418" 
+  "86426" -> "86436" 
+  "86443" -> "86524" 
+  "86448" -> "86451" 
+  "86449" -> "86447" 
+  "86459" -> "86462" 
+  "86462" -> "86524" 
+  "86467" -> "86465" 
+  "86412" -> "86411" 
+  "86427" -> "86430" 
+  "86429" -> "86426" 
+  "86433" -> "86440" 
+  "86433" -> "86443" 
+  "86451" -> "86449" 
+  "86477" -> "86482" 
+  "86482" -> "86487" 
+  "86430" -> "86429" 
+  "86434" -> "86433" 
+  "86439" -> "86443" 
+  "86479" -> "86477" 
+  "86490" -> "86500" 
+  "86490" -> "86515" 
+  "86493" -> "86490" 
+  "86436" -> "86434" 
+  "86440" -> "86439" 
+  "86480" -> "86479" 
+  "86487" -> "86490" 
+  "86505" -> "86493" 
+  "86497" -> "86503" 
+  "86497" -> "86507" 
+  "86506" -> "86510" 
+  "86509" -> "86505" 
+  "86498" -> "86497" 
+  "86503" -> "86507" 
+  "86507" -> "86506" 
+  "86510" -> "86512" 
+  "86511" -> "86509" 
+  "86500" -> "86498" 
+  "86512" -> "86511" 
+  "86366" -> "86378" 
+}

@@ -1,0 +1,34 @@
+digraph "TIFFWriteDirectoryTagCheckedSlongArray" {  
+"70164" [label = <(assert,assert(count &lt; 0x40000000))<SUB>2293</SUB>> ]
+"70168" [label = <(assert,assert(sizeof(int32_t) == 4))<SUB>2294</SUB>> ]
+"70185" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value));)<SUB>2297</SUB>> ]
+"70165" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x40000000)<SUB>2293</SUB>> ]
+"70169" [label = <(&lt;operator&gt;.equals,sizeof(int32_t) == 4)<SUB>2294</SUB>> ]
+"70174" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2295</SUB>> ]
+"70186" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SLONG, count,\012                                      count * 4, value))<SUB>2297</SUB>> ]
+"70170" [label = <(&lt;operator&gt;.sizeOf,sizeof(int32_t))<SUB>2294</SUB>> ]
+"70175" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2295</SUB>> ]
+"70180" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong((uint32_t *)value, count))<SUB>2296</SUB>> ]
+"70193" [label = <(&lt;operator&gt;.multiplication,count * 4)<SUB>2298</SUB>> ]
+"70177" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2295</SUB>> ]
+"70181" [label = <(&lt;operator&gt;.cast,(uint32_t *)value)<SUB>2296</SUB>> ]
+"70182" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>2296</SUB>> ]
+"70156" [label = <(METHOD,TIFFWriteDirectoryTagCheckedSlongArray)<SUB>2288</SUB>> ]
+"70197" [label = <(METHOD_RETURN,int)<SUB>2288</SUB>> ]
+  "70164" -> "70170" 
+  "70168" -> "70177" 
+  "70185" -> "70197" 
+  "70165" -> "70164" 
+  "70169" -> "70168" 
+  "70174" -> "70182" 
+  "70174" -> "70193" 
+  "70186" -> "70185" 
+  "70170" -> "70169" 
+  "70175" -> "70174" 
+  "70180" -> "70193" 
+  "70193" -> "70186" 
+  "70177" -> "70175" 
+  "70181" -> "70180" 
+  "70182" -> "70181" 
+  "70156" -> "70165" 
+}

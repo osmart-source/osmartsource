@@ -1,0 +1,205 @@
+digraph "TIFFReadRawTile" {  
+"76568" [label = <(METHOD,TIFFReadRawTile)<SUB>1146</SUB>> ]
+"76569" [label = <(PARAM,TIFF *tif)<SUB>1146</SUB>> ]
+"76570" [label = <(PARAM,uint32_t tile)<SUB>1146</SUB>> ]
+"76571" [label = <(PARAM,void *buf)<SUB>1146</SUB>> ]
+"76572" [label = <(PARAM,tmsize_t size)<SUB>1146</SUB>> ]
+"76573" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1147</SUB>> ]
+"76574" [label = <(LOCAL,constchar[] module: char[])<SUB>1148</SUB>> ]
+"76575" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFReadRawTile&quot;)<SUB>1148</SUB>> ]
+"76576" [label = <(IDENTIFIER,module,module[] = &quot;TIFFReadRawTile&quot;)<SUB>1148</SUB>> ]
+"76577" [label = <(LITERAL,&quot;TIFFReadRawTile&quot;,module[] = &quot;TIFFReadRawTile&quot;)<SUB>1148</SUB>> ]
+"76578" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>1149</SUB>> ]
+"76579" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76580" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76581" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76582" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76583" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>1149</SUB>> ]
+"76584" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>1149</SUB>> ]
+"76585" [label = <(LOCAL,uint64_t bytecount64: uint64_t)<SUB>1150</SUB>> ]
+"76586" [label = <(LOCAL,tmsize_t bytecountm: tmsize_t)<SUB>1151</SUB>> ]
+"76587" [label = <(CONTROL_STRUCTURE,if (!TIFFCheckRead(tif, 1)),if (!TIFFCheckRead(tif, 1)))<SUB>1153</SUB>> ]
+"76588" [label = <(&lt;operator&gt;.logicalNot,!TIFFCheckRead(tif, 1))<SUB>1153</SUB>> ]
+"76589" [label = <(TIFFCheckRead,TIFFCheckRead(tif, 1))<SUB>1153</SUB>> ]
+"76590" [label = <(IDENTIFIER,tif,TIFFCheckRead(tif, 1))<SUB>1153</SUB>> ]
+"76591" [label = <(LITERAL,1,TIFFCheckRead(tif, 1))<SUB>1153</SUB>> ]
+"76592" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1154</SUB>> ]
+"76593" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1154</SUB>> ]
+"76594" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1154</SUB>> ]
+"76595" [label = <(&lt;operator&gt;.minus,-1)<SUB>1154</SUB>> ]
+"76596" [label = <(LITERAL,1,-1)<SUB>1154</SUB>> ]
+"76597" [label = <(CONTROL_STRUCTURE,if (tile &gt;= td-&gt;td_nstrips),if (tile &gt;= td-&gt;td_nstrips))<SUB>1155</SUB>> ]
+"76598" [label = <(&lt;operator&gt;.greaterEqualsThan,tile &gt;= td-&gt;td_nstrips)<SUB>1155</SUB>> ]
+"76599" [label = <(IDENTIFIER,tile,tile &gt;= td-&gt;td_nstrips)<SUB>1155</SUB>> ]
+"76600" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>1155</SUB>> ]
+"76601" [label = <(IDENTIFIER,td,tile &gt;= td-&gt;td_nstrips)<SUB>1155</SUB>> ]
+"76602" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>1155</SUB>> ]
+"76603" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1156</SUB>> ]
+"76604" [label = <(UNKNOWN,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Tile out of range, max %&quot; PRIu32, tile,\012                      td-&gt;td_nstrips);,TIFFErrorExtR(tif, module,\012                      &quot;%&quot; PRIu32 &quot;: Tile out of range, max %&quot; PRIu32, tile,\012                      td-&gt;td_nstrips);)<SUB>1157</SUB>> ]
+"76605" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1160</SUB>> ]
+"76606" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1160</SUB>> ]
+"76607" [label = <(&lt;operator&gt;.minus,-1)<SUB>1160</SUB>> ]
+"76608" [label = <(LITERAL,1,-1)<SUB>1160</SUB>> ]
+"76609" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_flags &amp; TIFF_NOREADRAW),if (tif-&gt;tif_flags &amp; TIFF_NOREADRAW))<SUB>1162</SUB>> ]
+"76610" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1162</SUB>> ]
+"76611" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>1162</SUB>> ]
+"76612" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1162</SUB>> ]
+"76613" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>1162</SUB>> ]
+"76614" [label = <(IDENTIFIER,TIFF_NOREADRAW,tif-&gt;tif_flags &amp; TIFF_NOREADRAW)<SUB>1162</SUB>> ]
+"76615" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1163</SUB>> ]
+"76616" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module,\012                      &quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;))<SUB>1164</SUB>> ]
+"76617" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module,\012                      &quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;))<SUB>1164</SUB>> ]
+"76618" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module,\012                      &quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;))<SUB>1164</SUB>> ]
+"76619" [label = <(LITERAL,&quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;,TIFFErrorExtR(tif, module,\012                      &quot;Compression scheme does not support access to raw &quot;\012                      &quot;uncompressed data&quot;))<SUB>1165</SUB>> ]
+"76620" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1167</SUB>> ]
+"76621" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1167</SUB>> ]
+"76622" [label = <(&lt;operator&gt;.minus,-1)<SUB>1167</SUB>> ]
+"76623" [label = <(LITERAL,1,-1)<SUB>1167</SUB>> ]
+"76624" [label = <(&lt;operator&gt;.assignment,bytecount64 = TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76625" [label = <(IDENTIFIER,bytecount64,bytecount64 = TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76626" [label = <(TIFFGetStrileByteCount,TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76627" [label = <(IDENTIFIER,tif,TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76628" [label = <(IDENTIFIER,tile,TIFFGetStrileByteCount(tif, tile))<SUB>1169</SUB>> ]
+"76629" [label = <(CONTROL_STRUCTURE,if (size != (tmsize_t)(-1) &amp;&amp; (uint64_t)size &lt;= bytecount64),if (size != (tmsize_t)(-1) &amp;&amp; (uint64_t)size &lt;= bytecount64))<SUB>1170</SUB>> ]
+"76630" [label = <(&lt;operator&gt;.logicalAnd,size != (tmsize_t)(-1) &amp;&amp; (uint64_t)size &lt;= bytecount64)<SUB>1170</SUB>> ]
+"76631" [label = <(&lt;operator&gt;.notEquals,size != (tmsize_t)(-1))<SUB>1170</SUB>> ]
+"76632" [label = <(IDENTIFIER,size,size != (tmsize_t)(-1))<SUB>1170</SUB>> ]
+"76633" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1170</SUB>> ]
+"76634" [label = <(&lt;operator&gt;.minus,-1)<SUB>1170</SUB>> ]
+"76635" [label = <(LITERAL,1,-1)<SUB>1170</SUB>> ]
+"76636" [label = <(&lt;operator&gt;.lessEqualsThan,(uint64_t)size &lt;= bytecount64)<SUB>1170</SUB>> ]
+"76637" [label = <(&lt;operator&gt;.cast,(uint64_t)size)<SUB>1170</SUB>> ]
+"76638" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>1170</SUB>> ]
+"76639" [label = <(IDENTIFIER,size,(uint64_t)size)<SUB>1170</SUB>> ]
+"76640" [label = <(IDENTIFIER,bytecount64,(uint64_t)size &lt;= bytecount64)<SUB>1170</SUB>> ]
+"76641" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1171</SUB>> ]
+"76642" [label = <(&lt;operator&gt;.assignment,bytecountm = size)<SUB>1171</SUB>> ]
+"76643" [label = <(IDENTIFIER,bytecountm,bytecountm = size)<SUB>1171</SUB>> ]
+"76644" [label = <(IDENTIFIER,size,bytecountm = size)<SUB>1171</SUB>> ]
+"76645" [label = <(CONTROL_STRUCTURE,else,else)<SUB>1173</SUB>> ]
+"76646" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1173</SUB>> ]
+"76647" [label = <(&lt;operator&gt;.assignment,bytecountm = _TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76648" [label = <(IDENTIFIER,bytecountm,bytecountm = _TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76649" [label = <(_TIFFCastUInt64ToSSize,_TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76650" [label = <(IDENTIFIER,tif,_TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76651" [label = <(IDENTIFIER,bytecount64,_TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76652" [label = <(IDENTIFIER,module,_TIFFCastUInt64ToSSize(tif, bytecount64, module))<SUB>1173</SUB>> ]
+"76653" [label = <(CONTROL_STRUCTURE,if (bytecountm == 0),if (bytecountm == 0))<SUB>1174</SUB>> ]
+"76654" [label = <(&lt;operator&gt;.equals,bytecountm == 0)<SUB>1174</SUB>> ]
+"76655" [label = <(IDENTIFIER,bytecountm,bytecountm == 0)<SUB>1174</SUB>> ]
+"76656" [label = <(LITERAL,0,bytecountm == 0)<SUB>1174</SUB>> ]
+"76657" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1175</SUB>> ]
+"76658" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>1176</SUB>> ]
+"76659" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>1176</SUB>> ]
+"76660" [label = <(&lt;operator&gt;.minus,-1)<SUB>1176</SUB>> ]
+"76661" [label = <(LITERAL,1,-1)<SUB>1176</SUB>> ]
+"76662" [label = <(RETURN,return (TIFFReadRawTile1(tif, tile, buf, bytecountm, module));,return (TIFFReadRawTile1(tif, tile, buf, bytecountm, module));)<SUB>1178</SUB>> ]
+"76663" [label = <(TIFFReadRawTile1,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76664" [label = <(IDENTIFIER,tif,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76665" [label = <(IDENTIFIER,tile,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76666" [label = <(IDENTIFIER,buf,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76667" [label = <(IDENTIFIER,bytecountm,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76668" [label = <(IDENTIFIER,module,TIFFReadRawTile1(tif, tile, buf, bytecountm, module))<SUB>1178</SUB>> ]
+"76669" [label = <(METHOD_RETURN,tmsize_t)<SUB>1146</SUB>> ]
+  "76568" -> "76569" 
+  "76568" -> "76570" 
+  "76568" -> "76571" 
+  "76568" -> "76572" 
+  "76568" -> "76573" 
+  "76568" -> "76669" 
+  "76573" -> "76574" 
+  "76573" -> "76575" 
+  "76573" -> "76578" 
+  "76573" -> "76579" 
+  "76573" -> "76585" 
+  "76573" -> "76586" 
+  "76573" -> "76587" 
+  "76573" -> "76597" 
+  "76573" -> "76609" 
+  "76573" -> "76624" 
+  "76573" -> "76629" 
+  "76573" -> "76653" 
+  "76573" -> "76662" 
+  "76575" -> "76576" 
+  "76575" -> "76577" 
+  "76579" -> "76580" 
+  "76579" -> "76581" 
+  "76581" -> "76582" 
+  "76582" -> "76583" 
+  "76582" -> "76584" 
+  "76587" -> "76588" 
+  "76587" -> "76592" 
+  "76588" -> "76589" 
+  "76589" -> "76590" 
+  "76589" -> "76591" 
+  "76592" -> "76593" 
+  "76593" -> "76594" 
+  "76594" -> "76595" 
+  "76595" -> "76596" 
+  "76597" -> "76598" 
+  "76597" -> "76603" 
+  "76598" -> "76599" 
+  "76598" -> "76600" 
+  "76600" -> "76601" 
+  "76600" -> "76602" 
+  "76603" -> "76604" 
+  "76603" -> "76605" 
+  "76605" -> "76606" 
+  "76606" -> "76607" 
+  "76607" -> "76608" 
+  "76609" -> "76610" 
+  "76609" -> "76615" 
+  "76610" -> "76611" 
+  "76610" -> "76614" 
+  "76611" -> "76612" 
+  "76611" -> "76613" 
+  "76615" -> "76616" 
+  "76615" -> "76620" 
+  "76616" -> "76617" 
+  "76616" -> "76618" 
+  "76616" -> "76619" 
+  "76620" -> "76621" 
+  "76621" -> "76622" 
+  "76622" -> "76623" 
+  "76624" -> "76625" 
+  "76624" -> "76626" 
+  "76626" -> "76627" 
+  "76626" -> "76628" 
+  "76629" -> "76630" 
+  "76629" -> "76641" 
+  "76629" -> "76645" 
+  "76630" -> "76631" 
+  "76630" -> "76636" 
+  "76631" -> "76632" 
+  "76631" -> "76633" 
+  "76633" -> "76634" 
+  "76634" -> "76635" 
+  "76636" -> "76637" 
+  "76636" -> "76640" 
+  "76637" -> "76638" 
+  "76637" -> "76639" 
+  "76641" -> "76642" 
+  "76642" -> "76643" 
+  "76642" -> "76644" 
+  "76645" -> "76646" 
+  "76646" -> "76647" 
+  "76647" -> "76648" 
+  "76647" -> "76649" 
+  "76649" -> "76650" 
+  "76649" -> "76651" 
+  "76649" -> "76652" 
+  "76653" -> "76654" 
+  "76653" -> "76657" 
+  "76654" -> "76655" 
+  "76654" -> "76656" 
+  "76657" -> "76658" 
+  "76658" -> "76659" 
+  "76659" -> "76660" 
+  "76660" -> "76661" 
+  "76662" -> "76663" 
+  "76663" -> "76664" 
+  "76663" -> "76665" 
+  "76663" -> "76666" 
+  "76663" -> "76667" 
+  "76663" -> "76668" 
+}

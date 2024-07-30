@@ -1,0 +1,34 @@
+digraph "TIFFWriteDirectoryTagCheckedSshortArray" {  
+"70041" [label = <(assert,assert(count &lt; 0x80000000))<SUB>2254</SUB>> ]
+"70045" [label = <(assert,assert(sizeof(int16_t) == 2))<SUB>2255</SUB>> ]
+"70062" [label = <(RETURN,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SSHORT, count,\012                                      count * 2, value));,return (TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SSHORT, count,\012                                      count * 2, value));)<SUB>2258</SUB>> ]
+"70042" [label = <(&lt;operator&gt;.lessThan,count &lt; 0x80000000)<SUB>2254</SUB>> ]
+"70046" [label = <(&lt;operator&gt;.equals,sizeof(int16_t) == 2)<SUB>2255</SUB>> ]
+"70051" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>2256</SUB>> ]
+"70063" [label = <(TIFFWriteDirectoryTagData,TIFFWriteDirectoryTagData(tif, ndir, dir, tag, TIFF_SSHORT, count,\012                                      count * 2, value))<SUB>2258</SUB>> ]
+"70047" [label = <(&lt;operator&gt;.sizeOf,sizeof(int16_t))<SUB>2255</SUB>> ]
+"70052" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>2256</SUB>> ]
+"70057" [label = <(TIFFSwabArrayOfShort,TIFFSwabArrayOfShort((uint16_t *)value, count))<SUB>2257</SUB>> ]
+"70070" [label = <(&lt;operator&gt;.multiplication,count * 2)<SUB>2259</SUB>> ]
+"70054" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>2256</SUB>> ]
+"70058" [label = <(&lt;operator&gt;.cast,(uint16_t *)value)<SUB>2257</SUB>> ]
+"70059" [label = <(UNKNOWN,uint16_t *,uint16_t *)<SUB>2257</SUB>> ]
+"70033" [label = <(METHOD,TIFFWriteDirectoryTagCheckedSshortArray)<SUB>2249</SUB>> ]
+"70074" [label = <(METHOD_RETURN,int)<SUB>2249</SUB>> ]
+  "70041" -> "70047" 
+  "70045" -> "70054" 
+  "70062" -> "70074" 
+  "70042" -> "70041" 
+  "70046" -> "70045" 
+  "70051" -> "70059" 
+  "70051" -> "70070" 
+  "70063" -> "70062" 
+  "70047" -> "70046" 
+  "70052" -> "70051" 
+  "70057" -> "70070" 
+  "70070" -> "70063" 
+  "70054" -> "70052" 
+  "70058" -> "70057" 
+  "70059" -> "70058" 
+  "70033" -> "70042" 
+}

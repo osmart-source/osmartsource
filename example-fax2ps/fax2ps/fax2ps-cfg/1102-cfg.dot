@@ -1,0 +1,117 @@
+digraph "TIFFWriteDirectoryTagColormap" {  
+"69295" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteDirectoryTagColormap&quot;)<SUB>2028</SUB>> ]
+"69311" [label = <(&lt;operator&gt;.assignment,m = (1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample))<SUB>2037</SUB>> ]
+"69320" [label = <(&lt;operator&gt;.assignment,n = _TIFFmallocExt(tif, 3 * m * sizeof(uint16_t)))<SUB>2038</SUB>> ]
+"69341" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;n[0], tif-&gt;tif_dir.td_colormap[0], m * sizeof(uint16_t)))<SUB>2044</SUB>> ]
+"69357" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;n[m], tif-&gt;tif_dir.td_colormap[1], m * sizeof(uint16_t)))<SUB>2045</SUB>> ]
+"69373" [label = <(_TIFFmemcpy,_TIFFmemcpy(&amp;n[2 * m], tif-&gt;tif_dir.td_colormap[2], m * sizeof(uint16_t)))<SUB>2046</SUB>> ]
+"69391" [label = <(&lt;operator&gt;.assignment,o = TIFFWriteDirectoryTagCheckedShortArray(tif, ndir, dir, TIFFTAG_COLORMAP,\012                                               3 * m, n))<SUB>2047</SUB>> ]
+"69402" [label = <(_TIFFfreeExt,_TIFFfreeExt(tif, n))<SUB>2049</SUB>> ]
+"69405" [label = <(RETURN,return (o);,return (o);)<SUB>2050</SUB>> ]
+"69302" [label = <(&lt;operator&gt;.equals,dir == NULL)<SUB>2032</SUB>> ]
+"69313" [label = <(&lt;operator&gt;.shiftLeft,1 &lt;&lt; tif-&gt;tif_dir.td_bitspersample)<SUB>2037</SUB>> ]
+"69322" [label = <(_TIFFmallocExt,_TIFFmallocExt(tif, 3 * m * sizeof(uint16_t)))<SUB>2038</SUB>> ]
+"69331" [label = <(&lt;operator&gt;.equals,n == NULL)<SUB>2039</SUB>> ]
+"69342" [label = <(&lt;operator&gt;.addressOf,&amp;n[0])<SUB>2044</SUB>> ]
+"69346" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_colormap[0])<SUB>2044</SUB>> ]
+"69353" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2044</SUB>> ]
+"69358" [label = <(&lt;operator&gt;.addressOf,&amp;n[m])<SUB>2045</SUB>> ]
+"69362" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_colormap[1])<SUB>2045</SUB>> ]
+"69369" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2045</SUB>> ]
+"69374" [label = <(&lt;operator&gt;.addressOf,&amp;n[2 * m])<SUB>2046</SUB>> ]
+"69380" [label = <(&lt;operator&gt;.indirectIndexAccess,tif-&gt;tif_dir.td_colormap[2])<SUB>2046</SUB>> ]
+"69387" [label = <(&lt;operator&gt;.multiplication,m * sizeof(uint16_t))<SUB>2046</SUB>> ]
+"69393" [label = <(TIFFWriteDirectoryTagCheckedShortArray,TIFFWriteDirectoryTagCheckedShortArray(tif, ndir, dir, TIFFTAG_COLORMAP,\012                                               3 * m, n))<SUB>2047</SUB>> ]
+"69306" [label = <(&lt;operator&gt;.postIncrement,(*ndir)++)<SUB>2034</SUB>> ]
+"69309" [label = <(RETURN,return (1);,return (1);)<SUB>2035</SUB>> ]
+"69315" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_bitspersample)<SUB>2037</SUB>> ]
+"69324" [label = <(&lt;operator&gt;.multiplication,3 * m * sizeof(uint16_t))<SUB>2038</SUB>> ]
+"69335" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Out of memory&quot;))<SUB>2041</SUB>> ]
+"69339" [label = <(RETURN,return (0);,return (0);)<SUB>2042</SUB>> ]
+"69343" [label = <(&lt;operator&gt;.indirectIndexAccess,n[0])<SUB>2044</SUB>> ]
+"69347" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_colormap)<SUB>2044</SUB>> ]
+"69355" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2044</SUB>> ]
+"69359" [label = <(&lt;operator&gt;.indirectIndexAccess,n[m])<SUB>2045</SUB>> ]
+"69363" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_colormap)<SUB>2045</SUB>> ]
+"69371" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2045</SUB>> ]
+"69375" [label = <(&lt;operator&gt;.indirectIndexAccess,n[2 * m])<SUB>2046</SUB>> ]
+"69381" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_colormap)<SUB>2046</SUB>> ]
+"69389" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2046</SUB>> ]
+"69398" [label = <(&lt;operator&gt;.multiplication,3 * m)<SUB>2048</SUB>> ]
+"69307" [label = <(&lt;operator&gt;.indirection,*ndir)<SUB>2034</SUB>> ]
+"69316" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2037</SUB>> ]
+"69319" [label = <(FIELD_IDENTIFIER,td_bitspersample,td_bitspersample)<SUB>2037</SUB>> ]
+"69325" [label = <(&lt;operator&gt;.multiplication,3 * m)<SUB>2038</SUB>> ]
+"69328" [label = <(&lt;operator&gt;.sizeOf,sizeof(uint16_t))<SUB>2038</SUB>> ]
+"69348" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2044</SUB>> ]
+"69351" [label = <(FIELD_IDENTIFIER,td_colormap,td_colormap)<SUB>2044</SUB>> ]
+"69364" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2045</SUB>> ]
+"69367" [label = <(FIELD_IDENTIFIER,td_colormap,td_colormap)<SUB>2045</SUB>> ]
+"69377" [label = <(&lt;operator&gt;.multiplication,2 * m)<SUB>2046</SUB>> ]
+"69382" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>2046</SUB>> ]
+"69385" [label = <(FIELD_IDENTIFIER,td_colormap,td_colormap)<SUB>2046</SUB>> ]
+"69318" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2037</SUB>> ]
+"69350" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2044</SUB>> ]
+"69366" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2045</SUB>> ]
+"69384" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>2046</SUB>> ]
+"69289" [label = <(METHOD,TIFFWriteDirectoryTagColormap)<SUB>2025</SUB>> ]
+"69407" [label = <(METHOD_RETURN,int)<SUB>2025</SUB>> ]
+  "69295" -> "69302" 
+  "69311" -> "69325" 
+  "69320" -> "69331" 
+  "69341" -> "69359" 
+  "69357" -> "69377" 
+  "69373" -> "69398" 
+  "69391" -> "69402" 
+  "69402" -> "69405" 
+  "69405" -> "69407" 
+  "69302" -> "69307" 
+  "69302" -> "69318" 
+  "69313" -> "69311" 
+  "69322" -> "69320" 
+  "69331" -> "69335" 
+  "69331" -> "69343" 
+  "69342" -> "69350" 
+  "69346" -> "69355" 
+  "69353" -> "69341" 
+  "69358" -> "69366" 
+  "69362" -> "69371" 
+  "69369" -> "69357" 
+  "69374" -> "69384" 
+  "69380" -> "69389" 
+  "69387" -> "69373" 
+  "69393" -> "69391" 
+  "69306" -> "69309" 
+  "69309" -> "69407" 
+  "69315" -> "69313" 
+  "69324" -> "69322" 
+  "69335" -> "69339" 
+  "69339" -> "69407" 
+  "69343" -> "69342" 
+  "69347" -> "69346" 
+  "69355" -> "69353" 
+  "69359" -> "69358" 
+  "69363" -> "69362" 
+  "69371" -> "69369" 
+  "69375" -> "69374" 
+  "69381" -> "69380" 
+  "69389" -> "69387" 
+  "69398" -> "69393" 
+  "69307" -> "69306" 
+  "69316" -> "69319" 
+  "69319" -> "69315" 
+  "69325" -> "69328" 
+  "69328" -> "69324" 
+  "69348" -> "69351" 
+  "69351" -> "69347" 
+  "69364" -> "69367" 
+  "69367" -> "69363" 
+  "69377" -> "69375" 
+  "69382" -> "69385" 
+  "69385" -> "69381" 
+  "69318" -> "69316" 
+  "69350" -> "69348" 
+  "69366" -> "69364" 
+  "69384" -> "69382" 
+  "69289" -> "69295" 
+}

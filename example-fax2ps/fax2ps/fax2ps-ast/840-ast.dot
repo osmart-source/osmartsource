@@ -1,0 +1,65 @@
+digraph "swabHorDiff32" {  
+"38560" [label = <(METHOD,swabHorDiff32)<SUB>760</SUB>> ]
+"38561" [label = <(PARAM,TIFF *tif)<SUB>760</SUB>> ]
+"38562" [label = <(PARAM,uint8_t *cp0)<SUB>760</SUB>> ]
+"38563" [label = <(PARAM,tmsize_t cc)<SUB>760</SUB>> ]
+"38564" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>761</SUB>> ]
+"38565" [label = <(LOCAL,uint32_t* wp: uint32_t)<SUB>762</SUB>> ]
+"38566" [label = <(&lt;operator&gt;.assignment,*wp = (uint32_t *)cp0)<SUB>762</SUB>> ]
+"38567" [label = <(IDENTIFIER,wp,*wp = (uint32_t *)cp0)<SUB>762</SUB>> ]
+"38568" [label = <(&lt;operator&gt;.cast,(uint32_t *)cp0)<SUB>762</SUB>> ]
+"38569" [label = <(UNKNOWN,uint32_t *,uint32_t *)<SUB>762</SUB>> ]
+"38570" [label = <(IDENTIFIER,cp0,(uint32_t *)cp0)<SUB>762</SUB>> ]
+"38571" [label = <(LOCAL,tmsize_t wc: tmsize_t)<SUB>763</SUB>> ]
+"38572" [label = <(&lt;operator&gt;.assignment,wc = cc / 4)<SUB>763</SUB>> ]
+"38573" [label = <(IDENTIFIER,wc,wc = cc / 4)<SUB>763</SUB>> ]
+"38574" [label = <(&lt;operator&gt;.division,cc / 4)<SUB>763</SUB>> ]
+"38575" [label = <(IDENTIFIER,cc,cc / 4)<SUB>763</SUB>> ]
+"38576" [label = <(LITERAL,4,cc / 4)<SUB>763</SUB>> ]
+"38577" [label = <(CONTROL_STRUCTURE,if (!horDiff32(tif, cp0, cc)),if (!horDiff32(tif, cp0, cc)))<SUB>765</SUB>> ]
+"38578" [label = <(&lt;operator&gt;.logicalNot,!horDiff32(tif, cp0, cc))<SUB>765</SUB>> ]
+"38579" [label = <(horDiff32,horDiff32(tif, cp0, cc))<SUB>765</SUB>> ]
+"38580" [label = <(IDENTIFIER,tif,horDiff32(tif, cp0, cc))<SUB>765</SUB>> ]
+"38581" [label = <(IDENTIFIER,cp0,horDiff32(tif, cp0, cc))<SUB>765</SUB>> ]
+"38582" [label = <(IDENTIFIER,cc,horDiff32(tif, cp0, cc))<SUB>765</SUB>> ]
+"38583" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>766</SUB>> ]
+"38584" [label = <(RETURN,return 0;,return 0;)<SUB>766</SUB>> ]
+"38585" [label = <(LITERAL,0,return 0;)<SUB>766</SUB>> ]
+"38586" [label = <(TIFFSwabArrayOfLong,TIFFSwabArrayOfLong(wp, wc))<SUB>768</SUB>> ]
+"38587" [label = <(IDENTIFIER,wp,TIFFSwabArrayOfLong(wp, wc))<SUB>768</SUB>> ]
+"38588" [label = <(IDENTIFIER,wc,TIFFSwabArrayOfLong(wp, wc))<SUB>768</SUB>> ]
+"38589" [label = <(RETURN,return 1;,return 1;)<SUB>769</SUB>> ]
+"38590" [label = <(LITERAL,1,return 1;)<SUB>769</SUB>> ]
+"38591" [label = <(METHOD_RETURN,int)<SUB>760</SUB>> ]
+  "38560" -> "38561" 
+  "38560" -> "38562" 
+  "38560" -> "38563" 
+  "38560" -> "38564" 
+  "38560" -> "38591" 
+  "38564" -> "38565" 
+  "38564" -> "38566" 
+  "38564" -> "38571" 
+  "38564" -> "38572" 
+  "38564" -> "38577" 
+  "38564" -> "38586" 
+  "38564" -> "38589" 
+  "38566" -> "38567" 
+  "38566" -> "38568" 
+  "38568" -> "38569" 
+  "38568" -> "38570" 
+  "38572" -> "38573" 
+  "38572" -> "38574" 
+  "38574" -> "38575" 
+  "38574" -> "38576" 
+  "38577" -> "38578" 
+  "38577" -> "38583" 
+  "38578" -> "38579" 
+  "38579" -> "38580" 
+  "38579" -> "38581" 
+  "38579" -> "38582" 
+  "38583" -> "38584" 
+  "38584" -> "38585" 
+  "38586" -> "38587" 
+  "38586" -> "38588" 
+  "38589" -> "38590" 
+}

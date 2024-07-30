@@ -1,0 +1,63 @@
+digraph "_tiffSizeProc" {  
+"33842" [label = <(METHOD,_tiffSizeProc)<SUB>139</SUB>> ]
+"33843" [label = <(PARAM,thandle_t fd)<SUB>139</SUB>> ]
+"33844" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>140</SUB>> ]
+"33845" [label = <(LOCAL,_TIFF_stat_s sb: _TIFF_stat_s)<SUB>141</SUB>> ]
+"33846" [label = <(LOCAL,fd_as_handle_union_t fdh: fd_as_handle_union_t)<SUB>142</SUB>> ]
+"33847" [label = <(&lt;operator&gt;.assignment,fdh.h = fd)<SUB>143</SUB>> ]
+"33848" [label = <(&lt;operator&gt;.fieldAccess,fdh.h)<SUB>143</SUB>> ]
+"33849" [label = <(IDENTIFIER,fdh,fdh.h = fd)<SUB>143</SUB>> ]
+"33850" [label = <(FIELD_IDENTIFIER,h,h)<SUB>143</SUB>> ]
+"33851" [label = <(IDENTIFIER,fd,fdh.h = fd)<SUB>143</SUB>> ]
+"33852" [label = <(CONTROL_STRUCTURE,if (_TIFF_fstat_f(fdh.fd, &amp;sb) &lt; 0),if (_TIFF_fstat_f(fdh.fd, &amp;sb) &lt; 0))<SUB>144</SUB>> ]
+"33853" [label = <(&lt;operator&gt;.lessThan,_TIFF_fstat_f(fdh.fd, &amp;sb) &lt; 0)<SUB>144</SUB>> ]
+"33854" [label = <(_TIFF_fstat_f,_TIFF_fstat_f(fdh.fd, &amp;sb))<SUB>144</SUB>> ]
+"33855" [label = <(&lt;operator&gt;.fieldAccess,fdh.fd)<SUB>144</SUB>> ]
+"33856" [label = <(IDENTIFIER,fdh,_TIFF_fstat_f(fdh.fd, &amp;sb))<SUB>144</SUB>> ]
+"33857" [label = <(FIELD_IDENTIFIER,fd,fd)<SUB>144</SUB>> ]
+"33858" [label = <(&lt;operator&gt;.addressOf,&amp;sb)<SUB>144</SUB>> ]
+"33859" [label = <(IDENTIFIER,sb,_TIFF_fstat_f(fdh.fd, &amp;sb))<SUB>144</SUB>> ]
+"33860" [label = <(LITERAL,0,_TIFF_fstat_f(fdh.fd, &amp;sb) &lt; 0)<SUB>144</SUB>> ]
+"33861" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>145</SUB>> ]
+"33862" [label = <(RETURN,return (0);,return (0);)<SUB>145</SUB>> ]
+"33863" [label = <(LITERAL,0,return (0);)<SUB>145</SUB>> ]
+"33864" [label = <(CONTROL_STRUCTURE,else,else)<SUB>147</SUB>> ]
+"33865" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>147</SUB>> ]
+"33866" [label = <(RETURN,return ((uint64_t)sb.st_size);,return ((uint64_t)sb.st_size);)<SUB>147</SUB>> ]
+"33867" [label = <(&lt;operator&gt;.cast,(uint64_t)sb.st_size)<SUB>147</SUB>> ]
+"33868" [label = <(UNKNOWN,uint64_t,uint64_t)<SUB>147</SUB>> ]
+"33869" [label = <(&lt;operator&gt;.fieldAccess,sb.st_size)<SUB>147</SUB>> ]
+"33870" [label = <(IDENTIFIER,sb,(uint64_t)sb.st_size)<SUB>147</SUB>> ]
+"33871" [label = <(FIELD_IDENTIFIER,st_size,st_size)<SUB>147</SUB>> ]
+"33872" [label = <(METHOD_RETURN,uint64_t)<SUB>139</SUB>> ]
+  "33842" -> "33843" 
+  "33842" -> "33844" 
+  "33842" -> "33872" 
+  "33844" -> "33845" 
+  "33844" -> "33846" 
+  "33844" -> "33847" 
+  "33844" -> "33852" 
+  "33847" -> "33848" 
+  "33847" -> "33851" 
+  "33848" -> "33849" 
+  "33848" -> "33850" 
+  "33852" -> "33853" 
+  "33852" -> "33861" 
+  "33852" -> "33864" 
+  "33853" -> "33854" 
+  "33853" -> "33860" 
+  "33854" -> "33855" 
+  "33854" -> "33858" 
+  "33855" -> "33856" 
+  "33855" -> "33857" 
+  "33858" -> "33859" 
+  "33861" -> "33862" 
+  "33862" -> "33863" 
+  "33864" -> "33865" 
+  "33865" -> "33866" 
+  "33866" -> "33867" 
+  "33867" -> "33868" 
+  "33867" -> "33869" 
+  "33869" -> "33870" 
+  "33869" -> "33871" 
+}

@@ -1,0 +1,67 @@
+digraph "TIFFReadDirEntryCheckedLong8" {  
+"86827" [label = <(RETURN,return (TIFFReadDirEntryErrOk);,return (TIFFReadDirEntryErrOk);)<SUB>3383</SUB>> ]
+"86768" [label = <(&lt;operator&gt;.logicalNot,!(tif-&gt;tif_flags &amp; TIFF_BIGTIFF))<SUB>3369</SUB>> ]
+"86819" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3381</SUB>> ]
+"86769" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_BIGTIFF)<SUB>3369</SUB>> ]
+"86777" [label = <(&lt;operator&gt;.assignment,offset = direntry-&gt;tdir_offset.toff_long)<SUB>3372</SUB>> ]
+"86794" [label = <(&lt;operator&gt;.assignment,err = TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86820" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3381</SUB>> ]
+"86825" [label = <(TIFFSwabLong8,TIFFSwabLong8(value))<SUB>3382</SUB>> ]
+"86770" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3369</SUB>> ]
+"86779" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long)<SUB>3372</SUB>> ]
+"86785" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_SWAB)<SUB>3373</SUB>> ]
+"86796" [label = <(TIFFReadDirEntryData,TIFFReadDirEntryData(tif, offset, 8, value))<SUB>3375</SUB>> ]
+"86802" [label = <(&lt;operator&gt;.notEquals,err != TIFFReadDirEntryErrOk)<SUB>3376</SUB>> ]
+"86810" [label = <(&lt;operator&gt;.assignment,*value = direntry-&gt;tdir_offset.toff_long8)<SUB>3380</SUB>> ]
+"86822" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3381</SUB>> ]
+"86772" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3369</SUB>> ]
+"86780" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3372</SUB>> ]
+"86783" [label = <(FIELD_IDENTIFIER,toff_long,toff_long)<SUB>3372</SUB>> ]
+"86786" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>3373</SUB>> ]
+"86791" [label = <(TIFFSwabLong,TIFFSwabLong(&amp;offset))<SUB>3374</SUB>> ]
+"86806" [label = <(RETURN,return (err);,return (err);)<SUB>3377</SUB>> ]
+"86811" [label = <(&lt;operator&gt;.indirection,*value)<SUB>3380</SUB>> ]
+"86813" [label = <(&lt;operator&gt;.fieldAccess,direntry-&gt;tdir_offset.toff_long8)<SUB>3380</SUB>> ]
+"86782" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3372</SUB>> ]
+"86788" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>3373</SUB>> ]
+"86792" [label = <(&lt;operator&gt;.addressOf,&amp;offset)<SUB>3374</SUB>> ]
+"86814" [label = <(&lt;operator&gt;.indirectFieldAccess,direntry-&gt;tdir_offset)<SUB>3380</SUB>> ]
+"86817" [label = <(FIELD_IDENTIFIER,toff_long8,toff_long8)<SUB>3380</SUB>> ]
+"86816" [label = <(FIELD_IDENTIFIER,tdir_offset,tdir_offset)<SUB>3380</SUB>> ]
+"86762" [label = <(METHOD,TIFFReadDirEntryCheckedLong8)<SUB>3366</SUB>> ]
+"86829" [label = <(METHOD_RETURN,enum TIFFReadDirEntryErr)<SUB>3366</SUB>> ]
+  "86827" -> "86829" 
+  "86768" -> "86782" 
+  "86768" -> "86811" 
+  "86819" -> "86825" 
+  "86819" -> "86827" 
+  "86769" -> "86768" 
+  "86777" -> "86788" 
+  "86794" -> "86802" 
+  "86820" -> "86819" 
+  "86825" -> "86827" 
+  "86770" -> "86769" 
+  "86779" -> "86777" 
+  "86785" -> "86792" 
+  "86785" -> "86796" 
+  "86796" -> "86794" 
+  "86802" -> "86806" 
+  "86802" -> "86822" 
+  "86810" -> "86822" 
+  "86822" -> "86820" 
+  "86772" -> "86770" 
+  "86780" -> "86783" 
+  "86783" -> "86779" 
+  "86786" -> "86785" 
+  "86791" -> "86796" 
+  "86806" -> "86829" 
+  "86811" -> "86816" 
+  "86813" -> "86810" 
+  "86782" -> "86780" 
+  "86788" -> "86786" 
+  "86792" -> "86791" 
+  "86814" -> "86817" 
+  "86817" -> "86813" 
+  "86816" -> "86814" 
+  "86762" -> "86772" 
+}

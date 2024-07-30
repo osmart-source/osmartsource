@@ -1,0 +1,18 @@
+digraph "remquo" {  
+"6407" [label = <(METHOD,remquo)<SUB>307</SUB>> ]
+"6408" [label = <(PARAM,__MATHCALL (remquo,, (_Mdouble_ __x, _Mdouble_ __y, int *__quo)))<SUB>307</SUB>> ]
+"6409" [label = <(PARAM,__MATHCALL (remquo,, (_Mdouble_ __x, _Mdouble_ __y, int *__quo)))<SUB>307</SUB>> ]
+"6410" [label = <(PARAM,__MATHCALL (remquo,, (_Mdouble_ __x, _Mdouble_ __y, int *__quo)))<SUB>307</SUB>> ]
+"6411" [label = <(METHOD_RETURN,double)<SUB>307</SUB>> ]
+  "6407" -> "6408"  [ label = "AST: "] 
+  "6407" -> "6409"  [ label = "AST: "] 
+  "6407" -> "6410"  [ label = "AST: "] 
+  "6407" -> "6411"  [ label = "AST: "] 
+  "6407" -> "6411"  [ label = "CFG: "] 
+  "6408" -> "6411"  [ label = "DDG: __x"] 
+  "6409" -> "6411"  [ label = "DDG: __y"] 
+  "6410" -> "6411"  [ label = "DDG: __quo"] 
+  "6407" -> "6408"  [ label = "DDG: "] 
+  "6407" -> "6409"  [ label = "DDG: "] 
+  "6407" -> "6410"  [ label = "DDG: "] 
+}

@@ -1,0 +1,49 @@
+digraph "TIFFClose" {  
+"99231" [label = <(METHOD,TIFFClose)<SUB>131</SUB>> ]
+"99232" [label = <(PARAM,TIFF *tif)<SUB>131</SUB>> ]
+"99233" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>132</SUB>> ]
+"99234" [label = <(LOCAL,TIFFCloseProc closeproc: TIFFCloseProc)<SUB>133</SUB>> ]
+"99235" [label = <(&lt;operator&gt;.assignment,closeproc = tif-&gt;tif_closeproc)<SUB>133</SUB>> ]
+"99236" [label = <(IDENTIFIER,closeproc,closeproc = tif-&gt;tif_closeproc)<SUB>133</SUB>> ]
+"99237" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_closeproc)<SUB>133</SUB>> ]
+"99238" [label = <(IDENTIFIER,tif,closeproc = tif-&gt;tif_closeproc)<SUB>133</SUB>> ]
+"99239" [label = <(FIELD_IDENTIFIER,tif_closeproc,tif_closeproc)<SUB>133</SUB>> ]
+"99240" [label = <(LOCAL,thandle_t fd: thandle_t)<SUB>134</SUB>> ]
+"99241" [label = <(&lt;operator&gt;.assignment,fd = tif-&gt;tif_clientdata)<SUB>134</SUB>> ]
+"99242" [label = <(IDENTIFIER,fd,fd = tif-&gt;tif_clientdata)<SUB>134</SUB>> ]
+"99243" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_clientdata)<SUB>134</SUB>> ]
+"99244" [label = <(IDENTIFIER,tif,fd = tif-&gt;tif_clientdata)<SUB>134</SUB>> ]
+"99245" [label = <(FIELD_IDENTIFIER,tif_clientdata,tif_clientdata)<SUB>134</SUB>> ]
+"99246" [label = <(TIFFCleanup,TIFFCleanup(tif))<SUB>136</SUB>> ]
+"99247" [label = <(IDENTIFIER,tif,TIFFCleanup(tif))<SUB>136</SUB>> ]
+"99248" [label = <(&lt;operator&gt;.cast,(void)(*closeproc)(fd))<SUB>137</SUB>> ]
+"99249" [label = <(UNKNOWN,void,void)<SUB>137</SUB>> ]
+"99250" [label = <(*closeproc,(*closeproc)(fd))<SUB>137</SUB>> ]
+"99251" [label = <(&lt;operator&gt;.indirection,*closeproc)<SUB>137</SUB>> ]
+"99252" [label = <(IDENTIFIER,closeproc,(*closeproc)(fd))<SUB>137</SUB>> ]
+"99253" [label = <(IDENTIFIER,fd,(*closeproc)(fd))<SUB>137</SUB>> ]
+"99254" [label = <(METHOD_RETURN,void)<SUB>131</SUB>> ]
+  "99231" -> "99232" 
+  "99231" -> "99233" 
+  "99231" -> "99254" 
+  "99233" -> "99234" 
+  "99233" -> "99235" 
+  "99233" -> "99240" 
+  "99233" -> "99241" 
+  "99233" -> "99246" 
+  "99233" -> "99248" 
+  "99235" -> "99236" 
+  "99235" -> "99237" 
+  "99237" -> "99238" 
+  "99237" -> "99239" 
+  "99241" -> "99242" 
+  "99241" -> "99243" 
+  "99243" -> "99244" 
+  "99243" -> "99245" 
+  "99246" -> "99247" 
+  "99248" -> "99249" 
+  "99248" -> "99250" 
+  "99250" -> "99251" 
+  "99250" -> "99253" 
+  "99251" -> "99252" 
+}

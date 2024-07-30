@@ -1,0 +1,19 @@
+digraph "TIFFSetFileno" {  
+"1460" [label = <(&lt;operator&gt;.assignment,old_fd = tif-&gt;tif_fd)<SUB>676</SUB>> ]
+"1465" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_fd = fd)<SUB>677</SUB>> ]
+"1470" [label = <(RETURN,return old_fd;,return old_fd;)<SUB>678</SUB>> ]
+"1462" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fd)<SUB>676</SUB>> ]
+"1466" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_fd)<SUB>677</SUB>> ]
+"1464" [label = <(FIELD_IDENTIFIER,tif_fd,tif_fd)<SUB>676</SUB>> ]
+"1468" [label = <(FIELD_IDENTIFIER,tif_fd,tif_fd)<SUB>677</SUB>> ]
+"1455" [label = <(METHOD,TIFFSetFileno)<SUB>674</SUB>> ]
+"1472" [label = <(METHOD_RETURN,int)<SUB>674</SUB>> ]
+  "1460" -> "1468" 
+  "1465" -> "1470" 
+  "1470" -> "1472" 
+  "1462" -> "1460" 
+  "1466" -> "1465" 
+  "1464" -> "1462" 
+  "1468" -> "1466" 
+  "1455" -> "1464" 
+}

@@ -1,0 +1,18 @@
+digraph "NoSanitizeSubUInt64" {  
+"75530" [label = <(METHOD,NoSanitizeSubUInt64)<SUB>729</SUB>> ]
+"75538" [label = <(METHOD_RETURN,uint64_t)<SUB>729</SUB>> ]
+"75531" [label = <(PARAM,uint64_t a)<SUB>729</SUB>> ]
+"75532" [label = <(PARAM,uint64_t b)<SUB>729</SUB>> ]
+"75534" [label = <(RETURN,return a - b;,return a - b;)<SUB>729</SUB>> ]
+"75535" [label = <(&lt;operator&gt;.subtraction,a - b)<SUB>729</SUB>> ]
+  "75534" -> "75538"  [ label = "DDG: &lt;RET&gt;"] 
+  "75535" -> "75538"  [ label = "DDG: a"] 
+  "75535" -> "75538"  [ label = "DDG: b"] 
+  "75535" -> "75538"  [ label = "DDG: a - b"] 
+  "75530" -> "75531"  [ label = "DDG: "] 
+  "75530" -> "75532"  [ label = "DDG: "] 
+  "75535" -> "75534"  [ label = "DDG: a - b"] 
+  "75531" -> "75535"  [ label = "DDG: a"] 
+  "75530" -> "75535"  [ label = "DDG: "] 
+  "75532" -> "75535"  [ label = "DDG: b"] 
+}

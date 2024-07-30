@@ -1,0 +1,53 @@
+digraph "TIFFClampDoubleToUInt32" {  
+"67519" [label = <(METHOD,TIFFClampDoubleToUInt32)<SUB>1295</SUB>> ]
+"67520" [label = <(PARAM,double val)<SUB>1295</SUB>> ]
+"67521" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1296</SUB>> ]
+"67522" [label = <(CONTROL_STRUCTURE,if (val &lt; 0),if (val &lt; 0))<SUB>1297</SUB>> ]
+"67523" [label = <(&lt;operator&gt;.lessThan,val &lt; 0)<SUB>1297</SUB>> ]
+"67524" [label = <(IDENTIFIER,val,val &lt; 0)<SUB>1297</SUB>> ]
+"67525" [label = <(LITERAL,0,val &lt; 0)<SUB>1297</SUB>> ]
+"67526" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1298</SUB>> ]
+"67527" [label = <(RETURN,return 0;,return 0;)<SUB>1298</SUB>> ]
+"67528" [label = <(LITERAL,0,return 0;)<SUB>1298</SUB>> ]
+"67529" [label = <(CONTROL_STRUCTURE,if (val &gt; 0xFFFFFFFFU || val != val),if (val &gt; 0xFFFFFFFFU || val != val))<SUB>1299</SUB>> ]
+"67530" [label = <(&lt;operator&gt;.logicalOr,val &gt; 0xFFFFFFFFU || val != val)<SUB>1299</SUB>> ]
+"67531" [label = <(&lt;operator&gt;.greaterThan,val &gt; 0xFFFFFFFFU)<SUB>1299</SUB>> ]
+"67532" [label = <(IDENTIFIER,val,val &gt; 0xFFFFFFFFU)<SUB>1299</SUB>> ]
+"67533" [label = <(LITERAL,0xFFFFFFFFU,val &gt; 0xFFFFFFFFU)<SUB>1299</SUB>> ]
+"67534" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1299</SUB>> ]
+"67535" [label = <(IDENTIFIER,val,val != val)<SUB>1299</SUB>> ]
+"67536" [label = <(IDENTIFIER,val,val != val)<SUB>1299</SUB>> ]
+"67537" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>1300</SUB>> ]
+"67538" [label = <(RETURN,return 0xFFFFFFFFU;,return 0xFFFFFFFFU;)<SUB>1300</SUB>> ]
+"67539" [label = <(LITERAL,0xFFFFFFFFU,return 0xFFFFFFFFU;)<SUB>1300</SUB>> ]
+"67540" [label = <(RETURN,return (uint32_t)val;,return (uint32_t)val;)<SUB>1301</SUB>> ]
+"67541" [label = <(&lt;operator&gt;.cast,(uint32_t)val)<SUB>1301</SUB>> ]
+"67542" [label = <(UNKNOWN,uint32_t,uint32_t)<SUB>1301</SUB>> ]
+"67543" [label = <(IDENTIFIER,val,(uint32_t)val)<SUB>1301</SUB>> ]
+"67544" [label = <(METHOD_RETURN,uint32_t)<SUB>1295</SUB>> ]
+  "67519" -> "67520" 
+  "67519" -> "67521" 
+  "67519" -> "67544" 
+  "67521" -> "67522" 
+  "67521" -> "67529" 
+  "67521" -> "67540" 
+  "67522" -> "67523" 
+  "67522" -> "67526" 
+  "67523" -> "67524" 
+  "67523" -> "67525" 
+  "67526" -> "67527" 
+  "67527" -> "67528" 
+  "67529" -> "67530" 
+  "67529" -> "67537" 
+  "67530" -> "67531" 
+  "67530" -> "67534" 
+  "67531" -> "67532" 
+  "67531" -> "67533" 
+  "67534" -> "67535" 
+  "67534" -> "67536" 
+  "67537" -> "67538" 
+  "67538" -> "67539" 
+  "67540" -> "67541" 
+  "67541" -> "67542" 
+  "67541" -> "67543" 
+}

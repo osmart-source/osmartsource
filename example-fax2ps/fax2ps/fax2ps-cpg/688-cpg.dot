@@ -1,0 +1,18 @@
+digraph "fseeko" {  
+"30282" [label = <(METHOD,fseeko)<SUB>707</SUB>> ]
+"30283" [label = <(PARAM,FILE *__stream)<SUB>707</SUB>> ]
+"30284" [label = <(PARAM,__off_t __off)<SUB>707</SUB>> ]
+"30285" [label = <(PARAM,int __whence)<SUB>707</SUB>> ]
+"30286" [label = <(METHOD_RETURN,int)<SUB>707</SUB>> ]
+  "30282" -> "30283"  [ label = "AST: "] 
+  "30282" -> "30284"  [ label = "AST: "] 
+  "30282" -> "30285"  [ label = "AST: "] 
+  "30282" -> "30286"  [ label = "AST: "] 
+  "30282" -> "30286"  [ label = "CFG: "] 
+  "30283" -> "30286"  [ label = "DDG: __stream"] 
+  "30284" -> "30286"  [ label = "DDG: __off"] 
+  "30285" -> "30286"  [ label = "DDG: __whence"] 
+  "30282" -> "30283"  [ label = "DDG: "] 
+  "30282" -> "30284"  [ label = "DDG: "] 
+  "30282" -> "30285"  [ label = "DDG: "] 
+}

@@ -1,0 +1,15 @@
+digraph "TIFFIsBigTIFF" {  
+"1619" [label = <(METHOD,TIFFIsBigTIFF)<SUB>763</SUB>> ]
+"1632" [label = <(METHOD_RETURN,int)<SUB>763</SUB>> ]
+"1620" [label = <(PARAM,TIFF *tif)<SUB>763</SUB>> ]
+"1622" [label = <(RETURN,return (tif-&gt;tif_header.common.tiff_version == TIFF_VERSION_BIG);,return (tif-&gt;tif_header.common.tiff_version == TIFF_VERSION_BIG);)<SUB>765</SUB>> ]
+"1623" [label = <(&lt;operator&gt;.equals,tif-&gt;tif_header.common.tiff_version == TIFF_VERSION_BIG)<SUB>765</SUB>> ]
+  "1622" -> "1632"  [ label = "DDG: &lt;RET&gt;"] 
+  "1620" -> "1632"  [ label = "DDG: tif"] 
+  "1623" -> "1632"  [ label = "DDG: tif-&gt;tif_header.common.tiff_version"] 
+  "1623" -> "1632"  [ label = "DDG: tif-&gt;tif_header.common.tiff_version == TIFF_VERSION_BIG"] 
+  "1623" -> "1632"  [ label = "DDG: TIFF_VERSION_BIG"] 
+  "1619" -> "1620"  [ label = "DDG: "] 
+  "1623" -> "1622"  [ label = "DDG: tif-&gt;tif_header.common.tiff_version == TIFF_VERSION_BIG"] 
+  "1619" -> "1623"  [ label = "DDG: "] 
+}

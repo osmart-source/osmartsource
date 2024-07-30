@@ -1,0 +1,119 @@
+digraph "_TIFFDefaultTileSize" {  
+"29971" [label = <(METHOD,_TIFFDefaultTileSize)<SUB>272</SUB>> ]
+"29972" [label = <(PARAM,TIFF *tif)<SUB>272</SUB>> ]
+"29973" [label = <(PARAM,uint32_t *tw)<SUB>272</SUB>> ]
+"29974" [label = <(PARAM,uint32_t *th)<SUB>272</SUB>> ]
+"29975" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>273</SUB>> ]
+"29976" [label = <(&lt;operator&gt;.cast,(void)tif)<SUB>274</SUB>> ]
+"29977" [label = <(UNKNOWN,void,void)<SUB>274</SUB>> ]
+"29978" [label = <(IDENTIFIER,tif,(void)tif)<SUB>274</SUB>> ]
+"29979" [label = <(CONTROL_STRUCTURE,if (*(int32_t *)tw &lt; 1),if (*(int32_t *)tw &lt; 1))<SUB>275</SUB>> ]
+"29980" [label = <(&lt;operator&gt;.lessThan,*(int32_t *)tw &lt; 1)<SUB>275</SUB>> ]
+"29981" [label = <(&lt;operator&gt;.indirection,*(int32_t *)tw)<SUB>275</SUB>> ]
+"29982" [label = <(&lt;operator&gt;.cast,(int32_t *)tw)<SUB>275</SUB>> ]
+"29983" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>275</SUB>> ]
+"29984" [label = <(IDENTIFIER,tw,(int32_t *)tw)<SUB>275</SUB>> ]
+"29985" [label = <(LITERAL,1,*(int32_t *)tw &lt; 1)<SUB>275</SUB>> ]
+"29986" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>276</SUB>> ]
+"29987" [label = <(&lt;operator&gt;.assignment,*tw = 256)<SUB>276</SUB>> ]
+"29988" [label = <(&lt;operator&gt;.indirection,*tw)<SUB>276</SUB>> ]
+"29989" [label = <(IDENTIFIER,tw,*tw = 256)<SUB>276</SUB>> ]
+"29990" [label = <(LITERAL,256,*tw = 256)<SUB>276</SUB>> ]
+"29991" [label = <(CONTROL_STRUCTURE,if (*(int32_t *)th &lt; 1),if (*(int32_t *)th &lt; 1))<SUB>277</SUB>> ]
+"29992" [label = <(&lt;operator&gt;.lessThan,*(int32_t *)th &lt; 1)<SUB>277</SUB>> ]
+"29993" [label = <(&lt;operator&gt;.indirection,*(int32_t *)th)<SUB>277</SUB>> ]
+"29994" [label = <(&lt;operator&gt;.cast,(int32_t *)th)<SUB>277</SUB>> ]
+"29995" [label = <(UNKNOWN,int32_t *,int32_t *)<SUB>277</SUB>> ]
+"29996" [label = <(IDENTIFIER,th,(int32_t *)th)<SUB>277</SUB>> ]
+"29997" [label = <(LITERAL,1,*(int32_t *)th &lt; 1)<SUB>277</SUB>> ]
+"29998" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>278</SUB>> ]
+"29999" [label = <(&lt;operator&gt;.assignment,*th = 256)<SUB>278</SUB>> ]
+"30000" [label = <(&lt;operator&gt;.indirection,*th)<SUB>278</SUB>> ]
+"30001" [label = <(IDENTIFIER,th,*th = 256)<SUB>278</SUB>> ]
+"30002" [label = <(LITERAL,256,*th = 256)<SUB>278</SUB>> ]
+"30003" [label = <(CONTROL_STRUCTURE,if (*tw &amp; 0xf),if (*tw &amp; 0xf))<SUB>280</SUB>> ]
+"30004" [label = <(&lt;operator&gt;.and,*tw &amp; 0xf)<SUB>280</SUB>> ]
+"30005" [label = <(&lt;operator&gt;.indirection,*tw)<SUB>280</SUB>> ]
+"30006" [label = <(IDENTIFIER,tw,*tw &amp; 0xf)<SUB>280</SUB>> ]
+"30007" [label = <(LITERAL,0xf,*tw &amp; 0xf)<SUB>280</SUB>> ]
+"30008" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>281</SUB>> ]
+"30009" [label = <(&lt;operator&gt;.assignment,*tw = TIFFroundup_32(*tw, 16))<SUB>281</SUB>> ]
+"30010" [label = <(&lt;operator&gt;.indirection,*tw)<SUB>281</SUB>> ]
+"30011" [label = <(IDENTIFIER,tw,*tw = TIFFroundup_32(*tw, 16))<SUB>281</SUB>> ]
+"30012" [label = <(TIFFroundup_32,TIFFroundup_32(*tw, 16))<SUB>281</SUB>> ]
+"30013" [label = <(&lt;operator&gt;.indirection,*tw)<SUB>281</SUB>> ]
+"30014" [label = <(IDENTIFIER,tw,TIFFroundup_32(*tw, 16))<SUB>281</SUB>> ]
+"30015" [label = <(LITERAL,16,TIFFroundup_32(*tw, 16))<SUB>281</SUB>> ]
+"30016" [label = <(CONTROL_STRUCTURE,if (*th &amp; 0xf),if (*th &amp; 0xf))<SUB>282</SUB>> ]
+"30017" [label = <(&lt;operator&gt;.and,*th &amp; 0xf)<SUB>282</SUB>> ]
+"30018" [label = <(&lt;operator&gt;.indirection,*th)<SUB>282</SUB>> ]
+"30019" [label = <(IDENTIFIER,th,*th &amp; 0xf)<SUB>282</SUB>> ]
+"30020" [label = <(LITERAL,0xf,*th &amp; 0xf)<SUB>282</SUB>> ]
+"30021" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>283</SUB>> ]
+"30022" [label = <(&lt;operator&gt;.assignment,*th = TIFFroundup_32(*th, 16))<SUB>283</SUB>> ]
+"30023" [label = <(&lt;operator&gt;.indirection,*th)<SUB>283</SUB>> ]
+"30024" [label = <(IDENTIFIER,th,*th = TIFFroundup_32(*th, 16))<SUB>283</SUB>> ]
+"30025" [label = <(TIFFroundup_32,TIFFroundup_32(*th, 16))<SUB>283</SUB>> ]
+"30026" [label = <(&lt;operator&gt;.indirection,*th)<SUB>283</SUB>> ]
+"30027" [label = <(IDENTIFIER,th,TIFFroundup_32(*th, 16))<SUB>283</SUB>> ]
+"30028" [label = <(LITERAL,16,TIFFroundup_32(*th, 16))<SUB>283</SUB>> ]
+"30029" [label = <(METHOD_RETURN,void)<SUB>272</SUB>> ]
+  "29971" -> "29972" 
+  "29971" -> "29973" 
+  "29971" -> "29974" 
+  "29971" -> "29975" 
+  "29971" -> "30029" 
+  "29975" -> "29976" 
+  "29975" -> "29979" 
+  "29975" -> "29991" 
+  "29975" -> "30003" 
+  "29975" -> "30016" 
+  "29976" -> "29977" 
+  "29976" -> "29978" 
+  "29979" -> "29980" 
+  "29979" -> "29986" 
+  "29980" -> "29981" 
+  "29980" -> "29985" 
+  "29981" -> "29982" 
+  "29982" -> "29983" 
+  "29982" -> "29984" 
+  "29986" -> "29987" 
+  "29987" -> "29988" 
+  "29987" -> "29990" 
+  "29988" -> "29989" 
+  "29991" -> "29992" 
+  "29991" -> "29998" 
+  "29992" -> "29993" 
+  "29992" -> "29997" 
+  "29993" -> "29994" 
+  "29994" -> "29995" 
+  "29994" -> "29996" 
+  "29998" -> "29999" 
+  "29999" -> "30000" 
+  "29999" -> "30002" 
+  "30000" -> "30001" 
+  "30003" -> "30004" 
+  "30003" -> "30008" 
+  "30004" -> "30005" 
+  "30004" -> "30007" 
+  "30005" -> "30006" 
+  "30008" -> "30009" 
+  "30009" -> "30010" 
+  "30009" -> "30012" 
+  "30010" -> "30011" 
+  "30012" -> "30013" 
+  "30012" -> "30015" 
+  "30013" -> "30014" 
+  "30016" -> "30017" 
+  "30016" -> "30021" 
+  "30017" -> "30018" 
+  "30017" -> "30020" 
+  "30018" -> "30019" 
+  "30021" -> "30022" 
+  "30022" -> "30023" 
+  "30022" -> "30025" 
+  "30023" -> "30024" 
+  "30025" -> "30026" 
+  "30025" -> "30028" 
+  "30026" -> "30027" 
+}

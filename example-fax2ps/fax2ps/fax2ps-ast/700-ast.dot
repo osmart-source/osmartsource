@@ -1,0 +1,763 @@
+digraph "TIFFWriteEncodedStrip" {  
+"30781" [label = <(METHOD,TIFFWriteEncodedStrip)<SUB>215</SUB>> ]
+"30782" [label = <(PARAM,TIFF *tif)<SUB>215</SUB>> ]
+"30783" [label = <(PARAM,uint32_t strip)<SUB>215</SUB>> ]
+"30784" [label = <(PARAM,void *data)<SUB>215</SUB>> ]
+"30785" [label = <(PARAM,tmsize_t cc)<SUB>216</SUB>> ]
+"30786" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>217</SUB>> ]
+"30787" [label = <(LOCAL,constchar[] module: char[])<SUB>218</SUB>> ]
+"30788" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteEncodedStrip&quot;)<SUB>218</SUB>> ]
+"30789" [label = <(IDENTIFIER,module,module[] = &quot;TIFFWriteEncodedStrip&quot;)<SUB>218</SUB>> ]
+"30790" [label = <(LITERAL,&quot;TIFFWriteEncodedStrip&quot;,module[] = &quot;TIFFWriteEncodedStrip&quot;)<SUB>218</SUB>> ]
+"30791" [label = <(LOCAL,TIFFDirectory* td: TIFFDirectory)<SUB>219</SUB>> ]
+"30792" [label = <(&lt;operator&gt;.assignment,*td = &amp;tif-&gt;tif_dir)<SUB>219</SUB>> ]
+"30793" [label = <(IDENTIFIER,td,*td = &amp;tif-&gt;tif_dir)<SUB>219</SUB>> ]
+"30794" [label = <(&lt;operator&gt;.addressOf,&amp;tif-&gt;tif_dir)<SUB>219</SUB>> ]
+"30795" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>219</SUB>> ]
+"30796" [label = <(IDENTIFIER,tif,*td = &amp;tif-&gt;tif_dir)<SUB>219</SUB>> ]
+"30797" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>219</SUB>> ]
+"30798" [label = <(LOCAL,uint16_t sample: uint16_t)<SUB>220</SUB>> ]
+"30799" [label = <(CONTROL_STRUCTURE,if (!WRITECHECKSTRIPS(tif, module)),if (!WRITECHECKSTRIPS(tif, module)))<SUB>222</SUB>> ]
+"30800" [label = <(&lt;operator&gt;.logicalNot,!WRITECHECKSTRIPS(tif, module))<SUB>222</SUB>> ]
+"30801" [label = <(&lt;operator&gt;.logicalOr,((tif)-&gt;tif_flags &amp; TIFF_BEENWRITING) || TIFFWriteCheck((tif), 0, module))<SUB>222</SUB>> ]
+"30802" [label = <(&lt;operator&gt;.and,(tif)-&gt;tif_flags &amp; TIFF_BEENWRITING)<SUB>222</SUB>> ]
+"30803" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_flags)<SUB>222</SUB>> ]
+"30804" [label = <(IDENTIFIER,tif,(tif)-&gt;tif_flags &amp; TIFF_BEENWRITING)<SUB>222</SUB>> ]
+"30805" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>222</SUB>> ]
+"30806" [label = <(IDENTIFIER,TIFF_BEENWRITING,(tif)-&gt;tif_flags &amp; TIFF_BEENWRITING)<SUB>222</SUB>> ]
+"30807" [label = <(TIFFWriteCheck,TIFFWriteCheck((tif), 0, module))<SUB>222</SUB>> ]
+"30808" [label = <(IDENTIFIER,tif,TIFFWriteCheck((tif), 0, module))<SUB>222</SUB>> ]
+"30809" [label = <(LITERAL,0,TIFFWriteCheck((tif), 0, module))<SUB>222</SUB>> ]
+"30810" [label = <(IDENTIFIER,module,TIFFWriteCheck((tif), 0, module))<SUB>222</SUB>> ]
+"30811" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>223</SUB>> ]
+"30812" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>223</SUB>> ]
+"30813" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>223</SUB>> ]
+"30814" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>223</SUB>> ]
+"30815" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>223</SUB>> ]
+"30816" [label = <(CONTROL_STRUCTURE,if (strip &gt;= td-&gt;td_nstrips),if (strip &gt;= td-&gt;td_nstrips))<SUB>233</SUB>> ]
+"30817" [label = <(&lt;operator&gt;.greaterEqualsThan,strip &gt;= td-&gt;td_nstrips)<SUB>233</SUB>> ]
+"30818" [label = <(IDENTIFIER,strip,strip &gt;= td-&gt;td_nstrips)<SUB>233</SUB>> ]
+"30819" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_nstrips)<SUB>233</SUB>> ]
+"30820" [label = <(IDENTIFIER,td,strip &gt;= td-&gt;td_nstrips)<SUB>233</SUB>> ]
+"30821" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>233</SUB>> ]
+"30822" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>234</SUB>> ]
+"30823" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE),if (td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE))<SUB>235</SUB>> ]
+"30824" [label = <(&lt;operator&gt;.equals,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>235</SUB>> ]
+"30825" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_planarconfig)<SUB>235</SUB>> ]
+"30826" [label = <(IDENTIFIER,td,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>235</SUB>> ]
+"30827" [label = <(FIELD_IDENTIFIER,td_planarconfig,td_planarconfig)<SUB>235</SUB>> ]
+"30828" [label = <(IDENTIFIER,PLANARCONFIG_SEPARATE,td-&gt;td_planarconfig == PLANARCONFIG_SEPARATE)<SUB>235</SUB>> ]
+"30829" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>236</SUB>> ]
+"30830" [label = <(TIFFErrorExtR,TIFFErrorExtR(\012                tif, module,\012                &quot;Can not grow image by strips when using separate planes&quot;))<SUB>237</SUB>> ]
+"30831" [label = <(IDENTIFIER,tif,TIFFErrorExtR(\012                tif, module,\012                &quot;Can not grow image by strips when using separate planes&quot;))<SUB>238</SUB>> ]
+"30832" [label = <(IDENTIFIER,module,TIFFErrorExtR(\012                tif, module,\012                &quot;Can not grow image by strips when using separate planes&quot;))<SUB>238</SUB>> ]
+"30833" [label = <(LITERAL,&quot;Can not grow image by strips when using separate planes&quot;,TIFFErrorExtR(\012                tif, module,\012                &quot;Can not grow image by strips when using separate planes&quot;))<SUB>239</SUB>> ]
+"30834" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>240</SUB>> ]
+"30835" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>240</SUB>> ]
+"30836" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>240</SUB>> ]
+"30837" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>240</SUB>> ]
+"30838" [label = <(CONTROL_STRUCTURE,if (!TIFFGrowStrips(tif, 1, module)),if (!TIFFGrowStrips(tif, 1, module)))<SUB>242</SUB>> ]
+"30839" [label = <(&lt;operator&gt;.logicalNot,!TIFFGrowStrips(tif, 1, module))<SUB>242</SUB>> ]
+"30840" [label = <(TIFFGrowStrips,TIFFGrowStrips(tif, 1, module))<SUB>242</SUB>> ]
+"30841" [label = <(IDENTIFIER,tif,TIFFGrowStrips(tif, 1, module))<SUB>242</SUB>> ]
+"30842" [label = <(LITERAL,1,TIFFGrowStrips(tif, 1, module))<SUB>242</SUB>> ]
+"30843" [label = <(IDENTIFIER,module,TIFFGrowStrips(tif, 1, module))<SUB>242</SUB>> ]
+"30844" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>243</SUB>> ]
+"30845" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>243</SUB>> ]
+"30846" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>243</SUB>> ]
+"30847" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>243</SUB>> ]
+"30848" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>243</SUB>> ]
+"30849" [label = <(&lt;operator&gt;.assignment,td-&gt;td_stripsperimage =\012            TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>244</SUB>> ]
+"30850" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>244</SUB>> ]
+"30851" [label = <(IDENTIFIER,td,td-&gt;td_stripsperimage =\012            TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>244</SUB>> ]
+"30852" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>244</SUB>> ]
+"30853" [label = <(TIFFhowmany_32,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>245</SUB>> ]
+"30854" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_imagelength)<SUB>245</SUB>> ]
+"30855" [label = <(IDENTIFIER,td,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>245</SUB>> ]
+"30856" [label = <(FIELD_IDENTIFIER,td_imagelength,td_imagelength)<SUB>245</SUB>> ]
+"30857" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>245</SUB>> ]
+"30858" [label = <(IDENTIFIER,td,TIFFhowmany_32(td-&gt;td_imagelength, td-&gt;td_rowsperstrip))<SUB>245</SUB>> ]
+"30859" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>245</SUB>> ]
+"30860" [label = <(CONTROL_STRUCTURE,if (!BUFFERCHECK(tif)),if (!BUFFERCHECK(tif)))<SUB>252</SUB>> ]
+"30861" [label = <(&lt;operator&gt;.logicalNot,!BUFFERCHECK(tif))<SUB>252</SUB>> ]
+"30862" [label = <(&lt;operator&gt;.logicalOr,(((tif)-&gt;tif_flags &amp; TIFF_BUFFERSETUP) &amp;&amp; tif-&gt;tif_rawdata) || TIFFWriteBufferSetup((tif), ((void *)0), (tmsize_t) - 1))<SUB>252</SUB>> ]
+"30863" [label = <(&lt;operator&gt;.logicalAnd,((tif)-&gt;tif_flags &amp; TIFF_BUFFERSETUP) &amp;&amp; tif-&gt;tif_rawdata)<SUB>252</SUB>> ]
+"30864" [label = <(&lt;operator&gt;.and,(tif)-&gt;tif_flags &amp; TIFF_BUFFERSETUP)<SUB>252</SUB>> ]
+"30865" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_flags)<SUB>252</SUB>> ]
+"30866" [label = <(IDENTIFIER,tif,(tif)-&gt;tif_flags &amp; TIFF_BUFFERSETUP)<SUB>252</SUB>> ]
+"30867" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>252</SUB>> ]
+"30868" [label = <(IDENTIFIER,TIFF_BUFFERSETUP,(tif)-&gt;tif_flags &amp; TIFF_BUFFERSETUP)<SUB>252</SUB>> ]
+"30869" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>252</SUB>> ]
+"30870" [label = <(IDENTIFIER,tif,((tif)-&gt;tif_flags &amp; TIFF_BUFFERSETUP) &amp;&amp; tif-&gt;tif_rawdata)<SUB>252</SUB>> ]
+"30871" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>252</SUB>> ]
+"30872" [label = <(TIFFWriteBufferSetup,TIFFWriteBufferSetup((tif), ((void *)0), (tmsize_t) - 1))<SUB>252</SUB>> ]
+"30873" [label = <(IDENTIFIER,tif,TIFFWriteBufferSetup((tif), ((void *)0), (tmsize_t) - 1))<SUB>252</SUB>> ]
+"30874" [label = <(&lt;operator&gt;.cast,(void *)0)<SUB>252</SUB>> ]
+"30875" [label = <(UNKNOWN,void *,void *)<SUB>252</SUB>> ]
+"30876" [label = <(LITERAL,0,(void *)0)<SUB>252</SUB>> ]
+"30877" [label = <(&lt;operator&gt;.subtraction,(tmsize_t) - 1)<SUB>252</SUB>> ]
+"30878" [label = <(IDENTIFIER,tmsize_t,(tmsize_t) - 1)<SUB>252</SUB>> ]
+"30879" [label = <(LITERAL,1,(tmsize_t) - 1)<SUB>252</SUB>> ]
+"30880" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>253</SUB>> ]
+"30881" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>253</SUB>> ]
+"30882" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>253</SUB>> ]
+"30883" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>253</SUB>> ]
+"30884" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>253</SUB>> ]
+"30885" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_BUF4WRITE)<SUB>255</SUB>> ]
+"30886" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>255</SUB>> ]
+"30887" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags |= TIFF_BUF4WRITE)<SUB>255</SUB>> ]
+"30888" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>255</SUB>> ]
+"30889" [label = <(IDENTIFIER,TIFF_BUF4WRITE,tif-&gt;tif_flags |= TIFF_BUF4WRITE)<SUB>255</SUB>> ]
+"30890" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curstrip = strip)<SUB>257</SUB>> ]
+"30891" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curstrip)<SUB>257</SUB>> ]
+"30892" [label = <(IDENTIFIER,tif,tif-&gt;tif_curstrip = strip)<SUB>257</SUB>> ]
+"30893" [label = <(FIELD_IDENTIFIER,tif_curstrip,tif_curstrip)<SUB>257</SUB>> ]
+"30894" [label = <(IDENTIFIER,strip,tif-&gt;tif_curstrip = strip)<SUB>257</SUB>> ]
+"30895" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_curoff = 0)<SUB>260</SUB>> ]
+"30896" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_curoff)<SUB>260</SUB>> ]
+"30897" [label = <(IDENTIFIER,tif,tif-&gt;tif_curoff = 0)<SUB>260</SUB>> ]
+"30898" [label = <(FIELD_IDENTIFIER,tif_curoff,tif_curoff)<SUB>260</SUB>> ]
+"30899" [label = <(LITERAL,0,tif-&gt;tif_curoff = 0)<SUB>260</SUB>> ]
+"30900" [label = <(CONTROL_STRUCTURE,if (!_TIFFReserveLargeEnoughWriteBuffer(tif, strip)),if (!_TIFFReserveLargeEnoughWriteBuffer(tif, strip)))<SUB>262</SUB>> ]
+"30901" [label = <(&lt;operator&gt;.logicalNot,!_TIFFReserveLargeEnoughWriteBuffer(tif, strip))<SUB>262</SUB>> ]
+"30902" [label = <(_TIFFReserveLargeEnoughWriteBuffer,_TIFFReserveLargeEnoughWriteBuffer(tif, strip))<SUB>262</SUB>> ]
+"30903" [label = <(IDENTIFIER,tif,_TIFFReserveLargeEnoughWriteBuffer(tif, strip))<SUB>262</SUB>> ]
+"30904" [label = <(IDENTIFIER,strip,_TIFFReserveLargeEnoughWriteBuffer(tif, strip))<SUB>262</SUB>> ]
+"30905" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>263</SUB>> ]
+"30906" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>264</SUB>> ]
+"30907" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>264</SUB>> ]
+"30908" [label = <(&lt;operator&gt;.minus,-1)<SUB>264</SUB>> ]
+"30909" [label = <(LITERAL,1,-1)<SUB>264</SUB>> ]
+"30910" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = 0)<SUB>267</SUB>> ]
+"30911" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>267</SUB>> ]
+"30912" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc = 0)<SUB>267</SUB>> ]
+"30913" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>267</SUB>> ]
+"30914" [label = <(LITERAL,0,tif-&gt;tif_rawcc = 0)<SUB>267</SUB>> ]
+"30915" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>268</SUB>> ]
+"30916" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>268</SUB>> ]
+"30917" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>268</SUB>> ]
+"30918" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>268</SUB>> ]
+"30919" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>268</SUB>> ]
+"30920" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>268</SUB>> ]
+"30921" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>268</SUB>> ]
+"30922" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_stripsperimage == 0),if (td-&gt;td_stripsperimage == 0))<SUB>270</SUB>> ]
+"30923" [label = <(&lt;operator&gt;.equals,td-&gt;td_stripsperimage == 0)<SUB>270</SUB>> ]
+"30924" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>270</SUB>> ]
+"30925" [label = <(IDENTIFIER,td,td-&gt;td_stripsperimage == 0)<SUB>270</SUB>> ]
+"30926" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>270</SUB>> ]
+"30927" [label = <(LITERAL,0,td-&gt;td_stripsperimage == 0)<SUB>270</SUB>> ]
+"30928" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>271</SUB>> ]
+"30929" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Zero strips per image&quot;))<SUB>272</SUB>> ]
+"30930" [label = <(IDENTIFIER,tif,TIFFErrorExtR(tif, module, &quot;Zero strips per image&quot;))<SUB>272</SUB>> ]
+"30931" [label = <(IDENTIFIER,module,TIFFErrorExtR(tif, module, &quot;Zero strips per image&quot;))<SUB>272</SUB>> ]
+"30932" [label = <(LITERAL,&quot;Zero strips per image&quot;,TIFFErrorExtR(tif, module, &quot;Zero strips per image&quot;))<SUB>272</SUB>> ]
+"30933" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>273</SUB>> ]
+"30934" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>273</SUB>> ]
+"30935" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>273</SUB>> ]
+"30936" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>273</SUB>> ]
+"30937" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_row = (strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>276</SUB>> ]
+"30938" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_row)<SUB>276</SUB>> ]
+"30939" [label = <(IDENTIFIER,tif,tif-&gt;tif_row = (strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>276</SUB>> ]
+"30940" [label = <(FIELD_IDENTIFIER,tif_row,tif_row)<SUB>276</SUB>> ]
+"30941" [label = <(&lt;operator&gt;.multiplication,(strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>276</SUB>> ]
+"30942" [label = <(&lt;operator&gt;.modulo,strip % td-&gt;td_stripsperimage)<SUB>276</SUB>> ]
+"30943" [label = <(IDENTIFIER,strip,strip % td-&gt;td_stripsperimage)<SUB>276</SUB>> ]
+"30944" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>276</SUB>> ]
+"30945" [label = <(IDENTIFIER,td,strip % td-&gt;td_stripsperimage)<SUB>276</SUB>> ]
+"30946" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>276</SUB>> ]
+"30947" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_rowsperstrip)<SUB>276</SUB>> ]
+"30948" [label = <(IDENTIFIER,td,(strip % td-&gt;td_stripsperimage) * td-&gt;td_rowsperstrip)<SUB>276</SUB>> ]
+"30949" [label = <(FIELD_IDENTIFIER,td_rowsperstrip,td_rowsperstrip)<SUB>276</SUB>> ]
+"30950" [label = <(CONTROL_STRUCTURE,if ((tif-&gt;tif_flags &amp; TIFF_CODERSETUP) == 0),if ((tif-&gt;tif_flags &amp; TIFF_CODERSETUP) == 0))<SUB>277</SUB>> ]
+"30951" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_CODERSETUP) == 0)<SUB>277</SUB>> ]
+"30952" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_CODERSETUP)<SUB>277</SUB>> ]
+"30953" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>277</SUB>> ]
+"30954" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_CODERSETUP)<SUB>277</SUB>> ]
+"30955" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>277</SUB>> ]
+"30956" [label = <(IDENTIFIER,TIFF_CODERSETUP,tif-&gt;tif_flags &amp; TIFF_CODERSETUP)<SUB>277</SUB>> ]
+"30957" [label = <(LITERAL,0,(tif-&gt;tif_flags &amp; TIFF_CODERSETUP) == 0)<SUB>277</SUB>> ]
+"30958" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>278</SUB>> ]
+"30959" [label = <(CONTROL_STRUCTURE,if (!(*tif-&gt;tif_setupencode)(tif)),if (!(*tif-&gt;tif_setupencode)(tif)))<SUB>279</SUB>> ]
+"30960" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_setupencode)(tif))<SUB>279</SUB>> ]
+"30961" [label = <(*tif-&gt;tif_setupencode,(*tif-&gt;tif_setupencode)(tif))<SUB>279</SUB>> ]
+"30962" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_setupencode)<SUB>279</SUB>> ]
+"30963" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_setupencode)<SUB>279</SUB>> ]
+"30964" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_setupencode)(tif))<SUB>279</SUB>> ]
+"30965" [label = <(FIELD_IDENTIFIER,tif_setupencode,tif_setupencode)<SUB>279</SUB>> ]
+"30966" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_setupencode)(tif))<SUB>279</SUB>> ]
+"30967" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>280</SUB>> ]
+"30968" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>280</SUB>> ]
+"30969" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>280</SUB>> ]
+"30970" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>280</SUB>> ]
+"30971" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>280</SUB>> ]
+"30972" [label = <(&lt;operators&gt;.assignmentOr,tif-&gt;tif_flags |= TIFF_CODERSETUP)<SUB>281</SUB>> ]
+"30973" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>281</SUB>> ]
+"30974" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags |= TIFF_CODERSETUP)<SUB>281</SUB>> ]
+"30975" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>281</SUB>> ]
+"30976" [label = <(IDENTIFIER,TIFF_CODERSETUP,tif-&gt;tif_flags |= TIFF_CODERSETUP)<SUB>281</SUB>> ]
+"30977" [label = <(&lt;operators&gt;.assignmentAnd,tif-&gt;tif_flags &amp;= ~TIFF_POSTENCODE)<SUB>284</SUB>> ]
+"30978" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>284</SUB>> ]
+"30979" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp;= ~TIFF_POSTENCODE)<SUB>284</SUB>> ]
+"30980" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>284</SUB>> ]
+"30981" [label = <(&lt;operator&gt;.not,~TIFF_POSTENCODE)<SUB>284</SUB>> ]
+"30982" [label = <(IDENTIFIER,TIFF_POSTENCODE,~TIFF_POSTENCODE)<SUB>284</SUB>> ]
+"30983" [label = <(CONTROL_STRUCTURE,if (td-&gt;td_compression == COMPRESSION_NONE),if (td-&gt;td_compression == COMPRESSION_NONE))<SUB>287</SUB>> ]
+"30984" [label = <(&lt;operator&gt;.equals,td-&gt;td_compression == COMPRESSION_NONE)<SUB>287</SUB>> ]
+"30985" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_compression)<SUB>287</SUB>> ]
+"30986" [label = <(IDENTIFIER,td,td-&gt;td_compression == COMPRESSION_NONE)<SUB>287</SUB>> ]
+"30987" [label = <(FIELD_IDENTIFIER,td_compression,td_compression)<SUB>287</SUB>> ]
+"30988" [label = <(IDENTIFIER,COMPRESSION_NONE,td-&gt;td_compression == COMPRESSION_NONE)<SUB>287</SUB>> ]
+"30989" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>288</SUB>> ]
+"30990" [label = <(tif-&gt;tif_postdecode,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>290</SUB>> ]
+"30991" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>290</SUB>> ]
+"30992" [label = <(IDENTIFIER,tif,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>290</SUB>> ]
+"30993" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>290</SUB>> ]
+"30994" [label = <(IDENTIFIER,tif,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>290</SUB>> ]
+"30995" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>290</SUB>> ]
+"30996" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>290</SUB>> ]
+"30997" [label = <(IDENTIFIER,data,(uint8_t *)data)<SUB>290</SUB>> ]
+"30998" [label = <(IDENTIFIER,cc,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>290</SUB>> ]
+"30999" [label = <(CONTROL_STRUCTURE,if (!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012            (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0),if (!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012            (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0))<SUB>292</SUB>> ]
+"31000" [label = <(&lt;operator&gt;.logicalAnd,!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012            (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>292</SUB>> ]
+"31001" [label = <(&lt;operator&gt;.logicalNot,!isFillOrder(tif, td-&gt;td_fillorder))<SUB>292</SUB>> ]
+"31002" [label = <(isFillOrder,isFillOrder(tif, td-&gt;td_fillorder))<SUB>292</SUB>> ]
+"31003" [label = <(IDENTIFIER,tif,isFillOrder(tif, td-&gt;td_fillorder))<SUB>292</SUB>> ]
+"31004" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_fillorder)<SUB>292</SUB>> ]
+"31005" [label = <(IDENTIFIER,td,isFillOrder(tif, td-&gt;td_fillorder))<SUB>292</SUB>> ]
+"31006" [label = <(FIELD_IDENTIFIER,td_fillorder,td_fillorder)<SUB>292</SUB>> ]
+"31007" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>293</SUB>> ]
+"31008" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>293</SUB>> ]
+"31009" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>293</SUB>> ]
+"31010" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>293</SUB>> ]
+"31011" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>293</SUB>> ]
+"31012" [label = <(IDENTIFIER,TIFF_NOBITREV,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>293</SUB>> ]
+"31013" [label = <(LITERAL,0,(tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>293</SUB>> ]
+"31014" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>294</SUB>> ]
+"31015" [label = <(TIFFReverseBits,TIFFReverseBits((uint8_t *)data, cc))<SUB>294</SUB>> ]
+"31016" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>294</SUB>> ]
+"31017" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>294</SUB>> ]
+"31018" [label = <(IDENTIFIER,data,(uint8_t *)data)<SUB>294</SUB>> ]
+"31019" [label = <(IDENTIFIER,cc,TIFFReverseBits((uint8_t *)data, cc))<SUB>294</SUB>> ]
+"31020" [label = <(CONTROL_STRUCTURE,if (cc &gt; 0 &amp;&amp; !TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc)),if (cc &gt; 0 &amp;&amp; !TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc)))<SUB>296</SUB>> ]
+"31021" [label = <(&lt;operator&gt;.logicalAnd,cc &gt; 0 &amp;&amp; !TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>296</SUB>> ]
+"31022" [label = <(&lt;operator&gt;.greaterThan,cc &gt; 0)<SUB>296</SUB>> ]
+"31023" [label = <(IDENTIFIER,cc,cc &gt; 0)<SUB>296</SUB>> ]
+"31024" [label = <(LITERAL,0,cc &gt; 0)<SUB>296</SUB>> ]
+"31025" [label = <(&lt;operator&gt;.logicalNot,!TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>296</SUB>> ]
+"31026" [label = <(TIFFAppendToStrip,TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>296</SUB>> ]
+"31027" [label = <(IDENTIFIER,tif,TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>296</SUB>> ]
+"31028" [label = <(IDENTIFIER,strip,TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>296</SUB>> ]
+"31029" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>296</SUB>> ]
+"31030" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>296</SUB>> ]
+"31031" [label = <(IDENTIFIER,data,(uint8_t *)data)<SUB>296</SUB>> ]
+"31032" [label = <(IDENTIFIER,cc,TIFFAppendToStrip(tif, strip, (uint8_t *)data, cc))<SUB>296</SUB>> ]
+"31033" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>297</SUB>> ]
+"31034" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>297</SUB>> ]
+"31035" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>297</SUB>> ]
+"31036" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>297</SUB>> ]
+"31037" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>297</SUB>> ]
+"31038" [label = <(RETURN,return (cc);,return (cc);)<SUB>298</SUB>> ]
+"31039" [label = <(IDENTIFIER,cc,return (cc);)<SUB>298</SUB>> ]
+"31040" [label = <(&lt;operator&gt;.assignment,sample = (uint16_t)(strip / td-&gt;td_stripsperimage))<SUB>301</SUB>> ]
+"31041" [label = <(IDENTIFIER,sample,sample = (uint16_t)(strip / td-&gt;td_stripsperimage))<SUB>301</SUB>> ]
+"31042" [label = <(uint16_t,(uint16_t)(strip / td-&gt;td_stripsperimage))<SUB>301</SUB>> ]
+"31043" [label = <(&lt;operator&gt;.division,strip / td-&gt;td_stripsperimage)<SUB>301</SUB>> ]
+"31044" [label = <(IDENTIFIER,strip,strip / td-&gt;td_stripsperimage)<SUB>301</SUB>> ]
+"31045" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_stripsperimage)<SUB>301</SUB>> ]
+"31046" [label = <(IDENTIFIER,td,strip / td-&gt;td_stripsperimage)<SUB>301</SUB>> ]
+"31047" [label = <(FIELD_IDENTIFIER,td_stripsperimage,td_stripsperimage)<SUB>301</SUB>> ]
+"31048" [label = <(CONTROL_STRUCTURE,if (!(*tif-&gt;tif_preencode)(tif, sample)),if (!(*tif-&gt;tif_preencode)(tif, sample)))<SUB>302</SUB>> ]
+"31049" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_preencode)(tif, sample))<SUB>302</SUB>> ]
+"31050" [label = <(*tif-&gt;tif_preencode,(*tif-&gt;tif_preencode)(tif, sample))<SUB>302</SUB>> ]
+"31051" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_preencode)<SUB>302</SUB>> ]
+"31052" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_preencode)<SUB>302</SUB>> ]
+"31053" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_preencode)(tif, sample))<SUB>302</SUB>> ]
+"31054" [label = <(FIELD_IDENTIFIER,tif_preencode,tif_preencode)<SUB>302</SUB>> ]
+"31055" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_preencode)(tif, sample))<SUB>302</SUB>> ]
+"31056" [label = <(IDENTIFIER,sample,(*tif-&gt;tif_preencode)(tif, sample))<SUB>302</SUB>> ]
+"31057" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>303</SUB>> ]
+"31058" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>303</SUB>> ]
+"31059" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>303</SUB>> ]
+"31060" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>303</SUB>> ]
+"31061" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>303</SUB>> ]
+"31062" [label = <(tif-&gt;tif_postdecode,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>306</SUB>> ]
+"31063" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postdecode)<SUB>306</SUB>> ]
+"31064" [label = <(IDENTIFIER,tif,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>306</SUB>> ]
+"31065" [label = <(FIELD_IDENTIFIER,tif_postdecode,tif_postdecode)<SUB>306</SUB>> ]
+"31066" [label = <(IDENTIFIER,tif,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>306</SUB>> ]
+"31067" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>306</SUB>> ]
+"31068" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>306</SUB>> ]
+"31069" [label = <(IDENTIFIER,data,(uint8_t *)data)<SUB>306</SUB>> ]
+"31070" [label = <(IDENTIFIER,cc,tif-&gt;tif_postdecode(tif, (uint8_t *)data, cc))<SUB>306</SUB>> ]
+"31071" [label = <(CONTROL_STRUCTURE,if (!(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample)),if (!(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample)))<SUB>308</SUB>> ]
+"31072" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample))<SUB>308</SUB>> ]
+"31073" [label = <(*tif-&gt;tif_encodestrip,(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample))<SUB>308</SUB>> ]
+"31074" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_encodestrip)<SUB>308</SUB>> ]
+"31075" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_encodestrip)<SUB>308</SUB>> ]
+"31076" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample))<SUB>308</SUB>> ]
+"31077" [label = <(FIELD_IDENTIFIER,tif_encodestrip,tif_encodestrip)<SUB>308</SUB>> ]
+"31078" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample))<SUB>308</SUB>> ]
+"31079" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>308</SUB>> ]
+"31080" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>308</SUB>> ]
+"31081" [label = <(IDENTIFIER,data,(uint8_t *)data)<SUB>308</SUB>> ]
+"31082" [label = <(IDENTIFIER,cc,(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample))<SUB>308</SUB>> ]
+"31083" [label = <(IDENTIFIER,sample,(*tif-&gt;tif_encodestrip)(tif, (uint8_t *)data, cc, sample))<SUB>308</SUB>> ]
+"31084" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>309</SUB>> ]
+"31085" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>309</SUB>> ]
+"31086" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>309</SUB>> ]
+"31087" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>309</SUB>> ]
+"31088" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>309</SUB>> ]
+"31089" [label = <(CONTROL_STRUCTURE,if (!(*tif-&gt;tif_postencode)(tif)),if (!(*tif-&gt;tif_postencode)(tif)))<SUB>310</SUB>> ]
+"31090" [label = <(&lt;operator&gt;.logicalNot,!(*tif-&gt;tif_postencode)(tif))<SUB>310</SUB>> ]
+"31091" [label = <(*tif-&gt;tif_postencode,(*tif-&gt;tif_postencode)(tif))<SUB>310</SUB>> ]
+"31092" [label = <(&lt;operator&gt;.indirection,*tif-&gt;tif_postencode)<SUB>310</SUB>> ]
+"31093" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_postencode)<SUB>310</SUB>> ]
+"31094" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postencode)(tif))<SUB>310</SUB>> ]
+"31095" [label = <(FIELD_IDENTIFIER,tif_postencode,tif_postencode)<SUB>310</SUB>> ]
+"31096" [label = <(IDENTIFIER,tif,(*tif-&gt;tif_postencode)(tif))<SUB>310</SUB>> ]
+"31097" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>311</SUB>> ]
+"31098" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>311</SUB>> ]
+"31099" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>311</SUB>> ]
+"31100" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>311</SUB>> ]
+"31101" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>311</SUB>> ]
+"31102" [label = <(CONTROL_STRUCTURE,if (!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012        (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0),if (!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012        (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0))<SUB>312</SUB>> ]
+"31103" [label = <(&lt;operator&gt;.logicalAnd,!isFillOrder(tif, td-&gt;td_fillorder) &amp;&amp;\012        (tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>312</SUB>> ]
+"31104" [label = <(&lt;operator&gt;.logicalNot,!isFillOrder(tif, td-&gt;td_fillorder))<SUB>312</SUB>> ]
+"31105" [label = <(isFillOrder,isFillOrder(tif, td-&gt;td_fillorder))<SUB>312</SUB>> ]
+"31106" [label = <(IDENTIFIER,tif,isFillOrder(tif, td-&gt;td_fillorder))<SUB>312</SUB>> ]
+"31107" [label = <(&lt;operator&gt;.indirectFieldAccess,td-&gt;td_fillorder)<SUB>312</SUB>> ]
+"31108" [label = <(IDENTIFIER,td,isFillOrder(tif, td-&gt;td_fillorder))<SUB>312</SUB>> ]
+"31109" [label = <(FIELD_IDENTIFIER,td_fillorder,td_fillorder)<SUB>312</SUB>> ]
+"31110" [label = <(&lt;operator&gt;.equals,(tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>313</SUB>> ]
+"31111" [label = <(&lt;operator&gt;.and,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>313</SUB>> ]
+"31112" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_flags)<SUB>313</SUB>> ]
+"31113" [label = <(IDENTIFIER,tif,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>313</SUB>> ]
+"31114" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>313</SUB>> ]
+"31115" [label = <(IDENTIFIER,TIFF_NOBITREV,tif-&gt;tif_flags &amp; TIFF_NOBITREV)<SUB>313</SUB>> ]
+"31116" [label = <(LITERAL,0,(tif-&gt;tif_flags &amp; TIFF_NOBITREV) == 0)<SUB>313</SUB>> ]
+"31117" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>314</SUB>> ]
+"31118" [label = <(TIFFReverseBits,TIFFReverseBits(tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>314</SUB>> ]
+"31119" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>314</SUB>> ]
+"31120" [label = <(IDENTIFIER,tif,TIFFReverseBits(tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>314</SUB>> ]
+"31121" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>314</SUB>> ]
+"31122" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>314</SUB>> ]
+"31123" [label = <(IDENTIFIER,tif,TIFFReverseBits(tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>314</SUB>> ]
+"31124" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>314</SUB>> ]
+"31125" [label = <(CONTROL_STRUCTURE,if (tif-&gt;tif_rawcc &gt; 0 &amp;&amp;\012        !TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc)),if (tif-&gt;tif_rawcc &gt; 0 &amp;&amp;\012        !TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc)))<SUB>315</SUB>> ]
+"31126" [label = <(&lt;operator&gt;.logicalAnd,tif-&gt;tif_rawcc &gt; 0 &amp;&amp;\012        !TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>315</SUB>> ]
+"31127" [label = <(&lt;operator&gt;.greaterThan,tif-&gt;tif_rawcc &gt; 0)<SUB>315</SUB>> ]
+"31128" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>315</SUB>> ]
+"31129" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc &gt; 0)<SUB>315</SUB>> ]
+"31130" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>315</SUB>> ]
+"31131" [label = <(LITERAL,0,tif-&gt;tif_rawcc &gt; 0)<SUB>315</SUB>> ]
+"31132" [label = <(&lt;operator&gt;.logicalNot,!TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>316</SUB>> ]
+"31133" [label = <(TIFFAppendToStrip,TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>316</SUB>> ]
+"31134" [label = <(IDENTIFIER,tif,TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>316</SUB>> ]
+"31135" [label = <(IDENTIFIER,strip,TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>316</SUB>> ]
+"31136" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>316</SUB>> ]
+"31137" [label = <(IDENTIFIER,tif,TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>316</SUB>> ]
+"31138" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>316</SUB>> ]
+"31139" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>316</SUB>> ]
+"31140" [label = <(IDENTIFIER,tif,TIFFAppendToStrip(tif, strip, tif-&gt;tif_rawdata, tif-&gt;tif_rawcc))<SUB>316</SUB>> ]
+"31141" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>316</SUB>> ]
+"31142" [label = <(BLOCK,&lt;empty&gt;,&lt;empty&gt;)<SUB>317</SUB>> ]
+"31143" [label = <(RETURN,return ((tmsize_t)-1);,return ((tmsize_t)-1);)<SUB>317</SUB>> ]
+"31144" [label = <(&lt;operator&gt;.subtraction,(tmsize_t)-1)<SUB>317</SUB>> ]
+"31145" [label = <(IDENTIFIER,tmsize_t,(tmsize_t)-1)<SUB>317</SUB>> ]
+"31146" [label = <(LITERAL,1,(tmsize_t)-1)<SUB>317</SUB>> ]
+"31147" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcc = 0)<SUB>318</SUB>> ]
+"31148" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcc)<SUB>318</SUB>> ]
+"31149" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcc = 0)<SUB>318</SUB>> ]
+"31150" [label = <(FIELD_IDENTIFIER,tif_rawcc,tif_rawcc)<SUB>318</SUB>> ]
+"31151" [label = <(LITERAL,0,tif-&gt;tif_rawcc = 0)<SUB>318</SUB>> ]
+"31152" [label = <(&lt;operator&gt;.assignment,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>319</SUB>> ]
+"31153" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawcp)<SUB>319</SUB>> ]
+"31154" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>319</SUB>> ]
+"31155" [label = <(FIELD_IDENTIFIER,tif_rawcp,tif_rawcp)<SUB>319</SUB>> ]
+"31156" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_rawdata)<SUB>319</SUB>> ]
+"31157" [label = <(IDENTIFIER,tif,tif-&gt;tif_rawcp = tif-&gt;tif_rawdata)<SUB>319</SUB>> ]
+"31158" [label = <(FIELD_IDENTIFIER,tif_rawdata,tif_rawdata)<SUB>319</SUB>> ]
+"31159" [label = <(RETURN,return (cc);,return (cc);)<SUB>320</SUB>> ]
+"31160" [label = <(IDENTIFIER,cc,return (cc);)<SUB>320</SUB>> ]
+"31161" [label = <(METHOD_RETURN,tmsize_t)<SUB>215</SUB>> ]
+  "30781" -> "30782" 
+  "30781" -> "30783" 
+  "30781" -> "30784" 
+  "30781" -> "30785" 
+  "30781" -> "30786" 
+  "30781" -> "31161" 
+  "30786" -> "30787" 
+  "30786" -> "30788" 
+  "30786" -> "30791" 
+  "30786" -> "30792" 
+  "30786" -> "30798" 
+  "30786" -> "30799" 
+  "30786" -> "30816" 
+  "30786" -> "30860" 
+  "30786" -> "30885" 
+  "30786" -> "30890" 
+  "30786" -> "30895" 
+  "30786" -> "30900" 
+  "30786" -> "30910" 
+  "30786" -> "30915" 
+  "30786" -> "30922" 
+  "30786" -> "30937" 
+  "30786" -> "30950" 
+  "30786" -> "30977" 
+  "30786" -> "30983" 
+  "30786" -> "31040" 
+  "30786" -> "31048" 
+  "30786" -> "31062" 
+  "30786" -> "31071" 
+  "30786" -> "31089" 
+  "30786" -> "31102" 
+  "30786" -> "31125" 
+  "30786" -> "31147" 
+  "30786" -> "31152" 
+  "30786" -> "31159" 
+  "30788" -> "30789" 
+  "30788" -> "30790" 
+  "30792" -> "30793" 
+  "30792" -> "30794" 
+  "30794" -> "30795" 
+  "30795" -> "30796" 
+  "30795" -> "30797" 
+  "30799" -> "30800" 
+  "30799" -> "30811" 
+  "30800" -> "30801" 
+  "30801" -> "30802" 
+  "30801" -> "30807" 
+  "30802" -> "30803" 
+  "30802" -> "30806" 
+  "30803" -> "30804" 
+  "30803" -> "30805" 
+  "30807" -> "30808" 
+  "30807" -> "30809" 
+  "30807" -> "30810" 
+  "30811" -> "30812" 
+  "30812" -> "30813" 
+  "30813" -> "30814" 
+  "30813" -> "30815" 
+  "30816" -> "30817" 
+  "30816" -> "30822" 
+  "30817" -> "30818" 
+  "30817" -> "30819" 
+  "30819" -> "30820" 
+  "30819" -> "30821" 
+  "30822" -> "30823" 
+  "30822" -> "30838" 
+  "30822" -> "30849" 
+  "30823" -> "30824" 
+  "30823" -> "30829" 
+  "30824" -> "30825" 
+  "30824" -> "30828" 
+  "30825" -> "30826" 
+  "30825" -> "30827" 
+  "30829" -> "30830" 
+  "30829" -> "30834" 
+  "30830" -> "30831" 
+  "30830" -> "30832" 
+  "30830" -> "30833" 
+  "30834" -> "30835" 
+  "30835" -> "30836" 
+  "30835" -> "30837" 
+  "30838" -> "30839" 
+  "30838" -> "30844" 
+  "30839" -> "30840" 
+  "30840" -> "30841" 
+  "30840" -> "30842" 
+  "30840" -> "30843" 
+  "30844" -> "30845" 
+  "30845" -> "30846" 
+  "30846" -> "30847" 
+  "30846" -> "30848" 
+  "30849" -> "30850" 
+  "30849" -> "30853" 
+  "30850" -> "30851" 
+  "30850" -> "30852" 
+  "30853" -> "30854" 
+  "30853" -> "30857" 
+  "30854" -> "30855" 
+  "30854" -> "30856" 
+  "30857" -> "30858" 
+  "30857" -> "30859" 
+  "30860" -> "30861" 
+  "30860" -> "30880" 
+  "30861" -> "30862" 
+  "30862" -> "30863" 
+  "30862" -> "30872" 
+  "30863" -> "30864" 
+  "30863" -> "30869" 
+  "30864" -> "30865" 
+  "30864" -> "30868" 
+  "30865" -> "30866" 
+  "30865" -> "30867" 
+  "30869" -> "30870" 
+  "30869" -> "30871" 
+  "30872" -> "30873" 
+  "30872" -> "30874" 
+  "30872" -> "30877" 
+  "30874" -> "30875" 
+  "30874" -> "30876" 
+  "30877" -> "30878" 
+  "30877" -> "30879" 
+  "30880" -> "30881" 
+  "30881" -> "30882" 
+  "30882" -> "30883" 
+  "30882" -> "30884" 
+  "30885" -> "30886" 
+  "30885" -> "30889" 
+  "30886" -> "30887" 
+  "30886" -> "30888" 
+  "30890" -> "30891" 
+  "30890" -> "30894" 
+  "30891" -> "30892" 
+  "30891" -> "30893" 
+  "30895" -> "30896" 
+  "30895" -> "30899" 
+  "30896" -> "30897" 
+  "30896" -> "30898" 
+  "30900" -> "30901" 
+  "30900" -> "30905" 
+  "30901" -> "30902" 
+  "30902" -> "30903" 
+  "30902" -> "30904" 
+  "30905" -> "30906" 
+  "30906" -> "30907" 
+  "30907" -> "30908" 
+  "30908" -> "30909" 
+  "30910" -> "30911" 
+  "30910" -> "30914" 
+  "30911" -> "30912" 
+  "30911" -> "30913" 
+  "30915" -> "30916" 
+  "30915" -> "30919" 
+  "30916" -> "30917" 
+  "30916" -> "30918" 
+  "30919" -> "30920" 
+  "30919" -> "30921" 
+  "30922" -> "30923" 
+  "30922" -> "30928" 
+  "30923" -> "30924" 
+  "30923" -> "30927" 
+  "30924" -> "30925" 
+  "30924" -> "30926" 
+  "30928" -> "30929" 
+  "30928" -> "30933" 
+  "30929" -> "30930" 
+  "30929" -> "30931" 
+  "30929" -> "30932" 
+  "30933" -> "30934" 
+  "30934" -> "30935" 
+  "30934" -> "30936" 
+  "30937" -> "30938" 
+  "30937" -> "30941" 
+  "30938" -> "30939" 
+  "30938" -> "30940" 
+  "30941" -> "30942" 
+  "30941" -> "30947" 
+  "30942" -> "30943" 
+  "30942" -> "30944" 
+  "30944" -> "30945" 
+  "30944" -> "30946" 
+  "30947" -> "30948" 
+  "30947" -> "30949" 
+  "30950" -> "30951" 
+  "30950" -> "30958" 
+  "30951" -> "30952" 
+  "30951" -> "30957" 
+  "30952" -> "30953" 
+  "30952" -> "30956" 
+  "30953" -> "30954" 
+  "30953" -> "30955" 
+  "30958" -> "30959" 
+  "30958" -> "30972" 
+  "30959" -> "30960" 
+  "30959" -> "30967" 
+  "30960" -> "30961" 
+  "30961" -> "30962" 
+  "30961" -> "30966" 
+  "30962" -> "30963" 
+  "30963" -> "30964" 
+  "30963" -> "30965" 
+  "30967" -> "30968" 
+  "30968" -> "30969" 
+  "30969" -> "30970" 
+  "30969" -> "30971" 
+  "30972" -> "30973" 
+  "30972" -> "30976" 
+  "30973" -> "30974" 
+  "30973" -> "30975" 
+  "30977" -> "30978" 
+  "30977" -> "30981" 
+  "30978" -> "30979" 
+  "30978" -> "30980" 
+  "30981" -> "30982" 
+  "30983" -> "30984" 
+  "30983" -> "30989" 
+  "30984" -> "30985" 
+  "30984" -> "30988" 
+  "30985" -> "30986" 
+  "30985" -> "30987" 
+  "30989" -> "30990" 
+  "30989" -> "30999" 
+  "30989" -> "31020" 
+  "30989" -> "31038" 
+  "30990" -> "30991" 
+  "30990" -> "30994" 
+  "30990" -> "30995" 
+  "30990" -> "30998" 
+  "30991" -> "30992" 
+  "30991" -> "30993" 
+  "30995" -> "30996" 
+  "30995" -> "30997" 
+  "30999" -> "31000" 
+  "30999" -> "31014" 
+  "31000" -> "31001" 
+  "31000" -> "31007" 
+  "31001" -> "31002" 
+  "31002" -> "31003" 
+  "31002" -> "31004" 
+  "31004" -> "31005" 
+  "31004" -> "31006" 
+  "31007" -> "31008" 
+  "31007" -> "31013" 
+  "31008" -> "31009" 
+  "31008" -> "31012" 
+  "31009" -> "31010" 
+  "31009" -> "31011" 
+  "31014" -> "31015" 
+  "31015" -> "31016" 
+  "31015" -> "31019" 
+  "31016" -> "31017" 
+  "31016" -> "31018" 
+  "31020" -> "31021" 
+  "31020" -> "31033" 
+  "31021" -> "31022" 
+  "31021" -> "31025" 
+  "31022" -> "31023" 
+  "31022" -> "31024" 
+  "31025" -> "31026" 
+  "31026" -> "31027" 
+  "31026" -> "31028" 
+  "31026" -> "31029" 
+  "31026" -> "31032" 
+  "31029" -> "31030" 
+  "31029" -> "31031" 
+  "31033" -> "31034" 
+  "31034" -> "31035" 
+  "31035" -> "31036" 
+  "31035" -> "31037" 
+  "31038" -> "31039" 
+  "31040" -> "31041" 
+  "31040" -> "31042" 
+  "31042" -> "31043" 
+  "31043" -> "31044" 
+  "31043" -> "31045" 
+  "31045" -> "31046" 
+  "31045" -> "31047" 
+  "31048" -> "31049" 
+  "31048" -> "31057" 
+  "31049" -> "31050" 
+  "31050" -> "31051" 
+  "31050" -> "31055" 
+  "31050" -> "31056" 
+  "31051" -> "31052" 
+  "31052" -> "31053" 
+  "31052" -> "31054" 
+  "31057" -> "31058" 
+  "31058" -> "31059" 
+  "31059" -> "31060" 
+  "31059" -> "31061" 
+  "31062" -> "31063" 
+  "31062" -> "31066" 
+  "31062" -> "31067" 
+  "31062" -> "31070" 
+  "31063" -> "31064" 
+  "31063" -> "31065" 
+  "31067" -> "31068" 
+  "31067" -> "31069" 
+  "31071" -> "31072" 
+  "31071" -> "31084" 
+  "31072" -> "31073" 
+  "31073" -> "31074" 
+  "31073" -> "31078" 
+  "31073" -> "31079" 
+  "31073" -> "31082" 
+  "31073" -> "31083" 
+  "31074" -> "31075" 
+  "31075" -> "31076" 
+  "31075" -> "31077" 
+  "31079" -> "31080" 
+  "31079" -> "31081" 
+  "31084" -> "31085" 
+  "31085" -> "31086" 
+  "31086" -> "31087" 
+  "31086" -> "31088" 
+  "31089" -> "31090" 
+  "31089" -> "31097" 
+  "31090" -> "31091" 
+  "31091" -> "31092" 
+  "31091" -> "31096" 
+  "31092" -> "31093" 
+  "31093" -> "31094" 
+  "31093" -> "31095" 
+  "31097" -> "31098" 
+  "31098" -> "31099" 
+  "31099" -> "31100" 
+  "31099" -> "31101" 
+  "31102" -> "31103" 
+  "31102" -> "31117" 
+  "31103" -> "31104" 
+  "31103" -> "31110" 
+  "31104" -> "31105" 
+  "31105" -> "31106" 
+  "31105" -> "31107" 
+  "31107" -> "31108" 
+  "31107" -> "31109" 
+  "31110" -> "31111" 
+  "31110" -> "31116" 
+  "31111" -> "31112" 
+  "31111" -> "31115" 
+  "31112" -> "31113" 
+  "31112" -> "31114" 
+  "31117" -> "31118" 
+  "31118" -> "31119" 
+  "31118" -> "31122" 
+  "31119" -> "31120" 
+  "31119" -> "31121" 
+  "31122" -> "31123" 
+  "31122" -> "31124" 
+  "31125" -> "31126" 
+  "31125" -> "31142" 
+  "31126" -> "31127" 
+  "31126" -> "31132" 
+  "31127" -> "31128" 
+  "31127" -> "31131" 
+  "31128" -> "31129" 
+  "31128" -> "31130" 
+  "31132" -> "31133" 
+  "31133" -> "31134" 
+  "31133" -> "31135" 
+  "31133" -> "31136" 
+  "31133" -> "31139" 
+  "31136" -> "31137" 
+  "31136" -> "31138" 
+  "31139" -> "31140" 
+  "31139" -> "31141" 
+  "31142" -> "31143" 
+  "31143" -> "31144" 
+  "31144" -> "31145" 
+  "31144" -> "31146" 
+  "31147" -> "31148" 
+  "31147" -> "31151" 
+  "31148" -> "31149" 
+  "31148" -> "31150" 
+  "31152" -> "31153" 
+  "31152" -> "31156" 
+  "31153" -> "31154" 
+  "31153" -> "31155" 
+  "31156" -> "31157" 
+  "31156" -> "31158" 
+  "31159" -> "31160" 
+}

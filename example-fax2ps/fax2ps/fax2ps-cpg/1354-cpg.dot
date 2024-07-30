@@ -1,0 +1,14 @@
+digraph "strstr" {  
+"98879" [label = <(METHOD,strstr)<SUB>330</SUB>> ]
+"98880" [label = <(PARAM,const char *__haystack)<SUB>330</SUB>> ]
+"98881" [label = <(PARAM,const char *__needle)<SUB>330</SUB>> ]
+"98882" [label = <(METHOD_RETURN,char*)<SUB>330</SUB>> ]
+  "98879" -> "98880"  [ label = "AST: "] 
+  "98879" -> "98881"  [ label = "AST: "] 
+  "98879" -> "98882"  [ label = "AST: "] 
+  "98879" -> "98882"  [ label = "CFG: "] 
+  "98880" -> "98882"  [ label = "DDG: __haystack"] 
+  "98881" -> "98882"  [ label = "DDG: __needle"] 
+  "98879" -> "98880"  [ label = "DDG: "] 
+  "98879" -> "98881"  [ label = "DDG: "] 
+}

@@ -1,0 +1,77 @@
+digraph "TIFFWriteRawTile" {  
+"31769" [label = <(&lt;operator&gt;.assignment,module[] = &quot;TIFFWriteRawTile&quot;)<SUB>535</SUB>> ]
+"31816" [label = <(RETURN,return (TIFFAppendToStrip(tif, tile, (uint8_t *)data, cc) ? cc\012                                                              : (tmsize_t)(-1));,return (TIFFAppendToStrip(tif, tile, (uint8_t *)data, cc) ? cc\012                                                              : (tmsize_t)(-1));)<SUB>546</SUB>> ]
+"31773" [label = <(&lt;operator&gt;.logicalNot,!WRITECHECKTILES(tif, module))<SUB>537</SUB>> ]
+"31790" [label = <(&lt;operator&gt;.greaterEqualsThan,tile &gt;= tif-&gt;tif_dir.td_nstrips)<SUB>539</SUB>> ]
+"31817" [label = <(&lt;operator&gt;.conditional,TIFFAppendToStrip(tif, tile, (uint8_t *)data, cc) ? cc\012                                                              : (tmsize_t)(-1))<SUB>546</SUB>> ]
+"31774" [label = <(&lt;operator&gt;.logicalOr,((tif)-&gt;tif_flags &amp; TIFF_BEENWRITING) || TIFFWriteCheck((tif), 1, module))<SUB>537</SUB>> ]
+"31785" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>538</SUB>> ]
+"31792" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>539</SUB>> ]
+"31798" [label = <(TIFFErrorExtR,TIFFErrorExtR(tif, module, &quot;Tile %lu out of range, max %lu&quot;,\012                      (unsigned long)tile,\012                      (unsigned long)tif-&gt;tif_dir.td_nstrips))<SUB>541</SUB>> ]
+"31812" [label = <(RETURN,return ((tmsize_t)(-1));,return ((tmsize_t)(-1));)<SUB>544</SUB>> ]
+"31818" [label = <(TIFFAppendToStrip,TIFFAppendToStrip(tif, tile, (uint8_t *)data, cc))<SUB>546</SUB>> ]
+"31826" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>547</SUB>> ]
+"31775" [label = <(&lt;operator&gt;.and,(tif)-&gt;tif_flags &amp; TIFF_BEENWRITING)<SUB>537</SUB>> ]
+"31780" [label = <(TIFFWriteCheck,TIFFWriteCheck((tif), 1, module))<SUB>537</SUB>> ]
+"31786" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>538</SUB>> ]
+"31793" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>539</SUB>> ]
+"31796" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>539</SUB>> ]
+"31802" [label = <(&lt;operator&gt;.cast,(unsigned long)tile)<SUB>542</SUB>> ]
+"31805" [label = <(&lt;operator&gt;.cast,(unsigned long)tif-&gt;tif_dir.td_nstrips)<SUB>543</SUB>> ]
+"31813" [label = <(tmsize_t,(tmsize_t)(-1))<SUB>544</SUB>> ]
+"31821" [label = <(&lt;operator&gt;.cast,(uint8_t *)data)<SUB>546</SUB>> ]
+"31827" [label = <(&lt;operator&gt;.minus,-1)<SUB>547</SUB>> ]
+"31776" [label = <(&lt;operator&gt;.indirectFieldAccess,(tif)-&gt;tif_flags)<SUB>537</SUB>> ]
+"31787" [label = <(&lt;operator&gt;.minus,-1)<SUB>538</SUB>> ]
+"31795" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>539</SUB>> ]
+"31803" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>542</SUB>> ]
+"31806" [label = <(UNKNOWN,unsigned long,unsigned long)<SUB>543</SUB>> ]
+"31807" [label = <(&lt;operator&gt;.fieldAccess,tif-&gt;tif_dir.td_nstrips)<SUB>543</SUB>> ]
+"31814" [label = <(&lt;operator&gt;.minus,-1)<SUB>544</SUB>> ]
+"31822" [label = <(UNKNOWN,uint8_t *,uint8_t *)<SUB>546</SUB>> ]
+"31778" [label = <(FIELD_IDENTIFIER,tif_flags,tif_flags)<SUB>537</SUB>> ]
+"31808" [label = <(&lt;operator&gt;.indirectFieldAccess,tif-&gt;tif_dir)<SUB>543</SUB>> ]
+"31811" [label = <(FIELD_IDENTIFIER,td_nstrips,td_nstrips)<SUB>543</SUB>> ]
+"31810" [label = <(FIELD_IDENTIFIER,tif_dir,tif_dir)<SUB>543</SUB>> ]
+"31762" [label = <(METHOD,TIFFWriteRawTile)<SUB>533</SUB>> ]
+"31829" [label = <(METHOD_RETURN,tmsize_t)<SUB>533</SUB>> ]
+  "31769" -> "31778" 
+  "31816" -> "31829" 
+  "31773" -> "31787" 
+  "31773" -> "31795" 
+  "31790" -> "31803" 
+  "31790" -> "31822" 
+  "31817" -> "31816" 
+  "31774" -> "31773" 
+  "31785" -> "31829" 
+  "31792" -> "31790" 
+  "31798" -> "31814" 
+  "31812" -> "31829" 
+  "31818" -> "31817" 
+  "31818" -> "31827" 
+  "31826" -> "31817" 
+  "31775" -> "31774" 
+  "31775" -> "31780" 
+  "31780" -> "31774" 
+  "31786" -> "31785" 
+  "31793" -> "31796" 
+  "31796" -> "31792" 
+  "31802" -> "31806" 
+  "31805" -> "31798" 
+  "31813" -> "31812" 
+  "31821" -> "31818" 
+  "31827" -> "31826" 
+  "31776" -> "31775" 
+  "31787" -> "31786" 
+  "31795" -> "31793" 
+  "31803" -> "31802" 
+  "31806" -> "31810" 
+  "31807" -> "31805" 
+  "31814" -> "31813" 
+  "31822" -> "31821" 
+  "31778" -> "31776" 
+  "31808" -> "31811" 
+  "31811" -> "31807" 
+  "31810" -> "31808" 
+  "31762" -> "31769" 
+}

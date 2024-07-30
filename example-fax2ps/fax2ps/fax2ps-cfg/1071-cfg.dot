@@ -1,0 +1,26 @@
+digraph "TIFFClampDoubleToUInt8" {  
+"67486" [label = <(RETURN,return (uint8_t)val;,return (uint8_t)val;)<SUB>1283</SUB>> ]
+"67469" [label = <(&lt;operator&gt;.lessThan,val &lt; 0)<SUB>1279</SUB>> ]
+"67476" [label = <(&lt;operator&gt;.logicalOr,val &gt; 255 || val != val)<SUB>1281</SUB>> ]
+"67487" [label = <(&lt;operator&gt;.cast,(uint8_t)val)<SUB>1283</SUB>> ]
+"67473" [label = <(RETURN,return 0;,return 0;)<SUB>1280</SUB>> ]
+"67477" [label = <(&lt;operator&gt;.greaterThan,val &gt; 255)<SUB>1281</SUB>> ]
+"67480" [label = <(&lt;operator&gt;.notEquals,val != val)<SUB>1281</SUB>> ]
+"67484" [label = <(RETURN,return 255;,return 255;)<SUB>1282</SUB>> ]
+"67488" [label = <(UNKNOWN,uint8_t,uint8_t)<SUB>1283</SUB>> ]
+"67465" [label = <(METHOD,TIFFClampDoubleToUInt8)<SUB>1277</SUB>> ]
+"67490" [label = <(METHOD_RETURN,uint8_t)<SUB>1277</SUB>> ]
+  "67486" -> "67490" 
+  "67469" -> "67473" 
+  "67469" -> "67477" 
+  "67476" -> "67488" 
+  "67476" -> "67484" 
+  "67487" -> "67486" 
+  "67473" -> "67490" 
+  "67477" -> "67476" 
+  "67477" -> "67480" 
+  "67480" -> "67476" 
+  "67484" -> "67490" 
+  "67488" -> "67487" 
+  "67465" -> "67469" 
+}
