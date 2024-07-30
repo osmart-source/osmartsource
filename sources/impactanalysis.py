@@ -1,10 +1,5 @@
 #!/usr/bin/python
-# 完整无优化
-# 结构体到结构体的成员变量之间是没有数据依赖关系的
-# 结构体成员变量到成员变量有dd，但是如果需要先到成员变量，再到成员变量的赋值点
-# 函数参数 一个参数受另一个参数影响如何去判断
-# 一个函数里面结构体就记一个，以及相对应的成员变量
-# 这种主要去解决返回值，如果返回值是这个结构体的话，传给调用点，有点复杂，再规划一下
+
 
 import argparse
 import sys
@@ -26,7 +21,7 @@ from pdg_graph import *
 
 cfgdot = ""
 # globalvariables,methods = [],[]
-methodtodot = {"SWFMovie_add":"859"}
+methodtodot = {}
 methodtograph = {}
 # globalvariables =[]
 taintflow = []
@@ -516,7 +511,7 @@ def getCombination(LData):
     keylen = len(LData.keys())
     for key in LData.keys():
         var = key
-        indexs = LData[key])
+        indexs = LData[key]
         if(len(indexs) == 1):
             if SDD == []:
                 didi = {}
@@ -756,7 +751,7 @@ def getCombination(LData):
                         temp = {}
                         temp = copy.deepcopy(didi)
                         temp[key] = LData[key][i]
-                        SDDres.append(temp))
+                        SDDres.append(temp)
                 SDD = SDDres
 
     return SDD
