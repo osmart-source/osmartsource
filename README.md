@@ -34,6 +34,24 @@ libtiff/fax2ps
 
   | -- program_pdg.json: the whole program PDG
 
+#### STEP 0 Preparation
+1 Generate representation graphs using Joern
+```
+joern-parse libtiff/fax2ps
+joern-export --repr ast --out fax2ps-ast
+joern-export --repr cfg --out fax2ps-cfg
+joern-export --repr pdg --out fax2ps-pdg
+
+```
+
+2 Generate global.txt
+```
+build sources/funcAndGlobal using LLVM13.0
+./sources/funcAndGlobal/build/lib/kanalyzer @program.list > global.txt 2<&1
+```
+
+These preparation steps will generate the AST and PDG of the program and global.txt.
+
 #### STEP 1 Extract options from source code based on AST
 ```
 python3 parse_option.py libtiff/fax2ps/fax2ps-ast switch
