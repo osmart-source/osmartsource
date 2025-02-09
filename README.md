@@ -65,7 +65,7 @@ This step will generate program_pdg.json and nodeinfo.json.
 
 #### STEP 3 Execute the impact analysis 
 ```
-python3 flownew_prodivflow.py -programdir=libtiff/fax2ps/ -programname=fax2ps -startfunction=main -anotherline=-1 -structreturnname=""
+python3 impactanalysis.py -programdir=libtiff/fax2ps/ -programname=fax2ps -startfunction=main -anotherline=-1 -structreturnname=""
 ```
 This step will generate iiv.json.
 
