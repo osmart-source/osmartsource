@@ -2066,6 +2066,7 @@ def inter_spread(optionnamelist,funcname,paramlist,cfgdir1,pdgdir1,astdir1,divjs
 def div_propagation(divjsonfile,divwkljsonfile,envdivjsonfile,iivjsonfile,cfgdir1,pdgdir1,astdir1,globaltxt,anotherline,startfunc,structreturnname,optimize,structvars):
 
     timeog["start"] = time.time()
+    involvedglobal = {}
     globaloption = {}
     flowlist = {}
     structvarjsons = {}
