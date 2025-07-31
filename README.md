@@ -76,4 +76,4 @@ python3 ognew.py -programdir=libtiff/fax2ps/ -p fax2ps
 This step will generate og.json.
 We acquire the opion groups.
 
-
+In addition, `iiv.txt` records our commands to generate ogs for our dataset and POWER's dataset. 
